@@ -9,15 +9,15 @@
   Cache-Control: public, max-age=31536000, immutable
 /styles.911516011e590e4e6235.css
   Cache-Control: public, max-age=31536000, immutable
-/c0236b323238a5fa5909d22b2c74857774b62b01-e2e9b0ac28837bccdfd3.js
+/c0236b323238a5fa5909d22b2c74857774b62b01-c512173ac866b30f1613.js
   Cache-Control: public, max-age=31536000, immutable
 /component---src-templates-template-tsx-4be3bc62d22db54a3f00.js
   Cache-Control: public, max-age=31536000, immutable
-/component---src-pages-about-tsx-317138ab321648190cc8.js
+/component---src-pages-about-tsx-5d003df60d6f6a43f027.js
   Cache-Control: public, max-age=31536000, immutable
 /component---src-pages-index-tsx-afb9af4e2e8afccb1b18.js
   Cache-Control: public, max-age=31536000, immutable
-/webpack-runtime-d5cb8b9b2b382cace9a0.js
+/webpack-runtime-2fd8e1c376367d1d4eb0.js
   Cache-Control: public, max-age=31536000, immutable
 /framework-9cbedb422c54c9f79241.js
   Cache-Control: public, max-age=31536000, immutable
@@ -25,88 +25,88 @@
   Cache-Control: public, max-age=31536000, immutable
 /dc6a8720040df98778fe970bf6c000a41750d3ae-383eabbc5f64a15b2fcd.js
   Cache-Control: public, max-age=31536000, immutable
-/app-5afa31b83c8b92436a86.js
+/app-ca02c0ed90c7028c2c63.js
   Cache-Control: public, max-age=31536000, immutable
 /static/*
   Cache-Control: public, max-age=31536000, immutable
 /sw.js
   Cache-Control: no-cache
 /offline-plugin-app-shell-fallback/
-  Link: </webpack-runtime-d5cb8b9b2b382cace9a0.js>; rel=preload; as=script
+  Link: </webpack-runtime-2fd8e1c376367d1d4eb0.js>; rel=preload; as=script
   Link: </framework-9cbedb422c54c9f79241.js>; rel=preload; as=script
   Link: </b637e9a5-ad0280b023895ac2295a.js>; rel=preload; as=script
   Link: </dc6a8720040df98778fe970bf6c000a41750d3ae-383eabbc5f64a15b2fcd.js>; rel=preload; as=script
-  Link: </app-5afa31b83c8b92436a86.js>; rel=preload; as=script
+  Link: </app-ca02c0ed90c7028c2c63.js>; rel=preload; as=script
   Link: </component---cache-caches-gatsby-plugin-offline-app-shell-js-5d3c7651f6ddd1a1d5b8.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/offline-plugin-app-shell-fallback/page-data.json>; rel=preload; as=fetch; crossorigin
 /functional-programming-with-mike-stockdale/
-  Link: </webpack-runtime-d5cb8b9b2b382cace9a0.js>; rel=preload; as=script
+  Link: </webpack-runtime-2fd8e1c376367d1d4eb0.js>; rel=preload; as=script
   Link: </framework-9cbedb422c54c9f79241.js>; rel=preload; as=script
   Link: </b637e9a5-ad0280b023895ac2295a.js>; rel=preload; as=script
   Link: </dc6a8720040df98778fe970bf6c000a41750d3ae-383eabbc5f64a15b2fcd.js>; rel=preload; as=script
-  Link: </app-5afa31b83c8b92436a86.js>; rel=preload; as=script
-  Link: </c0236b323238a5fa5909d22b2c74857774b62b01-e2e9b0ac28837bccdfd3.js>; rel=preload; as=script
+  Link: </app-ca02c0ed90c7028c2c63.js>; rel=preload; as=script
+  Link: </c0236b323238a5fa5909d22b2c74857774b62b01-c512173ac866b30f1613.js>; rel=preload; as=script
   Link: </component---src-templates-template-tsx-4be3bc62d22db54a3f00.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/functional-programming-with-mike-stockdale/page-data.json>; rel=preload; as=fetch; crossorigin
 /awesome-automation-testing-with-koyel-nandi/
-  Link: </webpack-runtime-d5cb8b9b2b382cace9a0.js>; rel=preload; as=script
+  Link: </webpack-runtime-2fd8e1c376367d1d4eb0.js>; rel=preload; as=script
   Link: </framework-9cbedb422c54c9f79241.js>; rel=preload; as=script
   Link: </b637e9a5-ad0280b023895ac2295a.js>; rel=preload; as=script
   Link: </dc6a8720040df98778fe970bf6c000a41750d3ae-383eabbc5f64a15b2fcd.js>; rel=preload; as=script
-  Link: </app-5afa31b83c8b92436a86.js>; rel=preload; as=script
-  Link: </c0236b323238a5fa5909d22b2c74857774b62b01-e2e9b0ac28837bccdfd3.js>; rel=preload; as=script
+  Link: </app-ca02c0ed90c7028c2c63.js>; rel=preload; as=script
+  Link: </c0236b323238a5fa5909d22b2c74857774b62b01-c512173ac866b30f1613.js>; rel=preload; as=script
   Link: </component---src-templates-template-tsx-4be3bc62d22db54a3f00.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/awesome-automation-testing-with-koyel-nandi/page-data.json>; rel=preload; as=fetch; crossorigin
 /vaugh-vernon-reactive-ddd/
-  Link: </webpack-runtime-d5cb8b9b2b382cace9a0.js>; rel=preload; as=script
+  Link: </webpack-runtime-2fd8e1c376367d1d4eb0.js>; rel=preload; as=script
   Link: </framework-9cbedb422c54c9f79241.js>; rel=preload; as=script
   Link: </b637e9a5-ad0280b023895ac2295a.js>; rel=preload; as=script
   Link: </dc6a8720040df98778fe970bf6c000a41750d3ae-383eabbc5f64a15b2fcd.js>; rel=preload; as=script
-  Link: </app-5afa31b83c8b92436a86.js>; rel=preload; as=script
-  Link: </c0236b323238a5fa5909d22b2c74857774b62b01-e2e9b0ac28837bccdfd3.js>; rel=preload; as=script
+  Link: </app-ca02c0ed90c7028c2c63.js>; rel=preload; as=script
+  Link: </c0236b323238a5fa5909d22b2c74857774b62b01-c512173ac866b30f1613.js>; rel=preload; as=script
   Link: </component---src-templates-template-tsx-4be3bc62d22db54a3f00.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/vaugh-vernon-reactive-ddd/page-data.json>; rel=preload; as=fetch; crossorigin
-/llewellyn-duplication-coloring-book/
-  Link: </webpack-runtime-d5cb8b9b2b382cace9a0.js>; rel=preload; as=script
-  Link: </framework-9cbedb422c54c9f79241.js>; rel=preload; as=script
-  Link: </b637e9a5-ad0280b023895ac2295a.js>; rel=preload; as=script
-  Link: </dc6a8720040df98778fe970bf6c000a41750d3ae-383eabbc5f64a15b2fcd.js>; rel=preload; as=script
-  Link: </app-5afa31b83c8b92436a86.js>; rel=preload; as=script
-  Link: </c0236b323238a5fa5909d22b2c74857774b62b01-e2e9b0ac28837bccdfd3.js>; rel=preload; as=script
-  Link: </component---src-templates-template-tsx-4be3bc62d22db54a3f00.js>; rel=preload; as=script
-  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </page-data/llewellyn-duplication-coloring-book/page-data.json>; rel=preload; as=fetch; crossorigin
 /david-bernstein-5-developer-practices/
-  Link: </webpack-runtime-d5cb8b9b2b382cace9a0.js>; rel=preload; as=script
+  Link: </webpack-runtime-2fd8e1c376367d1d4eb0.js>; rel=preload; as=script
   Link: </framework-9cbedb422c54c9f79241.js>; rel=preload; as=script
   Link: </b637e9a5-ad0280b023895ac2295a.js>; rel=preload; as=script
   Link: </dc6a8720040df98778fe970bf6c000a41750d3ae-383eabbc5f64a15b2fcd.js>; rel=preload; as=script
-  Link: </app-5afa31b83c8b92436a86.js>; rel=preload; as=script
-  Link: </c0236b323238a5fa5909d22b2c74857774b62b01-e2e9b0ac28837bccdfd3.js>; rel=preload; as=script
+  Link: </app-ca02c0ed90c7028c2c63.js>; rel=preload; as=script
+  Link: </c0236b323238a5fa5909d22b2c74857774b62b01-c512173ac866b30f1613.js>; rel=preload; as=script
   Link: </component---src-templates-template-tsx-4be3bc62d22db54a3f00.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/david-bernstein-5-developer-practices/page-data.json>; rel=preload; as=fetch; crossorigin
-/about/
-  Link: </webpack-runtime-d5cb8b9b2b382cace9a0.js>; rel=preload; as=script
+/llewellyn-duplication-coloring-book/
+  Link: </webpack-runtime-2fd8e1c376367d1d4eb0.js>; rel=preload; as=script
   Link: </framework-9cbedb422c54c9f79241.js>; rel=preload; as=script
   Link: </b637e9a5-ad0280b023895ac2295a.js>; rel=preload; as=script
   Link: </dc6a8720040df98778fe970bf6c000a41750d3ae-383eabbc5f64a15b2fcd.js>; rel=preload; as=script
-  Link: </app-5afa31b83c8b92436a86.js>; rel=preload; as=script
-  Link: </c0236b323238a5fa5909d22b2c74857774b62b01-e2e9b0ac28837bccdfd3.js>; rel=preload; as=script
-  Link: </component---src-pages-about-tsx-317138ab321648190cc8.js>; rel=preload; as=script
+  Link: </app-ca02c0ed90c7028c2c63.js>; rel=preload; as=script
+  Link: </c0236b323238a5fa5909d22b2c74857774b62b01-c512173ac866b30f1613.js>; rel=preload; as=script
+  Link: </component---src-templates-template-tsx-4be3bc62d22db54a3f00.js>; rel=preload; as=script
+  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </page-data/llewellyn-duplication-coloring-book/page-data.json>; rel=preload; as=fetch; crossorigin
+/about/
+  Link: </webpack-runtime-2fd8e1c376367d1d4eb0.js>; rel=preload; as=script
+  Link: </framework-9cbedb422c54c9f79241.js>; rel=preload; as=script
+  Link: </b637e9a5-ad0280b023895ac2295a.js>; rel=preload; as=script
+  Link: </dc6a8720040df98778fe970bf6c000a41750d3ae-383eabbc5f64a15b2fcd.js>; rel=preload; as=script
+  Link: </app-ca02c0ed90c7028c2c63.js>; rel=preload; as=script
+  Link: </c0236b323238a5fa5909d22b2c74857774b62b01-c512173ac866b30f1613.js>; rel=preload; as=script
+  Link: </component---src-pages-about-tsx-5d003df60d6f6a43f027.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/about/page-data.json>; rel=preload; as=fetch; crossorigin
 /
-  Link: </webpack-runtime-d5cb8b9b2b382cace9a0.js>; rel=preload; as=script
+  Link: </webpack-runtime-2fd8e1c376367d1d4eb0.js>; rel=preload; as=script
   Link: </framework-9cbedb422c54c9f79241.js>; rel=preload; as=script
   Link: </b637e9a5-ad0280b023895ac2295a.js>; rel=preload; as=script
   Link: </dc6a8720040df98778fe970bf6c000a41750d3ae-383eabbc5f64a15b2fcd.js>; rel=preload; as=script
-  Link: </app-5afa31b83c8b92436a86.js>; rel=preload; as=script
-  Link: </c0236b323238a5fa5909d22b2c74857774b62b01-e2e9b0ac28837bccdfd3.js>; rel=preload; as=script
+  Link: </app-ca02c0ed90c7028c2c63.js>; rel=preload; as=script
+  Link: </c0236b323238a5fa5909d22b2c74857774b62b01-c512173ac866b30f1613.js>; rel=preload; as=script
   Link: </component---src-pages-index-tsx-afb9af4e2e8afccb1b18.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/index/page-data.json>; rel=preload; as=fetch; crossorigin
