@@ -1,4 +1,51 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 24 Dec 2021 07:06:40 GMT</lastBuildDate><item><title><![CDATA[What's a simple way to share and learn refactor]]></title><description><![CDATA[I have been organizing coderetreat and creating screencasts on refactoring and TDD, etc… however, I find it takes lots of time and effort to…]]></description><link>https://tonytvo.github.io/what-simple-way-share-learn-refactor/</link><guid isPermaLink="false">https://tonytvo.github.io/what-simple-way-share-learn-refactor/</guid><pubDate>Wed, 01 May 2019 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;I have been organizing coderetreat and creating screencasts on refactoring and TDD, etc… however, I find it takes lots of time and effort to organize, preparing and facilitate. (it’s not that I complain about it as a matter of fact I love it every single second and I’m amazed at how much I have learned from the community)&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 24 Dec 2021 07:17:58 GMT</lastBuildDate><item><title><![CDATA[Collaborative Learning at Coderetreats]]></title><description><![CDATA[Written collaboratively by:
+Trung Vo, Bob Allen, Jacqueline Bilston, Christopher Fietz, Llewellyn Falco “… I really liked that there was…]]></description><link>https://tonytvo.github.io/collaborative-learning-coderetreat/</link><guid isPermaLink="false">https://tonytvo.github.io/collaborative-learning-coderetreat/</guid><pubDate>Fri, 01 May 2020 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Written collaboratively by:&lt;/strong&gt;
+&lt;a href=&quot;https://twitter.com/ttrungvo&quot;&gt;Trung Vo&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/CuriousAgilist&quot;&gt;Bob Allen&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/jmasonlee&quot;&gt;Jacqueline Bilston&lt;/a&gt;, Christopher Fietz, &lt;a href=&quot;https://twitter.com/LlewellynFalco&quot;&gt;Llewellyn Falco&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;“… I really liked that there was something there for every level and anytime I would get stuck, there was someone there to help….” — Sara K.&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;What is a Coderetreat?&lt;/h2&gt;
+&lt;p&gt;Coderetreat is a day dedicated to allowing developers time to practice their craft. The focus is on practicing skills like Test-Driven Development (TDD), refactoring, and incremental design that is proven to make developers move faster with fewer bugs. It is designed to enable participants to focus on their practice, with as few distractions as possible.&lt;/p&gt;
+&lt;p&gt;The day is made up of several short sessions where we either work in pairs or mobs to solve a small coding problem. Each session, we start new with the same problem; this allows us to focus on the new skill we are learning.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 512px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e8babe6b5e7dd7aebe2381df0c57f0ca/01e7c/codetreat-infographic.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 57.59493670886076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAACBUlEQVQoz1VR227aQBD1L7Uf0PwCL5Wa1/5EWj4iRW5RUFQhIqQkT6WSY8lWJYQqkSBDHYyxgRBTc7Xxmju2wYs9lVlEk3nYnT2aMztzDgUAYRgCQL/fH4/HsI+aghiu+SgN7rj2YLQCgOVyZZomqSQnAFAkMwwjk8mwLIsxBgBZRUJFH1t28aH3tzsHAF3vJpNJTdMImbAoz9sCQKHwm+f5Xq9HWq7X/rfv1fcf78p/TB8HAOC6Xi73k2XZ7Xbr+/7h506nGYa4Xq9ivCMQGcpxfFW1fT84zrlcLhBCPM8zDDObzSLy2dmvt29yXxIFjKPdLMtFyBuN1p6HAULDcEzTGZsuQo7jgCwr2Ww2nU6raiMif/osUFTiIvU4nxsAwHHdq6vm+XlV0xbkmUrVb2/bl5fKzY2mKG1VralqnUhLKaoqyc+KIuu6/lIM13UYhgmCAA4RgZuN324bCDnD4XS/s9a3kWMY/23Y7SKCKIqxWKzbjSQkyD4JZ7PtdLpZrfDBqt0uskoQhKOMtm1LkjQaGff3D5Zl7fVft1qtcll45XOjMZlM/FKplEgkOp0OQePx+Onph6en5snJO5r+CgD5fJ6m6WKxSAYhdKpWsweDFUDIcZwkSYRcqZSvr38oSo+mLyqVMgAMh0NRFOF1UOQKguAoFem6WGBZnm42wREhZS/J/wAZvoBBqrPBEgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;coderetreat infographic&quot;
+        title=&quot;coderetreat infographic&quot;
+        src=&quot;/static/e8babe6b5e7dd7aebe2381df0c57f0ca/01e7c/codetreat-infographic.png&quot;
+        srcset=&quot;/static/e8babe6b5e7dd7aebe2381df0c57f0ca/c26ae/codetreat-infographic.png 158w,
+/static/e8babe6b5e7dd7aebe2381df0c57f0ca/6bdcf/codetreat-infographic.png 315w,
+/static/e8babe6b5e7dd7aebe2381df0c57f0ca/01e7c/codetreat-infographic.png 512w&quot;
+        sizes=&quot;(max-width: 512px) 100vw, 512px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;What do you get out of it?&lt;/h2&gt;
+&lt;p&gt;Coderetreat is an excellent place to learn what you know and what you don’t know. As in life in general, there are always new people to meet, new things to learn, and new ways of working and playing together, whether it be with code or ideas. They create a space where we can try out things that we have always wanted to try out, but we’ve never had time to try. Coderetreat is about peer learning, it can be hard to step outside of your comfort zone but together with other people, it is easy and even fun.&lt;/p&gt;
+&lt;p&gt;It’s easy to mean to practice. You’ve probably been meaning to practice already. Meeting together gives you a chance to actually do it. When we work in a pair or group, we are able to exchange new approaches and ideas and keep each other honest about actually using best practices.&lt;/p&gt;
+&lt;h2&gt;Where can I find one?&lt;/h2&gt;
+&lt;p&gt;Check out the Coderetreat website for one near you. Every November there is a Global Day of Coderetreat with sessions all over the world, on the same day.&lt;/p&gt;
+&lt;p&gt;Here are two online events that are coming up soon:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.eventbrite.com/e/mobretreat-winter-2021-for-all-americas-north-south-east-west-friends-tickets-138313931693&quot;&gt;Mobretreat&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.meetup.com/Calgary-Software-Crafters/events/275755200/&quot;&gt;Spring Coderetreat&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/52cfee09e1855cddaf10446303237bec/what-is-code-retreat-animated.gif&quot; alt=&quot;what is coderetreat&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[What's a simple way to share and learn refactor]]></title><description><![CDATA[I have been organizing coderetreat and creating screencasts on refactoring and TDD, etc… however, I find it takes lots of time and effort to…]]></description><link>https://tonytvo.github.io/what-simple-way-share-learn-refactor/</link><guid isPermaLink="false">https://tonytvo.github.io/what-simple-way-share-learn-refactor/</guid><pubDate>Wed, 01 May 2019 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;I have been organizing coderetreat and creating screencasts on refactoring and TDD, etc… however, I find it takes lots of time and effort to organize, preparing and facilitate. (it’s not that I complain about it as a matter of fact I love it every single second and I’m amazed at how much I have learned from the community)&lt;/p&gt;
 &lt;p&gt;I have been asking myself, what’s the simpler way for me to learn to refactor and share with others? (why refactor, you may ask? it’s because it’s my favourite topic in the long never-ending list of agile technical practices) and for some reason, I really like to share my boring meme jokes, so I guess why not share a list of animated gifs of refactoring and the motivation of it.&lt;/p&gt;
 &lt;p&gt;I guess since I’m an Asian guy (hopefully some kind of descendants from Bruce Lee) so this saying is pretty cool to me:
 &lt;strong&gt;“I fear not the man who has practiced 10,000 different kicks once, but I fear the man who has practiced one kick 10,000 times.”&lt;/strong&gt;&lt;/p&gt;
