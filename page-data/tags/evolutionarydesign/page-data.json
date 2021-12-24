@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tags/evolutionarydesign/",
+    "result": {"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/implement-domain-driven-design/"},"frontmatter":{"title":"Implementing domain driven design summary"}}}]}},"pageContext":{"tag":"evolutionarydesign"}},
+    "staticQueryHashes": []}

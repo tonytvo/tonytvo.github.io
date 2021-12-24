@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tags/popular/",
+    "result": {"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/what-simple-way-share-learn-refactor/"},"frontmatter":{"title":"What's a simple way to share and learn refactor"}}}]}},"pageContext":{"tag":"popular"}},
+    "staticQueryHashes": []}
