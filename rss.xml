@@ -1,4 +1,190 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 24 Dec 2021 04:53:29 GMT</lastBuildDate><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[Far far away, behind the word mountains, far from the countries Vokalia and
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 24 Dec 2021 07:06:40 GMT</lastBuildDate><item><title><![CDATA[What's a simple way to share and learn refactor]]></title><description><![CDATA[I have been organizing coderetreat and creating screencasts on refactoring and TDD, etc… however, I find it takes lots of time and effort to…]]></description><link>https://tonytvo.github.io/what-simple-way-share-learn-refactor/</link><guid isPermaLink="false">https://tonytvo.github.io/what-simple-way-share-learn-refactor/</guid><pubDate>Wed, 01 May 2019 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;I have been organizing coderetreat and creating screencasts on refactoring and TDD, etc… however, I find it takes lots of time and effort to organize, preparing and facilitate. (it’s not that I complain about it as a matter of fact I love it every single second and I’m amazed at how much I have learned from the community)&lt;/p&gt;
+&lt;p&gt;I have been asking myself, what’s the simpler way for me to learn to refactor and share with others? (why refactor, you may ask? it’s because it’s my favourite topic in the long never-ending list of agile technical practices) and for some reason, I really like to share my boring meme jokes, so I guess why not share a list of animated gifs of refactoring and the motivation of it.&lt;/p&gt;
+&lt;p&gt;I guess since I’m an Asian guy (hopefully some kind of descendants from Bruce Lee) so this saying is pretty cool to me:
+&lt;strong&gt;“I fear not the man who has practiced 10,000 different kicks once, but I fear the man who has practiced one kick 10,000 times.”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Another way to look at it, from &lt;a href=&quot;https://twitter.com/jbrains&quot;&gt;J.B Rainsberger&lt;/a&gt;, “I can see one large issue: programmers do not allow the various refactoring patterns to become so easy/comfortable that their fingers can &lt;strong&gt;execute them without conscious thought. This interferes with their progress because they have to switch more often among the questions “which refactorings will improve this design?” and “how do I perform this micro-step?”&lt;/strong&gt; if they don’t become able to perform the micro-steps (a sequence of 3-7 nano steps) easily, they might not breakthrough from “I know how to safely lead the design where I want it to go” to the more powerful &lt;strong&gt;“I can just start removing duplication and improving names and a good design will emerge”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Don’t get me wrong: the first of these 2 outcomes are good, but the second of these two outcomes is much better.&lt;/p&gt;
+&lt;p&gt;One of the consequences, of never breaking through is that the programmer &lt;strong&gt;will miss out on finding helpful designs that are simpler than the ones that their intuition can see.”&lt;/strong&gt; Damn, I can smell/see big FOMO emotions running through me now!!!&lt;/p&gt;
+&lt;p&gt;and as a matter of fact, there are so many moves in refactoring, so I’m curious if I could just distill most of the refactoring moves in under 10 moves (like there’s are 10 basic numbers).&lt;/p&gt;
+&lt;p&gt;so the game plan for this article is to post as many refactoring moves/snippets as possible but then distill them and reduce them to under &lt;strong&gt;10 refactoring snippets&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Please feel free to copy this and make your own top 10 moves, I would be definitely interested in seeing a different list of top 10 refactoring moves so I can improve my list better.&lt;/p&gt;
+&lt;p&gt;Here goes the list&lt;/p&gt;
+&lt;h1&gt;Extract Method&lt;/h1&gt;
+&lt;h2&gt;Motivation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;separate the intention and implementation&lt;/li&gt;
+&lt;li&gt;put a name to the block of code (“Naming as a Process” from Arlo)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img width=&quot;500&quot; height=&quot;300&quot; alt=&quot;extract method&quot; src=&quot;/63b55c0da9be5432c351e81841bee140/extract-method.gif&quot;&gt;
+&lt;h1&gt;Rename method, classes, fields&lt;/h1&gt;
+&lt;p&gt;Motivation
+Easy to read code start with good naming and naming is hard
+“Naming as a process” provides a good heuristic for naming but it’s too freaking long.
+I find this short, simple and easier to remember from J.B. Rainsberger&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0c57769429c29305c7fdddfc21c888dc/29007/jbrains-naming-process.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 77.21518987341771%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAADB0lEQVQ4y22UWXPiRhSF+f9/II+pPDg1STyVl2TG8TjjhUXGBhvMDmZREAhJCCRAEtr6S3V7mZpUblWXuqpvn3vu6XNVAME+TOjoPn3dp9iy+b285Et9hb46MDJ2WNsIIXLCKGK5mNPttBmPx8zncx4fG1Q0jXang207ogAIYx2Ik8t/xHXLEWcPrji5GIli2xKPE0/89GUmmlNPyJC5lpeKMEHt39Z+vxdRFJFlmSggBJt9guPH7KOU7mDI6cffMIw5MsJjgh8mFPsutndkakU0Jlv+qq84r5u0ph5tPRCNoUOapoohQRAQhYECqNXq/PzhF9Zrl//GPjiqQrphEiU55jbiYbxhMpkI7faOYxyLQp7ndHs9wjBSlyzLZjh6ZjqbKV1Gz2O1LMvCWBj0+gPSJH4v0m53uCmWxN39PcZiIQpr1+Wx2VSgf19eUtFucRybVrtDt9dnMp0qkPtancFwhHZbpdF8ot3psjRNbMfh69WVuL4pSiJSQ8mwy2Q6U0Cm43FWszl/dNh6O4LgoJgsFkuqd3fMdJ3dbkd/MESrVhk9P8sCIk1TmSYKjhex2b20u/N97G3Ix9KCmyebfr/H3Fios5VlcVMqcTgcvtM1jmMOQSCkdHmei8J4FfBr2SRLYjxvS3DM+XBtcFoyOETftJLMSpUKz+Mx0iKvAEg3SbvIrwLU7ZDzxhrP88nSBHsboPU33HRc4jSXyQqw2Wrxx+cziuWyYitDnr0xe92LwuGY4foBvr/Dtky0pxk/Xhj88GmK7UWv3oWt5+GuHcIw5H9CJUmayodJfESfG4xGA2o9g5PrBZXumrbuk722pnwYZZjugfrQQetYXDwYDHSbvm6L+84UP0hefPjQaOL5vro0XW44LZtqKmThLMvVHKeZ4GlsK9tcXF5zVapwfvGV6n2N5lNLSI1Vy/LZ//x8xtwwXl4tSQiPGWn2IrhiJwTHVDAyXKrVWwVa1jR1Z7PZ4Lqbby07zlpZQT6/BHj9B7yDvQHGSabmfb12WCxNXPe70Xy3zb8TIVuTNduu3QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;jbrain-naming-process&quot;
+        title=&quot;jbrain-naming-process&quot;
+        src=&quot;/static/0c57769429c29305c7fdddfc21c888dc/f058b/jbrains-naming-process.png&quot;
+        srcset=&quot;/static/0c57769429c29305c7fdddfc21c888dc/c26ae/jbrains-naming-process.png 158w,
+/static/0c57769429c29305c7fdddfc21c888dc/6bdcf/jbrains-naming-process.png 315w,
+/static/0c57769429c29305c7fdddfc21c888dc/f058b/jbrains-naming-process.png 630w,
+/static/0c57769429c29305c7fdddfc21c888dc/40601/jbrains-naming-process.png 945w,
+/static/0c57769429c29305c7fdddfc21c888dc/78612/jbrains-naming-process.png 1260w,
+/static/0c57769429c29305c7fdddfc21c888dc/29007/jbrains-naming-process.png 1600w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;img width=&quot;500&quot; height=&quot;300&quot; alt=&quot;rename method&quot; src=&quot;/e04e94bc9f38c71de3eba528fb7b8a16/rename-method.gif&quot;&gt;
+&lt;h1&gt;Golden Master&lt;/h1&gt;
+&lt;h2&gt;Motivation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Provide safety nets for doing refactoring by leveraging Standard IO&lt;/li&gt;
+&lt;li&gt;It’s a quick way to provide test coverage without knowing much about the underlying code&lt;/li&gt;
+&lt;li&gt;It would probably be more tedious to mock out external/IO/Database call in the code.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img width=&quot;500&quot; height=&quot;300&quot; alt=&quot;golden master&quot; src=&quot;/c91eb7778ca84c40879ad05639448d03/golden-master.gif&quot;&gt;
+&lt;h1&gt;Extract as a separate map&lt;/h1&gt;
+&lt;h2&gt;Motivation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;reduce responsibility in lambda, which forces creating interface/lambda with a single responsibility&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img width=&quot;500&quot; height=&quot;300&quot; alt=&quot;extract variable as separate map in lambda&quot; src=&quot;/d7305d3c1734980d77d8c9cc66bdab1e/extract-variable-as-separate-map-in-lambda.gif&quot;&gt;
+&lt;h1&gt;Introduce parameters&lt;/h1&gt;
+&lt;h2&gt;Motivation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;enable a deeper understanding of the domain model in the code through new abstractions&lt;/li&gt;
+&lt;li&gt;enable more refactorings with capture the common behaviours over these new abstractions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img width=&quot;500&quot; height=&quot;300&quot; alt=&quot;introduce parameter&quot; src=&quot;/453eac8166c8ae3f9014d4b389074601/introduce-parameter-orderlines.gif&quot;&gt;
+&lt;h1&gt;Introduce indirection steps to avoid big steps&lt;/h1&gt;
+&lt;h2&gt;Motivation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;to avoid breaking all existing clients when introducing new fields, new classes, etc…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Steps for approach 1&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;create a warm, dry place where the code can be changed and disrupt client less&lt;/li&gt;
+&lt;li&gt;focus on changes inside the warm, dry place&lt;/li&gt;
+&lt;li&gt;publish the changes when they’re ready, which often means inlining the warm, dry place (put it back where it was) or inlining the clients of the warm, dry place (the new code replaces some older code)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Steps for approach 2 (introduce parameter object)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=hGkdDxYCCKY&amp;#x26;ab_channel=tomphp&quot;&gt;https://www.youtube.com/watch?v=hGkdDxYCCKY&amp;#x26;ab_channel=tomphp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;intellij refactorings: extract methods, make method static, introduce parameter object, convert static to instance methods, introduce the field&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Steps for approach 3 (adding the wrapper)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;extract a function that takes the primitive value f(p)&lt;/li&gt;
+&lt;li&gt;introduce parameter object to wrap p into wrapper w, so that now we have f(w)&lt;/li&gt;
+&lt;li&gt;move f() onto class W. (What’s left is moving any behaviour that asks for w.getP() onto W)&lt;/li&gt;
+&lt;li&gt;for all remaining function g(p) put in the line w = new W(p) and then migrate all the internals from p to w.p (or w.getP() or whatever you call it)&lt;/li&gt;
+&lt;li&gt;extract parameter on new W(p), so that g now takes a w instead of p&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;move g() onto W&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;intellij refactorings: extract methods, wrap-unwrap (introduce indirection), introduce parameter, move method to another instance, introduce the field&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Steps for approach 4 (liberating the wrapped)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;extract all the functions of p that you want.&lt;/li&gt;
+&lt;li&gt;promote p to a field on the current class&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;extract delegate to class W, creating a new class that as p as a field, leaving behind this.w = new W(p)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;clean up&lt;/li&gt;
+&lt;li&gt;intellij refactorings: extract methods, extract delegate&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Snippets&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;introduce parameter object&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;img width=&quot;500&quot; height=&quot;300&quot; alt=&quot;introduce parameter object&quot; src=&quot;/b536c97814983321b1dd6458f3eee489/introduce-parameter-objects-orderlines.gif&quot;&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;make method static&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;img width=&quot;500&quot; height=&quot;300&quot; alt=&quot;make method static&quot; src=&quot;/22629c1f76ea91f54b50905a253a5419/make-static-method-orderlines.gif&quot;&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;extract delegate&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;img width=&quot;500&quot; height=&quot;300&quot; alt=&quot;extract delegate&quot; src=&quot;/3c83f1f0a5471131a5277924fa774639/extract-delegate-orderlines.gif&quot;&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;wrap-unwrap value (introduce another layer of indirection)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;img width=&quot;500&quot; height=&quot;300&quot; alt=&quot;introduce another indirection layer&quot; src=&quot;/80b5092805a676c3344a5713162b6d2f/introduce-another-layer-indirection.gif&quot;&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;move method to another instance&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;img width=&quot;500&quot; height=&quot;300&quot; alt=&quot;move  method to another instance&quot; src=&quot;/eb5074e4c560a34e9000486d8de1099a/move-instance-method-orderlines.gif&quot;&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;introduce field&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;img width=&quot;500&quot; height=&quot;300&quot; alt=&quot;introduce field&quot; src=&quot;/972ea1725b56f7fbb75aeb7636864799/introduce-field-order-lines.gif&quot;&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;…still under construction and more to come on the list&lt;/strong&gt;&lt;/p&gt;
+&lt;h1&gt;References&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Arlo Belshee, “Naming as a process”, &lt;a href=&quot;https://www.digdeeproots.com/articles/on/naming-process/&quot;&gt;https://www.digdeeproots.com/articles/on/naming-process/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;J.B. Rainsberger, “a model for improving names”, &lt;a href=&quot;https://blog.thecodewhisperer.com/permalink/a-model-for-improving-names&quot;&gt;https://blog.thecodewhisperer.com/permalink/a-model-for-improving-names&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tony Vo, “Sudoku Refactoring”, &lt;a href=&quot;https://ttrungvo.medium.com/sudoku-refactoring-kata-56f184b1b081&quot;&gt;https://ttrungvo.medium.com/sudoku-refactoring-kata-56f184b1b081&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Code Retreat 2017 Retrospective]]></title><description><![CDATA[In general, this year is much better compared to previous years There are several important points that I need to write down Typically, the…]]></description><link>https://tonytvo.github.io/code-retreat-2017-retrospective/</link><guid isPermaLink="false">https://tonytvo.github.io/code-retreat-2017-retrospective/</guid><pubDate>Wed, 06 Dec 2017 23:46:37 GMT</pubDate><content:encoded>&lt;p&gt;In general, this year is much better compared to previous years&lt;/p&gt;
+&lt;p&gt;There are several important points that I need to write down&lt;/p&gt;
+&lt;p&gt;Typically, the main reason for me to do code retreat to help developers in the community to expose more to TDD/craftsmanship.&lt;/p&gt;
+&lt;p&gt;Recently, I asked myself the question: “How come it’s not easy to adapt TDD, automated testing which should be the core value of any efficient team?” I don’t think that people is lazy or people is resistant, I think as the industry, there’s lots of ambiguity in how people should approach TDD (SOLID principles, 4 simple rules of design, etc … are too generic) and agile practices (agile manifesto, etc…)&lt;/p&gt;
+&lt;p&gt;How can I apply SOLID, 4 simple rules of design into my day to day jobs?&lt;/p&gt;
+&lt;p&gt;What’s the most important reasons for developers to write automated tests? is it testability design, is it executable documentations?….&lt;/p&gt;
+&lt;p&gt;what’s the different between integration/component/API tests? should we care?&lt;/p&gt;
+&lt;p&gt;when I discuss unit tests with QA, typical answers I get is that it’s programmer tests? IT’S SO NOT TRUE? It does contain many behaviors of the systems, some behaviors are at very low level and business people shouldn’t care about, but I believe &lt;strong&gt;MOST OF THE BEHAVIORS&lt;/strong&gt; could and should be expressed at &lt;strong&gt;high level domain language&lt;/strong&gt; and can be used as &lt;strong&gt;executable documentation&lt;/strong&gt; for different stakeholders such as QA/Non technical people. Should we call those tests as behavior unit tests instead of unit tests?&lt;/p&gt;
+&lt;p&gt;How can we make the TDD/Refactor/agile practices easier for people to adapt?&lt;/p&gt;
+&lt;p&gt;Maybe, &lt;strong&gt;shrink the change?&lt;/strong&gt;
+Maybe, there’s lots of things can go wrong but there’s few things that you got to get it right, so &lt;strong&gt;script critical moves?&lt;/strong&gt;
+Maybe, Looking for bright spot (examples) so people can see the benefits and &lt;strong&gt;start small?&lt;/strong&gt;
+Maybe, &lt;strong&gt;tweak the environments&lt;/strong&gt; to encourage the right behavior and discourage the wrong behavior?
+I think code retreat is one of the good place for me to find the answer to that question.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in…]]></description><link>https://tonytvo.github.io/new-beginnings/</link><guid isPermaLink="false">https://tonytvo.github.io/new-beginnings/</guid><pubDate>Thu, 28 May 2015 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
 right at the coast of the Semantics, a large language ocean. A small river named
@@ -90,13 +276,7 @@ would be the word “and” and the Little Blind Text should turn around and ret
 to its own, safe country. But nothing the copy said could convince her and so it
 didn’t take long until a few insidious Copy Writers ambushed her, made her drunk
 with Longe and Parole and dragged her into their agency, where they abused her
-for their projects again and again.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[My Second Post!]]></title><description><![CDATA[Wow! I love blogging so much already. Did you know that “despite its name, salted duck eggs can also be made from
-chicken eggs, though the…]]></description><link>https://tonytvo.github.io/my-second-post/</link><guid isPermaLink="false">https://tonytvo.github.io/my-second-post/</guid><pubDate>Wed, 06 May 2015 23:46:37 GMT</pubDate><content:encoded>&lt;p&gt;Wow! I love blogging so much already.&lt;/p&gt;
-&lt;p&gt;Did you know that “despite its name, salted duck eggs can also be made from
-chicken eggs, though the taste and texture will be somewhat different, and the
-egg yolk will be less rich.”?
-(&lt;a href=&quot;https://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;Wikipedia Link&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;Yeah, I didn’t either.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[This is my first post on my new fake blog! How exciting! I’m sure I’ll write a lot more interesting things in the future. Oh, and here’s a…]]></description><link>https://tonytvo.github.io/hello-world/</link><guid isPermaLink="false">https://tonytvo.github.io/hello-world/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;
+for their projects again and again.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[This is my first post on my new fake blog! How exciting! I’m sure I’ll write a lot more interesting things in the future. Oh, and here’s a…]]></description><link>https://tonytvo.github.io/hello-world/</link><guid isPermaLink="false">https://tonytvo.github.io/hello-world/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;
 &lt;p&gt;I’m sure I’ll write a lot more interesting things in the future.&lt;/p&gt;
 &lt;p&gt;Oh, and here’s a great quote from this Wikipedia on
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;salted duck eggs&lt;/a&gt;.&lt;/p&gt;
