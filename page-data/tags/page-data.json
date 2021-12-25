@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-tags-js",
     "path": "/tags/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"Tony Vo Blog"}},"allMarkdownRemark":{"group":[{"fieldValue":"coderetreat","totalCount":1},{"fieldValue":"domaindrivendesign","totalCount":1},{"fieldValue":"evolutionarydesign","totalCount":3},{"fieldValue":"popular","totalCount":1},{"fieldValue":"selftestingcode","totalCount":3},{"fieldValue":"softwaredevelopment","totalCount":1}]}},"pageContext":{}},
+    "result": {"data":{"site":{"siteMetadata":{"title":"Conversations on agile technical practices and investments"}},"allMarkdownRemark":{"group":[{"fieldValue":"coderetreat","totalCount":1},{"fieldValue":"domaindrivendesign","totalCount":1},{"fieldValue":"evolutionarydesign","totalCount":3},{"fieldValue":"popular","totalCount":1},{"fieldValue":"selftestingcode","totalCount":3},{"fieldValue":"softwaredevelopment","totalCount":1}]}},"pageContext":{}},
     "staticQueryHashes": []}
