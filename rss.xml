@@ -1,4 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 27 Dec 2021 03:50:57 GMT</lastBuildDate><item><title><![CDATA[how to win friends and influence people summary]]></title><description><![CDATA[Principles Fundamental techniques in dealing with people Don’t criticize, condemn or complain. This makes them defensive and justifies their…]]></description><link>https://tonytvo.github.io/how-to-win-friends-influence-people-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/how-to-win-friends-influence-people-summary/</guid><pubDate>Sat, 25 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Principles&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 27 Dec 2021 23:45:01 GMT</lastBuildDate><item><title><![CDATA[learning how to learn]]></title><description><![CDATA[todo summary limitless upgrade your brain-jim-kwik-summary summary continuous learning from joshua kerievsky a pattern language for study…]]></description><link>https://tonytvo.github.io/learn-how-to-learn/</link><guid isPermaLink="false">https://tonytvo.github.io/learn-how-to-learn/</guid><pubDate>Mon, 27 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;todo&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;summary limitless upgrade your brain-jim-kwik-summary&lt;/li&gt;
+&lt;li&gt;summary continuous learning from joshua kerievsky&lt;/li&gt;
+&lt;li&gt;a pattern language for study groups from joshua kerievsky&lt;/li&gt;
+&lt;li&gt;summary how to read from mortimer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Overview&lt;/h1&gt;
+&lt;h2&gt;the top 12 most useful &amp;#x26; universal mental models&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/6cb3fb54dc69cc8db51362569b556b14/491c4/mental-models-infographic.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 96.20253164556962%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAATABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAIBAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB93Nk6JFQIC//xAAWEAEBAQAAAAAAAAAAAAAAAAABECD/2gAIAQEAAQUCwFZ//8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAGRAAAQUAAAAAAAAAAAAAAAAAIAABESEx/9oACAEBAAY/Agt5WB//xAAaEAADAQADAAAAAAAAAAAAAAAAARExECFx/9oACAEBAAE/IX2RZBZnDknW3fBUPBpBNn//2gAMAwEAAgADAAAAECDHfP/EABURAQEAAAAAAAAAAAAAAAAAABBB/9oACAEDAQE/ECn/xAAVEQEBAAAAAAAAAAAAAAAAAAARIP/aAAgBAgEBPxBj/8QAHRAAAgMAAgMAAAAAAAAAAAAAAREAITEQUUFhof/aAAgBAQABPxBGJSwVcQQgleQnGACnpxjdAPUHFIiQAnVQheL73iICHYtvyf/Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;top 12 most useful &amp;amp; universal mental models&quot;
+        title=&quot;top 12 most useful &amp;amp; universal mental models&quot;
+        src=&quot;/static/6cb3fb54dc69cc8db51362569b556b14/828fb/mental-models-infographic.jpg&quot;
+        srcset=&quot;/static/6cb3fb54dc69cc8db51362569b556b14/ff44c/mental-models-infographic.jpg 158w,
+/static/6cb3fb54dc69cc8db51362569b556b14/a6688/mental-models-infographic.jpg 315w,
+/static/6cb3fb54dc69cc8db51362569b556b14/828fb/mental-models-infographic.jpg 630w,
+/static/6cb3fb54dc69cc8db51362569b556b14/0ede0/mental-models-infographic.jpg 945w,
+/static/6cb3fb54dc69cc8db51362569b556b14/3ac88/mental-models-infographic.jpg 1260w,
+/static/6cb3fb54dc69cc8db51362569b556b14/491c4/mental-models-infographic.jpg 1514w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h1&gt;Quotes&lt;/h1&gt;
+&lt;h1&gt;References&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.visualcapitalist.com/12-ways-smarter-mental-models/&quot;&gt;https://www.visualcapitalist.com/12-ways-smarter-mental-models/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/accelerated-intelligence/this-is-exactly-how-you-should-train-yourself-to-be-smarter-infographic-86d0d42ad41c&quot;&gt;https://medium.com/accelerated-intelligence/this-is-exactly-how-you-should-train-yourself-to-be-smarter-infographic-86d0d42ad41c&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://fs.blog/the-art-of-reading-how-to-be-a-demanding-reader/&quot;&gt;https://fs.blog/the-art-of-reading-how-to-be-a-demanding-reader/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://fs.blog/how-to-read-a-book/&quot;&gt;https://fs.blog/how-to-read-a-book/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://waiyancan.com/limitless-upgrade-your-brain-jim-kwik-summary/&quot;&gt;https://waiyancan.com/limitless-upgrade-your-brain-jim-kwik-summary/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.getstoryshots.com/books/limitless-summary/&quot;&gt;https://www.getstoryshots.com/books/limitless-summary/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.sitrakaratsimba.com/limitless-upgrade-your-brain-learn-anything-faster-and-unlock-your-exceptional-life/&quot;&gt;https://www.sitrakaratsimba.com/limitless-upgrade-your-brain-learn-anything-faster-and-unlock-your-exceptional-life/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.industriallogic.com/img/blog/2005/09/ContinuousLearning.pdf&quot;&gt;https://www.industriallogic.com/img/blog/2005/09/ContinuousLearning.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.industriallogic.com/img/blog/2012/03/khdraft1.pdf&quot;&gt;https://www.industriallogic.com/img/blog/2012/03/khdraft1.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://theartofliving.com/how-to-read-a-book-summary/&quot;&gt;https://theartofliving.com/how-to-read-a-book-summary/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[how to win friends and influence people summary]]></title><description><![CDATA[Principles Fundamental techniques in dealing with people Don’t criticize, condemn or complain. This makes them defensive and justifies their…]]></description><link>https://tonytvo.github.io/how-to-win-friends-influence-people-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/how-to-win-friends-influence-people-summary/</guid><pubDate>Sat, 25 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Principles&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Fundamental techniques in dealing with people
 &lt;ul&gt;
@@ -222,30 +277,30 @@
 &lt;li&gt;you succeed because you find your unique strengths and focus on developing habits around them.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;what might you do to accomplish your 10-year goals in the next 6 months, if you had a gun against your head?&lt;/li&gt;
+&lt;li&gt;what might you do to accomplish your 10-year goals in the next six months if you had a gun against your head?&lt;/li&gt;
 &lt;li&gt;routine, in an intelligent man, is a sign of ambition&lt;/li&gt;
 &lt;li&gt;learn things once and use them forever&lt;/li&gt;
-&lt;li&gt;toolkit for changing your life.&lt;/li&gt;
+&lt;li&gt;a toolkit for changing your life.&lt;/li&gt;
 &lt;li&gt;judge a man by his questions rather than his answers&lt;/li&gt;
-&lt;li&gt;contains low-hanging fruit with immediate returns. Think of the bite-sized rules within these pages as PED(s) - performance enhancing details&lt;/li&gt;
+&lt;li&gt;contains low-hanging fruit with immediate returns. Think of the bite-sized rules within these pages as PED(s) - performance-enhancing details&lt;/li&gt;
 &lt;li&gt;look for the black sheep who fit your unique idiosyncrasies. Keep an eye out for the non-traditional paths.&lt;/li&gt;
-&lt;li&gt;borrow liberally, combine uniquely, and create your own bespoke blueprint.&lt;/li&gt;
+&lt;li&gt;borrow liberally, combine uniquely, and create your bespoke blueprint.&lt;/li&gt;
 &lt;li&gt;this book is a buffet. Here’s how to get the most out of it
 &lt;ul&gt;
-&lt;li&gt;skip liberally: skip anything that doesn’t interests you.
+&lt;li&gt;skip liberally: skip anything that doesn’t interest you.
 &lt;ul&gt;
 &lt;li&gt;like 50%, love 25%, and never forget 10%&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;skip, but do so intelligently
 &lt;ul&gt;
-&lt;li&gt;return to it later at some point and ask yourself, “why did I skip this?” Did it offend you? seem beneath you? seem too difficult? and did you arrive at that by thinking it through, or is it a reflection of biases inherited from your parents and others? very often, “our” belief” are not our own&lt;/li&gt;
-&lt;li&gt;this type of practice is how you create yourself, instead of seeking to discover yourself.&lt;/li&gt;
+&lt;li&gt;return to it later at some point and ask yourself, “why did I skip this?” Did it offend you? Seem beneath you? Seem too difficult? And did you arrive at that by thinking it through, or is it a reflection of biases inherited from your parents and others? very often, “our” beliefs” are not our own&lt;/li&gt;
+&lt;li&gt;this type of practice is how you create yourself instead of discovering yourself.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;the context and original language teaches you how to THINK like a world-class performer, not just regurgitate quotes. That is the key meta-skill we’re aiming for.&lt;/li&gt;
+&lt;li&gt;the context and original language teach you how to THINK like a world-class performer, not just regurgitate quotes. That is the crucial meta-skill we’re aiming for.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;HEALTHY&lt;/h1&gt;
 &lt;h2&gt;Exercise&lt;/h2&gt;
@@ -262,7 +317,7 @@
 &lt;li&gt;daily simple strength exercise:
 &lt;ul&gt;
 &lt;li&gt;one-arm kettlebell swing&lt;/li&gt;
-&lt;li&gt;kettlebell Turkish get-up&lt;/li&gt;
+&lt;li&gt;Turkish kettlebell get-up&lt;/li&gt;
 &lt;li&gt;kettlebell goblet squat&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -281,7 +336,7 @@
 &lt;ul&gt;
 &lt;li&gt;hyperthermic conditioning, aka calculated heat exposure.
 &lt;ul&gt;
-&lt;li&gt;It probably would improve your endurance and increase your GH (growth hormone levels.&lt;/li&gt;
+&lt;li&gt;It probably would improve your endurance and increase your GH (growth hormone levels).&lt;/li&gt;
 &lt;li&gt;Regular saunas post-workout. Just 20 minutes 3-4 times a week at a temperature of 160-170 F can be highly beneficial for reducing DOMS (delayed-onset muscle soreness)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -298,7 +353,7 @@
 &lt;ul&gt;
 &lt;li&gt;the low-carb and ketogenic diet for optimum health
 &lt;ul&gt;
-&lt;li&gt;keto diet is essentially a low-carb, high-fat diet designed to imitate the state of fasting.&lt;/li&gt;
+&lt;li&gt;the keto diet is essentially a low-carb, high-fat diet designed to imitate the state of fasting.&lt;/li&gt;
 &lt;li&gt;Rather than using blood sugar (glucose) as your energy source, the body becomes dependent on ketones derived from fat. Few benefits are fat loss, better body composition, potential anti-cancer effects, improvement of oxygen consumption, and increased overall strength and health.&lt;/li&gt;
 &lt;li&gt;Repeat the same low-carb meals regularly. For example, have the same thing for breakfast every day, do the same for lunch, and if you require some variation, you can mix up your dinners.&lt;/li&gt;
 &lt;li&gt;Never drink calories.&lt;/li&gt;
@@ -307,18 +362,18 @@
 &lt;li&gt;Take one day off per week and eat whatever you want.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Fasting can help re-setting your body and immune system, stimulating stem-cell regeneration. Recommended to try a 5-day fast 2-3 times per year.&lt;/li&gt;
+&lt;li&gt;Fasting can help re-setting your body and immune system, stimulating stem-cell regeneration. It is recommended to try a 5-day fast 2-3 times per year.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;food diets&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;eating ‘pop tarts’ cookies for breakfast before competitions&lt;/li&gt;
-&lt;li&gt;people should only eat carbohydrates or sugars if they have a good body mass index, a person should have less than 10% body fat&lt;/li&gt;
+&lt;li&gt;people should only eat carbohydrates or sugars if they have a good body mass index. A person should have less than 10% body fat&lt;/li&gt;
 &lt;li&gt;mix coffee with butter or specific supplements like hydrolyzed gelatin mixed with beetroot powder&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Mobility&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;requires that you demonstrate strength throughout the entire range of motion, including the end ranges.&lt;/li&gt;
-&lt;li&gt;Kelly Starrett: try squatting all the way to the ground while keeping your feet and knees together. This indicates your mobility in the motion range in your hip and ankle.&lt;/li&gt;
+&lt;li&gt;Kelly Starrett: try squatting to the ground while keeping your feet and knees together. This indicates your mobility in the motion range in your hip and ankle.&lt;/li&gt;
 &lt;li&gt;Recommend doing light, narrow-stance overhead squats in combination with cossack squats as a way of improving your mobility in these areas.&lt;/li&gt;
 &lt;li&gt;Keep the heels flat on the ground, your knees directly above your toes, and your hips as close to the ground as possible when you switch.&lt;/li&gt;
 &lt;li&gt;Cow stretch (aka cat-cow or cat camel in yoga). Spend as much time as you can in a low lunge and work on shoulder rotation using the Burgener warm-up.&lt;/li&gt;
@@ -332,11 +387,11 @@
 &lt;/ul&gt;
 &lt;h2&gt;Medicating&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;daily use of the diabetes drug metformin. Metformin can help prevent cancer and is considered the most promising anti-ageing drug nowadays.&lt;/li&gt;
+&lt;li&gt;the daily use of the diabetes drug metformin. Metformin can help prevent cancer and is considered the most promising anti-ageing drug nowadays.&lt;/li&gt;
 &lt;li&gt;Takes small dosages of lithium, which is a drug against bipolarity. It is believed that such low dosages can improve mood and brain functions.&lt;/li&gt;
 &lt;li&gt;Substances such as Psilocybin, Mescaline, and Ayahuasca can separate the subject from the ego and thus provide a transcendental experience.&lt;/li&gt;
+&lt;li&gt;Psychedelic drugs treat depression, addiction, and even anxiety.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Psychedelic drugs treat depression, addiction, and even anxiety.&lt;/p&gt;
 &lt;h2&gt;5-morning rituals&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;make your bed daily. By making your bed, you’re working on your first task of the day, and achieving this will inject you with a bit of pride. This will motivate you to continue in the same manner throughout your day.&lt;/li&gt;
@@ -345,45 +400,45 @@
 &lt;li&gt;Make ‘titanium tea.’ Ingredients: Pu-erh aged black tea. Dragon well green tea (or other green tea). Turmeric and ginger shavings (often also Rishi brand). Add hot water and steep for 1-2 minutes. Once done, add 1-2 tbsp of coconut oil&lt;/li&gt;
 &lt;li&gt;journal. Take 5-10 minutes to write down some thoughts. Then, answer a few questions about what you’re grateful for, what would make the day better, and daily affirmations.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;“I may be the laziest mindfulness instructor in the world because I tell my students that all they need to commit to is one mindful breath a day. Just one. Breathe in and breathe out mindfully, and your commitment for the day is fulfilled. Everything else is a bonus.”&lt;/p&gt;
+&lt;p&gt;“I may be the laziest mindfulness instructor in the world because I tell my students that all they need to commit to is one mindful breath a day—just one. Breathe in and breathe out mindfully, and your commitment for the day is fulfilled. Everything else is a bonus.”&lt;/p&gt;
 &lt;h1&gt;Wealthy&lt;/h1&gt;
 &lt;h2&gt;pricing and silicone valley&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;should not under-valuing your product and not charging enough. By not charing enough for a product, you’re only undercutting yourself. You’re left with not enough money to actually market the product.&lt;/li&gt;
+&lt;li&gt;should not under-value your product and not charging enough. By not charging enough for a product, you’re only undercutting yourself. You’re left with not enough money to actually market the product.&lt;/li&gt;
 &lt;li&gt;Know the value of what you are selling. Don’t get greedy and aim for volume.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;say yes&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;when you’re earlier in your career, the best strategy is to just say ‘yes’ to everything. Every little gig. You just never know what the lottery tickets are.&lt;/li&gt;
+&lt;li&gt;when you’re earlier in your career, the best strategy is to say ‘yes’ to everything, every little gig. You never know what the lottery tickets are.&lt;/li&gt;
 &lt;li&gt;If you don’t instinctively think, “HELL, YES, I WILL DO THAT,” then say ‘no.’&lt;/li&gt;
 &lt;li&gt;Once you’ve found your rhythm and have made progress, it’s time to stop filling all of your time with menial and mediocre tasks.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;busy&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;being busy means a lack of priorities, so commit to things that are really worth it and reject the rest.&lt;/li&gt;
+&lt;li&gt;being busy means a lack of priorities, so commit to things that are worth it and reject the rest.&lt;/li&gt;
 &lt;li&gt;“Being busy is most often used as a guide for avoiding the few critically important but uncomfortable actions.”&lt;/li&gt;
 &lt;li&gt;One way to deal with procrastination and business is to identify just ONE must-do task per day.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;don’t be a dog&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;what if mindset, anything you do, anything you change, consider the possible results of that in 1 day, 1 week, 1 month, or 1 year. Always be thinking ahead and have a plan for success.&lt;/li&gt;
+&lt;li&gt;what if mindset, anything you do, anything you change, consider the possible results of that in one day, one week, one month, or one year. Always be thinking ahead and have a plan for success.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;investors&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;obsession with not losing money. Before entering any business opportunity or investment, ask yourself what the downside is and how you can be protected against it.&lt;/li&gt;
 &lt;li&gt;Obsessed with asymmetrical risk and reward. This essentially means that they are focused on minimum risk with maximum results.&lt;/li&gt;
 &lt;li&gt;Asset allocation and margin of safety to diversify your portfolio in case you make wrong decisions.&lt;/li&gt;
-&lt;li&gt;Passionate about giving and being generous. They weren’t tight or overly frugal.&lt;/li&gt;
+&lt;li&gt;Passionate about giving and being generous. It weren’t tight or overly frugal.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;work hard&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;the error rate of 10-20%, times when I would have made a different decision in a given situation if it means you can move fast.&lt;/li&gt;
+&lt;li&gt;Consider timing is entirely necessary or if it’s something you’re inflicting upon yourself as a stalling tactic.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Consider timing is entirely necessary or if it’s something you’re inflicting upon yourself as a stalling tactic.&lt;/p&gt;
 &lt;h2&gt;startups and making money&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;if you have set well-thought-out and intelligent rules, then FOLLOW THE RULES NO MATTER WHAT. You clearly set the rules with intentions, don’t break them when something tempting comes up.&lt;/li&gt;
-&lt;li&gt;Most of the startups will fail. So to cover your losses, you need to make sure that the successes are really worth it.&lt;/li&gt;
+&lt;li&gt;if you have set well-thought-out and intelligent rules, then FOLLOW THE RULES NO MATTER WHAT. You set the rules with intentions, don’t break them when something tempting comes up.&lt;/li&gt;
+&lt;li&gt;Most of the startups will fail. So to cover your losses, you need to make sure that the successes are worth it.&lt;/li&gt;
 &lt;li&gt;When it comes to investing and angel investments, you have to be 100% comfortable with losing all of your money. Therefore, you should only gamble with an amount you can afford to lose.&lt;/li&gt;
 &lt;li&gt;Limit angel investment funds to 10-15% of your liquid assets. Nevermore.&lt;/li&gt;
 &lt;li&gt;When designing a product, you have to be keen to use the product yourself. If it’s not something you’re interested in, avoid it.&lt;/li&gt;
@@ -407,14 +462,21 @@
 &lt;li&gt;Confident enough to put yourself out there. The following 5-6 times you order a coffee, ask for 10% off. Doing this a few times will improve your confidence and help you get comfortable with asking.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;stress test beliefs&lt;/h2&gt;
-&lt;p&gt;before releasing a product or service, it’s essential to expose them to proper scrutiny. For example, select the first 10 people (red team) to critique and break an idea apart.&lt;/p&gt;
+&lt;p&gt;before releasing a product or service, it’s essential to expose them to proper scrutiny. For example, select the first ten people (red team) to critique and break an idea apart.&lt;/p&gt;
 &lt;h2&gt;It’s not what you know. It’s what you do consistently.&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Knowledge is redundant without consistent, purposeful action. A similar theme addressed by Peter Thiel is that education does not equate to learning. Thiel is more interested in what people learn rather than what educational credentials they are working on.&lt;/li&gt;
+&lt;li&gt;Zero to one questions:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;the monopoly question&lt;/strong&gt;: are you starting with a big share of a small market?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the secret question&lt;/strong&gt;: have you identified a unique opportunity that others don’t see?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the distribution question&lt;/strong&gt;: do you have a way to not just create but deliver your product?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Gut investing&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;start by exploring an idea emotionally, than do traditional due diligence using objective data.&lt;/li&gt;
+&lt;li&gt;start by exploring an idea emotionally, then do traditional due diligence using objective data.&lt;/li&gt;
 &lt;li&gt;When researching ideas emotionally, take the novel features and think about how they will impact users’ emotions and play out over the long run.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;resilience&lt;/h2&gt;
@@ -443,7 +505,7 @@
 &lt;h1&gt;Wisdom&lt;/h1&gt;
 &lt;h2&gt;being mentally tough&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;pushing yourself harder than ever before, to do something you didn’t realize you were capable of.&lt;/li&gt;
+&lt;li&gt;pushing yourself harder than ever before to do something you didn’t realize you were capable of.&lt;/li&gt;
 &lt;li&gt;Get into situations with a group where you have difficulties and discomfort.&lt;/li&gt;
 &lt;li&gt;Establish fear and make people overcome it.&lt;/li&gt;
 &lt;/ul&gt;
@@ -453,12 +515,12 @@
 &lt;li&gt;If you are terrified of the humiliation that failure can bring, then use that as your motivation to succeed.&lt;/li&gt;
 &lt;li&gt;Fear is designed to keep us safe.&lt;/li&gt;
 &lt;li&gt;Don’t let it rule you.&lt;/li&gt;
-&lt;li&gt;Ask yourself if your fear should really be a top priority.&lt;/li&gt;
+&lt;li&gt;Ask yourself if your fear should be a top priority.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;fear-setting&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;to embrace fear setting, you need to define the worst-case scenario for any event or outcome. Understand precisely what would happen and identify all the ways that you might be affected.&lt;/li&gt;
-&lt;li&gt;By defining your fears, you’ll find that you’re actually working towards conquering these fears.&lt;/li&gt;
+&lt;li&gt;By defining your fears, you’ll find that you’re working towards conquering these fears.&lt;/li&gt;
 &lt;li&gt;Rate the negative outcome on a scale of 1-10 and consider whether they are permanent or temporary.&lt;/li&gt;
 &lt;li&gt;Next, consider what actions you would take to correct the adverse outcomes. Finally, how easy would it be to get back on track?&lt;/li&gt;
 &lt;li&gt;Cost-benefit analysis.&lt;/li&gt;
@@ -466,9 +528,9 @@
 &lt;p&gt;“In other words, you’re risking an unlikely and temporary 3 or 4 for a probable and permanent 9 or 10.”&lt;/p&gt;
 &lt;h2&gt;perfectionism&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;can actually be paralyzing&lt;/li&gt;
+&lt;li&gt;can be paralyzing&lt;/li&gt;
 &lt;li&gt;lead to low self-esteem and unhealthy relationships&lt;/li&gt;
-&lt;li&gt;often. A by-product of perfectionism is actually procrastination.&lt;/li&gt;
+&lt;li&gt;often. A by-product of perfectionism is procrastination.&lt;/li&gt;
 &lt;li&gt;No one is perfect, and you shouldn’t want to be.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Tactics for dealing with haters&lt;/h2&gt;
@@ -479,7 +541,7 @@
 &lt;li&gt;don’t over apologize.&lt;/li&gt;
 &lt;li&gt;You can’t reason someone out of something they didn’t reason themselves into&lt;/li&gt;
 &lt;li&gt;don’t try to get everyone to like you. Confront the people who need confronting&lt;/li&gt;
-&lt;li&gt;if you want to improve, be content to be thought foolish and stupid&lt;/li&gt;
+&lt;li&gt;if you want to improve, be content to be thought foolish&lt;/li&gt;
 &lt;li&gt;living well is the best revenge.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;on happiness&lt;/h2&gt;
@@ -496,16 +558,16 @@
 &lt;li&gt;This practice is a way of ensuring that she is not judging negatively. Criticism and negative judgement are a way to feel superior while avoiding introspection.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;seeks to be the first person to smile at someone and say ‘hello’ - to friends and even strangers.&lt;/li&gt;
+&lt;li&gt;seeks to be the first to smile at someone and say ‘hello’ - to friends and even strangers.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;“Happiness is wanting what you have.”&lt;/p&gt;
 &lt;h2&gt;3 options&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;when facing a new situation, there are 3 options: you can change it, accept it, or leave it. It’s essential to choose one of these options and not the terrible fourth option: sitting around, wishing you could change it, but simply accepting it, or wishing you could leave it, but changing it, etc…&lt;/li&gt;
+&lt;li&gt;when facing a new situation, there are three options: you can change it, accept it, or leave it. It’s essential to choose one of these options and not the terrible fourth option: sitting around, wishing you could change it, but simply accepting it, or wishing you could leave it, but changing it, etc…&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Deloading&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;training really hard, then having a de-load week where the volume and intensity reduced significantly. It’s about using this as downtime for the body to recover and prepare for the next intensity period.&lt;/li&gt;
+&lt;li&gt;training hard, then having a de-load week where the volume and intensity reduced significantly. It’s about using this as downtime for the body to recover and prepare for the next intensity period.&lt;/li&gt;
 &lt;li&gt;Ferriss explains that he’ll batch an intense period of complex and similar tasks such as podcasting, emails, writing blogs and accounting. He’ll then alternate this with scheduled periods of downtime where he can do whatever he wants.&lt;/li&gt;
 &lt;li&gt;“Deloading blocks must be scheduled and defended more strongly than your business commitments. The former can strengthen and inform the latter, but not vice versa.”&lt;/li&gt;
 &lt;/ul&gt;
@@ -517,13 +579,13 @@
 &lt;h2&gt;time management&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;busy is a sign that your mind is out of control and chaotic&lt;/li&gt;
-&lt;li&gt;being available and having time for others and yourself means that you are in control of your day and your life.&lt;/li&gt;
+&lt;li&gt;being available and having time for others and yourself means that you are in control of your day and life.&lt;/li&gt;
 &lt;li&gt;The chronic culture of occupation reflects the lack of priorities and the lack of self-respect.&lt;/li&gt;
-&lt;li&gt;10 minutes a day is all you need to be efficient and that being busy is not a valid excuse because if you do not have 10 minutes, you do not have a life.&lt;/li&gt;
+&lt;li&gt;10 minutes a day is all you need to be efficient, and that being busy is not a valid excuse because if you do not have 10 minutes, you do not have a life.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;3 tools that allow all the rest&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;I can think: having good rules for decision-making, and having good questions you can ask yourself and others&lt;/li&gt;
+&lt;li&gt;I can think: having good rules for decision-making and having good questions you can ask yourself and others&lt;/li&gt;
 &lt;li&gt;I can wait: being able to plan the long-term, play the long game, and not misallocate your resources&lt;/li&gt;
 &lt;li&gt;I can fast: being able to withstand difficulties and disaster. Training yourself to be uncommonly resilient and have a high pain tolerance.&lt;/li&gt;
 &lt;/ul&gt;
@@ -537,13 +599,13 @@
 &lt;ul&gt;
 &lt;li&gt;What if I only asked questions instead of pitching&lt;/li&gt;
 &lt;li&gt;what if I studied technical material, so I sounded like an engineer instead of a sales guy?&lt;/li&gt;
-&lt;li&gt;what if I ended my emails with, “I totally understand if you’re too busy to reply, and thank you for reading this far,”&lt;/li&gt;
+&lt;li&gt;what if I ended my emails with, “I understand if you’re too busy to reply, and thank you for reading this far,”&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;what do I spend a silly amount of money on? How might I scratch my own itch?&lt;/li&gt;
-&lt;li&gt;What would I do/have/been if I had $10 million? what’s my real TMI (target monthly income)?
+&lt;li&gt;what do I spend a silly amount of money on? How might I scratch my itch?&lt;/li&gt;
+&lt;li&gt;What would I do/have/been if I had $10 million? What’s my real TMI (target monthly income)?
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://tim.blog/lifestyle-costing/&quot;&gt;https://tim.blog/lifestyle-costing/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -566,13 +628,13 @@
 &lt;li&gt;people’s IQs seem to double as soon as you give them responsibility and indicate that you trust them.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;What’s the least 6 minor crowded channel?&lt;/li&gt;
+&lt;li&gt;What are the least six minor crowded channels?&lt;/li&gt;
 &lt;li&gt;Imagine if I couldn’t pitch my product directly?
 &lt;ul&gt;
 &lt;li&gt;People don’t like being sold products, but we all want to be told stories.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;what if I created my own real-world MBA?
+&lt;li&gt;what if I created my real-world MBA?
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://tim.blog/2010/06/28/mba/&quot;&gt;https://tim.blog/2010/06/28/mba/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -611,7 +673,7 @@
 &lt;li&gt;&lt;strong&gt;No hurry, no pause.&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;You can get 95% of the results you want by calmly putting one foot in front of the other.&lt;/li&gt;
-&lt;li&gt;Slow is smooth, smooth is fast.&lt;/li&gt;
+&lt;li&gt;Slow is smooth. Smooth is fast.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Luxury is feeling unrushed. No hurry, no pause.&lt;/strong&gt;&lt;/li&gt;
@@ -622,7 +684,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;Exercises to try&lt;/h1&gt;
-&lt;h2&gt;Write down 10 ideas each morning in a notebook. Sample prompts like&lt;/h2&gt;
+&lt;h2&gt;Write down ten ideas each morning in a notebook. Sample prompts like&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;10 craziest things I could do&lt;/li&gt;
 &lt;li&gt;10 old ideas I can make new&lt;/li&gt;
@@ -640,28 +702,28 @@
 &lt;/ul&gt;
 &lt;h2&gt;joy of loving-kindness&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;during the way, randomly identify two people who walk past you or are standing or sitting around you. Secretly wish for them to be happy. “I wish for this person to be happy.”&lt;/li&gt;
+&lt;li&gt;during the way, randomly identify two people who walk past you or are standing or sitting around you. I secretly wish for them to be happy. “I wish for this person to be happy.”&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;commit to doing one pushup before bed,&lt;/h2&gt;
 &lt;h2&gt;write down the 20% of activities and people causing 80% or more of your negative emotions&lt;/h2&gt;
 &lt;h2&gt;decision making&lt;/h2&gt;
 &lt;p&gt;tonight or tomorrow morning, think of a decision you’ve been putting off and challenge the fuzzy “what ifs” holding you hostage. If not now, when? If left at the status quo, what will your life and stress look like in 6 months? In 1 year? In 3 years? Who around you will also suffer?&lt;/p&gt;
-&lt;h2&gt;Think about being a 10 year older version of myself&lt;/h2&gt;
+&lt;h2&gt;Think about being a ten year older version of myself&lt;/h2&gt;
 &lt;p&gt;“what would I probably tell myself as an older version of myself?’ start living by the answers and grow exponentially.&lt;/p&gt;
-&lt;h2&gt;Write 2 pages of uninterrupted flow to flex the muscle of generating content without judgment.&lt;/h2&gt;
+&lt;h2&gt;Write two pages of uninterrupted flow to flex the muscle of generating content without judgment.&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;something you don’t remember&lt;/li&gt;
 &lt;li&gt;your darkest teacher&lt;/li&gt;
 &lt;li&gt;the memory of physical injury&lt;/li&gt;
 &lt;li&gt;when you knew it was over&lt;/li&gt;
 &lt;li&gt;being loved&lt;/li&gt;
-&lt;li&gt;what you were really thinking&lt;/li&gt;
+&lt;li&gt;what you were thinking&lt;/li&gt;
 &lt;li&gt;how you found your way back&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;Quotes&lt;/h1&gt;
 &lt;p&gt;“Learn to confront the challenges of the real world, rather than report to the protective womb of academia.”&lt;/p&gt;
 &lt;p&gt;“I am a big believer that if you have an obvious vision of where you want to go, the rest of it is much easier.”&lt;/p&gt;
-&lt;p&gt;“When you’re thinking of how to make your business bigger, it’s tempting to try to think all the big thoughts, the world-changing, massive-action plans. But please know that it’s often the tiny details that really thrill someone enough to make them tell all their friends about you.”&lt;/p&gt;
+&lt;p&gt;“When you’re thinking of how to make your business bigger, it’s tempting to try to think all the big thoughts, the world-changing, massive-action plans. But please know that it’s often the tiny details that thrill someone enough to make them tell all their friends about you.”&lt;/p&gt;
 &lt;p&gt;“If you would not be forgotten as soon as you are dead and rotten, either write things worth reading or do things worth writing.” - Ben Franklin.&lt;/p&gt;
 &lt;p&gt;“What is the ultimate quantification of success? For me, it’s not how much time you spend doing what you love. It’s how little time you spend doing what you hate.”&lt;/p&gt;
 &lt;p&gt;“Once we get those muddy, maddening, confusing thoughts [nebulous worries, jitters, and preoccupations] on the page, we face our day with clearer eyes.”&lt;/p&gt;
@@ -684,20 +746,22 @@
 &lt;p&gt;“when in doubt, zoom out.”&lt;/p&gt;
 &lt;p&gt;“it’s scary to put yourself out there, to expose yourself, to become vulnerable, but it makes all the differences. Be a man, woman in the arena. When you let your mind wander in its truly natural state, good things happen.”&lt;/p&gt;
 &lt;p&gt;“want to get unstuck, go for a walk, no phone, no music, no podcast, just you, your thought and the fresh air.”&lt;/p&gt;
-&lt;p&gt;“be deliberate about what you spend your time on and who you spend it with”&lt;/p&gt;
+&lt;p&gt;“be deliberate about what you spend your time on and who you spend it with.”&lt;/p&gt;
 &lt;p&gt;“not matter how far you go, always remember, you didn’t make it on your own, pay it forward, be a mentor, be a champion for others, their growth should be your tremendous source of joy and pride.”&lt;/p&gt;
 &lt;p&gt;“The world is changed by your example, not by your opinion.”&lt;/p&gt;
-&lt;p&gt;“Productivity is for robots. What humans are going to be really good at is asking questions, being creative, and experiencing.”&lt;/p&gt;
+&lt;p&gt;“Productivity is for robots. What humans are going to be good at is asking questions, being creative, and experiencing.”&lt;/p&gt;
 &lt;p&gt;“Desire is a contract you make with yourself to be unhappy until you get what you want.”&lt;/p&gt;
 &lt;p&gt;“judge a person by his/her questions rather than his/her answers.”&lt;/p&gt;
-&lt;p&gt;“my goal for each reader to like 50%, love 25%, and never forget 10%”&lt;/p&gt;
+&lt;p&gt;“my goal for each reader to like 50%, love 25%, and never forget 10%.”&lt;/p&gt;
 &lt;p&gt;“Success, however you define it, is achievable if you collect the right field-tested beliefs and habits.”&lt;/p&gt;
 &lt;p&gt;“The superheroes you have in your mind (idols, icons, titans, billionaires, etc…) are nearly all walking flaws who’ve maximized 1 or 2 strengths…; you succeed because you find your unique strengths and focus on developing habits around them.”&lt;/p&gt;
-&lt;p&gt;“I’m not the strongest. I’m not the fastest. But I’m really good at suffering”&lt;/p&gt;
+&lt;p&gt;“I’m not the strongest. I’m not the fastest. But I’m good at suffering.”&lt;/p&gt;
 &lt;p&gt;“Everyone fighting a battle that you know nothing about”&lt;/p&gt;
-&lt;p&gt;“Routine, in an intelligent man, is a sign of ambition”&lt;/p&gt;
+&lt;p&gt;“Routine, in an intelligent man, is a sign of ambition.”&lt;/p&gt;
 &lt;p&gt;very often, “our” beliefs are not our own&lt;/p&gt;
-&lt;p&gt;“borrow liberally, combine uniquely, and create your own bespoke blueprint.”&lt;/p&gt;
+&lt;p&gt;“borrow liberally, combine uniquely, and create your bespoke blueprint.”&lt;/p&gt;
+&lt;p&gt;“How do I become less competitive in order that I can become more successful?”&lt;/p&gt;
+&lt;p&gt;“Tell me something that’s true that very few people agree with you on.”&lt;/p&gt;
 &lt;h1&gt;References&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://fourminutebooks.com/tools-of-titans-summary/&quot;&gt;https://fourminutebooks.com/tools-of-titans-summary/&lt;/a&gt;
 &lt;a href=&quot;https://calvinrosser.com/notes/tools-of-titans-tim-ferriss/&quot;&gt;https://calvinrosser.com/notes/tools-of-titans-tim-ferriss/&lt;/a&gt;
