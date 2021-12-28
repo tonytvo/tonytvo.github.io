@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-tags-js",
     "path": "/tags/selfimprovement/",
-    "result": {"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/how-to-win-friends-influence-people-summary/"},"frontmatter":{"title":"how to win friends and influence people summary"}}}]}},"pageContext":{"tag":"selfimprovement"}},
+    "result": {"data":{"allMarkdownRemark":{"totalCount":2,"edges":[{"node":{"fields":{"slug":"/past-year-review-2021/"},"frontmatter":{"title":"past year review for 2021"}}},{"node":{"fields":{"slug":"/how-to-win-friends-influence-people-summary/"},"frontmatter":{"title":"how to win friends and influence people summary"}}}]}},"pageContext":{"tag":"selfimprovement"}},
     "staticQueryHashes": []}
