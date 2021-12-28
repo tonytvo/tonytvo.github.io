@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 28 Dec 2021 17:21:41 GMT</lastBuildDate><item><title><![CDATA[learning how to learn]]></title><description><![CDATA[todo summary limitless upgrade your brain-jim-kwik-summary summary continuous learning from joshua kerievsky a pattern language for study…]]></description><link>https://tonytvo.github.io/learn-how-to-learn/</link><guid isPermaLink="false">https://tonytvo.github.io/learn-how-to-learn/</guid><pubDate>Mon, 27 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;todo&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 28 Dec 2021 20:49:07 GMT</lastBuildDate><item><title><![CDATA[past year review for 2021]]></title><description><![CDATA[References https://tim.blog/2019/12/30/where-are-you-still-using-single-ply/]]></description><link>https://tonytvo.github.io/past-year-review-2021/</link><guid isPermaLink="false">https://tonytvo.github.io/past-year-review-2021/</guid><pubDate>Mon, 27 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;References&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://tim.blog/2019/12/30/where-are-you-still-using-single-ply/&quot;&gt;https://tim.blog/2019/12/30/where-are-you-still-using-single-ply/&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[learning how to learn]]></title><description><![CDATA[todo summary limitless upgrade your brain-jim-kwik-summary summary continuous learning from joshua kerievsky a pattern language for study…]]></description><link>https://tonytvo.github.io/learn-how-to-learn/</link><guid isPermaLink="false">https://tonytvo.github.io/learn-how-to-learn/</guid><pubDate>Mon, 27 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;todo&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;summary limitless upgrade your brain-jim-kwik-summary&lt;/li&gt;
 &lt;li&gt;summary continuous learning from joshua kerievsky&lt;/li&gt;
@@ -68,6 +69,18 @@
 &lt;ul&gt;
 &lt;li&gt;learning is not a spectator sport. Practice, take notes or ask questions&lt;/li&gt;
 &lt;li&gt;your superbrain works not by consuming information, but by creating and co-creating it.&lt;/li&gt;
+&lt;li&gt;4 quadrants of active learning
+&lt;ul&gt;
+&lt;li&gt;visualization: a picture worth thousands word, same is true for learning&lt;/li&gt;
+&lt;li&gt;association: associate it with something you already know.&lt;/li&gt;
+&lt;li&gt;emotion: emotion + association = long-term memory
+&lt;ul&gt;
+&lt;li&gt;adding emotion to association registers your new information in long-term memory. Regardless of emotion you use, emotion makes retention much more robust and durable.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;location: associate things to a place you’re familiar most&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;S - State&lt;/strong&gt;. All learning is state dependant
@@ -97,6 +110,26 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;h1&gt;System for remembering what you learn&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Mark up the book while reading it. Questions, thoughts. And, more important connections to other ideas.&lt;/li&gt;
+&lt;li&gt;at the end of each chapter, without looking back, write some notes on the main points/arguments/take-away. Then look back through the chapter and write down anything you missed.&lt;/li&gt;
+&lt;li&gt;specifically note anything that was in the chapter that you can apply somewhere else&lt;/li&gt;
+&lt;li&gt;summary and review the notes periodically&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#blank-sheet&quot;&gt;blank sheet&lt;/a&gt; technique&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#conventional-notes&quot;&gt;conventional notes&lt;/a&gt; technique&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Chain Linking&lt;/h2&gt;
+&lt;h2&gt;Peg memory method&lt;/h2&gt;
+&lt;h2&gt;Remember names&lt;/h2&gt;
+&lt;h1&gt;Continuous learning&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.industriallogic.com/img/blog/2005/09/ContinuousLearning.pdf&quot;&gt;industrial logic continous learning&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;A pattern language for study groups&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.industriallogic.com/img/blog/2012/03/khdraft1.pdf&quot;&gt;a pattern language for study groups&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1&gt;How we learn to read&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;there’s difference between reading for understanding and reading for information
@@ -111,6 +144,14 @@
 &lt;li&gt;&lt;strong&gt;skim a lot of books, read a few. Immediately re-read the best ones twice&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;when you lose interest give it 5 more pages. Then skim the next chapter. If you’re still not interested, put it down. It’s the authors job to keep your attention&lt;/li&gt;
+&lt;li&gt;marking a book is indispensable to reading it
+&lt;ul&gt;
+&lt;li&gt;keep you awake, not merely conscious, but wide awake&lt;/li&gt;
+&lt;li&gt;reading, if it is active, is thinking and thinking tends to express itself in words, spoken or written.&lt;/li&gt;
+&lt;li&gt;writing your reactions down helps you to remember the thoughts of the author&lt;/li&gt;
+&lt;li&gt;literally an expression of your differences or your agreements with the author. It is the highest respect you can pay him.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -135,14 +176,124 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1&gt;System for remembering what you learn&lt;/h1&gt;
+&lt;h1&gt;4 levels of reading&lt;/h1&gt;
+&lt;h2&gt;Elementary reading&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Mark up the book while reading it. Questions, thoughts. And, more important connections to other ideas.&lt;/li&gt;
-&lt;li&gt;at the end of each chapter, without looking back, write some notes on the main points/arguments/take-away. Then look back through the chapter and write down anything you missed.&lt;/li&gt;
-&lt;li&gt;specifically note anything that was in the chapter that you can apply somewhere else&lt;/li&gt;
-&lt;li&gt;summary and review the notes periodically&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#blank-sheet&quot;&gt;blank sheet&lt;/a&gt; technique&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#conventional-notes&quot;&gt;conventional notes&lt;/a&gt; technique&lt;/li&gt;
+&lt;li&gt;level of reading taught in our elementary schools&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Inspectional reading&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;skimming and superficial reading can be used effectively to increase understanding&lt;/li&gt;
+&lt;li&gt;inspectional reading allows us to look at the author’s blueprint and evaluate the merits of a deeper reading experience.&lt;/li&gt;
+&lt;li&gt;2 sub-types of inspectional reading
+&lt;ul&gt;
+&lt;li&gt;systematic skimming
+&lt;ul&gt;
+&lt;li&gt;quick check of the book by
+&lt;ul&gt;
+&lt;li&gt;reading preface&lt;/li&gt;
+&lt;li&gt;studying the table of contents&lt;/li&gt;
+&lt;li&gt;checking the index&lt;/li&gt;
+&lt;li&gt;reading inside jacket&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;give you sufficient knowledge to understand the chapters in the book, pivotal to the author’s argument.&lt;/li&gt;
+&lt;li&gt;skimming helps you reach to a decision point: Does this book deserve more of my time and attention? if not, you put it down.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;superficial reading
+&lt;ul&gt;
+&lt;li&gt;just read, don’t ponder the argument, don’t look things up, don’t write in the margins.&lt;/li&gt;
+&lt;li&gt;if you don’t understand something, move on.&lt;/li&gt;
+&lt;li&gt;now that you have better understanding of the book’s contents and its structure, do you want to understand it?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Analytical reading&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://fs.blog/marginalia/&quot;&gt;use marginalia to converse with the author&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;the broken fragments of thought that appear scribbled in the margins of books.&lt;/li&gt;
+&lt;li&gt;these fragments help us connect ideas, translate jargon, and spur critical thinking.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;4 rules to analytical reading
+&lt;ul&gt;
+&lt;li&gt;classify the book according to kind and subject matter&lt;/li&gt;
+&lt;li&gt;state what the whole book is about with the utmost brevity&lt;/li&gt;
+&lt;li&gt;enumerate its major parts in their order and relation, and outline these parts as you have outlined the whole&lt;/li&gt;
+&lt;li&gt;define the problem or problems the author is trying to solve.
+&lt;ul&gt;
+&lt;li&gt;in other words, you should be able to state the main question that the book tries to answer, and you should be able to state the subordinate questions if the main question is complex and has many parts.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;after an inspectional read, you will understand the book and the author’s views.&lt;/li&gt;
+&lt;li&gt;theoretical books teach you that something is the case. Practical books teach you how to do something you want to do or think you should do.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Syntopical reading&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;involves reading many books on the same subject and comparing and contrasting ideas, vocabulary, and arguments.&lt;/li&gt;
+&lt;li&gt;identifying relevant passages, translating the terminology, framing and ordering the questions that need answering, defining the issues, and having a conversation with the responses.&lt;/li&gt;
+&lt;li&gt;understand the subject and develop deep fluency&lt;/li&gt;
+&lt;li&gt;identifying and filling in your knowledge gaps.&lt;/li&gt;
+&lt;li&gt;5 steps to syntopical reading
+&lt;ul&gt;
+&lt;li&gt;finding the relevant passages
+&lt;ul&gt;
+&lt;li&gt;find the right books and then the passages that are most relevant to filling your needs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;bringing the author to terms
+&lt;ul&gt;
+&lt;li&gt;identify the keywords and how they are used by the author. Each author has probably used different temrs and concepts to frame their argument.&lt;/li&gt;
+&lt;li&gt;this is an exercise in translation and synthesis.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Getting the questions clear
+&lt;ul&gt;
+&lt;li&gt;focus on the questions that you want to answered.&lt;/li&gt;
+&lt;li&gt;it’s important to frame the questions in such a way that all or most of the authors can be interpreted as providing answers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;defining the issues
+&lt;ul&gt;
+&lt;li&gt;ask clear question to which there are multiple answers.&lt;/li&gt;
+&lt;li&gt;translated into your terms, must be ordered in relation to one another.&lt;/li&gt;
+&lt;li&gt;understanding multiple perspectives within an issue helps you form an intelligent opinion.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;analyzing discussion
+&lt;ul&gt;
+&lt;li&gt;it’s presumptuous to expect we will find a single unchallenged truth to any of our questions.&lt;/li&gt;
+&lt;li&gt;our answer is the conflict of opposing answers.&lt;/li&gt;
+&lt;li&gt;the value is the discussion you have with these authors.&lt;/li&gt;
+&lt;li&gt;you can now have an informed opinion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;4 Questions must ask about any book&lt;/h1&gt;
+&lt;h2&gt;what is the book as a whole?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;you must try to discover the leading theme of the book, and how the author develops his theme in an orderly way by subdividing it into its essential subordinate themes or topics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;what is being said in detail and how&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;you must try to discover the main ideas, assertions and arguments that constitute the author’s particular message&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;is the book true, in whole or part?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;you cannot answer this question until you have answered the first two. You have to know what is being said before you can decide whether it is true or not. When you understand a book, however, you’re obligated, if you are reading seriously, to make up your own mind. Knowing the author’s mind is not enough.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;what of it?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;if the book has given you information, you must ask about its significance. Why does the author think it is important to know these things?&lt;/li&gt;
+&lt;li&gt;Is it important to you to know them? and if the book has not only informed you, but also enlightened you, it is necessary to seek further enlightenment by asking.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;Note taking&lt;/h1&gt;
 &lt;h2&gt;audio journal&lt;/h2&gt;
@@ -187,6 +338,19 @@
 &lt;li&gt;you need to become your most intelligent critic and have the intellectual honesty to kill some of your best-loved ideas.&lt;/li&gt;
 &lt;li&gt;doing the work counteracts our natural desire to seek out only information that confirms that we believe we know.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2&gt;Pareto 20/80 principle&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;most of your results are going to come from just a small percentage of your effort or work.
+&lt;ul&gt;
+&lt;li&gt;20% of relationships lead to 80% happiness&lt;/li&gt;
+&lt;li&gt;20% exercises lead to 80% of health benefit&lt;/li&gt;
+&lt;li&gt;20% of items on your todo list lead to 80% of productivity&lt;/li&gt;
+&lt;li&gt;20% of foods you eat cause 80% of your sickness&lt;/li&gt;
+&lt;li&gt;by taking 10 minutes per day for prioritization, you can double your productivity&lt;/li&gt;
+&lt;li&gt;by looking at what experiences give you the most delight, you can begin to engineer your life&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1&gt;Quotes&lt;/h1&gt;
 &lt;p&gt;“Marking a book is literally an experience of your differences or agreements with the author. It is the highest respect you can pay him”&lt;/p&gt;
 &lt;p&gt;“I never allow myself to have an opinion on anything that I don’t know the other side’s argument better than they do”&lt;/p&gt;
@@ -206,8 +370,14 @@
 &lt;p&gt;“priceless opportunity to furnish your mind and enrich the quality of your life”&lt;/p&gt;
 &lt;p&gt;“The rich invest in time, the poor invest in money”&lt;/p&gt;
 &lt;p&gt;“Men who have made these discoveries before us are not our masters, but our guides”&lt;/p&gt;
+&lt;p&gt;“go to bed smarter than when you woke up”&lt;/p&gt;
+&lt;p&gt;“we don’t read other people’s opinions. We want to get the facts, and then think”&lt;/p&gt;
+&lt;p&gt;“when it comes to reading, you don’t need to finish what you start”&lt;/p&gt;
+&lt;p&gt;“The pencil,” he argues, “becomes the sign of your alertness while you read”&lt;/p&gt;
+&lt;p&gt;The person who says he knows what he thinks but cannot express it usually does not know what he thinks.&lt;/p&gt;
 &lt;h1&gt;References&lt;/h1&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://home.mindvalley.com/quests/en/superbrain&quot;&gt;https://home.mindvalley.com/quests/en/superbrain&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.visualcapitalist.com/12-ways-smarter-mental-models/&quot;&gt;https://www.visualcapitalist.com/12-ways-smarter-mental-models/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://medium.com/accelerated-intelligence/this-is-exactly-how-you-should-train-yourself-to-be-smarter-infographic-86d0d42ad41c&quot;&gt;https://medium.com/accelerated-intelligence/this-is-exactly-how-you-should-train-yourself-to-be-smarter-infographic-86d0d42ad41c&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://fs.blog/the-art-of-reading-how-to-be-a-demanding-reader/&quot;&gt;https://fs.blog/the-art-of-reading-how-to-be-a-demanding-reader/&lt;/a&gt;&lt;/li&gt;
@@ -222,8 +392,7 @@
 &lt;li&gt;&lt;a href=&quot;https://www.industriallogic.com/img/blog/2005/09/ContinuousLearning.pdf&quot;&gt;https://www.industriallogic.com/img/blog/2005/09/ContinuousLearning.pdf&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.industriallogic.com/img/blog/2012/03/khdraft1.pdf&quot;&gt;https://www.industriallogic.com/img/blog/2012/03/khdraft1.pdf&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://theartofliving.com/how-to-read-a-book-summary/&quot;&gt;https://theartofliving.com/how-to-read-a-book-summary/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[past year review for 2021]]></title><description><![CDATA[References https://tim.blog/2019/12/30/where-are-you-still-using-single-ply/]]></description><link>https://tonytvo.github.io/past-year-review-2021/</link><guid isPermaLink="false">https://tonytvo.github.io/past-year-review-2021/</guid><pubDate>Mon, 27 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;References&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;https://tim.blog/2019/12/30/where-are-you-still-using-single-ply/&quot;&gt;https://tim.blog/2019/12/30/where-are-you-still-using-single-ply/&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[how to win friends and influence people summary]]></title><description><![CDATA[Principles Fundamental techniques in dealing with people Don’t criticize, condemn or complain. This makes them defensive and justifies their…]]></description><link>https://tonytvo.github.io/how-to-win-friends-influence-people-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/how-to-win-friends-influence-people-summary/</guid><pubDate>Sat, 25 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Principles&lt;/h1&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[how to win friends and influence people summary]]></title><description><![CDATA[Principles Fundamental techniques in dealing with people Don’t criticize, condemn or complain. This makes them defensive and justifies their…]]></description><link>https://tonytvo.github.io/how-to-win-friends-influence-people-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/how-to-win-friends-influence-people-summary/</guid><pubDate>Sat, 25 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Principles&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Fundamental techniques in dealing with people
 &lt;ul&gt;
