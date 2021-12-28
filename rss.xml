@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 28 Dec 2021 22:30:33 GMT</lastBuildDate><item><title><![CDATA[past year review for 2021]]></title><description><![CDATA[References https://tim.blog/2019/12/30/where-are-you-still-using-single-ply/]]></description><link>https://tonytvo.github.io/past-year-review-2021/</link><guid isPermaLink="false">https://tonytvo.github.io/past-year-review-2021/</guid><pubDate>Mon, 27 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;References&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 28 Dec 2021 22:58:18 GMT</lastBuildDate><item><title><![CDATA[past year review for 2021]]></title><description><![CDATA[References https://tim.blog/2019/12/30/where-are-you-still-using-single-ply/]]></description><link>https://tonytvo.github.io/past-year-review-2021/</link><guid isPermaLink="false">https://tonytvo.github.io/past-year-review-2021/</guid><pubDate>Mon, 27 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;References&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://tim.blog/2019/12/30/where-are-you-still-using-single-ply/&quot;&gt;https://tim.blog/2019/12/30/where-are-you-still-using-single-ply/&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[learning how to learn]]></title><description><![CDATA[todo summary limitless upgrade your brain-jim-kwik-summary summary continuous learning from joshua kerievsky a pattern language for study…]]></description><link>https://tonytvo.github.io/learn-how-to-learn/</link><guid isPermaLink="false">https://tonytvo.github.io/learn-how-to-learn/</guid><pubDate>Mon, 27 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;todo&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;summary limitless upgrade your brain-jim-kwik-summary&lt;/li&gt;
@@ -740,7 +740,7 @@
 &lt;/li&gt;
 &lt;li&gt;skip, but do so intelligently
 &lt;ul&gt;
-&lt;li&gt;return to it later at some point and ask yourself, “why did I skip this?” Did it offend you? Seem beneath you? Seem too difficult? And did you arrive at that by thinking it through, or is it a reflection of biases inherited from your parents and others? very often, “our” beliefs” are not our own&lt;/li&gt;
+&lt;li&gt;return to it later at some point and ask yourself, “why did I skip this?” Did it offend you? Seem beneath you? Seem too difficult? And did you arrive at that by thinking it through, or is it a reflection of biases inherited from your parents and others? very often, “our” beliefs are not our own&lt;/li&gt;
 &lt;li&gt;this type of practice is how you create yourself instead of discovering yourself.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -875,11 +875,6 @@
 &lt;li&gt;Obsessed with asymmetrical risk and reward. This essentially means that they are focused on minimum risk with maximum results.&lt;/li&gt;
 &lt;li&gt;Asset allocation and margin of safety to diversify your portfolio in case you make wrong decisions.&lt;/li&gt;
 &lt;li&gt;Passionate about giving and being generous. It weren’t tight or overly frugal.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;work hard&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;the error rate of 10-20%, times when I would have made a different decision in a given situation if it means you can move fast.&lt;/li&gt;
-&lt;li&gt;Consider timing is entirely necessary or if it’s something you’re inflicting upon yourself as a stalling tactic.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;startups and making money&lt;/h2&gt;
 &lt;ul&gt;
@@ -1053,12 +1048,12 @@
 &lt;li&gt;what do I spend a silly amount of money on? How might I scratch my itch?&lt;/li&gt;
 &lt;li&gt;What would I do/have/been if I had $10 million? What’s my real TMI (target monthly income)?
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://tim.blog/lifestyle-costing/&quot;&gt;https://tim.blog/lifestyle-costing/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://tim.blog/lifestyle-costing/&quot;&gt;life style costing&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;what are the worst things that could happen? Could I get back here?
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://tim.blog/2017/05/15/fear-setting/&quot;&gt;https://tim.blog/2017/05/15/fear-setting/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://tim.blog/2017/05/15/fear-setting/&quot;&gt;fear setting&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;What would I do if I could only work 2 hours per week on my business?
@@ -1082,7 +1077,7 @@
 &lt;/li&gt;
 &lt;li&gt;what if I created my real-world MBA?
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://tim.blog/2010/06/28/mba/&quot;&gt;https://tim.blog/2010/06/28/mba/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://tim.blog/2010/06/28/mba/&quot;&gt;my real-world MBA&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;do I need to make it back the way I lost it?&lt;/li&gt;
@@ -1120,9 +1115,9 @@
 &lt;ul&gt;
 &lt;li&gt;You can get 95% of the results you want by calmly putting one foot in front of the other.&lt;/li&gt;
 &lt;li&gt;Slow is smooth. Smooth is fast.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Luxury is feeling unrushed. No hurry, no pause.&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Luxury is feeling unrushed. No hurry, no pause.&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;article from Tim Ferris
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;/a9824277648b02b0b90a0fc77f450423/17-Questions-That-Changed-My-Life.pdf&quot;&gt;17 Questions that changed my life&lt;/a&gt;&lt;/li&gt;
@@ -1170,7 +1165,7 @@
 &lt;p&gt;“Learn to confront the challenges of the real world, rather than report to the protective womb of academia.”&lt;/p&gt;
 &lt;p&gt;“I am a big believer that if you have an obvious vision of where you want to go, the rest of it is much easier.”&lt;/p&gt;
 &lt;p&gt;“When you’re thinking of how to make your business bigger, it’s tempting to try to think all the big thoughts, the world-changing, massive-action plans. But please know that it’s often the tiny details that thrill someone enough to make them tell all their friends about you.”&lt;/p&gt;
-&lt;p&gt;“If you would not be forgotten as soon as you are dead and rotten, either write things worth reading or do things worth writing.” - Ben Franklin.&lt;/p&gt;
+&lt;p&gt;“If you would not want to be forgotten as soon as you are dead and rotten, either write things worth reading or do things worth writing.” - Ben Franklin.&lt;/p&gt;
 &lt;p&gt;“What is the ultimate quantification of success? For me, it’s not how much time you spend doing what you love. It’s how little time you spend doing what you hate.”&lt;/p&gt;
 &lt;p&gt;“Once we get those muddy, maddening, confusing thoughts [nebulous worries, jitters, and preoccupations] on the page, we face our day with clearer eyes.”&lt;/p&gt;
 &lt;p&gt;“I have come to learn that part of the business strategy is to solve the simplest, easier, and most valuable problem.”&lt;/p&gt;
