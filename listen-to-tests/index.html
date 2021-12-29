@@ -181,6 +181,95 @@
 <li>thee is duplication when multiple tests exercise the same production code behaviour</li>
 </ul>
 </li>
+<li>beware of flickering tests
+<ul>
+<li>a test can fail intermittently if its timeout is too close to the time the tested behavior normally takes to run, or if it doesn’t synchronize correctly with the system.</li>
+<li>flickering tests can mask real defects. We need to make sure that we understand what the real problem is before we ignore flickering tests</li>
+<li>allow flickering tests is bad for the team. It breaks teh culture of quality where things should “just work,” and even a few flickering tests can make a team stop paying attention to broken builds.</li>
+<li>it also breaks the habits of feedback.</li>
+<li>we should be paying attention to why the tests are flickering and whether that means we should improve the design of both the tests and code.</li>
+</ul>
+</li>
+<li>runaway tests
+<ul>
+<li>be careful when an asynchronous test asserts that system returns to a previous state.</li>
+<li>unless it also asserts that the system enters an intermediate state before asserting the initial state, the test will run ahead of the system.</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token function">send</span><span class="token punctuation">(</span><span class="token function">aTradeEvent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ofType</span><span class="token punctuation">(</span>BUY<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">onDate</span><span class="token punctuation">(</span>tradeDate<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forStock</span><span class="token punctuation">(</span><span class="token string">"A"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">withQuantity</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">assertEventually</span><span class="token punctuation">(</span><span class="token function">holdingOfStock</span><span class="token punctuation">(</span><span class="token string">"A"</span><span class="token punctuation">,</span> tradeDate<span class="token punctuation">,</span> <span class="token function">equalTo</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">send</span><span class="token punctuation">(</span><span class="token function">aTradeEvent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ofType</span><span class="token punctuation">(</span>SELL<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">onDate</span><span class="token punctuation">(</span>tradeDate<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forStock</span><span class="token punctuation">(</span><span class="token string">"A"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">withQuantity</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">assertEventually</span><span class="token punctuation">(</span><span class="token function">holdingOfStock</span><span class="token punctuation">(</span><span class="token string">"A"</span><span class="token punctuation">,</span> tradeDate<span class="token punctuation">,</span> <span class="token function">equalTo</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>lost updates
+<ul>
+<li>a significant difference between tests that sample and those that listen for events is that polling can miss state changes that are later overwritten</li>
+<li>if the test can record notifications from the system, it can look through its records to find significant notifications.</li>
+<li>to be reliable, a sampling test must make sure that its system is stable before triggering any further interactions.</li>
+<li><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/9e35dddd6599a2116082820a2a691e0e/1bba8/record-notification-tests.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 53.16455696202532%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABS0lEQVQoz3WSia6CQAxF+f/PIxFcABeQTXFHlK3mNBnDQ16T0kmnc3tvqWXbtjiOI77vSxzHkiSJhGEoURTpmbjf78XzPNlut5rbbDaax3lDfrfbSdu2YqVpKsfjUR6Ph3pZln/8er3K6/WS2+0m9/tdqqqS5/OptURquCP2fS8WqLDL81ymDLYwAGho7/dbgiDQO2oAxyw+dG6aRrvClm5FUWgOv1wuCsh5DIoC8rD7AgJyOp20G/Ok42KxkPP5rLOBPUqooTlsaEIOuaaRSubAZV3Xk5IBWK1WCkqz2WymUl3XFeZ/OBwU+AfQdOm6Ti+IGGxgZuSPbUhmEnBsADJPQJfLpazXa12b+Xyu7IdvfwChT7GZHevCHTtIzuwcUrMs05yZ7xeQv8ey8tAsLZFlHs4P4yFu/uhYnQKi/z+5xoYA4xyrY+YN4AdeQ02DhNvb7AAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="tests that record notifications"
+        title="tests that record notifications"
+        src="/static/9e35dddd6599a2116082820a2a691e0e/f058b/record-notification-tests.png"
+        srcset="/static/9e35dddd6599a2116082820a2a691e0e/c26ae/record-notification-tests.png 158w,
+/static/9e35dddd6599a2116082820a2a691e0e/6bdcf/record-notification-tests.png 315w,
+/static/9e35dddd6599a2116082820a2a691e0e/f058b/record-notification-tests.png 630w,
+/static/9e35dddd6599a2116082820a2a691e0e/1bba8/record-notification-tests.png 642w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></li>
+<li><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 459px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/efd67020115cdf583652c3e236865cd0/48711/phases-sampling-tests.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 60.75949367088608%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAABNElEQVQoz5VTaYuDMBD1//8uvwqCUsWqFI9KvW3r3XbKGzZSs9nCDogxyby8I2r0U6/Xa3uL8bf5v0qTm0RN00Truu7AVI/cp8lMlmWh+/1OQRBQFEU0DMOOgcxSVqDJcsIwJNu2+e26LoPebje6Xq8b477vqes6ejweaoZiAk1N0/C4qir+FusAi+OY8jyny+VCRVGQ4zgMrmSIquuakiRhZqZp0uFwIM/zGABVliXpuk6n04m/DcPgffM8b6A7QDQgDEgE03Ec2dPn88l74C0OwyFt29L5fN4F90sy5KAAcDwe2T+ApGnK8oU8BAU1OPyrh/ANrLDR932yLIsbhZf/SllcmSzLWDJSlBtVF1ue01QLSBAyPyWJdQQA7xCMOPRzXfmnoAlXAhbIDVCBYGCJCvANnIqmMB1f0FAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="phases of a sampling test"
+        title="phases of a sampling test"
+        src="/static/efd67020115cdf583652c3e236865cd0/48711/phases-sampling-tests.png"
+        srcset="/static/efd67020115cdf583652c3e236865cd0/c26ae/phases-sampling-tests.png 158w,
+/static/efd67020115cdf583652c3e236865cd0/6bdcf/phases-sampling-tests.png 315w,
+/static/efd67020115cdf583652c3e236865cd0/48711/phases-sampling-tests.png 459w"
+        sizes="(max-width: 459px) 100vw, 459px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></li>
+</ul>
+</li>
 </ul>
 <h1>Test Patterns</h1>
 <h2>Tests readability</h2>
@@ -435,9 +524,195 @@ synchroniser<span class="token punctuation">.</span><span class="token function"
 <li><strong>An asynchronous test must wait for success and use timeouts to detect failure.</strong>
 <ul>
 <li>this implies every tested activity must have an observable effect: a test must affect the system so that its observable state becomes different.</li>
+<li>there are 2 ways a test can observe the system: by sampling its observable state or by listening for events that it sends out.</li>
+<li>for example, auction sniper end-to-end tests sample the user interface for display changes, through the windowlicker framework, but listen for chat events in teh fake auction server.</li>
 </ul>
 </li>
-<li></li>
+<li>make asynchronous tests detect success as quickly as possible so that they provide rapid feedback.</li>
+<li>put the timeout values in one place
+<ul>
+<li>there’s a balance to struck between a timeout that’s too short, which will make the tests unreliable, and one that’s too long, which will make failing tests too slow</li>
+<li>when the timeout duration is defined in 1 place, it’s easy to find and change.</li>
+</ul>
+</li>
+<li>scattering adhoc sleeps and timeouts throughout the tests makes them difficult to understand, because it leaves too much implementation detail in the tests themselves.</li>
+<li>capturing notifications
+<ul>
+<li>an event-based assertion waits for an event by blocking on a monitor until it gets notified or times out. When the monitor is notified, the test thread wakes up and continues if it finds that the expected event has arrived, or blocks again. if the test times out, then it raises a failure.</li>
+</ul>
+</li>
+</ul>
+<p><a href="/04df52b77bc05fd551f51637075c2aac/NotificationTrace.java">NotificationTrace</a></p>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">NotificationTrace</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token keyword">final</span> <span class="token class-name">Object</span> traceLock <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">final</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span> trace <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">long</span> timeoutMs <span class="token operator">=</span> <span class="token number">1000L</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">append</span><span class="token punctuation">(</span><span class="token class-name">T</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">synchronized</span> <span class="token punctuation">(</span>traceLock<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            trace<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            traceLock<span class="token punctuation">.</span><span class="token function">notifyAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">containsNotification</span><span class="token punctuation">(</span><span class="token class-name">Matcher</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span> <span class="token keyword">super</span> <span class="token class-name">T</span><span class="token punctuation">></span></span> criteria<span class="token punctuation">)</span>
+            <span class="token keyword">throws</span> <span class="token class-name">InterruptedException</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Timeout</span> timeout <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Timeout</span><span class="token punctuation">(</span>timeoutMs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">synchronized</span> <span class="token punctuation">(</span>traceLock<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">NotificationStream</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span> stream <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">NotificationStream</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span><span class="token punctuation">(</span>trace<span class="token punctuation">,</span> criteria<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>stream<span class="token punctuation">.</span><span class="token function">hasMatched</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>timeout<span class="token punctuation">.</span><span class="token function">hasTimedOut</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">AssertionError</span><span class="token punctuation">(</span><span class="token function">failureDescriptionFrom</span><span class="token punctuation">(</span>criteria<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+
+                timeout<span class="token punctuation">.</span><span class="token function">waitOn</span><span class="token punctuation">(</span>traceLock<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">String</span> <span class="token function">failureDescriptionFrom</span><span class="token punctuation">(</span><span class="token class-name">Matcher</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span> <span class="token keyword">super</span> <span class="token class-name">T</span><span class="token punctuation">></span></span> acceptanceCriteria<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// construct a description of why there was no match</span>
+        <span class="token comment">// including the matcher and all the received messages.</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">NotificationStream</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">N</span><span class="token punctuation">></span></span> <span class="token punctuation">{</span>
+        <span class="token keyword">private</span> <span class="token keyword">final</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">N</span><span class="token punctuation">></span></span> notifications<span class="token punctuation">;</span>
+        <span class="token keyword">private</span> <span class="token keyword">final</span> <span class="token class-name">Matcher</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span> <span class="token keyword">super</span> <span class="token class-name">N</span><span class="token punctuation">></span></span> criteria<span class="token punctuation">;</span>
+        <span class="token keyword">private</span> <span class="token keyword">int</span> next <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">hasMatched</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span>next <span class="token operator">&lt;</span> notifications<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>criteria<span class="token punctuation">.</span><span class="token function">matches</span><span class="token punctuation">(</span>notifications<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>next<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+                next<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><a href="/c80453be962ef35829843d9d63a20a9f/NotificationTraceTests.java">NotificationTraceTests.java</a></p>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java">    <span class="token class-name">NotificationTrace</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">></span></span> trace <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">NotificationTrace</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Test</span><span class="token punctuation">(</span>timeout <span class="token operator">=</span> <span class="token number">500</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">waitsForMatchingMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">InterruptedException</span> <span class="token punctuation">{</span>
+        scheduler<span class="token punctuation">.</span><span class="token function">schedule</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Runnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                trace<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"WANTED"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token class-name">TimeUnit</span><span class="token punctuation">.</span>MILLISECONDS<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        trace<span class="token punctuation">.</span><span class="token function">containsNotification</span><span class="token punctuation">(</span><span class="token function">equalTo</span><span class="token punctuation">(</span><span class="token string">"WANTED"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Test</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">failsIfNoMatchingMessageReceived</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">InterruptedException</span> <span class="token punctuation">{</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            trace<span class="token punctuation">.</span><span class="token function">containsNotification</span><span class="token punctuation">(</span><span class="token function">equalTo</span><span class="token punctuation">(</span><span class="token string">"WANTED"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">AssertionError</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">assertThat</span><span class="token punctuation">(</span><span class="token string">"error message includes trace of messages received before failure"</span><span class="token punctuation">,</span>
+                    e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">containsString</span><span class="token punctuation">(</span><span class="token string">"NOT-WANTED"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token function">fail</span><span class="token punctuation">(</span><span class="token string">"should have thrown AssertionError"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>polling for changes
+<ul>
+<li>A sample-based assertion repeatedly samples some visible effect of the system through a “probe”, waiting for the probe to detect that the system has entered an expected state.</li>
+<li>there are 2 aspects to process of sampling: polling the system and failure reporting, and probing the system for a given state.
+<ul>
+<li><a href="https://raw.githubusercontent.com/npryce/goos-code-examples/master/testing-asynchronous-systems/src/book/example/async/polling/FileLengthProbe.java">FileLengthProbe</a></li>
+<li><a href="https://raw.githubusercontent.com/npryce/goos-code-examples/master/testing-asynchronous-systems/src/book/example/async/polling/Poller.java">Poller</a></li>
+<li><a href="https://raw.githubusercontent.com/npryce/goos-code-examples/master/testing-asynchronous-systems/src/book/example/async/polling/Probe.java">Probe</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token function">assertEventually</span><span class="token punctuation">(</span><span class="token function">fileLength</span><span class="token punctuation">(</span><span class="token string">"data.txt"</span><span class="token punctuation">,</span> <span class="token function">is</span><span class="token punctuation">(</span><span class="token function">greaterThan</span><span class="token punctuation">(</span><span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">assertEventually</span><span class="token punctuation">(</span><span class="token class-name">Probe</span> probe<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">InterruptedException</span><span class="token punctuation">{</span>
+    <span class="token keyword">new</span> <span class="token class-name">Poller</span><span class="token punctuation">(</span><span class="token number">1000L</span><span class="token punctuation">,</span> <span class="token number">100L</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">check</span><span class="token punctuation">(</span>probe<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">Probe</span> <span class="token function">fileLength</span><span class="token punctuation">(</span><span class="token class-name">String</span> path<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">Matcher</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> matcher<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">final</span> <span class="token class-name">File</span> file <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Probe</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">private</span> <span class="token keyword">long</span> lastFileLength <span class="token operator">=</span> NOT_SET<span class="token punctuation">;</span>
+
+          <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">sample</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              lastFileLength <span class="token operator">=</span> file<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+
+          <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isSatisfied</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">return</span> lastFileLength <span class="token operator">!=</span> NOT_SET <span class="token operator">&amp;&amp;</span> matcher<span class="token punctuation">.</span><span class="token function">matches</span><span class="token punctuation">(</span>lastFileLength<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>timing out
+<ul>
+<li><a href="https://raw.githubusercontent.com/npryce/goos-code-examples/master/testing-asynchronous-systems/src/book/example/async/Timeout.java">Timeout.java</a></li>
+<li><a href="https://raw.githubusercontent.com/npryce/goos-code-examples/master/testing-asynchronous-systems/src/book/example/async/TimeoutTests.java">TimeoutTests.java</a></li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java">    <span class="token annotation punctuation">@Test</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">reportsIfTimedOut</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">InterruptedException</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Timeout</span> timeout <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Timeout</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">assertTrue</span><span class="token punctuation">(</span><span class="token string">"should not have timed out"</span><span class="token punctuation">,</span> <span class="token operator">!</span>timeout<span class="token punctuation">.</span><span class="token function">hasTimedOut</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Thread</span><span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">assertTrue</span><span class="token punctuation">(</span><span class="token string">"should have timed out"</span><span class="token punctuation">,</span> timeout<span class="token punctuation">.</span><span class="token function">hasTimedOut</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Test</span><span class="token punctuation">(</span>timeout <span class="token operator">=</span> <span class="token number">300</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">waitsForTimeout</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">InterruptedException</span> <span class="token punctuation">{</span>
+        <span class="token keyword">final</span> <span class="token class-name">Object</span> lock <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">long</span> start <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Timeout</span> timeout <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Timeout</span><span class="token punctuation">(</span><span class="token number">250</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">synchronized</span> <span class="token punctuation">(</span>lock<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            timeout<span class="token punctuation">.</span><span class="token function">waitOn</span><span class="token punctuation">(</span>lock<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">long</span> woken <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token function">assertTrue</span><span class="token punctuation">(</span><span class="token string">"should have waited until the timeout"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>woken <span class="token operator">-</span> start<span class="token punctuation">)</span> <span class="token operator">>=</span> <span class="token number">250</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>testing that an action has no effect
+<ul>
+<li>if an asynchronous test waits for something not to happen, it cannot even be sure that the system has started before it checks the result.</li>
+<li>the test should trigger a behavior that is detectable and use that to detect that the system has stabilized</li>
+<li>the skill here is in picking a behavior that will not interfere with the test’s assertions and that will complete after the tested behavior.</li>
+</ul>
+</li>
+<li>distinguish synchronizations and assertions
+<ul>
+<li>adopt a naming scheme to distinguish between synchronizations and assertions. For example, waitUntil() and assertEventually()</li>
+</ul>
+</li>
+<li>externalize event sources
+<ul>
+<li>hidden timers are very difficult to work with because they make it hard to tell when the system is in a stable state for a test to make its assertions</li>
+<li>the only solution is to make the system deterministic by decoupling it from its own scheduling.
+<ul>
+<li>we can pull event generation out into a shared service that is driven externally.
+<ul>
+<li>i.e.: system’s scheduler as a web service. System components scheduled activities by making HTTP requests to the scheduler, which triggered activities by making HTTP “postbacks.”</li>
+<li>i.e.: the scheduler published notifications onto a message bus topic that the components listened to.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>usually, introducing such an event infrastructure turns out to be useful for monitoring and administration.</li>
+<li>the trade-off is that our tests are no longer exercising the entire system. We could probably also write a few slow tests, running in a separate build, that exercise the whole system together including the real scheduler.</li>
+</ul>
+</li>
 </ul>
 <h2>Object mother pattern</h2>
 <ul>
