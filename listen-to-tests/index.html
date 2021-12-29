@@ -331,14 +331,114 @@ expected: &lt;startDate>, got &lt;endDate></code></pre></div>
 <ul>
 <li>unit tests give us confidence that an object performs its synchronization responsibilities, such as locking its state or blocking and walking threads.</li>
 <li>coarser-grained tests, such as system tests, give us confidence that the entire system manages concurrency correctly.</li>
+<li>limitations of unit stress tests
+<ul>
+<li>it is very difficult to diagnose race conditions with a debugger, as stepping through code (or even adding print statements) will alter the thread scheduling that’s causing the clash.
+<ul>
+<li>there may be scheduling differences between different os and between different processor combinations. Further, there maybe other processes on a host that affect scheduling while the tests are running.</li>
+<li>run unit tests to check that our objects correctly synchronize concurrent threads and to pinpoint synchronization failures.</li>
+<li>run end-to-end tests to check that unit-level synchronization policies integrate across the entire system.</li>
+<li>in addition, we could run static analysis tools as part of our automated build process.</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <h3>separating functionality and concurrency policy</h3>
 <ul>
 <li>auction search is complicated because it needs to implement the search and notification functionality and the synchronization at the same time</li>
 <li>we want to separate the logic that splits a request into multiple tasks from the technical details of how those tasks are executed concurrently. So we pass a “task runner” into the AuctionSearch, which can then delegate managing tasks to the runner instead of starting threads itself.</li>
+<li>concurrency is a system-wide concern that should be controlled outside the objects that need to run concurrent tasks.
+<ul>
+<li>the application can now easily adapt the object to the application’s threading policy without changing its implementation (“context independence” design principle)</li>
+</ul>
+</li>
 <li>for testing we need to run the tasks in the same thread as the test runner instead of creating new task threads.</li>
 </ul>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"></code></pre></div>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java">    <span class="token annotation punctuation">@Test</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">searchesAuctionHouses</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">></span></span> keywords <span class="token operator">=</span> <span class="token function">set</span><span class="token punctuation">(</span><span class="token string">"sheep"</span><span class="token punctuation">,</span> <span class="token string">"cheese"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        auctionHouseA<span class="token punctuation">.</span><span class="token function">willReturnSearchResults</span><span class="token punctuation">(</span>keywords<span class="token punctuation">,</span> resultsFromA<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        auctionHouseB<span class="token punctuation">.</span><span class="token function">willReturnSearchResults</span><span class="token punctuation">(</span>keywords<span class="token punctuation">,</span> resultsFromB<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        context<span class="token punctuation">.</span><span class="token function">checking</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Expectations</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>
+            <span class="token class-name">States</span> searching <span class="token operator">=</span> context<span class="token punctuation">.</span><span class="token function">states</span><span class="token punctuation">(</span><span class="token string">"activity"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token function">oneOf</span><span class="token punctuation">(</span>consumer<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">auctionSearchFound</span><span class="token punctuation">(</span>resultsFromA<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">when</span><span class="token punctuation">(</span>searching<span class="token punctuation">.</span><span class="token function">isNot</span><span class="token punctuation">(</span><span class="token string">"finished"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">oneOf</span><span class="token punctuation">(</span>consumer<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">auctionSearchFound</span><span class="token punctuation">(</span>resultsFromB<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">when</span><span class="token punctuation">(</span>searching<span class="token punctuation">.</span><span class="token function">isNot</span><span class="token punctuation">(</span><span class="token string">"finished"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">oneOf</span><span class="token punctuation">(</span>consumer<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">auctionSearchFinished</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">then</span><span class="token punctuation">(</span>searching<span class="token punctuation">.</span><span class="token function">is</span><span class="token punctuation">(</span><span class="token string">"finished"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        search<span class="token punctuation">.</span><span class="token function">search</span><span class="token punctuation">(</span>keywords<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        executor<span class="token punctuation">.</span><span class="token function">runUntilIdle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>design stress test regard to aspects of an object’s observable behavior that are independent of the number of threads calling into the object (observable invariants with respect to concurrency)
+<ul>
+<li>write a stress test for the invariant that exercises teh object multiple times from multiple threads</li>
+<li>watch the test fail, and tune the stress test until it reliably fails on every test run; and,</li>
+<li>make test the test pass by adding synchronization</li>
+<li>for example, one invariant of our auctionSearch is that it notifies the consumer just once when the search has finished, not matter how many Auction House it searches, that is, no matter how many threads it starts.</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java">    <span class="token comment">// Change to v2, v3, v4 to test different versions...</span>
+    <span class="token class-name">AuctionSearch_v4</span> search <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AuctionSearch_v4</span><span class="token punctuation">(</span>executor<span class="token punctuation">,</span> <span class="token function">auctionHouses</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> consumer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Test</span><span class="token punctuation">(</span>timeout <span class="token operator">=</span> <span class="token number">500</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span>
+    <span class="token function">onlyOneAuctionSearchFinishedNotificationPerSearch</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">InterruptedException</span> <span class="token punctuation">{</span>
+        context<span class="token punctuation">.</span><span class="token function">checking</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Expectations</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>
+            <span class="token function">ignoring</span><span class="token punctuation">(</span>consumer<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">auctionSearchFound</span><span class="token punctuation">(</span><span class="token keyword">with</span><span class="token punctuation">(</span><span class="token function">anyResults</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> NUMBER_OF_SEARCHES<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">completeASearch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">completeASearch</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">InterruptedException</span> <span class="token punctuation">{</span>
+        searching<span class="token punctuation">.</span><span class="token function">startsAs</span><span class="token punctuation">(</span><span class="token string">"in progress"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        context<span class="token punctuation">.</span><span class="token function">checking</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Expectations</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>
+            <span class="token function">exactly</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>consumer<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">auctionSearchFinished</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">then</span><span class="token punctuation">(</span>searching<span class="token punctuation">.</span><span class="token function">is</span><span class="token punctuation">(</span><span class="token string">"done"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        search<span class="token punctuation">.</span><span class="token function">search</span><span class="token punctuation">(</span>KEYWORDS<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        synchroniser<span class="token punctuation">.</span><span class="token function">waitUntil</span><span class="token punctuation">(</span>searching<span class="token punctuation">.</span><span class="token function">is</span><span class="token punctuation">(</span><span class="token string">"done"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>stress testing passive objects
+<ul>
+<li>most objects don’t start threads themselves but have multiple threads “pass through” them and alter their state. In such cases, an object must synchronize access to any state that might cause a race condition</li>
+<li>to stress-test the synchronization of a passive object, the test must start its own threads to call the object. When all the threads have finished, the state of the object should be the same as if those calls had happened in sequence.</li>
+</ul>
+</li>
+<li>synchronizing test thread with background threads
+<ul>
+<li>avoid sleep/delay</li>
+<li>use jMock’s Synchroniser for synchronizing between test and background threads, based on whether a state machine has entered or left a given state</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java">synchroniser<span class="token punctuation">.</span><span class="token function">waitUtil</span><span class="token punctuation">(</span>searching<span class="token punctuation">.</span><span class="token function">is</span><span class="token punctuation">(</span><span class="token string">"finished"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+synchroniser<span class="token punctuation">.</span><span class="token function">waitUtil</span><span class="token punctuation">(</span>searching<span class="token punctuation">.</span><span class="token function">isNot</span><span class="token punctuation">(</span><span class="token string">"inprogress"</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre></div>
+<h2>testing asynchronous code</h2>
+<ul>
+<li>in asynchronous test, the control returns to the test before the tested activity is complete.</li>
+<li><strong>An asynchronous test must wait for success and use timeouts to detect failure.</strong>
+<ul>
+<li>this implies every tested activity must have an observable effect: a test must affect the system so that its observable state becomes different.</li>
+</ul>
+</li>
+<li></li>
+</ul>
 <h2>Object mother pattern</h2>
 <ul>
 <li>contains a number of factory methods that create objects for use in tests.</li>
