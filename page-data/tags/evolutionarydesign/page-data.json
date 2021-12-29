@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-tags-js",
     "path": "/tags/evolutionarydesign/",
-    "result": {"data":{"allMarkdownRemark":{"totalCount":3,"edges":[{"node":{"fields":{"slug":"/growing-object-orented-guided-by-tests-summary/"},"frontmatter":{"title":"Growing object-oriented guided by tests summary"}}},{"node":{"fields":{"slug":"/listen-to-tests/"},"frontmatter":{"title":"Listen to tests, test smells and patterns"}}},{"node":{"fields":{"slug":"/implement-domain-driven-design/"},"frontmatter":{"title":"Implementing domain driven design summary"}}}]}},"pageContext":{"tag":"evolutionarydesign"}},
+    "result": {"data":{"allMarkdownRemark":{"totalCount":3,"edges":[{"node":{"fields":{"slug":"/listen-to-tests/"},"frontmatter":{"title":"Listen to tests, test smells and patterns"}}},{"node":{"fields":{"slug":"/growing-object-orented-guided-by-tests-summary/"},"frontmatter":{"title":"Growing object-oriented guided by tests summary"}}},{"node":{"fields":{"slug":"/implement-domain-driven-design/"},"frontmatter":{"title":"Implementing domain driven design summary"}}}]}},"pageContext":{"tag":"evolutionarydesign"}},
     "staticQueryHashes": []}
