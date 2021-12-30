@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tags/designpatterns/",
+    "result": {"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/practical-guide-oop-summary/"},"frontmatter":{"title":"practical guide to object oriented design"}}}]}},"pageContext":{"tag":"designpatterns"}},
+    "staticQueryHashes": []}
