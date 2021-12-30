@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 30 Dec 2021 20:06:14 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity judging the code judging the design unearthing concepts…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 30 Dec 2021 22:17:49 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity judging the code judging the design unearthing concepts…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Table of Contents&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#goalskey-ideascontext&quot;&gt;Goals/Key Ideas/Context&lt;/a&gt;&lt;/li&gt;
@@ -1523,62 +1523,10 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;h2&gt;Deliberate practice&lt;/h2&gt;
 &lt;h1&gt;Sample Learning Hour&lt;/h1&gt;
 &lt;h2&gt;incremental working, driven by tests&lt;/h2&gt;
-&lt;h1&gt;FAST method for learning anything&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;F - Forget&lt;/strong&gt;.
-&lt;ul&gt;
-&lt;li&gt;You need to forget what you know about the subject, forget situational things that are not urgent, and temporarily forget your limitations.&lt;/li&gt;
-&lt;li&gt;start with a beginner’s mind&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;A - Active&lt;/strong&gt;.
-&lt;ul&gt;
-&lt;li&gt;learning is not a spectator sport. Practice, take notes or ask questions&lt;/li&gt;
-&lt;li&gt;your superbrain works not by consuming information, but by creating and co-creating it.&lt;/li&gt;
-&lt;li&gt;4 quadrants of active learning
-&lt;ul&gt;
-&lt;li&gt;visualization: a picture worth thousands word, same is true for learning&lt;/li&gt;
-&lt;li&gt;association: associate it with something you already know.&lt;/li&gt;
-&lt;li&gt;emotion: emotion + association = long-term memory
-&lt;ul&gt;
-&lt;li&gt;adding emotion to association registers your new information in long-term memory. Regardless of emotion you use, emotion makes retention much more robust and durable.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;location: associate things to a place you’re familiar most&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;S - State&lt;/strong&gt;. All learning is state dependant
-&lt;ul&gt;
-&lt;li&gt;be fully present and don’t focus on other things that are not urgent&lt;/li&gt;
-&lt;li&gt;changing your physiology, changes your psychology.&lt;/li&gt;
-&lt;li&gt;as your body moves, your brain grooves&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;T - Teach.&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;when you teach something to someone, you get to learn it twice.&lt;/li&gt;
-&lt;li&gt;learn with the intention of teaching somebody specific.&lt;/li&gt;
-&lt;li&gt;Feynman technique
-&lt;ul&gt;
-&lt;li&gt;pretend to teach a concept you want to learn about to a student in the sixth grade&lt;/li&gt;
-&lt;li&gt;identify gaps in your explanation. Go back to the source material to better understand it.&lt;/li&gt;
-&lt;li&gt;organize and simplify&lt;/li&gt;
-&lt;li&gt;transmit (optional)
-&lt;ul&gt;
-&lt;li&gt;the ultimate test of your knowledge is your capacity to convey it to another.&lt;/li&gt;
-&lt;li&gt;attempt to transmit the material to at least 1 person who isn’t that familiar with it.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 &lt;h1&gt;MOM model&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;span
+&lt;li&gt;
+&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 566px; &quot;
     &gt;
@@ -1607,7 +1555,7 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
         decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
-    &lt;/span&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Mindset/Observation (the WHAT):
 &lt;ul&gt;
@@ -1629,7 +1577,8 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Methods (the HOW):
+&lt;/ul&gt;
+&lt;h2&gt;Methods (the HOW):&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;a specific process for accomplishing something, especially an orderly, logical or systematic way of instruction
 &lt;ul&gt;
@@ -1640,6 +1589,62 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;li&gt;if I changed my method, would my results look different.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;FAST method for learning anything&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;F - Forget&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You need to forget what you know about the subject, forget situational things that are not urgent, and temporarily forget your limitations.&lt;/li&gt;
+&lt;li&gt;start with a beginner’s mind&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;habits for studies&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;employ ACTIVE recall&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;optimal learning occurred when an initial learning session included repeated study and forced-recall testing of all items at least 4 times in a row&lt;/li&gt;
+&lt;li&gt;learning is not a spectator sport. Practice, take notes or ask questions&lt;/li&gt;
+&lt;li&gt;your superbrain works not by consuming information, but by creating and co-creating it.&lt;/li&gt;
+&lt;li&gt;4 quadrants of active learning
+&lt;ul&gt;
+&lt;li&gt;visualization: a picture worth thousands word, same is true for learning&lt;/li&gt;
+&lt;li&gt;association: associate it with something you already know.&lt;/li&gt;
+&lt;li&gt;emotion: emotion + association = long-term memory
+&lt;ul&gt;
+&lt;li&gt;adding emotion to association registers your new information in long-term memory. Regardless of emotion you use, emotion makes retention much more robust and durable.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;location: associate things to a place you’re familiar most&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;T - Teach.&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;when you teach something to someone, you get to learn it twice.&lt;/li&gt;
+&lt;li&gt;learn with the intention of teaching somebody specific.&lt;/li&gt;
+&lt;li&gt;Feynman technique
+&lt;ul&gt;
+&lt;li&gt;pretend to teach a concept you want to learn about to a student in the sixth grade&lt;/li&gt;
+&lt;li&gt;identify gaps in your explanation. Go back to the source material to better understand it.&lt;/li&gt;
+&lt;li&gt;organize and simplify&lt;/li&gt;
+&lt;li&gt;transmit (optional)
+&lt;ul&gt;
+&lt;li&gt;the ultimate test of your knowledge is your capacity to convey it to another.&lt;/li&gt;
+&lt;li&gt;attempt to transmit the material to at least 1 person who isn’t that familiar with it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;S - State&lt;/strong&gt;. All learning is state dependant
+&lt;ul&gt;
+&lt;li&gt;be fully present and don’t focus on other things that are not urgent&lt;/li&gt;
+&lt;li&gt;changing your physiology, changes your psychology.&lt;/li&gt;
+&lt;li&gt;as your body moves, your brain grooves&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1783,6 +1788,9 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
     &lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Chain Linking&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;balloons&lt;/code&gt; tied to the red vivid &lt;code class=&quot;language-text&quot;&gt;fire hydrant&lt;/code&gt;. The balloons seemingly come from the &lt;code class=&quot;language-text&quot;&gt;barrel&lt;/code&gt;. Inside the barrel, there is a &lt;code class=&quot;language-text&quot;&gt;board&lt;/code&gt; that closely resembles the shape of a &lt;code class=&quot;language-text&quot;&gt;diamond&lt;/code&gt;. The diamond drops on &lt;code class=&quot;language-text&quot;&gt;Sir lancelot&lt;/code&gt; head. He is then rushed to emergency in a &lt;code class=&quot;language-text&quot;&gt;mask&lt;/code&gt;. The &lt;code class=&quot;language-text&quot;&gt;mask&lt;/code&gt; as it turns out is dirty that it needs to be cleaned with &lt;code class=&quot;language-text&quot;&gt;toothpaste&lt;/code&gt;. The leftover toothpaste is thrown away and now stuck at the &lt;code class=&quot;language-text&quot;&gt;sign&lt;/code&gt; outside the &lt;code class=&quot;language-text&quot;&gt;bar&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2&gt;Peg memory method&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;With the sun list, we now have 20 pegs.&lt;/li&gt;
@@ -1794,6 +1802,16 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Remember names&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;BE SUAVE&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;believe: once you believe you can do it, you’re already halfway there&lt;/li&gt;
+&lt;li&gt;exercise: keep practicing until you become very good at it&lt;/li&gt;
+&lt;li&gt;say: say the person’s name back right after you heard it, that way you’d have heard the name twice&lt;/li&gt;
+&lt;li&gt;use: use the person’s name throughout the conversation&lt;/li&gt;
+&lt;li&gt;ask: ask where the person’s name come from, especially if it’s less-common&lt;/li&gt;
+&lt;li&gt;visualize: attach an image to person’s name&lt;/li&gt;
+&lt;li&gt;end: part ways by saying the person’s name&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1&gt;life style supports learning&lt;/h1&gt;
 &lt;h2&gt;kill your negative self talk &amp;#x26; ANTs&lt;/h2&gt;
 &lt;ul&gt;
