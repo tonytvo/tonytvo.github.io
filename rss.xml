@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 30 Dec 2021 22:17:49 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity judging the code judging the design unearthing concepts…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 30 Dec 2021 23:28:02 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity judging the code judging the design unearthing concepts…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Table of Contents&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#goalskey-ideascontext&quot;&gt;Goals/Key Ideas/Context&lt;/a&gt;&lt;/li&gt;
@@ -1468,10 +1468,11 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;h1&gt;Why?&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;reading/learning can be a “priceless opportunity to furnish your mind and enrich the quality of your life”&lt;/li&gt;
-&lt;li&gt;I read/learn for better understanding of others and myself&lt;/li&gt;
-&lt;li&gt;I read/learn to make fewer mistakes.&lt;/li&gt;
-&lt;li&gt;I read/learn to increase knowledge&lt;/li&gt;
-&lt;li&gt;I read/learn to find meaning&lt;/li&gt;
+&lt;li&gt;read/learn for better understanding of others and myself&lt;/li&gt;
+&lt;li&gt;read/learn to make fewer mistakes.&lt;/li&gt;
+&lt;li&gt;read/learn to increase knowledge&lt;/li&gt;
+&lt;li&gt;read/learn to find meaning&lt;/li&gt;
+&lt;li&gt;read/learn improves vocabulary, focus, memory and imagination&lt;/li&gt;
 &lt;li&gt;Odds are that no matter what you’re working on, someone somewhere, who is smarter than you, has probably thought about your problem and put it into a book.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;Overview&lt;/h1&gt;
@@ -1592,16 +1593,46 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;FAST method for learning anything&lt;/h3&gt;
+&lt;h3&gt;habits for studies&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;F - Forget&lt;/strong&gt;.&lt;/p&gt;
+&lt;li&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/38b3a89408a4620ea9b707965fc3599e/72e01/studies-habits.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.32911392405063%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAECBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAD/9oADAMBAAIQAxAAAAHNcOs5GH//xAAXEAEBAQEAAAAAAAAAAAAAAAARAQAQ/9oACAEBAAEFAoaBm5vP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFxAAAwEAAAAAAAAAAAAAAAAAABAhMf/aAAgBAQAGPwKlWmr/xAAbEAEAAwEBAQEAAAAAAAAAAAABABEhMWFRcf/aAAgBAQABPyEoaH7sPAX7ex7yvIAUKvk5azmxVbW5/9oADAMBAAIAAwAAABAvL//EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAEDAQE/EKf/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAgEBPxCI/8QAHhABAAICAgMBAAAAAAAAAAAAAQARITFRkUFhccH/2gAIAQEAAT8QIgPN/Es8Prb0xDbSv2cdxSQthwxVS75Fj5LEFytz/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;habits for studies&quot;
+        title=&quot;habits for studies&quot;
+        src=&quot;/static/38b3a89408a4620ea9b707965fc3599e/828fb/studies-habits.jpg&quot;
+        srcset=&quot;/static/38b3a89408a4620ea9b707965fc3599e/ff44c/studies-habits.jpg 158w,
+/static/38b3a89408a4620ea9b707965fc3599e/a6688/studies-habits.jpg 315w,
+/static/38b3a89408a4620ea9b707965fc3599e/828fb/studies-habits.jpg 630w,
+/static/38b3a89408a4620ea9b707965fc3599e/0ede0/studies-habits.jpg 945w,
+/static/38b3a89408a4620ea9b707965fc3599e/72e01/studies-habits.jpg 1024w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;F - Forget&lt;/strong&gt;.
 &lt;ul&gt;
 &lt;li&gt;You need to forget what you know about the subject, forget situational things that are not urgent, and temporarily forget your limitations.&lt;/li&gt;
 &lt;li&gt;start with a beginner’s mind&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;habits for studies&lt;/h3&gt;
-&lt;ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;employ ACTIVE recall&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;optimal learning occurred when an initial learning session included repeated study and forced-recall testing of all items at least 4 times in a row&lt;/li&gt;
@@ -1645,6 +1676,53 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;li&gt;be fully present and don’t focus on other things that are not urgent&lt;/li&gt;
 &lt;li&gt;changing your physiology, changes your psychology.&lt;/li&gt;
 &lt;li&gt;as your body moves, your brain grooves&lt;/li&gt;
+&lt;li&gt;if you’re feeling great, the greater results you will produce&lt;/li&gt;
+&lt;li&gt;stand up if you can’t sit up tight.&lt;/li&gt;
+&lt;li&gt;facilitates breathing and improves circulation of oxygen to your brain and the rest of your body&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;employ space repetition&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;by spacing the intervals out, you’re exercising neural connections each time.&lt;/li&gt;
+&lt;li&gt;spaced repetition produces long-term and robust retention of knowledge.&lt;/li&gt;
+&lt;li&gt;Spaced repetition works best when you review material at similar intervals&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;use your sense of smell&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;smells bring memories to the forefront of our brains&lt;/li&gt;
+&lt;li&gt;the scent of rosemary has been shown to improve memory&lt;/li&gt;
+&lt;li&gt;peppermint and lemon promote concentration&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#note-taking&quot;&gt;note taking&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;music for the mind
+&lt;ul&gt;
+&lt;li&gt;music stabilizes mental, and emotional rhythms to attain a state of deep concentration and focus in which large amounts of content information can be processed and learned”&lt;/li&gt;
+&lt;li&gt;baroque music stands out in particular, although one’s reaction to music is deeply personal&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;listen with your whole brain
+&lt;ul&gt;
+&lt;li&gt;remember acronym HEAR - halt, empathy, anticipate, review
+&lt;ul&gt;
+&lt;li&gt;be attentive, be interested, be alert and not distracted, create a positive atmosphere through non-verbal behavior&lt;/li&gt;
+&lt;li&gt;be a sounding board - allow the speaker to bounce ideas and feelings off you while assuming a non-judgmental, non-critical manner&lt;/li&gt;
+&lt;li&gt;don’t interrogate, don’t ask a lot of questions, they can give the impression you’re grilling the speaker&lt;/li&gt;
+&lt;li&gt;act like a mirror, reflect back what you think the speaker is saying and feeling&lt;/li&gt;
+&lt;li&gt;don’t discount the speaker’s feelings by using stock phrases like “it’s not that bad,” or “you will feel better tomorrow”&lt;/li&gt;
+&lt;li&gt;don’t let the speaker hook you. This can happen if you get angry or upset, allow yourself to get involved in an argument, or pass judgment on the other person&lt;/li&gt;
+&lt;li&gt;indicate you’re listening by
+&lt;ul&gt;
+&lt;li&gt;providing brief, noncommittal acknowledging responses, e.g., “Uh-huh,”, “I see”.&lt;/li&gt;
+&lt;li&gt;giving nonverbal acknowledgements, e.g., head nodding, facial expressions matching the speaker, open and relaxed body expression, eye contact.&lt;/li&gt;
+&lt;li&gt;invitations to say more, e.g., “tell me about it,” “I’ d like to hear more about that”&lt;/li&gt;
+&lt;li&gt;do reflect back to the speaker what you understand and how you think the speaker feels.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;don’t change subject or move in a new direction&lt;/li&gt;
+&lt;li&gt;don’t rehearse in your own head&lt;/li&gt;
+&lt;li&gt;don’t teach or give advice&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -2093,6 +2171,12 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;li&gt;Is it important to you to know them? and if the book has not only informed you, but also enlightened you, it is necessary to seek further enlightenment by asking.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;Note taking&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;listen with intent. Write a notes in a way you can understand later&lt;/li&gt;
+&lt;li&gt;use your own words whenever possible&lt;/li&gt;
+&lt;li&gt;handwriting triumphs typing because writing by hand requires you to exert more effort and process information immediately&lt;/li&gt;
+&lt;li&gt;use &lt;strong&gt;capture and create&lt;/strong&gt;. Fold the paper into two columns. On left side, write down what you’re capturing. On the right, write your impression of potential applications, i.e., the areas you can apply this.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2&gt;audio journal&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;need to do more research in this&lt;/li&gt;
