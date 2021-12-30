@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 30 Dec 2021 16:56:19 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity judging the code judging the design unearthing concepts…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 30 Dec 2021 20:06:14 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity judging the code judging the design unearthing concepts…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Table of Contents&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#goalskey-ideascontext&quot;&gt;Goals/Key Ideas/Context&lt;/a&gt;&lt;/li&gt;
@@ -1576,6 +1576,77 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;h1&gt;MOM model&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 566px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/65f5e7795c677ac9e07206df4a5ca4f4/a0966/3m-models.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 82.91139240506328%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAARABQDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAMFAQIE/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAbzk3iSwRFmBgH//xAAZEAEBAQADAAAAAAAAAAAAAAACAREAEBL/2gAIAQEAAQUCS8wWFcpWkZZFnf8A/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAGxAAAgEFAAAAAAAAAAAAAAAAAAEhEBEgMTL/2gAIAQEABj8CHPTpLuM3h//EABwQAAICAgMAAAAAAAAAAAAAAAEhABEQMSBh0f/aAAgBAQABPyEVkObsPWLw1jpahTDbKg3jw//aAAwDAQACAAMAAAAQZwA8/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPxAf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPxAf/8QAHBABAAIDAAMAAAAAAAAAAAAAAREhADFBIGGx/9oACAEBAAE/EJybdZOtVnqIrBEEZHDqdZHpr5kdCym8GDD1x4f/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;mindset-motivation-method&quot;
+        title=&quot;mindset-motivation-method&quot;
+        src=&quot;/static/65f5e7795c677ac9e07206df4a5ca4f4/a0966/3m-models.jpg&quot;
+        srcset=&quot;/static/65f5e7795c677ac9e07206df4a5ca4f4/ff44c/3m-models.jpg 158w,
+/static/65f5e7795c677ac9e07206df4a5ca4f4/a6688/3m-models.jpg 315w,
+/static/65f5e7795c677ac9e07206df4a5ca4f4/a0966/3m-models.jpg 566w&quot;
+        sizes=&quot;(max-width: 566px) 100vw, 566px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;Mindset/Observation (the WHAT):
+&lt;ul&gt;
+&lt;li&gt;deeply held beliefs, attitudes, and assumptions we create about who we rea, how the world works, what we’re capable of and deserve, and what is possible.&lt;/li&gt;
+&lt;li&gt;none of these are preinstalled at birth, which means you pick them up from your environment and those around you.&lt;/li&gt;
+&lt;li&gt;any limitations are self-imposed and that your true potential is within your control&lt;/li&gt;
+&lt;li&gt;be truly present in any situation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Motivation (the WHY):
+&lt;ul&gt;
+&lt;li&gt;the purpose one has for taking action. The energy required for someone to behave in a particular way&lt;/li&gt;
+&lt;li&gt;motivation = Purpose x Energy x Small Simple Steps
+&lt;ul&gt;
+&lt;li&gt;how connected do I feel to my purpose&lt;/li&gt;
+&lt;li&gt;how are my day-to-day energy levels&lt;/li&gt;
+&lt;li&gt;what am I allowing to drain my energy that I no longer should?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Methods (the HOW):
+&lt;ul&gt;
+&lt;li&gt;a specific process for accomplishing something, especially an orderly, logical or systematic way of instruction
+&lt;ul&gt;
+&lt;li&gt;frequently challenge your methods by asking yourself the following questions
+&lt;ul&gt;
+&lt;li&gt;have I thought about methods I’m using?&lt;/li&gt;
+&lt;li&gt;have I learned this method from someone successful at what I’m trying to achieve&lt;/li&gt;
+&lt;li&gt;if I changed my method, would my results look different.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1&gt;System for remembering what you learn&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Mark up the book while reading it. Questions, thoughts. And, more important connections to other ideas.&lt;/li&gt;
@@ -1676,6 +1747,41 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h2&gt;Association&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f7255a4b2b110b4ea259e00c88905506/72e01/brain-food-association.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.32911392405063%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEEBf/EABYBAQEBAAAAAAAAAAAAAAAAAAECA//aAAwDAQACEAMQAAAByapjSEMT/8QAGRAAAgMBAAAAAAAAAAAAAAAAAxAAARIC/9oACAEBAAEFAoYeHq+l/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGRAAAQUAAAAAAAAAAAAAAAAAEAABAhEh/9oACAEBAAY/AlE69j//xAAZEAACAwEAAAAAAAAAAAAAAAABEQAQITH/2gAIAQEAAT8hgciCxepycdf/2gAMAwEAAgADAAAAEKsv/8QAFhEBAQEAAAAAAAAAAAAAAAAAARAx/9oACAEDAQE/EDGf/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARIf/aAAgBAgEBPxBOll//xAAbEAACAgMBAAAAAAAAAAAAAAABEQAxECFRsf/aAAgBAQABPxBdqCaplF7CfsUFwXnExrH/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;brain food association&quot;
+        title=&quot;brain food association&quot;
+        src=&quot;/static/f7255a4b2b110b4ea259e00c88905506/828fb/brain-food-association.jpg&quot;
+        srcset=&quot;/static/f7255a4b2b110b4ea259e00c88905506/ff44c/brain-food-association.jpg 158w,
+/static/f7255a4b2b110b4ea259e00c88905506/a6688/brain-food-association.jpg 315w,
+/static/f7255a4b2b110b4ea259e00c88905506/828fb/brain-food-association.jpg 630w,
+/static/f7255a4b2b110b4ea259e00c88905506/0ede0/brain-food-association.jpg 945w,
+/static/f7255a4b2b110b4ea259e00c88905506/72e01/brain-food-association.jpg 1024w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2&gt;Chain Linking&lt;/h2&gt;
 &lt;h2&gt;Peg memory method&lt;/h2&gt;
 &lt;ul&gt;
@@ -1711,6 +1817,89 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;contemplating your ANT(s) like this can help you see they are not truths but thoughts made up of fears, worries, or criticism. And, ending with the positive affirmation can help you move towards better thoughts and beliefs that help you have more happiness.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;ten steps to improving your memory&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;diets
+&lt;ul&gt;
+&lt;li&gt;eat good brain food like blueberries, avocado, broccoli, coconut oil, eggs, green leafy vegetables, salmon and sardines, turmeric, walnut, dark chocolate.&lt;/li&gt;
+&lt;li&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d708ae4b01789e014e40560c02cc4150/212bf/10-food-for-brain.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.32911392405063%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAECBf/EABUBAQEAAAAAAAAAAAAAAAAAAAIB/9oADAMBAAIQAxAAAAHPUMQFP//EABgQAQEBAQEAAAAAAAAAAAAAAAEAEQIQ/9oACAEBAAEFAucgkx8b/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQIBAT8Bh//EABkQAQACAwAAAAAAAAAAAAAAAAEAMhEgIf/aAAgBAQAGPwKq9lWYdP/EABsQAQACAgMAAAAAAAAAAAAAAAEAESFREDFB/9oACAEBAAE/IThadHzUssyVGQKTshwrcz//2gAMAwEAAgADAAAAEJg//8QAFhEBAQEAAAAAAAAAAAAAAAAAABEh/9oACAEDAQE/ELiv/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAh/9oACAECAQE/EHUGX//EABwQAQEAAgMBAQAAAAAAAAAAAAERACExQXFR8P/aAAgBAQABPxBgYgvAxuPt3cAgg0bI38ZXjkTpHjOA1PM7tb7iKpV2q7c//9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;10 food for brains&quot;
+        title=&quot;10 food for brains&quot;
+        src=&quot;/static/d708ae4b01789e014e40560c02cc4150/828fb/10-food-for-brain.jpg&quot;
+        srcset=&quot;/static/d708ae4b01789e014e40560c02cc4150/ff44c/10-food-for-brain.jpg 158w,
+/static/d708ae4b01789e014e40560c02cc4150/a6688/10-food-for-brain.jpg 315w,
+/static/d708ae4b01789e014e40560c02cc4150/828fb/10-food-for-brain.jpg 630w,
+/static/d708ae4b01789e014e40560c02cc4150/212bf/10-food-for-brain.jpg 768w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;high-quality foods that contain lots of vitamins, minerals, and antioxidants nourishes the brain and protects it from oxidative stress, the waste produced when the body use oxygen, which can damage cells.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;emotions:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#kill-your-negative-self-talk--ants&quot;&gt;avoid negative thoughts and complaining&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;exercise regularly
+&lt;ul&gt;
+&lt;li&gt;when your body moves, your brain grooves&lt;/li&gt;
+&lt;li&gt;exercise changes the brain in ways that protect memory and thinking skills.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;get your brain nutrient
+&lt;ul&gt;
+&lt;li&gt;take a blood test and verify your deficiencies. Then take the appropriate supplements&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;keep a positive peer group
+&lt;ul&gt;
+&lt;li&gt;who you spend time with is who you become.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;maintain a clean environment
+&lt;ul&gt;
+&lt;li&gt;meaning clean air, water and space around you&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;get good sleep
+&lt;ul&gt;
+&lt;li&gt;dreaming is essential for fantastic ideas.&lt;/li&gt;
+&lt;li&gt;sleep is vital for protecting you against age-related brain damage, and it is crucial for day-to-day functioning.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;protect your brain
+&lt;ul&gt;
+&lt;li&gt;avoid putting your phone under your pillow and protect yourself from head injuries by wearing a helmet when cycling&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;learn new things
+&lt;ul&gt;
+&lt;li&gt;neuroplasticity (connections in your brain) can be instigated through learning new things&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;reduce your stress through yoga, meditation, or massages.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;Continuous learning&lt;/h1&gt;
 &lt;ul&gt;
