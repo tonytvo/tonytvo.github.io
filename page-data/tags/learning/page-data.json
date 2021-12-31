@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-tags-js",
     "path": "/tags/learning/",
-    "result": {"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/learn-how-to-learn/"},"frontmatter":{"title":"learning how to learn"}}}]}},"pageContext":{"tag":"learning"}},
+    "result": {"data":{"allMarkdownRemark":{"totalCount":2,"edges":[{"node":{"fields":{"slug":"/learn-how-to-learn/"},"frontmatter":{"title":"learning how to learn"}}},{"node":{"fields":{"slug":"/study-group-patterns-summary/"},"frontmatter":{"title":"study group patterns summary"}}}]}},"pageContext":{"tag":"learning"}},
     "staticQueryHashes": []}
