@@ -7,6 +7,14 @@
 <li><a href="#goalskey-ideascontext">Goals/Key Ideas/Context</a></li>
 <li><a href="#rediscovering-simplicity">rediscovering simplicity</a>
 <ul>
+<li><a href="#simplifying-code">simplifying code</a>
+<ul>
+<li><a href="#incomprehensibly-concise">incomprehensibly concise</a></li>
+<li><a href="#speculatively-general">speculatively general</a></li>
+<li><a href="#concretely-abstract">concretely abstract</a></li>
+<li><a href="#shameless-green">shameless green</a></li>
+</ul>
+</li>
 <li><a href="#judging-the-code">judging the code</a></li>
 <li><a href="#judging-the-design">judging the design</a></li>
 </ul>
@@ -41,6 +49,79 @@
 <li>writing code is the process of working your way to the next stable end point, not the end point itself</li>
 </ul>
 <h1>rediscovering simplicity</h1>
+<ul>
+<li>
+<p>getting insight into potential expense of code</p>
+<ul>
+<li>how difficult was it to write?</li>
+<li>how hard is it to understand?</li>
+<li>how expensive will it be to change?</li>
+</ul>
+</li>
+<li>
+<p>terminology: method vs sending messages</p>
+<ul>
+<li>a “method” is defined on an object and contains behavior</li>
+<li>a “message” is sent to an object to invoke behavior
+<ul>
+<li><code class="language-text">song() { verses(); }</code> means that song method sends the verses message to the receiver this.</li>
+<li>therefore, <strong>method are defined, and messages are sent</strong></li>
+<li>“sending messages” are preferred to “call a method/function” as it implicitly encourage to create message senders that are willfully ignorant of implementation details, and fosters independence between senders and receivers.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>code is easy to understand when it clearly reflects the problem it’s solving, and thus openly exposes that problem’s domain</strong></p>
+</li>
+</ul>
+<h2>simplifying code</h2>
+<ul>
+<li>speculatively general and concretely abstract were both written with an eye toward reducing future costs, and it is distressing to see good intentions fail so spectacularly. <strong>The failure here is not bad intention - it’s insufficient patience.</strong></li>
+</ul>
+<h3>incomprehensibly concise</h3>
+<ul>
+<li><a href="https://github.com/marina-ferreira/99_bottles_of_oop/blob/main/chapter_1/01_incomprehensibly_concise.rb">incomprehensibly concise code</a>
+<ul>
+<li>embeds a great deal of logic into the verse string</li>
+<li>the code is hard to understand because it is inconsistent and duplicative (pluralization logic), and because it contains hidden concepts that it does not name</li>
+</ul>
+</li>
+</ul>
+<h3>speculatively general</h3>
+<ul>
+<li><a href="https://github.com/marina-ferreira/99_bottles_of_oop/blob/main/chapter_1/02_speculatively_general.rb">speculatively general code</a>
+<ul>
+<li>there’s far more code here  than is needed to pass the tests. This unnecessary code took time to write</li>
+<li>the many levels of indirection are confusing. You could study this code for a long time without discerning why they are needed</li>
+<li>you may feel compelled to understand its purpose before making changes.</li>
+<li>what is the rule to determine which verse should be sung next? buried deep within the NoMore lambda is a hard-coded “99,” which might cause one to infer that verse 99 follows verse 0.</li>
+</ul>
+</li>
+</ul>
+<h3>concretely abstract</h3>
+<ul>
+<li><strong>“DRY makes sense when it reduces the cost of change more than it increases the cost of understanding the code”</strong></li>
+<li>DRYing out code is not free. It adds a level of indirection, and layers of indirection make the details of what’s happening harder to understanding.</li>
+<li><a href="https://github.com/marina-ferreira/99_bottles_of_oop/blob/main/chapter_1/03_concretely_abstract.rb">concretely abstract code</a>
+<ul>
+<li>it clearly took a fair amount of thought and time.</li>
+<li>the individual methods are easy to understand, it’s tough to get a sense of the entire song. The parts doesn’t seem to add up to the whole</li>
+<li>while changing the code inside any individual method is cheap, in many cases, one simple change will cascade and force many other changes.</li>
+<li>what is the rule to determine which verse should be sung next? Ditto.</li>
+</ul>
+</li>
+</ul>
+<h3>shameless green</h3>
+<ul>
+<li><a href="https://github.com/marina-ferreira/99_bottles_of_oop/blob/main/chapter_1/04_shameless_green.rb">shameless green</a>
+<ul>
+<li>it was easy to write and understand</li>
+<li>it will be cheap to change. Even though the verse strings are duplicated, if one verse changes it’s easy to keep the others in sync.</li>
+<li>what is the rule to determine which verse should be sung next? This is still not explicit. The 0 verse contains</li>
+</ul>
+</li>
+</ul>
 <h2>judging the code</h2>
 <ul>
 <li>evaluating code based on opinion
@@ -65,6 +146,7 @@
 <h2>combing objects with composition</h2>
 <h1>Quotes</h1>
 <p>“Writing code is the process of working your way to the next stable end point, not the end point itself”</p>
+<p><strong>“DRY makes sense when it reduces the cost of change more than it increases the cost of understanding the code”</strong></p>
 <h1>References</h1>
 <p><a href="https://github.com/keyvanakbary/learning-notes/blob/master/books/99-bottles-of-oop.md">https://github.com/keyvanakbary/learning-notes/blob/master/books/99-bottles-of-oop.md</a>
 <a href="https://github.com/serodriguez68/poodr-notes">https://github.com/serodriguez68/poodr-notes</a>
