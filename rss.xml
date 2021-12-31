@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 31 Dec 2021 06:00:26 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity judging the code judging the design unearthing concepts…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 31 Dec 2021 17:44:01 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity judging the code judging the design unearthing concepts…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Table of Contents&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#goalskey-ideascontext&quot;&gt;Goals/Key Ideas/Context&lt;/a&gt;&lt;/li&gt;
@@ -2334,9 +2334,8 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;li&gt;&lt;a href=&quot;https://www.getstoryshots.com/books/limitless-summary/&quot;&gt;https://www.getstoryshots.com/books/limitless-summary/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.sitrakaratsimba.com/limitless-upgrade-your-brain-learn-anything-faster-and-unlock-your-exceptional-life/&quot;&gt;https://www.sitrakaratsimba.com/limitless-upgrade-your-brain-learn-anything-faster-and-unlock-your-exceptional-life/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://theartofliving.com/how-to-read-a-book-summary/&quot;&gt;https://theartofliving.com/how-to-read-a-book-summary/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[study group patterns summary]]></title><description><![CDATA[todo summary continuous learning from joshua kerievsky a pattern language for study groups from joshua kerievsky The theory and practice of…]]></description><link>https://tonytvo.github.io/study-group-patterns-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/study-group-patterns-summary/</guid><pubDate>Mon, 27 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;todo&lt;/h1&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[study group patterns summary]]></title><description><![CDATA[todo a pattern language for study groups from joshua kerievsky The theory and practice of teaching and learning Learning outcomes and…]]></description><link>https://tonytvo.github.io/study-group-patterns-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/study-group-patterns-summary/</guid><pubDate>Mon, 27 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;todo&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;summary continuous learning from joshua kerievsky&lt;/li&gt;
 &lt;li&gt;a pattern language for study groups from joshua kerievsky&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;The theory and practice of teaching and learning&lt;/h1&gt;
@@ -2493,13 +2492,74 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;li&gt;&lt;a href=&quot;https://www.industriallogic.com/img/blog/2005/09/ContinuousLearning.pdf&quot;&gt;industrial logic continous learning&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;XP teams are very code-centric and focused on making functional software. When reflection and learning happen, it’s often in a watered down, haphazard way.&lt;/li&gt;
 &lt;li&gt;someone has to decide to make learning not just an individual experience but a collective experience. When that happens, learning isn’t just something that occurs naturally, it is something that the company uses to drive the future of business.&lt;/li&gt;
+&lt;li&gt;“what is the simplest, most cost-effective way to share learnings?”&lt;/li&gt;
+&lt;li&gt;a group of people who functioned together in an extraordinary way, who trusted one another, who complemented each others’ strengths and compensated for each others’ limitations, who had common goals were larger than individual goals, and who produced extraordinary results.
+&lt;ul&gt;
+&lt;li&gt;the team that became great didn’t start off great - it &lt;strong&gt;learned&lt;/strong&gt; how to produce extraordinary results.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;a programmer’s study group will meet regularly in a comfortable place to delve into important technical topics. These topics can come from group’s learning repository, from books or articles, or even from a guest participant.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;a learning repository&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;a simple, security-free, browser-based learning repository, such as Ward Cunningham’s Wiki&lt;/li&gt;
+&lt;li&gt;just install it and asking folks to use it isn’t enough. Teams need to establish usage convention
+&lt;ul&gt;
+&lt;li&gt;developers will quickly jot down learnings on index cards, as they work, and when they integrate their code, they can integrate significant learnings as well.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;atlassian confluence provides similar functionality but how can we organize and maintain the group knowledge effectively?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;A pattern language for study groups&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.industriallogic.com/img/blog/2012/03/khdraft1.pdf&quot;&gt;a pattern language for study groups&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;a study group can make a difficult book easier to understand, it can succeed where an unsatisfying class fails, and it can support you if your environment doesn’t support your ongoing learning and growth.&lt;/li&gt;
-&lt;li&gt;to get an overall understanding of what generates successful study group, take 15 to 25 minutes to read the name of each pattern, looking at each pattern’s picture, and then read each pattern’s problem and solution headlines&lt;/li&gt;
-&lt;li&gt;for more in-depth study, scan the patterns in 15-25 minutes, and follow this with a patient reading of each and every patterns. As you read the body of each pattern, you will notice that certain sentences are written in italics. read the italics to get to the hear of the idea.&lt;/li&gt;
+&lt;li&gt;once teams produce enough learning content they will need to reflect on and discuss it.&lt;/li&gt;
+&lt;li&gt;there are 2 good places to do this: for technical matters, the best place is a programmer’s study group; and for team, people or process maters, the best place is in an iteration retrospective.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;every programmer on the team needed to at least be aware of the system’s potent smells. This would enable them all to pay attention to these smells and consider how to refactor them out of existence&lt;/strong&gt;.
+&lt;ul&gt;
+&lt;li&gt;look into process of documenting these potent smells (index cards, wiki, etc…). This would eventually led to direct action&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;recommend that groups meet for 2 hours if they want to delve deeply into a subject, though one-hour meetings are fine for covering topics quickly&lt;/li&gt;
+&lt;li&gt;absolutely no one should play the role of lecturer or teacher in a study group.
+&lt;ul&gt;
+&lt;li&gt;the group meets to conduct group learning.&lt;/li&gt;
+&lt;li&gt;if someone is expert in a certain technical area, that individual ought to help others learn, not show off or talk down to participants.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;continuously learning coach
+&lt;ul&gt;
+&lt;li&gt;the coach is the leader of the team. If the coach doesn’t value learning, the team won’t either.&lt;/li&gt;
+&lt;li&gt;the coach must lead by example. This means that the coach will seek out and obtain coaching and mentoring from the best sources available.&lt;/li&gt;
+&lt;li&gt;coaches must strive to learn about their customer’s needs, team or personality conflicts, new technologies, and the latest wisdom about XP and other lightweight methods.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;retrospectives&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;the continuous learning approach to retrospectives means they come not at the end of a project, but at the end of every iteration.
+&lt;ul&gt;
+&lt;li&gt;conducting iteration retrospectives will enable teams to quickly adjust and improve their performance, because they will be continuously revisiting these questions:
+&lt;ul&gt;
+&lt;li&gt;what worked well?&lt;/li&gt;
+&lt;li&gt;what did we learn?&lt;/li&gt;
+&lt;li&gt;what should we do differently next time?&lt;/li&gt;
+&lt;li&gt;what still puzzles us?&lt;/li&gt;
+&lt;li&gt;what happened?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;people have a fear of retrospectives, because they have a fear of being attacked, of being made to look foolish, of getting a poor performance review or of hurting someone’s feelings.&lt;/li&gt;
+&lt;li&gt;it’s detrimental to retrospectives if people are afraid, or if there is an atmosphere of blame, criticism, sarcasm, or even humor at other people’s expense.&lt;/li&gt;
+&lt;li&gt;“regardless of what we discover, we understand and truly believe that everyone did the best job they could, given what they knew at the time, their skills, and abilities, the resources available, and the situation at hand.”&lt;/li&gt;
+&lt;li&gt;it’s vital that the facilitator be an outsider and not a member of the team involved in the retrospective.&lt;/li&gt;
+&lt;li&gt;participants take the lessons learned during the retrospective and turn them into concrete ideas for improving their development process.
+&lt;ul&gt;
+&lt;li&gt;the key to retrospective is to make sure you’re solving the correct problem.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;knowledge hydrant&lt;/h2&gt;
 &lt;ul&gt;
@@ -2516,7 +2576,39 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;/ul&gt;
 &lt;h2&gt;sequential study&lt;/h2&gt;
 &lt;h2&gt;pool of insight&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;once you’ve discovered your &lt;a href=&quot;#knowledge-hydrant&quot;&gt;knowledge hydrant&lt;/a&gt;, it can be overshelming to drink from it. This pattern suggests how to make the study of great literature easier and more rewarding&lt;/li&gt;
+&lt;li&gt;there’s nothing wrong with reading and studying literature on one’s own. But great literature is worth knowing well, and individual study pales in comparison with teh study of literature in a group dialogue.&lt;/li&gt;
+&lt;li&gt;in communicating how they understand something, people may
+&lt;ul&gt;
+&lt;li&gt;clarify what confused others&lt;/li&gt;
+&lt;li&gt;expose their own misunderstandings&lt;/li&gt;
+&lt;li&gt;reveal new ideas&lt;/li&gt;
+&lt;li&gt;articulate that which they didn’t know they knew&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;in a dialogue, nobody is trying to win. Everybody wins if anybody wins.
+&lt;ul&gt;
+&lt;li&gt;whenever any mistake is discovered on the part of anybody, everybody gains.&lt;/li&gt;
+&lt;li&gt;there is a spirit present in dialogues that one doesn’t find in many other learning environments&lt;/li&gt;
+&lt;li&gt;many groups sustain a group’s spirit by meeting weekly or biweekly&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;read and study literature on one’s own, but discuss it with others in a regular study group. Aim to ask questions about you don’t know and explain what you do know. Your exchanges with colleagues will enrich your understanding immensely.&lt;/li&gt;
+&lt;li&gt;the best study groups are those in which individuals feel comfortable learning with others &lt;a href=&quot;#safe-place&quot;&gt;safe place&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;some environments promote dialogues, &lt;a href=&quot;#common-ground&quot;&gt;common ground&lt;/a&gt; and &lt;a href=&quot;#public-living-room&quot;&gt;public living room&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;the most enriching study happens when a group has a &lt;a href=&quot;#motivated-moderator&quot;&gt;motivated moderator&lt;/a&gt; and &lt;a href=&quot;#prepared-participants&quot;&gt;prepared participants&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2&gt;agenda&lt;/h2&gt;
+&lt;h2&gt;safe place&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;a good physical environment &lt;a href=&quot;#common-ground&quot;&gt;common ground&lt;/a&gt;, &lt;a href=&quot;#public-living-room&quot;&gt;public living room&lt;/a&gt; is vital for any study group. Equally vital, is the intellectual environment.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;loud-mouths, show-offs, know-it-alls, and people who are overly competitive, adversarial or confrontational, can make other uncomfortable or insecure, and create an environment that is not conductive to learning, sharing or the building of ideas&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;common ground&lt;/h2&gt;
+&lt;h2&gt;public living room&lt;/h2&gt;
+&lt;h2&gt;motivated moderator&lt;/h2&gt;
+&lt;h2&gt;prepared participants&lt;/h2&gt;
 &lt;h1&gt;Quotes&lt;/h1&gt;
 &lt;h1&gt;References&lt;/h1&gt;
 &lt;ul&gt;
@@ -3246,7 +3338,233 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;a href=&quot;https://www.getstoryshots.com/books/tools-of-titans-summary/&quot;&gt;https://www.getstoryshots.com/books/tools-of-titans-summary/&lt;/a&gt;
 &lt;a href=&quot;https://www.grahammann.net/book-notes/tools-of-titans-tim-ferriss&quot;&gt;https://www.grahammann.net/book-notes/tools-of-titans-tim-ferriss&lt;/a&gt;
 &lt;a href=&quot;https://www.nateliason.com/notes/tools-titans-tim-ferriss&quot;&gt;https://www.nateliason.com/notes/tools-titans-tim-ferriss&lt;/a&gt;
-&lt;a href=&quot;https://www.hustleescape.com/book-summary-tools-of-titans-by-tim-ferriss/&quot;&gt;https://www.hustleescape.com/book-summary-tools-of-titans-by-tim-ferriss/&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Implementing domain driven design summary]]></title><description><![CDATA[DDD overview   anatomy of domain-driven design The anatomy of domain driven design Putting the model to work Domain-Driven Design is an…]]></description><link>https://tonytvo.github.io/implement-domain-driven-design/</link><guid isPermaLink="false">https://tonytvo.github.io/implement-domain-driven-design/</guid><pubDate>Mon, 20 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;DDD overview&lt;/h1&gt;
+&lt;a href=&quot;https://www.hustleescape.com/book-summary-tools-of-titans-by-tim-ferriss/&quot;&gt;https://www.hustleescape.com/book-summary-tools-of-titans-by-tim-ferriss/&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Implementing domain driven design summary]]></title><description><![CDATA[Getting DDD started with Legacy Systems Getting started with DD when surrounded by legacy systems by Eric Evans strategy 1: bubble context…]]></description><link>https://tonytvo.github.io/ddd-with-legacy-code/</link><guid isPermaLink="false">https://tonytvo.github.io/ddd-with-legacy-code/</guid><pubDate>Mon, 20 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Getting DDD started with Legacy Systems&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.domainlanguage.com/wp-content/uploads/2016/04/GettingStartedWithDDDWhenSurroundedByLegacySystemsV1.pdf&quot;&gt;Getting started with DD when surrounded by legacy systems by Eric Evans&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;strategy 1: bubble context&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;the legacy system already has an established model, albeit implicit, which can seldom be changed with a reasonable effort.&lt;/li&gt;
+&lt;li&gt;Simply adding objects that express a distinct model without changing the ones already there will lead to conflicting rules and concepts.&lt;/li&gt;
+&lt;li&gt;Introducing a complex new set of development principles and techniques is best done incrementally as in a pilot project, in a way that allows members of the team to gain experience and allows the organization to assess the approach.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;This pilot project allows a small team to achieve a modest objective involving some complex domain logic and, ideally, one with some strategic value that is difficult to solve in a legacy context. Therefore, it is recommended to cherry-pick a small, self-disciplined team with control over its code to evolve a model that addresses the chosen area, relatively unconstrained by the concepts of the legacy systems.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;The new functionality does not disappear. It will continue to be maintained as an extension of the legacy systems. The organization now has the experience to undertake more ambitious use of DDD.&lt;/li&gt;
+&lt;li&gt;no synchronization risk (uses a legacy database)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;works when there is a limited range of data needed from legacy&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A ‘bubble’ is a small bounded context established using an Anticorruption Layer (ACL) for the purpose of a particular development effort and not intended necessarily to be expanded or used for a long time.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 358px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8d362aceaf91448df6fa280da41a0808/39185/acl-backed-repository-implementation.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 112.0253164556962%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAIAAABPIytRAAAACXBIWXMAAAsTAAALEwEAmpwYAAADBUlEQVQ4y31Ua3ObOBT1//8v+2kn0zZ2mjiOH4DxE2Mwxsb4kQaEjA1CEnrQwXTZtJNUM2gA6ejee865ahCCIYRnCGEEQRhGIAQwiuM4AiGEEYjgDwAZY8VHo8E5p4QQTHCG8e1hnFFKcIbKv5QmKcpZXhTyA/Af3xhj398DEJ3PcRCEEYjkbXAuhJAfgGVR3DYUjDFK883WNm1N09svveZAezRt3fWM09s6jsGnkaWUeZ4XRQHj0/aoL1Yvs+Xz3OpMzPZs2Vn7agiOfwNzzouiCICvjL4Ohl/12cPc6iijb8ro28R8jM6vUn5eM79VlqB46y8dd77xlv5xtXJnG888nByUXTkXn0UuZyFENVOa5zkjhOY5q1YZ45xz+S76LzBj1LDUl/59X3t4fL4bTp63+7nrTdfexN1NvYPhnxb+ydyfzMOrXcveqAQkBJmrXk/7ok2az/1/x4un5bq/WHUNu2s6vdVGsdyB42nOTt3sRzmjv4ExRpv92HIH2rg1XbQdTxvNHxX9Xh0159aLYXe1cWs4/b7aKtvDJM//ABO0PUwNuzcYNtXRg+n0rbW63unOdrj29IXdV/SWOnpwtsPdcX4z3LuapRQYoyxLCc1efxxBFGCMKM0IQShLyvccZzhN0yvGqKatAsvSe7/YLq1CKWWMv9NfsJwXsuT8pqb4P23Oxf60cneztTfd7IwkvQIAbhKwm2Y0QTE8B9cUpuhySeD5Emb4KqVsVLybK/V755+uejc120l6qXqglJULlKWG3dMmrcmibdhdddxSRs2FpQghGlXC8PIWRH4A/DA6EIJrw5VglFiuMl92FnbXcgezZWdiPNmuXoJruwgh8pxxLmoPVVZP0ut6p1uu0unfdQZ34/mTvVG8g8E5r9mWaZpCCOuwVc3VEShLKMUYozS9xBeICaIU/9fPsmSbMYYQqq1XN1mVVHUlZBnOMlynVoIppZ7n2bbtOE4YhjWylqQ6mhACAHgL3tI0qc5tvF+u1L/x9Fv3VKlBCH3fd103CILq2vgJb0DSqsPOk78AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ACL-Backed Repository Implementation&quot;
+        title=&quot;ACL-Backed Repository Implementation&quot;
+        src=&quot;/static/8d362aceaf91448df6fa280da41a0808/39185/acl-backed-repository-implementation.png&quot;
+        srcset=&quot;/static/8d362aceaf91448df6fa280da41a0808/c26ae/acl-backed-repository-implementation.png 158w,
+/static/8d362aceaf91448df6fa280da41a0808/6bdcf/acl-backed-repository-implementation.png 315w,
+/static/8d362aceaf91448df6fa280da41a0808/39185/acl-backed-repository-implementation.png 358w&quot;
+        sizes=&quot;(max-width: 358px) 100vw, 358px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ACL should be explicitly addressed in budgeting and planning. It should be designed to keep it decoupled from the actual business logic of the new system.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;A good anti-corruption layer has a clean interface entirely in terms of the downstream model (in our case, the bubble model) that provides access to the information and services of the upstream system.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ACL allows development in the downstream context to focus on the business problem and not be distracted or complicated by dealing with the other system’s distinct concepts and quirks.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Any new information needed from the legacy context requires incorporating the new data into the bubble model, working out the mapping from the old model, and then the ACL. That’s a high price, so we should choose functionality valuable enough to justify it.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Development in the bubble could go on for several months or, occasionally, in cases where the interface with other contexts is relatively narrow for a few years. However, it will not last forever.&lt;/li&gt;
+&lt;li&gt;The bubble becomes the primary context for more ambitious new development. When this happens, the limitations of the bubble context may be judged unacceptable, and the strategy migrates to the autonomous bubble with synchronizing ACL. Then the bubble transforms into something more long-lasting.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;strategy 2: autonomous bubble&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The autonomous bubble is distinguished by the ability to run its software, for a time, cut off from other systems. Information may start to get stale, requests to external service requests start to queue up unfulfilled, but the internal behaviour of the software continues to work.&lt;/li&gt;
+&lt;li&gt;needs organization committed to significant new development with a unique design approach&lt;/li&gt;
+&lt;li&gt;allows new data to be collected and used without involving legacy&lt;/li&gt;
+&lt;li&gt;allows decoupled “product” to evolve&lt;/li&gt;
+&lt;li&gt;may progress from a bubble context as development is scaled up on a successful pilot project.&lt;/li&gt;
+&lt;li&gt;To enable autonomous context having its own data, ACL takes on the responsibility of synchronization between data stores in 2 contexts, which do not depend directly on each other. This ACL activity is asynchronous with any action in either context, with a service level agreement (SLA) regarding the freshness of the translated data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 395px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c35fdec3230f6a0371bba84db619346c/2cb6c/synchronizing-acl.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 101.26582278481011%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsTAAALEwEAmpwYAAACG0lEQVQ4y4WTeW+qQBTF/f7f5+X93daKLW61KsMyA6KiuNQqzL7QINT68mw4mZCbCb/czLnntoTgu932sD/s0u02Tc/nrCgKc1HRpJYxRt3I1CrMT/U7fK2qf47HI4RBGMLtNhWCc04Zo5yzBrgoCq015xzFYw/ZU2BNgIXiUbgcbfeLu/3/gZXSSisUD6fe0yzoAGRN3KeJ+5juIqObYaWNXqeRC998NJ4vAfCGaD49ZwetTTN8NVlKSQiVUlbmK6Ua4Lq5VlJKdlHFXC51A1zNRgi52WySJKG07CyEUEreHXvrdlLpfu4EL344gPHQCV4nwHKhDQLbCV7iBPzPt649i6JYrr1O78/YeQSw8rkNAutt9mD1/gbRqAFebSCA3SDqe2HPj/pwPqgKP7TjxPkVrt3SkpDsdDqes0+MMyEYYyTHGSY5Ifnl8eonthWslErTdJ2s9/sPSkqHKa191tooJTHGQnApxen0iRAMQ3Q4fGit68U4nY4eHLnBcLl2NzsYr1zGaZW51cZ/B20X2n7Uf3eeZ36XsnrzWuUATcE4CZcDAK2x8wBgx0OvhOQVvEjA1G/P/M7ELb8zv4PpuYarlWOcoMUIxoMg6qN4iOYjQnEFL9euH9lO0J24zzDue6GNyTf87bbmnJZHlIdSXL3ZGINJTllGWc44JiwnNFNa3Y/ndTevg7kpm7KttZZS3iZZl1KXCF5PDX8BRbh5oRvnHi0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Synchronizing ACL&quot;
+        title=&quot;Synchronizing ACL&quot;
+        src=&quot;/static/c35fdec3230f6a0371bba84db619346c/2cb6c/synchronizing-acl.png&quot;
+        srcset=&quot;/static/c35fdec3230f6a0371bba84db619346c/c26ae/synchronizing-acl.png 158w,
+/static/c35fdec3230f6a0371bba84db619346c/6bdcf/synchronizing-acl.png 315w,
+/static/c35fdec3230f6a0371bba84db619346c/2cb6c/synchronizing-acl.png 395w&quot;
+        sizes=&quot;(max-width: 395px) 100vw, 395px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;the nightly batch script: low-tech synchronizing ACL&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;this could involve importing data from a file, kicking off a SQL script, taking data from one table, transforming it, and inserting it into another.&lt;/li&gt;
+&lt;li&gt;SLA: open of business, next business day&lt;/li&gt;
+&lt;li&gt;unnecessary coupling: synchronizing ACL mixed in with once-per-day business logic&lt;/li&gt;
+&lt;li&gt;unnecessary coupling: multiple ACL(s) to various contexts lumped together.&lt;/li&gt;
+&lt;li&gt;make sure you isolate the data copying and translation for your particular context into modules (one per context you are drawing on)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;messaging and domain events: a stylish synchronizing ACL&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;This approach can support a range of SLA(s) and update a system while it is being used, while - batch scripts typically run while systems are off-line.&lt;/li&gt;
+&lt;li&gt;Any information crossing a context boundary must be translated.&lt;/li&gt;
+&lt;li&gt;Messages are always expressed in some language based on some system of abstractions (a model), and we should not let them enter a context that uses a different vocabulary and model.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 399px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7dc7a3d6e8b39e6a3585bc167c71aa0e/a307d/acl-translating-domain-events.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 74.0506329113924%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB7ElEQVQoz4WT6XLTMBSF8/6vBFOgLaQtJHU22/EqZ1NiyZI3pZK1mBGmC9CWMxr9uTr33u/MaHQ+s4qWJS0LhDFC5JdoUZSU0pKa3hhj+jc04oKztmUtq6u6qqrGqmUNa5k9/bsavVUQHd/vd2EYAJDWdSUEV0q9bjYvpLVWSp/w1vGux9OLO+ez434Ns/umrf8/WSllTE/KfB0tIuDFwHPXzu6YPPDzX/zW3HVdkiQAgDRN4zjGGPe92cPMjxYnBAmhnIvHpv+YOedhGPq+P5/P1+t1nueWWXBcoIIUXdcJLqSUr5uftpVS2kWkiDerIHXA3vNjZ504IZivgomf3LfMYpvevMI8NObiYbq8HE8/LKObZTieedfBZjpdffk+u6ga8vjM/GEeoh4o9jDL8YGUecMIKiAmp6alZY05f7Bz9YvJg00pBU87sAnLkg41rbQxPWMMofx8ZrTCiEBa25uUyBgzegLmgmfbBB6320MabeZh5mAKtTI5hjHwgthdBLf37tUyvJmsLhf+rZTd77RzdLwaf/x2+wljDI+7IJ1FYI4J1EpLZVNs2gYcPDf8MXPHXjxJd57SypoRQmmartxVFIVVVbVtC1KQZRtCiNZ6IJJSCsFP+QmAFMKDhX8OzFjC5/BsmO/9pyGwn0ZXUwB5gJ8AAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;ACL Translating domain events&quot;
+        title=&quot;ACL Translating domain events&quot;
+        src=&quot;/static/7dc7a3d6e8b39e6a3585bc167c71aa0e/a307d/acl-translating-domain-events.png&quot;
+        srcset=&quot;/static/7dc7a3d6e8b39e6a3585bc167c71aa0e/c26ae/acl-translating-domain-events.png 158w,
+/static/7dc7a3d6e8b39e6a3585bc167c71aa0e/6bdcf/acl-translating-domain-events.png 315w,
+/static/7dc7a3d6e8b39e6a3585bc167c71aa0e/a307d/acl-translating-domain-events.png 399w&quot;
+        sizes=&quot;(max-width: 399px) 100vw, 399px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In the Bubble context, any new information that does not already exist in the legacy system somewhere must be added to the legacy system somewhere, even though it will not be used there! Then it must be mapped into the bubble context, increasing the dependency between the two systems. Clearly, this is not the strategy to introduce crucial new information.&lt;/li&gt;
+&lt;li&gt;Development in the autonomous bubble is not so tightly bound to the older contexts. Therefore, the model in this context can be more innovative and trow more freely, and a fresh new product can be created.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Strategy 3: exposing legacy assets as services&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;one of the main challenges of SOA is the lack of attention to bounded contexts.&lt;/li&gt;
+&lt;li&gt;Integrating with the legacy system, every new development effort gets dragged back into the old concepts and potentially tangled into the old implementation.&lt;/li&gt;
+&lt;li&gt;Legacy assets were developed with a particular feature set in mind and are highly coupled to those features. This makes it hard to access what you want directly without going through layers designed for a very different purpose.&lt;/li&gt;
+&lt;li&gt;open host service over anticorruption layer&lt;/li&gt;
+&lt;li&gt;Commons Context, the most basic and widely used information, can be interchanged throughout the organization via one standard interchange model, the “Tragedy of the Commons.” But, unfortunately, the commons are prone to dumping.&lt;/li&gt;
+&lt;li&gt;FIX has a way of describing an enormous range of financial trades and transactions and is used to interchange data between all sorts of organizations.&lt;/li&gt;
+&lt;li&gt;a focused language, crafted for a modest suite of related services, usually gives the most satisfying balance between the fragmentation of the one-off service model and the total unification of the commons and the industry-standard&lt;/li&gt;
+&lt;li&gt;we should get over the attitude that the ultimate goal is to eventually replace these older systems. That is a futile treadmill. Creating a bubble can allow you to selectively move responsibilities for the core domain, where you want to innovate, out into a new context.&lt;/li&gt;
+&lt;li&gt;Open host services over an ACL can give convenient, decoupled access to functionality and data assets embedded in the older systems. Once the legacy system is stable, not responsible for the core domain, and provides access to assets, why not let it be? You have better things to do right now.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;strategy 4: expanding a bubble&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;one challenge that is particularly acute in a bubble is how critical it is to coordinate the incremental development of the new business functionality and the anticorruption layer in parallel. This affects the design and the planning of the sequence in which the features are written.&lt;/li&gt;
+&lt;li&gt;design freedom is the point of a bubble, the bubble context with an umbilical ACL gives a little freedom, while the autonomous bubble can give a lot if properly managed.&lt;/li&gt;
+&lt;li&gt;things to think about for ACL
+&lt;ul&gt;
+&lt;li&gt;does the new feature draw on information that is already being brought in by the existing anti-corruption layer&lt;/li&gt;
+&lt;li&gt;will it require new mapping of legacy information? what is the scope of that work?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;if multiple features were chosen for the iteration call for new mapping, are they drawing on the same information, or does each call for different information?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;to make development manageable, the priority of business features must be balanced with the need to group work on features that use similar legacy data sets, with parallel planning of the necessary enhancements to the anticorruption layer.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;if not careful, the bulk of the project’s effort will go into implementing a big translator interface, each element of which is only sparsely used. This gives a low ROI for the context boundary, and eventually an unsustainable maintenance burden. Or developers would take shortcuts by making sloppy mappings or simply bypassing the ACL, pull the data they need directly from the legacy system, and the context boundary will erode and collapse.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;the developers working on various features all drawing that same data can collaborate to&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;model the new information by adding concepts to the bubble context&lt;/li&gt;
+&lt;li&gt;extend the ACL to bring in the new information. (This should be an explicit development task, not just part of a ‘user story’)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Trying to reuse the fields/data from legacy without a mapping is a mistake. The concept represented by those fields was never mapped to a concept in the downstream context. We have no idea what they mean in the downstream context or how they relate to other concepts in the downstream model. It creates bigger objects with more dependencies and that is poorly defined.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;when you must make choice, try to make the bubble’s model capable of expressing the essential meaning of the new information in terms consistent with the other concepts of that model. It is inadvisable to load objects down with information that does not directly pertain to their jobs, so it is best to do a bit more modelling work to find good homes for the new information.&lt;/li&gt;
+&lt;li&gt;bypass the context altogether, give the client access to the context where the information originated or pass it some other way (particularly when the new data is for display only) Sometimes this is a good time to expose a legacy asset with a service as in Strategy 3.&lt;/li&gt;
+&lt;li&gt;pass the information unchanged through new context. (Not recommended) since you have bored a tunnel through your anticorruption layer and compromised your ability to evolve your new model independently of the legacy system.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;adding data is a modelling job&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It is a way of referring to some aspect of some business situation, and the goal when translating this new element into your bubble context is to enrich the ubiquitous language to be able to express these concerns.&lt;/li&gt;
+&lt;li&gt;explore new scenarios in the DDD modelling whirlpool&lt;/li&gt;
+&lt;li&gt;in order to pull in more data to use in logic or key definitions in your context, you should follow the whirlpool steps
+&lt;ul&gt;
+&lt;li&gt;hammer out a reference scenario that illustrates why you need a new information&lt;/li&gt;
+&lt;li&gt;brainstorm model changes that incorporate that information organically&lt;/li&gt;
+&lt;li&gt;context boundary leakage gets out of hand quickly and suddenly you may wake up to realize that your new software is conforming to the legacy model and does not give the desired fresh start for the business.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;domain driven design refactoring&lt;/h1&gt;
+&lt;h2&gt;examples from jimmy bogard&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jbogard/presentations/tree/master/DomainDrivenRefactoring&quot;&gt;https://github.com/jbogard/presentations/tree/master/DomainDrivenRefactoring&lt;/a&gt;
+&lt;a href=&quot;https://jimmybogard.com/domain-driven-refactoring-extracting-domain-services/&quot;&gt;https://jimmybogard.com/domain-driven-refactoring-extracting-domain-services/&lt;/a&gt;
+&lt;a href=&quot;https://www.youtube.com/watch?v=_dQRAsVhCqA&amp;#x26;list=PL41_dKwKrOq_TEVkFLeFChhUhqNDmQXF8&amp;#x26;index=3&amp;#x26;ab_channel=NDCConferences&quot;&gt;https://www.youtube.com/watch?v=_dQRAsVhCqA&amp;#x26;list=PL41_dKwKrOq_TEVkFLeFChhUhqNDmQXF8&amp;#x26;index=3&amp;#x26;ab_channel=NDCConferences&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Quotes&lt;/h1&gt;
+&lt;p&gt;“Sub-domain is a problem space concept, Bounded context is a solution space concept.”&lt;/p&gt;
+&lt;p&gt;“As software developers, we fail in two ways: We build the thing wrong, or we build the wrong thing.”&lt;/p&gt;
+&lt;p&gt;“A project faces serious problems when its language is fractured.”&lt;/p&gt;
+&lt;p&gt;“Integration is always expensive, and sometimes the benefit is small.”&lt;/p&gt;
+&lt;p&gt;“Architectures can straitjacket a project with up-front design assumptions and take too much power away from the developers/designers of particular parts of the application. Soon, developers/designers of particular parts of the applications will dumb down the application to fit the structure, or they will subvert it and have no structure at all, bringing back the problems of uncoordinated development..”&lt;/p&gt;
+&lt;p&gt;“Each time we decide to call upon such a capability for some new purpose, someone has to meticulously sift through it all, finding an odd combination of inputs that will evoke the behaviour or return the information we want without messing anything else up, it takes trial and error and extensive testing, and the result is typically brittle. The developer who made it work walks away exhausted, successful on his terms, leaving the system even more complex than before. Then, the next time a closely related yet not identical need comes along, it starts all over..”&lt;/p&gt;
+&lt;p&gt;“Common context, the tragedy of commons.”&lt;/p&gt;
+&lt;p&gt;“adding data is a way of referring to a core aspect of some business situation, and enriching ubiquitous language to be able to express these concerns. ”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;still under constructions&lt;/strong&gt;
+&lt;strong&gt;Next Steps:&lt;/strong&gt;
+&lt;a href=&quot;https://app.pluralsight.com/library/courses/domain-driven-design-legacy-projects/table-of-contents&quot;&gt;plural sight course - ddd with legacy projects&lt;/a&gt;
+review Distilled DDD from vaugh vernon
+&lt;a href=&quot;https://jimmybogard.com/tag/domain-driven-design/&quot;&gt;domain-driven refactoring&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;References&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.domainlanguage.com/wp-content/uploads/2016/04/GettingStartedWithDDDWhenSurroundedByLegacySystemsV1.pdf&quot;&gt;https://www.domainlanguage.com/wp-content/uploads/2016/04/GettingStartedWithDDDWhenSurroundedByLegacySystemsV1.pdf&lt;/a&gt;
+&lt;a href=&quot;https://philippe.bourgau.net/categories/#squash-bduf-with-event-storming-series&quot;&gt;https://philippe.bourgau.net/categories/#squash-bduf-with-event-storming-series&lt;/a&gt;
+&lt;a href=&quot;https://www.amazon.ca/Domain-Driven-Design-Distilled-Vaughn-Vernon-ebook/dp/B01JJSGE5S/ref=tmm_kin_swatch_0?_encoding=UTF8&amp;#x26;qid=&amp;#x26;sr=&quot;&gt;https://www.amazon.ca/Domain-Driven-Design-Distilled-Vaughn-Vernon-ebook/dp/B01JJSGE5S/ref=tmm_kin_swatch_0?_encoding=UTF8&amp;#x26;qid=&amp;#x26;sr=&lt;/a&gt;
+&lt;a href=&quot;https://matfrs2.github.io/RS2/predavanja/literatura/Avram%20A,%20Marinescu%20F.%20-%20Domain%20Driven%20Design%20Quickly.pdf&quot;&gt;https://matfrs2.github.io/RS2/predavanja/literatura/Avram%20A,%20Marinescu%20F.%20-%20Domain%20Driven%20Design%20Quickly.pdf&lt;/a&gt;
+&lt;a href=&quot;https://devpath.pro/methodologies/book-review-domain-driven-design-quickly/&quot;&gt;https://devpath.pro/methodologies/book-review-domain-driven-design-quickly/&lt;/a&gt;
+&lt;a href=&quot;https://medium.com/inato/an-introduction-to-domain-driven-design-386754392465&quot;&gt;https://medium.com/inato/an-introduction-to-domain-driven-design-386754392465&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Implementing domain driven design summary]]></title><description><![CDATA[DDD overview   anatomy of domain-driven design The anatomy of domain driven design Putting the model to work Domain-Driven Design is an…]]></description><link>https://tonytvo.github.io/implement-domain-driven-design/</link><guid isPermaLink="false">https://tonytvo.github.io/implement-domain-driven-design/</guid><pubDate>Mon, 20 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;DDD overview&lt;/h1&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 495px; &quot;
@@ -3673,204 +3991,7 @@ keep an aggregate together on one server. Allow different sums to be distributed
 &lt;li&gt;a pluggable component framework usually only comes into play after a few applications have already been implemented in the same domain.&lt;/li&gt;
 &lt;li&gt;Distill an abstract core of interfaces and interactions and create a framework that allows diverse implementations of those interfaces to be freely substituted. Likewise, it will enable any application to use those components, so long as it operates strictly through the interfaces of the abstract core.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1&gt;Getting DDD started with Legacy Systems&lt;/h1&gt;
-&lt;h2&gt;strategy 1: bubble context&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;the legacy system already has an established model, albeit implicit, which can seldom be changed with a reasonable effort.&lt;/li&gt;
-&lt;li&gt;Simply adding objects that express a distinct model without changing the ones already there will lead to conflicting rules and concepts.&lt;/li&gt;
-&lt;li&gt;Introducing a complex new set of development principles and techniques is best done incrementally as in a pilot project, in a way that allows members of the team to gain experience and allows the organization to assess the approach.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;This pilot project allows a small team to achieve a modest objective involving some complex domain logic and, ideally, one with some strategic value that is difficult to solve in a legacy context. Therefore, it is recommended to cherry-pick a small, self-disciplined team with control over its code to evolve a model that addresses the chosen area, relatively unconstrained by the concepts of the legacy systems.&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;The new functionality does not disappear. It will continue to be maintained as an extension of the legacy systems. The organization now has the experience to undertake more ambitious use of DDD.&lt;/li&gt;
-&lt;li&gt;no synchronization risk (uses a legacy database)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;works when there is a limited range of data needed from legacy&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;A ‘bubble’ is a small bounded context established using an Anticorruption Layer (ACL) for the purpose of a particular development effort and not intended necessarily to be expanded or used for a long time.&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 358px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/8d362aceaf91448df6fa280da41a0808/39185/acl-backed-repository-implementation.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 112.0253164556962%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAIAAABPIytRAAAACXBIWXMAAAsTAAALEwEAmpwYAAADBUlEQVQ4y31Ua3ObOBT1//8v+2kn0zZ2mjiOH4DxE2Mwxsb4kQaEjA1CEnrQwXTZtJNUM2gA6ejee865ahCCIYRnCGEEQRhGIAQwiuM4AiGEEYjgDwAZY8VHo8E5p4QQTHCG8e1hnFFKcIbKv5QmKcpZXhTyA/Af3xhj398DEJ3PcRCEEYjkbXAuhJAfgGVR3DYUjDFK883WNm1N09svveZAezRt3fWM09s6jsGnkaWUeZ4XRQHj0/aoL1Yvs+Xz3OpMzPZs2Vn7agiOfwNzzouiCICvjL4Ohl/12cPc6iijb8ro28R8jM6vUn5eM79VlqB46y8dd77xlv5xtXJnG888nByUXTkXn0UuZyFENVOa5zkjhOY5q1YZ45xz+S76LzBj1LDUl/59X3t4fL4bTp63+7nrTdfexN1NvYPhnxb+ydyfzMOrXcveqAQkBJmrXk/7ok2az/1/x4un5bq/WHUNu2s6vdVGsdyB42nOTt3sRzmjv4ExRpv92HIH2rg1XbQdTxvNHxX9Xh0159aLYXe1cWs4/b7aKtvDJM//ABO0PUwNuzcYNtXRg+n0rbW63unOdrj29IXdV/SWOnpwtsPdcX4z3LuapRQYoyxLCc1efxxBFGCMKM0IQShLyvccZzhN0yvGqKatAsvSe7/YLq1CKWWMv9NfsJwXsuT8pqb4P23Oxf60cneztTfd7IwkvQIAbhKwm2Y0QTE8B9cUpuhySeD5Emb4KqVsVLybK/V755+uejc120l6qXqglJULlKWG3dMmrcmibdhdddxSRs2FpQghGlXC8PIWRH4A/DA6EIJrw5VglFiuMl92FnbXcgezZWdiPNmuXoJruwgh8pxxLmoPVVZP0ut6p1uu0unfdQZ34/mTvVG8g8E5r9mWaZpCCOuwVc3VEShLKMUYozS9xBeICaIU/9fPsmSbMYYQqq1XN1mVVHUlZBnOMlynVoIppZ7n2bbtOE4YhjWylqQ6mhACAHgL3tI0qc5tvF+u1L/x9Fv3VKlBCH3fd103CILq2vgJb0DSqsPOk78AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;ACL-Backed Repository Implementation&quot;
-        title=&quot;ACL-Backed Repository Implementation&quot;
-        src=&quot;/static/8d362aceaf91448df6fa280da41a0808/39185/acl-backed-repository-implementation.png&quot;
-        srcset=&quot;/static/8d362aceaf91448df6fa280da41a0808/c26ae/acl-backed-repository-implementation.png 158w,
-/static/8d362aceaf91448df6fa280da41a0808/6bdcf/acl-backed-repository-implementation.png 315w,
-/static/8d362aceaf91448df6fa280da41a0808/39185/acl-backed-repository-implementation.png 358w&quot;
-        sizes=&quot;(max-width: 358px) 100vw, 358px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;ACL should be explicitly addressed in budgeting and planning. It should be designed to keep it decoupled from the actual business logic of the new system.&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;A good anticorruption layer has a clean interface entirely in terms of the downstream model (in our case, the bubble model) that provides access to the information and services of the upstream system.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;ACL allows development in the downstream context to focus on the business problem and not be distracted or complicated by dealing with the other system’s distinct concepts and quirks.&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Any new information needed from the legacy context requires incorporating the new data into the bubble model, working out the mapping from the old model, and then the ACL. That’s a high price, so we should choose functionality valuable enough to justify it.&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Development in the bubble could go on for several months or, occasionally, in cases where the interface with other contexts is relatively narrow for a few years. However, it will not last forever.&lt;/li&gt;
-&lt;li&gt;The bubble becomes the primary context for more ambitious new development. When this happens, the limitations of the bubble context may be judged unacceptable, and the strategy migrates to the autonomous bubble with synchronizing ACL. Then the bubble transforms into something more long-lasting.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;strategy 2: autonomous bubble&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;The autonomous bubble is distinguished by the ability to run its software, for a time, cut off from other systems. Information may start to get stale, requests to external service requests start to queue up unfulfilled, but the internal behaviour of the software continues to work.&lt;/li&gt;
-&lt;li&gt;needs organization committed to significant new development with a unique design approach&lt;/li&gt;
-&lt;li&gt;allows new data to be collected and used without involving legacy&lt;/li&gt;
-&lt;li&gt;allows decoupled “product” to evolve&lt;/li&gt;
-&lt;li&gt;may progress from a bubble context as development is scaled up on a successful pilot project.&lt;/li&gt;
-&lt;li&gt;To enable autonomous context having its own data, ACL takes on the responsibility of synchronization between data stores in 2 contexts, which do not depend directly on each other. This ACL activity is asynchronous with any action in either context, with a service level agreement (SLA) regarding the freshness of the translated data.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 395px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/c35fdec3230f6a0371bba84db619346c/2cb6c/synchronizing-acl.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 101.26582278481011%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsTAAALEwEAmpwYAAACG0lEQVQ4y4WTeW+qQBTF/f7f5+X93daKLW61KsMyA6KiuNQqzL7QINT68mw4mZCbCb/czLnntoTgu932sD/s0u02Tc/nrCgKc1HRpJYxRt3I1CrMT/U7fK2qf47HI4RBGMLtNhWCc04Zo5yzBrgoCq015xzFYw/ZU2BNgIXiUbgcbfeLu/3/gZXSSisUD6fe0yzoAGRN3KeJ+5juIqObYaWNXqeRC998NJ4vAfCGaD49ZwetTTN8NVlKSQiVUlbmK6Ua4Lq5VlJKdlHFXC51A1zNRgi52WySJKG07CyEUEreHXvrdlLpfu4EL344gPHQCV4nwHKhDQLbCV7iBPzPt649i6JYrr1O78/YeQSw8rkNAutt9mD1/gbRqAFebSCA3SDqe2HPj/pwPqgKP7TjxPkVrt3SkpDsdDqes0+MMyEYYyTHGSY5Ifnl8eonthWslErTdJ2s9/sPSkqHKa191tooJTHGQnApxen0iRAMQ3Q4fGit68U4nY4eHLnBcLl2NzsYr1zGaZW51cZ/B20X2n7Uf3eeZ36XsnrzWuUATcE4CZcDAK2x8wBgx0OvhOQVvEjA1G/P/M7ELb8zv4PpuYarlWOcoMUIxoMg6qN4iOYjQnEFL9euH9lO0J24zzDue6GNyTf87bbmnJZHlIdSXL3ZGINJTllGWc44JiwnNFNa3Y/ndTevg7kpm7KttZZS3iZZl1KXCF5PDX8BRbh5oRvnHi0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;Synchronizing ACL&quot;
-        title=&quot;Synchronizing ACL&quot;
-        src=&quot;/static/c35fdec3230f6a0371bba84db619346c/2cb6c/synchronizing-acl.png&quot;
-        srcset=&quot;/static/c35fdec3230f6a0371bba84db619346c/c26ae/synchronizing-acl.png 158w,
-/static/c35fdec3230f6a0371bba84db619346c/6bdcf/synchronizing-acl.png 315w,
-/static/c35fdec3230f6a0371bba84db619346c/2cb6c/synchronizing-acl.png 395w&quot;
-        sizes=&quot;(max-width: 395px) 100vw, 395px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;h3&gt;the nightly batch script: low-tech synchronizing ACL&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;this could involve importing data from a file, kicking off a SQL script, taking data from one table, transforming it, and inserting it into another.&lt;/li&gt;
-&lt;li&gt;SLA: open of business, next business day&lt;/li&gt;
-&lt;li&gt;unnecessary coupling: synchronizing ACL mixed in with once-per-day business logic&lt;/li&gt;
-&lt;li&gt;unnecessary coupling: multiple ACL(s) to various contexts lumped together.&lt;/li&gt;
-&lt;li&gt;make sure you isolate the data copying and translation for your particular context into modules (one per context you are drawing on)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;messaging and domain events: a stylish synchronizing ACL&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;This approach can support a range of SLA(s) and update a system while it is being used, while - batch scripts typically run while systems are off-line.&lt;/li&gt;
-&lt;li&gt;Any information crossing a context boundary must be translated.&lt;/li&gt;
-&lt;li&gt;Messages are always expressed in some language based on some system of abstractions (a model), and we should not let them enter a context that uses a different vocabulary and model.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 399px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/7dc7a3d6e8b39e6a3585bc167c71aa0e/a307d/acl-translating-domain-events.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 74.0506329113924%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB7ElEQVQoz4WT6XLTMBSF8/6vBFOgLaQtJHU22/EqZ1NiyZI3pZK1mBGmC9CWMxr9uTr33u/MaHQ+s4qWJS0LhDFC5JdoUZSU0pKa3hhj+jc04oKztmUtq6u6qqrGqmUNa5k9/bsavVUQHd/vd2EYAJDWdSUEV0q9bjYvpLVWSp/w1vGux9OLO+ez434Ns/umrf8/WSllTE/KfB0tIuDFwHPXzu6YPPDzX/zW3HVdkiQAgDRN4zjGGPe92cPMjxYnBAmhnIvHpv+YOedhGPq+P5/P1+t1nueWWXBcoIIUXdcJLqSUr5uftpVS2kWkiDerIHXA3vNjZ504IZivgomf3LfMYpvevMI8NObiYbq8HE8/LKObZTieedfBZjpdffk+u6ga8vjM/GEeoh4o9jDL8YGUecMIKiAmp6alZY05f7Bz9YvJg00pBU87sAnLkg41rbQxPWMMofx8ZrTCiEBa25uUyBgzegLmgmfbBB6320MabeZh5mAKtTI5hjHwgthdBLf37tUyvJmsLhf+rZTd77RzdLwaf/x2+wljDI+7IJ1FYI4J1EpLZVNs2gYcPDf8MXPHXjxJd57SypoRQmmartxVFIVVVbVtC1KQZRtCiNZ6IJJSCsFP+QmAFMKDhX8OzFjC5/BsmO/9pyGwn0ZXUwB5gJ8AAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;ACL Translating domain events&quot;
-        title=&quot;ACL Translating domain events&quot;
-        src=&quot;/static/7dc7a3d6e8b39e6a3585bc167c71aa0e/a307d/acl-translating-domain-events.png&quot;
-        srcset=&quot;/static/7dc7a3d6e8b39e6a3585bc167c71aa0e/c26ae/acl-translating-domain-events.png 158w,
-/static/7dc7a3d6e8b39e6a3585bc167c71aa0e/6bdcf/acl-translating-domain-events.png 315w,
-/static/7dc7a3d6e8b39e6a3585bc167c71aa0e/a307d/acl-translating-domain-events.png 399w&quot;
-        sizes=&quot;(max-width: 399px) 100vw, 399px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;In the Bubble context, any new information that does not already exist in the legacy system somewhere must be added to the legacy system somewhere, even though it will not be used there! Then it must be mapped into the bubble context, increasing the dependency between the two systems. Clearly, this is not the strategy to introduce crucial new information.&lt;/li&gt;
-&lt;li&gt;Development in the autonomous bubble is not so tightly bound to the older contexts. Therefore, the model in this context can be more innovative and trow more freely, and a fresh new product can be created.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Strategy 3: exposing legacy assets as services&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;one of the main challenges of SOA is the lack of attention to bounded contexts.&lt;/li&gt;
-&lt;li&gt;Integrating with the legacy system, every new development effort gets dragged back into the old concepts and potentially tangled into the old implementation.&lt;/li&gt;
-&lt;li&gt;Legacy assets were developed with a particular feature set in mind and are highly coupled to those features. This makes it hard to access what you want directly without going through layers designed for a very different purpose.&lt;/li&gt;
-&lt;li&gt;open host service over anticorruption layer&lt;/li&gt;
-&lt;li&gt;Commons Context, the most basic and widely used information, can be interchanged throughout the organization via one standard interchange model, the “Tragedy of the Commons.” But, unfortunately, the commons are prone to dumping.&lt;/li&gt;
-&lt;li&gt;FIX has a way of describing an enormous range of financial trades and transactions and is used to interchange data between all sorts of organizations.&lt;/li&gt;
-&lt;li&gt;a focused language, crafted for a modest suite of related services, usually gives the most satisfying balance between the fragmentation of the one-off service model and the total unification of the commons and the industry-standard&lt;/li&gt;
-&lt;li&gt;we should get over the attitude that the ultimate goal is to eventually replace these older systems. That is a futile treadmill. Creating a bubble can allow you to selectively move responsibilities for the core domain, where you want to innovate, out into a new context.&lt;/li&gt;
-&lt;li&gt;Open host services over an ACL can give convenient, decoupled access to functionality and data assets embedded in the older systems. Once the legacy system is stable, not responsible for the core domain, and provides access to assets, why not let it be? You have better things to do right now.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;strategy 4: expanding a bubble&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;one challenge that is particularly acute in a bubble is how critical it is to coordinate the incremental development of the new business functionality and the anticorruption layer in parallel. This affects the design and the planning of the sequence in which the features are written.&lt;/li&gt;
-&lt;li&gt;design freedom is the point of a bubble, the bubble context with an umbilical ACL gives a little freedom, while the autonomous bubble can give a lot if properly managed.&lt;/li&gt;
-&lt;li&gt;things to think about for ACL
-&lt;ul&gt;
-&lt;li&gt;does the new feature draw on information that is already being brought in by the existing anti-corruption layer&lt;/li&gt;
-&lt;li&gt;will it require new mapping of legacy information? what is the scope of that work?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;if multiple features were chosen for the iteration call for new mapping, are they drawing on the same information, or does each call for different information?&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;to make development manageable, the priority of business features must be balanced with the need to group work on features that use similar legacy data sets, with parallel planning of the necessary enhancements to the anticorruption layer.&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;if not careful, the bulk of the project’s effort will go into implementing a big translator interface, each element of which is only sparsely used. This gives a low ROI for the context boundary, and eventually an unsustainable maintenance burden. Or developers would take shortcuts by making sloppy mappings or simply bypassing the ACL, pull the data they need directly from the legacy system, and the context boundary will erode and collapse.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;the developers working on various features all drawing that same data can collaborate to&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;model the new information by adding concepts to the bubble context&lt;/li&gt;
-&lt;li&gt;extend the ACL to bring in the new information. (This should be an explicit development task, not just part of a ‘user story’)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Trying to reuse the fields/data from legacy without a mapping is a mistake. The concept represented by those fields was never mapped to a concept in the downstream context. We have no idea what they mean in the downstream context or how they relate to other concepts in the downstream model. It creates bigger objects with more dependencies and that is poorly defined.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;when you must make choice, try to make the bubble’s model capable of expressing the essential meaning of the new information in terms consistent with the other concepts of that model. It is inadvisable to load objects down with information that does not directly pertain to their jobs, so it is best to do a bit more modelling work to find good homes for the new information.&lt;/li&gt;
-&lt;li&gt;bypass the context altogether, give the client access to the context where the information originated or pass it some other way (particularly when the new data is for display only) Sometimes this is a good time to expose a legacy asset with a service as in Strategy 3.&lt;/li&gt;
-&lt;li&gt;pass the information unchanged through new context. (Not recommended) since you have bored a tunnel through your anticorruption layer and compromised your ability to evolve your new model independently of the legacy system.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;adding data is a modelling job&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;It is a way of referring to some aspect of some business situation, and the goal when translating this new element into your bubble context is to enrich the ubiquitous language to be able to express these concerns.&lt;/li&gt;
-&lt;li&gt;explore new scenarios in the DDD modelling whirlpool&lt;/li&gt;
-&lt;li&gt;in order to pull in more data to use in logic or key definitions in your context, you should follow the whirlpool steps
-&lt;ul&gt;
-&lt;li&gt;hammer out a reference scenario that illustrates why you need a new information&lt;/li&gt;
-&lt;li&gt;brainstorm model changes that incorporate that information organically&lt;/li&gt;
-&lt;li&gt;context boundary leakage gets out of hand quickly and suddenly you may wake up to realize that your new software is conforming to the legacy model and does not give the desired fresh start for the business.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h1&gt;&lt;a href=&quot;/ddd-with-legacy-code&quot;&gt;DD with legacy code&lt;/a&gt;&lt;/h1&gt;
 &lt;h1&gt;Quotes&lt;/h1&gt;
 &lt;p&gt;“Sub-domain is a problem space concept, Bounded context is a solution space concept.”&lt;/p&gt;
 &lt;p&gt;“As software developers, we fail in two ways: We build the thing wrong, or we build the wrong thing.”&lt;/p&gt;
@@ -3882,8 +4003,8 @@ keep an aggregate together on one server. Allow different sums to be distributed
 &lt;p&gt;“adding data is a way of referring to a core aspect of some business situation, and enriching ubiquitous language to be able to express these concerns. ”&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;still under constructions&lt;/strong&gt;
 &lt;strong&gt;Next Steps:&lt;/strong&gt;
-review design DDD quickly
-review Distilled DDD from vaugh vernon&lt;/p&gt;
+review Distilled DDD from vaugh vernon
+review design DDD quickly&lt;/p&gt;
 &lt;h1&gt;References&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf&quot;&gt;https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf&lt;/a&gt;
 &lt;a href=&quot;https://devopedia.org/domain-driven-design&quot;&gt;https://devopedia.org/domain-driven-design&lt;/a&gt;
@@ -3891,9 +4012,7 @@ review Distilled DDD from vaugh vernon&lt;/p&gt;
 &lt;a href=&quot;https://www.infoq.com/articles/ddd-contextmapping/&quot;&gt;https://www.infoq.com/articles/ddd-contextmapping/&lt;/a&gt;
 &lt;a href=&quot;https://dev.to/salah856/implementing-domain-driven-design-part-i-5a72&quot;&gt;https://dev.to/salah856/implementing-domain-driven-design-part-i-5a72&lt;/a&gt;
 &lt;a href=&quot;https://github.com/leubedane/iddd-redbook-summary&quot;&gt;https://github.com/leubedane/iddd-redbook-summary&lt;/a&gt;
-&lt;a href=&quot;https://jimmybogard.com/domain-driven-refactoring-intro/&quot;&gt;https://jimmybogard.com/domain-driven-refactoring-intro/&lt;/a&gt;
 &lt;a href=&quot;https://medium.com/@ruxijitianu/summary-of-the-domain-driven-design-concepts-9dd1a6f90091&quot;&gt;https://medium.com/@ruxijitianu/summary-of-the-domain-driven-design-concepts-9dd1a6f90091&lt;/a&gt;
-&lt;a href=&quot;https://www.amazon.ca/Domain-Driven-Design-Distilled-Vaughn-Vernon-ebook/dp/B01JJSGE5S/ref=tmm_kin_swatch_0?_encoding=UTF8&amp;#x26;qid=&amp;#x26;sr=&quot;&gt;https://www.amazon.ca/Domain-Driven-Design-Distilled-Vaughn-Vernon-ebook/dp/B01JJSGE5S/ref=tmm_kin_swatch_0?_encoding=UTF8&amp;#x26;qid=&amp;#x26;sr=&lt;/a&gt;
 &lt;a href=&quot;https://www.amazon.ca/Domain-Driven-Design-Distilled-Vaughn-Vernon-ebook/dp/B01JJSGE5S/ref=tmm_kin_swatch_0?_encoding=UTF8&amp;#x26;qid=&amp;#x26;sr=&quot;&gt;https://www.amazon.ca/Domain-Driven-Design-Distilled-Vaughn-Vernon-ebook/dp/B01JJSGE5S/ref=tmm_kin_swatch_0?_encoding=UTF8&amp;#x26;qid=&amp;#x26;sr=&lt;/a&gt;
 &lt;a href=&quot;https://matfrs2.github.io/RS2/predavanja/literatura/Avram%20A,%20Marinescu%20F.%20-%20Domain%20Driven%20Design%20Quickly.pdf&quot;&gt;https://matfrs2.github.io/RS2/predavanja/literatura/Avram%20A,%20Marinescu%20F.%20-%20Domain%20Driven%20Design%20Quickly.pdf&lt;/a&gt;
 &lt;a href=&quot;https://devpath.pro/methodologies/book-review-domain-driven-design-quickly/&quot;&gt;https://devpath.pro/methodologies/book-review-domain-driven-design-quickly/&lt;/a&gt;
@@ -4073,10 +4192,46 @@ Trung Vo, Bob Allen, Jacqueline Bilston, Christopher Fietz, Llewellyn Falco “�
 &lt;/ul&gt;
 &lt;img width=&quot;500&quot; height=&quot;300&quot; alt=&quot;extract method&quot; src=&quot;/63b55c0da9be5432c351e81841bee140/extract-method.gif&quot;&gt;
 &lt;h1&gt;Rename method, classes, fields&lt;/h1&gt;
-&lt;p&gt;Motivation
-Easy to read code start with good naming and naming is hard
-“Naming as a process” provides a good heuristic for naming but it’s too freaking long.
-I find this short, simple and easier to remember from J.B. Rainsberger&lt;/p&gt;
+&lt;p&gt;Motivation&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Easy to read code start with good naming and naming is hard&lt;/li&gt;
+&lt;li&gt;“Naming as a process” provides a good heuristic for naming but it’s too freaking long.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/5f2f3d81d8a36d5ac599cb571b930d0b/2bef9/naming-as-a-process.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACE0lEQVQoz21SS2sTURTOD/EPuHXpxh/hxoUgunBZcCsIXfpARDCK7roQUWipVG0JiNhFTLHNo0pJmsTETCaTZDLPe+dx596ZT+5J22w8cDjnm3vPd+ec75SKooB2bYzH6AwMxElKOJUKbYvB4YIwj1x0+/uIY5/wsN5Er/bzol7Hkk7yfPlhaM7w+fsBpguP8DwU2KrP8GscEDbGDXzafQBrekK48vwl9p6+QML4ivCcPU1T+EEAa24jDENIKSGEgLkIEfBY30YUcUysU3DOkBcFJn8GMHt9nLGtCDWnUgoyyyhmWUaEpmnCmphY2DZs24ZhGHAcj86U9jxHQR3myJVatfw/02MQaYLA9+A4DhzHBQtjCJESwcU9pVZFmlAqhZDH9BrNacERRvFShKzAxOXnpfg7aiIVktCg3sLwpLMUc2bj934VmqFkuz5qrTZ0HBljrG8eo1xpg/kOtqttrG0coDNyMOi38PjZVezsPgFLJF7duov7V65hOpvj27sPWLt0GT+2dlDSIlSPjuEGIcYTC4+2m3j4pQvP8/D18BT3NmpoDBxYZg9v39/BXmUdLBKolN/g9Y3b8O0FukcNlK/fxOHmR5SEyMB4RGJos32OuRdSniQJPN+nDaDWGAPn0XIrhEDIOTIpaaaMM8qXa3O2OvpAZoLUllLRXzIWEqF+0Pd9uK5L66Q9iiKKVKdVVwr/AIzd6L5L2ZIyAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;arlo naming as a process&quot;
+        title=&quot;arlo naming as a process&quot;
+        src=&quot;/static/5f2f3d81d8a36d5ac599cb571b930d0b/f058b/naming-as-a-process.png&quot;
+        srcset=&quot;/static/5f2f3d81d8a36d5ac599cb571b930d0b/c26ae/naming-as-a-process.png 158w,
+/static/5f2f3d81d8a36d5ac599cb571b930d0b/6bdcf/naming-as-a-process.png 315w,
+/static/5f2f3d81d8a36d5ac599cb571b930d0b/f058b/naming-as-a-process.png 630w,
+/static/5f2f3d81d8a36d5ac599cb571b930d0b/40601/naming-as-a-process.png 945w,
+/static/5f2f3d81d8a36d5ac599cb571b930d0b/2bef9/naming-as-a-process.png 1024w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I find this short, simple and easier to remember from J.B. Rainsberger&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
@@ -4111,6 +4266,45 @@ I find this short, simple and easier to remember from J.B. Rainsberger&lt;/p&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;img width=&quot;500&quot; height=&quot;300&quot; alt=&quot;rename method&quot; src=&quot;/e04e94bc9f38c71de3eba528fb7b8a16/rename-method.gif&quot;&gt;
+&lt;h1&gt;tag as a process&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;small reversible steps creates safety net when refactoring and make it easier to reverse when bugs are introduced&lt;/li&gt;
+&lt;li&gt;communicate the risks of the commits&lt;/li&gt;
+&lt;li&gt;make it easier for people to follow the commits by expression the intent of the commits and ensure one commit is doing one thing&lt;/li&gt;
+&lt;li&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/fbb8fcd050954dee2433d406e5477440/b59fb/tag-as-a-process-refactoring-safely.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAB2HAAAdhwGP5fFlAAACNUlEQVQoz22R2U8TURSH5w9Rq42swSCbIohghUoMMSxGfTImPvjgf2hAoSugaLC0RtN9oZ2W2Wfa6TafmanyoJ7k5vzuPfnOPYuwNDnDu9c7vHrxjIlrfhbGJwjM3mFjJUBwfoGN5QDBe4uszS8SXLjPytxdNh+tsTw9y+2bw8yOjDE3Os700KinhaWpGd7ubPPm+UvGr/iY8g8xNzzKk5WHbAfX2VoN8jSwyuZqkC33Hlzn8f0HzIyMMXbVx+R1PxO+G56+5fMjfD4+JnwQInoQIh6OEP64z2EkSuj9LvFQmHgkSszzEU8fubHdPfb3Pnjvx7E4R9GYd1wtdLpddF2n2WphmCaGYeBaS5JRGhe02m1M00TTNHTTpKlqmJKMYVn0+n3+NkER68g1EU3XPdBNqBk6jUKRer6IZRi02+1LwNYNMt8SiOUKqqp6xWiqiizL9Ho9hGo2RyWd8RL+CTZtG7lUJp9IIrkfKgp2q4Vt27R0gx+fTsimviNLkscoinLZmXCezXnBC1lCkiQq5TJ9x0E9r5JNnCHVBwnrYh1RFLFUjbPYIcmTLzQaDa+yWq1G/3f7glgokkmmKJZKpFIpCoUCdqeDWqmS+XpKo1pDkmUUWfGAbrNFMn7Ez8QZ6XSabDZLPp+n0+kMEjr9Pr1uF8uysEzzcl4XhRL50wTVUplsLke5VMIBLEVFrYkD7TKW5Y3CNcdxEP5Zk+N4zpQVDHebmo5YH7Trgm2rSVPT/4MNuF8v9pmHJib+zwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;tag as a process&quot;
+        title=&quot;tag as a process&quot;
+        src=&quot;/static/fbb8fcd050954dee2433d406e5477440/f058b/tag-as-a-process-refactoring-safely.png&quot;
+        srcset=&quot;/static/fbb8fcd050954dee2433d406e5477440/c26ae/tag-as-a-process-refactoring-safely.png 158w,
+/static/fbb8fcd050954dee2433d406e5477440/6bdcf/tag-as-a-process-refactoring-safely.png 315w,
+/static/fbb8fcd050954dee2433d406e5477440/f058b/tag-as-a-process-refactoring-safely.png 630w,
+/static/fbb8fcd050954dee2433d406e5477440/40601/tag-as-a-process-refactoring-safely.png 945w,
+/static/fbb8fcd050954dee2433d406e5477440/78612/tag-as-a-process-refactoring-safely.png 1260w,
+/static/fbb8fcd050954dee2433d406e5477440/b59fb/tag-as-a-process-refactoring-safely.png 1285w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1&gt;Golden Master&lt;/h1&gt;
 &lt;h2&gt;Motivation&lt;/h2&gt;
 &lt;ul&gt;
