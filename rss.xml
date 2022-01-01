@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 31 Dec 2021 21:56:55 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity simplifying code incomprehensibly concise speculatively…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 01 Jan 2022 00:20:03 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity simplifying code incomprehensibly concise speculatively…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Table of Contents&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#goalskey-ideascontext&quot;&gt;Goals/Key Ideas/Context&lt;/a&gt;&lt;/li&gt;
@@ -12,7 +12,12 @@
 &lt;li&gt;&lt;a href=&quot;#shameless-green&quot;&gt;shameless green&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#judging-the-code&quot;&gt;judging the code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#judging-the-code&quot;&gt;judging the code&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#evaluating-code-based-on-opinion&quot;&gt;evaluating code based on opinion&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#evaluating-code-based-on-facts&quot;&gt;evaluating code based on facts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#judging-the-design&quot;&gt;judging the design&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -44,6 +49,7 @@
 &lt;ul&gt;
 &lt;li&gt;you should not reach for abstractions, but instead you should resist them until they absolutely insist upon being created.&lt;/li&gt;
 &lt;li&gt;writing code is the process of working your way to the next stable end point, not the end point itself&lt;/li&gt;
+&lt;li&gt;If your goal is to write straightforward code, these metrics point you toward &lt;code class=&quot;language-text&quot;&gt;Shameless Green&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;rediscovering simplicity&lt;/h1&gt;
 &lt;ul&gt;
@@ -111,24 +117,94 @@
 &lt;/ul&gt;
 &lt;h3&gt;shameless green&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;shameless green is defined as the solution that quickly reaches green while prioritizing understandability over changeability.&lt;/li&gt;
+&lt;li&gt;it doesn’t dispute that DRY is good, rather, it believes that it is cheaper to manage temporary duplication than recover from incorrect abstractions.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/marina-ferreira/99_bottles_of_oop/blob/main/chapter_1/04_shameless_green.rb&quot;&gt;shameless green&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;it was easy to write and understand&lt;/li&gt;
 &lt;li&gt;it will be cheap to change. Even though the verse strings are duplicated, if one verse changes it’s easy to keep the others in sync.&lt;/li&gt;
-&lt;li&gt;what is the rule to determine which verse should be sung next? This is still not explicit. The 0 verse contains&lt;/li&gt;
+&lt;li&gt;what is the rule to determine which verse should be sung next? This is still not explicit. The 0 verse contains a deeply buried, hard-coded 99&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;judging the code&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;evaluating code based on opinion
+&lt;h3&gt;evaluating code based on opinion&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;look for context/concrete guidance of what the code trying to accomplish&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;any pile of code can be made to work; good code not only works, but it also simple, understandable, expressive and changeable&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3&gt;evaluating code based on facts&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;you can think of metrics as crowd-sourced opinions about the quality of code.&lt;/li&gt;
+&lt;li&gt;measuring programmer productivity by counting lines of code (SLOC))
+&lt;ul&gt;
+&lt;li&gt;easily garnered and reproduced, it reflects code volume but suffers from many flaws&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;Cyclomatic complexity
+&lt;ul&gt;
+&lt;li&gt;an algorithm that counts the number of unique execution paths through a body of source code. The more deeply nested conditionals, the higher Cyclomatic complexity&lt;/li&gt;
+&lt;li&gt;the code with fewer nested conditionals (lower cyclomatic complexity) is easier to reason with and maintain&lt;/li&gt;
+&lt;li&gt;can be used to limit the overall complexity. You can set standards for how high a score you’re willing to accept.&lt;/li&gt;
+&lt;li&gt;you can use it to determine if you’ave written enough tests, as it tells you the minimum number of tests needed to cover all the logic in the code.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Assignments, branches and conditions (ABC) metrics
+&lt;ul&gt;
+&lt;li&gt;assignments is a count of variable assignments&lt;/li&gt;
+&lt;li&gt;branches counts not branches of an if statement but branches of control, meaning function calls or message sends&lt;/li&gt;
+&lt;li&gt;conditions counts conditional logic&lt;/li&gt;
+&lt;li&gt;ABC scores reflect cognitive load as opposed to physical size. High ABC numbers indicate code that takes up a lot of mental space.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2b2d4dc88312b005c36cde35cf6e6b6c/0a47e/sloc-abc-metrics.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 61.39240506329114%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAABvklEQVQoz4WTTU/CQBCG+Wf+A+PVuzf/ghfvehQToeIBGqPWL06SGIMWjAhKBBP8OGCjCSUCgl3b7QevmdVdwWCcZNLu7Oyz787OxjzPA+ccw+EQURSJ72+XcWmT8mQs5rouCCqDk1zOWZaFbreroJPyYqTO9/2JwDAMx4CpVAqlUkkAgyD4G0gqaSAB0slGN9J1HZVKRQEpf3SNAP5VK0qsVqvqiBTPZDIKKDeUc9JFDRljChSEtNtQqI7H42g0GkoRAUuXZTUeDAZwHEeVRwClZEqwbZtSxQLP49A0DQ8Pj0pROp1G7eZKKctmszDNwtjNC4V0KXS0RGIN5sUjOm8RAt9DIpGE9fQF5DzAwd4mFpdzWNFbImYYBsyzvCqRAEq57XYbG6kkpmaPsbRuAXChaWuYXzjG6uYLopDjcF/HzNw2pufrhMCusQNjP4fmCxetRywBpJvu9XooFExs7Z3iutZE226hXL7E0Ukd+eI9Oq82bm9ryJtVnJ7fod/vo16/wVnxGvninainUIgR8/0AnjsYDYE5PXDvHc8thk63j/9srG3U0/r+j6IQDvsQx3lnPhj7EB1A/tNq4+NP6LqKR1JLQNQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;metrics chart comparison&quot;
+        title=&quot;metrics chart comparison&quot;
+        src=&quot;/static/2b2d4dc88312b005c36cde35cf6e6b6c/0a47e/sloc-abc-metrics.png&quot;
+        srcset=&quot;/static/2b2d4dc88312b005c36cde35cf6e6b6c/c26ae/sloc-abc-metrics.png 158w,
+/static/2b2d4dc88312b005c36cde35cf6e6b6c/6bdcf/sloc-abc-metrics.png 315w,
+/static/2b2d4dc88312b005c36cde35cf6e6b6c/0a47e/sloc-abc-metrics.png 600w&quot;
+        sizes=&quot;(max-width: 600px) 100vw, 600px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;metrics are fallible but human opinion is no more precise. Checking metrics regularly will keep you humble and improve your code.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;judging the design&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Don’t do&lt;/strong&gt; big upfront design (BUFD)
+&lt;ul&gt;
+&lt;li&gt;designs in BUFD cannot possibly be correct as many things will change during the act of programming&lt;/li&gt;
+&lt;li&gt;BUFD inevitable leads to an adversarial relationship between customers and programmers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;make design decisions only when you must with the information you have at that time
+&lt;ul&gt;
+&lt;li&gt;postpone decisions until you are absolutely forced to make them&lt;/li&gt;
+&lt;li&gt;any decision you make in advance on an explicit requirement is just a guess. Preserve your ability to make a decision later&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1&gt;unearthing concepts&lt;/h1&gt;
 &lt;h2&gt;creating classes with single responsibility&lt;/h2&gt;
 &lt;h2&gt;creating flexible interfaces&lt;/h2&gt;
@@ -144,6 +220,9 @@
 &lt;h1&gt;Quotes&lt;/h1&gt;
 &lt;p&gt;“Writing code is the process of working your way to the next stable end point, not the end point itself”&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;“DRY makes sense when it reduces the cost of change more than it increases the cost of understanding the code”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;“metrics are fallible but human opinion is no more precise. Checking metrics regularly will keep you humble and improve your code”&lt;/p&gt;
+&lt;p&gt;“shameless green is defined as the solution that quickly reaches green while prioritizing understandability over changeability.”&lt;/p&gt;
+&lt;p&gt;“it doesn’t dispute that DRY is good, rather, it believes that it is cheaper to manage temporary duplication than recover from incorrect abstractions.”&lt;/p&gt;
 &lt;h1&gt;References&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/keyvanakbary/learning-notes/blob/master/books/99-bottles-of-oop.md&quot;&gt;https://github.com/keyvanakbary/learning-notes/blob/master/books/99-bottles-of-oop.md&lt;/a&gt;
 &lt;a href=&quot;https://github.com/serodriguez68/poodr-notes&quot;&gt;https://github.com/serodriguez68/poodr-notes&lt;/a&gt;

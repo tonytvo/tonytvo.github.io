@@ -15,7 +15,12 @@
 <li><a href="#shameless-green">shameless green</a></li>
 </ul>
 </li>
-<li><a href="#judging-the-code">judging the code</a></li>
+<li><a href="#judging-the-code">judging the code</a>
+<ul>
+<li><a href="#evaluating-code-based-on-opinion">evaluating code based on opinion</a></li>
+<li><a href="#evaluating-code-based-on-facts">evaluating code based on facts</a></li>
+</ul>
+</li>
 <li><a href="#judging-the-design">judging the design</a></li>
 </ul>
 </li>
@@ -47,6 +52,7 @@
 <ul>
 <li>you should not reach for abstractions, but instead you should resist them until they absolutely insist upon being created.</li>
 <li>writing code is the process of working your way to the next stable end point, not the end point itself</li>
+<li>If your goal is to write straightforward code, these metrics point you toward <code class="language-text">Shameless Green</code></li>
 </ul>
 <h1>rediscovering simplicity</h1>
 <ul>
@@ -114,24 +120,94 @@
 </ul>
 <h3>shameless green</h3>
 <ul>
+<li>shameless green is defined as the solution that quickly reaches green while prioritizing understandability over changeability.</li>
+<li>it doesn’t dispute that DRY is good, rather, it believes that it is cheaper to manage temporary duplication than recover from incorrect abstractions.</li>
 <li><a href="https://github.com/marina-ferreira/99_bottles_of_oop/blob/main/chapter_1/04_shameless_green.rb">shameless green</a>
 <ul>
 <li>it was easy to write and understand</li>
 <li>it will be cheap to change. Even though the verse strings are duplicated, if one verse changes it’s easy to keep the others in sync.</li>
-<li>what is the rule to determine which verse should be sung next? This is still not explicit. The 0 verse contains</li>
+<li>what is the rule to determine which verse should be sung next? This is still not explicit. The 0 verse contains a deeply buried, hard-coded 99</li>
 </ul>
 </li>
 </ul>
 <h2>judging the code</h2>
-<ul>
-<li>evaluating code based on opinion
+<h3>evaluating code based on opinion</h3>
 <ul>
 <li>look for context/concrete guidance of what the code trying to accomplish</li>
 <li><strong>any pile of code can be made to work; good code not only works, but it also simple, understandable, expressive and changeable</strong></li>
 </ul>
+<h3>evaluating code based on facts</h3>
+<ul>
+<li>you can think of metrics as crowd-sourced opinions about the quality of code.</li>
+<li>measuring programmer productivity by counting lines of code (SLOC))
+<ul>
+<li>easily garnered and reproduced, it reflects code volume but suffers from many flaws</li>
+</ul>
 </li>
+<li>Cyclomatic complexity
+<ul>
+<li>an algorithm that counts the number of unique execution paths through a body of source code. The more deeply nested conditionals, the higher Cyclomatic complexity</li>
+<li>the code with fewer nested conditionals (lower cyclomatic complexity) is easier to reason with and maintain</li>
+<li>can be used to limit the overall complexity. You can set standards for how high a score you’re willing to accept.</li>
+<li>you can use it to determine if you’ave written enough tests, as it tells you the minimum number of tests needed to cover all the logic in the code.</li>
+</ul>
+</li>
+<li>Assignments, branches and conditions (ABC) metrics
+<ul>
+<li>assignments is a count of variable assignments</li>
+<li>branches counts not branches of an if statement but branches of control, meaning function calls or message sends</li>
+<li>conditions counts conditional logic</li>
+<li>ABC scores reflect cognitive load as opposed to physical size. High ABC numbers indicate code that takes up a lot of mental space.</li>
+</ul>
+</li>
+<li><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/2b2d4dc88312b005c36cde35cf6e6b6c/0a47e/sloc-abc-metrics.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 61.39240506329114%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAABvklEQVQoz4WTTU/CQBCG+Wf+A+PVuzf/ghfvehQToeIBGqPWL06SGIMWjAhKBBP8OGCjCSUCgl3b7QevmdVdwWCcZNLu7Oyz787OxjzPA+ccw+EQURSJ72+XcWmT8mQs5rouCCqDk1zOWZaFbreroJPyYqTO9/2JwDAMx4CpVAqlUkkAgyD4G0gqaSAB0slGN9J1HZVKRQEpf3SNAP5VK0qsVqvqiBTPZDIKKDeUc9JFDRljChSEtNtQqI7H42g0GkoRAUuXZTUeDAZwHEeVRwClZEqwbZtSxQLP49A0DQ8Pj0pROp1G7eZKKctmszDNwtjNC4V0KXS0RGIN5sUjOm8RAt9DIpGE9fQF5DzAwd4mFpdzWNFbImYYBsyzvCqRAEq57XYbG6kkpmaPsbRuAXChaWuYXzjG6uYLopDjcF/HzNw2pufrhMCusQNjP4fmCxetRywBpJvu9XooFExs7Z3iutZE226hXL7E0Ukd+eI9Oq82bm9ryJtVnJ7fod/vo16/wVnxGvninainUIgR8/0AnjsYDYE5PXDvHc8thk63j/9srG3U0/r+j6IQDvsQx3lnPhj7EB1A/tNq4+NP6LqKR1JLQNQAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="metrics chart comparison"
+        title="metrics chart comparison"
+        src="/static/2b2d4dc88312b005c36cde35cf6e6b6c/0a47e/sloc-abc-metrics.png"
+        srcset="/static/2b2d4dc88312b005c36cde35cf6e6b6c/c26ae/sloc-abc-metrics.png 158w,
+/static/2b2d4dc88312b005c36cde35cf6e6b6c/6bdcf/sloc-abc-metrics.png 315w,
+/static/2b2d4dc88312b005c36cde35cf6e6b6c/0a47e/sloc-abc-metrics.png 600w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></li>
+<li>metrics are fallible but human opinion is no more precise. Checking metrics regularly will keep you humble and improve your code.</li>
 </ul>
 <h2>judging the design</h2>
+<ul>
+<li><strong>Don’t do</strong> big upfront design (BUFD)
+<ul>
+<li>designs in BUFD cannot possibly be correct as many things will change during the act of programming</li>
+<li>BUFD inevitable leads to an adversarial relationship between customers and programmers.</li>
+</ul>
+</li>
+<li>make design decisions only when you must with the information you have at that time
+<ul>
+<li>postpone decisions until you are absolutely forced to make them</li>
+<li>any decision you make in advance on an explicit requirement is just a guess. Preserve your ability to make a decision later</li>
+</ul>
+</li>
+<li></li>
+</ul>
 <h1>unearthing concepts</h1>
 <h2>creating classes with single responsibility</h2>
 <h2>creating flexible interfaces</h2>
@@ -147,6 +223,9 @@
 <h1>Quotes</h1>
 <p>“Writing code is the process of working your way to the next stable end point, not the end point itself”</p>
 <p><strong>“DRY makes sense when it reduces the cost of change more than it increases the cost of understanding the code”</strong></p>
+<p>“metrics are fallible but human opinion is no more precise. Checking metrics regularly will keep you humble and improve your code”</p>
+<p>“shameless green is defined as the solution that quickly reaches green while prioritizing understandability over changeability.”</p>
+<p>“it doesn’t dispute that DRY is good, rather, it believes that it is cheaper to manage temporary duplication than recover from incorrect abstractions.”</p>
 <h1>References</h1>
 <p><a href="https://github.com/keyvanakbary/learning-notes/blob/master/books/99-bottles-of-oop.md">https://github.com/keyvanakbary/learning-notes/blob/master/books/99-bottles-of-oop.md</a>
 <a href="https://github.com/serodriguez68/poodr-notes">https://github.com/serodriguez68/poodr-notes</a>
