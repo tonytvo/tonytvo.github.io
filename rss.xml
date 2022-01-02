@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 02 Jan 2022 18:10:14 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity simplifying code incomprehensibly concise speculatively…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 02 Jan 2022 21:22:27 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity simplifying code incomprehensibly concise speculatively…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Table of Contents&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#goalskey-ideascontext&quot;&gt;Goals/Key Ideas/Context&lt;/a&gt;&lt;/li&gt;
@@ -3401,6 +3401,49 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;h2&gt;motivated moderator&lt;/h2&gt;
 &lt;h2&gt;prepared participants&lt;/h2&gt;
 &lt;h2&gt;kindred collaborators&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;when a study group has an enduring energy, people get to know each other, a community forms, and there is a lasting possibility for collaborations and working relationships&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;so many people dislike networking. They want to grow professionally, and they think that networking can help, but they don’t know how, where and with whom to network effectively.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;many people feel isolated in their jobs. So much of their time is spent working that there is little time left to pursue genuinely interests them.
+&lt;ul&gt;
+&lt;li&gt;some try to organize study groups within their own companies, but if often fails due to lack of interest, or because many people prefer to be outside of work when they have any free time.&lt;/li&gt;
+&lt;li&gt;some people go to conferences lectures, user groups and parties in the hope of advancing their careers and themselves. Often, they end up frustrated in reality, they don’t grow professionally at these meetings and their networking is ineffective. The trouble often results from what may be described as weak connections that develop between people who meet in large groups.&lt;/li&gt;
+&lt;li&gt;In frequently meeting study group, people get to know each other over time. They learn what they like and dislike, what they excel at and where they are weak, where they are in their careers and where they’d like to go. This level of familiarity forms the foundation for a rich network that can yield very real career and collaboration possibilities.&lt;/li&gt;
+&lt;li&gt;As one gets to know others within a group, one can get a very good idea of who would be good for a specific projects&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 440px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a01c2698098977efc212cbf0fb1c2879/48c0e/kindred-collaborator.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 41.77215189873418%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABAklEQVQoz22Sx46FMAxF+f9vY4WE6DWPEkpCESxoHtkDUeYNliIrDrn3OMa4rgswMEspafV9D0VRwDzP8BbnecI4jnAch7r7hIGbp8AYgzRNoaoqCMOQMsa2bVRv25b2WLdtWxnqGobu0DQNCXHOlaAQAhzHAdM0wbIsEsazKIpACvFfUN9kWUbOeZ5TRkFsDbPrulDXNVH6vk/C2LoOhNnQ+0+SBIIgIFKkFKKn+jAM6in2faf39TwP2qaBW+kv4aPOeU0UXdcRybqudIaUTw0HsSwLxHFMJjhEvW0liPhlWRLFhzFqXw7D65SnaQLGcmV+I/0Kfo/9Ox5nfb1+c/82P1gLZzpRPd/pAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;kindred collaborator&quot;
+        title=&quot;kindred collaborator&quot;
+        src=&quot;/static/a01c2698098977efc212cbf0fb1c2879/48c0e/kindred-collaborator.png&quot;
+        srcset=&quot;/static/a01c2698098977efc212cbf0fb1c2879/c26ae/kindred-collaborator.png 158w,
+/static/a01c2698098977efc212cbf0fb1c2879/6bdcf/kindred-collaborator.png 315w,
+/static/a01c2698098977efc212cbf0fb1c2879/48c0e/kindred-collaborator.png 440w&quot;
+        sizes=&quot;(max-width: 440px) 100vw, 440px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;quality networking happens best when a study group is a &lt;a href=&quot;#safe-place&quot;&gt;safe place&lt;/a&gt; composed of diverse individuals and true peers. The best time for networking is either before study groups meets or &lt;a href=&quot;#after-hours&quot;&gt;after hours&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2&gt;after hours&lt;/h2&gt;
 &lt;h1&gt;Quotes&lt;/h1&gt;
 &lt;h1&gt;References&lt;/h1&gt;
