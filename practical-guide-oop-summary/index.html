@@ -26,6 +26,7 @@
 </li>
 <li><a href="#tdd-as-design">TDD as design</a>
 <ul>
+<li><a href="#understand-transformations">understand transformations</a></li>
 <li><a href="#writing-cost-effective-tests">writing cost-effective tests</a>
 <ul>
 <li><a href="#intentional-testing">intentional testing</a>
@@ -257,6 +258,53 @@
 <li>while it is important to consider the problem and sketch out an overall plan before writing the first test, don’t over think it</li>
 <li>you can’t figure out what’s right until you write some tests. The purpose of some of your tests might very well be to prove that they represent bad ideas.</li>
 </ul>
+<h2>understand transformations</h2>
+<ul>
+<li>
+<p><strong>if you choose the tests and implementations that employ transformations that are higher on the list, you will avoid the impasse</strong></p>
+</li>
+<li>
+<p>the process</p>
+<ul>
+<li>when passing a test, prefer higher priority transformations</li>
+<li>when posing a test choose one that can be passed with higher priority transformations</li>
+<li>when an implementation seems to require a low priority transformation, backtrack to see if there is a simpler test to pass</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">{} -> nil</code> no code at all -> code that employs nil</p>
+<ul>
+<li>as we write the first test <code class="language-text">wrapNullEmptyString()</code>, we also write the failing implementation which also employs <code class="language-text">({} -> nil)</code></li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">nil->constant</code></p>
+<ul>
+<li>we can make the first test pass by return empty string, which apply <code class="language-text">nil->constant</code> transformation</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">(constant->constant+)</code>: a simple constant to a more complex constant</p>
+<ul>
+<li>we can then write the next test that employs <code class="language-text">(constant->constant+)</code></li>
+<li><code class="language-text">oneShortWordDoesNotWrap() { assertThat(wrap("word", 5), is("word")) }</code></li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">(unconditional->if)</code></p>
+</li>
+<li>
+<p><code class="language-text">(constant->scalar)</code></p>
+<ul>
+<li>making the <code class="language-text">oneShortWordDoesNotWrap</code> test pass by using both <code class="language-text">(unconditional->if)</code> and <code class="language-text">(constant->scalar)</code></li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">String</span> <span class="token function">wrap</span><span class="token punctuation">(</span><span class="token class-name">String</span> s<span class="token punctuation">,</span> <span class="token keyword">int</span> length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>s <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token string">""</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
 <h2>writing cost-effective tests</h2>
 <h3>intentional testing</h3>
 <h4>test benefits</h4>
