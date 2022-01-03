@@ -27,6 +27,9 @@
 <li><a href="#tdd-as-design">TDD as design</a>
 <ul>
 <li><a href="#understand-transformations">understand transformations</a></li>
+<li><a href="#tolerating-duplication">tolerating duplication</a></li>
+<li><a href="#exposing-responsibilities">exposing responsibilities</a></li>
+<li><a href="#choosing-names">choosing names</a></li>
 <li><a href="#writing-cost-effective-tests">writing cost-effective tests</a>
 <ul>
 <li><a href="#intentional-testing">intentional testing</a>
@@ -254,14 +257,19 @@
 </ul>
 <h1>TDD as design</h1>
 <ul>
-<li><strong>as the tests get more specific, the code gets more generic</strong></li>
 <li>while it is important to consider the problem and sketch out an overall plan before writing the first test, don’t over think it</li>
 <li>you can’t figure out what’s right until you write some tests. The purpose of some of your tests might very well be to prove that they represent bad ideas.</li>
 </ul>
 <h2>understand transformations</h2>
 <ul>
 <li>
+<p><a href="https://blog.cleancoder.com/uncle-bob/2013/05/27/TheTransformationPriorityPremise.html">transformation priority premise</a></p>
+</li>
+<li>
 <p><strong>if you choose the tests and implementations that employ transformations that are higher on the list, you will avoid the impasse</strong></p>
+</li>
+<li>
+<p>the code go through a sequence of transformation from <strong>specific to generic</strong></p>
 </li>
 <li>
 <p>the process</p>
@@ -296,6 +304,7 @@
 <li>
 <p><code class="language-text">(constant->scalar)</code></p>
 <ul>
+<li>variable is a generalization of constants</li>
 <li>making the <code class="language-text">oneShortWordDoesNotWrap</code> test pass by using both <code class="language-text">(unconditional->if)</code> and <code class="language-text">(constant->scalar)</code></li>
 </ul>
 </li>
@@ -305,6 +314,102 @@
     <span class="token keyword">return</span> <span class="token string">""</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> s<span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li><code class="language-text">statement->statements</code></li>
+<li><code class="language-text">(scalar->array)</code></li>
+<li><code class="language-text">(array->container)</code></li>
+<li><code class="language-text">(statement->recursion)</code></li>
+<li><code class="language-text">(if->while)</code></li>
+</ul>
+<p>from</p>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  result <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> length<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>
+  s <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+result <span class="token operator">+=</span> s<span class="token punctuation">;</span></code></pre></div>
+<p>to</p>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">while</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">></span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  result <span class="token operator">+=</span> s<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> length<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>
+  s <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+result <span class="token operator">+=</span> s<span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li><code class="language-text">(expression->function)</code> replacing an expression with a function or algorithm</li>
+<li><code class="language-text">(variable->assignment)</code></li>
+</ul>
+<h2>tolerating duplication</h2>
+<ul>
+<li><strong>as tests get more specific, code should become more generic</strong>. Code become more generic by becoming more abstract. One way to make code more abstract is to DRY it out.</li>
+<li>DRY is important but if applied too early, and with too much vigour, it can do more harm than good. It’s a good idea to ask the following questions when doing so:
+<ul>
+<li>Does the change I’m contemplating make the code harder to understand? Be suspicious of any change that muddles the waters?</li>
+<li>what is the future cost of doing nothing now?
+<ul>
+<li>some changes cost the same regardless of whether you make them now or delay them until later.</li>
+<li><strong>if it doesn’t increase your costs, delay making changes</strong></li>
+</ul>
+</li>
+<li>when will the future arrive, or how soon will I get more information?
+<ul>
+<li>it’s better to tolerate duplication than to anticipate the wrong abstraction</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>writing shameless green means optimising for understandability, not changeability, and patiently tolerating duplication if doing so will help reveal the underlying abstraction.</li>
+</ul>
+<h2>exposing responsibilities</h2>
+<ul>
+<li><strong>duplication is useful when it supplies independent, specific examples of a general concept that you don’t yet understand.</strong></li>
+<li>the goal is to use green to maximize your understanding of the problem and to unearth all available information before committing to abstractions.</li>
+<li>when the new code muddles rather than clarifies the waters, and it’s important to understand why.</li>
+<li>Green Bar patterns:
+<ul>
+<li>fake it (“Till you make it”)
+<ul>
+<li>developing habits of writing just enough code to pass the tests forces you to write better tests.</li>
+<li>it also provides an antidote for the hubris of thinking you know what’s right when you’re actually wrong.</li>
+</ul>
+</li>
+<li>obvious implementation
+<ul>
+<li>it’s best to save obvious implementation for very small leaps.</li>
+</ul>
+</li>
+<li>triangulate
+<ul>
+<li>requires writing several tests at once, which means you’ll have multiple simultaneous broken tests</li>
+<li>the idea is to write one bit of code which makes all of the tests pass.</li>
+<li>triangulation is meant to force you to converge upon the correct abstraction in your code.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>the small steps of TDD act to incrementally review the correct implementation, <strong>skipping these incremental steps means you miss the opportunity of being set right</strong>.</li>
+</ul>
+<h2>choosing names</h2>
+<div class="gatsby-highlight" data-language="ruby"><pre class="language-ruby"><code class="language-ruby"><span class="token keyword">def</span> <span class="token method-definition"><span class="token function">song</span></span>
+  verses<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">99</span><span class="token punctuation">)</span>
+<span class="token keyword">end</span></code></pre></div>
+<ul>
+<li>is song method needed?
+<ul>
+<li>answering this question requires thinking about the problem from the message sender point of view.</li>
+<li>knowledge that one object has about another creates a dependency. Dependencies tie objects together, exacerbating the ost of change.</li>
+<li>using verses method to request the entire song, however, requires significantly more knowledge. the sender must know
+<ul>
+<li>the name of hte verses method</li>
+<li>that the method requires 2 arguments</li>
+<li>that the first argument is the verse on which to start</li>
+<li>that the second argument is the verse on which to end</li>
+<li>that the song starts on verse 99</li>
+<li>that the song ends on verse 0</li>
+<li>there are many ways in which the verses method could change that would break senders of this message.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h2>writing cost-effective tests</h2>
 <h3>intentional testing</h3>
 <h4>test benefits</h4>
