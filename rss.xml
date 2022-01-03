@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 03 Jan 2022 05:51:16 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity simplifying code incomprehensibly concise speculatively…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 03 Jan 2022 16:55:43 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity simplifying code incomprehensibly concise speculatively…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Table of Contents&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#goalskey-ideascontext&quot;&gt;Goals/Key Ideas/Context&lt;/a&gt;&lt;/li&gt;
@@ -27,6 +27,7 @@
 &lt;li&gt;&lt;a href=&quot;#tolerating-duplication&quot;&gt;tolerating duplication&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#exposing-responsibilities&quot;&gt;exposing responsibilities&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#choosing-names&quot;&gt;choosing names&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#avoiding-the-echo-chamber&quot;&gt;avoiding the echo-chamber&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#writing-cost-effective-tests&quot;&gt;writing cost-effective tests&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#intentional-testing&quot;&gt;intentional testing&lt;/a&gt;
@@ -58,13 +59,16 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#unearthing-concepts&quot;&gt;unearthing concepts&lt;/a&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#listening-to-change&quot;&gt;listening to change&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#starting-with-the-openclose-principle&quot;&gt;starting with the open/close principle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#follow-the-flocking-rules&quot;&gt;follow the flocking rules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#converging-on-abstractions&quot;&gt;converging on abstractions&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#creating-classes-with-single-responsibility&quot;&gt;creating classes with single responsibility&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#creating-flexible-interfaces&quot;&gt;creating flexible interfaces&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#practising-horizontal-refactoring&quot;&gt;practising horizontal refactoring&lt;/a&gt;
+&lt;li&gt;&lt;a href=&quot;#practising-refactoring&quot;&gt;practising refactoring&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#technique-1-flocking-rules-for-refactoring&quot;&gt;technique 1: flocking rules for refactoring&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#technique-2-the-open-closed-flowchart&quot;&gt;technique 2: the open-closed flowchart&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -404,6 +408,61 @@ result &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; s&lt;span cl
 &lt;li&gt;there are many ways in which the verses method could change that would break senders of this message.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;reveal the intention
+&lt;ul&gt;
+&lt;li&gt;the distinction between intention and implementation … allows you to understand a computation first in essence and later, if necessary, in detail.&lt;/li&gt;
+&lt;li&gt;song is the intention, &lt;code class=&quot;language-text&quot;&gt;verses(99,0)&lt;/code&gt; is the implementation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;avoiding the echo-chamber&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;programmers who are hyper-alert to duplication, might be tempted to test &lt;code class=&quot;language-text&quot;&gt;song&lt;/code&gt; like this&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token method-definition&quot;&gt;&lt;span class=&quot;token function&quot;&gt;test_the_whole_song&lt;/span&gt;&lt;/span&gt;
+  bottles &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Bottles&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt;
+  assert_equal bottles&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;verses&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;99&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; bottles&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;song
+&lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;this test has a major flaw that can cause it toggle from “short and sweet” to “painful and costly” in the blink of an eye. This flaw lies dormant until something changes, so the benefits of writing tests like this accrue to the writer today, while the costs are paid by the unfortunate maintainer in the future.
+&lt;ul&gt;
+&lt;li&gt;the test is coupled to the implementation details of song such that it will break if the signature or behavior of verses changes, even if song continues to return the correct lyrics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;if you change an implementation detail while retaining existing behaviour and are then confronted with a sea of unrelated red tests, you’re right to be exasperated. &lt;strong&gt;This is completely avoidable, and a sign that tests are too tightly coupled to code. Such tests impede change and increase costs&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;the &lt;code class=&quot;language-text&quot;&gt;song&lt;/code&gt; test should know nothing about how the &lt;code class=&quot;language-text&quot;&gt;Bottles&lt;/code&gt; class produces the song. The clear and unambiguous expectation here is that the song return the complete set of lyrics, and the best way and easiest way to do that is to assert that it does:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token method-definition&quot;&gt;&lt;span class=&quot;token function&quot;&gt;test_the_whole_song&lt;/span&gt;&lt;/span&gt;
+  expected &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string heredoc-string&quot;&gt;&lt;span class=&quot;token delimiter symbol&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&amp;lt;-&lt;/span&gt;SONG&lt;/span&gt;
+ALL
+# ...
+THE
+# ...
+LYRICS
+  &lt;span class=&quot;token delimiter symbol&quot;&gt;SONG&lt;/span&gt;&lt;/span&gt;
+  bottles &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Bottles&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt;
+  assert_equal expected&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; bottles&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;song
+&lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;if you find hte duplication distressing, consider the alternatives. Your choices are:
+&lt;ul&gt;
+&lt;li&gt;assert that the expected output matches that of some other method.
+&lt;ul&gt;
+&lt;li&gt;tests are coupled to the implementation, so these dependencies mean changes to the system under test might break the tests.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;assert that the expected output matches a dynamically generated string.
+&lt;ul&gt;
+&lt;li&gt;reducing string duplication inside the test would require logic. Regardless of how you do it, any logic here would bind the tests to implementation details and any change to the system under test might break the test.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;assert that the expected output matches a hard-coded string.
+&lt;ul&gt;
+&lt;li&gt;not only is the expected output clearly and unambiguously stated, but the test has no dependencies.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -424,7 +483,7 @@ result &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; s&lt;span cl
 &lt;/li&gt;
 &lt;li&gt;supporting abstractions
 &lt;ul&gt;
-&lt;li&gt;tests are your record of hte interface of every abstraction. They let you put off design decisions and create abstractions to any useful depth.&lt;/li&gt;
+&lt;li&gt;tests are your record of the interface of every abstraction. They let you put off design decisions and create abstractions to any useful depth.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;exposing design flaws
@@ -433,6 +492,8 @@ result &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; s&lt;span cl
 &lt;li&gt;if the test is hard to write, other objects will find the code difficult to reuse.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;good tests not only tell a story, but they lead, step by step, to a well-organised solution.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;test are not a place for abstractions, they are the place for concretions. Abstractions belong to the code&lt;/strong&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4&gt;knowing what to test&lt;/h4&gt;
 &lt;ul&gt;
@@ -633,19 +694,143 @@ result &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; s&lt;span cl
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;unearthing concepts&lt;/h1&gt;
-&lt;h2&gt;creating classes with single responsibility&lt;/h2&gt;
-&lt;h2&gt;creating flexible interfaces&lt;/h2&gt;
-&lt;h1&gt;practising horizontal refactoring&lt;/h1&gt;
-&lt;h2&gt;technique 1: flocking rules for refactoring&lt;/h2&gt;
+&lt;h2&gt;listening to change&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;steps
+&lt;li&gt;if the problem is solved, and you choose to refactor now rather than later, you pay the opportunity cost of not being able to work on other problems
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;spending time “improving” code based purely on aesthetics may not be the best use of your precious time.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;the need for change imposes higher standards on the affected code. &lt;strong&gt;Code that never changes obviously doesn’t need to be changable, but once a new requirement arrives, the bar is raised&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;starting with the open/close principle&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;code is open to a new requirement when you can meet the new requirement without changing the existing code.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;when faced with a new requirement, first rearrange the existing code such that it’s open to the new feature, and once that’s complete, then add the new code&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;the trick to successfully improving code that contains many flaws is to isolate and correct them one at a time&lt;/li&gt;
+&lt;li&gt;if you are unclear about how to make it open, the way forward is to start removing code smells&lt;/li&gt;
+&lt;li&gt;you should never change tests during a refactoring, if your tests are flawed such that they interfere with refactoring, improve them first, and then refactor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;follow the flocking rules&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;rules
 &lt;ul&gt;
 &lt;li&gt;select the things that are most alike&lt;/li&gt;
 &lt;li&gt;find the smallest difference between them&lt;/li&gt;
 &lt;li&gt;make the simplest change that will remove that difference.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;as you follow the flocking rules
+&lt;ul&gt;
+&lt;li&gt;change only 1 line at a time&lt;/li&gt;
+&lt;li&gt;run the tests after every change&lt;/li&gt;
+&lt;li&gt;if the tests fail, undo and make a better change.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;changes to code can be subdivided into 4 distinct steps
+&lt;ul&gt;
+&lt;li&gt;parse the new code: confirm the syntax is valid&lt;/li&gt;
+&lt;li&gt;parse/execute step: proving that code runs without blowing up&lt;/li&gt;
+&lt;li&gt;parse/execute and use its result: ensure that it returns the correct result&lt;/li&gt;
+&lt;li&gt;delete unused code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;why &lt;code class=&quot;language-text&quot;&gt;Flocking&lt;/code&gt;?
+&lt;ul&gt;
+&lt;li&gt;the group’s behavior is the result of a continuous series of small decisions being made by each participating individual. These decisions are guided by three simple rules
+&lt;ul&gt;
+&lt;li&gt;alignment - steer towards the average heading of neighbors&lt;/li&gt;
+&lt;li&gt;separation - don’t get too close to a neighbor&lt;/li&gt;
+&lt;li&gt;cohesion - steer towards the average position of the flock.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;the “flocking rules” for code allow abstractions to appear.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;making existing code open to a new requirement often requires identifying and naming abstractions. The flocking rules concentrate on turning difference into sameness, and thus are useful tools for unearthing abstractions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;converging on abstractions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;focusing on difference
+&lt;ul&gt;
+&lt;li&gt;DRYing out sameness has some value, but DRYing out difference has more.&lt;/li&gt;
+&lt;li&gt;encapsulating the concept that varies, a theme of many design patterns.&lt;/li&gt;
+&lt;li&gt;difference holds the key to understanding. If 2 concrete examples represent the same abstraction and they contain a difference, that difference must represent a smaller abstraction with a larger one. if you can name the difference, you’ve identified that smaller abstraction.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;simplifying a hard problem
+&lt;ul&gt;
+&lt;li&gt;many programmers gravitate towards starting a problem at its most confusing part.&lt;/li&gt;
+&lt;li&gt;solving easy problems, through a magical alchemy of code, sometimes transmutes hard problems into easy ones. It is common to find that hard problems are hard only because the easy ones have not yet been solved.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;naming concepts
+&lt;ul&gt;
+&lt;li&gt;general rule and new requirement can help in the struggle for a name.&lt;/li&gt;
+&lt;li&gt;the name you choose will be the name you use in conversations with your customers. Naming things after domain concepts improves communication between you and the folks who pay the bills. Only good can come of this.&lt;/li&gt;
+&lt;li&gt;notice the following difference&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;`$&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;number &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; bottle of bear on the wall&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;\n`
+`$&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;number &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; bottles of beer on the wall&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;\n`&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- what the words &quot;bottle&quot; and &quot;bottles&quot; represent in the context of the song?
+  - within the context of song, &quot;bottle/bottles&quot; does not represent pluralization.
+  - the new requirement involve with the need to say &quot;six pack&quot; instead of &quot;bottle/bottles&quot;. The string &quot;six pack&quot; is one more concrete example of the underlying abstraction.
+  - the general rule is that the name of a thing should be one level of abstraction higher than the thing itself. The strings &quot;bottle/bottles/six-pack&quot; are instances of some category, and the task is to name that category using language of the domain
+  - one way to identify category is to imagine the concrete examples as rows and columns in a spreadsheet
+  - the header &quot;number&quot; is a level of abstract higher than the concrete examples. &quot;1&quot;, &quot;6&quot;, and &quot;n&quot; are numbers
+  - container is meaningful, understandable and unambiguous.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Number&lt;/th&gt;
+&lt;th&gt;xxx?&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;bottle&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;six-pack&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;n&lt;/td&gt;
+&lt;td&gt;bottles&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#follow-the-flocking-rules&quot;&gt;follow the flock rule&lt;/a&gt; example
+&lt;ul&gt;
+&lt;li&gt;add new container method with 1 line return &lt;code class=&quot;language-text&quot;&gt;bottles&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;replace the first client code to use &lt;code class=&quot;language-text&quot;&gt;container()&lt;/code&gt; method instead of &lt;code class=&quot;language-text&quot;&gt;bottles&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;add parameter argument &lt;code class=&quot;language-text&quot;&gt;number&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;expand the code in &lt;code class=&quot;language-text&quot;&gt;container&lt;/code&gt; to use &lt;code class=&quot;language-text&quot;&gt;number&lt;/code&gt; to decide which of &lt;code class=&quot;language-text&quot;&gt;bottle&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;bottles&lt;/code&gt; to return
+&lt;ul&gt;
+&lt;li&gt;could be expressed in ternary form as &lt;code class=&quot;language-text&quot;&gt;number === 1? &quot;bottle&quot;: &quot;bottles&quot; &lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;change other references to use &lt;code class=&quot;language-text&quot;&gt;container&lt;/code&gt; method&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;creating classes with single responsibility&lt;/h2&gt;
+&lt;h2&gt;creating flexible interfaces&lt;/h2&gt;
+&lt;h1&gt;practising refactoring&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;if you simultaneously change many things and something breaks, you’re forced to understand everything in order to fix anything.&lt;/li&gt;
+&lt;li&gt;making a slew of simultaneous changes is not refactoring - it’s rehacktoring.&lt;/li&gt;
+&lt;li&gt;gradual cutover refactoring
+&lt;ul&gt;
+&lt;li&gt;a strategy for keeping the code in a releasable state by gradually switching over a small number of pieces at a time. This type of refactoring can be done alongside other development work without affecting the release schedule.&lt;/li&gt;
+&lt;li&gt;let red be your guide. If you take a giant step and the tests begin to fail, undo and fall back to making smaller changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;real refactoring is comfortingly predictable, and saves brainpower for more thought provoking challenges.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;technique 2: the open-closed flowchart&lt;/h2&gt;
 &lt;ul&gt;
