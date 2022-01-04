@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 03 Jan 2022 16:55:43 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity simplifying code incomprehensibly concise speculatively…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 04 Jan 2022 01:23:43 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity simplifying code incomprehensibly concise speculatively…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Table of Contents&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#goalskey-ideascontext&quot;&gt;Goals/Key Ideas/Context&lt;/a&gt;&lt;/li&gt;
@@ -63,8 +63,23 @@
 &lt;li&gt;&lt;a href=&quot;#starting-with-the-openclose-principle&quot;&gt;starting with the open/close principle&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#follow-the-flocking-rules&quot;&gt;follow the flocking rules&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#converging-on-abstractions&quot;&gt;converging on abstractions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#creating-classes-with-single-responsibility&quot;&gt;creating classes with single responsibility&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#creating-flexible-interfaces&quot;&gt;creating flexible interfaces&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#creating-classes-with-single-responsibility&quot;&gt;creating classes with single responsibility&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#determining-if-a-class-has-a-single-responsibility&quot;&gt;determining if a class has a single responsibility&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#writing-code-that-embraces-change&quot;&gt;writing code that embraces change&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#enforce-single-responsibility-everywhere&quot;&gt;enforce single responsibility everywhere&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#creating-flexible-interfaces&quot;&gt;creating flexible interfaces&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#find-good-public-interface&quot;&gt;find good public interface&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#create-explicit-interfaces&quot;&gt;create explicit interfaces&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#honor-the-public-interfaces-of-others&quot;&gt;honor the public interfaces of others&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#exercise-caution-when-depending-on-private-interfaces&quot;&gt;exercise caution when depending on private interfaces&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#minimize-context&quot;&gt;minimize context&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#the-law-of-demeter&quot;&gt;the law of demeter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#practising-refactoring&quot;&gt;practising refactoring&lt;/a&gt;
@@ -248,7 +263,7 @@
 &lt;/li&gt;
 &lt;li&gt;metrics are not direct indicators of quality but are proxies for a deeper measurement.&lt;/li&gt;
 &lt;li&gt;The ultimate software metric would be cost per feature over time interval that matters, but this is not easy to calculate. Cost, feature, and time are individually difficult to define, track and measure.&lt;/li&gt;
-&lt;li&gt;your goal is to write software with teh lowest cost per feature.&lt;/li&gt;
+&lt;li&gt;your goal is to write software with the lowest cost per feature.&lt;/li&gt;
 &lt;li&gt;you decision about how much design to do depends on 2 things: your skills and your time frame.
 &lt;ul&gt;
 &lt;li&gt;there is a tradeoff between the amount of time spent designing and the amount of time this design saves in the future (and there is a break-even point).&lt;/li&gt;
@@ -260,6 +275,31 @@
 &lt;ul&gt;
 &lt;li&gt;while it is important to consider the problem and sketch out an overall plan before writing the first test, don’t over think it&lt;/li&gt;
 &lt;li&gt;you can’t figure out what’s right until you write some tests. The purpose of some of your tests might very well be to prove that they represent bad ideas.&lt;/li&gt;
+&lt;li&gt;the code should have the following qualities
+&lt;ul&gt;
+&lt;li&gt;transparent
+&lt;ul&gt;
+&lt;li&gt;the consequences of change should be obvious in the code that is changing and in distant code that relies upon it&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;reasonable
+&lt;ul&gt;
+&lt;li&gt;small changes in requirements require correspondingly small changes in code&lt;/li&gt;
+&lt;li&gt;changes has no unexpected side effects&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;usable
+&lt;ul&gt;
+&lt;li&gt;existing code should be usable in new and unexpected contexts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;exemplary
+&lt;ul&gt;
+&lt;li&gt;the code itself should encourage those who change it to perpetuate these qualities&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;understand transformations&lt;/h2&gt;
 &lt;ul&gt;
@@ -344,7 +384,7 @@ result &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; s&lt;span cl
 &lt;li&gt;DRY is important but if applied too early, and with too much vigour, it can do more harm than good. It’s a good idea to ask the following questions when doing so:
 &lt;ul&gt;
 &lt;li&gt;Does the change I’m contemplating make the code harder to understand? Be suspicious of any change that muddles the waters?&lt;/li&gt;
-&lt;li&gt;what is the future cost of doing nothing now?
+&lt;li&gt;&lt;strong&gt;what is the future cost of doing nothing now?&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;some changes cost the same regardless of whether you make them now or delay them until later.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;if it doesn’t increase your costs, delay making changes&lt;/strong&gt;&lt;/li&gt;
@@ -446,7 +486,7 @@ LYRICS
   assert_equal expected&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; bottles&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;song
 &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;if you find hte duplication distressing, consider the alternatives. Your choices are:
+&lt;li&gt;if you find the duplication distressing, consider the alternatives. Your choices are:
 &lt;ul&gt;
 &lt;li&gt;assert that the expected output matches that of some other method.
 &lt;ul&gt;
@@ -598,7 +638,7 @@ LYRICS
 &lt;/ul&gt;
 &lt;h3&gt;creating test double&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/growing-object-orented-guided-by-tests-summary#mock-roles-not-objects&quot;&gt;more on test doubles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;../growing-object-orented-guided-by-tests-summary/index.md#mock-roles-not-objects&quot;&gt;more on test doubles&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;when diameterizable’s interface changes from diameter to width, and &lt;code class=&quot;language-text&quot;&gt;Wheel&lt;/code&gt; get updated but &lt;code class=&quot;language-text&quot;&gt;Gear&lt;/code&gt; does not
 &lt;ul&gt;
 &lt;li&gt;since the dimeterizabledouble is injected, the test continues to pass even though the application is definitely broken&lt;/li&gt;
@@ -819,7 +859,274 @@ LYRICS
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;creating classes with single responsibility&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;a class &lt;strong&gt;must have data and behavior (methods)&lt;/strong&gt;. If one of these is missing, the code doesn’t belong to a class.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;determining if a class has a single responsibility&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;rephrase every one of its methods as a question, asking the question ought to make sense.
+&lt;ul&gt;
+&lt;li&gt;“Please Mr. Gear, what is your ratio?” - makes sense&lt;/li&gt;
+&lt;li&gt;‘Please Mr. Gear, what is your tire size?” - Doesn’t make sense = does not belong here&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;describe the class in 1 sentence.
+&lt;ul&gt;
+&lt;li&gt;class should do the smallest possible useful thing&lt;/li&gt;
+&lt;li&gt;when the description contains the words “and” or “or”, it means that the class has more than one responsibility
+&lt;ul&gt;
+&lt;li&gt;Gear’s responsibility: “calculate the effect that a gear has on a bicycle”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;writing code that embraces change&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;depend on behavior (methods), not data&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;never call @variables inside methods, use wrapper methods instead
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/serodriguez68/poodr-notes/blob/master/code_examples/chapter_2.rb#L61-**L71**&quot;&gt;wrong code example&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/serodriguez68/poodr-notes/blob/master/code_examples/chapter_2.rb#L73-L102&quot;&gt;right code example&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;data very often has behavior that you don’t yet know about.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;hide data structures&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;if the class uses complex data structures, write wrapper methods that decipher the structure and depend on those methods
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/serodriguez68/poodr-notes/blob/master/code_examples/chapter_2.rb#L105-L117&quot;&gt;wrong code example&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/serodriguez68/poodr-notes/blob/master/code_examples/chapter_2.rb#L124-L141&quot;&gt;right code example&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;it trades indexing into a structure for sending messages to an object. The &lt;code class=&quot;language-text&quot;&gt;wheelify&lt;/code&gt; method above isolates the messy structural information and DRYs out the code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;enforce single responsibility everywhere&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;extract extra responsibilities from methods
+&lt;ul&gt;
+&lt;li&gt;methods with single responsibility have these benefits
+&lt;ul&gt;
+&lt;li&gt;clarify what hte class does&lt;/li&gt;
+&lt;li&gt;avoid the need for comments&lt;/li&gt;
+&lt;li&gt;encourage reuse&lt;/li&gt;
+&lt;li&gt;easy to move to another class&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ask questions about what they do and try to describe their responsibilities in a single sentence.&lt;/li&gt;
+&lt;li&gt;separating iteration from the action that’s being performed on each element (common case of single responsibility in methods)&lt;/li&gt;
+&lt;li&gt;don’t decide; preserve your ability to make a decision later.&lt;/li&gt;
+&lt;li&gt;concentrate on the primary class. Decide on its responsibilities and enforce your decision fiercely. If you identify extra responsibilities that you cannot yet remove, isolate them. Do not allow extraneous responsibilities to leak into your class
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/serodriguez68/poodr-notes/blob/master/code_examples/chapter_2.rb#L176-L197&quot;&gt;example using struct&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2&gt;creating flexible interfaces&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/dc6f4e42cd7437a484673dbb5f28c943/5d72a/communication-patterns-bad-vs-good.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 37.34177215189873%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAABLElEQVQoz2WSCW/CMAyF+f9/DGkSY9JgGy0UEKUXpWea0iP5prQUNmEpl/38/GJ5BiClJMtysqJgY3s4xxApBUopE0ZrPSxjdS0JLym2dWKxdDi4MZUo6Pt+iM8mYNsqFvMd3vpImYgXInNM97JW7LcRZXGjGXnQd/yDkKoC36e7pvh+biowMU0YpTVSNoNy3TSsP89cYvGf0DysfcL5w8a1PHYLm60VgBTUmXgAjRWiZfUTIqKEt6WLKGtuWQG3G313/7LZ0rxGRgn+1qMJY4gismMwJLW9+qMULOeKLktQ3ejvWi5eymIVjIRKjdU36zOr+YY+ijntQr6c5KWPBnvwCnb7K1GYDz4/yHlfhw/sbEowgr8PGa43Ap+t5oXYu1QkRTMK7DVt95yGX8VAHFeFHvwmAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;bad vs good interface&quot;
+        title=&quot;bad vs good interface&quot;
+        src=&quot;/static/dc6f4e42cd7437a484673dbb5f28c943/f058b/communication-patterns-bad-vs-good.png&quot;
+        srcset=&quot;/static/dc6f4e42cd7437a484673dbb5f28c943/c26ae/communication-patterns-bad-vs-good.png 158w,
+/static/dc6f4e42cd7437a484673dbb5f28c943/6bdcf/communication-patterns-bad-vs-good.png 315w,
+/static/dc6f4e42cd7437a484673dbb5f28c943/f058b/communication-patterns-bad-vs-good.png 630w,
+/static/dc6f4e42cd7437a484673dbb5f28c943/5d72a/communication-patterns-bad-vs-good.png 834w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;good public interface structure
+&lt;ul&gt;
+&lt;li&gt;objects reveals as little of themselves as possible&lt;/li&gt;
+&lt;li&gt;objects know as little of their neighbors as possible&lt;/li&gt;
+&lt;li&gt;Result: plugable, component-like objects&lt;/li&gt;
+&lt;li&gt;reveals the class’s primary responsibility
+&lt;ul&gt;
+&lt;li&gt;the public interface should correspond to the class’s responsibility. A single responsibility may require multiple public methods. However, too many loosely related public methods can be a sign of single responsibility violation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;are expected to be invoked by others&lt;/li&gt;
+&lt;li&gt;will not change on a whim&lt;/li&gt;
+&lt;li&gt;are safe for other to depend on, since it is less changable&lt;/li&gt;
+&lt;li&gt;are thoroughly documented in tests&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;find good public interface&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;focus on messages, not domain objects (classes)&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;you don’t send messages because you have objects, you have objects because you send message.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;design experts notice domain objects without concentrating on them; they focus not on these objects but on the messages that pass between them. These messages are guides that lead you to discover other objects, ones that are just as necessary but far less obvious.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Step 1: Using sequence diagram&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;lightweight way of acquiring a design intention about an interaction. It provides a simple way to experiment with different object arrangements and message passing schemes between objects. It brings clarity to your thoughts and provide a vehicle to collaborate and communicate with others.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;should this receiver be responsible for responding to this message&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;I need to send this message, who should respond to it.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Step 2: asking for “what” instead of telling “how”&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/060cae03cbf2f83b6cabe209a2188313/e2e58/novice-vs-intermediate-experienced.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 55.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABgElEQVQoz3WS6Y7CMAyE+/7PBuIXEmy5ex+0lKuFFmb1eTcIVlpLUVonnhmP40nS4XBQHMfKskx935PS8/m0fb/fK4oiO8vzXI/H43V2uVwUhqHlqe+6Tt4wDKrr2i4c6lpVVX0AQjb0vQElcaz7/S4XdVXper1aDkAIPBJRGNkBRRC4QG0YhGqaxv4phMiRnc9npWmqzWajIi8s7wFS5LmCIDB174BcQP18Prci1L6rb9vWSFCGwtPpJM8d5Flmfv31kOja1lTSMgJcAIZN+Ot/+Wqa4w8gyGEQqCzKD4XE7XYzEgjo4O9QEEOOTiDwnBcozNLUJuVUA3RsGisEGFvY3TkW9L8D4yXYUAAoy/I1NdomaHG9XtuzAIhvfHJBfjKZmL+73e715LyiKDSdTm35vm8HsGPDarWyyywA2MnTMoSj0Ujj8ViLxcJEmUI84xL+sL97CMFsNtNyuTSF7t9NG3LydJAkifno6Z9APkDb7dbUsbti5zPkDIKFt3j5DdjZSuenrXloAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;compare-designers&quot;
+        title=&quot;compare-designers&quot;
+        src=&quot;/static/060cae03cbf2f83b6cabe209a2188313/f058b/novice-vs-intermediate-experienced.png&quot;
+        srcset=&quot;/static/060cae03cbf2f83b6cabe209a2188313/c26ae/novice-vs-intermediate-experienced.png 158w,
+/static/060cae03cbf2f83b6cabe209a2188313/6bdcf/novice-vs-intermediate-experienced.png 315w,
+/static/060cae03cbf2f83b6cabe209a2188313/f058b/novice-vs-intermediate-experienced.png 630w,
+/static/060cae03cbf2f83b6cabe209a2188313/40601/novice-vs-intermediate-experienced.png 945w,
+/static/060cae03cbf2f83b6cabe209a2188313/e2e58/novice-vs-intermediate-experienced.png 1069w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Step 3: seeking for context independence&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;use &lt;a href=&quot;./../growing-object-orented-guided-by-tests-summary/index.md#dependency-injection&quot;&gt;dependency injection&lt;/a&gt; to seek context independent&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Step 4: trusting other objects&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I know what I want, I trust you to do your part&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;use messages to discover objects&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/505b811edbac0792a7d939d4ca0dbc75/59000/discovering-objects.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 55.06329113924051%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABpUlEQVQoz11S2ZKCMBDk/79s98WtWi+ERBTkUoiAAipqb/W4YY+uSk0lM+npOZzz+QzP87DdbuG6Ltq2BXG/3xEEgZzFYoE0SeXt8Xjger0iDEMsl0tsNhvM53PUVYVhGOBcLhf4noemOSFNEjRNI4Qk1krjdDrhcDhA+Up8jFdK4Xg8Ik1TPJ9P1HWNYL2Wu8OHLMswmXzAmCOApwQRSRxj+jkVEquOYDXvb+9jNXynOlqHDyx75booSwMLBhdFAVOW4mewTUQfVdHv+z7athMfj8PM4TZE13XY7XZSok3C/rlLF33Xjx8Ia/MsE7VVVeF2u70I9/s9tFJCwF7RWjAwCiMZglVJsLyyLLHWGvs8R9/3YwUOG0kn5adZJp+JvutEIcuL4xir1Qp13YwbQKy1wmw2k+pIKlPGP1A6y2YAE9HybowZkzGGpMaUknj4/jPchteUf/eHBFTDtbArwyo4aTsQ9o1D4TtRFAdsggB5nv8otIQES+XScuGtZUuYgKqZkHe2gpZJeCjmD6ElpQL2JooiJEkie8pjy+Zik1RrLZZEFl+rHkasK1PWdgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;discovering objects&quot;
+        title=&quot;discovering objects&quot;
+        src=&quot;/static/505b811edbac0792a7d939d4ca0dbc75/f058b/discovering-objects.png&quot;
+        srcset=&quot;/static/505b811edbac0792a7d939d4ca0dbc75/c26ae/discovering-objects.png 158w,
+/static/505b811edbac0792a7d939d4ca0dbc75/6bdcf/discovering-objects.png 315w,
+/static/505b811edbac0792a7d939d4ca0dbc75/f058b/discovering-objects.png 630w,
+/static/505b811edbac0792a7d939d4ca0dbc75/59000/discovering-objects.png 917w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;it’s completely reasonable that &lt;code class=&quot;language-text&quot;&gt;Customer&lt;/code&gt; would send &lt;code class=&quot;language-text&quot;&gt;suitable_trips&lt;/code&gt; message. It is exactly what &lt;code class=&quot;language-text&quot;&gt;Customer&lt;/code&gt; wants. The problem is not with the sender, it is with the receiver. You have not yet identified an object whose responsibility it is to implement this method&lt;/li&gt;
+&lt;li&gt;sequence diagram keep the focus on messages and allow you to form a rational intention about the first thing to assert in a test. Switching your attention from objects to messages allows you to concentrate on designing an application built upon public interfaces&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;create explicit interfaces&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;method in the public interface should
+&lt;ul&gt;
+&lt;li&gt;be explicitly identified as such&lt;/li&gt;
+&lt;li&gt;be more about what than how&lt;/li&gt;
+&lt;li&gt;have names that, so far as you can anticipate, will not change.&lt;/li&gt;
+&lt;li&gt;take a hash as an options parameter.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;create test for public interfaces.
+&lt;ul&gt;
+&lt;li&gt;do not test private methods. If you must, segregate those test from the ones of the public methods&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;honor the public interfaces of others&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;if your design forces the use of a private method in another class, re-think your design&lt;/li&gt;
+&lt;li&gt;a dependency on a private method of an external framework is a form of technical debt&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;exercise caution when depending on private interfaces&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;if you must depend on private interface, use &lt;a href=&quot;../dependency-injection/index.md#isolate-the-dependency&quot;&gt;isolate the dependency&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;this prevent calls from multiple places&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;minimize context&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;create public methods that allow senders to get what they want without knowing how your class does it&lt;/li&gt;
+&lt;li&gt;if you fae a class with an ill-defined public interface you have these options
+&lt;ul&gt;
+&lt;li&gt;define a new well-defined method for that class’ public interface.&lt;/li&gt;
+&lt;li&gt;create a wrapper class with a well defined public interface&lt;/li&gt;
+&lt;li&gt;create a single wrapping method and put it in your own class&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;&lt;a href=&quot;../growing-object-orented-guided-by-tests-summary/index.md#tell-dont-ask---law-of-demeter&quot;&gt;the law of demeter&lt;/a&gt;&lt;/h3&gt;
 &lt;h1&gt;practising refactoring&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;if you simultaneously change many things and something breaks, you’re forced to understand everything in order to fix anything.&lt;/li&gt;
@@ -837,7 +1144,7 @@ LYRICS
 &lt;li&gt;&lt;a href=&quot;./open-closed-flowchart.png&quot;&gt;open closed flowchart&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;separating responsibilities&lt;/h1&gt;
-&lt;h2&gt;managing dependencies&lt;/h2&gt;
+&lt;h2&gt;&lt;a href=&quot;/dependency-injection&quot;&gt;managing dependencies&lt;/a&gt;&lt;/h2&gt;
 &lt;h2&gt;acquiring behavior through inheritance&lt;/h2&gt;
 &lt;h2&gt;writing inheritable code&lt;/h2&gt;
 &lt;h1&gt;Achieving openness&lt;/h1&gt;
@@ -857,6 +1164,7 @@ LYRICS
 &lt;p&gt;“the rules of thumb for testing private methods are: never write them, and if you do, never ever test them, unless of course it makes sense to do so.”&lt;/p&gt;
 &lt;p&gt;“making existing code open to a new requirement often requires identifying and naming abstractions. The flocking rules concentrate on turning difference into sameness, and thus are useful tools for unearthing abstractions.”&lt;/p&gt;
 &lt;p&gt;“the best tests are loosely coupled to the underlying code and test everything once and in the proper place. They add value without increasing costs”&lt;/p&gt;
+&lt;p&gt;“only talk to your immediate neighbors”&lt;/p&gt;
 &lt;h1&gt;References&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/keyvanakbary/learning-notes/blob/master/books/99-bottles-of-oop.md&quot;&gt;https://github.com/keyvanakbary/learning-notes/blob/master/books/99-bottles-of-oop.md&lt;/a&gt;
 &lt;a href=&quot;https://github.com/serodriguez68/poodr-notes&quot;&gt;https://github.com/serodriguez68/poodr-notes&lt;/a&gt;
@@ -1947,6 +2255,7 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;h1&gt;tell, don’t ask - law of Demeter&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;This style produces more flexible code because it’s easy to swap objects with the same role. The caller sees nothing of their internal structure or the rest of the system behind the role interface.&lt;/li&gt;
+&lt;li&gt;When messages are trusting and ask for what the sender wants instead of telling receiver how to behave, objects naturally evolve public interfaces that are flexible and reusable in novel and unexpected ways.&lt;/li&gt;
 &lt;li&gt;we ask when
 &lt;ul&gt;
 &lt;li&gt;getting information from values and collections&lt;/li&gt;
@@ -1956,15 +2265,32 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;We can specify how we expect the target object to communicate with its mock for a triggering event -&gt; expectations&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;we can use the test to help us tease out the supporting roles our object needs, defined as Java interfaces, and fill in actual implementations as we develop the rest of the system -&gt; interface discovery&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;the essential structure of a test:
+&lt;li&gt;&lt;strong&gt;only talk to your immediate neighbors&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;certain “violations” of demeter reduce your application’s flexibility and maintainability, while others make perfect sense. Additionally, violations typically lead to objects that require lots of context&lt;/li&gt;
+&lt;li&gt;the definition “only use one dot” is not always right. There are cases that use multiple dots that do not violate Demeter
 &lt;ul&gt;
-&lt;li&gt;creating any required mock objects&lt;/li&gt;
-&lt;li&gt;create any natural objects&lt;/li&gt;
-&lt;li&gt;specify how you expect the mock objects to be called by the target object&lt;/li&gt;
-&lt;li&gt;call the triggering method on the target object&lt;/li&gt;
-&lt;li&gt;assert that any resulting values are valid and that all the expected calls have been made.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;access distant attribute&lt;/strong&gt; &lt;code class=&quot;language-text&quot;&gt;customer.bicycle.wheel.tire&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;it may be cheapest in your specific case to reach through intermediate objects than to go around&lt;/li&gt;
+&lt;li&gt;consider moving behavior using that tire attribute to wheel object&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;invokes distant behavior&lt;/strong&gt; &lt;code class=&quot;language-text&quot;&gt;customer.bicycle.wheel.rotate&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;the cost is high. This violation should be removed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;hash.keys.sort.join(&apos;,&apos;)&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;no violation&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;hash.keys.sort.join&lt;/code&gt; actually returns an Enumerable of Strings, all of the intermediate objects have the same type and there is no Demeter violation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;delegation removes visible violations but ignores demeter’s spirit. Using delegation to hide tight coupling is not the same as decoupling code.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;demeter violations are clues of missing objects whose public interface you have not yet discovered&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;if you shift to a message-based perspective, the messages you find will become public interfaces in the objects they lead you to discover. However, if you are bound by the shackles of existing domain objects, you will end up assembling their existing public interfaces into long message chains and thus will miss the opportunity to find and construct flexible public interfaces.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;Kick-staring the test-driven cycle&lt;/h1&gt;
 &lt;ul&gt;
@@ -1995,6 +2321,15 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Expose uncertainty early by testing our assumptions as early as possible.&lt;/li&gt;
+&lt;li&gt;the essential structure of a test:
+&lt;ul&gt;
+&lt;li&gt;creating any required mock objects&lt;/li&gt;
+&lt;li&gt;create any natural objects&lt;/li&gt;
+&lt;li&gt;specify how you expect the mock objects to be called by the target object&lt;/li&gt;
+&lt;li&gt;call the triggering method on the target object&lt;/li&gt;
+&lt;li&gt;assert that any resulting values are valid and that all the expected calls have been made.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;Maintaining the test-drive cycle&lt;/h1&gt;
 &lt;ul&gt;
@@ -2183,21 +2518,7 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;li&gt;&lt;strong&gt;A system is easier to change if its objects are context-independent: each object has no built-in knowledge about the system.&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;The effect of the context-independence rule on a system of objects is to make their relationships explicit, defined separately from the objects themselves. This simplifies the objects and manages the relationships&lt;/strong&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1&gt;Dependency Injection&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Dependency retention: We don’t worry about managing dependencies; we just inline and hard-code everything!&lt;/li&gt;
-&lt;li&gt;Dependency rejection, an excellent term (coined by Mark Seemann, above), in which we avoid having any dependencies in our core business logic. We do this by keeping all I/O and other impure code all the “edges” of our domain.&lt;/li&gt;
-&lt;li&gt;Dependency parameterization, in which we pass in all dependencies as parameters. This is commonly used in conjunction with partial application.&lt;/li&gt;
-&lt;li&gt;Dependency injection and the reader monad, in which we pass in dependencies after the rest of the code has already been constructed. This is typically done via constructor injection in OO-style code, and in FP-style principle, this corresponds to the Reader monad.&lt;/li&gt;
-&lt;li&gt;Dependency interpretation: We replace calls to dependencies with a data structure interpreted later. This approach is used in both OO (interpreter pattern) and FP (e.g. free monads)&lt;/li&gt;
-&lt;li&gt;Need to elaborate more on these patterns
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://fsharpforfunandprofit.com/posts/dependencies/&quot;&gt;https://fsharpforfunandprofit.com/posts/dependencies/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.thecodewhisperer.com/series#dependency-inversion-principle-dip&quot;&gt;https://blog.thecodewhisperer.com/series#dependency-inversion-principle-dip&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.ploeh.dk/2017/01/27/from-dependency-injection-to-dependency-rejection/&quot;&gt;https://blog.ploeh.dk/2017/01/27/from-dependency-injection-to-dependency-rejection/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h1&gt;&lt;a href=&quot;/dependency-injection&quot;&gt;Dependency Injection&lt;/a&gt;&lt;/h1&gt;
 &lt;h1&gt;The sample project - analysis&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;the business rules can be summarized with the following picture&lt;/li&gt;
@@ -4079,7 +4400,21 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;p&gt;&lt;a href=&quot;https://www.beyondintractability.org/bksum/fisher-getting&quot;&gt;https://www.beyondintractability.org/bksum/fisher-getting&lt;/a&gt;
 &lt;a href=&quot;https://readingraphics.com/book-summary-getting-to-yes/&quot;&gt;https://readingraphics.com/book-summary-getting-to-yes/&lt;/a&gt;
 &lt;a href=&quot;https://www.whatyouwilllearn.com/book/getting-to-yes/&quot;&gt;https://www.whatyouwilllearn.com/book/getting-to-yes/&lt;/a&gt;
-&lt;a href=&quot;https://www.sage.exchange/post/getting-to-yes-summary&quot;&gt;https://www.sage.exchange/post/getting-to-yes-summary&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[tools of titans summary]]></title><description><![CDATA[Goals success, however you define it, is achievable if you collect the right field-tested beliefs and habits. the superheroes you have in…]]></description><link>https://tonytvo.github.io/tools-of-titans/</link><guid isPermaLink="false">https://tonytvo.github.io/tools-of-titans/</guid><pubDate>Wed, 22 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Goals&lt;/h1&gt;
+&lt;a href=&quot;https://www.sage.exchange/post/getting-to-yes-summary&quot;&gt;https://www.sage.exchange/post/getting-to-yes-summary&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[dependency injection summary]]></title><description><![CDATA[recognizing dependencies solution strategies Dependency retention: We don’t worry about managing dependencies; we just inline and hard-code…]]></description><link>https://tonytvo.github.io/dependency-injection/</link><guid isPermaLink="false">https://tonytvo.github.io/dependency-injection/</guid><pubDate>Thu, 23 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;recognizing dependencies&lt;/h1&gt;
+&lt;h1&gt;solution strategies&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Dependency retention: We don’t worry about managing dependencies; we just inline and hard-code everything!&lt;/li&gt;
+&lt;li&gt;Dependency rejection, an excellent term (coined by Mark Seemann, above), in which we avoid having any dependencies in our core business logic. We do this by keeping all I/O and other impure code all the “edges” of our domain.&lt;/li&gt;
+&lt;li&gt;Dependency parameterization, in which we pass in all dependencies as parameters. This is commonly used in conjunction with partial application.&lt;/li&gt;
+&lt;li&gt;Dependency injection and the reader monad, in which we pass in dependencies after the rest of the code has already been constructed. This is typically done via constructor injection in OO-style code, and in FP-style principle, this corresponds to the Reader monad.&lt;/li&gt;
+&lt;li&gt;Dependency interpretation: We replace calls to dependencies with a data structure interpreted later. This approach is used in both OO (interpreter pattern) and FP (e.g. free monads)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;isolate the dependency&lt;/h2&gt;
+&lt;h1&gt;Quotes&lt;/h1&gt;
+&lt;h1&gt;References&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://fsharpforfunandprofit.com/posts/dependencies/&quot;&gt;https://fsharpforfunandprofit.com/posts/dependencies/&lt;/a&gt;
+&lt;a href=&quot;https://blog.thecodewhisperer.com/series#dependency-inversion-principle-dip&quot;&gt;https://blog.thecodewhisperer.com/series#dependency-inversion-principle-dip&lt;/a&gt;
+&lt;a href=&quot;https://blog.ploeh.dk/2017/01/27/from-dependency-injection-to-dependency-rejection/&quot;&gt;https://blog.ploeh.dk/2017/01/27/from-dependency-injection-to-dependency-rejection/&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[tools of titans summary]]></title><description><![CDATA[Goals success, however you define it, is achievable if you collect the right field-tested beliefs and habits. the superheroes you have in…]]></description><link>https://tonytvo.github.io/tools-of-titans/</link><guid isPermaLink="false">https://tonytvo.github.io/tools-of-titans/</guid><pubDate>Wed, 22 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Goals&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;success, however you define it, is achievable if you collect the right field-tested beliefs and habits.&lt;/li&gt;
 &lt;li&gt;the superheroes you have in your mind (idols, icons, titans, billionaires, etc.) are nearly all walking flaws who’ve maximized 1 or 2 strengths)

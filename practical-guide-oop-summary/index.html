@@ -66,8 +66,23 @@
 <li><a href="#starting-with-the-openclose-principle">starting with the open/close principle</a></li>
 <li><a href="#follow-the-flocking-rules">follow the flocking rules</a></li>
 <li><a href="#converging-on-abstractions">converging on abstractions</a></li>
-<li><a href="#creating-classes-with-single-responsibility">creating classes with single responsibility</a></li>
-<li><a href="#creating-flexible-interfaces">creating flexible interfaces</a></li>
+<li><a href="#creating-classes-with-single-responsibility">creating classes with single responsibility</a>
+<ul>
+<li><a href="#determining-if-a-class-has-a-single-responsibility">determining if a class has a single responsibility</a></li>
+<li><a href="#writing-code-that-embraces-change">writing code that embraces change</a></li>
+<li><a href="#enforce-single-responsibility-everywhere">enforce single responsibility everywhere</a></li>
+</ul>
+</li>
+<li><a href="#creating-flexible-interfaces">creating flexible interfaces</a>
+<ul>
+<li><a href="#find-good-public-interface">find good public interface</a></li>
+<li><a href="#create-explicit-interfaces">create explicit interfaces</a></li>
+<li><a href="#honor-the-public-interfaces-of-others">honor the public interfaces of others</a></li>
+<li><a href="#exercise-caution-when-depending-on-private-interfaces">exercise caution when depending on private interfaces</a></li>
+<li><a href="#minimize-context">minimize context</a></li>
+<li><a href="#the-law-of-demeter">the law of demeter</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#practising-refactoring">practising refactoring</a>
@@ -251,7 +266,7 @@
 </li>
 <li>metrics are not direct indicators of quality but are proxies for a deeper measurement.</li>
 <li>The ultimate software metric would be cost per feature over time interval that matters, but this is not easy to calculate. Cost, feature, and time are individually difficult to define, track and measure.</li>
-<li>your goal is to write software with teh lowest cost per feature.</li>
+<li>your goal is to write software with the lowest cost per feature.</li>
 <li>you decision about how much design to do depends on 2 things: your skills and your time frame.
 <ul>
 <li>there is a tradeoff between the amount of time spent designing and the amount of time this design saves in the future (and there is a break-even point).</li>
@@ -263,6 +278,31 @@
 <ul>
 <li>while it is important to consider the problem and sketch out an overall plan before writing the first test, don’t over think it</li>
 <li>you can’t figure out what’s right until you write some tests. The purpose of some of your tests might very well be to prove that they represent bad ideas.</li>
+<li>the code should have the following qualities
+<ul>
+<li>transparent
+<ul>
+<li>the consequences of change should be obvious in the code that is changing and in distant code that relies upon it</li>
+</ul>
+</li>
+<li>reasonable
+<ul>
+<li>small changes in requirements require correspondingly small changes in code</li>
+<li>changes has no unexpected side effects</li>
+</ul>
+</li>
+<li>usable
+<ul>
+<li>existing code should be usable in new and unexpected contexts</li>
+</ul>
+</li>
+<li>exemplary
+<ul>
+<li>the code itself should encourage those who change it to perpetuate these qualities</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <h2>understand transformations</h2>
 <ul>
@@ -347,7 +387,7 @@ result <span class="token operator">+=</span> s<span class="token punctuation">;
 <li>DRY is important but if applied too early, and with too much vigour, it can do more harm than good. It’s a good idea to ask the following questions when doing so:
 <ul>
 <li>Does the change I’m contemplating make the code harder to understand? Be suspicious of any change that muddles the waters?</li>
-<li>what is the future cost of doing nothing now?
+<li><strong>what is the future cost of doing nothing now?</strong>
 <ul>
 <li>some changes cost the same regardless of whether you make them now or delay them until later.</li>
 <li><strong>if it doesn’t increase your costs, delay making changes</strong></li>
@@ -449,7 +489,7 @@ LYRICS
   assert_equal expected<span class="token punctuation">,</span> bottles<span class="token punctuation">.</span>song
 <span class="token keyword">end</span></code></pre></div>
 <ul>
-<li>if you find hte duplication distressing, consider the alternatives. Your choices are:
+<li>if you find the duplication distressing, consider the alternatives. Your choices are:
 <ul>
 <li>assert that the expected output matches that of some other method.
 <ul>
@@ -601,7 +641,7 @@ LYRICS
 </ul>
 <h3>creating test double</h3>
 <ul>
-<li><a href="/growing-object-orented-guided-by-tests-summary#mock-roles-not-objects">more on test doubles</a></li>
+<li><a href="../growing-object-orented-guided-by-tests-summary/index.md#mock-roles-not-objects">more on test doubles</a></li>
 <li>when diameterizable’s interface changes from diameter to width, and <code class="language-text">Wheel</code> get updated but <code class="language-text">Gear</code> does not
 <ul>
 <li>since the dimeterizabledouble is injected, the test continues to pass even though the application is definitely broken</li>
@@ -822,7 +862,274 @@ LYRICS
 </li>
 </ul>
 <h2>creating classes with single responsibility</h2>
+<ul>
+<li>a class <strong>must have data and behavior (methods)</strong>. If one of these is missing, the code doesn’t belong to a class.</li>
+</ul>
+<h3>determining if a class has a single responsibility</h3>
+<ul>
+<li>rephrase every one of its methods as a question, asking the question ought to make sense.
+<ul>
+<li>“Please Mr. Gear, what is your ratio?” - makes sense</li>
+<li>‘Please Mr. Gear, what is your tire size?” - Doesn’t make sense = does not belong here</li>
+</ul>
+</li>
+<li>describe the class in 1 sentence.
+<ul>
+<li>class should do the smallest possible useful thing</li>
+<li>when the description contains the words “and” or “or”, it means that the class has more than one responsibility
+<ul>
+<li>Gear’s responsibility: “calculate the effect that a gear has on a bicycle”</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>writing code that embraces change</h3>
+<ul>
+<li><strong>depend on behavior (methods), not data</strong>
+<ul>
+<li>never call @variables inside methods, use wrapper methods instead
+<ul>
+<li><a href="https://github.com/serodriguez68/poodr-notes/blob/master/code_examples/chapter_2.rb#L61-**L71**">wrong code example</a></li>
+<li><a href="https://github.com/serodriguez68/poodr-notes/blob/master/code_examples/chapter_2.rb#L73-L102">right code example</a></li>
+</ul>
+</li>
+<li>data very often has behavior that you don’t yet know about.</li>
+</ul>
+</li>
+<li><strong>hide data structures</strong>
+<ul>
+<li>if the class uses complex data structures, write wrapper methods that decipher the structure and depend on those methods
+<ul>
+<li><a href="https://github.com/serodriguez68/poodr-notes/blob/master/code_examples/chapter_2.rb#L105-L117">wrong code example</a></li>
+<li><a href="https://github.com/serodriguez68/poodr-notes/blob/master/code_examples/chapter_2.rb#L124-L141">right code example</a></li>
+</ul>
+</li>
+<li>it trades indexing into a structure for sending messages to an object. The <code class="language-text">wheelify</code> method above isolates the messy structural information and DRYs out the code</li>
+</ul>
+</li>
+</ul>
+<h3>enforce single responsibility everywhere</h3>
+<ul>
+<li>extract extra responsibilities from methods
+<ul>
+<li>methods with single responsibility have these benefits
+<ul>
+<li>clarify what hte class does</li>
+<li>avoid the need for comments</li>
+<li>encourage reuse</li>
+<li>easy to move to another class</li>
+</ul>
+</li>
+<li>ask questions about what they do and try to describe their responsibilities in a single sentence.</li>
+<li>separating iteration from the action that’s being performed on each element (common case of single responsibility in methods)</li>
+<li>don’t decide; preserve your ability to make a decision later.</li>
+<li>concentrate on the primary class. Decide on its responsibilities and enforce your decision fiercely. If you identify extra responsibilities that you cannot yet remove, isolate them. Do not allow extraneous responsibilities to leak into your class
+<ul>
+<li><a href="https://github.com/serodriguez68/poodr-notes/blob/master/code_examples/chapter_2.rb#L176-L197">example using struct</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h2>creating flexible interfaces</h2>
+<ul>
+<li><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/dc6f4e42cd7437a484673dbb5f28c943/5d72a/communication-patterns-bad-vs-good.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 37.34177215189873%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAABLElEQVQoz2WSCW/CMAyF+f9/DGkSY9JgGy0UEKUXpWea0iP5prQUNmEpl/38/GJ5BiClJMtysqJgY3s4xxApBUopE0ZrPSxjdS0JLym2dWKxdDi4MZUo6Pt+iM8mYNsqFvMd3vpImYgXInNM97JW7LcRZXGjGXnQd/yDkKoC36e7pvh+biowMU0YpTVSNoNy3TSsP89cYvGf0DysfcL5w8a1PHYLm60VgBTUmXgAjRWiZfUTIqKEt6WLKGtuWQG3G313/7LZ0rxGRgn+1qMJY4gismMwJLW9+qMULOeKLktQ3ejvWi5eymIVjIRKjdU36zOr+YY+ijntQr6c5KWPBnvwCnb7K1GYDz4/yHlfhw/sbEowgr8PGa43Ap+t5oXYu1QkRTMK7DVt95yGX8VAHFeFHvwmAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="bad vs good interface"
+        title="bad vs good interface"
+        src="/static/dc6f4e42cd7437a484673dbb5f28c943/f058b/communication-patterns-bad-vs-good.png"
+        srcset="/static/dc6f4e42cd7437a484673dbb5f28c943/c26ae/communication-patterns-bad-vs-good.png 158w,
+/static/dc6f4e42cd7437a484673dbb5f28c943/6bdcf/communication-patterns-bad-vs-good.png 315w,
+/static/dc6f4e42cd7437a484673dbb5f28c943/f058b/communication-patterns-bad-vs-good.png 630w,
+/static/dc6f4e42cd7437a484673dbb5f28c943/5d72a/communication-patterns-bad-vs-good.png 834w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></li>
+<li>good public interface structure
+<ul>
+<li>objects reveals as little of themselves as possible</li>
+<li>objects know as little of their neighbors as possible</li>
+<li>Result: plugable, component-like objects</li>
+<li>reveals the class’s primary responsibility
+<ul>
+<li>the public interface should correspond to the class’s responsibility. A single responsibility may require multiple public methods. However, too many loosely related public methods can be a sign of single responsibility violation</li>
+</ul>
+</li>
+<li>are expected to be invoked by others</li>
+<li>will not change on a whim</li>
+<li>are safe for other to depend on, since it is less changable</li>
+<li>are thoroughly documented in tests</li>
+</ul>
+</li>
+</ul>
+<h3>find good public interface</h3>
+<ul>
+<li>
+<p><strong>focus on messages, not domain objects (classes)</strong></p>
+</li>
+<li>
+<p>you don’t send messages because you have objects, you have objects because you send message.</p>
+<ul>
+<li>design experts notice domain objects without concentrating on them; they focus not on these objects but on the messages that pass between them. These messages are guides that lead you to discover other objects, ones that are just as necessary but far less obvious.</li>
+</ul>
+</li>
+<li>
+<p><strong>Step 1: Using sequence diagram</strong></p>
+<ul>
+<li>lightweight way of acquiring a design intention about an interaction. It provides a simple way to experiment with different object arrangements and message passing schemes between objects. It brings clarity to your thoughts and provide a vehicle to collaborate and communicate with others.</li>
+<li><strong>should this receiver be responsible for responding to this message</strong></li>
+<li><strong>I need to send this message, who should respond to it.</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Step 2: asking for “what” instead of telling “how”</strong></p>
+<ul>
+<li><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/060cae03cbf2f83b6cabe209a2188313/e2e58/novice-vs-intermediate-experienced.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 55.69620253164557%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABgElEQVQoz3WS6Y7CMAyE+/7PBuIXEmy5ex+0lKuFFmb1eTcIVlpLUVonnhmP40nS4XBQHMfKskx935PS8/m0fb/fK4oiO8vzXI/H43V2uVwUhqHlqe+6Tt4wDKrr2i4c6lpVVX0AQjb0vQElcaz7/S4XdVXper1aDkAIPBJRGNkBRRC4QG0YhGqaxv4phMiRnc9npWmqzWajIi8s7wFS5LmCIDB174BcQP18Prci1L6rb9vWSFCGwtPpJM8d5Flmfv31kOja1lTSMgJcAIZN+Ot/+Wqa4w8gyGEQqCzKD4XE7XYzEgjo4O9QEEOOTiDwnBcozNLUJuVUA3RsGisEGFvY3TkW9L8D4yXYUAAoy/I1NdomaHG9XtuzAIhvfHJBfjKZmL+73e715LyiKDSdTm35vm8HsGPDarWyyywA2MnTMoSj0Ujj8ViLxcJEmUI84xL+sL97CMFsNtNyuTSF7t9NG3LydJAkifno6Z9APkDb7dbUsbti5zPkDIKFt3j5DdjZSuenrXloAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="compare-designers"
+        title="compare-designers"
+        src="/static/060cae03cbf2f83b6cabe209a2188313/f058b/novice-vs-intermediate-experienced.png"
+        srcset="/static/060cae03cbf2f83b6cabe209a2188313/c26ae/novice-vs-intermediate-experienced.png 158w,
+/static/060cae03cbf2f83b6cabe209a2188313/6bdcf/novice-vs-intermediate-experienced.png 315w,
+/static/060cae03cbf2f83b6cabe209a2188313/f058b/novice-vs-intermediate-experienced.png 630w,
+/static/060cae03cbf2f83b6cabe209a2188313/40601/novice-vs-intermediate-experienced.png 945w,
+/static/060cae03cbf2f83b6cabe209a2188313/e2e58/novice-vs-intermediate-experienced.png 1069w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></li>
+</ul>
+</li>
+<li>
+<p><strong>Step 3: seeking for context independence</strong></p>
+<ul>
+<li>use <a href="./../growing-object-orented-guided-by-tests-summary/index.md#dependency-injection">dependency injection</a> to seek context independent</li>
+</ul>
+</li>
+<li>
+<p><strong>Step 4: trusting other objects</strong></p>
+<ul>
+<li>I know what I want, I trust you to do your part</li>
+</ul>
+</li>
+<li>
+<p><strong>use messages to discover objects</strong></p>
+<ul>
+<li><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/505b811edbac0792a7d939d4ca0dbc75/59000/discovering-objects.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 55.06329113924051%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABpUlEQVQoz11S2ZKCMBDk/79s98WtWi+ERBTkUoiAAipqb/W4YY+uSk0lM+npOZzz+QzP87DdbuG6Ltq2BXG/3xEEgZzFYoE0SeXt8Xjger0iDEMsl0tsNhvM53PUVYVhGOBcLhf4noemOSFNEjRNI4Qk1krjdDrhcDhA+Up8jFdK4Xg8Ik1TPJ9P1HWNYL2Wu8OHLMswmXzAmCOApwQRSRxj+jkVEquOYDXvb+9jNXynOlqHDyx75booSwMLBhdFAVOW4mewTUQfVdHv+z7athMfj8PM4TZE13XY7XZSok3C/rlLF33Xjx8Ia/MsE7VVVeF2u70I9/s9tFJCwF7RWjAwCiMZglVJsLyyLLHWGvs8R9/3YwUOG0kn5adZJp+JvutEIcuL4xir1Qp13YwbQKy1wmw2k+pIKlPGP1A6y2YAE9HybowZkzGGpMaUknj4/jPchteUf/eHBFTDtbArwyo4aTsQ9o1D4TtRFAdsggB5nv8otIQES+XScuGtZUuYgKqZkHe2gpZJeCjmD6ElpQL2JooiJEkie8pjy+Zik1RrLZZEFl+rHkasK1PWdgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="discovering objects"
+        title="discovering objects"
+        src="/static/505b811edbac0792a7d939d4ca0dbc75/f058b/discovering-objects.png"
+        srcset="/static/505b811edbac0792a7d939d4ca0dbc75/c26ae/discovering-objects.png 158w,
+/static/505b811edbac0792a7d939d4ca0dbc75/6bdcf/discovering-objects.png 315w,
+/static/505b811edbac0792a7d939d4ca0dbc75/f058b/discovering-objects.png 630w,
+/static/505b811edbac0792a7d939d4ca0dbc75/59000/discovering-objects.png 917w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></li>
+<li>it’s completely reasonable that <code class="language-text">Customer</code> would send <code class="language-text">suitable_trips</code> message. It is exactly what <code class="language-text">Customer</code> wants. The problem is not with the sender, it is with the receiver. You have not yet identified an object whose responsibility it is to implement this method</li>
+<li>sequence diagram keep the focus on messages and allow you to form a rational intention about the first thing to assert in a test. Switching your attention from objects to messages allows you to concentrate on designing an application built upon public interfaces</li>
+</ul>
+</li>
+</ul>
+<h3>create explicit interfaces</h3>
+<ul>
+<li>method in the public interface should
+<ul>
+<li>be explicitly identified as such</li>
+<li>be more about what than how</li>
+<li>have names that, so far as you can anticipate, will not change.</li>
+<li>take a hash as an options parameter.</li>
+</ul>
+</li>
+<li>create test for public interfaces.
+<ul>
+<li>do not test private methods. If you must, segregate those test from the ones of the public methods</li>
+</ul>
+</li>
+</ul>
+<h3>honor the public interfaces of others</h3>
+<ul>
+<li>if your design forces the use of a private method in another class, re-think your design</li>
+<li>a dependency on a private method of an external framework is a form of technical debt</li>
+</ul>
+<h3>exercise caution when depending on private interfaces</h3>
+<ul>
+<li>if you must depend on private interface, use <a href="../dependency-injection/index.md#isolate-the-dependency">isolate the dependency</a>
+<ul>
+<li>this prevent calls from multiple places</li>
+</ul>
+</li>
+</ul>
+<h3>minimize context</h3>
+<ul>
+<li>create public methods that allow senders to get what they want without knowing how your class does it</li>
+<li>if you fae a class with an ill-defined public interface you have these options
+<ul>
+<li>define a new well-defined method for that class’ public interface.</li>
+<li>create a wrapper class with a well defined public interface</li>
+<li>create a single wrapping method and put it in your own class</li>
+</ul>
+</li>
+</ul>
+<h3><a href="../growing-object-orented-guided-by-tests-summary/index.md#tell-dont-ask---law-of-demeter">the law of demeter</a></h3>
 <h1>practising refactoring</h1>
 <ul>
 <li>if you simultaneously change many things and something breaks, you’re forced to understand everything in order to fix anything.</li>
@@ -840,7 +1147,7 @@ LYRICS
 <li><a href="./open-closed-flowchart.png">open closed flowchart</a></li>
 </ul>
 <h1>separating responsibilities</h1>
-<h2>managing dependencies</h2>
+<h2><a href="/dependency-injection">managing dependencies</a></h2>
 <h2>acquiring behavior through inheritance</h2>
 <h2>writing inheritable code</h2>
 <h1>Achieving openness</h1>
@@ -860,6 +1167,7 @@ LYRICS
 <p>“the rules of thumb for testing private methods are: never write them, and if you do, never ever test them, unless of course it makes sense to do so.”</p>
 <p>“making existing code open to a new requirement often requires identifying and naming abstractions. The flocking rules concentrate on turning difference into sameness, and thus are useful tools for unearthing abstractions.”</p>
 <p>“the best tests are loosely coupled to the underlying code and test everything once and in the proper place. They add value without increasing costs”</p>
+<p>“only talk to your immediate neighbors”</p>
 <h1>References</h1>
 <p><a href="https://github.com/keyvanakbary/learning-notes/blob/master/books/99-bottles-of-oop.md">https://github.com/keyvanakbary/learning-notes/blob/master/books/99-bottles-of-oop.md</a>
 <a href="https://github.com/serodriguez68/poodr-notes">https://github.com/serodriguez68/poodr-notes</a>
