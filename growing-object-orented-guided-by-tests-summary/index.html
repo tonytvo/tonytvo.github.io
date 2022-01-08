@@ -32,7 +32,11 @@
 </ul>
 <h1>Key ideas</h1>
 <ul>
-<li>practice TDD as a design technique and not as a testing technique</li>
+<li><strong>practice TDD as a design technique and not only as a testing technique.</strong>
+<ul>
+<li>strangely, if we try to practise TDD as only a testing technique, then eventually we will become bored by our own defects and begin to notice “this code is annoying to test”, which points to design problems. After that, we’re practising TDD also as a design technique.</li>
+</ul>
+</li>
 <li><strong>Software development as a learning process.</strong>
 <ul>
 <li><strong>Expose uncertainly early by testing our assumption as early as possible</strong></li>
@@ -40,7 +44,7 @@
 </li>
 <li><strong>we use mock objects to identify the essential interactions between modules/objects. This leads to more effective abstractions, which reduces the cost of changing the cost safely over time.</strong></li>
 <li>Stub queries; expect actions</li>
-<li><strong>Write code that depends as little as possible on its context.</strong></li>
+<li><strong>Write code that depends as little as possible on its context. It leas to more reusable code</strong></li>
 <li><strong>programming by intention</strong></li>
 </ul>
 <h1>Test-Driven Development (TDD) and Quality</h1>
@@ -428,8 +432,12 @@
 <ul>
 <li><strong>A system is easier to change if its objects are context-independent: each object has no built-in knowledge about the system.</strong></li>
 <li><strong>The effect of the context-independence rule on a system of objects is to make their relationships explicit, defined separately from the objects themselves. This simplifies the objects and manages the relationships</strong>.</li>
+<li>it’ just extract parameters on details.</li>
 </ul>
 <h1><a href="/dependency-injection">Dependency Injection</a></h1>
+<ul>
+<li>this is big topic and it’s better to be covered as in separate <a href="/dependency-injection">summary</a></li>
+</ul>
 <h1>The sample project - analysis</h1>
 <ul>
 <li>the business rules can be summarized with the following picture</li>
@@ -516,6 +524,7 @@
 <p>“try to follow the four-step TDD cycle (fail, report (make the diagnostics clear), pass, refactor).”</p>
 <h1>References</h1>
 <ul>
+<li><a href="https://blog.thecodewhisperer.com/series#dependency-inversion-principle-dip">https://blog.thecodewhisperer.com/series#dependency-inversion-principle-dip</a></li>
 <li><a href="http://www.growing-object-oriented-software.com/code.html">http://www.growing-object-oriented-software.com/code.html</a></li>
 <li><a href="https://fsharpforfunandprofit.com/posts/dependencies/">https://fsharpforfunandprofit.com/posts/dependencies/</a></li>
 <li><a href="https://blog.ploeh.dk/2017/01/27/from-dependency-injection-to-dependency-rejection/">https://blog.ploeh.dk/2017/01/27/from-dependency-injection-to-dependency-rejection/</a></li>

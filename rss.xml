@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 04 Jan 2022 01:23:43 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity simplifying code incomprehensibly concise speculatively…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 08 Jan 2022 16:54:13 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity simplifying code incomprehensibly concise speculatively…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Table of Contents&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#goalskey-ideascontext&quot;&gt;Goals/Key Ideas/Context&lt;/a&gt;&lt;/li&gt;
@@ -2121,7 +2121,11 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;/ul&gt;
 &lt;h1&gt;Key ideas&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;practice TDD as a design technique and not as a testing technique&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;practice TDD as a design technique and not only as a testing technique.&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;strangely, if we try to practise TDD as only a testing technique, then eventually we will become bored by our own defects and begin to notice “this code is annoying to test”, which points to design problems. After that, we’re practising TDD also as a design technique.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Software development as a learning process.&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Expose uncertainly early by testing our assumption as early as possible&lt;/strong&gt;&lt;/li&gt;
@@ -2129,7 +2133,7 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;we use mock objects to identify the essential interactions between modules/objects. This leads to more effective abstractions, which reduces the cost of changing the cost safely over time.&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Stub queries; expect actions&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Write code that depends as little as possible on its context.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Write code that depends as little as possible on its context. It leas to more reusable code&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;programming by intention&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;Test-Driven Development (TDD) and Quality&lt;/h1&gt;
@@ -2517,8 +2521,12 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;A system is easier to change if its objects are context-independent: each object has no built-in knowledge about the system.&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;The effect of the context-independence rule on a system of objects is to make their relationships explicit, defined separately from the objects themselves. This simplifies the objects and manages the relationships&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;it’ just extract parameters on details.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;&lt;a href=&quot;/dependency-injection&quot;&gt;Dependency Injection&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;this is big topic and it’s better to be covered as in separate &lt;a href=&quot;/dependency-injection&quot;&gt;summary&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1&gt;The sample project - analysis&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;the business rules can be summarized with the following picture&lt;/li&gt;
@@ -2605,6 +2613,7 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;p&gt;“try to follow the four-step TDD cycle (fail, report (make the diagnostics clear), pass, refactor).”&lt;/p&gt;
 &lt;h1&gt;References&lt;/h1&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.thecodewhisperer.com/series#dependency-inversion-principle-dip&quot;&gt;https://blog.thecodewhisperer.com/series#dependency-inversion-principle-dip&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.growing-object-oriented-software.com/code.html&quot;&gt;http://www.growing-object-oriented-software.com/code.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://fsharpforfunandprofit.com/posts/dependencies/&quot;&gt;https://fsharpforfunandprofit.com/posts/dependencies/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://blog.ploeh.dk/2017/01/27/from-dependency-injection-to-dependency-rejection/&quot;&gt;https://blog.ploeh.dk/2017/01/27/from-dependency-injection-to-dependency-rejection/&lt;/a&gt;&lt;/li&gt;
@@ -4400,7 +4409,25 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;p&gt;&lt;a href=&quot;https://www.beyondintractability.org/bksum/fisher-getting&quot;&gt;https://www.beyondintractability.org/bksum/fisher-getting&lt;/a&gt;
 &lt;a href=&quot;https://readingraphics.com/book-summary-getting-to-yes/&quot;&gt;https://readingraphics.com/book-summary-getting-to-yes/&lt;/a&gt;
 &lt;a href=&quot;https://www.whatyouwilllearn.com/book/getting-to-yes/&quot;&gt;https://www.whatyouwilllearn.com/book/getting-to-yes/&lt;/a&gt;
-&lt;a href=&quot;https://www.sage.exchange/post/getting-to-yes-summary&quot;&gt;https://www.sage.exchange/post/getting-to-yes-summary&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[dependency injection summary]]></title><description><![CDATA[recognizing dependencies solution strategies Dependency retention: We don’t worry about managing dependencies; we just inline and hard-code…]]></description><link>https://tonytvo.github.io/dependency-injection/</link><guid isPermaLink="false">https://tonytvo.github.io/dependency-injection/</guid><pubDate>Thu, 23 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;recognizing dependencies&lt;/h1&gt;
+&lt;a href=&quot;https://www.sage.exchange/post/getting-to-yes-summary&quot;&gt;https://www.sage.exchange/post/getting-to-yes-summary&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[dependency injection summary]]></title><description><![CDATA[key ideas when we push implementation details up the call stack, we leave behind the minimum context needed to do the work. This makes the…]]></description><link>https://tonytvo.github.io/dependency-injection/</link><guid isPermaLink="false">https://tonytvo.github.io/dependency-injection/</guid><pubDate>Thu, 23 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;key ideas&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;when we push implementation details up the call stack, we leave behind the minimum context needed to do the work. This makes the code as reusable as possible.
+&lt;ul&gt;
+&lt;li&gt;injecting an interface up front is &lt;em&gt;making a guess&lt;/em&gt; about the minimum context needed inside the method.&lt;/li&gt;
+&lt;li&gt;overtime, to make the tests “better”, we extract details up into parameters. And then sometimes we extract interfaces on those new parameters. This is “fine tuning” the interactions between objects, gradually/relentlessly removing irrelevant details.&lt;/li&gt;
+&lt;li&gt;the progress is usually similar to:
+&lt;ul&gt;
+&lt;li&gt;function contains implementation details, forcing us into integrated tests (Example: database access inside domain code)&lt;/li&gt;
+&lt;li&gt;extract and inject implementation details, which improves the design but often doesn’t make the tests nicer&lt;/li&gt;
+&lt;li&gt;extract interfaces on the implementation detail parameters, which makes the tests nicer (Example: replace database access with repository pattern)&lt;/li&gt;
+&lt;li&gt;invert the dependency, so that hte client knows there is database access. Client “injects” the data instead of the source of the data. (Example: replace repository pattern with Logic Sandwich/impure-pure-impure)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;DIP encourage us to isolate the steps from the workflow. This generally makes it easier to rearrange the steps into new workflows (new features are less expensive to build), but perhaps, more importantly, this makes it safer to reimplement some Steps to take advantage of distributed computing and parallelization.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;recognizing dependencies&lt;/h1&gt;
 &lt;h1&gt;solution strategies&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Dependency retention: We don’t worry about managing dependencies; we just inline and hard-code everything!&lt;/li&gt;
@@ -4412,7 +4439,8 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;h2&gt;isolate the dependency&lt;/h2&gt;
 &lt;h1&gt;Quotes&lt;/h1&gt;
 &lt;h1&gt;References&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;https://fsharpforfunandprofit.com/posts/dependencies/&quot;&gt;https://fsharpforfunandprofit.com/posts/dependencies/&lt;/a&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.thecodewhisperer.com/series#dependency-inversion-principle-dip&quot;&gt;https://blog.thecodewhisperer.com/series#dependency-inversion-principle-dip&lt;/a&gt;
+&lt;a href=&quot;https://fsharpforfunandprofit.com/posts/dependencies/&quot;&gt;https://fsharpforfunandprofit.com/posts/dependencies/&lt;/a&gt;
 &lt;a href=&quot;https://blog.thecodewhisperer.com/series#dependency-inversion-principle-dip&quot;&gt;https://blog.thecodewhisperer.com/series#dependency-inversion-principle-dip&lt;/a&gt;
 &lt;a href=&quot;https://blog.ploeh.dk/2017/01/27/from-dependency-injection-to-dependency-rejection/&quot;&gt;https://blog.ploeh.dk/2017/01/27/from-dependency-injection-to-dependency-rejection/&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[tools of titans summary]]></title><description><![CDATA[Goals success, however you define it, is achievable if you collect the right field-tested beliefs and habits. the superheroes you have in…]]></description><link>https://tonytvo.github.io/tools-of-titans/</link><guid isPermaLink="false">https://tonytvo.github.io/tools-of-titans/</guid><pubDate>Wed, 22 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Goals&lt;/h1&gt;
 &lt;ul&gt;
