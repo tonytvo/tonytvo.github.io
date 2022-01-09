@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 09 Jan 2022 13:01:15 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity simplifying code incomprehensibly concise speculatively…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 09 Jan 2022 16:49:53 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity simplifying code incomprehensibly concise speculatively…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Table of Contents&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#goalskey-ideascontext&quot;&gt;Goals/Key Ideas/Context&lt;/a&gt;&lt;/li&gt;
@@ -82,22 +82,25 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#practising-refactoring&quot;&gt;practising refactoring&lt;/a&gt;
+&lt;li&gt;&lt;a href=&quot;#practising-refactoring-horizontally&quot;&gt;practising refactoring horizontally&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#technique-2-the-open-closed-flowchart&quot;&gt;technique 2: the open-closed flowchart&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#replacing-difference-with-sameness&quot;&gt;replacing difference with sameness&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#equivocating-about-names&quot;&gt;Equivocating about names&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#obeying-the-liskov-substitution-principle&quot;&gt;obeying the liskov substitution principle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#depending-on-abstraction&quot;&gt;depending on abstraction&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#separating-responsibilities&quot;&gt;separating responsibilities&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#managing-dependencies&quot;&gt;managing dependencies&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#acquiring-behavior-through-inheritance&quot;&gt;acquiring behavior through inheritance&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#writing-inheritable-code&quot;&gt;writing inheritable code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#combing-objects-with-composition&quot;&gt;combing objects with composition&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#achieving-openness&quot;&gt;Achieving openness&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#sharing-role-behavior-with-modules&quot;&gt;Sharing role behavior with modules&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#combing-objects-with-composition&quot;&gt;combing objects with composition&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#acquiring-behavior-through-inheritance&quot;&gt;acquiring behavior through inheritance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#writing-inheritable-code&quot;&gt;writing inheritable code&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#quotes&quot;&gt;Quotes&lt;/a&gt;&lt;/li&gt;
@@ -105,6 +108,13 @@
 &lt;/ul&gt;
 &lt;h1&gt;Goals/Key Ideas/Context&lt;/h1&gt;
 &lt;ul&gt;
+&lt;li&gt;concrete, repeatable techniques that can be employed to improve applications
+&lt;ul&gt;
+&lt;li&gt;strive for simplicity, focus on smells, concentrate on difference, take small steps, follow the flocking rules, refactoring under green, fix easy problem first&lt;/li&gt;
+&lt;li&gt;following the horizontal path means writing code to produce every kind of verse before diverging onto tangents to DRY out small bits of code that the verses have in common. The goal is to quickly maximize the number of whole examples before extracting abstractions from their parts.&lt;/li&gt;
+&lt;li&gt;in addition, deal with new requirements by first refactoring existing code to be open to them and then writing new code to meet them.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;you should not reach for abstractions, but instead you should resist them until they absolutely insist upon being created.&lt;/li&gt;
 &lt;li&gt;writing code is the process of working your way to the next stable end point, not the end point itself&lt;/li&gt;
 &lt;li&gt;If your goal is to write straightforward code, these metrics (ABC metrics) point you toward &lt;code class=&quot;language-text&quot;&gt;Shameless Green&lt;/code&gt;&lt;/li&gt;
@@ -747,6 +757,37 @@ LYRICS
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;code is open to a new requirement when you can meet the new requirement without changing the existing code.&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;when faced with a new requirement, first rearrange the existing code such that it’s open to the new feature, and once that’s complete, then add the new code&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/beb634152ef3ea46417aff0098c3a968/dc333/open-closed-flowchart.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100.63291139240506%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAACLElEQVQ4y5VU2W7iQBD0/38Vwl7zQABDJDuGLGbN5Quwue+KqpNGFgnJpqWRPVdNdVfNGNfrFdoY0+lUWjl0/nK5SH+32yGOY2RZhjRNkSQJ5vO5rDHKGzmx2WxkAxcul0ucTifcx2q1wmKxwPl8lnl+uZf7jP1+j8lkAt/3EccR0iTFeDwWBrZto9frIYoiGQvDUNY6joPtdoNO20HNriFNMhRFge12C2M4HAp1buJiUicY/9frtaRBFjzYdV3psyRkM5sl8DxP5vI8fwfkpNaGgwQkUF7kn1IlSwbZkC3TZsuyFKPRCMfjEQaZHA6HmyisRdtxpC73giig9slca6ikBJDIGhTC919ugOW4V/8+RGUFVIaDwQD9fl/+lQVVZZrdblcOpBN0fdl2AshTmTJDa1LkuXwZLDgFowgcY+HZ51cByyEMmR6FsEwLnc4zWs0mLMtCvV5Hp90WoWazGVar5YcHc1n/EJCp0Tr0Ij3WaDbQ9X1JnT6kP8Nw+HGLJsKUaT8E1JTJ5F8YitJkpNdMfcf6MVX2vwUsq0wwz3VvKnOOgrARkF+mrTb5EZAn0zblse9sch+fbMO0qaLa5itrlF+nr0W5XpGmCVpOE9VqFaZpot15vhm5DPBTGLyTTJOAL54L266h1Wzhbz8Q5R/V6iEgwXhHgyDAYb+H03Lw9NS4vYm/BtQfsgmCPiqVCv5YJl5fe6L4rwF1IZ0fxZE8Q6wr38TybfhfwDdxLwRfm/kfGAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;open closed flowchart&quot;
+        title=&quot;open closed flowchart&quot;
+        src=&quot;/static/beb634152ef3ea46417aff0098c3a968/f058b/open-closed-flowchart.png&quot;
+        srcset=&quot;/static/beb634152ef3ea46417aff0098c3a968/c26ae/open-closed-flowchart.png 158w,
+/static/beb634152ef3ea46417aff0098c3a968/6bdcf/open-closed-flowchart.png 315w,
+/static/beb634152ef3ea46417aff0098c3a968/f058b/open-closed-flowchart.png 630w,
+/static/beb634152ef3ea46417aff0098c3a968/dc333/open-closed-flowchart.png 938w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;the trick to successfully improving code that contains many flaws is to isolate and correct them one at a time&lt;/li&gt;
 &lt;li&gt;if you are unclear about how to make it open, the way forward is to start removing code smells&lt;/li&gt;
 &lt;li&gt;you should never change tests during a refactoring, if your tests are flawed such that they interfere with refactoring, improve them first, and then refactor&lt;/li&gt;
@@ -1127,7 +1168,10 @@ LYRICS
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;&lt;a href=&quot;../growing-object-orented-guided-by-tests-summary/index.md#tell-dont-ask---law-of-demeter&quot;&gt;the law of demeter&lt;/a&gt;&lt;/h3&gt;
-&lt;h1&gt;practising refactoring&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;this is covered as a &lt;a href=&quot;(../growing-object-orented-guided-by-tests-summary/index.md#tell-dont-ask---law-of-demeter)&quot;&gt;tell don’t ask&lt;/a&gt; from growing object oriented objects guided by tests&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;practising refactoring horizontally&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;if you simultaneously change many things and something breaks, you’re forced to understand everything in order to fix anything.&lt;/li&gt;
 &lt;li&gt;making a slew of simultaneous changes is not refactoring - it’s rehacktoring.&lt;/li&gt;
@@ -1138,18 +1182,148 @@ LYRICS
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;real refactoring is comfortingly predictable, and saves brainpower for more thought provoking challenges.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;technique 2: the open-closed flowchart&lt;/h2&gt;
+&lt;li&gt;if the non-default branch is implemented first, the default has to be set to something that actually meets the condition and so makes the &lt;code class=&quot;language-text&quot;&gt;true&lt;/code&gt; branch execute.
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;./open-closed-flowchart.png&quot;&gt;open closed flowchart&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Therefore, implementing the non-default branch first places a slightly greater burden on you.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;seeking stable landing points
+&lt;ul&gt;
+&lt;li&gt;code is read many more times than it is written, so anything that increases understandability lowers costs. Next, and just as important, consistent code enables future refactorings.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;taking bigger steps
+&lt;ul&gt;
+&lt;li&gt;if you take bigger steps and the tests begin to fail, there’s something about the problem that you don’t understand, if this happens, don’t push forward and refactor under red. Undo, return to green, and make incremental changes until you regain clarity&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;discovering deeper abstractions
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;successor&lt;/code&gt; is important, and separating it from &lt;code class=&quot;language-text&quot;&gt;quantity&lt;/code&gt; gives both methods a single responsibility if you conflate &lt;code class=&quot;language-text&quot;&gt;choosing-what-to-sing-for-any-number(quantity)&lt;/code&gt; with deciding-what-verse-to-sing-next(successor), the resulting method would be harder to understand, future refactorings would be more difficult, and attempts to change the code for 1 idea might accidentally break it for other.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;replacing difference with sameness&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#follow-the-flocking-rules&quot;&gt;follow the flocking rules&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Equivocating about names&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;the challenge is identifying the current concept and coming up with a good name.
+&lt;ul&gt;
+&lt;li&gt;It must represent a smaller abstraction within that larger one.&lt;/li&gt;
+&lt;li&gt;names should neither be too general nor too specific. For example, thing is too broad, and ItOrOne too narrow.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;when perfect name for a concept is elusive, there are couple strategies moving forward
+&lt;ul&gt;
+&lt;li&gt;time box 5 - 10 minutes to ponder, and then use the best name that you can come up with (usually with thesaurus in hand)&lt;/li&gt;
+&lt;li&gt;instantly choose a meaningless name like &lt;code class=&quot;language-text&quot;&gt;foo&lt;/code&gt;. Like there is no point wasting time thinking about it now, the name will be obvious later&lt;/li&gt;
+&lt;li&gt;you can ask someone else, like fellow programmers or customers for help.&lt;/li&gt;
+&lt;li&gt;Arlo’s naming process
+&lt;ul&gt;
+&lt;li&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/5f2f3d81d8a36d5ac599cb571b930d0b/2bef9/naming-as-a-process.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACE0lEQVQoz21SS2sTURTOD/EPuHXpxh/hxoUgunBZcCsIXfpARDCK7roQUWipVG0JiNhFTLHNo0pJmsTETCaTZDLPe+dx596ZT+5J22w8cDjnm3vPd+ec75SKooB2bYzH6AwMxElKOJUKbYvB4YIwj1x0+/uIY5/wsN5Er/bzol7Hkk7yfPlhaM7w+fsBpguP8DwU2KrP8GscEDbGDXzafQBrekK48vwl9p6+QML4ivCcPU1T+EEAa24jDENIKSGEgLkIEfBY30YUcUysU3DOkBcFJn8GMHt9nLGtCDWnUgoyyyhmWUaEpmnCmphY2DZs24ZhGHAcj86U9jxHQR3myJVatfw/02MQaYLA9+A4DhzHBQtjCJESwcU9pVZFmlAqhZDH9BrNacERRvFShKzAxOXnpfg7aiIVktCg3sLwpLMUc2bj934VmqFkuz5qrTZ0HBljrG8eo1xpg/kOtqttrG0coDNyMOi38PjZVezsPgFLJF7duov7V65hOpvj27sPWLt0GT+2dlDSIlSPjuEGIcYTC4+2m3j4pQvP8/D18BT3NmpoDBxYZg9v39/BXmUdLBKolN/g9Y3b8O0FukcNlK/fxOHmR5SEyMB4RGJos32OuRdSniQJPN+nDaDWGAPn0XIrhEDIOTIpaaaMM8qXa3O2OvpAZoLUllLRXzIWEqF+0Pd9uK5L66Q9iiKKVKdVVwr/AIzd6L5L2ZIyAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;arlo naming process&quot;
+        title=&quot;arlo naming process&quot;
+        src=&quot;/static/5f2f3d81d8a36d5ac599cb571b930d0b/f058b/naming-as-a-process.png&quot;
+        srcset=&quot;/static/5f2f3d81d8a36d5ac599cb571b930d0b/c26ae/naming-as-a-process.png 158w,
+/static/5f2f3d81d8a36d5ac599cb571b930d0b/6bdcf/naming-as-a-process.png 315w,
+/static/5f2f3d81d8a36d5ac599cb571b930d0b/f058b/naming-as-a-process.png 630w,
+/static/5f2f3d81d8a36d5ac599cb571b930d0b/40601/naming-as-a-process.png 945w,
+/static/5f2f3d81d8a36d5ac599cb571b930d0b/2bef9/naming-as-a-process.png 1024w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.thecodewhisperer.com/permalink/a-model-for-improving-names&quot;&gt;J.B. Rainsberger’s model for improving name&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0c57769429c29305c7fdddfc21c888dc/29007/jbrains-naming-process.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 77.21518987341771%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAADB0lEQVQ4y22UWXPiRhSF+f9/II+pPDg1STyVl2TG8TjjhUXGBhvMDmZREAhJCCRAEtr6S3V7mZpUblWXuqpvn3vu6XNVAME+TOjoPn3dp9iy+b285Et9hb46MDJ2WNsIIXLCKGK5mNPttBmPx8zncx4fG1Q0jXang207ogAIYx2Ik8t/xHXLEWcPrji5GIli2xKPE0/89GUmmlNPyJC5lpeKMEHt39Z+vxdRFJFlmSggBJt9guPH7KOU7mDI6cffMIw5MsJjgh8mFPsutndkakU0Jlv+qq84r5u0ph5tPRCNoUOapoohQRAQhYECqNXq/PzhF9Zrl//GPjiqQrphEiU55jbiYbxhMpkI7faOYxyLQp7ndHs9wjBSlyzLZjh6ZjqbKV1Gz2O1LMvCWBj0+gPSJH4v0m53uCmWxN39PcZiIQpr1+Wx2VSgf19eUtFucRybVrtDt9dnMp0qkPtancFwhHZbpdF8ot3psjRNbMfh69WVuL4pSiJSQ8mwy2Q6U0Cm43FWszl/dNh6O4LgoJgsFkuqd3fMdJ3dbkd/MESrVhk9P8sCIk1TmSYKjhex2b20u/N97G3Ix9KCmyebfr/H3Fios5VlcVMqcTgcvtM1jmMOQSCkdHmei8J4FfBr2SRLYjxvS3DM+XBtcFoyOETftJLMSpUKz+Mx0iKvAEg3SbvIrwLU7ZDzxhrP88nSBHsboPU33HRc4jSXyQqw2Wrxx+cziuWyYitDnr0xe92LwuGY4foBvr/Dtky0pxk/Xhj88GmK7UWv3oWt5+GuHcIw5H9CJUmayodJfESfG4xGA2o9g5PrBZXumrbuk722pnwYZZjugfrQQetYXDwYDHSbvm6L+84UP0hefPjQaOL5vro0XW44LZtqKmThLMvVHKeZ4GlsK9tcXF5zVapwfvGV6n2N5lNLSI1Vy/LZ//x8xtwwXl4tSQiPGWn2IrhiJwTHVDAyXKrVWwVa1jR1Z7PZ4Lqbby07zlpZQT6/BHj9B7yDvQHGSabmfb12WCxNXPe70Xy3zb8TIVuTNduu3QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;jb naming process&quot;
+        title=&quot;jb naming process&quot;
+        src=&quot;/static/0c57769429c29305c7fdddfc21c888dc/f058b/jbrains-naming-process.png&quot;
+        srcset=&quot;/static/0c57769429c29305c7fdddfc21c888dc/c26ae/jbrains-naming-process.png 158w,
+/static/0c57769429c29305c7fdddfc21c888dc/6bdcf/jbrains-naming-process.png 315w,
+/static/0c57769429c29305c7fdddfc21c888dc/f058b/jbrains-naming-process.png 630w,
+/static/0c57769429c29305c7fdddfc21c888dc/40601/jbrains-naming-process.png 945w,
+/static/0c57769429c29305c7fdddfc21c888dc/78612/jbrains-naming-process.png 1260w,
+/static/0c57769429c29305c7fdddfc21c888dc/29007/jbrains-naming-process.png 1600w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;deriving names from responsibilities
+&lt;ul&gt;
+&lt;li&gt;focus on the difference and find abstraction one level higher&lt;/li&gt;
+&lt;li&gt;when creating an abstraction, first describe its responsibility as you understand it at the moment, then choose a name which reflects the responsibility. The effort you put into selecting good names right now pays off by making it easier to recognize perfect names later.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;obeying the liskov substitution principle&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;every piece of knowledge is a dependency, and the way that &lt;code class=&quot;language-text&quot;&gt;quantity&lt;/code&gt; is written requires verse to know too many things. If &lt;code class=&quot;language-text&quot;&gt;quantity&lt;/code&gt; were more trustworthy, &lt;code class=&quot;language-text&quot;&gt;verse&lt;/code&gt; could know less&lt;/li&gt;
+&lt;li&gt;the idea of reducing the number of dependencies imposed upon message senders by requiring the receivers return trustworthy objects is a generalization of the Liskov Substitution Principle.&lt;/li&gt;
+&lt;li&gt;liskov, in plain terms, requires that objects be what they promise they are. When using inheritance, you must be able to freely substitute an instance of a subclass for an instance of its superclass. Subclasses, by definitions, are all their superclasses, plus more, so this substitution should always work.&lt;/li&gt;
+&lt;li&gt;liskov violations force message senders to have knowledge of the various return types, and to either treat them differently or convert them into something consistent.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;depending on abstraction&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;abstraction provide name for the consolidated code, allowing the name to be as a shortcut for an idea, independent of its current implementation&lt;/li&gt;
+&lt;li&gt;the abstractions tell you where your code relies upon an idea. But to get this benefit, you must refer to an abstraction in every place where it applies.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;separating responsibilities&lt;/h1&gt;
 &lt;h2&gt;&lt;a href=&quot;/manage-dependencies&quot;&gt;managing dependencies&lt;/a&gt;&lt;/h2&gt;
-&lt;h2&gt;acquiring behavior through inheritance&lt;/h2&gt;
-&lt;h2&gt;writing inheritable code&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;this topic is covered as separate &lt;a href=&quot;/manage-dependencies&quot;&gt;summary blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;combing objects with composition&lt;/h2&gt;
 &lt;h1&gt;Achieving openness&lt;/h1&gt;
 &lt;h2&gt;Sharing role behavior with modules&lt;/h2&gt;
-&lt;h2&gt;combing objects with composition&lt;/h2&gt;
+&lt;h2&gt;acquiring behavior through inheritance&lt;/h2&gt;
+&lt;h2&gt;writing inheritable code&lt;/h2&gt;
 &lt;h1&gt;Quotes&lt;/h1&gt;
 &lt;p&gt;“Writing code is the process of working your way to the next stable end point, not the end point itself”&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;“DRY makes sense when it reduces the cost of change more than it increases the cost of understanding the code”&lt;/strong&gt;&lt;/p&gt;
@@ -4409,7 +4583,14 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;p&gt;&lt;a href=&quot;https://www.beyondintractability.org/bksum/fisher-getting&quot;&gt;https://www.beyondintractability.org/bksum/fisher-getting&lt;/a&gt;
 &lt;a href=&quot;https://readingraphics.com/book-summary-getting-to-yes/&quot;&gt;https://readingraphics.com/book-summary-getting-to-yes/&lt;/a&gt;
 &lt;a href=&quot;https://www.whatyouwilllearn.com/book/getting-to-yes/&quot;&gt;https://www.whatyouwilllearn.com/book/getting-to-yes/&lt;/a&gt;
-&lt;a href=&quot;https://www.sage.exchange/post/getting-to-yes-summary&quot;&gt;https://www.sage.exchange/post/getting-to-yes-summary&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[managing dependencies summary]]></title><description><![CDATA[key ideas move implementation choices up the call stack when we push implementation details up the call stack, we leave behind the minimum…]]></description><link>https://tonytvo.github.io/manage-dependencies/</link><guid isPermaLink="false">https://tonytvo.github.io/manage-dependencies/</guid><pubDate>Thu, 23 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;key ideas&lt;/h1&gt;
+&lt;a href=&quot;https://www.sage.exchange/post/getting-to-yes-summary&quot;&gt;https://www.sage.exchange/post/getting-to-yes-summary&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[system performance summary]]></title><description><![CDATA[key ideas Quotes References https://www.infoq.com/articles/practical-monitoring-mike-julian/
+https://www.amazon.ca/Systems-Performance…]]></description><link>https://tonytvo.github.io/system-performance-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/system-performance-summary/</guid><pubDate>Thu, 23 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;key ideas&lt;/h1&gt;
+&lt;h1&gt;Quotes&lt;/h1&gt;
+&lt;h1&gt;References&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.infoq.com/articles/practical-monitoring-mike-julian/&quot;&gt;https://www.infoq.com/articles/practical-monitoring-mike-julian/&lt;/a&gt;
+&lt;a href=&quot;https://www.amazon.ca/Systems-Performance-Brendan-Gregg-ebook/dp/B08J5QZPNC&quot;&gt;https://www.amazon.ca/Systems-Performance-Brendan-Gregg-ebook/dp/B08J5QZPNC&lt;/a&gt;
+&lt;a href=&quot;https://www.amazon.ca/Java-Performance-Depth-Advice-Programming-ebook/dp/B084RY5438/&quot;&gt;https://www.amazon.ca/Java-Performance-Depth-Advice-Programming-ebook/dp/B084RY5438/&lt;/a&gt;
+&lt;a href=&quot;https://github.com/ScottOaks/JavaPerformanceTuning/tree/master/SecondEdition&quot;&gt;https://github.com/ScottOaks/JavaPerformanceTuning/tree/master/SecondEdition&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[managing dependencies summary]]></title><description><![CDATA[key ideas move implementation choices up the call stack when we push implementation details up the call stack, we leave behind the minimum…]]></description><link>https://tonytvo.github.io/manage-dependencies/</link><guid isPermaLink="false">https://tonytvo.github.io/manage-dependencies/</guid><pubDate>Thu, 23 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;key ideas&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://blog.thecodewhisperer.com/permalink/consequences-of-dependency-inversion-principle&quot;&gt;move implementation choices up the call stack&lt;/a&gt;
 &lt;ul&gt;
@@ -4471,7 +4652,8 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;ul&gt;
 &lt;li&gt;instead of explicitly calling another class’ name inside a method, pass the instance of other classes as an argument to the method&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;isolate instance creation&lt;/h2&gt;
+&lt;h2&gt;isolate the dependency&lt;/h2&gt;
+&lt;h3&gt;isolate instance creation&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;use when it’s difficult to get rid of “the name of another class” dependency type through dependency injection&lt;/li&gt;
 &lt;li&gt;move external class name call to the initialize method &lt;a href=&quot;https://github.com/serodriguez68/poodr-notes/blob/master/code_examples/chapter_3.rb#L73-L83&quot;&gt;example code&lt;/a&gt;&lt;/li&gt;
@@ -4539,14 +4721,9 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;/ul&gt;
 &lt;h4&gt;finding dependencies that matter.&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;not all dependencies are harmful.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;reference the following frameworks to help organize your thoughts and help you find which of your classes are dangerous.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;span
+&lt;li&gt;not all dependencies are harmful.&lt;/li&gt;
+&lt;li&gt;reference the following frameworks to help organize your thoughts and help you find which of your classes are dangerous.&lt;/li&gt;
+&lt;li&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
     &gt;
@@ -4576,25 +4753,33 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
         decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Dependency retention: We don’t worry about managing dependencies; we just inline and hard-code everything!&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Dependency rejection, an excellent term (coined by Mark Seemann, above), in which we avoid having any dependencies in our core business logic. We do this by keeping all I/O and other impure code all the “edges” of our domain.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Dependency parameterization, in which we pass in all dependencies as parameters. This is commonly used in conjunction with partial application.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Dependency injection and the reader monad, in which we pass in dependencies after the rest of the code has already been constructed. This is typically done via constructor injection in OO-style code, and in FP-style principle, this corresponds to the Reader monad.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Dependency interpretation: We replace calls to dependencies with a data structure interpreted later. This approach is used in both OO (interpreter pattern) and FP (e.g. free monads)&lt;/p&gt;
-&lt;/li&gt;
+    &lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;isolate the dependency&lt;/h2&gt;
+&lt;h3&gt;Dependency retention&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;We don’t worry about managing dependencies; we just inline and hard-code everything!&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://fsharpforfunandprofit.com/posts/dependencies/&quot;&gt;https://fsharpforfunandprofit.com/posts/dependencies/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Dependency rejection&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;an excellent term (coined by Mark Seemann, above), in which we avoid having any dependencies in our core business logic. We do this by keeping all I/O and other impure code all the “edges” of our domain.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://fsharpforfunandprofit.com/posts/dependencies/&quot;&gt;https://fsharpforfunandprofit.com/posts/dependencies/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Dependency parameterization&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Dependency parameterization, in which we pass in all dependencies as parameters. This is commonly used in conjunction with partial application.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://fsharpforfunandprofit.com/posts/dependencies/&quot;&gt;https://fsharpforfunandprofit.com/posts/dependencies/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Dependency injection and the reader monad&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;in which we pass in dependencies after the rest of the code has already been constructed. This is typically done via constructor injection in OO-style code, and in FP-style principle, this corresponds to the Reader monad.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://fsharpforfunandprofit.com/posts/dependencies/&quot;&gt;https://fsharpforfunandprofit.com/posts/dependencies/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Dependency interpretation&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;We replace calls to dependencies with a data structure interpreted later. This approach is used in both OO (interpreter pattern) and FP (e.g. free monads)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://fsharpforfunandprofit.com/posts/dependencies/&quot;&gt;https://fsharpforfunandprofit.com/posts/dependencies/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1&gt;Quotes&lt;/h1&gt;
 &lt;p&gt;“abstractions should not depend upon details. Details should depend upon abstractions”&lt;/p&gt;
 &lt;p&gt;“push details up towards the client and push generic patterns down towards the server”&lt;/p&gt;
@@ -4602,14 +4787,7 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;h1&gt;References&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://blog.thecodewhisperer.com/series#dependency-inversion-principle-dip&quot;&gt;https://blog.thecodewhisperer.com/series#dependency-inversion-principle-dip&lt;/a&gt;
 &lt;a href=&quot;https://fsharpforfunandprofit.com/posts/dependencies/&quot;&gt;https://fsharpforfunandprofit.com/posts/dependencies/&lt;/a&gt;
-&lt;a href=&quot;https://blog.ploeh.dk/2017/01/27/from-dependency-injection-to-dependency-rejection/&quot;&gt;https://blog.ploeh.dk/2017/01/27/from-dependency-injection-to-dependency-rejection/&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[system performance summary]]></title><description><![CDATA[key ideas Quotes References https://www.infoq.com/articles/practical-monitoring-mike-julian/
-https://www.amazon.ca/Systems-Performance…]]></description><link>https://tonytvo.github.io/system-performance-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/system-performance-summary/</guid><pubDate>Thu, 23 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;key ideas&lt;/h1&gt;
-&lt;h1&gt;Quotes&lt;/h1&gt;
-&lt;h1&gt;References&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.infoq.com/articles/practical-monitoring-mike-julian/&quot;&gt;https://www.infoq.com/articles/practical-monitoring-mike-julian/&lt;/a&gt;
-&lt;a href=&quot;https://www.amazon.ca/Systems-Performance-Brendan-Gregg-ebook/dp/B08J5QZPNC&quot;&gt;https://www.amazon.ca/Systems-Performance-Brendan-Gregg-ebook/dp/B08J5QZPNC&lt;/a&gt;
-&lt;a href=&quot;https://www.amazon.ca/Java-Performance-Depth-Advice-Programming-ebook/dp/B084RY5438/&quot;&gt;https://www.amazon.ca/Java-Performance-Depth-Advice-Programming-ebook/dp/B084RY5438/&lt;/a&gt;
-&lt;a href=&quot;https://github.com/ScottOaks/JavaPerformanceTuning/tree/master/SecondEdition&quot;&gt;https://github.com/ScottOaks/JavaPerformanceTuning/tree/master/SecondEdition&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[tools of titans summary]]></title><description><![CDATA[Goals success, however you define it, is achievable if you collect the right field-tested beliefs and habits. the superheroes you have in…]]></description><link>https://tonytvo.github.io/tools-of-titans/</link><guid isPermaLink="false">https://tonytvo.github.io/tools-of-titans/</guid><pubDate>Wed, 22 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Goals&lt;/h1&gt;
+&lt;a href=&quot;https://blog.ploeh.dk/2017/01/27/from-dependency-injection-to-dependency-rejection/&quot;&gt;https://blog.ploeh.dk/2017/01/27/from-dependency-injection-to-dependency-rejection/&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[tools of titans summary]]></title><description><![CDATA[Goals success, however you define it, is achievable if you collect the right field-tested beliefs and habits. the superheroes you have in…]]></description><link>https://tonytvo.github.io/tools-of-titans/</link><guid isPermaLink="false">https://tonytvo.github.io/tools-of-titans/</guid><pubDate>Wed, 22 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Goals&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;success, however you define it, is achievable if you collect the right field-tested beliefs and habits.&lt;/li&gt;
 &lt;li&gt;the superheroes you have in your mind (idols, icons, titans, billionaires, etc.) are nearly all walking flaws who’ve maximized 1 or 2 strengths)

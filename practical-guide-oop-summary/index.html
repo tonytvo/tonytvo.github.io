@@ -85,22 +85,25 @@
 </li>
 </ul>
 </li>
-<li><a href="#practising-refactoring">practising refactoring</a>
+<li><a href="#practising-refactoring-horizontally">practising refactoring horizontally</a>
 <ul>
-<li><a href="#technique-2-the-open-closed-flowchart">technique 2: the open-closed flowchart</a></li>
+<li><a href="#replacing-difference-with-sameness">replacing difference with sameness</a></li>
+<li><a href="#equivocating-about-names">Equivocating about names</a></li>
+<li><a href="#obeying-the-liskov-substitution-principle">obeying the liskov substitution principle</a></li>
+<li><a href="#depending-on-abstraction">depending on abstraction</a></li>
 </ul>
 </li>
 <li><a href="#separating-responsibilities">separating responsibilities</a>
 <ul>
 <li><a href="#managing-dependencies">managing dependencies</a></li>
-<li><a href="#acquiring-behavior-through-inheritance">acquiring behavior through inheritance</a></li>
-<li><a href="#writing-inheritable-code">writing inheritable code</a></li>
+<li><a href="#combing-objects-with-composition">combing objects with composition</a></li>
 </ul>
 </li>
 <li><a href="#achieving-openness">Achieving openness</a>
 <ul>
 <li><a href="#sharing-role-behavior-with-modules">Sharing role behavior with modules</a></li>
-<li><a href="#combing-objects-with-composition">combing objects with composition</a></li>
+<li><a href="#acquiring-behavior-through-inheritance">acquiring behavior through inheritance</a></li>
+<li><a href="#writing-inheritable-code">writing inheritable code</a></li>
 </ul>
 </li>
 <li><a href="#quotes">Quotes</a></li>
@@ -108,6 +111,13 @@
 </ul>
 <h1>Goals/Key Ideas/Context</h1>
 <ul>
+<li>concrete, repeatable techniques that can be employed to improve applications
+<ul>
+<li>strive for simplicity, focus on smells, concentrate on difference, take small steps, follow the flocking rules, refactoring under green, fix easy problem first</li>
+<li>following the horizontal path means writing code to produce every kind of verse before diverging onto tangents to DRY out small bits of code that the verses have in common. The goal is to quickly maximize the number of whole examples before extracting abstractions from their parts.</li>
+<li>in addition, deal with new requirements by first refactoring existing code to be open to them and then writing new code to meet them.</li>
+</ul>
+</li>
 <li>you should not reach for abstractions, but instead you should resist them until they absolutely insist upon being created.</li>
 <li>writing code is the process of working your way to the next stable end point, not the end point itself</li>
 <li>If your goal is to write straightforward code, these metrics (ABC metrics) point you toward <code class="language-text">Shameless Green</code></li>
@@ -750,6 +760,37 @@ LYRICS
 <ul>
 <li><strong>code is open to a new requirement when you can meet the new requirement without changing the existing code.</strong></li>
 <li><strong>when faced with a new requirement, first rearrange the existing code such that it’s open to the new feature, and once that’s complete, then add the new code</strong></li>
+<li><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/beb634152ef3ea46417aff0098c3a968/dc333/open-closed-flowchart.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 100.63291139240506%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAACLElEQVQ4y5VU2W7iQBD0/38Vwl7zQABDJDuGLGbN5Quwue+KqpNGFgnJpqWRPVdNdVfNGNfrFdoY0+lUWjl0/nK5SH+32yGOY2RZhjRNkSQJ5vO5rDHKGzmx2WxkAxcul0ucTifcx2q1wmKxwPl8lnl+uZf7jP1+j8lkAt/3EccR0iTFeDwWBrZto9frIYoiGQvDUNY6joPtdoNO20HNriFNMhRFge12C2M4HAp1buJiUicY/9frtaRBFjzYdV3psyRkM5sl8DxP5vI8fwfkpNaGgwQkUF7kn1IlSwbZkC3TZsuyFKPRCMfjEQaZHA6HmyisRdtxpC73giig9slca6ikBJDIGhTC919ugOW4V/8+RGUFVIaDwQD9fl/+lQVVZZrdblcOpBN0fdl2AshTmTJDa1LkuXwZLDgFowgcY+HZ51cByyEMmR6FsEwLnc4zWs0mLMtCvV5Hp90WoWazGVar5YcHc1n/EJCp0Tr0Ij3WaDbQ9X1JnT6kP8Nw+HGLJsKUaT8E1JTJ5F8YitJkpNdMfcf6MVX2vwUsq0wwz3VvKnOOgrARkF+mrTb5EZAn0zblse9sch+fbMO0qaLa5itrlF+nr0W5XpGmCVpOE9VqFaZpot15vhm5DPBTGLyTTJOAL54L266h1Wzhbz8Q5R/V6iEgwXhHgyDAYb+H03Lw9NS4vYm/BtQfsgmCPiqVCv5YJl5fe6L4rwF1IZ0fxZE8Q6wr38TybfhfwDdxLwRfm/kfGAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="open closed flowchart"
+        title="open closed flowchart"
+        src="/static/beb634152ef3ea46417aff0098c3a968/f058b/open-closed-flowchart.png"
+        srcset="/static/beb634152ef3ea46417aff0098c3a968/c26ae/open-closed-flowchart.png 158w,
+/static/beb634152ef3ea46417aff0098c3a968/6bdcf/open-closed-flowchart.png 315w,
+/static/beb634152ef3ea46417aff0098c3a968/f058b/open-closed-flowchart.png 630w,
+/static/beb634152ef3ea46417aff0098c3a968/dc333/open-closed-flowchart.png 938w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></li>
 <li>the trick to successfully improving code that contains many flaws is to isolate and correct them one at a time</li>
 <li>if you are unclear about how to make it open, the way forward is to start removing code smells</li>
 <li>you should never change tests during a refactoring, if your tests are flawed such that they interfere with refactoring, improve them first, and then refactor</li>
@@ -1130,7 +1171,10 @@ LYRICS
 </li>
 </ul>
 <h3><a href="../growing-object-orented-guided-by-tests-summary/index.md#tell-dont-ask---law-of-demeter">the law of demeter</a></h3>
-<h1>practising refactoring</h1>
+<ul>
+<li>this is covered as a <a href="(../growing-object-orented-guided-by-tests-summary/index.md#tell-dont-ask---law-of-demeter)">tell don’t ask</a> from growing object oriented objects guided by tests</li>
+</ul>
+<h1>practising refactoring horizontally</h1>
 <ul>
 <li>if you simultaneously change many things and something breaks, you’re forced to understand everything in order to fix anything.</li>
 <li>making a slew of simultaneous changes is not refactoring - it’s rehacktoring.</li>
@@ -1141,18 +1185,148 @@ LYRICS
 </ul>
 </li>
 <li>real refactoring is comfortingly predictable, and saves brainpower for more thought provoking challenges.</li>
-</ul>
-<h2>technique 2: the open-closed flowchart</h2>
+<li>if the non-default branch is implemented first, the default has to be set to something that actually meets the condition and so makes the <code class="language-text">true</code> branch execute.
 <ul>
-<li><a href="./open-closed-flowchart.png">open closed flowchart</a></li>
+<li>Therefore, implementing the non-default branch first places a slightly greater burden on you.</li>
+</ul>
+</li>
+<li>seeking stable landing points
+<ul>
+<li>code is read many more times than it is written, so anything that increases understandability lowers costs. Next, and just as important, consistent code enables future refactorings.</li>
+</ul>
+</li>
+<li>taking bigger steps
+<ul>
+<li>if you take bigger steps and the tests begin to fail, there’s something about the problem that you don’t understand, if this happens, don’t push forward and refactor under red. Undo, return to green, and make incremental changes until you regain clarity</li>
+</ul>
+</li>
+<li>discovering deeper abstractions
+<ul>
+<li><code class="language-text">successor</code> is important, and separating it from <code class="language-text">quantity</code> gives both methods a single responsibility if you conflate <code class="language-text">choosing-what-to-sing-for-any-number(quantity)</code> with deciding-what-verse-to-sing-next(successor), the resulting method would be harder to understand, future refactorings would be more difficult, and attempts to change the code for 1 idea might accidentally break it for other.</li>
+</ul>
+</li>
+</ul>
+<h2>replacing difference with sameness</h2>
+<ul>
+<li><a href="#follow-the-flocking-rules">follow the flocking rules</a></li>
+</ul>
+<h2>Equivocating about names</h2>
+<ul>
+<li>the challenge is identifying the current concept and coming up with a good name.
+<ul>
+<li>It must represent a smaller abstraction within that larger one.</li>
+<li>names should neither be too general nor too specific. For example, thing is too broad, and ItOrOne too narrow.</li>
+</ul>
+</li>
+<li>when perfect name for a concept is elusive, there are couple strategies moving forward
+<ul>
+<li>time box 5 - 10 minutes to ponder, and then use the best name that you can come up with (usually with thesaurus in hand)</li>
+<li>instantly choose a meaningless name like <code class="language-text">foo</code>. Like there is no point wasting time thinking about it now, the name will be obvious later</li>
+<li>you can ask someone else, like fellow programmers or customers for help.</li>
+<li>Arlo’s naming process
+<ul>
+<li><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/5f2f3d81d8a36d5ac599cb571b930d0b/2bef9/naming-as-a-process.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACE0lEQVQoz21SS2sTURTOD/EPuHXpxh/hxoUgunBZcCsIXfpARDCK7roQUWipVG0JiNhFTLHNo0pJmsTETCaTZDLPe+dx596ZT+5J22w8cDjnm3vPd+ec75SKooB2bYzH6AwMxElKOJUKbYvB4YIwj1x0+/uIY5/wsN5Er/bzol7Hkk7yfPlhaM7w+fsBpguP8DwU2KrP8GscEDbGDXzafQBrekK48vwl9p6+QML4ivCcPU1T+EEAa24jDENIKSGEgLkIEfBY30YUcUysU3DOkBcFJn8GMHt9nLGtCDWnUgoyyyhmWUaEpmnCmphY2DZs24ZhGHAcj86U9jxHQR3myJVatfw/02MQaYLA9+A4DhzHBQtjCJESwcU9pVZFmlAqhZDH9BrNacERRvFShKzAxOXnpfg7aiIVktCg3sLwpLMUc2bj934VmqFkuz5qrTZ0HBljrG8eo1xpg/kOtqttrG0coDNyMOi38PjZVezsPgFLJF7duov7V65hOpvj27sPWLt0GT+2dlDSIlSPjuEGIcYTC4+2m3j4pQvP8/D18BT3NmpoDBxYZg9v39/BXmUdLBKolN/g9Y3b8O0FukcNlK/fxOHmR5SEyMB4RGJos32OuRdSniQJPN+nDaDWGAPn0XIrhEDIOTIpaaaMM8qXa3O2OvpAZoLUllLRXzIWEqF+0Pd9uK5L66Q9iiKKVKdVVwr/AIzd6L5L2ZIyAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="arlo naming process"
+        title="arlo naming process"
+        src="/static/5f2f3d81d8a36d5ac599cb571b930d0b/f058b/naming-as-a-process.png"
+        srcset="/static/5f2f3d81d8a36d5ac599cb571b930d0b/c26ae/naming-as-a-process.png 158w,
+/static/5f2f3d81d8a36d5ac599cb571b930d0b/6bdcf/naming-as-a-process.png 315w,
+/static/5f2f3d81d8a36d5ac599cb571b930d0b/f058b/naming-as-a-process.png 630w,
+/static/5f2f3d81d8a36d5ac599cb571b930d0b/40601/naming-as-a-process.png 945w,
+/static/5f2f3d81d8a36d5ac599cb571b930d0b/2bef9/naming-as-a-process.png 1024w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></li>
+</ul>
+</li>
+<li><a href="https://blog.thecodewhisperer.com/permalink/a-model-for-improving-names">J.B. Rainsberger’s model for improving name</a>
+<ul>
+<li><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/0c57769429c29305c7fdddfc21c888dc/29007/jbrains-naming-process.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 77.21518987341771%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAADB0lEQVQ4y22UWXPiRhSF+f9/II+pPDg1STyVl2TG8TjjhUXGBhvMDmZREAhJCCRAEtr6S3V7mZpUblWXuqpvn3vu6XNVAME+TOjoPn3dp9iy+b285Et9hb46MDJ2WNsIIXLCKGK5mNPttBmPx8zncx4fG1Q0jXang207ogAIYx2Ik8t/xHXLEWcPrji5GIli2xKPE0/89GUmmlNPyJC5lpeKMEHt39Z+vxdRFJFlmSggBJt9guPH7KOU7mDI6cffMIw5MsJjgh8mFPsutndkakU0Jlv+qq84r5u0ph5tPRCNoUOapoohQRAQhYECqNXq/PzhF9Zrl//GPjiqQrphEiU55jbiYbxhMpkI7faOYxyLQp7ndHs9wjBSlyzLZjh6ZjqbKV1Gz2O1LMvCWBj0+gPSJH4v0m53uCmWxN39PcZiIQpr1+Wx2VSgf19eUtFucRybVrtDt9dnMp0qkPtancFwhHZbpdF8ot3psjRNbMfh69WVuL4pSiJSQ8mwy2Q6U0Cm43FWszl/dNh6O4LgoJgsFkuqd3fMdJ3dbkd/MESrVhk9P8sCIk1TmSYKjhex2b20u/N97G3Ix9KCmyebfr/H3Fios5VlcVMqcTgcvtM1jmMOQSCkdHmei8J4FfBr2SRLYjxvS3DM+XBtcFoyOETftJLMSpUKz+Mx0iKvAEg3SbvIrwLU7ZDzxhrP88nSBHsboPU33HRc4jSXyQqw2Wrxx+cziuWyYitDnr0xe92LwuGY4foBvr/Dtky0pxk/Xhj88GmK7UWv3oWt5+GuHcIw5H9CJUmayodJfESfG4xGA2o9g5PrBZXumrbuk722pnwYZZjugfrQQetYXDwYDHSbvm6L+84UP0hefPjQaOL5vro0XW44LZtqKmThLMvVHKeZ4GlsK9tcXF5zVapwfvGV6n2N5lNLSI1Vy/LZ//x8xtwwXl4tSQiPGWn2IrhiJwTHVDAyXKrVWwVa1jR1Z7PZ4Lqbby07zlpZQT6/BHj9B7yDvQHGSabmfb12WCxNXPe70Xy3zb8TIVuTNduu3QAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="jb naming process"
+        title="jb naming process"
+        src="/static/0c57769429c29305c7fdddfc21c888dc/f058b/jbrains-naming-process.png"
+        srcset="/static/0c57769429c29305c7fdddfc21c888dc/c26ae/jbrains-naming-process.png 158w,
+/static/0c57769429c29305c7fdddfc21c888dc/6bdcf/jbrains-naming-process.png 315w,
+/static/0c57769429c29305c7fdddfc21c888dc/f058b/jbrains-naming-process.png 630w,
+/static/0c57769429c29305c7fdddfc21c888dc/40601/jbrains-naming-process.png 945w,
+/static/0c57769429c29305c7fdddfc21c888dc/78612/jbrains-naming-process.png 1260w,
+/static/0c57769429c29305c7fdddfc21c888dc/29007/jbrains-naming-process.png 1600w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></li>
+</ul>
+</li>
+<li>deriving names from responsibilities
+<ul>
+<li>focus on the difference and find abstraction one level higher</li>
+<li>when creating an abstraction, first describe its responsibility as you understand it at the moment, then choose a name which reflects the responsibility. The effort you put into selecting good names right now pays off by making it easier to recognize perfect names later.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>obeying the liskov substitution principle</h2>
+<ul>
+<li>every piece of knowledge is a dependency, and the way that <code class="language-text">quantity</code> is written requires verse to know too many things. If <code class="language-text">quantity</code> were more trustworthy, <code class="language-text">verse</code> could know less</li>
+<li>the idea of reducing the number of dependencies imposed upon message senders by requiring the receivers return trustworthy objects is a generalization of the Liskov Substitution Principle.</li>
+<li>liskov, in plain terms, requires that objects be what they promise they are. When using inheritance, you must be able to freely substitute an instance of a subclass for an instance of its superclass. Subclasses, by definitions, are all their superclasses, plus more, so this substitution should always work.</li>
+<li>liskov violations force message senders to have knowledge of the various return types, and to either treat them differently or convert them into something consistent.</li>
+</ul>
+<h2>depending on abstraction</h2>
+<ul>
+<li>abstraction provide name for the consolidated code, allowing the name to be as a shortcut for an idea, independent of its current implementation</li>
+<li>the abstractions tell you where your code relies upon an idea. But to get this benefit, you must refer to an abstraction in every place where it applies.</li>
 </ul>
 <h1>separating responsibilities</h1>
 <h2><a href="/manage-dependencies">managing dependencies</a></h2>
-<h2>acquiring behavior through inheritance</h2>
-<h2>writing inheritable code</h2>
+<ul>
+<li>this topic is covered as separate <a href="/manage-dependencies">summary blog</a></li>
+</ul>
+<h2>combing objects with composition</h2>
 <h1>Achieving openness</h1>
 <h2>Sharing role behavior with modules</h2>
-<h2>combing objects with composition</h2>
+<h2>acquiring behavior through inheritance</h2>
+<h2>writing inheritable code</h2>
 <h1>Quotes</h1>
 <p>“Writing code is the process of working your way to the next stable end point, not the end point itself”</p>
 <p><strong>“DRY makes sense when it reduces the cost of change more than it increases the cost of understanding the code”</strong></p>
