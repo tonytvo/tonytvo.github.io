@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tags/systemperformance/",
+    "result": {"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/system-performance-summary/"},"frontmatter":{"title":"system performance summary"}}}]}},"pageContext":{"tag":"systemperformance"}},
+    "staticQueryHashes": []}
