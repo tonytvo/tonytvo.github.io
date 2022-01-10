@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 09 Jan 2022 16:49:53 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity simplifying code incomprehensibly concise speculatively…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 10 Jan 2022 04:10:53 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity simplifying code incomprehensibly concise speculatively…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Table of Contents&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#goalskey-ideascontext&quot;&gt;Goals/Key Ideas/Context&lt;/a&gt;&lt;/li&gt;
@@ -93,6 +93,12 @@
 &lt;li&gt;&lt;a href=&quot;#separating-responsibilities&quot;&gt;separating responsibilities&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#managing-dependencies&quot;&gt;managing dependencies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#selecting-the-target-code-smell&quot;&gt;selecting the target code smell&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#extracting-classes&quot;&gt;extracting classes&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#modelling-abstractions&quot;&gt;modelling abstractions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#combing-objects-with-composition&quot;&gt;combing objects with composition&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -1318,6 +1324,95 @@ LYRICS
 &lt;h2&gt;&lt;a href=&quot;/manage-dependencies&quot;&gt;managing dependencies&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;this topic is covered as separate &lt;a href=&quot;/manage-dependencies&quot;&gt;summary blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;selecting the target code smell&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;the truth about refactoring is that it sometimes makes things worse, in which case your efforts serve gallantly to disprove an idea.&lt;/li&gt;
+&lt;li&gt;it’s entirely possible that you do not yet know what change will make it open. At this point, you must decide whether it’s better to proceed with additional modifications to teh code, or better to revert the previous change and take a different tack.&lt;/li&gt;
+&lt;li&gt;you must continue to be guided by code smells, and doing so requires that you identify the smells in the current code.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;superfluous differences raises the cost of reading code, and increases the difficulty of future refactorings.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;identifying patterns in code
+&lt;ul&gt;
+&lt;li&gt;one way to get better at identifying smells is to practice describing the characteristics/patterns of code. Including any patterns that you see, and things you like, hate, or don’t understand.&lt;/li&gt;
+&lt;li&gt;the following questions draw attention to a number of interesting characteristics of the code as it’s written so far:
+&lt;ul&gt;
+&lt;li&gt;do any method have the same shape?&lt;/li&gt;
+&lt;li&gt;do any method take an argument of the same name?&lt;/li&gt;
+&lt;li&gt;do argument of the same name always mean the same thing?&lt;/li&gt;
+&lt;li&gt;if you were going to break this class into 2 pieces, where’s the dividing line?&lt;/li&gt;
+&lt;li&gt;do the tests in the conditionals have any thing in common?&lt;/li&gt;
+&lt;li&gt;how many branches do the conditionals have?&lt;/li&gt;
+&lt;li&gt;do the methods contain any code other than the conditional?&lt;/li&gt;
+&lt;li&gt;does each method depend more on the argument that got passed, or on the class as a whole?&lt;/li&gt;
+&lt;li&gt;these eight questions group certain methods together. The same-shaped, same kind of conditional testing, bottle number taking, argument-depending, flocked five methods fall into one group, and the song, verses, and verse methods into another.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;insisting upon messages
+&lt;ul&gt;
+&lt;li&gt;as an oo practitioner, when you see a conditional, the hairs on your neck should stand up. You should feel entitled to send messages to objects. It means that objects are missing and suggests that subsequent refactorings are needed to reveal them.&lt;/li&gt;
+&lt;li&gt;Collaborators must be brought together in useful combinations, and assembling these combinations requires knowing which objects are suitable.&lt;/li&gt;
+&lt;li&gt;there’s a big difference between a conditional that selects the correct object and one that supplies behavior. The first is acceptable and generally unavaidable. THe second suggests that you’re missing objects in your domain.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;squint test rule
+&lt;ul&gt;
+&lt;li&gt;put the code of interest on your screen&lt;/li&gt;
+&lt;li&gt;lean back&lt;/li&gt;
+&lt;li&gt;squint your eyes such that you can still see the code, but can no longer read it&lt;/li&gt;
+&lt;li&gt;look for:
+&lt;ul&gt;
+&lt;li&gt;change in shape, and&lt;/li&gt;
+&lt;li&gt;change in color&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;changes in indentation reveal the presense of conditionals, the more nested level of conditionals, the more complexed/complicated the code site.&lt;/li&gt;
+&lt;li&gt;changes in color indicate difference in the level of abstraction. A method that intermixes many colors tells a story that will be difficult to follow.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;analyzing the “flocked five” (&lt;code class=&quot;language-text&quot;&gt;quantity&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;container&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;action&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;pronoun&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;successor&lt;/code&gt;) using the above questions
+&lt;ul&gt;
+&lt;li&gt;do any methods have the same shape?
+&lt;ul&gt;
+&lt;li&gt;they all have the same shape according to squint tests&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;do any methods take an argument of the same name?
+&lt;ul&gt;
+&lt;li&gt;yes, the flocked five methods take number as an argument and the arguments represent the bottle number rather than a verse number from the argument number of verse method.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;having multiple methods that take the same argument (indicate duplicate concept, not duplicate name) is a code smell. In an ideal world, each different concept would have its own unique, precise name, and there would be no ambiguity.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;if you were going to break this class into 2 pieces, where’s the dividing line?
+&lt;ul&gt;
+&lt;li&gt;after verse and before the flocked five methods.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;do the tests in the conditionals have anything in common?
+&lt;ul&gt;
+&lt;li&gt;test for &lt;code class=&quot;language-text&quot;&gt;number&lt;/code&gt; to be exactly equal to another value&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;testing for equality has several benefits over the alternatives. Most obviously, it narrows the range of things that meet condition. This reduces the difficulty of debugging errors. Testing of equality also makes the code more precise, and this precision enables future refactorings.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;how many branches do the conditionals have?&lt;/li&gt;
+&lt;li&gt;do the methods contain any code other than the conditional?
+&lt;ul&gt;
+&lt;li&gt;no&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;do methods that take &lt;code class=&quot;language-text&quot;&gt;number&lt;/code&gt; as an argument depend more on &lt;code class=&quot;language-text&quot;&gt;number&lt;/code&gt;, or more on the class as a whole?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;extracting classes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Primitive obsession&lt;/em&gt; is when you use one of the built-in data types to represent a concept in your domain. Obsessing on a primitive results in code that passes built-in types around and supplies behavior for them.&lt;/li&gt;
+&lt;li&gt;use &lt;em&gt;Extract class&lt;/em&gt; to create a home for the domain concepts in place of the primitive.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;modelling abstractions&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;it’s easy to imagine creating objects that stand in for things, but the power of OO is that it lets you model ideas, things that don’t physically exist. Modellable ideas often lie dormant in interactions between objects.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;combing objects with composition&lt;/h2&gt;
 &lt;h1&gt;Achieving openness&lt;/h1&gt;
