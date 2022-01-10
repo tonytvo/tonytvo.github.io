@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 10 Jan 2022 04:10:53 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity simplifying code incomprehensibly concise speculatively…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 10 Jan 2022 05:00:45 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity simplifying code incomprehensibly concise speculatively…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Table of Contents&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#goalskey-ideascontext&quot;&gt;Goals/Key Ideas/Context&lt;/a&gt;&lt;/li&gt;
@@ -97,6 +97,7 @@
 &lt;li&gt;&lt;a href=&quot;#extracting-classes&quot;&gt;extracting classes&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#modelling-abstractions&quot;&gt;modelling abstractions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#naming-classes&quot;&gt;naming classes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#combing-objects-with-composition&quot;&gt;combing objects with composition&lt;/a&gt;&lt;/li&gt;
@@ -1347,6 +1348,11 @@ LYRICS
 &lt;li&gt;these eight questions group certain methods together. The same-shaped, same kind of conditional testing, bottle number taking, argument-depending, flocked five methods fall into one group, and the song, verses, and verse methods into another.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;trust the process
+&lt;ul&gt;
+&lt;li&gt;if you adhere to a recipe and tests start failing, it’s likely that there’s something about the problem that you don’t yet understand.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;insisting upon messages
 &lt;ul&gt;
 &lt;li&gt;as an oo practitioner, when you see a conditional, the hairs on your neck should stand up. You should feel entitled to send messages to objects. It means that objects are missing and suggests that subsequent refactorings are needed to reveal them.&lt;/li&gt;
@@ -1413,6 +1419,12 @@ LYRICS
 &lt;h3&gt;modelling abstractions&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;it’s easy to imagine creating objects that stand in for things, but the power of OO is that it lets you model ideas, things that don’t physically exist. Modellable ideas often lie dormant in interactions between objects.&lt;/li&gt;
+&lt;li&gt;experienced OO programmers deftly create virtual worlds in which ideas are as real as physical things.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;naming classes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;naming methods at one higher level of abstraction than their current implementation.&lt;/li&gt;
+&lt;li&gt;refer to &lt;a href=&quot;#equivocating-about-names&quot;&gt;equivocating about names&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;combing objects with composition&lt;/h2&gt;
 &lt;h1&gt;Achieving openness&lt;/h1&gt;
