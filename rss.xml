@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 13 Jan 2022 01:58:20 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity simplifying code incomprehensibly concise speculatively…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 13 Jan 2022 02:25:32 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity simplifying code incomprehensibly concise speculatively…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Table of Contents&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#goalskey-ideascontext&quot;&gt;Goals/Key Ideas/Context&lt;/a&gt;&lt;/li&gt;
@@ -1441,6 +1441,9 @@ LYRICS
 &lt;h1&gt;Achieving openness&lt;/h1&gt;
 &lt;h2&gt;Sharing role behavior with modules&lt;/h2&gt;
 &lt;h2&gt;acquiring behavior through inheritance&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2&gt;writing inheritable code&lt;/h2&gt;
 &lt;h1&gt;Quotes&lt;/h1&gt;
 &lt;p&gt;“Writing code is the process of working your way to the next stable end point, not the end point itself”&lt;/p&gt;
@@ -1457,6 +1460,7 @@ LYRICS
 &lt;p&gt;“making existing code open to a new requirement often requires identifying and naming abstractions. The flocking rules concentrate on turning difference into sameness, and thus are useful tools for unearthing abstractions.”&lt;/p&gt;
 &lt;p&gt;“the best tests are loosely coupled to the underlying code and test everything once and in the proper place. They add value without increasing costs”&lt;/p&gt;
 &lt;p&gt;“only talk to your immediate neighbors”&lt;/p&gt;
+&lt;p&gt;“Inheritance is for &lt;strong&gt;specialization&lt;/strong&gt;, NOT for sharing code”&lt;/p&gt;
 &lt;h1&gt;References&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/keyvanakbary/learning-notes/blob/master/books/99-bottles-of-oop.md&quot;&gt;https://github.com/keyvanakbary/learning-notes/blob/master/books/99-bottles-of-oop.md&lt;/a&gt;
 &lt;a href=&quot;https://github.com/serodriguez68/poodr-notes&quot;&gt;https://github.com/serodriguez68/poodr-notes&lt;/a&gt;
@@ -1984,6 +1988,7 @@ LYRICS
 &lt;p&gt;“the string is a stark data structure, and everywhere it is passed, there is much duplication of process. It is a perfect vehicle for hiding information.”&lt;/p&gt;
 &lt;p&gt;“When we take the trouble to express the domain clearly, we often find that we have more options.”&lt;/p&gt;
 &lt;p&gt;“try to follow the four-step TDD cycle (fail, report (make the diagnostics clear), pass, refactor).”&lt;/p&gt;
+&lt;p&gt;“test doubles are fine, but don’t stop there if you can invert the dependency and turn expectations into stubs… or even better, replace the stub with the value it returns.”&lt;/p&gt;
 &lt;h1&gt;References&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://blog.thecodewhisperer.com/series#dependency-inversion-principle-dip&quot;&gt;https://blog.thecodewhisperer.com/series#dependency-inversion-principle-dip&lt;/a&gt;&lt;/li&gt;
@@ -2917,6 +2922,7 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;/ul&gt;
 &lt;h1&gt;Quotes&lt;/h1&gt;
 &lt;p&gt;“make asynchronous tests detect success as quickly as possible so that they provide rapid feedback”&lt;/p&gt;
+&lt;p&gt;“test doubles are fine, but don’t stop there if you can invert the dependency and turn expectations into stubs… or even better, replace the stub with the value it returns.”&lt;/p&gt;
 &lt;h1&gt;References&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.jamesshore.com/v2/blog/2018/testing-without-mocks&quot;&gt;https://www.jamesshore.com/v2/blog/2018/testing-without-mocks&lt;/a&gt;&lt;/li&gt;
