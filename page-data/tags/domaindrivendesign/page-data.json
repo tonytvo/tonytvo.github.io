@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-tags-js",
     "path": "/tags/domaindrivendesign/",
-    "result": {"data":{"allMarkdownRemark":{"totalCount":2,"edges":[{"node":{"fields":{"slug":"/implement-domain-driven-design/"},"frontmatter":{"title":"Implementing domain driven design summary"}}},{"node":{"fields":{"slug":"/ddd-with-legacy-code/"},"frontmatter":{"title":"DDD with legacy code"}}}]}},"pageContext":{"tag":"domaindrivendesign"}},
+    "result": {"data":{"allMarkdownRemark":{"totalCount":2,"edges":[{"node":{"fields":{"slug":"/ddd-with-legacy-code/"},"frontmatter":{"title":"DDD with legacy code"}}},{"node":{"fields":{"slug":"/implement-domain-driven-design/"},"frontmatter":{"title":"Implementing domain driven design summary"}}}]}},"pageContext":{"tag":"domaindrivendesign"}},
     "staticQueryHashes": []}
