@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-tags-js",
     "path": "/tags/selftestingcode/",
-    "result": {"data":{"allMarkdownRemark":{"totalCount":3,"edges":[{"node":{"fields":{"slug":"/growing-object-orented-guided-by-tests-summary/"},"frontmatter":{"title":"Growing object-oriented guided by tests summary"}}},{"node":{"fields":{"slug":"/listen-to-tests/"},"frontmatter":{"title":"Listen to tests, test smells and patterns"}}},{"node":{"fields":{"slug":"/yet-another-interpretation-pyramid-tests/"},"frontmatter":{"title":"Yet another interpretation of pyramid tests"}}}]}},"pageContext":{"tag":"selftestingcode"}},
+    "result": {"data":{"allMarkdownRemark":{"totalCount":3,"edges":[{"node":{"fields":{"slug":"/listen-to-tests/"},"frontmatter":{"title":"Listen to tests, test smells and patterns"}}},{"node":{"fields":{"slug":"/growing-object-orented-guided-by-tests-summary/"},"frontmatter":{"title":"Growing object-oriented guided by tests summary"}}},{"node":{"fields":{"slug":"/yet-another-interpretation-pyramid-tests/"},"frontmatter":{"title":"Yet another interpretation of pyramid tests"}}}]}},"pageContext":{"tag":"selftestingcode"}},
     "staticQueryHashes": []}

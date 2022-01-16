@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 13 Jan 2022 02:25:32 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity simplifying code incomprehensibly concise speculatively…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 16 Jan 2022 05:29:17 GMT</lastBuildDate><item><title><![CDATA[practical guide to object oriented design]]></title><description><![CDATA[Table of Contents Table of Contents Goals/Key Ideas/Context rediscovering simplicity simplifying code incomprehensibly concise speculatively…]]></description><link>https://tonytvo.github.io/practical-guide-oop-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/practical-guide-oop-summary/</guid><pubDate>Fri, 31 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Table of Contents&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Table of Contents&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#goalskey-ideascontext&quot;&gt;Goals/Key Ideas/Context&lt;/a&gt;&lt;/li&gt;
@@ -106,7 +106,12 @@
 &lt;li&gt;&lt;a href=&quot;#achieving-openness&quot;&gt;Achieving openness&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#sharing-role-behavior-with-modules&quot;&gt;Sharing role behavior with modules&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#acquiring-behavior-through-inheritance&quot;&gt;acquiring behavior through inheritance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#acquiring-behavior-through-inheritance&quot;&gt;acquiring behavior through inheritance&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#understanding-classical-inheritance&quot;&gt;understanding classical inheritance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#recognizing-where-to-use-inheritance&quot;&gt;recognizing where to use inheritance&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#writing-inheritable-code&quot;&gt;writing inheritable code&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -1441,8 +1446,27 @@ LYRICS
 &lt;h1&gt;Achieving openness&lt;/h1&gt;
 &lt;h2&gt;Sharing role behavior with modules&lt;/h2&gt;
 &lt;h2&gt;acquiring behavior through inheritance&lt;/h2&gt;
+&lt;h3&gt;understanding classical inheritance&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;a mechanism for automatic message delegation. It defines a forwarding path for not-understood messages.???&lt;/li&gt;
+&lt;li&gt;messages are forwarded from subclass to superclass.&lt;/li&gt;
+&lt;li&gt;inheritance is for specialization, NOT for sharing code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;recognizing where to use inheritance&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;the problem that inheritance solves: highly related types that share common behavior but differ along some dimension (single class with several different but related types)&lt;/li&gt;
+&lt;li&gt;here is a typical progression for problems that inheritance solves:
+&lt;ul&gt;
+&lt;li&gt;your code starts with a concrete class
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/serodriguez68/poodr-notes/blob/master/code_examples/chapter_6.rb#L2-L29&quot;&gt;example of a concrete bicycle class&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h2&gt;then you start to embedding multiple types into that class&lt;/h2&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;writing inheritable code&lt;/h2&gt;
 &lt;h1&gt;Quotes&lt;/h1&gt;
@@ -1461,555 +1485,14 @@ LYRICS
 &lt;p&gt;“the best tests are loosely coupled to the underlying code and test everything once and in the proper place. They add value without increasing costs”&lt;/p&gt;
 &lt;p&gt;“only talk to your immediate neighbors”&lt;/p&gt;
 &lt;p&gt;“Inheritance is for &lt;strong&gt;specialization&lt;/strong&gt;, NOT for sharing code”&lt;/p&gt;
+&lt;p&gt;“no matter how complicated the code, the receiving object ultimately handles any message in one of two ways. It either responds directly or it passes the message on to some other object for a response.”&lt;/p&gt;
 &lt;h1&gt;References&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/keyvanakbary/learning-notes/blob/master/books/99-bottles-of-oop.md&quot;&gt;https://github.com/keyvanakbary/learning-notes/blob/master/books/99-bottles-of-oop.md&lt;/a&gt;
 &lt;a href=&quot;https://github.com/serodriguez68/poodr-notes&quot;&gt;https://github.com/serodriguez68/poodr-notes&lt;/a&gt;
 &lt;a href=&quot;https://matteopallini.com/bottles-oop-summary/&quot;&gt;https://matteopallini.com/bottles-oop-summary/&lt;/a&gt;
 &lt;a href=&quot;https://blog.cleancoder.com/uncle-bob/2013/05/27/TheTransformationPriorityPremise.html&quot;&gt;https://blog.cleancoder.com/uncle-bob/2013/05/27/TheTransformationPriorityPremise.html&lt;/a&gt;
 &lt;a href=&quot;https://lionadi.wordpress.com/2020/12/04/oop-tdd-99-bottles-notes-part-1-simplicity/&quot;&gt;https://lionadi.wordpress.com/2020/12/04/oop-tdd-99-bottles-notes-part-1-simplicity/&lt;/a&gt;
-&lt;a href=&quot;https://gist.github.com/speric/31ae0987d21eac1d4f87&quot;&gt;https://gist.github.com/speric/31ae0987d21eac1d4f87&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Growing object-oriented guided by tests summary]]></title><description><![CDATA[Key ideas Test-Driven Development (TDD) and Quality TDD as a design technique Communication over classification mock roles not objects tell…]]></description><link>https://tonytvo.github.io/growing-object-orented-guided-by-tests-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/growing-object-orented-guided-by-tests-summary/</guid><pubDate>Wed, 29 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#key-ideas&quot;&gt;Key ideas&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#test-driven-development-tdd-and-quality&quot;&gt;Test-Driven Development (TDD) and Quality&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#tdd-as-a-design-technique&quot;&gt;TDD as a design technique&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#communication-over-classification&quot;&gt;Communication over classification&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#mock-roles-not-objects&quot;&gt;mock roles not objects&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#tell-dont-ask---law-of-demeter&quot;&gt;tell, don’t ask - law of Demeter&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#kick-staring-the-test-driven-cycle&quot;&gt;Kick-staring the test-driven cycle&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#maintaining-the-test-drive-cycle&quot;&gt;Maintaining the test-drive cycle&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#design-for-maintainability&quot;&gt;Design for Maintainability&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#listen-to-tests-test-smells-and-patterns&quot;&gt;Listen to tests, test smells and patterns&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#techniques-for-introducing-new-objects&quot;&gt;techniques for introducing new objects&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#object-peer-stereotypes&quot;&gt;object peer stereotypes&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#dependencies&quot;&gt;dependencies&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#notification&quot;&gt;Notification&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#adjustments&quot;&gt;Adjustments&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#programming-by-intention&quot;&gt;Programming by intention&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#context-independence&quot;&gt;Context independence&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#dependency-injection&quot;&gt;Dependency Injection&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#the-sample-project---analysis&quot;&gt;The sample project - analysis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#quotes&quot;&gt;Quotes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#references&quot;&gt;References&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;Key ideas&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;practice TDD as a design technique and not only as a testing technique.&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;strangely, if we try to practise TDD as only a testing technique, then eventually we will become bored by our own defects and begin to notice “this code is annoying to test”, which points to design problems. After that, we’re practising TDD also as a design technique.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Software development as a learning process.&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Expose uncertainly early by testing our assumption as early as possible&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;we use mock objects to identify the essential interactions between modules/objects. This leads to more effective abstractions, which reduces the cost of changing the cost safely over time.&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Stub queries; expect actions&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Write code that depends as little as possible on its context. It leas to more reusable code&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;programming by intention&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;Test-Driven Development (TDD) and Quality&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Software development as a learning process.&lt;/li&gt;
-&lt;li&gt;The best approach a team can take is to use empirical feedback to learn about the system and its use and then apply it back to the system.&lt;/li&gt;
-&lt;li&gt;Development is incremental and iterative.
-&lt;ul&gt;
-&lt;li&gt;Incremental development builds a system feature by feature. Each feature is implemented as an end-to-end slice. As a result, the system is continuously integrated and ready for deployment.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/e772ae6d7ae6a4369beb1c330133321d/6af66/walking-skeleton-goos.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 41.139240506329116%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAAsTAAALEwEAmpwYAAABNUlEQVQY02XPS0vDQBAH8H7/u0dPFRVPfgcRQUEQH2n6srGWpq3ZZjeb3c3sPDSJVsRhDjN/+MHMYLlap5OZMS4Zz9LprLau1OZpNLaVE5J59jadLwjZGLvKc2ZBoHyzc94j0EDaAEXE+1CVGhoQkSxbbndFbHi7U0WhEJGZvfPeB4DGVh4ghhp+cVtE7doOyMQYqY8ZmZCYpLa+ti4CITI0+AczYo+5S+oylNtara23EAM1LhIxk1BkZoLwF8sBxzbZZCa5WeXzEhsKFIPI9V1ye59qp7OlFZF/Z/ceQADIhVhD94aMM75ayNnw/PL0YrIvXt/ND46xZb3smMTY1K4sSlXoUlciMjx6PDl+EGECec5fks20w+2V/I0PzRxcUMoopffKEAqFlOwIUZDEV7nWH1/4EyfIyyzKsqVlAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;walking skeleton&quot;
-        title=&quot;walking skeleton&quot;
-        src=&quot;/static/e772ae6d7ae6a4369beb1c330133321d/f058b/walking-skeleton-goos.png&quot;
-        srcset=&quot;/static/e772ae6d7ae6a4369beb1c330133321d/c26ae/walking-skeleton-goos.png 158w,
-/static/e772ae6d7ae6a4369beb1c330133321d/6bdcf/walking-skeleton-goos.png 315w,
-/static/e772ae6d7ae6a4369beb1c330133321d/f058b/walking-skeleton-goos.png 630w,
-/static/e772ae6d7ae6a4369beb1c330133321d/6af66/walking-skeleton-goos.png 640w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A system is deployable when the acceptance tests all pass.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;External quality&lt;/strong&gt; is how well the system meets the needs of its customer and users. It’s usually part of the contract to build&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Internal quality&lt;/strong&gt; is how well the system meets the needs of its developers and administrators. The point of maintaining internal quality is to allow us to modify the system’s behaviour safely and predictably because it minimizes the risk that a change will force significant rework.&lt;/li&gt;
-&lt;li&gt;Running end-to-end tests tells us about the external quality. Writing them tells us something about how well we understand the domain.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;TDD as a design technique&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;An object-oriented system: A web of collaborating objects.&lt;/li&gt;
-&lt;li&gt;Values vs objects
-&lt;ul&gt;
-&lt;li&gt;a value represents some fixed quantity or measurement, and it is immutable&lt;/li&gt;
-&lt;li&gt;an object, on the other hand, is an identity that might change state over time. It models a computational process or a stateful behaviour of the system.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;The communication between the objects can be seen through tests. So don’t try to model your system based on the entities (objects) alone, but on the communication between them.&lt;/li&gt;
-&lt;li&gt;Objects follow common communication patterns. The domain model is in these communication patterns&lt;/li&gt;
-&lt;li&gt;An object is an implementation of one or more roles:
-&lt;ul&gt;
-&lt;li&gt;roles a set of related responsibilities&lt;/li&gt;
-&lt;li&gt;responsibilities is an obligation to perform a task or know information&lt;/li&gt;
-&lt;li&gt;collaboration is an interaction of objects or roles.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;An object communicates by messages: it receives messages from other objects. It reacts by sending messages to other objects as well, as perhaps, returning a value or exception to the original sender. An object has a method of handling every type of message that it understands. In most cases, it encapsulates some internal state that it uses to coordinate its communication with other objects.&lt;/li&gt;
-&lt;li&gt;Make the intention of every test clear: distinguish between the tested functionality, the supporting infrastructure, and the object structure.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;write unit tests for object behaviour rather than the object’s methods&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;something that is difficult to test is probably poorly designed&lt;/li&gt;
-&lt;li&gt;The single responsibility principle
-&lt;ul&gt;
-&lt;li&gt;of the heuristic is that we should be able to describe what an object does without using any conjunction (“and,” “or”).&lt;/li&gt;
-&lt;li&gt;interacting with the composite object should be more straightforward than interacting with the components that compose its&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;The empty interface is sometimes used to mark a domain concept and show how it’s used in collaboration. Later, as we grow the code, we fill in the interface with methods to describe its behaviour.&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Only mock types that you own:
-&lt;ul&gt;
-&lt;li&gt;don’t use mocks for third-party code since it is usually not changeable as you don’t have control over it.&lt;/li&gt;
-&lt;li&gt;Use an adapter layer to implement interactions with third-party code. We test these adapters with focused integration tests to confirm our understanding of how the third-party API works.&lt;/li&gt;
-&lt;li&gt;We must focus on integrating our design and the external code. In integration, we have an abstraction to implement.&lt;/li&gt;
-&lt;li&gt;we must check that we’re using the third-party API correctly and adjust our abstract to fit if we find that our assumptions are incorrect&lt;/li&gt;
-&lt;li&gt;There are some exceptions where mocking third-party libraries can be helpful:
-&lt;ul&gt;
-&lt;li&gt;we might use mocks to simulate behaviour that is hard to trigger with the library such as testing a sequence of calls.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Communication over classification&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Use interfaces to name roles played by objects and describe the messages they’ll accept. Keep interfaces as narrow as possible.&lt;/li&gt;
-&lt;li&gt;We can use interfaces to define the available messages between objects, but we also need to express their communication protocols.&lt;/li&gt;
-&lt;li&gt;we use TDD with mock objects as a technique to make these communication protocols visible, as a tool for discovering them during development and as a description when revisiting the code&lt;/li&gt;
-&lt;li&gt;TDD with mock objects also encourages information hiding&lt;/li&gt;
-&lt;li&gt;if similar interfaces represent different concepts, we can make a point of making them distinct.
-&lt;ul&gt;
-&lt;li&gt;A decision to separate similar-looking interfaces is an excellent time to reconsider their naming&lt;/li&gt;
-&lt;li&gt;Another time to consider refactoring interfaces is when we start implementing them.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;mock roles not objects&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://jmock.org/oopsla2004.pdf&quot;&gt;mock roles not objects&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;todo: summarize the paper (extract key information that I understand)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;test double aka imposter
-&lt;ul&gt;
-&lt;li&gt;verify logic independently when code it depends on is unusable&lt;/li&gt;
-&lt;li&gt;avoid slow tests?&lt;/li&gt;
-&lt;li&gt;replace a component on which the SUT depends with a “test-specific equivalent”&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;/3d4a5d877d68ce68885b35c494afc3c0/test-double.gif&quot; alt=&quot;test double&quot;&gt;&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;/f08df5517d5f29a3d901b91217a0c6d3/types-of-test-doubles.gif&quot; alt=&quot;types of test double&quot;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;tell, don’t ask - law of Demeter&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;This style produces more flexible code because it’s easy to swap objects with the same role. The caller sees nothing of their internal structure or the rest of the system behind the role interface.&lt;/li&gt;
-&lt;li&gt;When messages are trusting and ask for what the sender wants instead of telling receiver how to behave, objects naturally evolve public interfaces that are flexible and reusable in novel and unexpected ways.&lt;/li&gt;
-&lt;li&gt;we ask when
-&lt;ul&gt;
-&lt;li&gt;getting information from values and collections&lt;/li&gt;
-&lt;li&gt;using a factory to create new objects&lt;/li&gt;
-&lt;li&gt;searching or filtering&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;We can specify how we expect the target object to communicate with its mock for a triggering event -&gt; expectations&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;we can use the test to help us tease out the supporting roles our object needs, defined as Java interfaces, and fill in actual implementations as we develop the rest of the system -&gt; interface discovery&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;only talk to your immediate neighbors&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;certain “violations” of demeter reduce your application’s flexibility and maintainability, while others make perfect sense. Additionally, violations typically lead to objects that require lots of context&lt;/li&gt;
-&lt;li&gt;the definition “only use one dot” is not always right. There are cases that use multiple dots that do not violate Demeter
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;access distant attribute&lt;/strong&gt; &lt;code class=&quot;language-text&quot;&gt;customer.bicycle.wheel.tire&lt;/code&gt;
-&lt;ul&gt;
-&lt;li&gt;it may be cheapest in your specific case to reach through intermediate objects than to go around&lt;/li&gt;
-&lt;li&gt;consider moving behavior using that tire attribute to wheel object&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;invokes distant behavior&lt;/strong&gt; &lt;code class=&quot;language-text&quot;&gt;customer.bicycle.wheel.rotate&lt;/code&gt;
-&lt;ul&gt;
-&lt;li&gt;the cost is high. This violation should be removed&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;hash.keys.sort.join(&apos;,&apos;)&lt;/code&gt;
-&lt;ul&gt;
-&lt;li&gt;no violation&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;hash.keys.sort.join&lt;/code&gt; actually returns an Enumerable of Strings, all of the intermediate objects have the same type and there is no Demeter violation.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;delegation removes visible violations but ignores demeter’s spirit. Using delegation to hide tight coupling is not the same as decoupling code.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;demeter violations are clues of missing objects whose public interface you have not yet discovered&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;if you shift to a message-based perspective, the messages you find will become public interfaces in the objects they lead you to discover. However, if you are bound by the shackles of existing domain objects, you will end up assembling their existing public interfaces into long message chains and thus will miss the opportunity to find and construct flexible public interfaces.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;Kick-staring the test-driven cycle&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;To run an initial end-to-end test that fails is already a lot of work. However, deploying and testing right from the start of a project forces the team to understand how their system fits into the world. it flushes out the “unknown.”&lt;/li&gt;
-&lt;li&gt;Keep a drawing of the system’s structure on the whiteboard where it’s visible for the whole team, and keep it in mind while coding! Then, make the smallest number of decisions you can to kick-start the TDD cycle. Then, we’ll learn and improve from honest feedback.&lt;/li&gt;
-&lt;li&gt;test as a walking skeleton
-&lt;ul&gt;
-&lt;li&gt;a walking skeleton implements the thinnest possible slice of actual functionality that we can automatically build, deploy, and test end-to-end.&lt;/li&gt;
-&lt;li&gt;Including the deployment step in the testing process is critical for two reasons
-&lt;ul&gt;
-&lt;li&gt;avoid the error-prone manual activity of deploying the system.&lt;/li&gt;
-&lt;li&gt;Flush out the risks in operating the software (like six weeks and four signatures to set up a database, we want to know now, not two weeks before delivery.).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;context of the first test
-&lt;ul&gt;
-&lt;li&gt;understand the problem -&gt; broad-brush design (architecture) -&gt; automate: build, deployment, end-to-end tests -&gt; deployable system.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;we have no guarantees that the decisions we’ve made about the design of our application are right&lt;/li&gt;
-&lt;li&gt;Our ideal situation is where the team regularly releases a real production system. This allows the system’s stakeholders to respond to how well the system meets their needs, at the same time allowing us to judge its implementation&lt;/li&gt;
-&lt;li&gt;we use the automation of building and testing to give us feedback on the qualities of the system
-&lt;ul&gt;
-&lt;li&gt;the automated deployment helps us frequently release to real users, which gives us feedback&lt;/li&gt;
-&lt;li&gt;the great benefit is that we will be able to make changes in response to whatever we learn from feedback.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Expose uncertainty early by testing our assumptions as early as possible.&lt;/li&gt;
-&lt;li&gt;the essential structure of a test:
-&lt;ul&gt;
-&lt;li&gt;creating any required mock objects&lt;/li&gt;
-&lt;li&gt;create any natural objects&lt;/li&gt;
-&lt;li&gt;specify how you expect the mock objects to be called by the target object&lt;/li&gt;
-&lt;li&gt;call the triggering method on the target object&lt;/li&gt;
-&lt;li&gt;assert that any resulting values are valid and that all the expected calls have been made.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;Maintaining the test-drive cycle&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;start each feature with an acceptance test
-&lt;ul&gt;
-&lt;li&gt;we write the acceptance using only terminology from the application’s domain&lt;/li&gt;
-&lt;li&gt;the precision of expression requirements in a form that can be automatically checked helps us uncover implicit assumptions&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;start testing with the simplest success case
-&lt;ul&gt;
-&lt;li&gt;we find it helpful to keep a notepad or index card by the keyboard to jot down failure cases, refactorings, and other technical tasks that need to be addressed&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;write the test that you’d want to read&lt;/li&gt;
-&lt;li&gt;watch the test fail
-&lt;ul&gt;
-&lt;li&gt;when we get the right failure, we check that the diagnostics are helpful.&lt;/li&gt;
-&lt;li&gt;We adjust the test code and rerun the tests until the error messages guide us to the problem with the code.
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Error message checks our assumptions about the code we’ve been working on&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;emphasis on expressing our intentions is fundamental for developing reliable, maintainable systems.&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Develop from the inputs to the outputs
-&lt;ul&gt;
-&lt;li&gt;start developing the feature by considering the events that trigger the new behaviour in the system.&lt;/li&gt;
-&lt;li&gt;We will need to write one or more objects to handle these events. We discover that these objects need supporting services from the rest of the system. In this way, we work our way through the system.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;unit test behaviour, not methods&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;one common mistake is thinking about testing methods. We do better when we focus on the object’s features under test should provide. It helps to choose test names that describe how the object behaves in the tested scenario.&lt;/li&gt;
-&lt;li&gt;It helps to name the test by describing the required behaviour in a specific scenario.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;The best we can get from the testing part of TDD is &lt;strong&gt;the confidence that we can change the code without breaking it. Fear kills progress. The trick is to make sure that the confidence is justified.&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;Design for Maintainability&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;we grow our systems a slice of functionality at a time&lt;/li&gt;
-&lt;li&gt;we use two principle heuristics to guide this structuring:
-&lt;ul&gt;
-&lt;li&gt;separation of concerns&lt;/li&gt;
-&lt;li&gt;higher levels of abstraction
-&lt;ul&gt;
-&lt;li&gt;That’s why most people order food from a menu in terms of dishes, rather than the detail of the recipes used to create them.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;In its terminology, we write interfaces to describe its relationships with the outside world (Cockburn’s ports). Then we write bridges between the application core and each technical domain (Cockburn’s adapters). The bridges implement the interfaces defined by the application model and map between application-level and technical-level objects.
-&lt;ul&gt;
-&lt;li&gt;The code for the business domain is isolated from its dependencies on technical infrastructures, such as databases and user interfaces. We don’t want technical concepts to leak into the application model, so we write interfaces to describe their relationships with the outside world in its terminology&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;encapsulation ensures that the behaviour of an object can only be effected through its API. Information hiding conceals how an object implements its functionality behind the abstraction of its API&lt;/li&gt;
-&lt;li&gt;we follow standard practices to maintain encapsulation when coding:
-&lt;ul&gt;
-&lt;li&gt;define immutable value types&lt;/li&gt;
-&lt;li&gt;avoid global variables and singletons&lt;/li&gt;
-&lt;li&gt;copy collections and mutable values when passing between objects, and so on.&lt;/li&gt;
-&lt;li&gt;don’t share a reference/pointer to a mutable object&lt;/li&gt;
-&lt;li&gt;don’t use global variables&lt;/li&gt;
-&lt;li&gt;don’t use singletons&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Single responsibility principle: every object should have a single, clearly defined responsibility. We should describe what an object does without using any conjunctions.&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;We categorize an object’s peers into three types of relationship
-&lt;ul&gt;
-&lt;li&gt;dependencies: the object cannot function without these services.&lt;/li&gt;
-&lt;li&gt;Notifications: the object will notify interested peers whenever it changes state or performs a significant action. Messages are helpful because they decouple objects from each other. When listeners don’t know and shouldn’t care about how the event was caused, the sender doesn’t have to watch who listens to it. In short, fire and forget.&lt;/li&gt;
-&lt;li&gt;Adjustments: Peers that adjust the object’s behaviour to the broader needs of the system.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Composite simpler than the sum of its parts,
-&lt;ul&gt;
-&lt;li&gt;the API of a composite object should not be more complicated than of any of its components&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;As we grow the code, the composing more straightforward rules raise abstraction.&lt;/li&gt;
-&lt;li&gt;“One domain vocabulary” rule: don’t use a term from another domain’s vocabulary unless you’re a bridging layer.&lt;/li&gt;
-&lt;li&gt;Hiding the correct information. Encapsulation is almost always a good thing to do, but sometimes information can be hidden in the wrong place.&lt;/li&gt;
-&lt;li&gt;Having an interface named Service and an implementation called ServiceImpl is probably a sign of bad design. The interface should be described in general domain language, and the implementation should have something specific about it to use in the name.&lt;/li&gt;
-&lt;li&gt;domain types are better than strings
-&lt;ul&gt;
-&lt;li&gt;when we take the trouble to express the domain clearly, we often find more options.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;Listen to tests, test smells and patterns&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;It’s a another big topic covered by this book and other books/articles. It is separated in different posts&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/listen-to-tests&quot;&gt;Test Smells and Patterns Summary&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;techniques for introducing new objects&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;define specific types to represent value concepts in the domain help:
-&lt;ul&gt;
-&lt;li&gt;to find all the code relevant for a change without having to chase through the method calls&lt;/li&gt;
-&lt;li&gt;to reduce the risk of confusion, use a more object-oriented instead of scattering related behaviour across the code.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;“Breaking out”&lt;/strong&gt;:
-&lt;ul&gt;
-&lt;li&gt;when an object becomes complex, that’s a sign that it’s implementing multiple concerns and that we can break out coherent units of behaviour into helper types&lt;/li&gt;
-&lt;li&gt;Occasionally is better to treat this code as a spike: once we know what to do, just roll it back and re-implement it cleanly.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Break up an object if it becomes too large to test easily or if its test failures become challenging to interpret. Then unit tests the new parts separately&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;“Budding off”&lt;/strong&gt;:
-&lt;ul&gt;
-&lt;li&gt;when we want to mark a new domain concept in the code, we often introduce a placeholder type that wraps a single field. With each class that we add, we’re raising the level of abstraction of the code.&lt;/li&gt;
-&lt;li&gt;To avoid adding new behaviour that doesn’t belong to an object, we can create an interface to define the service that the object needs from the object’s point of view. Then, we write tests for the new behaviour as if the service already exists, using mock objects to help describe the relationship between the target object and its new collaborator. We think of this as an on-demand design.&lt;/li&gt;
-&lt;li&gt;The placeholder for a new object will be filled in with later implementation details. For example, when writing a test, we ask ourselves, “If this worked, who would know?”, if the correct answer to that question is not in the target object, it’s probably time to introduce a new collaborator.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;“Bundling up”:&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;creating a new object for a group of objects always used together. When the test for an object becomes too complicated to set up, […] consider bundling up some collaborating objects.
-&lt;ul&gt;
-&lt;li&gt;The new object hides the complexity in an abstraction.&lt;/li&gt;
-&lt;li&gt;We have to give the new entity a name that helps us understand the domain better.&lt;/li&gt;
-&lt;li&gt;We can scope the dependencies more clearly.&lt;/li&gt;
-&lt;li&gt;we can be more precise with our unit testing&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;object peer stereotypes&lt;/h1&gt;
-&lt;h2&gt;dependencies&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;services that the object requires from its peers to perform its responsibilities.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;It should not be possible to create the object without them.&lt;/p&gt;
-&lt;h2&gt;Notification&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;peers that need to be kept up to date with the object’s activity. Notifications are “fire and forget.” Notifications are so helpful because they decouple objects from each other.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Adjustments&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;peers that adjust the object’s behaviour to the broader needs of the system.&lt;/li&gt;
-&lt;li&gt;This includes policy objects that make decisions on the object’s behalf.&lt;/li&gt;
-&lt;li&gt;Partially creating an object and then finishing it off by setting properties is brittle because the programmer must remember to put all the dependencies.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Notifications and adjustments can be passed to the constructor as a convenience. Alternatively, they can be initialized to safe defaults and overwritten later. For example, adjustments can be initialized to shared values and notifications to a null object or an empty collection. We then add methods to allow callers to change these default values and add or remove listeners.&lt;/p&gt;
-&lt;h1&gt;Programming by intention&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;compose objects to describe system behaviour&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;TDD at the unit test level guides us to decompose our system into value types and loosely coupled computational objects&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;We can provide a description (the intention of the collaboration) of the expected calls for a test in a context by declaring the expectation of a mock object.&lt;/li&gt;
-&lt;li&gt;The advantage of this approach is that we have a flexible application structure from relatively little code. It’s particularly suitable where the code has to support many related scenarios.&lt;/li&gt;
-&lt;li&gt;Just assigning and linking objects doesn’t help us understand the system’s assembling behaviour. Instead, the information we care about is typically buried in a morass of keywords, setters, punctuation, and the like.
-&lt;ul&gt;
-&lt;li&gt;To battle with this, we can organize the code into two layers
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;implementation layer&lt;/strong&gt;: graph of objects, its behaviour is the combined result of how its objects respond to events.&lt;/li&gt;
-&lt;li&gt;The declarative layer
-&lt;ul&gt;
-&lt;li&gt;is, in effect, a small domain-specific language embedded&lt;/li&gt;
-&lt;li&gt;the declarative layer that describes what the code will do. In contrast, the implementation layer defines how the code does it.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;The different purposes of the two layers mean that we use a different coding style for each. For the implementation layer, we stick to the conventional object-oriented style guidelines. For the declarative layer, we’re more flexible&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;most of the time. Such a declarative layer merges from continual merciless refactoring. Taking care to notice when an area of code is not clear, we add or move structure until it is&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;delegate to subordinate objects
-&lt;ul&gt;
-&lt;li&gt;started writing the test we wanted to see and then filling in the supporting objects:&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;start from a statement of the problem and see where it goes&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;the alternative is to write code directly in the tests and then refactor out any clusters of behaviours&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;Context independence&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;A system is easier to change if its objects are context-independent: each object has no built-in knowledge about the system.&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;The effect of the context-independence rule on a system of objects is to make their relationships explicit, defined separately from the objects themselves. This simplifies the objects and manages the relationships&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;it’ just extract parameters on details.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;&lt;a href=&quot;/manage-dependencies&quot;&gt;Dependency Injection&lt;/a&gt;&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;this is big topic and it’s better to be covered as in separate &lt;a href=&quot;/manage-dependencies&quot;&gt;summary&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;The sample project - analysis&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;the business rules can be summarized with the following picture&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 612px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/f8047dd09c29d70c4694fe45357da165/8c76f/auction-sniper-business-rule.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 66.45569620253164%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAABfElEQVQoz4WS247qMAxF5/+/DQkhAUIFXgC1TdM0buJcnDphpAZxZs6cy3pMvJ0db388/06MEVeMMcz8s+Dj5xERAYBzTmstpZymqW1b59wfxKUUZl5WUkqllJwzACCiUurxeBwOh2manHPLsiCitfabOMbIzNZaIoortcvz+fTeI+LbkTEmhPDNdiklhKCUAgAhxDzPKSUpJTOblZxzSomZh2EAgGEYtNbM/BJ3XSelVEoJIW63mxCibVsAMMYIIXhFa329XgFAKWWtTSm9BpZSQsScMyLO82yMOZ1Ox+Pxfr/v9/txHKWUTdNcLpf6nZftsFI7EZH3PsZY77bb7WazaZpmt9t1XbcsyzRNv0+7RmqtLaX4FUTs+/58PgshiCilVKtLKcuyEFGN/WUbAPq+H8dxGIZuRSklpazrUVO01uqVOrac80scQtBaI2J96m3Me9+2rfeemYkohICIzjkiKqX82rAQQozxa4zV5zvzf62n936e56/P/pdPdbHvDyWXfV8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;auction sniper business rule&quot;
-        title=&quot;auction sniper business rule&quot;
-        src=&quot;/static/f8047dd09c29d70c4694fe45357da165/8c76f/auction-sniper-business-rule.png&quot;
-        srcset=&quot;/static/f8047dd09c29d70c4694fe45357da165/c26ae/auction-sniper-business-rule.png 158w,
-/static/f8047dd09c29d70c4694fe45357da165/6bdcf/auction-sniper-business-rule.png 315w,
-/static/f8047dd09c29d70c4694fe45357da165/8c76f/auction-sniper-business-rule.png 612w&quot;
-        sizes=&quot;(max-width: 612px) 100vw, 612px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;architecture the book came up with&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/135782aa5e1f939312e9b44e62a758cd/738b8/original-auction-sniper-architecture.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAABy0lEQVQoz21Q72/SUBTt/27ihxmV4IepkYURol80JhJDgBZaCmzLUJEfLWXZoL834N2WFii89r1nKMbM6Mn5cHNzcs+5h2N/g1LKGLMgelnV34hWljdgjdM9+xccpZSkPA4xoYQybxNLGtRVJE8gjGJCGU5ochAx8kjP/dfZQFGmZrwSzCxvLMLfzoTS/eHOI+ehvRYU1DMCC6LGGAkK+jZbeRssjqGuQuvGQyHuzlbiGHQUMcZ+6CtJA1GDm/sNJ0+84oXbUEG112ct+0y2S735vb/Pt5182yl0nOli+7H78Fa0rqcrxlhthD5cufmW09SAkzQodFxBRSM7zMnOedv5/H0+XWwLHad44RbajuvvGD08jGPyqftQaDvFjnM99dPYVigo8NMI9eWWHy35Ebq89ebBvjJYVocHonCPY4oTihPSt0JeQeX+YmCGMUkLO5bQN4MMr79r2u8vXROiLG+8Fq2cbPvb+E9hjLHKcHnaME/Ks1JvwZE0EmPM9naCAg0Vrm79OKFBFMMGSxpIY2hODllUd93UgFeWfTNY75ItJkdnmtYYPPly96ysn9bN4wYnJCfbzyv606/TgRWWevMXVT1T0+UJHLP8Am8AGHdVWqBhAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;original sniper architecture&quot;
-        title=&quot;original sniper architecture&quot;
-        src=&quot;/static/135782aa5e1f939312e9b44e62a758cd/f058b/original-auction-sniper-architecture.png&quot;
-        srcset=&quot;/static/135782aa5e1f939312e9b44e62a758cd/c26ae/original-auction-sniper-architecture.png 158w,
-/static/135782aa5e1f939312e9b44e62a758cd/6bdcf/original-auction-sniper-architecture.png 315w,
-/static/135782aa5e1f939312e9b44e62a758cd/f058b/original-auction-sniper-architecture.png 630w,
-/static/135782aa5e1f939312e9b44e62a758cd/738b8/original-auction-sniper-architecture.png 639w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;h1&gt;Quotes&lt;/h1&gt;
-&lt;p&gt;“The Golden Rule of TDD: Never write new functionality without a failing test.”&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;“Object-oriented design focuses more on the communication between objects than on the objects themselves.”&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;“Objects make their decisions based only on the information they hold internally or that which came with the triggering message.”&lt;/p&gt;
-&lt;p&gt;“break up an object if it becomes too large to test easily, or if its test failures become difficult to interpret. Then unit tests the new parts separately.”&lt;/p&gt;
-&lt;p&gt;“When writing a test, we ask ourselves, “If this worked, who would know?”, if the right answer to that question is not in the target object, it’s probably time to introduce a new collaborator.”&lt;/p&gt;
-&lt;p&gt;“When the test for an object is too complicated to set up […] consider bundling up some of the collaborating objects.”&lt;/p&gt;
-&lt;p&gt;“Nothing forces us to understand a process better than trying to automate it.”&lt;/p&gt;
-&lt;p&gt;“Expect unexpected changes.”&lt;/p&gt;
-&lt;p&gt;“Each object should have no built-in knowledge about the system in which it executes.”&lt;/p&gt;
-&lt;p&gt;“The big idea is `messaging’ … the key in the making great, and growable systems is much more to design how its modules communicate rather than what their internal properties and behaviours should be”&lt;/p&gt;
-&lt;p&gt;“Iteration Zero in most agile projects, there’s a first stage where the team sets up its physical and technical environments. A common practice is to call this step iteration (the team still needs to time-box its activities) zero (before functional development starts in iteration one). One important task for iteration zero is to use the walking skeleton to test-drive the initial architecture.”&lt;/p&gt;
-&lt;p&gt;“As the legends say, if we have something’s true name, we can control it.”&lt;/p&gt;
-&lt;p&gt;“the string is a stark data structure, and everywhere it is passed, there is much duplication of process. It is a perfect vehicle for hiding information.”&lt;/p&gt;
-&lt;p&gt;“When we take the trouble to express the domain clearly, we often find that we have more options.”&lt;/p&gt;
-&lt;p&gt;“try to follow the four-step TDD cycle (fail, report (make the diagnostics clear), pass, refactor).”&lt;/p&gt;
-&lt;p&gt;“test doubles are fine, but don’t stop there if you can invert the dependency and turn expectations into stubs… or even better, replace the stub with the value it returns.”&lt;/p&gt;
-&lt;h1&gt;References&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.thecodewhisperer.com/series#dependency-inversion-principle-dip&quot;&gt;https://blog.thecodewhisperer.com/series#dependency-inversion-principle-dip&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.growing-object-oriented-software.com/code.html&quot;&gt;http://www.growing-object-oriented-software.com/code.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://fsharpforfunandprofit.com/posts/dependencies/&quot;&gt;https://fsharpforfunandprofit.com/posts/dependencies/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.ploeh.dk/2017/01/27/from-dependency-injection-to-dependency-rejection/&quot;&gt;https://blog.ploeh.dk/2017/01/27/from-dependency-injection-to-dependency-rejection/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/stefoxp/growing-object-oriented-software&quot;&gt;https://github.com/stefoxp/growing-object-oriented-software&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://hanalee.info/blog/growing-object-oriented-software-guided-by-tests.html&quot;&gt;http://hanalee.info/blog/growing-object-oriented-software-guided-by-tests.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.karam.io/blog/2021/book-summary-growing-object-oriented-software-guided-by-tests/&quot;&gt;https://www.karam.io/blog/2021/book-summary-growing-object-oriented-software-guided-by-tests/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://nir-orman.medium.com/growing-object-oriented-software-guided-by-tests-chapter-6-a76e91e83f81&quot;&gt;https://nir-orman.medium.com/growing-object-oriented-software-guided-by-tests-chapter-6-a76e91e83f81&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/vobarian/growing-object-oriented-software&quot;&gt;https://github.com/vobarian/growing-object-oriented-software&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://enterprisecraftsmanship.com/posts/growing-object-oriented-software-guided-by-tests-without-mocks/&quot;&gt;https://enterprisecraftsmanship.com/posts/growing-object-oriented-software-guided-by-tests-without-mocks/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mateuscosta.me/2019-02-21-growing-object-oriented&quot;&gt;https://mateuscosta.me/2019-02-21-growing-object-oriented&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://conn.dev/books/growing-object-oriented-software.html&quot;&gt;https://conn.dev/books/growing-object-oriented-software.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.infoq.com/presentations/Stop-Refactoring/&quot;&gt;https://www.infoq.com/presentations/Stop-Refactoring/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://jmock.org/oopsla2004.pdf&quot;&gt;http://jmock.org/oopsla2004.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://jmock.org/oopsla2006.pdf&quot;&gt;http://jmock.org/oopsla2006.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.jamesshore.com/v2/blog/2018/testing-without-mocks&quot;&gt;https://www.jamesshore.com/v2/blog/2018/testing-without-mocks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=mkQ-RvErLiU&amp;#x26;ab_channel=TheLegacyofSoCraTes&quot;&gt;https://www.youtube.com/watch?v=mkQ-RvErLiU&amp;#x26;ab_channel=TheLegacyofSoCraTes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://martinfowler.com/articles/domain-oriented-observability.html&quot;&gt;https://martinfowler.com/articles/domain-oriented-observability.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Listen to tests, test smells and patterns]]></title><description><![CDATA[Goals/Context no broad tests are required. The test suite consists of “narrow” tests focused on specific concepts. Although wide integration…]]></description><link>https://tonytvo.github.io/listen-to-tests/</link><guid isPermaLink="false">https://tonytvo.github.io/listen-to-tests/</guid><pubDate>Wed, 29 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Goals/Context&lt;/h1&gt;
+&lt;a href=&quot;https://gist.github.com/speric/31ae0987d21eac1d4f87&quot;&gt;https://gist.github.com/speric/31ae0987d21eac1d4f87&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Listen to tests, test smells and patterns]]></title><description><![CDATA[Goals/Context no broad tests are required. The test suite consists of “narrow” tests focused on specific concepts. Although wide integration…]]></description><link>https://tonytvo.github.io/listen-to-tests/</link><guid isPermaLink="false">https://tonytvo.github.io/listen-to-tests/</guid><pubDate>Wed, 29 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Goals/Context&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;no broad tests are required. The test suite consists of “narrow” tests focused on specific concepts. Although wide integration tests can be added as a safety net, their failure indicates a gap in the main test suite&lt;/p&gt;
@@ -2929,6 +2412,541 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=mkQ-RvErLiU&amp;#x26;ab_channel=TheLegacyofSoCraTes&quot;&gt;https://www.youtube.com/watch?v=mkQ-RvErLiU&amp;#x26;ab_channel=TheLegacyofSoCraTes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://martinfowler.com/articles/domain-oriented-observability.html&quot;&gt;https://martinfowler.com/articles/domain-oriented-observability.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.growing-object-oriented-software.com/code.html&quot;&gt;http://www.growing-object-oriented-software.com/code.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Growing object-oriented guided by tests summary]]></title><description><![CDATA[Key ideas Test-Driven Development (TDD) and Quality TDD as a design technique Communication over classification mock roles not objects tell…]]></description><link>https://tonytvo.github.io/growing-object-orented-guided-by-tests-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/growing-object-orented-guided-by-tests-summary/</guid><pubDate>Wed, 29 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#key-ideas&quot;&gt;Key ideas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#test-driven-development-tdd-and-quality&quot;&gt;Test-Driven Development (TDD) and Quality&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#tdd-as-a-design-technique&quot;&gt;TDD as a design technique&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#communication-over-classification&quot;&gt;Communication over classification&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#mock-roles-not-objects&quot;&gt;mock roles not objects&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#tell-dont-ask---law-of-demeter&quot;&gt;tell, don’t ask - law of Demeter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#kick-staring-the-test-driven-cycle&quot;&gt;Kick-staring the test-driven cycle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#maintaining-the-test-drive-cycle&quot;&gt;Maintaining the test-drive cycle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#design-for-maintainability&quot;&gt;Design for Maintainability&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#listen-to-tests-test-smells-and-patterns&quot;&gt;Listen to tests, test smells and patterns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#techniques-for-introducing-new-objects&quot;&gt;techniques for introducing new objects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#object-peer-stereotypes&quot;&gt;object peer stereotypes&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#dependencies&quot;&gt;dependencies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#notification&quot;&gt;Notification&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#adjustments&quot;&gt;Adjustments&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#programming-by-intention&quot;&gt;Programming by intention&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#context-independence&quot;&gt;Context independence&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#dependency-injection&quot;&gt;Dependency Injection&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#the-sample-project---analysis&quot;&gt;The sample project - analysis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#quotes&quot;&gt;Quotes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#references&quot;&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Key ideas&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;practice TDD as a design technique and not only as a testing technique.&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;strangely, if we try to practise TDD as only a testing technique, then eventually we will become bored by our own defects and begin to notice “this code is annoying to test”, which points to design problems. After that, we’re practising TDD also as a design technique.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Software development as a learning process.&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Expose uncertainly early by testing our assumption as early as possible&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;we use mock objects to identify the essential interactions between modules/objects. This leads to more effective abstractions, which reduces the cost of changing the software safely over time.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Stub queries; expect actions&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Write code that depends as little as possible on its context. It leads to more reusable code&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;programming by intention&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Test-Driven Development (TDD) and Quality&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Software development as a learning process.&lt;/li&gt;
+&lt;li&gt;The best approach a team can take is to use empirical feedback to learn about the system and its use and then apply it back to the system.&lt;/li&gt;
+&lt;li&gt;Development is incremental and iterative.
+&lt;ul&gt;
+&lt;li&gt;Incremental development builds a system feature by feature. Each feature is implemented as an end-to-end slice. As a result, the system is continuously integrated and ready for deployment.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e772ae6d7ae6a4369beb1c330133321d/6af66/walking-skeleton-goos.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 41.139240506329116%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAAsTAAALEwEAmpwYAAABNUlEQVQY02XPS0vDQBAH8H7/u0dPFRVPfgcRQUEQH2n6srGWpq3ZZjeb3c3sPDSJVsRhDjN/+MHMYLlap5OZMS4Zz9LprLau1OZpNLaVE5J59jadLwjZGLvKc2ZBoHyzc94j0EDaAEXE+1CVGhoQkSxbbndFbHi7U0WhEJGZvfPeB4DGVh4ghhp+cVtE7doOyMQYqY8ZmZCYpLa+ti4CITI0+AczYo+5S+oylNtara23EAM1LhIxk1BkZoLwF8sBxzbZZCa5WeXzEhsKFIPI9V1ye59qp7OlFZF/Z/ceQADIhVhD94aMM75ayNnw/PL0YrIvXt/ND46xZb3smMTY1K4sSlXoUlciMjx6PDl+EGECec5fks20w+2V/I0PzRxcUMoopffKEAqFlOwIUZDEV7nWH1/4EyfIyyzKsqVlAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;walking skeleton&quot;
+        title=&quot;walking skeleton&quot;
+        src=&quot;/static/e772ae6d7ae6a4369beb1c330133321d/f058b/walking-skeleton-goos.png&quot;
+        srcset=&quot;/static/e772ae6d7ae6a4369beb1c330133321d/c26ae/walking-skeleton-goos.png 158w,
+/static/e772ae6d7ae6a4369beb1c330133321d/6bdcf/walking-skeleton-goos.png 315w,
+/static/e772ae6d7ae6a4369beb1c330133321d/f058b/walking-skeleton-goos.png 630w,
+/static/e772ae6d7ae6a4369beb1c330133321d/6af66/walking-skeleton-goos.png 640w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A system is deployable when the acceptance tests all pass.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;External quality&lt;/strong&gt; is how well the system meets the needs of its customer and users. It’s usually part of the contract to build&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Internal quality&lt;/strong&gt; is how well the system meets the needs of its developers and administrators. The point of maintaining internal quality is to allow us to modify the system’s behaviour safely and predictably because it minimizes the risk that a change will force significant rework.&lt;/li&gt;
+&lt;li&gt;Running end-to-end tests tells us about the external quality. Writing them tells us something about how well we understand the domain.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;TDD as a design technique&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;An object-oriented system: A web of collaborating objects.&lt;/li&gt;
+&lt;li&gt;Values vs objects
+&lt;ul&gt;
+&lt;li&gt;a value represents some fixed quantity or measurement, and it is immutable&lt;/li&gt;
+&lt;li&gt;an object, on the other hand, is an identity that might change state over time. It models a computational process or a stateful behaviour of the system.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The communication between the objects can be seen through tests. So don’t try to model your system based on the entities (objects) alone, but on the communication between them.&lt;/li&gt;
+&lt;li&gt;Objects follow common communication patterns. The domain model is in these communication patterns&lt;/li&gt;
+&lt;li&gt;An object is an implementation of one or more roles:
+&lt;ul&gt;
+&lt;li&gt;roles are a set of related responsibilities&lt;/li&gt;
+&lt;li&gt;responsibilities is an obligation to perform a task or know information&lt;/li&gt;
+&lt;li&gt;collaboration is an interaction of objects or roles.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;An object communicates by messages: it receives messages from other objects. It reacts by sending messages to other objects as well, as perhaps, returning a value or exception to the original sender. An object has a method of handling every type of message that it understands. In most cases, it encapsulates some internal state that it uses to coordinate its communication with other objects.&lt;/li&gt;
+&lt;li&gt;Make the intention of every test clear: distinguish between the tested functionality, the supporting infrastructure, and the object structure.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;write unit tests for object behaviour rather than the object’s methods&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;something that is difficult to test is probably poorly designed&lt;/li&gt;
+&lt;li&gt;The single responsibility principle
+&lt;ul&gt;
+&lt;li&gt;of the heuristic is that we should be able to describe what an object does without using any conjunction (“and,” “or”).&lt;/li&gt;
+&lt;li&gt;interacting with the composite object should be more straightforward than interacting with the components that it composes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The empty interface is sometimes used to mark a domain concept and show how it’s used in collaboration. Later, as we grow the code, we fill in the interface with methods to describe its behaviour.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Only mock types that you own:
+&lt;ul&gt;
+&lt;li&gt;don’t use mocks for third-party code since it is usually not changeable as you don’t have control over it.&lt;/li&gt;
+&lt;li&gt;Use an adapter layer to implement interactions with third-party code. We test these adapters with focused integration tests to confirm our understanding of how the third-party API works.&lt;/li&gt;
+&lt;li&gt;We must focus on integrating our design and the external code. In integration, we have an abstraction to implement.&lt;/li&gt;
+&lt;li&gt;we must check that we’re using the third-party API correctly and adjust our abstract to fit if we find that our assumptions are incorrect&lt;/li&gt;
+&lt;li&gt;There are some exceptions where mocking third-party libraries can be helpful:
+&lt;ul&gt;
+&lt;li&gt;we might use mocks to simulate behaviour that is hard to trigger with the library such as testing a sequence of calls.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Communication over classification&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Use interfaces to name roles played by objects and describe the messages they’ll accept. Keep interfaces as narrow as possible.&lt;/li&gt;
+&lt;li&gt;We can use interfaces to define the available messages between objects, but we also need to express their communication protocols.&lt;/li&gt;
+&lt;li&gt;we use TDD with mock objects as a technique to make these communication protocols visible, as a tool for discovering them during development and as a description when revisiting the code&lt;/li&gt;
+&lt;li&gt;TDD with mock objects also encourages information hiding&lt;/li&gt;
+&lt;li&gt;if similar interfaces represent different concepts, we can make a point of making them distinct.
+&lt;ul&gt;
+&lt;li&gt;A decision to separate similar-looking interfaces is an excellent time to reconsider their naming&lt;/li&gt;
+&lt;li&gt;Another time to consider refactoring interfaces is when we start implementing them.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;mock roles not objects&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://jmock.org/oopsla2004.pdf&quot;&gt;mock roles not objects&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;todo: summarize the paper (extract key information that I understand)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;test double aka imposter
+&lt;ul&gt;
+&lt;li&gt;verify logic independently when code it depends on is unusable&lt;/li&gt;
+&lt;li&gt;avoid slow tests?&lt;/li&gt;
+&lt;li&gt;replace a component on which the SUT depends with a “test-specific equivalent”&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;/3d4a5d877d68ce68885b35c494afc3c0/test-double.gif&quot; alt=&quot;test double&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;/f08df5517d5f29a3d901b91217a0c6d3/types-of-test-doubles.gif&quot; alt=&quot;types of test double&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;tell, don’t ask - law of Demeter&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;This style produces more flexible code because it’s easy to swap objects with the same role. The caller sees nothing of their internal structure or the rest of the system behind the role interface.&lt;/li&gt;
+&lt;li&gt;When messages are trusting and ask for what the sender wants instead of telling receiver how to behave, objects naturally evolve public interfaces that are flexible and reusable in novel and unexpected ways.&lt;/li&gt;
+&lt;li&gt;we ask when
+&lt;ul&gt;
+&lt;li&gt;getting information from values and collections&lt;/li&gt;
+&lt;li&gt;using a factory to create new objects&lt;/li&gt;
+&lt;li&gt;searching or filtering&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;We can specify how we expect the target object to communicate with its mock for a triggering event -&gt; expectations&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;we can use the test to help us tease out the supporting roles our object needs, defined as Java interfaces, and fill in actual implementations as we develop the rest of the system -&gt; interface discovery&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;only talk to your immediate neighbors&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;certain “violations” of demeter reduce your application’s flexibility and maintainability, while others make perfect sense. Additionally, violations typically lead to objects that require lots of context&lt;/li&gt;
+&lt;li&gt;the definition “only use one dot” is not always right. There are cases that use multiple dots that do not violate Demeter
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;access distant attribute&lt;/strong&gt; &lt;code class=&quot;language-text&quot;&gt;customer.bicycle.wheel.tire&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;it may be cheapest in your specific case to reach through intermediate objects than to go around&lt;/li&gt;
+&lt;li&gt;consider moving behavior using that tire attribute to wheel object&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;invokes distant behavior&lt;/strong&gt; &lt;code class=&quot;language-text&quot;&gt;customer.bicycle.wheel.rotate&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;the cost is high. This violation should be removed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;hash.keys.sort.join(&apos;,&apos;)&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;no violation&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;hash.keys.sort.join&lt;/code&gt; actually returns an Enumerable of Strings, all of the intermediate objects have the same type and there is no Demeter violation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;delegation removes visible violations but ignores demeter’s spirit. Using delegation to hide tight coupling is not the same as decoupling code.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;demeter violations are clues of missing objects whose public interface you have not yet discovered&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;if you shift to a message-based perspective, the messages you find will become public interfaces in the objects they lead you to discover. However, if you are bound by the shackles of existing domain objects, you will end up assembling their existing public interfaces into long message chains and thus will miss the opportunity to find and construct flexible public interfaces.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Kick-staring the test-driven cycle&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;To run an initial end-to-end test that fails is already a lot of work. However, deploying and testing right from the start of a project forces the team to understand how their system fits into the world. it flushes out the “unknown.”&lt;/li&gt;
+&lt;li&gt;Keep a drawing of the system’s structure on the whiteboard where it’s visible for the whole team, and keep it in mind while coding! Then, make the smallest number of decisions you can to kick-start the TDD cycle. Then, we’ll learn and improve from honest feedback.&lt;/li&gt;
+&lt;li&gt;test as a walking skeleton
+&lt;ul&gt;
+&lt;li&gt;a walking skeleton implements the thinnest possible slice of actual functionality that we can automatically build, deploy, and test end-to-end.&lt;/li&gt;
+&lt;li&gt;Including the deployment step in the testing process is critical for two reasons
+&lt;ul&gt;
+&lt;li&gt;avoid the error-prone manual activity of deploying the system.&lt;/li&gt;
+&lt;li&gt;Flush out the risks in operating the software (like six weeks and four signatures to set up a database, we want to know now, not two weeks before delivery.).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;context of the first test
+&lt;ul&gt;
+&lt;li&gt;understand the problem -&gt; broad-brush design (architecture) -&gt; automate: build, deployment, end-to-end tests -&gt; deployable system.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;we have no guarantees that the decisions we’ve made about the design of our application are right&lt;/li&gt;
+&lt;li&gt;Our ideal situation is where the team regularly releases a real production system. This allows the system’s stakeholders to respond to how well the system meets their needs, at the same time allowing us to judge its implementation&lt;/li&gt;
+&lt;li&gt;we use the automation of building and testing to give us feedback on the qualities of the system
+&lt;ul&gt;
+&lt;li&gt;the automated deployment helps us frequently release to real users, which gives us feedback&lt;/li&gt;
+&lt;li&gt;the great benefit is that we will be able to make changes in response to whatever we learn from feedback.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Expose uncertainty early by testing our assumptions as early as possible.&lt;/li&gt;
+&lt;li&gt;the essential structure of a test:
+&lt;ul&gt;
+&lt;li&gt;creating any required mock objects&lt;/li&gt;
+&lt;li&gt;create any natural objects&lt;/li&gt;
+&lt;li&gt;specify how you expect the mock objects to be called by the target object&lt;/li&gt;
+&lt;li&gt;call the triggering method on the target object&lt;/li&gt;
+&lt;li&gt;assert that any resulting values are valid and that all the expected calls have been made.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Maintaining the test-drive cycle&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;start each feature with an acceptance test
+&lt;ul&gt;
+&lt;li&gt;we write the acceptance using only terminology from the application’s domain&lt;/li&gt;
+&lt;li&gt;the precision of expression requirements in a form that can be automatically checked helps us uncover implicit assumptions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;start testing with the simplest success case
+&lt;ul&gt;
+&lt;li&gt;we find it helpful to keep a notepad or index card by the keyboard to jot down failure cases, refactorings, and other technical tasks that need to be addressed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;write the test that you’d want to read&lt;/li&gt;
+&lt;li&gt;watch the test fail
+&lt;ul&gt;
+&lt;li&gt;when we get the right failure, we check that the diagnostics are helpful.&lt;/li&gt;
+&lt;li&gt;We adjust the test code and rerun the tests until the error messages guide us to the problem with the code.
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Error message checks our assumptions about the code we’ve been working on&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;emphasis on expressing our intentions is fundamental for developing reliable, maintainable systems.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Develop from the inputs to the outputs
+&lt;ul&gt;
+&lt;li&gt;start developing the feature by considering the events that trigger the new behaviour in the system.&lt;/li&gt;
+&lt;li&gt;We will need to write one or more objects to handle these events. We discover that these objects need supporting services from the rest of the system. In this way, we work our way through the system.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;unit test behaviour, not methods&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;one common mistake is thinking about testing methods. We do better when we focus on the object’s features under test should provide. It helps to choose test names that describe how the object behaves in the tested scenario.&lt;/li&gt;
+&lt;li&gt;It helps to name the test by describing the required behaviour in a specific scenario.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The best we can get from the testing part of TDD is &lt;strong&gt;the confidence that we can change the code without breaking it. Fear kills progress. The trick is to make sure that the confidence is justified.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Design for Maintainability&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;we grow our systems a slice of functionality at a time&lt;/li&gt;
+&lt;li&gt;we use two principle heuristics to guide this structuring:
+&lt;ul&gt;
+&lt;li&gt;separation of concerns&lt;/li&gt;
+&lt;li&gt;higher levels of abstraction
+&lt;ul&gt;
+&lt;li&gt;That’s why most people order food from a menu in terms of dishes, rather than the detail of the recipes used to create them.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;In its terminology, we write interfaces to describe its relationships with the outside world (Cockburn’s ports). Then we write bridges between the application core and each technical domain (Cockburn’s adapters). The bridges implement the interfaces defined by the application model and map between application-level and technical-level objects.
+&lt;ul&gt;
+&lt;li&gt;The code for the business domain is isolated from its dependencies on technical infrastructures, such as databases and user interfaces. We don’t want technical concepts to leak into the application model, so we write interfaces to describe their relationships with the outside world in its terminology&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;encapsulation ensures that the behaviour of an object can only be effected through its API. Information hiding conceals how an object implements its functionality behind the abstraction of its API&lt;/li&gt;
+&lt;li&gt;we follow standard practices to maintain encapsulation when coding:
+&lt;ul&gt;
+&lt;li&gt;define immutable value types&lt;/li&gt;
+&lt;li&gt;avoid global variables and singletons&lt;/li&gt;
+&lt;li&gt;copy collections and mutable values when passing between objects, and so on.&lt;/li&gt;
+&lt;li&gt;don’t share a reference/pointer to a mutable object&lt;/li&gt;
+&lt;li&gt;don’t use global variables&lt;/li&gt;
+&lt;li&gt;don’t use singletons&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Single responsibility principle: every object should have a single, clearly defined responsibility. We should describe what an object does without using any conjunctions.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Composite simpler than the sum of its parts,
+&lt;ul&gt;
+&lt;li&gt;the API of a composite object should not be more complicated than of any of its components&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;As we grow the code, the composing more straightforward rules raise abstraction.&lt;/li&gt;
+&lt;li&gt;“One domain vocabulary” rule: don’t use a term from another domain’s vocabulary unless you’re a bridging layer.&lt;/li&gt;
+&lt;li&gt;Hiding the correct information. Encapsulation is almost always a good thing to do, but sometimes information can be hidden in the wrong place.&lt;/li&gt;
+&lt;li&gt;Having an interface named Service and an implementation called ServiceImpl is probably a sign of bad design. The interface should be described in general domain language, and the implementation should have something specific about it to use in the name.&lt;/li&gt;
+&lt;li&gt;domain types are better than strings
+&lt;ul&gt;
+&lt;li&gt;when we take the trouble to express the domain clearly, we often find more options.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Listen to tests, test smells and patterns&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;It’s a another big topic covered by this book and other books/articles. It is separated in different posts&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/listen-to-tests&quot;&gt;Test Smells and Patterns Summary&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;techniques for introducing new objects&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;define specific types to represent value concepts in the domain help:
+&lt;ul&gt;
+&lt;li&gt;to find all the code relevant for a change without having to chase through the method calls&lt;/li&gt;
+&lt;li&gt;to reduce the risk of confusion, use a more object-oriented instead of scattering related behaviour across the code.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;“Breaking out”&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;when an object becomes complex, that’s a sign that it’s implementing multiple concerns and that we can break out coherent units of behaviour into helper types&lt;/li&gt;
+&lt;li&gt;Occasionally is better to treat this code as a spike: once we know what to do, just roll it back and re-implement it cleanly.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Break up an object if it becomes too large to test easily or if its test failures become challenging to interpret. Then unit tests the new parts separately&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;“Budding off”&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;when we want to mark a new domain concept in the code, we often introduce a placeholder type that wraps a single field. With each class that we add, we’re raising the level of abstraction of the code.&lt;/li&gt;
+&lt;li&gt;To avoid adding new behaviour that doesn’t belong to an object, we can create an interface to define the service that the object needs from the object’s point of view. Then, we write tests for the new behaviour as if the service already exists, using mock objects to help describe the relationship between the target object and its new collaborator. We think of this as an on-demand design.&lt;/li&gt;
+&lt;li&gt;The placeholder for a new object will be filled in with later implementation details. For example, when writing a test, we ask ourselves, “If this worked, who would know?”, if the correct answer to that question is not in the target object, it’s probably time to introduce a new collaborator.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;“Bundling up”:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;creating a new object for a group of objects always used together. When the test for an object becomes too complicated to set up, […] consider bundling up some collaborating objects.
+&lt;ul&gt;
+&lt;li&gt;The new object hides the complexity in an abstraction.&lt;/li&gt;
+&lt;li&gt;We have to give the new entity a name that helps us understand the domain better.&lt;/li&gt;
+&lt;li&gt;We can scope the dependencies more clearly.&lt;/li&gt;
+&lt;li&gt;we can be more precise with our unit testing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;object peer stereotypes&lt;/h1&gt;
+&lt;h2&gt;dependencies&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;services that the object requires from its peers to perform its responsibilities.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It should not be possible to create the object without them.&lt;/p&gt;
+&lt;h2&gt;Notification&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;peers that need to be kept up to date with the object’s activity. Notifications are “fire and forget.” Notifications are so helpful because they decouple objects from each other.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Adjustments&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;peers that adjust the object’s behaviour to the broader needs of the system.&lt;/li&gt;
+&lt;li&gt;This includes policy objects that make decisions on the object’s behalf.&lt;/li&gt;
+&lt;li&gt;Partially creating an object and then finishing it off by setting properties is brittle because the programmer must remember to put all the dependencies.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Notifications and adjustments can be passed to the constructor as a convenience. Alternatively, they can be initialized to safe defaults and overwritten later. For example, adjustments can be initialized to shared values and notifications to a null object or an empty collection. We then add methods to allow callers to change these default values and add or remove listeners.&lt;/p&gt;
+&lt;h1&gt;Programming by intention&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;compose objects to describe system behaviour&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;TDD at the unit test level guides us to decompose our system into value types and loosely coupled computational objects&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;We can provide a description (the intention of the collaboration) of the expected calls for a test in a context by declaring the expectation of a mock object.&lt;/li&gt;
+&lt;li&gt;The advantage of this approach is that we have a flexible application structure from relatively little code. It’s particularly suitable where the code has to support many related scenarios.&lt;/li&gt;
+&lt;li&gt;Just assigning and linking objects doesn’t help us understand the system’s assembling behaviour. Instead, the information we care about is typically buried in a morass of keywords, setters, punctuation, and the like.
+&lt;ul&gt;
+&lt;li&gt;To battle with this, we can organize the code into two layers
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;implementation layer&lt;/strong&gt;: graph of objects, its behaviour is the combined result of how its objects respond to events.&lt;/li&gt;
+&lt;li&gt;The declarative layer
+&lt;ul&gt;
+&lt;li&gt;is, in effect, a small domain-specific language embedded&lt;/li&gt;
+&lt;li&gt;the declarative layer that describes what the code will do. In contrast, the implementation layer defines how the code does it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The different purposes of the two layers mean that we use a different coding style for each. For the implementation layer, we stick to the conventional object-oriented style guidelines. For the declarative layer, we’re more flexible&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;most of the time. Such a declarative layer merges from continual merciless refactoring. Taking care to notice when an area of code is not clear, we add or move structure until it is&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;delegate to subordinate objects
+&lt;ul&gt;
+&lt;li&gt;started writing the test we wanted to see and then filling in the supporting objects&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;start from a statement of the problem and see where it goes&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;the alternative is to write code directly in the tests and then refactor out any clusters of behaviours&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Context independence&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;A system is easier to change if its objects are context-independent: each object has no built-in knowledge about the system.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The effect of the context-independence rule on a system of objects is to make their relationships explicit, defined separately from the objects themselves. This simplifies the objects and manages the relationships&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;it’ just extract parameters on details.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;&lt;a href=&quot;/manage-dependencies&quot;&gt;Dependency Injection&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;this is big topic and it’s better to be covered as in separate &lt;a href=&quot;/manage-dependencies&quot;&gt;summary&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;The sample project - analysis&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;the business rules can be summarized with the following picture&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 612px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f8047dd09c29d70c4694fe45357da165/8c76f/auction-sniper-business-rule.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.45569620253164%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAABfElEQVQoz4WS247qMAxF5/+/DQkhAUIFXgC1TdM0buJcnDphpAZxZs6cy3pMvJ0db388/06MEVeMMcz8s+Dj5xERAYBzTmstpZymqW1b59wfxKUUZl5WUkqllJwzACCiUurxeBwOh2manHPLsiCitfabOMbIzNZaIoortcvz+fTeI+LbkTEmhPDNdiklhKCUAgAhxDzPKSUpJTOblZxzSomZh2EAgGEYtNbM/BJ3XSelVEoJIW63mxCibVsAMMYIIXhFa329XgFAKWWtTSm9BpZSQsScMyLO82yMOZ1Ox+Pxfr/v9/txHKWUTdNcLpf6nZftsFI7EZH3PsZY77bb7WazaZpmt9t1XbcsyzRNv0+7RmqtLaX4FUTs+/58PgshiCilVKtLKcuyEFGN/WUbAPq+H8dxGIZuRSklpazrUVO01uqVOrac80scQtBaI2J96m3Me9+2rfeemYkohICIzjkiKqX82rAQQozxa4zV5zvzf62n936e56/P/pdPdbHvDyWXfV8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;auction sniper business rule&quot;
+        title=&quot;auction sniper business rule&quot;
+        src=&quot;/static/f8047dd09c29d70c4694fe45357da165/8c76f/auction-sniper-business-rule.png&quot;
+        srcset=&quot;/static/f8047dd09c29d70c4694fe45357da165/c26ae/auction-sniper-business-rule.png 158w,
+/static/f8047dd09c29d70c4694fe45357da165/6bdcf/auction-sniper-business-rule.png 315w,
+/static/f8047dd09c29d70c4694fe45357da165/8c76f/auction-sniper-business-rule.png 612w&quot;
+        sizes=&quot;(max-width: 612px) 100vw, 612px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;architecture the book came up with&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/135782aa5e1f939312e9b44e62a758cd/738b8/original-auction-sniper-architecture.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAABy0lEQVQoz21Q72/SUBTt/27ihxmV4IepkYURol80JhJDgBZaCmzLUJEfLWXZoL834N2WFii89r1nKMbM6Mn5cHNzcs+5h2N/g1LKGLMgelnV34hWljdgjdM9+xccpZSkPA4xoYQybxNLGtRVJE8gjGJCGU5ochAx8kjP/dfZQFGmZrwSzCxvLMLfzoTS/eHOI+ehvRYU1DMCC6LGGAkK+jZbeRssjqGuQuvGQyHuzlbiGHQUMcZ+6CtJA1GDm/sNJ0+84oXbUEG112ct+0y2S735vb/Pt5182yl0nOli+7H78Fa0rqcrxlhthD5cufmW09SAkzQodFxBRSM7zMnOedv5/H0+XWwLHad44RbajuvvGD08jGPyqftQaDvFjnM99dPYVigo8NMI9eWWHy35Ebq89ebBvjJYVocHonCPY4oTihPSt0JeQeX+YmCGMUkLO5bQN4MMr79r2u8vXROiLG+8Fq2cbPvb+E9hjLHKcHnaME/Ks1JvwZE0EmPM9naCAg0Vrm79OKFBFMMGSxpIY2hODllUd93UgFeWfTNY75ItJkdnmtYYPPly96ysn9bN4wYnJCfbzyv606/TgRWWevMXVT1T0+UJHLP8Am8AGHdVWqBhAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;original sniper architecture&quot;
+        title=&quot;original sniper architecture&quot;
+        src=&quot;/static/135782aa5e1f939312e9b44e62a758cd/f058b/original-auction-sniper-architecture.png&quot;
+        srcset=&quot;/static/135782aa5e1f939312e9b44e62a758cd/c26ae/original-auction-sniper-architecture.png 158w,
+/static/135782aa5e1f939312e9b44e62a758cd/6bdcf/original-auction-sniper-architecture.png 315w,
+/static/135782aa5e1f939312e9b44e62a758cd/f058b/original-auction-sniper-architecture.png 630w,
+/static/135782aa5e1f939312e9b44e62a758cd/738b8/original-auction-sniper-architecture.png 639w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h1&gt;Quotes&lt;/h1&gt;
+&lt;p&gt;“The Golden Rule of TDD: Never write new functionality without a failing test.”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;“Object-oriented design focuses more on the communication between objects than on the objects themselves.”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;“Objects make their decisions based only on the information they hold internally or that which came with the triggering message.”&lt;/p&gt;
+&lt;p&gt;“break up an object if it becomes too large to test easily, or if its test failures become difficult to interpret. Then unit tests the new parts separately.”&lt;/p&gt;
+&lt;p&gt;“When writing a test, we ask ourselves, “If this worked, who would know?”, if the right answer to that question is not in the target object, it’s probably time to introduce a new collaborator.”&lt;/p&gt;
+&lt;p&gt;“When the test for an object is too complicated to set up […] consider bundling up some of the collaborating objects.”&lt;/p&gt;
+&lt;p&gt;“Nothing forces us to understand a process better than trying to automate it.”&lt;/p&gt;
+&lt;p&gt;“Expect unexpected changes.”&lt;/p&gt;
+&lt;p&gt;“Each object should have no built-in knowledge about the system in which it executes.”&lt;/p&gt;
+&lt;p&gt;“The big idea is `messaging’ … the key in the making great, and growable systems is much more to design how its modules communicate rather than what their internal properties and behaviours should be”&lt;/p&gt;
+&lt;p&gt;“Iteration Zero in most agile projects, there’s a first stage where the team sets up its physical and technical environments. A common practice is to call this step iteration (the team still needs to time-box its activities) zero (before functional development starts in iteration one). One important task for iteration zero is to use the walking skeleton to test-drive the initial architecture.”&lt;/p&gt;
+&lt;p&gt;“As the legends say, if we have something’s true name, we can control it.”&lt;/p&gt;
+&lt;p&gt;“the string is a stark data structure, and everywhere it is passed, there is much duplication of process. It is a perfect vehicle for hiding information.”&lt;/p&gt;
+&lt;p&gt;“When we take the trouble to express the domain clearly, we often find that we have more options.”&lt;/p&gt;
+&lt;p&gt;“try to follow the four-step TDD cycle (fail, report (make the diagnostics clear), pass, refactor).”&lt;/p&gt;
+&lt;p&gt;“test doubles are fine, but don’t stop there if you can invert the dependency and turn expectations into stubs… or even better, replace the stub with the value it returns.”&lt;/p&gt;
+&lt;h1&gt;References&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.thecodewhisperer.com/series#dependency-inversion-principle-dip&quot;&gt;https://blog.thecodewhisperer.com/series#dependency-inversion-principle-dip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.growing-object-oriented-software.com/code.html&quot;&gt;http://www.growing-object-oriented-software.com/code.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://fsharpforfunandprofit.com/posts/dependencies/&quot;&gt;https://fsharpforfunandprofit.com/posts/dependencies/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.ploeh.dk/2017/01/27/from-dependency-injection-to-dependency-rejection/&quot;&gt;https://blog.ploeh.dk/2017/01/27/from-dependency-injection-to-dependency-rejection/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/stefoxp/growing-object-oriented-software&quot;&gt;https://github.com/stefoxp/growing-object-oriented-software&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://hanalee.info/blog/growing-object-oriented-software-guided-by-tests.html&quot;&gt;http://hanalee.info/blog/growing-object-oriented-software-guided-by-tests.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.karam.io/blog/2021/book-summary-growing-object-oriented-software-guided-by-tests/&quot;&gt;https://www.karam.io/blog/2021/book-summary-growing-object-oriented-software-guided-by-tests/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://nir-orman.medium.com/growing-object-oriented-software-guided-by-tests-chapter-6-a76e91e83f81&quot;&gt;https://nir-orman.medium.com/growing-object-oriented-software-guided-by-tests-chapter-6-a76e91e83f81&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/vobarian/growing-object-oriented-software&quot;&gt;https://github.com/vobarian/growing-object-oriented-software&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://enterprisecraftsmanship.com/posts/growing-object-oriented-software-guided-by-tests-without-mocks/&quot;&gt;https://enterprisecraftsmanship.com/posts/growing-object-oriented-software-guided-by-tests-without-mocks/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mateuscosta.me/2019-02-21-growing-object-oriented&quot;&gt;https://mateuscosta.me/2019-02-21-growing-object-oriented&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://conn.dev/books/growing-object-oriented-software.html&quot;&gt;https://conn.dev/books/growing-object-oriented-software.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.infoq.com/presentations/Stop-Refactoring/&quot;&gt;https://www.infoq.com/presentations/Stop-Refactoring/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jmock.org/oopsla2004.pdf&quot;&gt;http://jmock.org/oopsla2004.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jmock.org/oopsla2006.pdf&quot;&gt;http://jmock.org/oopsla2006.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.jamesshore.com/v2/blog/2018/testing-without-mocks&quot;&gt;https://www.jamesshore.com/v2/blog/2018/testing-without-mocks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=mkQ-RvErLiU&amp;#x26;ab_channel=TheLegacyofSoCraTes&quot;&gt;https://www.youtube.com/watch?v=mkQ-RvErLiU&amp;#x26;ab_channel=TheLegacyofSoCraTes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://martinfowler.com/articles/domain-oriented-observability.html&quot;&gt;https://martinfowler.com/articles/domain-oriented-observability.html&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[learning how to learn]]></title><description><![CDATA[Why? reading/learning can be a “priceless opportunity to furnish your mind and enrich the quality of your life” read/learn for better…]]></description><link>https://tonytvo.github.io/learn-how-to-learn/</link><guid isPermaLink="false">https://tonytvo.github.io/learn-how-to-learn/</guid><pubDate>Mon, 27 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Why?&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;reading/learning can be a “priceless opportunity to furnish your mind and enrich the quality of your life”&lt;/li&gt;
@@ -4911,7 +4929,7 @@ https://www.amazon.ca/Systems-Performance…]]></description><link>https://tonyt
 &lt;p&gt;&lt;a href=&quot;https://www.infoq.com/articles/practical-monitoring-mike-julian/&quot;&gt;https://www.infoq.com/articles/practical-monitoring-mike-julian/&lt;/a&gt;
 &lt;a href=&quot;https://www.amazon.ca/Systems-Performance-Brendan-Gregg-ebook/dp/B08J5QZPNC&quot;&gt;https://www.amazon.ca/Systems-Performance-Brendan-Gregg-ebook/dp/B08J5QZPNC&lt;/a&gt;
 &lt;a href=&quot;https://www.amazon.ca/Java-Performance-Depth-Advice-Programming-ebook/dp/B084RY5438/&quot;&gt;https://www.amazon.ca/Java-Performance-Depth-Advice-Programming-ebook/dp/B084RY5438/&lt;/a&gt;
-&lt;a href=&quot;https://github.com/ScottOaks/JavaPerformanceTuning/tree/master/SecondEdition&quot;&gt;https://github.com/ScottOaks/JavaPerformanceTuning/tree/master/SecondEdition&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[tools of titans summary]]></title><description><![CDATA[Goals success, however you define it, is achievable if you collect the right field-tested beliefs and habits. the superheroes you have in…]]></description><link>https://tonytvo.github.io/tools-of-titans/</link><guid isPermaLink="false">https://tonytvo.github.io/tools-of-titans/</guid><pubDate>Wed, 22 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Goals&lt;/h1&gt;
+&lt;a href=&quot;https://github.com/ScottOaks/JavaPerformanceTuning/tree/master/SecondEdition&quot;&gt;https://github.com/ScottOaks/JavaPerformanceTuning/tree/master/SecondEdition&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[tools of titans summary]]></title><description><![CDATA[Goals/Key Ideas success, however you define it, is achievable if you collect the right field-tested beliefs and habits. the superheroes you…]]></description><link>https://tonytvo.github.io/tools-of-titans/</link><guid isPermaLink="false">https://tonytvo.github.io/tools-of-titans/</guid><pubDate>Wed, 22 Dec 2021 22:12:03 GMT</pubDate><content:encoded>&lt;h1&gt;Goals/Key Ideas&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;success, however you define it, is achievable if you collect the right field-tested beliefs and habits.&lt;/li&gt;
 &lt;li&gt;the superheroes you have in your mind (idols, icons, titans, billionaires, etc.) are nearly all walking flaws who’ve maximized 1 or 2 strengths)
