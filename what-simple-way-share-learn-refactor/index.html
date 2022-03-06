@@ -209,91 +209,20 @@
 <ul>
 <li>to avoid breaking all existing clients when introducing new fields, new classes, etc…</li>
 </ul>
-<h2 id="steps-for-approach-1" style="position:relative;"><a href="#steps-for-approach-1" aria-label="steps for approach 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Steps for approach 1</h2>
+<h2 id="common-approach" style="position:relative;"><a href="#common-approach" aria-label="common approach permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Common Approach</h2>
 <ul>
 <li>create a warm, dry place where the code can be changed and disrupt client less</li>
 <li>focus on changes inside the warm, dry place</li>
 <li>publish the changes when they’re ready, which often means inlining the warm, dry place (put it back where it was) or inlining the clients of the warm, dry place (the new code replaces some older code)</li>
 </ul>
-<h2 id="steps-for-approach-2-introduce-parameter-object" style="position:relative;"><a href="#steps-for-approach-2-introduce-parameter-object" aria-label="steps for approach 2 introduce parameter object permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Steps for approach 2 (introduce parameter object)</h2>
+<h2 id="examples" style="position:relative;"><a href="#examples" aria-label="examples permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h2>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=hGkdDxYCCKY&#x26;ab_channel=tomphp">https://www.youtube.com/watch?v=hGkdDxYCCKY&#x26;ab_channel=tomphp</a></li>
-<li>intellij refactorings: extract methods, make method static, introduce parameter object, convert static to instance methods, introduce the field</li>
-</ul>
-<h2 id="steps-for-approach-3-adding-the-wrapper" style="position:relative;"><a href="#steps-for-approach-3-adding-the-wrapper" aria-label="steps for approach 3 adding the wrapper permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Steps for approach 3 (adding the wrapper)</h2>
+<li>For some reasons, introduce indirection layer is a common approach to refactoring and has lots of different approaches, which has been documented in this git repo
 <ul>
-<li>extract a function that takes the primitive value f(p)</li>
-<li>introduce parameter object to wrap p into wrapper w, so that now we have f(w)</li>
-<li>move f() onto class W. (What’s left is moving any behaviour that asks for w.getP() onto W)</li>
-<li>for all remaining function g(p) put in the line w = new W(p) and then migrate all the internals from p to w.p (or w.getP() or whatever you call it)</li>
-<li>extract parameter on new W(p), so that g now takes a w instead of p</li>
-</ul>
-<p>move g() onto W</p>
-<ul>
-<li>intellij refactorings: extract methods, wrap-unwrap (introduce indirection), introduce parameter, move method to another instance, introduce the field</li>
-</ul>
-<h2 id="steps-for-approach-4-liberating-the-wrapped" style="position:relative;"><a href="#steps-for-approach-4-liberating-the-wrapped" aria-label="steps for approach 4 liberating the wrapped permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Steps for approach 4 (liberating the wrapped)</h2>
-<ul>
-<li>extract all the functions of p that you want.</li>
-<li>promote p to a field on the current class</li>
-</ul>
-<p>extract delegate to class W, creating a new class that as p as a field, leaving behind this.w = new W(p)</p>
-<ul>
-<li>clean up</li>
-<li>intellij refactorings: extract methods, extract delegate</li>
-</ul>
-<h3 id="snippets" style="position:relative;"><a href="#snippets" aria-label="snippets permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Snippets</h3>
-<ul>
-<li>
-<p>introduce parameter object</p>
-<ul>
-<li>
-<img width="500" height="300" alt="introduce parameter object" src="/b536c97814983321b1dd6458f3eee489/introduce-parameter-objects-orderlines.gif">
-</li>
-</ul>
-</li>
-<li>
-<p>make method static</p>
-<ul>
-<li>
-<img width="500" height="300" alt="make method static" src="/22629c1f76ea91f54b50905a253a5419/make-static-method-orderlines.gif">
-</li>
-</ul>
-</li>
-<li>
-<p>extract delegate</p>
-<ul>
-<li>
-<img width="500" height="300" alt="extract delegate" src="/3c83f1f0a5471131a5277924fa774639/extract-delegate-orderlines.gif">
-</li>
-</ul>
-</li>
-<li>
-<p>wrap-unwrap value (introduce another layer of indirection)</p>
-<ul>
-<li>
-<img width="500" height="300" alt="introduce another indirection layer" src="/80b5092805a676c3344a5713162b6d2f/introduce-another-layer-indirection.gif">
-</li>
-</ul>
-</li>
-<li>
-<p>move method to another instance</p>
-<ul>
-<li>
-<img width="500" height="300" alt="move  method to another instance" src="/eb5074e4c560a34e9000486d8de1099a/move-instance-method-orderlines.gif">
-</li>
-</ul>
-</li>
-<li>
-<p>introduce field</p>
-<ul>
-<li>
-<img width="500" height="300" alt="introduce field" src="/972ea1725b56f7fbb75aeb7636864799/introduce-field-order-lines.gif">
-</li>
+<li><a href="https://github.com/tonytvo/introduce-indirection-layer">https://github.com/tonytvo/introduce-indirection-layer</a></li>
 </ul>
 </li>
 </ul>
-<p><strong>…still under construction and more to come on the list</strong></p>
 <h1 id="references" style="position:relative;"><a href="#references" aria-label="references permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>References</h1>
 <ul>
 <li>Arlo Belshee, “Naming as a process”, <a href="https://www.digdeeproots.com/articles/on/naming-process/">https://www.digdeeproots.com/articles/on/naming-process/</a></li>

@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tags/dividendinvesting/",
+    "result": {"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/dividend-investment-summary/"},"frontmatter":{"title":"dividend investment summary"}}}]}},"pageContext":{"tag":"dividendinvesting"}},
+    "staticQueryHashes": []}
