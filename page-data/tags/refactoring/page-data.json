@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tags/refactoring/",
+    "result": {"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/evolutionary-design-notes-with-jbrain/"},"frontmatter":{"title":"Evolutionary Design Notes With JBrain Sessions"}}}]}},"pageContext":{"tag":"refactoring"}},
+    "staticQueryHashes": []}
