@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 30 Mar 2022 00:43:30 GMT</lastBuildDate><item><title><![CDATA[Evolutionary Ensemble Programming Patterns for the group]]></title><description><![CDATA[Over the duration of this course, I’m sure we would discuss many patterns regarding mobbing. I hope those discussions could be documented…]]></description><link>https://tonytvo.github.io/evolutionary-ensemble-programming-patterns/</link><guid isPermaLink="false">https://tonytvo.github.io/evolutionary-ensemble-programming-patterns/</guid><pubDate>Tue, 29 Mar 2022 22:12:03 GMT</pubDate><content:encoded>&lt;ul&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 30 Mar 2022 00:54:09 GMT</lastBuildDate><item><title><![CDATA[Evolutionary Ensemble Programming Patterns for the group]]></title><description><![CDATA[Over the duration of this course, I’m sure we would discuss many patterns regarding mobbing. I hope those discussions could be documented…]]></description><link>https://tonytvo.github.io/evolutionary-ensemble-programming-patterns-sessions-with-jbrain/</link><guid isPermaLink="false">https://tonytvo.github.io/evolutionary-ensemble-programming-patterns-sessions-with-jbrain/</guid><pubDate>Tue, 29 Mar 2022 22:12:03 GMT</pubDate><content:encoded>&lt;ul&gt;
 &lt;li&gt;Over the duration of this course, I’m sure we would discuss many patterns regarding mobbing. I hope those discussions could be documented somewhere so we can refer back to it and improve on it later.&lt;/li&gt;
 &lt;li&gt;At the moment, I see this topic as an iterative process to hash out some patterns that we would agree would be useful to our daily work and we would use it in our daily work and in our ensembles.&lt;/li&gt;
 &lt;li&gt;Hence, I was thinking of accepted/proposed, when it’s in proposed means it’s something we have discussed but we haven’t adopted to our daily working/ensembles yet. When it’s accepted, it means that we would do it in our ensembles and daily work.&lt;/li&gt;
@@ -175,47 +175,23 @@
 &lt;li&gt;&lt;a href=&quot;https://www.agilealliance.org/wp-content/uploads/2019/07/fig1-pattern-map.jpg&quot;&gt;https://www.agilealliance.org/wp-content/uploads/2019/07/fig1-pattern-map.jpg&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=r66rCffBgOg&amp;#x26;list=PLGME-VQ8iegjxFStr5EgOeXz6DxhGlvp3&amp;#x26;index=3&amp;#x26;ab_channel=MobMentalityShow&quot;&gt;https://www.youtube.com/watch?v=r66rCffBgOg&amp;#x26;list=PLGME-VQ8iegjxFStr5EgOeXz6DxhGlvp3&amp;#x26;index=3&amp;#x26;ab_channel=MobMentalityShow&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCgt1lVMrdwlZKBaerxxp2iQ&quot;&gt;https://www.youtube.com/channel/UCgt1lVMrdwlZKBaerxxp2iQ&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Evolutionary Design Notes With JBrain Sessions]]></title><description><![CDATA[Intent revealing names -> https://blog.thecodewhisperer.com/permalink/a-model-for-improving-names commit more frequently with the following…]]></description><link>https://tonytvo.github.io/evolutionary-design-notes-with-jbrain/</link><guid isPermaLink="false">https://tonytvo.github.io/evolutionary-design-notes-with-jbrain/</guid><pubDate>Sun, 27 Mar 2022 23:46:37 GMT</pubDate><content:encoded>&lt;ul&gt;
-&lt;li&gt;Intent revealing names -&gt; &lt;a href=&quot;https://blog.thecodewhisperer.com/permalink/a-model-for-improving-names&quot;&gt;https://blog.thecodewhisperer.com/permalink/a-model-for-improving-names&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Evolutionary Design Notes With JBrain Sessions]]></title><description><![CDATA[Intent revealing names A Model for Improving Names Naming Process commit more frequently with the following commit message patterns: Tag as…]]></description><link>https://tonytvo.github.io/evolutionary-design-notes-with-jbrain/</link><guid isPermaLink="false">https://tonytvo.github.io/evolutionary-design-notes-with-jbrain/</guid><pubDate>Sun, 27 Mar 2022 23:46:37 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;Intent revealing names
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.thecodewhisperer.com/permalink/a-model-for-improving-names&quot;&gt;A Model for Improving Names&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.digdeeproots.com/articles/on/naming-process/&quot;&gt;Naming Process&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;commit more frequently with the following commit message patterns:
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/RefactoringCombos/ArlosCommitNotation&quot;&gt;https://github.com/RefactoringCombos/ArlosCommitNotation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.conventionalcommits.org/en/v1.0.0/#specification&quot;&gt;https://www.conventionalcommits.org/en/v1.0.0/#specification&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/RefactoringCombos/ArlosCommitNotation&quot;&gt;Tag as a process from Arlo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.conventionalcommits.org/en/v1.0.0/#specification&quot;&gt;Conventional Commits&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;describe high level/business intention&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;introduce indirection steps to avoid big steps
 &lt;ul&gt;
-&lt;li&gt;steps for approach 1
-&lt;ul&gt;
-&lt;li&gt;Create a Warm, Dry Place where I can change code and disrupt clients less.&lt;/li&gt;
-&lt;li&gt;Focus on changes inside the Warm, Dry Place.&lt;/li&gt;
-&lt;li&gt;Publish the changes when they’re ready, which often means inlining the Warm, Dry Place (put it back where it was) or inlining the clients of the Warm, Dry Place (the new code replaces some older code).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;steps for approach 2 (introduce parameter object)
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=hGkdDxYCCKY&amp;#x26;ab_channel=tomphp&quot;&gt;https://www.youtube.com/watch?v=hGkdDxYCCKY&amp;#x26;ab_channel=tomphp&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;steps for approach 3 (adding the wrapper)
-&lt;ul&gt;
-&lt;li&gt;extract a function that takes the primitive value f(p)&lt;/li&gt;
-&lt;li&gt;introduce parameter object to wrap p into wrapper w, so that now we have f(w)&lt;/li&gt;
-&lt;li&gt;move f() onto class W. (what’s left is moving any behaviour that ask for w.getP() onto W)&lt;/li&gt;
-&lt;li&gt;for remaining function g(p) put in the line w = new W(p) and then migrate all the internals from p to w.p (or w.getP() or whatever you call it)&lt;/li&gt;
-&lt;li&gt;extract parameter on new W(p), so that g now takes a w instead of p&lt;/li&gt;
-&lt;li&gt;move g() onto W&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;steps for approach 4 (liberating the wrapped)
-&lt;ul&gt;
-&lt;li&gt;extract all the functions of p that you want&lt;/li&gt;
-&lt;li&gt;promote p to a field on the current class&lt;/li&gt;
-&lt;li&gt;extract delegate to class W, creating a new class that as p as a field, leaving behind this.w = new W(p)&lt;/li&gt;
-&lt;li&gt;clean up&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/tonytvo/introduce-indirection-layer&quot;&gt;Introduce an indirection layer&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;read it, understand it, and put the information in the code&lt;/strong&gt;&lt;/li&gt;
@@ -233,7 +209,7 @@
 &lt;/li&gt;
 &lt;li&gt;Remove duplication
 &lt;ul&gt;
-&lt;li&gt;insert the remove duplication patterns here.&lt;/li&gt;
+&lt;li&gt;&lt;insert&gt;the remove duplication patterns here&lt;/insert&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Context Independence
@@ -267,13 +243,12 @@
 &lt;li&gt;“when in doubt, zoom out”&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;How to learn effectively (or how to read a book)
+&lt;/ul&gt;
+&lt;h1 id=&quot;how-to-learn-effectively&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#how-to-learn-effectively&quot; aria-label=&quot;how to learn effectively permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;How to learn effectively&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;first, write a summary of the book to get a high-level overview of the topics of the book cover (I often copied from previous summaries to get things started and update the summaries as I go along)&lt;/li&gt;
 &lt;li&gt;then, elaborate/dig deeper into each topic wherever the curiosity takes you&lt;/li&gt;
 &lt;li&gt;the trick to retention is not to read it once but to write a good summary and review it often as much as you can.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;li&gt;programming by intention
 &lt;ul&gt;
 &lt;li&gt;start with the consumer of the API.&lt;/li&gt;
