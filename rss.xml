@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 01 Apr 2022 20:24:52 GMT</lastBuildDate><item><title><![CDATA[Evolutionary Ensemble Programming Patterns for the group]]></title><description><![CDATA[Over the duration of this course, I’m sure we would discuss many patterns regarding mobbing. I hope those discussions could be documented…]]></description><link>https://tonytvo.github.io/evolutionary-ensemble-programming-patterns-sessions-with-jbrain/</link><guid isPermaLink="false">https://tonytvo.github.io/evolutionary-ensemble-programming-patterns-sessions-with-jbrain/</guid><pubDate>Tue, 29 Mar 2022 22:12:03 GMT</pubDate><content:encoded>&lt;ul&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 06 Apr 2022 17:58:32 GMT</lastBuildDate><item><title><![CDATA[Evolutionary Ensemble Programming Patterns for the group]]></title><description><![CDATA[Over the duration of this course, I’m sure we would discuss many patterns regarding mobbing. I hope those discussions could be documented…]]></description><link>https://tonytvo.github.io/evolutionary-ensemble-programming-patterns-sessions-with-jbrain/</link><guid isPermaLink="false">https://tonytvo.github.io/evolutionary-ensemble-programming-patterns-sessions-with-jbrain/</guid><pubDate>Tue, 29 Mar 2022 22:12:03 GMT</pubDate><content:encoded>&lt;ul&gt;
 &lt;li&gt;Over the duration of this course, I’m sure we would discuss many patterns regarding mobbing. I hope those discussions could be documented somewhere so we can refer back to it and improve on it later.&lt;/li&gt;
 &lt;li&gt;At the moment, I see this topic as an iterative process to hash out some patterns that we would agree would be useful to our daily work and we would use it in our daily work and in our ensembles.&lt;/li&gt;
 &lt;li&gt;Hence, I was thinking of accepted/proposed, when it’s in proposed means it’s something we have discussed but we haven’t adopted to our daily working/ensembles yet. When it’s accepted, it means that we would do it in our ensembles and daily work.&lt;/li&gt;
@@ -175,13 +175,10 @@
 &lt;li&gt;&lt;a href=&quot;https://www.agilealliance.org/wp-content/uploads/2019/07/fig1-pattern-map.jpg&quot;&gt;https://www.agilealliance.org/wp-content/uploads/2019/07/fig1-pattern-map.jpg&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=r66rCffBgOg&amp;#x26;list=PLGME-VQ8iegjxFStr5EgOeXz6DxhGlvp3&amp;#x26;index=3&amp;#x26;ab_channel=MobMentalityShow&quot;&gt;https://www.youtube.com/watch?v=r66rCffBgOg&amp;#x26;list=PLGME-VQ8iegjxFStr5EgOeXz6DxhGlvp3&amp;#x26;index=3&amp;#x26;ab_channel=MobMentalityShow&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCgt1lVMrdwlZKBaerxxp2iQ&quot;&gt;https://www.youtube.com/channel/UCgt1lVMrdwlZKBaerxxp2iQ&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Evolutionary Design Notes With JBrain Sessions]]></title><description><![CDATA[Intent revealing names A Model for Improving Names Naming Process commit more frequently with the following commit message patterns: Tag as…]]></description><link>https://tonytvo.github.io/evolutionary-design-notes-with-jbrain/</link><guid isPermaLink="false">https://tonytvo.github.io/evolutionary-design-notes-with-jbrain/</guid><pubDate>Sun, 27 Mar 2022 23:46:37 GMT</pubDate><content:encoded>&lt;ul&gt;
-&lt;li&gt;Intent revealing names
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Evolutionary Design Notes With JBrain Sessions]]></title><description><![CDATA[Intent revealing names A Model for Improving Names Naming Process commit more frequently with the following commit message patterns: Tag as…]]></description><link>https://tonytvo.github.io/evolutionary-design-notes-with-jbrain/</link><guid isPermaLink="false">https://tonytvo.github.io/evolutionary-design-notes-with-jbrain/</guid><pubDate>Sun, 27 Mar 2022 23:46:37 GMT</pubDate><content:encoded>&lt;h1 id=&quot;intent-revealing-names&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#intent-revealing-names&quot; aria-label=&quot;intent revealing names permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Intent revealing names&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://blog.thecodewhisperer.com/permalink/a-model-for-improving-names&quot;&gt;A Model for Improving Names&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.digdeeproots.com/articles/on/naming-process/&quot;&gt;Naming Process&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
 &lt;li&gt;commit more frequently with the following commit message patterns:
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/RefactoringCombos/ArlosCommitNotation&quot;&gt;Tag as a process from Arlo&lt;/a&gt;&lt;/li&gt;
@@ -189,43 +186,78 @@
 &lt;li&gt;describe high level/business intention&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;introduce indirection steps to avoid big steps
+&lt;/ul&gt;
+&lt;h1 id=&quot;refactoring-towards-functional-programming-style&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#refactoring-towards-functional-programming-style&quot; aria-label=&quot;refactoring towards functional programming style permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Refactoring towards functional programming style&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/tonytvo/refactoring/tree/main/functional&quot;&gt;https://github.com/tonytvo/refactoring/tree/main/functional&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Partially Applying Functions
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.thecodewhisperer.com/permalink/injecting-dependencies&quot;&gt;https://blog.thecodewhisperer.com/permalink/injecting-dependencies&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;how-to-learn-effectively&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#how-to-learn-effectively&quot; aria-label=&quot;how to learn effectively permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;How to learn effectively&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;first, write a summary of the book to get a high-level overview of the topics of the book cover (I often copied from previous summaries to get things started and update the summaries as I go along)&lt;/li&gt;
+&lt;li&gt;then, elaborate/dig deeper into each topic wherever the curiosity takes you&lt;/li&gt;
+&lt;li&gt;the trick to retention is not to read it once but to write a good summary and review it often as much as you can.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://tonytvo.github.io/learn-how-to-learn/&quot;&gt;https://tonytvo.github.io/learn-how-to-learn/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;poka-yoke&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#poka-yoke&quot; aria-label=&quot;poka yoke permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Poka-yoke&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;which mistake could we make when trying to use this interface?&lt;/li&gt;
+&lt;li&gt;how could we refactor this interface to make those mistakes impossible? (And if not impossible, then less likely)&lt;/li&gt;
+&lt;li&gt;which moves or design concepts are available to me in java that I can use to add poka-yoke to my designs?&lt;/li&gt;
+&lt;li&gt;which moves or design concepts are available to me in other programming languages that I wish I could use to add poka-yoke to my java designs?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;saff-squeeze&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#saff-squeeze&quot; aria-label=&quot;saff squeeze permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Saff Squeeze&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;insert more content here&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;tips-and-tricks&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#tips-and-tricks&quot; aria-label=&quot;tips and tricks permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Tips and Tricks&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;introduce indirection steps to avoid big steps&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/tonytvo/introduce-indirection-layer&quot;&gt;Introduce an indirection layer&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;read it, understand it, and put the information in the code&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Clean up as we go
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;read it, understand it, and put the information in the code&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Clean up as we go&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;keep track of which clean-up items to propose so that we can eventually do them.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;When it’s appropriate to isolate production code into their own file/module.
+&lt;li&gt;
+&lt;p&gt;When it’s appropriate to isolate production code into their own file/module.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;“when it’s necessary”&lt;/li&gt;
 &lt;li&gt;As a note, we started it out with production code and test code are closed together because it would be easier for us to move in small steps. The production code is still changing quite a bit and we’re not sure what kind of abstraction/API we want to publish yet.&lt;/li&gt;
 &lt;li&gt;organize the source code so that the public API functions are closer to the top of the file&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Remove duplication
+&lt;li&gt;
+&lt;p&gt;Remove duplication&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;insert&gt;the remove duplication patterns here&lt;/insert&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Context Independence
+&lt;li&gt;
+&lt;p&gt;Context Independence&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;helps to decide whether an object hides too much or hides the wrong information&lt;/li&gt;
 &lt;li&gt;has no built-in knowledge about the system in which it executes.&lt;/li&gt;
 &lt;li&gt;should not use terms from multiple domains, unless it’s part of a bridging layer&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Null Design -&gt; &lt;a href=&quot;https://blog.thecodewhisperer.com/permalink/null-design-tool&quot;&gt;https://blog.thecodewhisperer.com/permalink/null-design-tool&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Partially Applying Functions
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.thecodewhisperer.com/permalink/injecting-dependencies&quot;&gt;https://blog.thecodewhisperer.com/permalink/injecting-dependencies&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;
+&lt;p&gt;Null Design -&gt; &lt;a href=&quot;https://blog.thecodewhisperer.com/permalink/null-design-tool&quot;&gt;https://blog.thecodewhisperer.com/permalink/null-design-tool&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;When to do inside out (jump to details)
+&lt;li&gt;
+&lt;p&gt;When to do inside out (jump to details)&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;when the risks in the details/certain tasks/components are large/noticeable and you want to mitigate the risks
 &lt;ul&gt;
@@ -236,73 +268,26 @@
 &lt;li&gt;when the next steps are not clear&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;When to do outside in (jump back to the big pictures)
+&lt;li&gt;
+&lt;p&gt;When to do outside in (jump back to the big pictures)&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;when you feel there’s a risk in missing some important details and it could delay the project.&lt;/li&gt;
 &lt;li&gt;when you have difficulty in thinking about tests/what to test, it’s good to think in term of one level higher in the call stacks.&lt;/li&gt;
 &lt;li&gt;“when in doubt, zoom out”&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;how-to-learn-effectively&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#how-to-learn-effectively&quot; aria-label=&quot;how to learn effectively permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;How to learn effectively&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;first, write a summary of the book to get a high-level overview of the topics of the book cover (I often copied from previous summaries to get things started and update the summaries as I go along)&lt;/li&gt;
-&lt;li&gt;then, elaborate/dig deeper into each topic wherever the curiosity takes you&lt;/li&gt;
-&lt;li&gt;the trick to retention is not to read it once but to write a good summary and review it often as much as you can.&lt;/li&gt;
-&lt;li&gt;programming by intention
+&lt;li&gt;
+&lt;p&gt;programming by intention&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;start with the consumer of the API.&lt;/li&gt;
 &lt;li&gt;expressing the highest level of intention possible from the client/consumer perspective.&lt;/li&gt;
 &lt;li&gt;another strategy is to use the pieces already there to build the next test. In the process, I often identify one small piece that is missing or identifies 2 pieces that don’t quite fit together yet. In either case, I see a smaller, clearer goal: write the missing piece or refactor so that A and B can connect together more easily.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;refactoring towards functional programming style
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;extract to a separate map in lambda&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;img src=&quot;upload://se0YkkGQg51vP2DJKHRD4cjWxR4.gif&quot; alt=&quot;extract-variable-as-separate-map-in-lambda|690x374&quot;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://wbitdd2-prerelease-discuss.jbrains.ca/t/refactoring-towards-functional-programming-style-notes/113&quot;&gt;https://wbitdd2-prerelease-discuss.jbrains.ca/t/refactoring-towards-functional-programming-style-notes/113&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;public Barcode(String text) {
-    if (&quot;&quot;.equals(text)) throw new IllegalArgumentException(&quot;barcode can&apos;t be empty&quot;);
-    else this.text = text;
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;to this “parse, don’t validate” functional programming style&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;public static Either&amp;lt;ParsingFailure, Barcode&gt; parse(String text) {...}
-enum ParsingFailure { ... }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;common refactoring path for values that might not be present
-&lt;ul&gt;
-&lt;li&gt;nullable &lt;code class=&quot;language-text&quot;&gt;String&lt;/code&gt; → &lt;code class=&quot;language-text&quot;&gt;Option&amp;lt;String&gt;&lt;/code&gt; → &lt;code class=&quot;language-text&quot;&gt;Either&amp;lt;ReasonTheStringWasInvalid, String&gt;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;In the &lt;a href=&quot;https://www.vavr.io&quot;&gt;https://www.vavr.io&lt;/a&gt; library, there are library functions that adapt values in order to make this refactoring easier.
-&lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Option.ofNullable()&lt;/code&gt; maps &lt;code class=&quot;language-text&quot;&gt;null&lt;/code&gt; to &lt;code class=&quot;language-text&quot;&gt;none()&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;x&lt;/code&gt; to &lt;code class=&quot;language-text&quot;&gt;some(x)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Option.ofNullable()&lt;/code&gt; maps &lt;code class=&quot;language-text&quot;&gt;null&lt;/code&gt; to &lt;code class=&quot;language-text&quot;&gt;none()&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;x&lt;/code&gt; to &lt;code class=&quot;language-text&quot;&gt;some(x)&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;another pattern to map java option&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;if (maybeValue.isPresent()) { 
-  return Option.some(f(maybeValue.get()));
-} else { 
-  return option.none();
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;can become&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;return maybeValue.map(f).getOrElse(&quot;fallback value&quot;);&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;patience in practicing evolutionary design&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;” programmers do not allow the various refactoring patterns to become so easy/comfortable that their fingers can execute them without conscious thought. This interferes with their progress because they have to switch more often among the questions “which refactorings will improve this design?” and “how do I perform this micro-step?” If they don’t become able to perform the micro-steps (a sequence of 3-7 nano steps) &lt;em&gt;easily&lt;/em&gt;, then they might not breakthrough from “I know how to safely lead the design where I want it to go” to the more-powerful “I can just start removing duplication and improving names and a good design will emerge”.&lt;/li&gt;
+&lt;li&gt;“programmers do not allow the various refactoring patterns to become so easy/comfortable that their fingers can execute them without conscious thought. This interferes with their progress because they have to switch more often among the questions “which refactorings will improve this design?” and “how do I perform this micro-step?” If they don’t become able to perform the micro-steps (a sequence of 3-7 nano steps) &lt;em&gt;easily&lt;/em&gt;, then they might not breakthrough from “I know how to safely lead the design where I want it to go” to the more-powerful “I can just start removing duplication and improving names and a good design will emerge”.&lt;/li&gt;
 &lt;li&gt;Don’t get me wrong: the first of these two outcomes is &lt;em&gt;good&lt;/em&gt;, but the second of these two outcomes is &lt;em&gt;much better&lt;/em&gt;.&lt;/li&gt;
 &lt;li&gt;One consequence of never breaking through is that the programmer will miss out on finding helpful designs that are simpler than the ones that their intuition can see.”&lt;/li&gt;
 &lt;/ul&gt;
@@ -333,15 +318,6 @@ enum ParsingFailure { ... }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;poka-yoke&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;which mistake could we make when trying to use this interface?&lt;/li&gt;
-&lt;li&gt;how could we refactor this interface to make those mistakes impossible? (And if not impossible, then less likely)&lt;/li&gt;
-&lt;li&gt;which moves or design concepts are available to me in java that I can use to add poka-yoke to my designs?&lt;/li&gt;
-&lt;li&gt;which moves or design concepts are available to me in other programming languages that I wish I could use to add poka-yoke to my java designs?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
 &lt;p&gt;vocabulary problem&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;because you don’t know enough “words” (options) to choose from.&lt;/li&gt;
@@ -357,12 +333,12 @@ enum ParsingFailure { ... }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&quot;quotes&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quotes&quot; aria-label=&quot;quotes permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Quotes&lt;/h1&gt;
 &lt;h1 id=&quot;references&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#references&quot; aria-label=&quot;references permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;References&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://martinfowler.com/tags/evolutionary%20design.html&quot;&gt;https://martinfowler.com/tags/evolutionary%20design.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.stackbuilders.com/blog/refactoring-javascript-with-functional-patterns/&quot;&gt;https://www.stackbuilders.com/blog/refactoring-javascript-with-functional-patterns/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[emotional intelligence summary]]></title><description><![CDATA[Key Ideas, Goals, Context The communication between the emotional and rational portions of your brain is the physical source of emotional…]]></description><link>https://tonytvo.github.io/emotional-intelligence-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/emotional-intelligence-summary/</guid><pubDate>Wed, 23 Mar 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;key-ideas-goals-context&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#key-ideas-goals-context&quot; aria-label=&quot;key ideas goals context permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Key Ideas, Goals, Context&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;The communication between the emotional and rational portions of your brain is the physical source of emotional intelligence.
@@ -849,6 +825,36 @@ enum ParsingFailure { ... }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;li&gt;Help the other person understand your side. Communicate clearly and directly&lt;/li&gt;
 &lt;li&gt;Even if there is disagreement, once you understand both perspectives, find a way to move the conversation to closure.&lt;/li&gt;
 &lt;li&gt;After the meeting, keep in touch with the person to see how they are doing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;questions&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#questions&quot; aria-label=&quot;questions permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Questions&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;what the worst things that could possibly happen?
+&lt;ul&gt;
+&lt;li&gt;what’s the underlying core emotions?&lt;/li&gt;
+&lt;li&gt;what’s my need?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;how do you either limit or mitigate the risk from occurring?
+&lt;ul&gt;
+&lt;li&gt;what would need to happen for this not to be a problem&lt;/li&gt;
+&lt;li&gt;what beliefs would you need?&lt;/li&gt;
+&lt;li&gt;what training or skills? what emotions would you need?&lt;/li&gt;
+&lt;li&gt;what do you physically need?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;what is the easiest way to solve this?
+&lt;ul&gt;
+&lt;li&gt;what is the hardest way to solve this?&lt;/li&gt;
+&lt;li&gt;what is the quickest way or the longest way?&lt;/li&gt;
+&lt;li&gt;how would you feel if you solved this?&lt;/li&gt;
+&lt;li&gt;do you want to feel like that?&lt;/li&gt;
+&lt;li&gt;what is the first step to making this happen?&lt;/li&gt;
+&lt;li&gt;what could you do right now?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;how do you current responses make you feel? why is this a problem?&lt;/li&gt;
+&lt;li&gt;how do you think you could leverage your mindset in different situations, to your advantage?&lt;/li&gt;
+&lt;li&gt;how do you think we can be more accommodating of each other’s dominant modalities in a collaborative setting?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&quot;quotes&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quotes&quot; aria-label=&quot;quotes permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Quotes&lt;/h1&gt;
 &lt;p&gt;“Emotional intelligence is your ability to recognize and understand emotions in yourself and others, and your ability to use this awareness to manage your behavior and relationships”&lt;/p&gt;
