@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 10 Apr 2022 19:11:43 GMT</lastBuildDate><item><title><![CDATA[Notes on gilded rose kata practice April 3rd 2022]]></title><description><![CDATA[Questions What have you learned? It seems like as soon as we give Quality an abstraction, we can remove more duplication code around…]]></description><link>https://tonytvo.github.io/gilded-rose-pratice-notes-april-3-2022/</link><guid isPermaLink="false">https://tonytvo.github.io/gilded-rose-pratice-notes-april-3-2022/</guid><pubDate>Sun, 03 Apr 2022 23:46:37 GMT</pubDate><content:encoded>&lt;h1 id=&quot;questions&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#questions&quot; aria-label=&quot;questions permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Questions&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 19 Apr 2022 18:39:15 GMT</lastBuildDate><item><title><![CDATA[Notes on gilded rose kata practice April 3rd 2022]]></title><description><![CDATA[Questions What have you learned? It seems like as soon as we give Quality an abstraction, we can remove more duplication code around…]]></description><link>https://tonytvo.github.io/gilded-rose-pratice-notes-april-3-2022/</link><guid isPermaLink="false">https://tonytvo.github.io/gilded-rose-pratice-notes-april-3-2022/</guid><pubDate>Sun, 03 Apr 2022 23:46:37 GMT</pubDate><content:encoded>&lt;h1 id=&quot;questions&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#questions&quot; aria-label=&quot;questions permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Questions&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;What have you learned?
 &lt;ul&gt;
@@ -448,6 +448,31 @@
 &lt;li&gt;Ask yourself: ‘Do I want to change this? Why do I want to change this?’ What stands to happen if I don’t change this? What stands to happen if I don’t change this?’&lt;/li&gt;
 &lt;li&gt;accepting that something is going to happen and that the only thing we can control is how we choose to response is where EI comes in.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h1 id=&quot;empathy&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#empathy&quot; aria-label=&quot;empathy permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Empathy&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Sympathy is feeling sorry for someone where as empathy is recognizing the emotional response someone is having and how it feels to have that emotional response
+&lt;ul&gt;
+&lt;li&gt;Putting yourself in their shoes is dangerous because that typically comes with judgement&lt;/li&gt;
+&lt;li&gt;We don’t need to know what has happened, just recognize what emotion and the severity of that emotion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;steps-to-empathy&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#steps-to-empathy&quot; aria-label=&quot;steps to empathy permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Steps to Empathy&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Recognize which emotion the person is feeling&lt;/li&gt;
+&lt;li&gt;Recall the last time you felt that emotion
+&lt;ul&gt;
+&lt;li&gt;What was the best and worst thing someone could have said or done to you in that moment&lt;/li&gt;
+&lt;li&gt;First thing we want is to be heard&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Respond
+&lt;ul&gt;
+&lt;li&gt;Help the other person gain control of their emotions and feel a connection&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/3685a3b73a1b1fc8e28d757928fd6d57/empathetic-system-architecture.pdf&quot;&gt;Empathetic System Architecture&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1 id=&quot;fixed-mindset-vs-growth-mindset&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#fixed-mindset-vs-growth-mindset&quot; aria-label=&quot;fixed mindset vs growth mindset permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a href=&quot;https://biglifejournal.com/blogs/blog/fixed-mindset-vs-growth-mindset-examples&quot;&gt;Fixed Mindset vs Growth Mindset&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;I’m either good at something or I’m not -&gt; &lt;strong&gt;I can improve my skills with effort and practice&lt;/strong&gt;&lt;/li&gt;
@@ -862,6 +887,11 @@
 &lt;li&gt;Look at both sides to figure out where the interaction went off track.&lt;/li&gt;
 &lt;li&gt;Say something neutral to help you take a pause. It can be as simple as “This is hard”&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3 id=&quot;ask-ask-tell&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#ask-ask-tell&quot; aria-label=&quot;ask ask tell permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Ask, Ask, Tell&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Use open communication to ask someone how to do/achieve something, if they still don’t do it keep emotion out of it, remaining calm and factual and tell them what they need to do. Set clear expectations, including consequences&lt;/li&gt;
+&lt;li&gt;maybe ask the reason why they don’t want to do it?&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&quot;tackle-a-tough-conversation&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#tackle-a-tough-conversation&quot; aria-label=&quot;tackle a tough conversation permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Tackle a Tough Conversation&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Start your conversation by stating the common ground you share.&lt;/li&gt;
@@ -870,6 +900,38 @@
 &lt;li&gt;Help the other person understand your side. Communicate clearly and directly&lt;/li&gt;
 &lt;li&gt;Even if there is disagreement, once you understand both perspectives, find a way to move the conversation to closure.&lt;/li&gt;
 &lt;li&gt;After the meeting, keep in touch with the person to see how they are doing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;strategies-for-being-empathetic&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#strategies-for-being-empathetic&quot; aria-label=&quot;strategies for being empathetic permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Strategies for being empathetic&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Listen and ask open questions
+&lt;ul&gt;
+&lt;li&gt;Do not interrupt just listen, ask open ended question to keep them talking&lt;/li&gt;
+&lt;li&gt;You will know they are done talking when they ask a question&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Acknowledge and Pause
+&lt;ul&gt;
+&lt;li&gt;Doesn’t mean agreeing with the emotional response&lt;/li&gt;
+&lt;li&gt;Acknowledge what has happened and the circumstances&lt;/li&gt;
+&lt;li&gt;Pause is to ensure they have said everything they want/need to say&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;How do we fix this?
+&lt;ul&gt;
+&lt;li&gt;Majority of people in this state already know what they want to happen&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Actions
+&lt;ul&gt;
+&lt;li&gt;List and confirm actions that will be taken, committing to time frame and ownership&lt;/li&gt;
+&lt;li&gt;Following through with commitments is crucial&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Support
+&lt;ul&gt;
+&lt;li&gt;Say “What else can I do to help?”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&quot;questions&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#questions&quot; aria-label=&quot;questions permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Questions&lt;/h1&gt;
 &lt;ul&gt;
@@ -900,6 +962,16 @@
 &lt;li&gt;how do you current responses make you feel? why is this a problem?&lt;/li&gt;
 &lt;li&gt;how do you think you could leverage your mindset in different situations, to your advantage?&lt;/li&gt;
 &lt;li&gt;how do you think we can be more accommodating of each other’s dominant modalities in a collaborative setting?&lt;/li&gt;
+&lt;li&gt;What is our motivator/emotional driver?&lt;/li&gt;
+&lt;li&gt;What are our values and beliefs?&lt;/li&gt;
+&lt;li&gt;what are our default emotional responses&lt;/li&gt;
+&lt;li&gt;what are our Style of Praise?&lt;/li&gt;
+&lt;li&gt;what are our style of feedback?&lt;/li&gt;
+&lt;li&gt;How to Create a Connection?&lt;/li&gt;
+&lt;li&gt;How can you be empathetic if you have never felt the emotion someone is feeling before?&lt;/li&gt;
+&lt;li&gt;Has anyone in your life stood out as being very empathetic? What did they do that made you feel this way?&lt;/li&gt;
+&lt;li&gt;What is your EI profile?&lt;/li&gt;
+&lt;li&gt;What type of person are you? Work machine, analyst, innovator, tech guru, people lover?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&quot;quotes&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quotes&quot; aria-label=&quot;quotes permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Quotes&lt;/h1&gt;
 &lt;p&gt;“Emotional intelligence is your ability to recognize and understand emotions in yourself and others, and your ability to use this awareness to manage your behavior and relationships”&lt;/p&gt;
