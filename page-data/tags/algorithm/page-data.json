@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tags/algorithm/",
+    "result": {"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/n-queens-notes-may-7-2022/"},"frontmatter":{"title":"Notes on N Queen problem May 7th 2022"}}}]}},"pageContext":{"tag":"algorithm"}},
+    "staticQueryHashes": []}
