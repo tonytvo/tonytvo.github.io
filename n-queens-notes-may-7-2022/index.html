@@ -90,6 +90,8 @@ backtrack(int a[], int k, data input) {
 <ul>
 <li>This is a classic application for backtracking algorithm</li>
 <li>There’s lots of solutions but none of them really shares the approach on how to get to the solution and how to TDD it.</li>
+<li>I were a little confuse on how to mark and unmark the position we have visited, but it turns out that the simplest thing is just avoid side-effects for the currentPosition parameter</li>
+<li>I still don’t like the side-effects I have on QueenPositions to keep track all of the possible solutions on queen positions</li>
 </ul>
 </li>
 <li>A strategy I followed?
@@ -99,6 +101,10 @@ backtrack(int a[], int k, data input) {
 <li>it’s expensive to go through 2<sup>64</sup> true/false vector for 8x8 board.</li>
 <li>to make a backtracking program efficient enough to solve interesting problems, we must <strong>prune the search space by terminating every search path the instant it becomes clear it cannot lead to a solution.</strong></li>
 <li>Since no 2 queens can occupy the same column, we know that the n columns of a complete solution must form a permutation of n, this reduce the search space to 8! = 40320.</li>
+<li>try to start from the client first/intention first</li>
+<li>avoid using getter (help to reasoning where to put the behavior to avoid the getter method)</li>
+<li>try to use approvals, but needs to reset the approved file whenever I need to change the test name</li>
+<li>here’s the PR -> <a href="https://github.com/tonytvo/n-queens/pull/1">https://github.com/tonytvo/n-queens/pull/1</a></li>
 </ul>
 </li>
 </ul>
