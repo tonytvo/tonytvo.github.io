@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-templates-tags-js",
-    "path": "/tags/refactoring/",
-    "result": {"data":{"allMarkdownRemark":{"totalCount":2,"edges":[{"node":{"fields":{"slug":"/gilded-rose-pratice-notes-april-3-2022/"},"frontmatter":{"title":"Notes on gilded rose kata practice April 3rd 2022"}}},{"node":{"fields":{"slug":"/evolutionary-design-notes-with-jbrain/"},"frontmatter":{"title":"Evolutionary Design Notes With JBrain Sessions"}}}]}},"pageContext":{"tag":"refactoring"}},
-    "staticQueryHashes": []}
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/refactoring/","result":{"data":{"allMarkdownRemark":{"totalCount":2,"edges":[{"node":{"fields":{"slug":"/gilded-rose-pratice-notes-april-3-2022/"},"frontmatter":{"title":"Notes on gilded rose kata practice April 3rd 2022"}}},{"node":{"fields":{"slug":"/evolutionary-design-notes-with-jbrain/"},"frontmatter":{"title":"Evolutionary Design Notes With JBrain Sessions"}}}]}},"pageContext":{"tag":"refactoring"}},"staticQueryHashes":[]}

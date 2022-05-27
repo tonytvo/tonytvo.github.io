@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-templates-tags-js",
-    "path": "/tags/coderetreat/",
-    "result": {"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/collaborative-learning-coderetreat/"},"frontmatter":{"title":"Collaborative Learning at Coderetreats"}}}]}},"pageContext":{"tag":"coderetreat"}},
-    "staticQueryHashes": []}
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/coderetreat/","result":{"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/collaborative-learning-coderetreat/"},"frontmatter":{"title":"Collaborative Learning at Coderetreats"}}}]}},"pageContext":{"tag":"coderetreat"}},"staticQueryHashes":[]}

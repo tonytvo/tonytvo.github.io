@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-templates-tags-js",
-    "path": "/tags/diet/",
-    "result": {"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/4-hours-body/"},"frontmatter":{"title":"4 hours body summary"}}}]}},"pageContext":{"tag":"diet"}},
-    "staticQueryHashes": []}
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/diet/","result":{"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/4-hours-body/"},"frontmatter":{"title":"4 hours body summary"}}}]}},"pageContext":{"tag":"diet"}},"staticQueryHashes":[]}

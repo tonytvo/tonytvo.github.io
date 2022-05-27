@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-templates-tags-js",
-    "path": "/tags/investment/",
-    "result": {"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/tools-of-titans/"},"frontmatter":{"title":"tools of titans summary"}}}]}},"pageContext":{"tag":"investment"}},
-    "staticQueryHashes": []}
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/investment/","result":{"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/tools-of-titans/"},"frontmatter":{"title":"tools of titans summary"}}}]}},"pageContext":{"tag":"investment"}},"staticQueryHashes":[]}

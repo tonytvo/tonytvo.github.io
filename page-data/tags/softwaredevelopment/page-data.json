@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-templates-tags-js",
-    "path": "/tags/softwaredevelopment/",
-    "result": {"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/yet-another-interpretation-pyramid-tests/"},"frontmatter":{"title":"Yet another interpretation of pyramid tests"}}}]}},"pageContext":{"tag":"softwaredevelopment"}},
-    "staticQueryHashes": []}
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/softwaredevelopment/","result":{"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/yet-another-interpretation-pyramid-tests/"},"frontmatter":{"title":"Yet another interpretation of pyramid tests"}}}]}},"pageContext":{"tag":"softwaredevelopment"}},"staticQueryHashes":[]}

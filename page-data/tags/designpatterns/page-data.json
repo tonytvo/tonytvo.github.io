@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-templates-tags-js",
-    "path": "/tags/designpatterns/",
-    "result": {"data":{"allMarkdownRemark":{"totalCount":2,"edges":[{"node":{"fields":{"slug":"/practical-guide-oop-summary/"},"frontmatter":{"title":"practical guide to object oriented design"}}},{"node":{"fields":{"slug":"/manage-dependencies/"},"frontmatter":{"title":"managing dependencies summary"}}}]}},"pageContext":{"tag":"designpatterns"}},
-    "staticQueryHashes": []}
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/designpatterns/","result":{"data":{"allMarkdownRemark":{"totalCount":2,"edges":[{"node":{"fields":{"slug":"/practical-guide-oop-summary/"},"frontmatter":{"title":"practical guide to object oriented design"}}},{"node":{"fields":{"slug":"/manage-dependencies/"},"frontmatter":{"title":"managing dependencies summary"}}}]}},"pageContext":{"tag":"designpatterns"}},"staticQueryHashes":[]}
