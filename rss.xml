@@ -1,4 +1,220 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 12 Jun 2022 15:54:45 GMT</lastBuildDate><item><title><![CDATA[options cashflow strategies]]></title><description><![CDATA[Key Points/Goals Fundamental Analysis value investing summary Technical Analysis Cash Flow Risk Management Questions References https://www…]]></description><link>https://tonytvo.github.io/option-cashflow-strategies/</link><guid isPermaLink="false">https://tonytvo.github.io/option-cashflow-strategies/</guid><pubDate>Sun, 22 May 2022 23:46:37 GMT</pubDate><content:encoded>&lt;h1 id=&quot;key-pointsgoals&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#key-pointsgoals&quot; aria-label=&quot;key pointsgoals permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Key Points/Goals&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 14 Jun 2022 10:06:44 GMT</lastBuildDate><item><title><![CDATA[getting things done summary]]></title><description><![CDATA[Goals/Context for having todo list trusted place I can easily find and look at to see additional/support information on any projects that is…]]></description><link>https://tonytvo.github.io/getting-things-done-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/getting-things-done-summary/</guid><pubDate>Tue, 14 Jun 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;goalscontext-for-having-todo-list&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#goalscontext-for-having-todo-list&quot; aria-label=&quot;goalscontext for having todo list permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Goals/Context for having todo list&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;trusted place I can easily find and look at to see additional/support information on any projects that is working on&lt;/li&gt;
+&lt;li&gt;reliable place for ideas and tasks&lt;/li&gt;
+&lt;li&gt;maintain perspective and trust in the focus and the priorities&lt;/li&gt;
+&lt;li&gt;getting in-tray(s) to zero&lt;/li&gt;
+&lt;li&gt;avoid open loops and cognitive loads in the mind to remember the open loops&lt;/li&gt;
+&lt;li&gt;reference system to retrieve information within 30 seconds or less&lt;/li&gt;
+&lt;li&gt;easy to access to the visualization of the tasks in the inbox/today/next action lists, so it’s easier for you to take action&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;getting-started&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#getting-started&quot; aria-label=&quot;getting started permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Getting Started&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Sign up for Zapier and build one very simple automation. It doesn’t matter which one. Maybe create some kind of reminder.&lt;/li&gt;
+&lt;li&gt;Sign up for Todoist and start just putting tasks into the Inbox. Maybe create a few Projects. Install it on your phone. Practise using it to get things out of your head for a couple of weeks.&lt;/li&gt;
+&lt;li&gt;If you decide after a few weeks that you don’t hate Todoist, then spend one afternoon/evening doing the Core Dump where you just create Projects and add Tasks until everything seems out of your head. It probably not that important to have links from Todoist tasks back to specific emails as long as you know what to search for in gmail when you need it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;2-minute-rule&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-minute-rule&quot; aria-label=&quot;2 minute rule permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2-minute rule&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;if the next action can be done in 2 minutes or less, do it now&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;write-down-ideas-and-to-do-items-when-they-first-show-up&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#write-down-ideas-and-to-do-items-when-they-first-show-up&quot; aria-label=&quot;write down ideas and to do items when they first show up permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Write down ideas and to-do items when they first show up&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;make it easy to extract the information out of the the brains
+&lt;ul&gt;
+&lt;li&gt;it usually takes less than 30 seconds to create the todoist item on the phone&lt;/li&gt;
+&lt;li&gt;index cards can be used to write down ideas, but the items on index cards need to be transferred to Todoist&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;apply a label to an email, which then is picked up by Zapier action and creates a card in Trello with the text of the email&lt;/li&gt;
+&lt;li&gt;use Todoist Gmail plugin to create a task and put it in the in-tray
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://todoist.com/help/articles/use-gmail-with-todoist&quot;&gt;Use Gmail with Todoist&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;It is probably not that important to have links from Todoist tasks back to specific emails as long as you know what to search for in gmail when you need it&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;If there’s an inbox item and There’s no project fit for it, then it should be deleted forever.&lt;/li&gt;
+&lt;li&gt;create todo item from voice command
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://todoist.com/help/articles/how-to-use-todoist-for-google-assistant&quot;&gt;How to use Todoist for Google Assistant&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;“OK Google, Ask Todoist to add a task Wash the car today”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Siri Action
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://support.apple.com/en-ca/guide/shortcuts/welcome/ios&quot;&gt;Shortcut Action&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;tell the title of the action to Siri, it prompts the title of the card.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Inbox/Task List: a combination of Todoist and 1-5 index cards.&lt;/li&gt;
+&lt;li&gt;core Dump where you just create Projects and add Tasks until everything seems out of your head&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.jbrains.ca/permalink/remind-yourself-to-schedule-x&quot;&gt;Remind Yourself To Schedule A Thing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;When you choose not to document something in your inbox
+&lt;ul&gt;
+&lt;li&gt;what does that choice feel like?&lt;/li&gt;
+&lt;li&gt;when this happens, what do you do instead? (Keep it in your brain’s memory? Write it on a piece of paper? Something else?)&lt;/li&gt;
+&lt;li&gt;why did you choose not to do the task?
+&lt;ul&gt;
+&lt;li&gt;forgot to think about it&lt;/li&gt;
+&lt;li&gt;thought about it, but never felt like I could schedule it, because I had other things to do that I consciously decided were more urgent&lt;/li&gt;
+&lt;li&gt;thought about it and consciously decided “I’ll do it later”, but then I forgot to think about it a second time.&lt;/li&gt;
+&lt;li&gt;thought about it and consciously decided “I can’t justify taking time from my schedule to do this now”, but then I forgot to think about it a second time.&lt;/li&gt;
+&lt;li&gt;some other reason&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;after deciding the reason(s) not to do the task
+&lt;ul&gt;
+&lt;li&gt;move the item from your inbox into a new Project. Let this project have only one task: do it! Move this new Project up your list of Projects until everything above it is clearly more urgent&lt;/li&gt;
+&lt;li&gt;create a new recurring task called “Decide when to do (the original task)“. Give yourself a reminder once per week. If you notice that you never even decide when to do the original task, then the original task wasn’t important enough or urgent enough. &lt;strong&gt;Throw it away and maybe it comes back&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;pick an exact time to do the task and then put that on your calendar. At the moment that time arrives, either you do the task or you throw it away (and maybe one day it comes back)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;keep-a-complete-list-of-all-of-the-next-actions&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#keep-a-complete-list-of-all-of-the-next-actions&quot; aria-label=&quot;keep a complete list of all of the next actions permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Keep a complete list of all of the next actions&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;apply Todoist label next-action on the task&lt;/li&gt;
+&lt;li&gt;If you can’t even guess the effort of a smaller next action, then maybe the next action is “Spend 30 minutes figuring out what it means to complete this project”. Maybe the lack of vision/clarity about the “acceptance criteria” makes it hard for you to know where to start.
+&lt;ul&gt;
+&lt;li&gt;describe one next action which you can guess how long it will take—even if that next action is tiny or seems insignificant. That means moving the item from Inbox to New Project, then writing 2 tasks for that project:
+&lt;ul&gt;
+&lt;li&gt;the new, smaller next action&lt;/li&gt;
+&lt;li&gt;figure out how to do the rest of this project&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;keep-a-record-of-what-is-waiting-for-other-people&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#keep-a-record-of-what-is-waiting-for-other-people&quot; aria-label=&quot;keep a record of what is waiting for other people permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Keep a record of what is waiting for other people&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;apply Todoist label wait-for for the specific task&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;keep-a-single-list-of-all-current-projects&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#keep-a-single-list-of-all-current-projects&quot; aria-label=&quot;keep a single list of all current projects permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Keep a Single list of all current projects&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;add project to the todoist projects list&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;at-least-one-recorded-next-action-for-each-of-the-projects&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#at-least-one-recorded-next-action-for-each-of-the-projects&quot; aria-label=&quot;at least one recorded next action for each of the projects permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;At least one recorded next action for each of the projects&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;make sure each project has at least one task with next-action label&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;keep-somedaymaybe-list&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#keep-somedaymaybe-list&quot; aria-label=&quot;keep somedaymaybe list permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Keep Someday/Maybe list&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Add Someday/Maybe as a project in todoist&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;get-in-trays-paper-or-digital-to-empty-every-day-or-so&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#get-in-trays-paper-or-digital-to-empty-every-day-or-so&quot; aria-label=&quot;get in trays paper or digital to empty every day or so permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Get in-tray(s) (paper or digital) to empty every day or so&lt;/h1&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/717039c76fc5d69d83b689844cb5c678/0012b/getting-things-done-summary.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.82278481012659%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB+klEQVQoz12SS2/qMBCF8/+33XSPuu+qEis2LFKqCCIB4mJIUsePPLAJIXViEnuuGvdSdL+V5fE5ozljD/5hjLlerxjjw+FQFEWSJGmaSil93z+fzwih/X4vpdRa3yXe/WStNcakaer7/mw2m0wmYRi+vb09PT1Np9P5fL7dbpVSxphfsdMYY+yIc6nrerPZhGEYBEEcx3me933/2MO9/+3sIIRQSgkhbdv6vv/8/Owui6KIomi/31dV5Sy+OwshOOdOk2VZEASr1Wq5XGZZttlsXl5eAOD9/R0hFATBYrFACJVliTGWUnqEkD8ju90OIZSMxHEcRRHnnI4ghDjnGGPO+fF4jKJovV4zxn5mvg8zDENd10KIJEkopWVZHg6HsiyllLfb7TGXn8C01m3bCiEopYyxNE055/dUrbVSSowxY8zZKaW6rvsOrO97zjkboZQaY4QQeZ4DgBACIQQAl8vF2RVFQQhx4yilvLZtMcZd19V1TSkFgNPp5MQfHx+vr69N01yvV8aYK5Vl6b7D5XLxtNaMMWtt0zSccwA4n8+n08kYE8fxdrvtuu5eEiMAwDlvmsYzxnx9fVlrb7db27YAoLXuuu5x+cMw/FdSSvV97yml0jRVSjHGPj8/67p2O+/73lo7DAMANE1TVZUxhhCSZZnWmlJaVdVfiiTQwYzAIO0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;getting things done summary&quot;
+        title=&quot;getting things done summary&quot;
+        src=&quot;/static/717039c76fc5d69d83b689844cb5c678/f058b/getting-things-done-summary.png&quot;
+        srcset=&quot;/static/717039c76fc5d69d83b689844cb5c678/c26ae/getting-things-done-summary.png 158w,
+/static/717039c76fc5d69d83b689844cb5c678/6bdcf/getting-things-done-summary.png 315w,
+/static/717039c76fc5d69d83b689844cb5c678/f058b/getting-things-done-summary.png 630w,
+/static/717039c76fc5d69d83b689844cb5c678/0012b/getting-things-done-summary.png 661w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&quot;eisenhower-matrix&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#eisenhower-matrix&quot; aria-label=&quot;eisenhower matrix permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;eisenhower-matrix&lt;/h1&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4f27c81c484fa1cff0c631f0480998a0/efabe/eisen-hower-matrix.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 93.0379746835443%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAATABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAEDBf/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAAB7UTF2RqUFFf/xAAaEAEAAgMBAAAAAAAAAAAAAAABADECEBEh/9oACAEBAAEFAl9WEbbxrk4a/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAFBABAAAAAAAAAAAAAAAAAAAAMP/aAAgBAQAGPwIf/8QAGxABAQEAAgMAAAAAAAAAAAAAAQARECExYYH/2gAIAQEAAT8hfpLoSU7nvifZYADgQu5eqDL/2gAMAwEAAgADAAAAEGjogP/EABYRAQEBAAAAAAAAAAAAAAAAAAEgIf/aAAgBAwEBPxBwj//EABcRAQEBAQAAAAAAAAAAAAAAABEBABD/2gAIAQIBAT8QWk0xHn//xAAbEAEBAQADAQEAAAAAAAAAAAABEQAhQVExYf/aAAgBAQABPxAUoEvPGPQcl81jF/MMenplpBMl5Bb1qQF9yiKVPjgECG//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;eisenhower-matrix&quot;
+        title=&quot;eisenhower-matrix&quot;
+        src=&quot;/static/4f27c81c484fa1cff0c631f0480998a0/828fb/eisen-hower-matrix.jpg&quot;
+        srcset=&quot;/static/4f27c81c484fa1cff0c631f0480998a0/ff44c/eisen-hower-matrix.jpg 158w,
+/static/4f27c81c484fa1cff0c631f0480998a0/a6688/eisen-hower-matrix.jpg 315w,
+/static/4f27c81c484fa1cff0c631f0480998a0/828fb/eisen-hower-matrix.jpg 630w,
+/static/4f27c81c484fa1cff0c631f0480998a0/0ede0/eisen-hower-matrix.jpg 945w,
+/static/4f27c81c484fa1cff0c631f0480998a0/3ac88/eisen-hower-matrix.jpg 1260w,
+/static/4f27c81c484fa1cff0c631f0480998a0/efabe/eisen-hower-matrix.jpg 1472w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&quot;store-and-access-reference-material-easily-when-needed-whether-it-is-paper-or-digital&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#store-and-access-reference-material-easily-when-needed-whether-it-is-paper-or-digital&quot; aria-label=&quot;store and access reference material easily when needed whether it is paper or digital permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Store and access (reference material easily when needed, whether it is paper or digital)&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Reference: a combination of Standard Notes and one Git repository (Or Google Drive), which I back up on Gitlab.&lt;/li&gt;
+&lt;li&gt;coming up keywords with: “How am I likely to search for this 6 months from now”&lt;/li&gt;
+&lt;li&gt;Google Drive folder name general-reference. Organized by keywords like general-reference/meme. Each folder is mapped to a keyword.&lt;/li&gt;
+&lt;li&gt;tags note appropriately so it can be found later.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;regularly-review-the-professional-and-personal-todo-list&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#regularly-review-the-professional-and-personal-todo-list&quot; aria-label=&quot;regularly review the professional and personal todo list permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;regularly review the professional and personal todo list&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;use project template GTD Weekly review from Todoist&lt;/li&gt;
+&lt;li&gt;maybe take 30 minutes to review?&lt;/li&gt;
+&lt;li&gt;daily review&lt;/li&gt;
+&lt;li&gt;use embedded widgets from Todoist on phone/browser, so the tasks in inbox/next action/today can easily be viewed and action on.&lt;/li&gt;
+&lt;li&gt;identify and address your limiting criteria&lt;/li&gt;
+&lt;li&gt;context, time available, the energy available (tackle frog labels with the highest energy), and priority&lt;/li&gt;
+&lt;li&gt;recommended at least 60-90 minutes daily, but I often only have 5 mins to do it.&lt;/li&gt;
+&lt;li&gt;tasks that hard to to classify&lt;/li&gt;
+&lt;li&gt;maybe, “I just want to remember to have the option to do this task, but I’m OK if it waits 5 years”. Put it in Somday/Maybe or create new project for it.&lt;/li&gt;
+&lt;li&gt;maybe, “I just need to decide once and for all to do it or not to do it”. Set a reminder for “Decide when to do X” or just put the damn thing on your calendar.&lt;/li&gt;
+&lt;li&gt;maybe, just &lt;strong&gt;delete it and it will comeback if it is significant enough&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;resolve the possible guilt about it. Put it out of your mind. You can do it either by decided “I’m going to do it on Specific date” or “I’m going to just put it in the list and I’m happy if I do it next week, next month, next year, or next decade”.&lt;/li&gt;
+&lt;li&gt;when reviewing inbox
+&lt;ul&gt;
+&lt;li&gt;use Projects aggressively&lt;/li&gt;
+&lt;li&gt;if there’s no projects fit for an item, delete it forever.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;the-calendar&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#the-calendar&quot; aria-label=&quot;the calendar permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;The Calendar&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;to keep it as the most trusted part of the todo system, use it to record the following kinds of information
+&lt;ul&gt;
+&lt;li&gt;time-specific actions: i.e. appointments, reserved time for a certain activity&lt;/li&gt;
+&lt;li&gt;day-specific actions: i.e. a shipment must be sent today&lt;/li&gt;
+&lt;li&gt;day-specific information: i.e. daughter’s birthday, office moves, etc…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;quotes&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quotes&quot; aria-label=&quot;quotes permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Quotes&lt;/h1&gt;
+&lt;h1 id=&quot;reference&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#reference&quot; aria-label=&quot;reference permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Reference&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.jbrains.ca/permalink/remind-yourself-to-schedule-x&quot;&gt;https://blog.jbrains.ca/permalink/remind-yourself-to-schedule-x&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.amazon.ca/Getting-Things-Done-Stress-Free-Productivity-ebook/dp/B00KWG9M2E&quot;&gt;https://www.amazon.ca/Getting-Things-Done-Stress-Free-Productivity-ebook/dp/B00KWG9M2E&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[options cashflow strategies]]></title><description><![CDATA[Key Points/Goals Fundamental Analysis value investing summary Technical Analysis Cash Flow Risk Management Questions References https://www…]]></description><link>https://tonytvo.github.io/option-cashflow-strategies/</link><guid isPermaLink="false">https://tonytvo.github.io/option-cashflow-strategies/</guid><pubDate>Sun, 22 May 2022 23:46:37 GMT</pubDate><content:encoded>&lt;h1 id=&quot;key-pointsgoals&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#key-pointsgoals&quot; aria-label=&quot;key pointsgoals permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Key Points/Goals&lt;/h1&gt;
 &lt;h1 id=&quot;fundamental-analysis&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#fundamental-analysis&quot; aria-label=&quot;fundamental analysis permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Fundamental Analysis&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;/value-investing-summary&quot;&gt;value investing summary&lt;/a&gt;&lt;/li&gt;
@@ -53,6 +269,12 @@
 &lt;li&gt;&lt;a href=&quot;https://ardalis.com/domain-modeling-encapsulation/&quot;&gt;https://ardalis.com/domain-modeling-encapsulation/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://refactoring.pl/en/pyramid-of-refactoring-discovery/&quot;&gt;https://refactoring.pl/en/pyramid-of-refactoring-discovery/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://refactoring.pl/en/pyramid-of-refactoring-example/&quot;&gt;https://refactoring.pl/en/pyramid-of-refactoring-example/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[favorite readings for tech]]></title><description><![CDATA[Keeping up with things to reads/watch and share the one that have influenced me in my thinking. favorite talks favorite books to-read The…]]></description><link>https://tonytvo.github.io/favorite-general-readings/</link><guid isPermaLink="false">https://tonytvo.github.io/favorite-general-readings/</guid><pubDate>Sun, 22 May 2022 23:46:37 GMT</pubDate><content:encoded>&lt;p&gt;Keeping up with things to reads/watch and share the one that have influenced me in my thinking.&lt;/p&gt;
+&lt;h1 id=&quot;favorite-talks&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#favorite-talks&quot; aria-label=&quot;favorite talks permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;favorite talks&lt;/h1&gt;
+&lt;h1 id=&quot;favorite-books&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#favorite-books&quot; aria-label=&quot;favorite books permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;favorite books&lt;/h1&gt;
+&lt;h1 id=&quot;to-read&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#to-read&quot; aria-label=&quot;to read permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;to-read&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=wtl5UrrgU8c&amp;#x26;ab_channel=TED&quot;&gt;The secret to giving great feedback | The Way We Work&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[favorite readings for tech]]></title><description><![CDATA[Keeping up with things to reads/watch and share the one that have influenced me in my thinking. favorite tech talks Visualising software…]]></description><link>https://tonytvo.github.io/favorite-tech-readings/</link><guid isPermaLink="false">https://tonytvo.github.io/favorite-tech-readings/</guid><pubDate>Sun, 22 May 2022 23:46:37 GMT</pubDate><content:encoded>&lt;p&gt;Keeping up with things to reads/watch and share the one that have influenced me in my thinking.&lt;/p&gt;
 &lt;h1 id=&quot;favorite-tech-talks&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#favorite-tech-talks&quot; aria-label=&quot;favorite tech talks permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;favorite tech talks&lt;/h1&gt;
 &lt;ul&gt;
@@ -93,6 +315,7 @@
 &lt;li&gt;&lt;a href=&quot;https://philippe.bourgau.net/categories/#large-scale-refactoring-sponsorship-series&quot;&gt;large scale refactoring sponsorship series by Philippe Bourgau&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://fsharpforfunandprofit.com/posts/thinking-functionally-intro/&quot;&gt;Thinking functionally series&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.leanessays.com/2022/06/when-demand-exceeds-capacity.html&quot;&gt;when demand exceeds capacity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.softwareontheside.com/p/books.html&quot;&gt;recommended books from Mike Clement&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Notes on N Queen problem May 7th 2022]]></title><description><![CDATA[Backtracking systematic method to iterate through all the possible configurations of a search space at each step in the backtracking…]]></description><link>https://tonytvo.github.io/n-queens-notes-may-7-2022/</link><guid isPermaLink="false">https://tonytvo.github.io/n-queens-notes-may-7-2022/</guid><pubDate>Sat, 07 May 2022 23:46:37 GMT</pubDate><content:encoded>&lt;h1 id=&quot;backtracking&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#backtracking&quot; aria-label=&quot;backtracking permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Backtracking&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;systematic method to iterate through all the possible configurations of a search space&lt;/li&gt;
