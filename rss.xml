@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 08 Jul 2022 14:24:10 GMT</lastBuildDate><item><title><![CDATA[getting things done summary]]></title><description><![CDATA[Goals/Context for having todo list trusted place I can easily find and look at to see additional/support information on any projects that is…]]></description><link>https://tonytvo.github.io/getting-things-done-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/getting-things-done-summary/</guid><pubDate>Tue, 14 Jun 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;goalscontext-for-having-todo-list&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#goalscontext-for-having-todo-list&quot; aria-label=&quot;goalscontext for having todo list permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Goals/Context for having todo list&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 11 Jul 2022 00:22:18 GMT</lastBuildDate><item><title><![CDATA[getting things done summary]]></title><description><![CDATA[Goals/Context for having todo list trusted place I can easily find and look at to see additional/support information on any projects that is…]]></description><link>https://tonytvo.github.io/getting-things-done-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/getting-things-done-summary/</guid><pubDate>Tue, 14 Jun 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;goalscontext-for-having-todo-list&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#goalscontext-for-having-todo-list&quot; aria-label=&quot;goalscontext for having todo list permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Goals/Context for having todo list&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;trusted place I can easily find and look at to see additional/support information on any projects that is working on&lt;/li&gt;
 &lt;li&gt;reliable place for ideas and tasks&lt;/li&gt;
@@ -1706,7 +1706,131 @@ backtrack(int a[], int k, data input) {
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/Bogleheads/comments/obcxqu/richard_ferri_all_about_asset_allocation_and/&quot;&gt;https://www.reddit.com/r/Bogleheads/comments/obcxqu/richard_ferri_all_about_asset_allocation_and/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/80c06c6d1c6ac7c0296a1b76440fe185/Global-Asset-Allocation.pdf&quot;&gt;Global Asset Allocation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[value investing summary]]></title><description><![CDATA[Scope and Limits of Security Analysis common obstacles to analyst inadequate or incorrect data uncertainties of future irrational behavior…]]></description><link>https://tonytvo.github.io/value-investing-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/value-investing-summary/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;h1 id=&quot;scope-and-limits-of-security-analysis&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#scope-and-limits-of-security-analysis&quot; aria-label=&quot;scope and limits of security analysis permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Scope and Limits of Security Analysis&lt;/h1&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[value investing summary]]></title><description><![CDATA[value investing  circle of competence - “know what you know” organize valuation components by reliability: most reliable -> least reliable…]]></description><link>https://tonytvo.github.io/value-investing-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/value-investing-summary/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;h1 id=&quot;value-investing&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#value-investing&quot; aria-label=&quot;value investing permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;value investing&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 394px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ec39e2b02c14483aa0ec0cabe6b49761/cc097/value-investing-process.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 216.45569620253164%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,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&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;value investing process&quot;
+        title=&quot;value investing process&quot;
+        src=&quot;/static/ec39e2b02c14483aa0ec0cabe6b49761/cc097/value-investing-process.png&quot;
+        srcset=&quot;/static/ec39e2b02c14483aa0ec0cabe6b49761/c26ae/value-investing-process.png 158w,
+/static/ec39e2b02c14483aa0ec0cabe6b49761/6bdcf/value-investing-process.png 315w,
+/static/ec39e2b02c14483aa0ec0cabe6b49761/cc097/value-investing-process.png 394w&quot;
+        sizes=&quot;(max-width: 394px) 100vw, 394px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;circle of competence - “know what you know”
+&lt;ul&gt;
+&lt;li&gt;organize valuation components by reliability: most reliable -&gt; least reliable&lt;/li&gt;
+&lt;li&gt;organize valuation components by underlying strategic assumption: no competitive advantage -&gt; growing competitive advantage&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;“The search for undervalued stocks should start with companies that are undesirable, such as those in bankruptcy or suffering from financial distress”. Another way to think about is to focus on great company at fair price&lt;/li&gt;
+&lt;li&gt;the problem with the present value method is that it is a terminal value calculation as of today, and it does not avoid the problems with terminal calculation (terminal value is the value of a company’s cash flows projected beyond the end of year 10, when the cash flow grows perpetually at a constant proportional rate)&lt;/li&gt;
+&lt;li&gt;reproduction cost of an asset is the most appropriate measure of its worth.
+&lt;ul&gt;
+&lt;li&gt;it requires going beyond the balance sheet and diving deeper into the footnotes to make adjustments to find undiscovered value&lt;/li&gt;
+&lt;li&gt;reproduction value looks at how much it will cost a competitor to purchase an asset required to run a competing company&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.oldschoolvalue.com/stock-valuation/how-to-asset-reproduction-value-analysis/&quot;&gt;asset reproduction value analysis&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;the second most reliable measure of a firm’s intrinsic value is the value of its current earnings, properly adjusted. This value can be estimated with more certainty than future earnings or cash flows, and it is more relevant to today’s values than are earnings in the past.&lt;/li&gt;
+&lt;li&gt;earnings power value technique
+&lt;ul&gt;
+&lt;li&gt;the value of assets a competitor will be required to have in order to achieve the same market value of incumbent company in the industry&lt;/li&gt;
+&lt;li&gt;earnings power value calculated based on current financial status where the resulting intrinsic value ignores business cycles&lt;/li&gt;
+&lt;li&gt;growth is usually ignored in this valuation technique&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.oldschoolvalue.com/stock-analysis/earnings-power-value-epv/&quot;&gt;Earnings Power value (EPV) Stock valuation How-to&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;As a note, Enron had great earnings all the way up to its collapse but FCF foretold the troubles long before the scandal surfaced.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;discounted cash flow
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.oldschoolvalue.com/stock-valuation/how-value-stocks-dcf/&quot;&gt;DCF Stock valuation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 627px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7b71978e88d22b9e2dfab481cc174dbc/e9c9b/npv-cash-flow.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 136.0759493670886%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAbCAYAAAB836/YAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD2ElEQVRIx41VaZObOBDl//+ozYdkUold43tswGN8wIAD5gZxCPltdTNmnDm2VlVdAiE9ve5+3WimIfD9e4KHhxQ/fqRYr0s8Pua8Nhpl+Pkz5Xk0SiHlFTSu1yvb++emU9B2uz0WCwOTyRrLpYmnJwOrpYHFwsJ8vsFyYWCxNJAXcjj8GeDtXesf+pd+vqKqBACF/zPeA2v0otQVdV2j6zr+OJvN4fs+lFI8l2XJm13XRdu2vLdt5QBGazdQBmyaBrquY/L4iDCKMJvNsDUNeOczHh5+wrIsOI6D36MR4iiCZe1h2w6qqkIQBNjv9wOo9pkbSRIzKxpCCGaUZRmKoviwN89zhGHI4AyYpSmclxc+YJ9OuFwuuIQhoijqLQzZ7TRN+eDhcIDnedjtdnzufTw1up0206HpdIr1eo3xeIzNeg3TNPmdQrBYLDCdTvD71y+MRmN8+/YPDsdjD6TUW5aJKrlCLtLNSZLAdhx+piQcj0ekSQo/CJBlOSeqaVu0Tfsh0wxY5DnfRC4TS3Jxu90yM5o3+gZh6OPlxYGoyv+UzZdJuR+kJMoPxTzPFWSnPgj6HlS7ifkmbFpkt5oOZSnhOBUOhwqmWULflIhjibZRuH7BVKtrhaLoBlOq/yhEL/I0iWCaOna7LVy3z2pVKajuirLsz3TqjiEtOI6AYwu4boWqlvyRGkHTKPQXNkhTgarqeI2MAC+XBq5HVaMG7ziGgX+Gtd/B8xzObO/2lTdK2cdRiAbkFYFJ2cexLHOcTgfo+oYrZ2gOJGACIlHT3HU9M2JZ1xKGTlk3Ecc5gxeFfK1hCdu2WVokNwakBHiuyyKmGFn7Pc7nM1qJwb2zF8C2PWRZhbZ9iy+VHVWXYRhcQa2UvcvEkECCwEeSpEMdK/WWSym7Vxm9VYWUEpa1g2luGWNg6Pt/uJtwqxLiNZMdxy+Jc6xWG8xmT8ySGFJ2b40jjiPuOL4fwLFPfQzjOEYUhX9pitwiQMf2MB5PMBpNsFxuUIqWAYmkKAuOIblLLKnatL5xvnAcdN3AzrK4P95cJmsaAhHs7r3LbdtwqLI8RyX6771sggDPz89cu3SblO2gQzIhWkRRxqK/abOXTcFNhJhRPKnJap8VOxmVHcXL8/5gtdLxvLWg61sGpGKgQV3K0HXM53NMZzMG197/Cj9rDqTFm5HYqZb7kCjO7uUScEIpScNfj9zJshrHowvXvXBGd89HJLFgJofD/q4JfE3gL8A8r3E6ufC8kAEty0aa1iwJ0ttX4bk37X1Puw3KILGi/8jZc7FYrvhvdzqdYJoGkjTFZ+H6FylnFp2Y9jhXAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;net presented value of cash flow&quot;
+        title=&quot;net presented value of cash flow&quot;
+        src=&quot;/static/7b71978e88d22b9e2dfab481cc174dbc/e9c9b/npv-cash-flow.png&quot;
+        srcset=&quot;/static/7b71978e88d22b9e2dfab481cc174dbc/c26ae/npv-cash-flow.png 158w,
+/static/7b71978e88d22b9e2dfab481cc174dbc/6bdcf/npv-cash-flow.png 315w,
+/static/7b71978e88d22b9e2dfab481cc174dbc/e9c9b/npv-cash-flow.png 627w&quot;
+        sizes=&quot;(max-width: 627px) 100vw, 627px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1801b8bc3b49aead59eb377c5722b6fe/ace37/disadvantages-npv-approach.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 126.58227848101265%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAYAAAAxFw7TAAAACXBIWXMAAAsTAAALEwEAmpwYAAADt0lEQVQ4y5VUaXMaRxDd//85KTuH5OhwhCRk54sNBBAgMDd76ECIQ4BAHMvNAmJhl5fqRotWKHYlU9U1C93T8/r16xFGwyUikQHEzAiyMoYkrS0eG6JYmuLmWkMyOUS1OuOdjOIoPp+foFafw1rqRIcwm5kQxSmyWR2yPEe3h/+9VqsVGy1B13UoigKv1w/XVxcCgQvEYjG2RCIBn88Pv8+HSOQb4vEEQsEgwuEwgsEg/P5zlMuVV4mF5XIJVVVxdXUFURQhyzIuFQU3N1lcX19DFCXIsgRJknB5eQVFljlGkkSkUim0Wi2Ypon5fF268F9KMkzzu77FYoFBv49eb82VUCmXkcmkGWW9XkepVEJHVZHL3eHx8RHj8ZhRdDodED3dbhe53C1uc3cYDof8f7/f53L7/QEETdMwGAzw9PSE6XTK35o2xmg8hqq2+eZarc4HaVFpZM1mE+1WC81Wi0GsffqPSyZu6CIKJDQW8daazWbsJ1DUi9XKhGC13AokBwVSeaPRcIN+MplwjGEY7KM42imWvimGfMK2nqydEsmShGKxuGmK5a/VaqhWq7i/v0elUkGhUOAL33TZjlJRSBoyEvE4VHXNn/nsH41GLCOydDqN7G0OhmGudbitdPMZTavV5C4/PNS4HLvPkou+0NflG8aLsK1kVnCpVITf78dFKIhIJIJEIskokqk0IuGL5+nxQVYuYa5ej94G4XcGlEm2d3Wbmn9bAh1qt9vodjssYhJpv9eDNpnwb5ILcUaka+Mx65H0OtY0TDSNhd5oNDiG/hfm8ycm1+1yweE4xvHxCU5PTuB2e+B0OnF6eoJTpxNfv3yB1+vF7s4O9vb24Dw7w1+fP+Ps0yccHhzA4XAglUpDsLhzu93Y39/H4eEB/vjwAb/9voOjoyPs7u7i/S+/4t3PP+Hjxz8RDIaYw+i3CANJJpMIBAIQMxm02p2XhOlUCh6Ph1+dQDAE798ehEIhuNxuRKNRhMMX3KzpbPbDh0TYJplksNB15s9aNLskHZIKcU5GQEh7tFu2kY2VyBojOkBJaEqKhQIazSbPKfms5ObK3Or66gUhISIRL5eGLcjETTaL83M/KpXqK7n0el3uPgGwj+smYe2hilg0ivpj49VEkFRIJqZtkgihJGaQTCQRi8X5rbSLmxM2Gw3E43EeePt4EQ1v5tww+P3L5/O4L5fxUK2+Hb3NbD4nIBT0otzd5Vis28vesO0LX3WZEpLRK12ulDkpHaYmUEPoUuKNdvv82nn8B+sDVZz6dFZnAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;disadvantages of npv approach&quot;
+        title=&quot;disadvantages of npv approach&quot;
+        src=&quot;/static/1801b8bc3b49aead59eb377c5722b6fe/f058b/disadvantages-npv-approach.png&quot;
+        srcset=&quot;/static/1801b8bc3b49aead59eb377c5722b6fe/c26ae/disadvantages-npv-approach.png 158w,
+/static/1801b8bc3b49aead59eb377c5722b6fe/6bdcf/disadvantages-npv-approach.png 315w,
+/static/1801b8bc3b49aead59eb377c5722b6fe/f058b/disadvantages-npv-approach.png 630w,
+/static/1801b8bc3b49aead59eb377c5722b6fe/ace37/disadvantages-npv-approach.png 666w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;scope-and-limits-of-security-analysis&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#scope-and-limits-of-security-analysis&quot; aria-label=&quot;scope and limits of security analysis permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Scope and Limits of Security Analysis&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;common obstacles to analyst
 &lt;ul&gt;
@@ -6471,6 +6595,12 @@ synchroniser&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;sp
 &lt;ul&gt;
 &lt;li&gt;remember your dreams, make your bed, hydrate, brush your teeth with the opposite hand, deep breathing exercises, brain tea, journaling, HIT workout (high intensity interval training), brain power smoothie, read&lt;/li&gt;
 &lt;li&gt;the first 60 minutes can either set you up for maximum productivity and bring you closer to your long-term and short-term goals or cause you to lose another day to distractions and mental fog.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;combining audio listening with other activities such as washing dishes, driving, etc…&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;use playback speed at 1.5, 1.7 to skim through materials to get the key ideas before spending more time in reading the book&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
