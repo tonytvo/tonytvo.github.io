@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 14 Jul 2022 19:45:54 GMT</lastBuildDate><item><title><![CDATA[getting things done summary]]></title><description><![CDATA[Goals/Context for having todo list trusted place I can easily find and look at to see additional/support information on any projects that is…]]></description><link>https://tonytvo.github.io/getting-things-done-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/getting-things-done-summary/</guid><pubDate>Tue, 14 Jun 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;goalscontext-for-having-todo-list&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#goalscontext-for-having-todo-list&quot; aria-label=&quot;goalscontext for having todo list permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Goals/Context for having todo list&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 18 Jul 2022 16:21:49 GMT</lastBuildDate><item><title><![CDATA[getting things done summary]]></title><description><![CDATA[Goals/Context for having todo list trusted place I can easily find and look at to see additional/support information on any projects that is…]]></description><link>https://tonytvo.github.io/getting-things-done-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/getting-things-done-summary/</guid><pubDate>Tue, 14 Jun 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;goalscontext-for-having-todo-list&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#goalscontext-for-having-todo-list&quot; aria-label=&quot;goalscontext for having todo list permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Goals/Context for having todo list&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;trusted place I can easily find and look at to see additional/support information on any projects that is working on&lt;/li&gt;
 &lt;li&gt;reliable place for ideas and tasks&lt;/li&gt;
@@ -1051,7 +1051,7 @@ backtrack(int a[], int k, data input) {
 &lt;/ul&gt;
 &lt;h1 id=&quot;empathy&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#empathy&quot; aria-label=&quot;empathy permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Empathy&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;Sympathy is feeling sorry for someone where as empathy is recognizing the emotional response someone is having and how it feels to have that emotional response
+&lt;li&gt;Sympathy is feeling sorry for someone, whereas empathy is recognizing the emotional response someone is having and how it feels to have that emotional response
 &lt;ul&gt;
 &lt;li&gt;Putting yourself in their shoes is dangerous because that typically comes with judgement&lt;/li&gt;
 &lt;li&gt;We don’t need to know what has happened, just recognize what emotion and the severity of that emotion&lt;/li&gt;
@@ -1077,20 +1077,20 @@ backtrack(int a[], int k, data input) {
 &lt;h1 id=&quot;fixed-mindset-vs-growth-mindset&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#fixed-mindset-vs-growth-mindset&quot; aria-label=&quot;fixed mindset vs growth mindset permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a href=&quot;https://biglifejournal.com/blogs/blog/fixed-mindset-vs-growth-mindset-examples&quot;&gt;Fixed Mindset vs Growth Mindset&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;I’m either good at something or I’m not -&gt; &lt;strong&gt;I can improve my skills with effort and practice&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;when people give me feedback, it feels like criticism -&gt; &lt;strong&gt;I appreciate when people give me feedback ,it helps me learn and grow&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;when people give me feedback, it feels like criticism -&gt; &lt;strong&gt;I appreciate it; it helps me learn and grow&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;I’m just not good at math -&gt; &lt;strong&gt;Math is challenging for me, but I know I can improve&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;I’m too shy to speak in front of the class -&gt; &lt;strong&gt;With practice, I can become more confident and improve my public speaking skills&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;I’m already a really good writer. I don’t need to get any better -&gt; &lt;strong&gt;There’s always room for improvement&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;people who are naturally smart don’t need to try hard to succeed -&gt; &lt;strong&gt;No one is born smart. We can all improve with time, effort and persistence&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Other people’s successes make me feed bad about myself -&gt; &lt;strong&gt;Other people’s successes encourage and inspire me. They show me what is possible&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;naturally smart people don’t need to try hard to succeed -&gt; &lt;strong&gt;No one is born smart. We can all improve with time, effort and persistence&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Other people’s successes make me feel bad about myself -&gt; &lt;strong&gt;Other people’s successes encourage and inspire me. They show me what is possible&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Successful people are lucky/talented and have never experienced failure -&gt; &lt;strong&gt;Failure is part of success. Most successful people have failed many times, but they succeeded because they didn’t quit&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;I wish I was as good at baseball as you, it’s not fair -&gt; &lt;strong&gt;Your skills as a baseball player inspire me. Do you have any tips to help me improve&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;It’s embarrassing when I make a mistake -&gt; &lt;strong&gt;everyone makes mistakes and mistakes are opportunities to learn&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;I wish I was as good at baseball as you. It’s not fair -&gt; &lt;strong&gt;Your skills as a baseball player inspire me. Do you have any tips to help me improve&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;It’s embarrassing when I make a mistake -&gt; &lt;strong&gt;everyone makes mistakes, and mistakes are opportunities to learn&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;If I don’t try new or hard things, then I won’t fail -&gt; &lt;strong&gt;I have to try new and difficult things in order to grow, even if I fail at first&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;When I fail, I get frustrated and give up -&gt; &lt;strong&gt;When I fail or get frustrated, I try again using the lessons I’ve learned.&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Failure means it is time to give up -&gt; &lt;strong&gt;I only truly fail when I stop trying&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;I can’t do that -&gt; &lt;strong&gt;I can’t do that yet, I’m going to keep going, try new strategies, and/or ask for help until I understand it&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;If I don’t improve right away, I get frustrated. I start to criticize myself -&gt; &lt;strong&gt;I know improvement takes time and I celebrate the small steps. Even a little progress makes a difference&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;I can’t do that -&gt; &lt;strong&gt;I can’t do that yet. I’m going to keep going, try new strategies, and/or ask for help until I understand it&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;If I don’t improve right away, I get frustrated. I start to criticize myself -&gt; &lt;strong&gt;I know improvement takes time, and I celebrate the small steps. Even a little progress makes a difference&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&quot;emotional-intelligence-the-four-skills&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#emotional-intelligence-the-four-skills&quot; aria-label=&quot;emotional intelligence the four skills permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Emotional intelligence: the four skills&lt;/h1&gt;
 &lt;ul&gt;
@@ -1143,7 +1143,7 @@ backtrack(int a[], int k, data input) {
 &lt;h3 id=&quot;quit-treating-your-feelings-as-good-or-bad&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quit-treating-your-feelings-as-good-or-bad&quot; aria-label=&quot;quit treating your feelings as good or bad permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Quit Treating Your Feelings as Good or Bad&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;pay attention when you feel an emotion begin to build.&lt;/li&gt;
-&lt;li&gt;try to understand the emotions and avoid labeling it good or bad.&lt;/li&gt;
+&lt;li&gt;try to understand the emotions and avoid labelling them good or bad.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;observe-the-ripple-effect&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#observe-the-ripple-effect&quot; aria-label=&quot;observe the ripple effect permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Observe The Ripple Effect&lt;/h3&gt;
 &lt;ul&gt;
@@ -1161,7 +1161,7 @@ backtrack(int a[], int k, data input) {
 &lt;/ul&gt;
 &lt;h3 id=&quot;know-whatwho-pushes-your-hot-buttons&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#know-whatwho-pushes-your-hot-buttons&quot; aria-label=&quot;know whatwho pushes your hot buttons permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Know What/Who Pushes Your Hot Buttons&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Pay attention to the situations or people that trigger your emotions. Think about why you might find those situation or people irksome.&lt;/li&gt;
+&lt;li&gt;Pay attention to the situations or people that trigger your emotions. Think about why you might find those situations or people irksome.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;what-yourself-like-a-hawk&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#what-yourself-like-a-hawk&quot; aria-label=&quot;what yourself like a hawk permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;What Yourself like a Hawk&lt;/h3&gt;
 &lt;ul&gt;
@@ -1177,7 +1177,7 @@ backtrack(int a[], int k, data input) {
 &lt;ul&gt;
 &lt;li&gt;When you’re stuck in a down mood, it’s not a good time to make important decisions. Briefly reflect on recent events that may have brought on the mood.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;ask-yourself-why-you-do-what-you-do&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#ask-yourself-why-you-do-what-you-do&quot; aria-label=&quot;ask yourself why you do what you do permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Ask yourself Why You Do What You Do&lt;/h3&gt;
+&lt;h3 id=&quot;ask-yourself-why-you-do-what-you-do&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#ask-yourself-why-you-do-what-you-do&quot; aria-label=&quot;ask yourself why you do what you do permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Ask Yourself Why You Do What You Do&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;What is your earliest memory of reacting like this? Are the people or circumstances similar in some way?&lt;/li&gt;
 &lt;/ul&gt;
@@ -1185,13 +1185,13 @@ backtrack(int a[], int k, data input) {
 &lt;ul&gt;
 &lt;li&gt;Remind yourself of your values and how well you are currently living up to them.
 &lt;ul&gt;
-&lt;li&gt;What’s your core values and things that you have said or done recently that violates them.&lt;/li&gt;
+&lt;li&gt;What are your core values and things that you have said or done recently that violate them.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;check-yourself&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#check-yourself&quot; aria-label=&quot;check yourself permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Check Yourself&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Notice your mood and how it influence your demeanor&lt;/li&gt;
+&lt;li&gt;Notice your mood and how it influences your demeanour&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;spot-your-emotions-in-books-movies-and-music&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#spot-your-emotions-in-books-movies-and-music&quot; aria-label=&quot;spot your emotions in books movies and music permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Spot Your Emotions in Books, Movies, And Music&lt;/h3&gt;
 &lt;ul&gt;
@@ -1925,6 +1925,181 @@ backtrack(int a[], int k, data input) {
 &lt;li&gt;value investors try to minimize taxes by owning outstanding businesses that remain stable over a lifetime.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;rule-1-persistent-products&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#rule-1-persistent-products&quot; aria-label=&quot;rule 1 persistent products permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;rule 1: persistent products&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;invest in product that will not change in the next 30 years such as coke where it does not change due to technology.&lt;/li&gt;
+&lt;li&gt;Warren Buffett’s favorable holding period is forever.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;rule-2-minimize-tax&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#rule-2-minimize-tax&quot; aria-label=&quot;rule 2 minimize tax permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;rule 2: minimize tax&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;let your investment compound and grow for a long period of time before the government gets their share.&lt;/li&gt;
+&lt;li&gt;short-term capital gains is usually higher than long term capital gain tax&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;principle-3-a-company-must-be-stable-and-understandable&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#principle-3-a-company-must-be-stable-and-understandable&quot; aria-label=&quot;principle 3 a company must be stable and understandable permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Principle 3: a company must be stable and understandable&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;stay within your circle of competence to find companies that are stable and you can understand the fundamentals that drive the profit and the company’s competitive edge.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;rule-1-stable-book-value-growth-from-the-owners-earnings&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#rule-1-stable-book-value-growth-from-the-owners-earnings&quot; aria-label=&quot;rule 1 stable book value growth from the owners earnings permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;rule 1: stable book value growth from the owner’s earnings&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.oldschoolvalue.com/stock-valuation/what-is-owner-earnings/&quot;&gt;owner’s earnings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;it is extremely important to find a company that demonstrates a consistent earnings capacity, book value growth, and a stable and respectable ROE over numerous years, not just a few.&lt;/li&gt;
+&lt;li&gt;if the company retains earnings (reflected in book value growth), there should be corresponding growth in future earnings (reflected in EPS growth)&lt;/li&gt;
+&lt;li&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/42f4ee29783d3e2dba83236f5390e61e/c5bb3/stable-book-value-growth-owner-earning.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.55696202531645%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAACDUlEQVQ4y1VTa4+jMAzk//+4qqtWe/3U3nZbyiOBvEMSYE52S28XyXIw8fgxQzXPM5ZlwebP5zOGccS6rsg5I5eClBK/07P52+2Gtut+xSi/klLCe49SCgN8f39DKYV1XTCXgnl+AoYQEGPk2LLMuN9vaJsG67KglMxxwqjqusYwDBzIOVE5TClBW492MOhHi5wSnHMYlUJMBdZPyPPKFlNGmDLH34Bd32PQDo3Q6EaLh1DoBgPjPLwP3KG1FkJISBMgtYNQjs+jjRDKYzB0L6NqmgfaXmDQHiFEhDgxQMmZfX55GtcYwxPQmJvR+LQeXtE8o7LOcfXgPbxzcM7yeBQjI5BpmnjPWmsGds7zTukeNeE4z/G9ijqYpsSjURKBPC+Gd9LWKSVsyVvRnzlUjAGpVXqu1yt2ux0OhwOPAqyYl4WBtj3S99PphP1+j8/PP9h/fOB4PDLTC41MMiHpkDxKTs9uwwShLDPcj88O+76HEIJ3S2yypBikMBkuRMQpobpcLqjrB1qpmd1bO6ARClIZKGMRY+AOx3GEkBLOe4QYoYx7y+ohNFppnoBfX39RPxoMykJpw+SwBZKM4x0RIGm163pIZVlSNIFxAfYlK9Iwra+63+9o25YZttYwk8Ss1v/PBEiexiaR077Ycn7LayOu+ikJbQz/dnx+GXW2/Xb0TsRoY37doWK0EmL6H3626N9C9EFuAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;stable book value growth from earnings&quot;
+        title=&quot;stable book value growth from earnings&quot;
+        src=&quot;/static/42f4ee29783d3e2dba83236f5390e61e/f058b/stable-book-value-growth-owner-earning.png&quot;
+        srcset=&quot;/static/42f4ee29783d3e2dba83236f5390e61e/c26ae/stable-book-value-growth-owner-earning.png 158w,
+/static/42f4ee29783d3e2dba83236f5390e61e/6bdcf/stable-book-value-growth-owner-earning.png 315w,
+/static/42f4ee29783d3e2dba83236f5390e61e/f058b/stable-book-value-growth-owner-earning.png 630w,
+/static/42f4ee29783d3e2dba83236f5390e61e/c5bb3/stable-book-value-growth-owner-earning.png 680w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.buffettsbooks.com/how-to-invest-in-stocks/intermediate-course/lesson-20/&quot;&gt;stable and understandable stock&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;rule-2-sustainable-competitive-advantage-moat&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#rule-2-sustainable-competitive-advantage-moat&quot; aria-label=&quot;rule 2 sustainable competitive advantage moat permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;rule 2: sustainable competitive advantage (moat)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;the sustainable competitive advantage cannot be duplicated by competitors; hence the business will keep pouring money into the owners’ pockets.
+&lt;ul&gt;
+&lt;li&gt;For example, Coca-Cola has a great moat due to its enormous brand value&lt;/li&gt;
+&lt;li&gt;Wal-Mart has a wide moat due to its cost structure where it can buy products with large volume from its suppliers at a cheaper price than its competitors.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Sample moats from different industries
+&lt;ul&gt;
+&lt;li&gt;intangible assets such as brands and patents
+&lt;ul&gt;
+&lt;li&gt;Disney is a strong brand and almost everyone in the world recognizes it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;low cost
+&lt;ul&gt;
+&lt;li&gt;Wal-Mart can buy at quantities and prices that competitors can’t match.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;high switching costs (“stickiness”)
+&lt;ul&gt;
+&lt;li&gt;most people will not bother with the hassle of changing operating system such as Microsoft, because they do not want to re-learn the new system.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;porter 5 forces
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;barriers to entry&lt;/strong&gt;: advantages that existing, established companies have over new entrants. A firm will enter the industry it it forecasts that the potential reward for being in it is greater than the cost of overcoming the barriers and the retaliation that is likely to happen.
+&lt;ul&gt;
+&lt;li&gt;supply-side economies of scale: spread the fixed costs over a larger volume of units.&lt;/li&gt;
+&lt;li&gt;demand-side benefits of scale: network effect, people tend to value being in a ‘network’ with a larger number of people who use the same company.&lt;/li&gt;
+&lt;li&gt;customer switching costs: airline frequent flyer programs are an example. Customer doesn’t want to switch to different product to avoid re-learning (such as microsoft operating system, or iphone)&lt;/li&gt;
+&lt;li&gt;capital requirements: websites and apps can be launched cheaply and easily as opposed to the brick and mortar industries of the past. Railroads are almost impossible to enter. It takes a ton of capital and it is an enormous risk to build a second railroad network next to to the existing one&lt;/li&gt;
+&lt;li&gt;incumbency advantages independent of size (e.g. customer loyalty and brand equity)&lt;/li&gt;
+&lt;li&gt;unequal access to distribution channels: new entrants may struggle to find a retail or wholesale channel to sell through as existing competitors will have a claim on them&lt;/li&gt;
+&lt;li&gt;governmental policies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;threat of substitutes&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;perceived level of product differentiation: lowest price or differentiation. Developing multiple products for niche markets is one way to mitigate this factor.&lt;/li&gt;
+&lt;li&gt;number of substitute products available in the market, ease of substitution, availability of close substitutes.&lt;/li&gt;
+&lt;li&gt;substitutes that are becoming cheaper relative to performance and substitutes that earn high returns on capital are likely to have more new entries in the future, which will drive prices down within that industry.&lt;/li&gt;
+&lt;li&gt;companies within industry of power grids face pretty much no substitute at all. No matter how the electricity is produced, it must be transported somehow.&lt;/li&gt;
+&lt;li&gt;newspaper face tough competition from online and social media&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;bargaining power of customers&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;ability of customers to put the firm under pressure, which also affects the customer’s sensitivity to price changes.&lt;/li&gt;
+&lt;li&gt;RFM (customer value) analysis: how recently did the customer purchase? how often do they purchase, how much do they spend?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;bargaining power of suppliers&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;degree of differentiation of inputs&lt;/li&gt;
+&lt;li&gt;impact of inputs on cost and differentiation&lt;/li&gt;
+&lt;li&gt;presence of substitute inputs&lt;/li&gt;
+&lt;li&gt;strength of distribution channel.&lt;/li&gt;
+&lt;li&gt;supermarkets are powerful players in distributing products of suppliers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;competitive rivalry&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;sustainable competitive advantage through innovation&lt;/li&gt;
+&lt;li&gt;competition between online and offline organizations&lt;/li&gt;
+&lt;li&gt;level of advertising expense&lt;/li&gt;
+&lt;li&gt;lower prices, new products and increased service and common weapons of choice and they lead to lower profitability for companies.&lt;/li&gt;
+&lt;li&gt;look for industry with few companies, high growth and low fixed costs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;principle-4-buy-at-attractive-prices&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#principle-4-buy-at-attractive-prices&quot; aria-label=&quot;principle 4 buy at attractive prices permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Principle 4: buy at attractive prices&lt;/h1&gt;
+&lt;h2 id=&quot;rule-1-keep-a-wide-margin-of-safety-to-the-intrinsic-value&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#rule-1-keep-a-wide-margin-of-safety-to-the-intrinsic-value&quot; aria-label=&quot;rule 1 keep a wide margin of safety to the intrinsic value permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;rule 1: keep a wide margin of safety to the intrinsic value&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 598px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2f32362c00a123bb1c6af6a69c9c9232/0c69d/margin-of-safety.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 46.835443037974684%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABnElEQVQoz22Ra2vbMBhG8///1Cjd2rVxsya2fLdlyfdLOhi5ERKfITUdHVTw8OiLDkfvu5Chz6gVVZagkhidJrQyZ9QFvZLkvkeTJbjLJ5zv91RpQplE6DxjHEeGYbC5XC6YszDAt6rEW695eHhk6TgUUcjvurIPqyTiT9/xfH+HeHGoDTAOkUnMMI5st1v6vud0Or0D80AwlYpYCNxfr4jNmjKNraGx64ucbV0iVg7Lu2/oOLQxwK7vGYeBaZqs5fF4ZCEDn7FUDLpgKCSDKizAWBjDqS6Zak2TxCQrhzpLafLUfnm323E4HGz2+z3n85lF7gvaNLYm5nFb5KgooIgCO8PKF9RRSOltrPVUadtdqfnqLDLhkv18RD4/Id0NyeoF7W1ozPyEh3Y3aHfNoOT7L2wkrVZcr1eYZ+ZPsUvpZIYULv7DD7osoYlDqkDQ5ZkFGPv+tvWPWOA8W6v51tbQDNgspc0z3prKzs/E3ivNttT/9+3elsbwC2DwurILKAKfMo7Ihbi1Z1v6Ah2F/1qFASrwUVnKB+Yz8C+cw5TCNH4LlAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;margin of safety&quot;
+        title=&quot;margin of safety&quot;
+        src=&quot;/static/2f32362c00a123bb1c6af6a69c9c9232/0c69d/margin-of-safety.png&quot;
+        srcset=&quot;/static/2f32362c00a123bb1c6af6a69c9c9232/c26ae/margin-of-safety.png 158w,
+/static/2f32362c00a123bb1c6af6a69c9c9232/6bdcf/margin-of-safety.png 315w,
+/static/2f32362c00a123bb1c6af6a69c9c9232/0c69d/margin-of-safety.png 598w&quot;
+        sizes=&quot;(max-width: 598px) 100vw, 598px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;if a margin of safety is 30% on one stock, it may look tempting, but if you have the option to buy another great business (of equal risk) with a 50% discount, you would go for that one instead.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;rule-2-low-price-earnings-ratio&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#rule-2-low-price-earnings-ratio&quot; aria-label=&quot;rule 2 low price earnings ratio permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;rule 2: low price-earnings ratio&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;P/E = market price for the company/Net Income&lt;/li&gt;
+&lt;li&gt;P/E ratio is simply a current snapshot in time. it looks at the company’s present performance in order to determine the value of its future performance. This is often a dangerous path if you fail to consider the other variables&lt;/li&gt;
+&lt;li&gt;conservative investor looks for stocks with a P/E ratio below 15, or, in other words, the return should at the very least be 6.67% (which is 1/15) annually. She does not buy into hopes and dreams and she does not think she can spot the new Microsoft. Instead, she busy into a company that is already making a decent profit compared to the price she pays.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;rule-3-low-price-to-book-ratio&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#rule-3-low-price-to-book-ratio&quot; aria-label=&quot;rule 3 low price to book ratio permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;rule 3: low price to book ratio&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;price-to-book ratio = market price per share/book value per share&lt;/li&gt;
+&lt;li&gt;measures how much the investor pays for every $1 of hte company’s equity.&lt;/li&gt;
+&lt;li&gt;Benjamin Graham would try to find companies that had a P/B ratio of below 1.5 as a threshold for indicating value.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;rule-4-set-a-safe-discount-rate&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#rule-4-set-a-safe-discount-rate&quot; aria-label=&quot;rule 4 set a safe discount rate permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;rule 4: set a safe discount rate&lt;/h2&gt;
 &lt;h1 id=&quot;scope-and-limits-of-security-analysis&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#scope-and-limits-of-security-analysis&quot; aria-label=&quot;scope and limits of security analysis permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Scope and Limits of Security Analysis&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;common obstacles to analyst
@@ -2179,6 +2354,19 @@ backtrack(int a[], int k, data input) {
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;funny-stock-market-terms&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#funny-stock-market-terms&quot; aria-label=&quot;funny stock market terms permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;funny stock market terms&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;bull market: a random market movement causing an investor to mistake himself for a financial genius&lt;/li&gt;
+&lt;li&gt;bear market: a 6-18 month period when the kids get no allowance, the wife gets no jewelry, and the husband gets no “love”&lt;/li&gt;
+&lt;li&gt;value investing: the art of buying low and selling lower.&lt;/li&gt;
+&lt;li&gt;P/E ratio: the percentage of investors wetting their pants as the market keeps crashing&lt;/li&gt;
+&lt;li&gt;standard &amp;#x26; poor: your life in a nutshell.&lt;/li&gt;
+&lt;li&gt;stock analyst: idiot who just downgraded your stock&lt;/li&gt;
+&lt;li&gt;stock split: when your ex-wife and her lawyer split your assets equally between themselves&lt;/li&gt;
+&lt;li&gt;market correction: the day after you buy stocks&lt;/li&gt;
+&lt;li&gt;cash flow: the movement your money makes as it disappears down the toilet&lt;/li&gt;
+&lt;li&gt;ebitda: earnings before I tell the dump auditor&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&quot;interpretation-of-financial-statements&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#interpretation-of-financial-statements&quot; aria-label=&quot;interpretation of financial statements permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Interpretation of Financial Statements&lt;/h1&gt;
 &lt;ul&gt;
