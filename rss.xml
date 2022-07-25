@@ -1,4 +1,879 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 23 Jul 2022 21:34:34 GMT</lastBuildDate><item><title><![CDATA[refactoring effectively legacy code to patterns]]></title><description><![CDATA[Goals/Context combine summary of refactoring to patterns and working effective with legacy code provide summary of refactoring at a higher…]]></description><link>https://tonytvo.github.io/refactor-legacy-code-to-patterns/</link><guid isPermaLink="false">https://tonytvo.github.io/refactor-legacy-code-to-patterns/</guid><pubDate>Tue, 19 Jul 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;goalscontext&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#goalscontext&quot; aria-label=&quot;goalscontext permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Goals/Context&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 25 Jul 2022 04:56:06 GMT</lastBuildDate><item><title><![CDATA[Big Mistakes - The Best Investors and Their Worst Investments by Michael Batnick Summary]]></title><description><![CDATA[Ben Graham Graham taught that intrinsic value can not be boiled down to a precise number. Nor was precision needed to make money. Graham set…]]></description><link>https://tonytvo.github.io/big-mistakes-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/big-mistakes-summary/</guid><pubDate>Sun, 24 Jul 2022 22:12:03 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Ben Graham&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Graham taught that intrinsic value can not be boiled down to a precise number. Nor was precision needed to make money.&lt;/li&gt;
+&lt;li&gt;Graham set up the Ben Graham Joint Account in 1926. His fee was structured as 20% of the first 20% return, 30% of the next 30% return, and 50% of the rest.&lt;/li&gt;
+&lt;li&gt;He ran an arbitrage strategy with convertible preferreds in the 1920s. He was long the preferreds and short the common.&lt;/li&gt;
+&lt;li&gt;He lost 20% in 1929, after selling his shorts while holding the long positions in preferreds.&lt;/li&gt;
+&lt;li&gt;Believing the worst was over, Graham went all-in on value and lost 50% in 1930 (he used margin). In total, he lost 70% from 1929 to 1932!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Jesse Livermore&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Investing rules of thumb offer simple shortcuts for investors but they hide the complex nature of markets. The rules work most of the time, but not always. The risk is that the rules become blinders to what’s going on in markets, which then leads to bad decisions.&lt;/li&gt;
+&lt;li&gt;Livermore made and lost a fortune multiple times over. The lessons Livermore never learned: 1) by constantly trading (with leverage), you’re bound to go broke and 2) there are risks to never being satisfied with a ridiculous amount of money.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Mark Twain&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;40% of stocks since 1980 experienced a 70% decline and never recovered.&lt;/li&gt;
+&lt;li&gt;Twain had a bad habit of sinking money into horrible investments. He speculated on other people’s new business ventures, his own ventures, the stock market, and rather than get out, he doubled down on the losses.&lt;/li&gt;
+&lt;li&gt;A venture in the publishing business bankrupted him. He eventually repaid all his debts.&lt;/li&gt;
+&lt;li&gt;To avoid Twain-sized losses, investors should ask themselves how much they’re willing to lose before they invest.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;John Meriwether&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Humans have a tendency to believe they’re above average — above-average drivers, above average at our jobs, above-average investors… We can’t all be above average.
+Meriwether founded Long-Term Capital Management (LTCM) in 1994 with Robert Merton and Myron Scholes.
+LTCM earned 20% in 1994, 43% in 1995, and 41% in 1996. In 1997, Merton and Scholes won the Nobel Prize.
+LTCM ran an arbitrage strategy with a ton of leverage.
+“They believed the risk was low, but their leverage in both the United States and Europe soared. LTCM had about $40 million at stake for every point in volatility the markets moved. At one point, they had $1.25 trillion in open positions and they were levered 100:1. This leverage would lead to one of the largest disappearing acts of wealth the world has ever seen.”
+LTCM lost 6.7% in May 1998 as spreads between US and international bonds widened. Then they lost 10% in June. The collapse of the Russian stock market spiked short-term rates in August. LTCM was down 52% YTD, a $1.9 billion loss. From Sept. 10 to 21 they lost another $1.5 billion. The New York Fed forced a takeover of the fund before it infected the financial system. It was the largest hedge fund at the time at $3.6 billion, 40% was Meriweather, Merton, and Scholes personal wealth…wiped out in five weeks.
+“They made absolutely no allowance in the episode of LTCM for the possibility of their not understanding markets and their methods being wrong.” — Nassim Taleb
+Their mistake was believing markets were rational and certain that math could solve it. They failed to acknowledge that the behavior of millions of participants around the globe might impact markets.
+“They were able to calculate the odds of everything, but they understood the possibility of nothing. The lesson us mere mortals can learn from this seminal blowup is obvious: Intelligence combined with overconfidence is a dangerous recipe when it comes to the markets.”
+Jack Bogle
+“The lesson we can learn from one of the most influential investors of all time is that investing is a long journey, often lasting a lifetime. It is filled with success, failure, hopes, dreams, and everything in‐between.”
+Bogle was promoted in 1965 to run the Wellington Group. The flagship Wellington Fund was a balanced fund created in 1928. As the Wellington fund began to lag the markets during the Go-Go ’60s, Bogle merged Wellington with Ivest, a young firm of “new era” managers, in an attempt to keep up with the times. Wellington fund would lose 40% when the Go-Go ’60s market crashed in 1969.
+“The first five years you would have described Bogle as a genius. And at the end of the first 10 years, roughly, you would have said: the worst merger in history, including AOL and Time Warner. It all fell apart. Their management skills were zero. They ruined the fund they started, Ivest. They started two more and ruined both. And they ruined Wellington Fund.” — Jack Bogle
+“I can hardly find words to describe first my regret and then my anger at myself for having made so many bad choices. Associating myself – and the firm whose leadership I had been entrusted – with a group of go‐go managers.” — Jack Bogle
+Bogle was fired in 1974. With nothing to lose, he proposed he stay on as chairman of the Wellington Fund. His failure would lead to the creation of the Vanguard Group and the First Index Investment Trust — i.e. the index fund.
+“The important part is finding a methodology that you are comfortable with. But a methodology means something that is repeatable. It means having a process. The stock market throws far too many curveballs for you to wing it.”
+Michael Steinhardt
+“Investors who confine themselves to what they know, as difficult as that may be, have a considerable advantage over everyone else.” — Seth Klarman
+Styles go out of favor. Portfolios hit hard times. Straying outside your comfort zone for opportunities during these difficult periods can make things worse.
+Steinhardt’s hedge fund earned a 24.5% annual return after fees from 1967 to 1995.
+Hedge funds were so popular in 1990s, people were begging hedge funds to take their money. Steinhardt used the opportunity to open a fourth fund — Steinhardt Overseas Fund — in 1993. Except, he had no knowledge of foreign markets, business environment, or political systems. He believed his experience trading U.S. stocks would translate over.
+The Fed raised rates in February 1994, pushed U.S. bond prices lower but European bonds fell further. Steinhardt’s fund lost $800 million with the rate hike. He lost 29% on the year.
+“1987 had shaken me; 1994 had been devastating. It had taken a part of me that could not be retrieved.” — Michael Steinhardt
+“Putting too much money into something you don’t fully understand is a good way to lose a lot of money. But what’s more damaging than losing money is the psychological scar tissue that remains after the money vanishes.”
+“If you play games where other people have the aptitudes and you don’t, you’re going to lose.” — Charlie Munger
+“Bad behavior is one of the greatest dangers investors face, and traveling outside your circle of competence is one of the most common ways that investors misbehave. It’s not important how wide your circle of competence is, but what is critically important is that you stay inside it. Knowing what you don’t know and having a little discipline can make all the difference in the world.”
+Jerry Tsai
+“Genius is a rising market.” — John Kenneth Galbraith
+Investors tend to associate gains with skill rather than bull market luck.
+Bull markets drive investors to trade more because rising markets provide a positive feedback loop to investors. Investors trade stocks, make a little money, trade more, make more, and the trading increases…until the bull market ends. Then it blows up.
+The late 1960s bull market culminated with the Go-Go fund managers. Jerry Tsai was at the center of it.
+He started the Manhattan fund in 1965, raising more money than initially planned. It had an 8.5% sales load. Tsai bought any stock that rose faster than the market. The strategy works great in ’67 earning a 40% return.
+Tsai learned that high-flying stocks can fall faster than they rise. The market crashed in 1969. The Manhattan Fund lost 90% over the next few years.
+Warren Buffett
+Endowment Effect: we put more value on things we own than before we bought them.
+“When the game is no longer being played your way, it is only human to say the new approach is all wrong, bound to lead to trouble, etc. I have been scornful of such behavior by others in the past. I have also seen the penalties incurred by those who evaluate conditions as they were – not as they are. Essentially I am out of step with present conditions. On one point, however, I am clear. I will not abandon a previous approach whose logic I understand even though it may mean foregoing large, and apparently easy, profits to embrace an approach which I don’t fully understand, have not practiced successfully and which, possibly, could lead to a substantial permanent loss of capital.” — Warren Buffett, 1967
+Buffett made numerous mistakes over his long career, but none like Dexter Shoes. He paid $433 million for Dexter using Berkshire stock. He diluted shareholders to buy a business that was worth nothing a few years later. It couldn’t compete with foreign competitors. His Dextor purchase was likely due to overconfidence thanks to his successful purchase of another shoe company — H.H. Brown — a few years early.
+“I clearly made a mistake in paying what I did for Dexter in 1993. Furthermore, I compounded that mistake in a huge way by using Berkshire shares in payment.” — Warren Buffett
+“It behooves us to take a minute and think about why we’re investing and what we really know. Do you know more than the person on the other side of the trade? Do you know something that’s not in the newspaper or on the Internet? Will we know when we’re right? What about if we’re wrong?”
+Bill Ackman
+“Ideas are part of who we are. They become like possessions. Especially publicly. I mean, flip-flopping is a bad word. I love changing my mind!” — Daniel Kahneman
+We prefer to talk more about our successes than our failures — especially for investments.
+Ackman’s battle with Herbalife began in 2012 with a very public presentation claiming it was a pyramid scheme that would go to zero. He was short Herbalife and the stock immediately sold off 35%. Which provided an opportunity for hedge funds to take the other side. The stock reversed course, rising 70% higher than where Ackman began to short it.
+The risk of being public about investments is it brings ego into decision-making. Can you publicly admit to being wrong? There’s also the added pressure from others who are following your coat tails (without doing their own research) and it feeds the trolls when it doesn’t work out.
+Stanley Druckenmiller
+“In a winner’s game the outcome is determined by the correct actions of the winner. In a loser’s game, the outcome is determined by mistakes made by the loser.” — Charley Ellis
+“Bad things tend to happen when we compare our portfolios with others, especially if they possess a lesser IQ and extracted a higher return.”
+“Fundamentals are how fast the horse runs and expectations are the odds.” — Michael Mauboussin
+“The casual investor thinks a good company makes for a good stock, without giving consideration to the fact that the majority of investors share a similar opinion. Perhaps, like‐minded investors have pushed the price of a good company into that of a great company, making it less than it appears at first blush.”
+“It’s my philosophy, which has been reinforced by Mr. Soros, that when you earn the right to be aggressive, you should be aggressive. The years that you start off with a large gain are the times that you should go for it.” — Stanley Druckenmiller
+“The first thing I heard when I got in the business, not from my mentor, was bulls make money, bears make money, and pigs get slaughtered. I’m here to tell you I was a pig. And I strongly believe the only way to make long‐term returns in our business that are superior is by being a pig.” — Stanley Druckenmiller
+Druckenmiller bet against Internet stocks in 1999 that cost him $600 million, an 18% loss. He ended the year positive 35% thanks to a couple of new hires who took the long side of the Internet Boom.
+In 2000 he sold the Internet stocks out of concern — he knew it wouldn’t last forever — took his gains, and went back to investing in what he was comfortable with. Yet, he couldn’t help but watch the Internet stocks continue rising and his two new hires making money, until he couldn’t stand it and plunged back in. He bought back in at the height of the bubble, then it burst.
+“It would have been nice to go out on top, like Michael Jordan, but I overplayed my hand.” — Stanley Druckenmiller
+His mistake was knowing better and buying the stocks anyway.
+“The idea of caring that someone is making money faster is one of the deadly sins. Envy is a really stupid sin because it’s the only one you could never possibly have any fun at. There’s a lot of pain and no fun. Why would you want to get on that trolley?” — Charlie Munger
+“I bought $6 billion worth of tech stocks, and in six weeks I had lost $3 billion in that one play. You asked me what I learned. I didn’t learn anything. I already knew that I wasn’t supposed to do that. I was just an emotional basket case and couldn’t help myself. So maybe I learned not to do it again, but I already knew that.” — Stanley Druckenmiller
+Bill Ruane — Sequoia
+“Your six best ideas in life will do better than all your other ones.” — Bill Ruane
+Unless one of those ideas is Valient.
+“Concentrate to get rich, diversify to stay rich.” — old adage
+The risk of concentrated portfolios is a few big losses can set you back permanently.
+Sequoia was one of the most successful funds ever. It bought Valient stock in 2010 and it quickly became its largest holding. Valient relied on buying existing drug companies, then raising the price of the drugs.
+“If you’re looking for a manager you want someone who is intelligent, energetic, and moral. But if they don’t have the last one, you don’t want them to have the first two.” — Warren Buffett
+Accusations of fraud at Valient surfaced in 2015. Its stock fell 19%. Sequoia lost 9% because of its large position. Then it bought more Valient stock. It represented 32% of the fund. 8 months later, they sold all the stock. Valient was down more than 90%!
+“If you want to make big money in the stock market, you have two choices: (1) buy a lot of stocks, an index fund, for example, and hold them for a long time (even then, no guarantees) or (2) buy a few stocks and hope you’re right.”
+Before buying a position, write down why you’re buying and your exit plan. It gives you a reference point that may help combat the endowment effect.
+John Maynard Keynes
+“How could economics not be behavioral? If it isn’t behavioral, what the hell is it?” — Charlie Munger
+“Every minute of every day, markets are putting out clues, little crumbs of information for would‐be market detectives. This is the most addictive game on the planet because it’s a game that never ends. The pieces are always zigging and zagging and by the time you think you’ve got things figured out, new rules are implemented.”
+“Professional investment may be likened to those newspaper competitions in which the competitors have to pick out the six prettiest faces from a hundred photographs…each competitor has to pick, not those faces which he himself finds prettiest, but those which he thinks likeliest to catch the fancy of the other competitors… We have reached the third degree where we devote our intelligences to anticipating what average opinion expects the average opinion to be.” — John Maynard Keynes
+“If we speak frankly, we have to admit that our basis of knowledge for estimating the yield ten years hence of a railway, a copper mine, a textile factory, the goodwill of a patent medicine, an Atlantic liner, a building in the City of London amounts to little and sometimes to nothing; or even five years hence.” — John Maynard Keynes
+Keynes’s initial foray into “investing” was trading currencies and commodities based on macro bets after WWI. It didn’t end well. He lost it all and was bailed out by family and friends.
+He shifted his strategy to a more long-term approach after taking over the King’s College endowment fund and the portfolios of two insurance companies.
+“The idea of wholesale shifts is for various reasons impracticable and indeed undesirable. Most of those who attempt it sell too late and buy too late, and do both too often…. I believe now that successful investment depends upon three principles: A careful selection of few investments having regard to their cheapness in relation to their probable actual and potential intrinsic value over a period of years ahead and in relation to alternative investments at the time. A steadfast holding of these in fairly large units through thick and thin, perhaps for several years, until they have fulfilled their promise or it is evident that they were purchased on a mistake; A balanced investment position, i/e, a variety of risks in spite of individual holdings being large, and if possible opposed risks.” — John Maynard Keynes
+John Paulson
+“Money earned by luck is indistinguishable from money earned by skill.”
+Paulson is most well known for betting against mortgage-backed securities during the housing bubble. It paid off massively — 590% and 350% — in one year for two funds.
+Off the back of that success, he went looking for another huge win. He settled on a big bet on gold. It failed to pay off. In fact, it lost money three years in a row — 75% in total. Because normal returns weren’t good enough!
+The trouble with abnormal gains like Paulson had, is it resets our expectations of what’s possible. Normal gains aren’t enough anymore. The other issue is overconfidence in our ability to repeat the success.
+“You only need to get rich once. If you’ve worked hard or just got lucky and now find yourself in the top 1%, stop trying to hit home runs, you’ve already won.”
+Charlie Munger
+“You need patience, discipline, and an ability to take losses without going crazy.” — Charlie Munger
+“The best lesson investors can learn from one of the best to ever do it is that there are no good times without the bad times. Big losses are in the fabric of long‐term investing. And if you’re not willing to accept them, you will not harvest the long‐term returns that the market has to offer.”
+“If you’re not willing to react with equanimity to a market price decline of 50 percent or more two or three times a century, you’re not fit to be a common shareholder and you deserve the mediocre result you’re going to get compared to the people who do have the temperament, who can be more philosophical about these market fluctuations.” — Charlie Munger
+Munger started his fund in 1962, earning a 24% annual return before fees over 14 years (vs. S&amp;#x26;P 500’s 5.2%).
+The fund was highly concentrated. It brings the possibility of a wider range of returns in both directions.
+His investors felt the downside of concentration in the 1973/74 bear market. Munger lost 32% and 31% over those two years versus the Dows 13% and 23% losses respectively.&lt;/p&gt;
+&lt;p&gt;Most people don’t have the stomach for such a huge drawdown. He lost a big investor because of it. The fund bounced back in 1975, then Munger liquidated it.
+Losses and drawdowns are part of the game. Get used to it.&lt;/p&gt;
+&lt;h1 id=&quot;quotes&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quotes&quot; aria-label=&quot;quotes permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Quotes&lt;/h1&gt;
+&lt;p&gt;“…markets don’t compensate you just for being smart.”&lt;/p&gt;
+&lt;p&gt;“The iron rule of life is that only 20% of people can be in the top fifth.” — Charlie Munger&lt;/p&gt;
+&lt;p&gt;“There are two times in a man’s life when he should not speculate, when he can’t afford it, and when he can.” — Mark Twain&lt;/p&gt;
+&lt;p&gt;“A banker is a fellow who lends you his umbrella when the sun is shining and wants it back the minute it begins to rain.” – Mark Twain&lt;/p&gt;
+&lt;p&gt;“It is strange the way the ignorant and inexperienced so often and so undeservedly succeed when the informed and the experienced fail.” — Mark Twain&lt;/p&gt;
+&lt;p&gt;“October. This is one of the peculiarly dangerous months to speculate in stocks. The others are July, January, September, April, November, May, March, June, December, August and February.” — Mark Twain&lt;/p&gt;
+&lt;p&gt;“The most important thing when speculating is that you keep your losses manageable. Paper cuts sting, but they heal. Shotgun wounds on the other hand, those are tough to come back from.”&lt;/p&gt;
+&lt;p&gt;“We got drubbed by the 1973 to 1974 crash, not in terms of true underlying value, but by quoted market value, as our publicly traded securities had to be marked down to below half of what they were really worth.” — Charlie Munger&lt;/p&gt;
+&lt;p&gt;“The problem with small losses is that it’s easy to hold onto them as they morph into big losses. In the world of finance, nothing springs eternal like hope. We’ll watch with indifference as a 5% loss becomes a 10% loss, with fear as it cascades to a 20% loss, and with utter terror as it falls any further.”&lt;/p&gt;
+&lt;p&gt;“The fact that he remained steadfast in his conviction that security analysis was a worthwhile endeavor is nothing short of remarkable. The partnership earned 6% a year from 1926 to 1935, compared to…3.8% for the Dow. Despite the hard times and enormous drawdown, Graham would continue to operate under the assumption that value investing is the most intelligent way to achieve superior results.”&lt;/p&gt;
+&lt;p&gt;“Unfortunately in this kind of work, where you are trying to determine relationships based upon past behavior, the almost invariable experience is that by the time you have had a long enough period to give you sufficient confidence in your form of measurement just then new conditions supersede and the measurement is no longer dependable in the future.” — Ben Graham&lt;/p&gt;
+&lt;p&gt;“I must say frankly our studies indicate you have your choice of tossing coins and taking the consensus of expert opinion, and the results are just about the same in each case… Everybody in Wall Street is so smart that their brilliance offsets each other. And that whatever they know is already reflected in the level of stock prices pretty much and consequently what happens in the future represents what they don’t know.” — Ben Graham&lt;/p&gt;
+&lt;p&gt;“It’s critically important to be aware of value, but it’s more important not to be a slave to it. Graham taught us that there are no iron‐clad laws in finance and that cheap can get cheaper.”&lt;/p&gt;
+&lt;p&gt;“I visualized my grief if the stock market went way up and I wasn’t in it – or it went way down and I was completely in it. My intention was to minimize my future regret.” — Harry Markowitz on his asset allocation decision&lt;/p&gt;
+&lt;p&gt;“In my nearly fifty years of experience in Wall Street I’ve found that I know less and less about what the stock market is going to do but I know more and more about what investors ought to do; and that’s a pretty vital change in attitude.” — Ben Graham&lt;/p&gt;
+&lt;p&gt;“The most important lesson that investors should take from the person who taught us the difference between value and price is that value investing is not a panacea. Cheap can get cheaper. Rich can get richer. Margins of safety can be miscalculated, and value can fail to materialize.”&lt;/p&gt;
+&lt;p&gt;“You will do a great disservice to yourselves, to your clients, and to your businesses, if you view behavioral finance mainly as a window onto the world. In truth, it is also a mirror that you must hold up to yourselves.” — Jason Zweig&lt;/p&gt;
+&lt;p&gt;“If you are ready to give up everything else and study the whole history and background of the market and all principal companies whose stocks are on the board as carefully as a medical student studies anatomy‐ if you can do all that and in addition you have the cool nerves of a gambler, the sixth sense of a clairvoyant and the courage of a lion, you have a ghost of a chance.” — Bernard Baruch&lt;/p&gt;
+&lt;p&gt;“Mistakes are an inevitable part of the process.” — Peter Bernstein&lt;/p&gt;
+&lt;p&gt;“The lesson that investors should learn from Livermore is how dangerous rules of thumb can be.”&lt;/p&gt;
+&lt;p&gt;“It seems incredible that knowing the game as well as I did, and with an experience of twelve or fourteen years of speculating in stocks and commodities, I did precisely the wrong thing.” — Jess Livermore&lt;/p&gt;
+&lt;p&gt;“I kept trading – and losing. I persisted in thinking that the stock market must make money for me in the end. But the only end in sight was the end of my resources.” — Jesse Livermore, 1909&lt;/p&gt;
+&lt;p&gt;“If a man is both wise and lucky, he will not make the same mistake twice. But he will make any one of the ten thousand brothers or cousins of the original. The mistake family is so large that there is always one of them around when you want to see what you can do in the fool‐play line.” — Jesse Livermore&lt;/p&gt;
+&lt;h1 id=&quot;references&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#references&quot; aria-label=&quot;references permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;References&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://novelinvestor.com/notes/big-mistakes-the-best-investors-and-their-worst-investments-by-michael-batnick/&quot;&gt;big mistakes summary by novelinvestor&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[The Davis Dynasty by John Roth Child summary]]></title><description><![CDATA[The Davis Dynasty is a story about Shelby Collum Davis and his family. The author mixes Davis’s story of how, over a 47-year investing…]]></description><link>https://tonytvo.github.io/davis-dynasty-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/davis-dynasty-summary/</guid><pubDate>Sun, 24 Jul 2022 22:12:03 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The Davis Dynasty is a story about Shelby Collum Davis and his family. The author mixes Davis’s story of how, over a 47-year investing career, he made a fortune with the market history he experienced along the way.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The notes are based on an abridged version of The Davis Dynasty (a few chapters were cut from the original) which was given out to fund shareholders back in the day.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Shelby Cullom Davis&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Was born in 1909.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;His success in investing came later in life. He started in his late 30s.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;He bought a seat in the NYSE in 1941 for $33,000. Davis thought it was a great deal. 12 years early (1929), seats sold for $629,000! A year after his purchase, seats sold for half what he paid, but eventually rallied over the next few years. It grew to $830,000 in 1994.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Davis was extremely frugal.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Davis used leveraged in his portfolio. He noticed how mortgages (leverage) boosted net worth via real estate ownership over time. He believed leverage applied stocks had more profit potential than a mortgage.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Davis took a contrarian stance and embraced stocks fully. In 1947, the Dow traded at 9.6x earnings, with a 5% average dividend yield while bonds offered historic low rates.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Davis’s timing was nearly perfect. He started a few years before the post-war boom.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;He focused on analyzing insurance companies because that’s what he knew best. He began his career working for the state’s insurance department.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Insurance stocks were severely depressed because earnings were nonexistent due to low bonds yields. Most sold below book value but paid a high dividend. Davis saw it as an opportunity with limited downside.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Insurance companies were compounding machines. Low cost to run, no factories to upgrade or high Capex costs each year. Just an increasing marginal cost that comes with a growing customer base.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;He quit the state’s insurance department in 1948, bought an interest in a brokerage firm (Frank Brokaw &amp;#x26; Co.), renamed it Shelby Cullom Davis &amp;#x26; Co., and promoted insurance stocks to anyone who would listen.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;He began to heed his own advice around 1948 and started buying insurance stocks himself. His firm’s underwriting and brokerage operations became secondary.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Davis had 2 advantages over the average investors because of his firm and NYSE seat. He could buy more shares on margin. His firm could borrow more money than an individual investor. And his firm paid a lower interest rate on margin loans.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Davis regularly visited insurance companies to meet with management. His favorite question: “If you had one silver bullet to shoot a competitor, which competitor would you shoot?” Then he’d research that competitor.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;He looked for greater leadership in management.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;He looked for low-cost operators in the industry and avoided the underachievers.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;His early portfolio was mostly in small-cap insurers that traded OTC.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;He saw his portfolio fall by $125 million in the 1987 crash but saw it as a buying opportunity. He went on a buying spree. The next year he made Forbes 400 list with a “lowball” estimated net worth of $370 million.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Davis Double Play: low-priced stocks with the potential for above-average earnings growth. Investors buy at a low multiple, get exceptional earnings growth, and then see multiples expand.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“Davis’s financial life had three phases: learn, earn, and return. The learn phase lasted into his early forties, and the earn phase stretched from his forties into his late seventies. At that point, he tackled the return phase.” Return phase = philanthropy.  Davis died in 1994 leaving $900 million to personal causes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In 1992, 100 insurance companies made up 75% of his portfolio, with the rest spread across 1,500 companies (including a few hundred losers). Davis had a habit of buying 1,000 shares anytime a company appealed to him. And he just rarely sold. “The printout left no doubt what had put Davis on the Forbes list. It wasn’t a phone book list of stocks; it was a few names in the phone book. These were oldies from the 1960s that he had faithfully held… Davis remained loyal. Names he owned in 1950 still occupied his portfolio in 1990.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Davis Dozen: 12 stocks accounted for a quarter of his total worth — $261 million — 11 were insurers plus Fannie Mae. All were bought before the mid-1970s. “He won this prize on the original cash outlay of $150,000. The prize required a 50-year waiting period to accumulate… Once he’d bought winning companies his best decisions were never to sell. As long as he believed in the strength of the leadership and the company’s continual ability to compound, he held.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Shelby Davis&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Was born in 1938.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;He learned under his father, from “stock talk” at the dinner table, and by helping his dad make copies of a biweekly insurance letter starting around the age of 9.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Early lessons from his father included the benefits of being a stockholder over a bondholder and compounding.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;He learned the mistake of buying high-priced growth stocks and being sold by management after recommending Reynolds Aluminum a “buy” in 1960 when it was selling at 40x earnings.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;He looked for companies with potential for earnings growth and/or multiple expansion (low multiples was not a requirement).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;He looked for industries with changing characteristics.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Early positions in the fund were in tech. The fund was up 25% the first year. Saw $55 million in inflows by the first quarter of 1970. Then the market crashed. Their holding fell in price after bad earnings reports. A position in Memorex dropped from $168 to $20 (were they sold after buying more on the way down!) It was a bottom 10% fund based on performance in 1970. It was a tough lesson learned that led to looking for undervalued opportunities too.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;He ran the New York Venture fund until 1997. He beat the S&amp;#x26;P 16 out of 20 years and by 4.7% annualized over that period.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Chris Davis&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Owner Earnings: the amount of reward pocketed each year after a company reinvests cash to maintain the status quo, but before reinvesting for growth and adjusted for stock options, depreciation, amortization, and deferred taxes. Owner earnings are almost always lower than reported earnings.&lt;/li&gt;
+&lt;li&gt;How much to pay for a company — compare the owner earnings yield to Treasury rates. Divide owner earnings by stock price to get yield. A $20 stock with $2 of owner earnings, yields 10% ($2/$20). A $70 stock with $2 of owner earnings, yields 2.9% ($2/$70). The smart investment goes to the higher of: owner earnings yield or Treasury rate.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Market History&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Foreign investors poured gobs of money into early U.S. railroad projects in the mid-1800s, leaving them with big losses.&lt;/li&gt;
+&lt;li&gt;Keynes called the low-interest rates of the 1940s the “balm and sweet simplicity of no percent.”&lt;/li&gt;
+&lt;li&gt;Enthusiasm for bonds hit a peak in the 1940s (the disdain for stocks was high). Rates on long-term Treasuries bottomed at 2% in 1946. It would kick off a 34-year bond bear market.&lt;/li&gt;
+&lt;li&gt;A 1946 Federal Reserve Board survey showed 90% said they would not own stocks. The masses held a “collective grudge against the market.”&lt;/li&gt;
+&lt;li&gt;The late 1960s kicked off a growth fund craze. Momentum-driven stocks soared. Electronics were hot stocks. The Nifty-Fifty were viewed as never sell stocks. Investors became performance chasers, moving in and out of the top mutual funds. Buffett closed his partnership in 1969 and bought municipal bonds.&lt;/li&gt;
+&lt;li&gt;The Nifty Fifty lessons:
+&lt;ul&gt;
+&lt;li&gt;Only 3 Nifty Fifty stocks went on to grow earnings at 15% or more through 2000 — Philip Morris, McDonald’s, and Merck.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;A study by Twentieth Century Fund found that blindly owning the entire market from 1960 to 1968 was more rewarding than paying a fund manager to pick stocks.&lt;/li&gt;
+&lt;li&gt;1969 ended the bull market. It continued falling into 1970. Both inflation and recession existed — stagflation. Dow down 36%. Hot stocks and electronics got killed, down 77% on average.&lt;/li&gt;
+&lt;li&gt;Following the bear market of 1973-’74, stocks still looked cheap in ’76. Buffett said he felt like an oversexed teenager at a dance hall.&lt;/li&gt;
+&lt;li&gt;1979 — stocks were priced for terrible news, selling at single-digit P/E’s and less than book value.&lt;/li&gt;
+&lt;li&gt;The 1980s — the Fed fights inflation. Prime rates rose to 20.5% and 30-yr Treasuries hit 15% (bond deal of the century which few people bought). The average investor couldn’t see past high inflation to notice a great deal of 15% Treasuries. Investors are always too focused on short-term worries to recognize long-term opportunities.&lt;/li&gt;
+&lt;li&gt;Gold and silver prices soared in 1980. The high demand and fear buying dropped off after gold bugs predicted higher prices.&lt;/li&gt;
+&lt;li&gt;1981 — recession and the Dow fell 24%. The last bear market before a 20-year bull run. Inflation subsided, Fed cut rates, commodity prices fell.&lt;/li&gt;
+&lt;li&gt;The late 1980s — Reagan added $1 trillion in new debt. Low rates drove consumer/corporate borrowing and overpaying on assets. Mike Milken led the junk bond frenzy, the famous Predator’s Ball, leveraged buyouts and hostile takeovers.&lt;/li&gt;
+&lt;li&gt;The 1980s brought trading back in vogue. Newsletters popped up to profit off the fad.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;1987 crash — Dow lost 23% on Black Monday. A 36% drop from the high that year. Doom and gloom pundits called for further losses. They were wrong. Despite the crash, the 1987 market ended slightly positive for the year.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;1991 — recession. Banks had trouble due to the high debt of the ’80s. Citicorp was too big to fail in the late ’80s. Japan in the ’90s was like the US in the ’30s.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The similarity between the late ’60s and ’90s: ’69 was computer peripherals, mainframes, and electronics companies. The ’90s were Dotcoms, chip makers, networking, and connectivity. All were high P/E stocks which everyone was buying.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The 1920s, the 1960s, and 1990s were each high P/E market crash events. About 30 years between each one, roughly one generation removed, and enough time to forget each prior blowout and bust.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ben Graham issued a market excess warning in the ’60s. Buffett did it in the ’90s. The Fed called market exuberance each time too – William McChesney Martin in ’65 and Alan Greenspan on Dec. 5, 1996. Both markets continued higher for 4 more years.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The 1990s again drove high debt use, this time by consumers. People borrowed to pay bills, borrowed against homes to buy stuff, which doesn’t make debt work for you.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The 1990s — like each boom before it, only short-term performance mattered to investors, media, and pundits. Mutual funds were graded based on their performance over 6 months or less.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Creative accounting pops up in boom times. It happened in ’69 and late ’90s (saw it in ’08 too), where some “companies were fluffing the books to meet Street expectations and create an illusion of predictable success.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Buffett called the 1999 top. Most people were buying the market at 50x earnings after fees (Fortune 500 companies were selling at $10 trillion, on $300 billion of earnings, minus the 1% fees or $100 billion, gives a payoff of $200 billion). Buffett said the market had to sell off slowly or quickly or stay flat until earnings caught up. It couldn’t rise further without violating the laws of financial gravity. $3 trillion valuation on $200 billion is reasonable, not $10 trillion.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;10 Davis Tenets:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Avoid cheap stocks: it’s cheap for a reason, likely because it’s a poor company. Even if it turns around, it takes longer than most expect.&lt;/li&gt;
+&lt;li&gt;Avoid expensive stocks: great companies may be expensively priced but should be bought at sensible prices. “No business is attractive at any price.” — Shelby Davis&lt;/li&gt;
+&lt;li&gt;Buy moderately priced stocks with moderate growth: find companies with growth rates faster than the multiples — leads to earnings growth and multiple growth.&lt;/li&gt;
+&lt;li&gt;Wait until the price is right: bear markets are buying opportunities and can happen market-wide, industry-wide, or to individual stocks. “Bear markets make people a lot of money, they just don’t know it at the time.” — Shelby Cullom Davis&lt;/li&gt;
+&lt;li&gt;Don’t fight progress: carefully choosing tech companies, with real earnings and franchises, lets you profit off dramatic changes in the economy.&lt;/li&gt;
+&lt;li&gt;Invest in a theme: were the “top-down” theme influences were to look for “bottom-up” value.&lt;/li&gt;
+&lt;li&gt;Let your winners ride: “I was comfortable owning a stock through two or three recessions, or market cycles. That way, I learned how the company handled bad times, as well as good times.” — Shelby Davis&lt;/li&gt;
+&lt;li&gt;Bet on superior management: never buy anything without assessing leadership. It may pay to follow great leaders that move to new companies.&lt;/li&gt;
+&lt;li&gt;Ignore the rear-view mirror: “The most valuable lesson to learn from history on Wall Street is that history doesn’t exactly repeat itself.”&lt;/li&gt;
+&lt;li&gt;Stay the course: investing is a marathon.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;New York Venture Fund Stock Checklist:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;First-class management with a track record of honesty.&lt;/li&gt;
+&lt;li&gt;Innovative research used to the company’s maximum advantage.&lt;/li&gt;
+&lt;li&gt;Operates home and abroad.&lt;/li&gt;
+&lt;li&gt;Sells products/services unlikely to become obsolete.&lt;/li&gt;
+&lt;li&gt;High insider ownership.&lt;/li&gt;
+&lt;li&gt;High returns on investor capital and management that rewards investors.&lt;/li&gt;
+&lt;li&gt;Low-cost producer.&lt;/li&gt;
+&lt;li&gt;Holds dominant/growing market share.&lt;/li&gt;
+&lt;li&gt;History of being good at M&amp;#x26;A — makes acquisitions more profitable.&lt;/li&gt;
+&lt;li&gt;Strong balance sheet.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;quotes&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quotes&quot; aria-label=&quot;quotes permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Quotes&lt;/h1&gt;
+&lt;p&gt;“It’s unrealistic to expect companies to grow at 15 percent for extended periods. Most great companies can’t do it. People who pay high prices for stocks, based on high growth assumptions, are asking for trouble up the line.” — Chris Davis&lt;/p&gt;
+&lt;p&gt;“Owning some of the finest companies in the world was a lousy deal if you overpaid and a worse deal if you bought the most expensive Nifties.”&lt;/p&gt;
+&lt;p&gt;“Fast growth in the latest emerging phenom doesn’t necessarily mean fat profits for foreign enthusiasts.”&lt;/p&gt;
+&lt;p&gt;“You’d be crazy to own a business that yields 3.3% instead of a 6% bond, unless the business can increase its earnings yield in the future. In other words, it must be able to grow. The challenge is to project the growth out eight or ten years. For any projection to be close to the mark, the business must be relatively predictable. You can’t pin a ten-year forecast on the typical tech company. Even if you buy tech at a relatively cheap price, it can take years before the return on the stock matches the return on a bond.” — Chris Davis&lt;/p&gt;
+&lt;p&gt;“Our best bear protection is buying companies with strong balance sheets, low debt, real earnings, and powerful franchises. These companies can survive bad times and eventually become more dominant as weaker competitors are forced to cut back or shut down.” — Chris Davis&lt;/p&gt;
+&lt;p&gt;“You’re deploying cash today, hoping to get more cash back in the future. That’s all investing is. For us, the whole process hinges on two questions: What kind of businesses to buy, and how much to pay for them? To answer question one: A company worth buying makes more money than it spends. Its profit is recycled for maximum shareholder benefits. The second question, the price tag, is often ignored.” — Chris Davis&lt;/p&gt;
+&lt;p&gt;“Owning shares in a successful company is far more rewarding than owning its bonds.”&lt;/p&gt;
+&lt;p&gt;“If you know the rate of return on your investment, the Rule of 72 tells you how long it will take to double your money. The greater the return, the faster the compounding.”&lt;/p&gt;
+&lt;p&gt;“The bottom line on this portfolio is: A few big winners are what count in a lifetime of investing, and these winners need many years to appreciate.”&lt;/p&gt;
+&lt;p&gt;“Any young, inexperienced investor has a built-in advantage over a mature sophisticated investor: Time.”&lt;/p&gt;
+&lt;p&gt;“For maximum compounding, stocks can be held indefinitely, while bonds outperform intermittently.” — Peter Lynch&lt;/p&gt;
+&lt;p&gt;“Great investing requires an independent spirit, and the courage to acquire assets the crowd disdains.” — Peter Lynch&lt;/p&gt;
+&lt;p&gt;“Some of my most rewarding investments came from slow-growth industries where expectations were low and profits lackluster. By looking for the most inspiring competitors in uninspiring lines of work, I often found great growth enterprises priced for mediocrity.” — Peter Lynch&lt;/p&gt;
+&lt;p&gt;“We’ve all heard that people who are ignorant of history are doomed to repeat it. On Wall Street, history repeats itself routinely, as corrections and bear markets turn into bull markets sooner or later. Investors who are ignorant of this pattern aren’t necessarily doomed, but they are likely to lose money trying to escape stocks at inopportune moments.” — Peter Lynch&lt;/p&gt;
+&lt;p&gt;“My father hated taxes, so margin became his favorite weapon against the IRS. The interest he paid on his loans was tax-deductible, and his deductions wiped out the taxes he’d otherwise have owed on the dividends he got. Also, by raising the stakes on his investing, margin kept him focused.” — Shelby Davis&lt;/p&gt;
+&lt;p&gt;“Out of crisis comes opportunity. A down market lets you buy more shares in great companies at favorable prices. If you know what you’re doing, you’ll make most of your money from these periods. You just won’t realize it until much later.” — Shelby Cullom Davis&lt;/p&gt;
+&lt;p&gt;“Where is the incentive if children and grandchildren start out with a trust fund which guarantees they never had to work?… I believe in providing a “safety net” in case of emergency but, predominantly, I believe in the incentive to excel…and contribute to the common good.” — Shelby Collum Davis&lt;/p&gt;
+&lt;p&gt;“Philosophy and theology give you the perfect background for investing. To succeed at investing, you need a philosophy. Then you’ve got to pray like hell.” — Shelby Collum Davis&lt;/p&gt;
+&lt;p&gt;On writing his insurance newsletter: “It’s not for the readers. It’s for us. We write it for ourselves. Putting ideas on paper forces you to think things through.” — Shelby Collum Davis&lt;/p&gt;
+&lt;p&gt;On insurance earnings: “New life insurance sales built future prosperity while resulting in continuously reporting short-term losses, because commissions and marketing costs were deducted from earnings up front. An insurance policy that brought income to the company for the next 30 to 40 years went on the books as a debit.”&lt;/p&gt;
+&lt;h1 id=&quot;references&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#references&quot; aria-label=&quot;references permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;References&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://novelinvestor.com/notes/the-davis-dynasty-by-john-rothchild/&quot;&gt;The Davis Dynasty summary by novelinvestor&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[The Great Depression A Diary by Benjamin Roth summary]]></title><description><![CDATA[Benjamin Roth was a lawyer in Ohio who realized early in the Great Depression that he was living through a financially significant time and…]]></description><link>https://tonytvo.github.io/the-great-depression-a-diary/</link><guid isPermaLink="false">https://tonytvo.github.io/the-great-depression-a-diary/</guid><pubDate>Sun, 24 Jul 2022 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;Benjamin Roth was a lawyer in Ohio who realized early in the Great Depression that he was living through a financially significant time and wanted to learn from it. His diary recorded the effect the Great Depression, the economy, and financial markets had on people.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The book covers the time period from 1931 to 1941.&lt;/li&gt;
+&lt;li&gt;The Great Depression
+&lt;ul&gt;
+&lt;li&gt;Real estate performed almost as badly as stocks. Many properties were bought using 2 to 3 mortgages at the end of the 1920s. Foreclosures were common, but the illiquid nature of real estate and lack of buyers made it impossible for banks to sell, which contributed to later bank failures.&lt;/li&gt;
+&lt;li&gt;Banks and Savings &amp;#x26; Loan companies did everything possible to not go under. Roth recorded that they suspended payments on savings and demanded a 60-day notice on withdrawals. Runs were common.&lt;/li&gt;
+&lt;li&gt;Smoot-Hawley Tariff Act of 1930 prevented European countries from trading freely with the US. In retaliation, European countries raised tariffs against US goods.&lt;/li&gt;
+&lt;li&gt;Vegetable gardens became popular to save money, which lowered the demand/price of produce and made it harder for farmers to make money.&lt;/li&gt;
+&lt;li&gt;Throughout 1931 and 1932 Roth repeats something similar to: “It hardly seems possible that things could get worse.” And it does.&lt;/li&gt;
+&lt;li&gt;Bank closures and Savings &amp;#x26; Loan closures locally and nationally were initially a shock but became a common occurrence in the diary from 1931 to 1933.&lt;/li&gt;
+&lt;li&gt;Little money was in circulation due to bank failures and the inability to withdraw. Business was at a standstill.&lt;/li&gt;
+&lt;li&gt;A moratorium on mortgages was considered in many states in 1931.&lt;/li&gt;
+&lt;li&gt;Safety deposit boxes replaced savings accounts for those who could get money out of the banks.&lt;/li&gt;
+&lt;li&gt;President Hoover believed a sense of volunteer charity and community service would take care of the unemployment problem. He believed the local governments were responsible to feed and employ workers and the federal government should stay out of it.&lt;/li&gt;
+&lt;li&gt;Bank and Savings &amp;#x26; Loan passbooks became a currency of sorts. Passbooks sold as low as 30 cents on the dollar. Prices on passbooks were quoted in the daily newspapers and traded at local brokerage houses. Many people used passbooks to buy foreclosed property from banks and speculate in.&lt;/li&gt;
+&lt;li&gt;Roth noticed that roll-your-own cigarettes, pipe smoking, and packed lunches were ways people saved money.&lt;/li&gt;
+&lt;li&gt;Small gambling games became a popular pastime during the depression — Whiffle board, dime chain letters, betting on the number of stock sales or bank clearings on the day, crossword puzzle, Monopoly, etc. “People lost all confidence in the old virtues of saving. They were willing to bet small amounts in the hope of getting large returns. They wanted something to occupy their minds and they wanted some gamble to buoy their hopes.”&lt;/li&gt;
+&lt;li&gt;England, Denmark, and Norway went off the gold standard in 1931.&lt;/li&gt;
+&lt;li&gt;Japan went to war with China in 1931.&lt;/li&gt;
+&lt;li&gt;The Reconstruction Finance Corp. was created under Hoover in 1931 to lend financial support to banks, railroads, and other businesses but came too late for Hoover. It was used extensively under FDR.&lt;/li&gt;
+&lt;li&gt;US Postal savings accounts became another popular alternative to bank accounts. Postal savings accounts were limited to $2,500 and deposits could be converted to postal savings bonds that paid interest.&lt;/li&gt;
+&lt;li&gt;Estimates of 25% of eligible Americans were unemployed in 1932. Those who had a job saw hours and wages cut.&lt;/li&gt;
+&lt;li&gt;20% of banks failed during Hoover’s presidency. Of that, 2,294 failed in 1931. Almost 5,000 small banks shut down during the 1920s.&lt;/li&gt;
+&lt;li&gt;Cash was scarce. People couldn’t buy food, pay bills, businesses couldn’t pay workers, and banks wouldn’t accept checks they couldn’t cash.&lt;/li&gt;
+&lt;li&gt;“Scrip” became a common cash substitute issued by local governments or businesses.&lt;/li&gt;
+&lt;li&gt;Double Liability – state governments mandated, in the early 19th century, that bank shareholders were liable for the amount of money invested and the value of the shares they owned. In other words, if the bank failed, shareholders could lose more money than they invested. The goal was to prevent banks from taking unnecessary risks with deposits. Widespread bank failures hit bank shareholders hardest and proved the rules were useless.&lt;/li&gt;
+&lt;li&gt;Banks became desperate. In one account, they tried to raise funds by urging depositors to buy new stock in the bank with 25% of their deposits and the agreement to leave their deposits alone for a fixed period of 1 to 3 years.&lt;/li&gt;
+&lt;li&gt;Farmers expanded their farms and bought new equipment, often by borrowing against their property, in order to meet growing demand during WWI. The Great Depression put an end to demand, farmers couldn’t afford to pay their loans. Farm foreclosures grew in 1932.&lt;/li&gt;
+&lt;li&gt;15 countries went off the gold standard by the end of 1931. France and US were the only two large countries still on it.&lt;/li&gt;
+&lt;li&gt;50,000 WWI veterans camped out in Washington D.C. to demand bonus pay in June 1932. Things grew violent in July after Congress rejected an early release of veteran’s bonuses. The veterans were driven out of the city by the army.&lt;/li&gt;
+&lt;li&gt;Local governments had little money to operate schools, courts, etc.&lt;/li&gt;
+&lt;li&gt;FDR was elected in November 1932 by a landslide.&lt;/li&gt;
+&lt;li&gt;40% of home mortgages were in default in 1933. Farms were hit hard by foreclosure. It led to farmers protesting low commodity prices and sabotaging farm auctions — farmers showed up en masse at auctions to intimidate anyone who bid on farms, to ensure the farmer who previously owned the property won the auction. Many farmers repurchased their farms via auction for pennies on the dollar. States eventually passed moratoriums on foreclosures.&lt;/li&gt;
+&lt;li&gt;The US dollar suffered severe deflation during the depression.&lt;/li&gt;
+&lt;li&gt;Michigan Governor orders a bank holiday in the state on February 14, 1933, after the largest bank in the state failed. The order closed banks for 8 days. Upon reopening, banks limit withdrawals to 5% of deposits.&lt;/li&gt;
+&lt;li&gt;Maryland orders a bank holiday on February 25, 1933, with similar withdrawal limits upon reopening.&lt;/li&gt;
+&lt;li&gt;Ohio banks ordered a bank holiday and set 5% withdrawal limits on accounts on February 27, 1933.&lt;/li&gt;
+&lt;li&gt;Pennsylvania ordered a bank holiday on February 28, 1933.&lt;/li&gt;
+&lt;li&gt;By March 1, 1933, eight states ordered bank holidays. On March 2, the total was up to 16 states. March 3, it increased to 22 states. FDR proclaimed a national bank holiday from March 6 to March 9. Congress passed the Emergency Banking Act of 1933 on March 9. Banks are allowed to reopen based on how “sound” they are. Stock markets also closed for 10 days during the bank holiday.&lt;/li&gt;
+&lt;li&gt;FDR begins his fireside chats in March 1933 to help explain the situation and instill confidence.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Retail sales jumped with end of the national bank holiday.
+US economy stopped contracting in March 1933.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;FDR signed a bill allowing beer and light wines (3.2% alcohol) in March 1933. Prohibition (18th Amendment) was officially repealed on December 5, 1933. Legalized liquor didn’t help the recovery as much as many thought.&lt;/li&gt;
+&lt;li&gt;FDR signed an order to limit ownership of gold in April 1933. No one can own more than $100 in gold. Gold exports are also not allowed.&lt;/li&gt;
+&lt;li&gt;Hitler comes to power in 1933 and immediately declares a boycott of Jewish merchants to worldwide outrage. — April 1933.&lt;/li&gt;
+&lt;li&gt;Inflation is the new worry of the day (1933). Inflation worries make regular reappearances throughout the rest of Roth’s diary.&lt;/li&gt;
+&lt;li&gt;National Industrial Recovery Act was passed in June 1933. It was designed to eliminate unfair competitive practices and standardized wages and work hours between companies in the same industries. It also granted the right for workers to unionize.&lt;/li&gt;
+&lt;li&gt;Labor strikes became common in late 1933 as union workers demand higher wages. The National Guard are called and some end in violence and death.&lt;/li&gt;
+&lt;li&gt;American Federation of Labor saw its membership grow from 500,000 to over 4 million in less than 2 months ending Oct. 1933. It demanded a 30-hour work week and higher wages.&lt;/li&gt;
+&lt;li&gt;Civil Works Administration is created in November 1933 to provide federal jobs to the unemployed to build roads, parks, airports, etc. By December, 3.5 million people had jobs.&lt;/li&gt;
+&lt;li&gt;Retail reports, in 1933, the best Christmas sales since the depression started.&lt;/li&gt;
+&lt;li&gt;1933 saw a number of programs set up by FDR’s administration: FDIC and Home Owners Loan Corp. were two of the most successful. The FDIC federally insured bank deposits. Home Owners Loan Corp. allowed homeowners to refinance their home with a 12-year mortgage instead of the common 5-year mortgage and avoid foreclosure. The program refinanced about 20% of home mortgages at the time.&lt;/li&gt;
+&lt;li&gt;FDR’s experiment devaluing gold begins in January 1934.&lt;/li&gt;
+&lt;li&gt;Potential signs of war in Europe on February 1934.&lt;/li&gt;
+&lt;li&gt;1934 saw an increase in union strikes — over 1,800 — for better wages and working environment. National Guard and police were often called in to break up the strike, ending in violence.&lt;/li&gt;
+&lt;li&gt;1935 saw FDR’s administration pass Works Progress Administration which employed 8.5 million people, the National Labor Relations Act, and the Social Security Act.&lt;/li&gt;
+&lt;li&gt;Germany seized the Rhine Valley in March 1936.&lt;/li&gt;
+&lt;li&gt;There were still about 12 million unemployed in April 1936.&lt;/li&gt;
+&lt;li&gt;FDR wins reelection by a landslide in November 1936.&lt;/li&gt;
+&lt;li&gt;Germany seizes Austria in March 1938.&lt;/li&gt;
+&lt;li&gt;War breaks out in Europe. Germany invades Poland in September 1939. England and France declare war.&lt;/li&gt;
+&lt;li&gt;FDR’s administration would shift to national defense and supply Great Britain.&lt;/li&gt;
+&lt;li&gt;Italy joins the war, allied with Germany, in June 1940 while Germany takes control of Paris. Only England is left. Air raids over London begin. People are worried should England also falls.&lt;/li&gt;
+&lt;li&gt;Japan allies with Germany and Italy in September 1940.&lt;/li&gt;
+&lt;li&gt;The Selective Training and Service Act was passed in September 1940. It requires all men aged 21 to 35 to register for the draft. 16 million men registered for the first draft in US history.&lt;/li&gt;
+&lt;li&gt;FDR wins his 3rd reelection by a landslide in November 1940.&lt;/li&gt;
+&lt;li&gt;Germany turns toward Russia in July 1941.&lt;/li&gt;
+&lt;li&gt;The war created panic buying of products in the US starting in 1939 to avoid potential rationing and embargos on products similar to WWI. First, it was cars and real estate, next was furniture, appliances, radios, then silk stockings, linens, and clothes.&lt;/li&gt;
+&lt;li&gt;Japan attacks Pearl Harbor, on December 7, 1941. The US declares war on Japan.&lt;/li&gt;
+&lt;li&gt;Germany and Italy declare war on the US on December 11, 1941.&lt;/li&gt;
+&lt;li&gt;Financial Markets
+&lt;ul&gt;
+&lt;li&gt;Only around 2.5% of Americans owned stocks in 1929.&lt;/li&gt;
+&lt;li&gt;Most people at the time viewed real estate as the way to grow a fortune.&lt;/li&gt;
+&lt;li&gt;Following WWI, the US helped rebuild Europe and became its primary supplier which kicked off a boom in the US. Things picked up steam after 1922 as new industries like electricity, autos, and radio, along with mass production, became more mainstream.&lt;/li&gt;
+&lt;li&gt;Chain store retailers — Kroger, A&amp;#x26;P, and others — grew in size during the 1920s and knocked many “mom and pop” retailers out of business.&lt;/li&gt;
+&lt;li&gt;Florida’s real estate boom took off in 1925.&lt;/li&gt;
+&lt;li&gt;Before the ’29 Crash, stocks sold at 20x to 40x earnings, bonds paid 4% to 5% interest, and use of margin was widespread.&lt;/li&gt;
+&lt;li&gt;After the crash, business leaders, politicians, and newspapers urged people that stocks were bargains and the worst was over. It wasn’t.&lt;/li&gt;
+&lt;li&gt;stocks were 30% lower one year later.&lt;/li&gt;
+&lt;li&gt;Real estate bonds sold at 20 to 30 cents on the dollar in September 1931.&lt;/li&gt;
+&lt;li&gt;People who thought they bought bargains in 1930, watched those bargains get cut in half (at least) by 1932.&lt;/li&gt;
+&lt;li&gt;Congress started an investigation on short selling in 1932.&lt;/li&gt;
+&lt;li&gt;Stocks and commodities fell to the same level in 1899 in May 1932.&lt;/li&gt;
+&lt;li&gt;Railroad sector averages hit the same level in 1904 on May 31, 1932.&lt;/li&gt;
+&lt;li&gt;Railroad stocks were up almost 400% by September 1932 from their lows in July 1932.&lt;/li&gt;
+&lt;li&gt;The stock market rose four months straight following the end of the national bank holiday in early March 1933. New brokerage offices began to open. Roth reports people buying stocks in the hope to make back losses from prior years. Markets would see record volume on the year in the back half of 1933.&lt;/li&gt;
+&lt;li&gt;The market corrects in July 1933 after 3 straight days of losses.&lt;/li&gt;
+&lt;li&gt;U.S. Panics: “1873-1879 Major panic. Recovery in 1879. 1880-1884 Good times. 1884-1885 Short panic. 1885-1890 Good times. 1891-1893 Falling prices and warning of panic. 1893-1896 Panic. 1897-1901 Good times. 1901-1902 Short panic. 1902-1907 Good times 1907-1908 Short panic but severe. 1908-1914 Good times. 1914 Panic threatened but stopped by war. 1914-1921 Wartime prosperity. 1921 Primary war panic. 1922-1929 Good times. 1929-1935 Panic.”&lt;/li&gt;
+&lt;li&gt;Federal Reserve sets margin limits at 55% in January 1936.&lt;/li&gt;
+&lt;li&gt;Stocks sold at 30 to 40 times earnings in September 1936.&lt;/li&gt;
+&lt;li&gt;The stock market continued to rise until September 1937. Black Tuesday hit on October 19, 1937. The market fell more than 50% from September to December 1937, down to the same level as 1935.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By March 1938, the stock market is back to the same level as in 1934.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The stock market bottomed in June 1938.&lt;/li&gt;
+&lt;li&gt;Stocks hit 2-year lows in June 1940.&lt;/li&gt;
+&lt;li&gt;Stock Exchange seats sold at $650,000 in 1929. A seat was sold in November 1940 for $33,000. Another sold for $27,000 in February 1941. Another sold for $19,000 in December 1941.&lt;/li&gt;
+&lt;li&gt;“Tax selling” pushes the stock market down to levels not seen since 1938. — December 6 1941&lt;/li&gt;
+&lt;li&gt;Investing Thoughts
+&lt;ul&gt;
+&lt;li&gt;Roth dances around the idea of market timing early on — i.e. getting out entirely at the top and back in at the bottom — before realizing the difficulty of predicting the turns.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;quotes&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quotes&quot; aria-label=&quot;quotes permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Quotes&lt;/h1&gt;
+&lt;p&gt;“The beginning of a stock market movement usually is caused by the trend of business but in the end the movement is carried too high or too low — by the extreme optimism or despair of human nature.”&lt;/p&gt;
+&lt;p&gt;“A major risk should not be taken for a minor profit.”&lt;/p&gt;
+&lt;p&gt;“The investor must organize all the material around him so he can use it in a simple way. He must disregard the non-essential. He must discipline himself and realize that the investment of surplus funds is all-important and requires work and diligence.”&lt;/p&gt;
+&lt;p&gt;“Both 1932 and 1938 indicate there is no sure way to catch the bottom of the swing because it comes without warning. When liquidation has dried up and the situation looks hopeless—that is the turn. Your guess is as good as anybody’s.”&lt;/p&gt;
+&lt;p&gt;“It becomes increasingly clear that nobody can predict the future behavior of the stock market. One day the results of the election upset it and the next day it booms because of some chance happening.”&lt;/p&gt;
+&lt;p&gt;“Fools rush in to buy when the market is booming — the wise investor buys on darker days when he knows stocks are selling below value — and then holds on — confident that he cannot lose his principal and that sooner or later the market will come back and raise prices above their intrinsic value. To do this an investor must have liquid capital, courage and above all patience and ability to hold on and wait.”&lt;/p&gt;
+&lt;p&gt;A stock broker after 40 years experience said to me today: “The only people I know who ever made money in the stock market are those who bought for cash and owned the stocks outright. I do not recall a single margin trader who did not lose sooner or later.”&lt;/p&gt;
+&lt;p&gt;“One thing is clear. Every speculator gets washed out sooner or later.”&lt;/p&gt;
+&lt;p&gt;“Roth’s diary is a reminder that our economic security, individually and collectively, always rests on a complex interaction of market forces, politics, consumer perception, and the impact of unforeseen (and sometimes unforeseeable) events. As in so many other areas, those offering predictions for the future or even detailed readings of the present are often wrong because of incomplete information, flawed statistical models, or hidden agendas.”&lt;/p&gt;
+&lt;p&gt;“It has become popular to wear old clothes—to brag about poverty and how much you lost in the 1929 crash. It is almost bad taste to give a big party or to drive a new car.” — Sept. 1, 1931&lt;/p&gt;
+&lt;p&gt;“Banks are absolutely terrible in their insistence on payments on notes and mortgages. It is the old story of lending you an umbrella when the sun is shining and then demanding it back when it rains.” — Sept. 4, 1931&lt;/p&gt;
+&lt;p&gt;“Life insurance proved to be a cushion for me in the depression. Money borrowed on life insurance policies should be paid back as quickly as possible. It has so far proven to be the next best investment after government bonds.”&lt;/p&gt;
+&lt;p&gt;“Everybody demands cash — no checks are accepted. The Truscon Steel Co. paid its employees with checks drawn on a large New York Bank and the local banks refused to cash them. The check may be good today and bad tomorrow. Even certified checks are regarded suspiciously.”&lt;/p&gt;
+&lt;p&gt;“In 146 cities of the United States “scrip” money is being used or “barter exchanges” have been set up to exchange services for merchandise.” — December 1932&lt;/p&gt;
+&lt;p&gt;“In the past two years there has been an amazing change in American thought from cards and golf to national politics and public matters. Life has become simple. Women’s styles resemble the 1890s and even the bicycle is coming back into favor as a means of transportation.” — May 1933&lt;/p&gt;
+&lt;p&gt;“When I started these notes it never occurred to me that the depression would last more than two years. We are now in the beginning of the seventh year and the road is not yet clear — with the possibility of inflation ahead. We seem to be emerging from the panic, industry is picking up, etc. — but so much of it has been created by artificial spending that it is difficult to know just where we stand.” — January 2, 1936&lt;/p&gt;
+&lt;p&gt;“Just came back thru the stores on my lunch hour. People are spending money like drunken sailors.” — December 24, 1936&lt;/p&gt;
+&lt;p&gt;“Religious intolerance increases — and our country is swayed by European propaganda and subversive activities. All in all the world of 1940 is not a pleasant one. We can only hope that a better day is dawning.” — January 1940&lt;/p&gt;
+&lt;p&gt;“Blackouts take place in New York and Los Angeles. Many false reports of invasion by Japanese planes.” — December 9, 1941&lt;/p&gt;
+&lt;p&gt;“To an older man it must have seemed inevitable that we were heading for a crash but to most of us it seemed that we were in a “New Era” which would never end.”&lt;/p&gt;
+&lt;p&gt;“In 1929 when the crash came all sorts of people were into the market on margins over their heads — doctors, lawyers, merchants, bootblacks, waitresses, etc. They bought stocks on tips, did not know what the company sold or made and did not know how to investigate a stock even if such a thought had occurred to them.”&lt;/p&gt;
+&lt;p&gt;“Magazines and newspapers are full of articles telling people to buy stocks, real estate etc. at present bargain prices. They say that times are sure to get better and that many big fortunes have been built this way. The trouble is that nobody has any money… From the extreme of speculation in 1929 people have now turned to the extreme of caution.” — July 30, 1931&lt;/p&gt;
+&lt;p&gt;“In a great many instances fraud is shown on the part of bank officials who used bank funds to play the stock market. The whole banking fraternity is in public disfavor and many of them face prison.” — Sept. 29, 1931&lt;/p&gt;
+&lt;p&gt;“A portion of good old government bonds is the backbone of many an investment list today.”&lt;/p&gt;
+&lt;p&gt;“All sense of value, optimism and initiative seems to have disappeared. That is why the depression period presents so many opportunities to the man who has the nerve to buy stocks and real estate and businesses when the outlook is the blackest.” — April 14, 1932&lt;/p&gt;
+&lt;p&gt;“O.P.M. (Other People’s Money—or credit) are the three most powerful letters in business but must be wisely and moderately used. Most of the banks are now almost liquid and these vast resources will soon again be loaned out for business expansion. To use these funds for business expansion and yet with moderation is the height of good business management.”
+“The bottom was reached in summer 1932 and the upturn gradually started. There had been so many false starts however that it was not until 1934-5 that people really realized that the turn had been passed.”&lt;/p&gt;
+&lt;p&gt;“Florida in particular is absolutely flat since the land boom of 1925. Literally whole communities can be bought up with little cash.” — July 1932&lt;/p&gt;
+&lt;p&gt;“In the last 30 days the stock market has given one of the most strenuous rallies in its history… There is no tangible explanation for this by way of industrial revival and yet there is plenty of optimism and feeling that this fall will see a turn for the period. In this 30 day period most of the popular common stocks have doubled and tripled in value. The entire list shows a 70% increase in value.” — August 1932&lt;/p&gt;
+&lt;p&gt;“Directly after the war period it became popular for small local concerns to expand by selling stocks to the public. In almost every single instance these investments have proven to be worthless.”&lt;/p&gt;
+&lt;p&gt;“Bankruptcy receiverships and foreclosures are rapidly cutting down the mountain of debt created during the boom… In the case of the large corporation it is often voluntary for the purpose of breaking leases and getting rid of large bond issues, cutting down heavy capitalization etc. I do not see how real recovery can come until this liquidation movement is completed, old debts wiped out and business showing a profit on the basis of present capacity.”&lt;/p&gt;
+&lt;p&gt;“In 1928 people were excited about big profits on the stock market: they read literature about investments, lived high and talked about the “new era.” Today their outlook is gloomy, they think the depression will never end, the stock market is an abomination, real estate is no good, everybody is cynical, etc. Just as the public was mistaken in its excessive optimism of 1928 I believe it is mistaken in its excessive gloom.” — February 1933&lt;/p&gt;
+&lt;p&gt;“The stock market lays down stringent rules to curb the small speculator. Hereafter accounts under $5000 must be margined at least 50%. Pools must be reported.” — August 1933&lt;/p&gt;
+&lt;p&gt;“The street is full of stories of large sums of money made in the stock market. Most of these people bought stocks a year or more ago and held on grimly… Many of course sold too soon and took a small profit. The speculative fever has spread just as in 1929 and all sorts of people are crowding the broker’s office. Many stocks sell at 20 and 30 times earnings and a break seems overdue. Bonds pay only about 3% and because of this low return and because of fear of inflation much money has been switched to equities.” — February 1936&lt;/p&gt;
+&lt;p&gt;“As I look back over the record of the stock market since 1932 many remarkable results can be seen. Stocks that sold at receivership prices are now selling at substantial values. Here are a few extreme examples showing quotations in 1932 and 1936. Phillips Morris Tobacco Co. 1/2 to 90; Sheet &amp;#x26; Tube 4 to 68; Republic Steel 2 to 26; Gen. Motors 10 to 70; Chrysler 6 to 100, etc.” — July 1936&lt;/p&gt;
+&lt;p&gt;“As I re-read some of the predictions made by outstanding economists in past few years, I must laugh. They were all wrong. None of them foresaw the 1937-39 collapses…”&lt;/p&gt;
+&lt;p&gt;“Industry in a war boom — stock market stagnant — gov’t bonds bringing less than 1% and selling at a high premium — stocks low and selling at five times earnings” — February 1941&lt;/p&gt;
+&lt;p&gt;“The S.E.C. starts to break up the utility holding companies and their common stocks go to record lows.” — April 1941&lt;/p&gt;
+&lt;p&gt;“The rules of conservative investment apply whether you buy real estate or stocks or bonds. Thorough investigation is the first necessity — safety of the principal — and it usually follows that only a fair return on the investment can be expected. To seek a high or unusual return means greater risk and speculation… A pretty safe rule to follow is to stick to the conservative investments. There are times, however, in a depression when cash money is king and many good investments can be purchased at a big discount.”&lt;/p&gt;
+&lt;p&gt;“As nearly as I can make out from a study of past panics, the cycle of business is always moving down toward a panic or up toward a boom. It rarely for long travels in a straight line… The wise investor will disregard the day-by-day fluctuations of the stock market or real estate market and base his buying and selling on these long periods of rise and fall. Above all, and I repeat it again and again — he must have liquid capital in time of depression to buy the bargains and then he must sell before the next crash. It is difficult if not impossible to do this but the conservative longtime investor who follows the general rule of buying stocks when they are selling far below their intrinsic value and nobody wants them, and of selling his stocks when people are bidding frantically for them at prices far above their intrinsic value — such an investor will pretty nearly hit the bull’s-eye.”&lt;/p&gt;
+&lt;p&gt;“Again and again I am forced to the conclusion that in prosperous times a man must be cautious and preserve his capital and be careful not to over-expand his business or to go too deeply in debt relying on a continuation of good business to pay the debt. In time of depression a man can be brave and if the depression is nearing an end he can invest his money or expand his business or open a new business with confidence that he is facing 5 or 10 years of prosperity… Many great prosperous businesses were founded on the ruins of depression.”&lt;/p&gt;
+&lt;p&gt;“Money should be invested not locally but on a national scale if possible, including stocks and bonds in companies located in other communities and operating nationally. Many wealthy families in Youngstown grew rich on only local industries and banks but they are pretty well cleaned out now.”&lt;/p&gt;
+&lt;p&gt;“Each day brings new and interesting stories of great fortunes wiped out in the past year… The stories run without end. It all comes to the same point. Every investor should at all times have a reasonable portion of his holdings in liquid securities that can’t shrink much.”&lt;/p&gt;
+&lt;p&gt;“It is my conclusion that the successful investor must cultivate the habit of “patience.”… I suppose the real investor would then have the patience and courage to wait until normal times returned before selling. Patience to wait for the right moment—courage to buy or sell when that time arrives — and liquid capital — these are the 3 essentials as I see it now.”&lt;/p&gt;
+&lt;p&gt;“Again and again during this depression it is driven home to me that opportunity is a stern goddess who passes up those who are unprepared with liquid capital.”&lt;/p&gt;
+&lt;p&gt;“This seems to be the sound rule for obtaining wealth but it requires patience which few possess:
+Live on less than you earn — save at least 10%.
+Invest, don’t speculate so that none of the principal is lost. Re-invest the earnings.
+Never sell a good stock unless the price is above its intrinsic value (as in 1929).”&lt;/p&gt;
+&lt;p&gt;“It is said that George F. Baker, the New York Banker, will always buy sound common stocks when they are being offered below intrinsic value and then he will never sell them except for very good reasons. He looks for his profit in the growth of the company rather than in the speculative increase of the market quotation.”&lt;/p&gt;
+&lt;p&gt;“I just finished reading a book called Mellon’s Millions. In all their business ventures they conservatively built up huge cash surpluses during time of prosperity. When a panic came they were able to absorb competitors for a song. During prosperous days their corporations advanced steadily but during depression they advanced by leaps and bounds.”&lt;/p&gt;
+&lt;p&gt;“Just finished reading a book entitled Our Mysterious Panics by Colman. He gives brief history of every panic from 1819 to 1929. Comes to conclusion that every panic is brought on by human greed and speculation instead of by complex economic cycles.”&lt;/p&gt;
+&lt;p&gt;“None of these people seem to know the first principles of investment — how to gauge the value of a stock or how to look for accurate information. They buy and sell on tips and since the market has been rising since 1932 they are coming out ahead. They lay nothing aside in bonds. I wonder how many of them will be able to get out at the right time.”&lt;/p&gt;
+&lt;p&gt;“Floyd Odlum and the building up of his Atlas Investment Trust. Started with $40,000 in 1924 — ran it up to a million in 1929. Sold out for cash and held on to cash until bottom of depression was reached in 1932. With his cash he bought heavily in “special situations.” Mostly in investment trusts hard up for cash. Stocks in these trusts were selling at less than 50% of the asset values… Assets of the Atlas Corporation are now over $100,000,000 and they have literally become private bankers.”&lt;/p&gt;
+&lt;p&gt;“It is funny how when the stock market is rising every piece of news is regarded optimistically and bad news is ignored.”&lt;/p&gt;
+&lt;p&gt;“This depression has indelibly impressed on my mind one thing — and that is the value of having on hand sufficient capital to cover emergencies. In the investment field it means the difference between success or failure to have enough capital to buy bargains when they are available or to hold on to investments thru thick and thin and not be forced to sell at a loss. My experience as a lawyer shows that a large proportion of business failures are caused by lack of capital rather than by lack of technical business knowledge. Even in domestic life there can be no happiness without sufficient surplus to cover emergencies such as illness or death.”&lt;/p&gt;
+&lt;p&gt;“To build an estate it is necessary first of all to get money by saving it and secondly it is most important to invest these savings so that they will increase and work for you without losing the principal. Most people learn the first rule and succeed in saving various amounts out of their earnings but very few learn the second rule — how to invest it so it earns a profit and yet not lose the principal.”&lt;/p&gt;
+&lt;p&gt;“Somewhere in between the ultra-conservative man who is afraid to take even a legitimate risk and the avaricious gambler who bets on anything — stands the ideal investor who has learned to make his money work for him. He accumulates money first by savings — then he carefully investigates and weighs a dozen investments before he finally selects one to put his money in. He is willing to take a legitimate risk but is not willing to gamble… If he invests in stocks or bonds he will not follow blind tips or rush into a seething market with thousands of suckers — but in the quiet of his office he will carefully examine the earnings records of the company, its future prospects. He will seek advice if necessary and then buy only if he thinks the price is fair and the prospects good. He will hold on for several years and share in the growth of the company and will sell only if the company loses ground or if a stock-crazy public offers him much more for his stock than its intrinsic value.”&lt;/p&gt;
+&lt;p&gt;“As long as human nature is the same and people like to speculate, it is probable that in the future, economic booms and depressions will come and go as in the past.”
+“During the past depression prominent bankers, businessmen, etc. were all wrong in most of their predictions. Use your own judgment and do your own thinking.”&lt;/p&gt;
+&lt;p&gt;“The more I see of the recent stock market slump the more I am impressed with the fact that the American people look upon the stock market as a place to gamble and not to invest. In times of rising market the average American becomes over-optimistic: he invests his whole capital in common stocks of the most speculative variety; often extends himself on margin. Then when a slump comes he finds himself over-extended; no cash reserve to fall back upon; he becomes unduly pessimistic and sells at a loss.”&lt;/p&gt;
+&lt;p&gt;“The average man who buys real estate for investment makes a careful study of the property, the location, the income, etc. and hires a lawyer to examine the title… That same man when he buys stocks either will not investigate because he does not know how or because he is lazy. He bets his money as in a horse race and does not feel his venture a success unless his money is doubled in a very short time. If the patience and care used in a real estate investment were used in making a stock investment, there would be much greater chance of success.”&lt;/p&gt;
+&lt;p&gt;“It is hard to always judge the exact place in a cycle but it is fairly easy to know whether we are in a period of great prosperity and speculation or in a period of blackness and despair. It is most difficult to know when the turn comes. It is best not to wait for the turn but to follow the simple theory of buying when a security is selling below value and to sell when above value.”&lt;/p&gt;
+&lt;h1 id=&quot;references&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#references&quot; aria-label=&quot;references permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;References&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://novelinvestor.com/notes/the-great-depression-a-diary-by-benjamin-roth/&quot;&gt;https://novelinvestor.com/notes/the-great-depression-a-diary-by-benjamin-roth/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[The most important thing by Howard Marks summary]]></title><description><![CDATA[Notes are based on the Illuminated edition. In investing, no rule works all the time. Markets are fluid systems, influenced by many…]]></description><link>https://tonytvo.github.io/the-most-important-thing-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/the-most-important-thing-summary/</guid><pubDate>Sun, 24 Jul 2022 22:12:03 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Notes are based on the Illuminated edition.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In investing, no rule works all the time. Markets are fluid systems, influenced by many variables, including the players involved in it. Change is constant. Surprises are inevitable. Unexpected things do happen.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The best investment approach should be built on common sense and flexibility.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Second Level Thinking:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To earn above-average returns, you not only must think differently and behave differently than everyone else, but you must be right more often than the consensus.&lt;/li&gt;
+&lt;li&gt;First-level thinkers rely on headlines and consensus opinions to make investment decisions.&lt;/li&gt;
+&lt;li&gt;Second-level thinkers weigh the possible outcomes, compare it against the consensus view, understand the consequences of being wrong, and the probability of being right.&lt;/li&gt;
+&lt;li&gt;First-level thinking is simplistic and binary.&lt;/li&gt;
+&lt;li&gt;Second-level thinking is complex and probabilistic.&lt;/li&gt;
+&lt;li&gt;Second-level thinkers often ask: “Who doesn’t know that?”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Market Efficiency: markets are quick to incorporate new information into asset prices. However, it does not mean assets are priced accurately.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;More “efficient” assets tend to be: widely known, broadly followed, socially acceptable, and the information on it is widely available and comprehensible.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;More “inefficient” assets tend to be: little known or followed, taboo or controversial, and the information on it is limited and/or difficult to understand.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Inefficiency is necessary to outperform the market, but won’t guarantee it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Assets prices are a product of consensus view. A contrarian view, and being right, is needed to recognize mispricing in markets. That, of course, is not easy given the same information and behavioral hurdles — including straying from the consensus — as everyone else.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Chance — good or bad luck — plays a bigger role in short term investment outcomes. Skill plays a bigger role in the cumulative outcome over many, many decades.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Intelligent investing is based on estimates of intrinsic value.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Value investing looks for assets that can be valued based on fundamental factors like earnings or cash flows, which can be bought at a considerable discount to that value. Said another way, value investing looks to buy stocks with a current value significantly higher than its current price.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The bigger the discount between price and value, the wider the margin of safety. A margin of safety brings added protection from unexpected events, being wrong, etc.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Investing is a waiting game. In other words, waiting is a big part of any strategy, be it value, growth, etc. Perfectly timed stock purchases don’t happen without a lot of luck. Investors have no control over how quickly the market corrects a misalignment between value and price. Waiting is required.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Waiting inevitably means investors are bound to look wrong often. But if the judgment of intrinsic value is correct, then it’s only temporary. That means being comfortable with losses. Fear of looking wrong, being uncomfortable with losses, is what gets investors into trouble.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A proper valuation, made with confidence, is the best defense against emotional decisions.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;A large margin of safety makes selling at the right price less important.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Market prices are largely affected by psychology and technicals in the short term. Investors’ psychology can produce wild price swings in the short run. Understanding psychology is key to being able to take advantage of it. Controlling your own emotion is also key.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Great opportunities arise when buying from forced sellers. That means don’t become a forced seller. - Build a strategy that avoids forced selling at any price.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A “good” stock can produce losses if you overpay. A “bad” stock can produce gains when bought cheap. An “overpriced” stock can go higher. An “underpriced” stock can go lower. But eventually, valuation does matter.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Roads to Investment Profits:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Increase Intrinsic Value: It’s difficult to predict. Often any potential increase is already priced in. To profit, the actual increase in value must exceed the market’s — the consensus — expectations.&lt;/li&gt;
+&lt;li&gt;Apply Leverage: A “good” investment doesn’t become a “great” investment with leverage. Leverage only magnifies gains and losses. It increases the risk of ruin.&lt;/li&gt;
+&lt;li&gt;Sell an Asset for More Than Its Worth: It requires a greater fool to come along and overpay for your asset.&lt;/li&gt;
+&lt;li&gt;Buy an Asset for Less Than Its Worth: One of the most reliable ways to profit…so long as you’re willing to wait. Even so, it’s not always guaranteed to work.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Risk&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Risk results from an unknowable future.&lt;/li&gt;
+&lt;li&gt;Avoiding or minimizing risk is a good thing.&lt;/li&gt;
+&lt;li&gt;Investment decisions should always consider the risk involved and potential return. Then determine if the return justifies the risk.&lt;/li&gt;
+&lt;li&gt;Riskier investments have a wider range of outcomes and more uncertainty around where the outcome falls. In other words, uncertainty means riskier investments can have high returns, low returns, or even a loss. And the probability distribution may be impossible to predict.&lt;/li&gt;
+&lt;li&gt;Risk = the possibility of permanent loss.&lt;/li&gt;
+&lt;li&gt;Other Types of Risk to Watch for:
+&lt;ul&gt;
+&lt;li&gt;Falling Short of Your Goals: investing is personal. It’s usually done with specific goals in mind like retirement, college education, etc. Not meeting those goals poses a risk.&lt;/li&gt;
+&lt;li&gt;Benchmark Risk: is an unwillingness to underperform a popular benchmark index, like the S&amp;#x26;P 500, in the short term.&lt;/li&gt;
+&lt;li&gt;Career Risk: when a fund manager’s investment decisions are based more on keeping their job than the outcome of their funds.&lt;/li&gt;
+&lt;li&gt;Unconventionality: the risk of being different. Investing differently than the market often leads to returns that deviate from the market — not always in a good way. Being unconventional can get people fired or lead to market-beating returns.&lt;/li&gt;
+&lt;li&gt;Illiquidity: liquidity is the ability to turn assets into cash without sacrificing on price. The risk is not being able to do that when cash is needed most.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Risk is a function of price and value.&lt;/li&gt;
+&lt;li&gt;Risk of loss can be caused by strong or weak fundamentals depending on the price paid.&lt;/li&gt;
+&lt;li&gt;Risk of loss is possible under a strong or weak economic environment.&lt;/li&gt;
+&lt;li&gt;Risk is often an educated guess. It’s also difficult to measure in hindsight. Every investment has a range of outcomes. It’s impossible to measure risk knowing the outcome that did occur, without also knowing all the alternative outcomes.&lt;/li&gt;
+&lt;li&gt;Randomness and luck play a role in individual investment outcomes.&lt;/li&gt;
+&lt;li&gt;Most investors make decisions with the expectation that the future will mirror the past and underestimate change.&lt;/li&gt;
+&lt;li&gt;Worst-case projections are often based on what we know through history and fail to consider that something worse than what’s already happened, can happen.&lt;/li&gt;
+&lt;li&gt;Risk is uncertainty in the possibility that loss occurs out of all the possible outcomes.&lt;/li&gt;
+&lt;li&gt;High risk and low returns due to high prices are one and the same.&lt;/li&gt;
+&lt;li&gt;Risk tolerance, for the average investor, tends to move opposite of stock prices. As prices rise too high, investors become less risk-averse (more risk-tolerant) when they should be more risk-averse.&lt;/li&gt;
+&lt;li&gt;Many market bubbles were blown under the belief that something has no risk. Risk exists in every investment. The belief in no risk stems from widespread investor behavior that’s extremely optimistic and risk-averse. It’s a danger to watch out for. Risk is highest when the belief risk doesn’t exist is widespread.&lt;/li&gt;
+&lt;li&gt;Things to watch out for when risk is highest is excessive optimism, nonexistent skepticism, easy credit, strong capital inflows, low returns on “safe” investments,  recent high returns on typically “unsafe” investments, and a belief that those returns will stay high going forward.&lt;/li&gt;
+&lt;li&gt;In most cases, people are overconfident in their ability to see risk and avoid it.&lt;/li&gt;
+&lt;li&gt;The “Perversity of Risk” = “When investors feel risk is high, their actions serve to reduce risk. But when investors believe risk is low, they create dangerous conditions. The market is dynamic rather than static, and it behaves in ways that are counterintuitive.”&lt;/li&gt;
+&lt;li&gt;Risk is often highest when the consensus believes it is lowest and vice versa. When the consensus believes an investment is risky and refuses to own it, their unwillingness likely reduces its price to a point where risk is lowest. The opposite is also true. When the consensus believes an investment is risk-free and everyone owns it, that enthusiastic demand has driven its price to a point where risk is highest.&lt;/li&gt;
+&lt;li&gt;The best investors earn asymmetrical returns to the risk they take. They often have a track record of avoiding disasters.&lt;/li&gt;
+&lt;li&gt;Risk management — risk control — is essential even when a potential risk isn’t obvious. It usually means forgoing some return to avoid any potential loss, even if the loss is never realized.&lt;/li&gt;
+&lt;li&gt;It’s important to remember that history is only a rough guide to what’s possible. Better and worse outcomes can occur. Outliers are possible that break entirely from historical norms.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Economies, markets, and businesses rise and fall. It’s partially due to the involvement of people. Other factors are involved too but people reacting to those factors play a big role in the swings of cycles.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Credit Cycle: “Prosperity brings expanded lending, which leads to unwise lending, which produces large losses, which makes lenders stop lending, which ends prosperity, and on and on.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The mistake investors often make is believing a trend will continue, that a company will do well forever, and that the cycle is broken. Reversion is far more likely.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Markets resemble a perpetual pendulum, swinging back and forth between two extremes. At one extreme are euphoria, greed, optimism, risk-tolerance, and overpriced assets. At the other are depression, fear, pessimism, risk-aversion, and underpriced assets. The pendulum never stops at the midpoint of its swing or the “average.” It’s always swinging through it, towards one extreme or the other. It’s the swing of the pendulum that’s dependable. What’s less dependable — that keeps everyone guessing — is the rate, the speed, and power of the swing. We never know how far it swings, what causes it to reverse (or when or how quickly it reverses), and how far it swings back in the other direction.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The primary risks in investing: Losing money and missed opportunities. It requires a balancing act for any portfolio (can’t eliminate both).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;3 Stages of a Bull Market:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“The first, when a few forward-looking people begin to believe things will get better”&lt;/li&gt;
+&lt;li&gt;“The second, when most investors realize improvement is actually taking place”&lt;/li&gt;
+&lt;li&gt;“The third, when everyone concludes things will get better forever”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;3 Stages of a Bear Market:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“The first, when just a few thoughtful investors recognize that, despite the prevailing bullishness, things won’t always be rosy”&lt;/li&gt;
+&lt;li&gt;“The second, when most investors recognize things are deteriorating”&lt;/li&gt;
+&lt;li&gt;“The third, when everyone’s convinced things can only get worse”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Arbitraging human nature — exploited the common behavioral mistakes that lead to mispricing and inefficiencies in the market — can lead to above-average returns. Of course, it requires avoiding similar mistakes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Greed – the pursuit of profits above all else, without consideration of risk.&lt;/li&gt;
+&lt;li&gt;Fear – prevents investors from making rational decisions and taking rational actions.&lt;/li&gt;
+&lt;li&gt;A Tendency to Dismiss Logic – when investors accept unlikely outcomes as probable because they would get rich quick.&lt;/li&gt;
+&lt;li&gt;Following the Herd – people, in general, are more comfortable following a group than going it alone…even when they know it’s the wrong decision.&lt;/li&gt;
+&lt;li&gt;Envy – people compare themselves to others too much…that includes returns. It makes it hard to watch others make more money in the stock market without eventually acting on it.&lt;/li&gt;
+&lt;li&gt;Ego – can lead to over-aggressive investing in the hopes of recognition, to show off high returns, or feel “smarter.” It leads to short term thinking. Humility is needed to keep the ego in check.&lt;/li&gt;
+&lt;li&gt;Capitulation – the late behavior in all cycles is when the last holdouts give in and jump on the bandwagon.&lt;/li&gt;
+&lt;li&gt;Inadequate Skepticism – the recurring phrase “too good to be true” is repeated after every market bubble. A magically investment or strategy that produces high returns without risk doesn’t exist. A skeptic separates what’s too good to be true from what sounds good.&lt;/li&gt;
+&lt;li&gt;Fear of Being Wrong — when doubt pushes you to question your judgment on an investment because it declined in price (which is often the case when buying an underpriced asset) or you’re missing out on something that everyone else is making money on.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;All bubbles start with a grain of truth.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Contrarianism means avoiding the repeated mistakes the herd makes at the extremes of the market cycle. The difficulty is in recognizing the extremes and then acting on it, knowing you’ll never time the bottom or top, or that prices can continue moving in the same direction longer than you might think.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Outside of the extremes, contrarianism is less likely to be profitable.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Experience might be the greatest teacher in recognizing the extremes of the market cycle.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Investors must think in terms of probabilities when dealing with the future — what could happen and how likely is it to happen.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Where to find bargains?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Something’s wrong — it looks bad on the surface like an over-leverage company, a failed project, or mismanagement.&lt;/li&gt;
+&lt;li&gt;Misunderstood asset — investors don’t look deep enough to understand it and/or show a bias towards it.&lt;/li&gt;
+&lt;li&gt;Highly unpopular – it’s ignored or scorned by the media, thus everyone else.&lt;/li&gt;
+&lt;li&gt;Controversial or inappropriate for most portfolios.&lt;/li&gt;
+&lt;li&gt;What’s being sold the most?&lt;/li&gt;
+&lt;li&gt;Of course, its price is falling — leading first-level thinkers to avoid it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A common mistake investors make is to equate action with adding value to a portfolio. Increased action usually just leads to overtrading and lower returns. Instead, investors should wait for the “best” opportunities to come to them — that they’re willing to act on — rather than chasing after things that add nominal value but carry more risk. This can be made worse by trying to create opportunities that don’t exist. Doing nothing is the hardest part of investing but often the most necessary.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Knowing what you don’t know is essential to investing success.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Accurately anticipating change is the most profitable but also the most difficult to predict.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;One aspect of knowing what you don’t know is being careful with your own forecasts and those of others because nobody knows the future with absolute certainty.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The biggest mistake investors make is forgetting the limits of their own knowledge. This includes mistaking the difference between probability and outcome.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If you know the future, it’s best to be aggressive, make concentrated bets, use leverage, time the market, and ignore risk — all the things great investors warn about. Because the greats don’t know the future, they are defensive, diversify, hedge, focus on value over price, emphasize risk management, and prepare for multiple outcomes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Rather than trying to figure out the future, try to figure out where we are in the market cycle, make adjustments if necessary when close to the extremes, and prepare mentally to avoid behavioral mistakes that plague investors throughout. The key is to watch for investor behavior that typically emerges, especially at the extremes of the cycle.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Randomness or luck plays a bigger role in investing than most people want to admit. It’s how someone can bet on a long-shot lottery stock, win big, and look like a genius. But it has little to do with skill and a lot to do with luck. In the short run, any outcome is possible including the least probable. In the long run, bet hundreds or thousands of times, the total outcomes will approach what’s most probable.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Investors’ decisions should be judged independent of the outcome because randomness allows for investors to make the wrong decision and still make money (or the right decision and lose). Process over outcomes is what matters.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A good investment strategy essentially has a dial that can adjust the balance between “making money” and “avoiding losses.” Of course, turning the dial requires rational thinking.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The offensive investor is usually focused on aggressive investments/positions in order to outperform.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The defensive investor is usually focused on avoiding mistakes and not doing the wrong thing that leads to losses. For defensive investors, that means avoiding investments that have a high probability of losses and avoiding overexposure to big drawdowns in a crash.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A large margin of safety increases a portfolio’s tolerance for undesirable outcomes. A lower price — in relation to value — is the primary source of this margin. The lower the price, the wider the margin.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;With stocks, the upside isn’t fixed like bonds. So the investor must find a balance between offense and defense. Obviously, they must play defense to avoid the losers, but must also play offense for the higher return.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Failure of Imagination – Marks defines it as the inability to come up with a full range of outcomes and/or not completely understanding the consequences of those outcomes. Specifically, it’s in reference to extreme outliers.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Avoiding big losses means building a portfolio to protect from the possibility of unlikely terrible losses occurring.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;On asset correlation: “The failure to correctly anticipate co-movement within a portfolio is a critical source of investment error.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lessons from a Crisis:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Too much capital availability makes money flow to the wrong places.&lt;/li&gt;
+&lt;li&gt;When capital goes where it shouldn’t, bad things happen.&lt;/li&gt;
+&lt;li&gt;When capital is in oversupply, investors compete for deals by accepting low returns and a slender margin for error.&lt;/li&gt;
+&lt;li&gt;Widespread disregard for risk creates great risk.&lt;/li&gt;
+&lt;li&gt;Inadequate due diligence leads to investment losses.&lt;/li&gt;
+&lt;li&gt;In heady times, capital is devoted to innovative investments, many of which fail the test of time.&lt;/li&gt;
+&lt;li&gt;Hidden fault lines running through portfolios can make the prices of seemingly unrelated assets move in tandem.&lt;/li&gt;
+&lt;li&gt;Psychological and technical factors can swamp fundamentals.&lt;/li&gt;
+&lt;li&gt;Markets change, invalidating models.&lt;/li&gt;
+&lt;li&gt;Leverage magnifies outcomes but doesn’t add value.&lt;/li&gt;
+&lt;li&gt;Excesses correct.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The biggest mistake investors make is selling at the bottom and missing the recovery.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Any expectation of investment returns should be reasonable.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Every investor should have a return goal in mind, know the amount of risk they can tolerate, and the amount of liquidity their strategy requires.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;quotes&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quotes&quot; aria-label=&quot;quotes permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Quotes&lt;/h1&gt;
+&lt;p&gt;“When there’s nothing particularly clever to do, the potential pitfall lies in insisting on being clever.”&lt;/p&gt;
+&lt;p&gt;“Asymmetry—better performance on the upside than on the downside relative to what your style alone would produce—should be every investor’s goal.”&lt;/p&gt;
+&lt;p&gt;“Perfection in investing is generally unobtainable; the best we can hope for is to make a lot of good investments and exclude most of the bad ones.”&lt;/p&gt;
+&lt;p&gt;“Most of these eleven lessons can be reduced to just one: be alert to what’s going on around you with regard to the supply/demand balance for investable funds and the eagerness to spend them.”&lt;/p&gt;
+&lt;p&gt;“…we always think in terms of earnings yield (which is just the inverse of the P/E) rather than in P/Es; doing so allows for easy comparison to fixed-income alternatives.” — Christopher Davis&lt;/p&gt;
+&lt;p&gt;“Short-run outcomes can diverge from the long-run probabilities, and occurrences can cluster.”&lt;/p&gt;
+&lt;p&gt;“One way to maximize the asymmetry of risk and reward is to make sure you minimize risk. I’ve said this before in another place: if you minimize the chance of loss in an investment, most of the other alternatives are good.” — Joel Greenblatt&lt;/p&gt;
+&lt;p&gt;“Investing scared, requiring good value and a substantial margin for error, and being conscious of what you don’t know and can’t control are hallmarks of the best investors I know.”&lt;/p&gt;
+&lt;p&gt;“An investor needs to do very few things right as long as he avoids big mistakes.” — Warren Buffett&lt;/p&gt;
+&lt;p&gt;“In fixed income…returns are limited and the manager’s greatest contribution comes through the avoidance of loss. Because the upside is truly “fixed,” the only variability is on the downside, and avoiding it holds the key. Thus, distinguishing yourself as a bond investor isn’t a matter of which paying bonds you hold, but largely of whether you’re able to exclude bonds that don’t pay. According to Graham and Dodd, this emphasis on exclusion makes fixed income investing a negative art.”&lt;/p&gt;
+&lt;p&gt;“Here is part of the tradeoff with diversification. You must be diversified enough to survive bad times or bad luck so that skill and good process can have the chance to pay off over the long term.” — Joel Greenblatt&lt;/p&gt;
+&lt;p&gt;“For good investors, as the time horizon expands, which allows skill to come into play, the probability distribution of long-term returns should narrow.” — Joel Greenblatt&lt;/p&gt;
+&lt;p&gt;“Overestimating what you’re capable of knowing or doing can be extremely dangerous—in brain surgery, transocean racing or investing. Acknowledging the boundaries of what you can know—and working within those limits rather than venturing beyond—can give you a great advantage.”&lt;/p&gt;
+&lt;p&gt;“It’s frightening to think that you might not know something, but more frightening to think that, by and large, the world is run by people who have faith that they know exactly what’s going on.” — Amos Tversky&lt;/p&gt;
+&lt;p&gt;“Some of the biggest losses occur when overconfidence regarding predictive ability causes investors to underestimate the range of possibilities, the difficulty of predicting which one will materialize, and the consequences of a surprise.”&lt;/p&gt;
+&lt;p&gt;“Good times teach only bad lessons: that investing is easy, that you know its secrets, and that you needn’t worry about risk. The most valuable lessons are learned in tough times.”&lt;/p&gt;
+&lt;p&gt;“Beating the market matters, but limiting risk matters just as much. Ultimately, investors have to ask themselves whether they are interested in relative or absolute returns. Losing 45 percent while the market drops 50 percent qualifies as market outperformance, but what a pyrrhic victory this would be for most of us.” — Seth Klarman&lt;/p&gt;
+&lt;p&gt;“First-level thinking says, “I think the company’s earnings will fall; sell.”&lt;/p&gt;
+&lt;p&gt;“Second-level thinking says, “I think the company’s earnings will fall less than people expect, and the pleasant surprise will lift the stock; buy.&quot;&quot;&lt;/p&gt;
+&lt;p&gt;“The idea is that agreeing with the broad consensus, while a very comfortable place for most people to be, is not generally where above-average profits are found.” — Joel Greenblatt&lt;/p&gt;
+&lt;p&gt;“Psychological influences are a dominating factor governing investor behavior. They matter as much as—and at times more than—underlying value in determining securities prices.” — Seth Klarman&lt;/p&gt;
+&lt;p&gt;“Human beings are not clinical computing machines. Rather, most people are driven by greed, fear, envy, and other emotions that render objectivity impossible and open the door for significant mistakes.”&lt;/p&gt;
+&lt;p&gt;“Many of the best bargains at any point in time are found among the things other investors can’t or won’t do.”&lt;/p&gt;
+&lt;p&gt;“Let others believe markets can never be beat. Abstention on the part of those who won’t venture in creates opportunities for those who will.”&lt;/p&gt;
+&lt;p&gt;“Warren Buffett says that the best investment course would teach just two things well: How to value an investment and how to think about market price movements.” — Joel Greenblatt&lt;/p&gt;
+&lt;p&gt;“It’s hard to consistently do the right thing as an investor. But it’s impossible to consistently do the right thing at the right time. The most we value investors can hope for is to be right about an asset’s value and buy when it’s available for less.”&lt;/p&gt;
+&lt;p&gt;“Unless you buy at the exact bottom tick (which is next to impossible), you will be down at some point after you make every investment.” — Joel Greenblatt&lt;/p&gt;
+&lt;p&gt;“There are two essential ingredients for profit in a declining market: you have to have a view on intrinsic value, and you have to hold that view strongly enough to be able to hang in and buy even as price declines suggest that you’re wrong. Oh yes, there’s a third: you have to be right.”&lt;/p&gt;
+&lt;p&gt;“Investment success doesn’t come from “buying good things,” but rather from “buying things well.&quot;&quot;&lt;/p&gt;
+&lt;p&gt;“It has been demonstrated time and time again that no asset is so good that it can’t become a bad investment if bought at too high a price. And there are few assets so bad that they can’t be a good investment when bought cheap enough.”&lt;/p&gt;
+&lt;p&gt;“There’s no such thing as a good or bad idea regardless of price!”&lt;/p&gt;
+&lt;p&gt;“Investing is a popularity contest, and the most dangerous thing is to buy something at the peak of its popularity. At that point, all favorable facts and opinions are already factored into its price, and no new buyers are left to emerge.”&lt;/p&gt;
+&lt;p&gt;“Risk means more things can happen than will happen.” — Elroy Dimson&lt;/p&gt;
+&lt;p&gt;“The most dangerous investment conditions generally stem from psychology that’s too positive. For this reason, fundamentals don’t have to deteriorate in order for losses to occur; a downgrading of investor opinion will suffice. High prices often collapse of their own weight.”&lt;/p&gt;
+&lt;p&gt;“…the relation between different kinds of investments and the risk of loss is entirely too indefinite, and too variable with changing conditions, to permit of sound mathematical formulation.” — Security Analysis, Graham and Dodd&lt;/p&gt;
+&lt;p&gt;“Some of the greatest losses arise when investors ignore the improbable possibilities.”&lt;/p&gt;
+&lt;p&gt;“There’s a big difference between probability and outcome. Probable things fail to happen—and improbable things happen—all the time.” — Bruce Newberg&lt;/p&gt;
+&lt;p&gt;“Unusual and unlikely things can happen, and outcomes can occur in runs (and go to extremes) that are hard to predict. Underestimating uncertainty and its consequences is a big contributor to investor difficulty.”&lt;/p&gt;
+&lt;p&gt;“The received wisdom is that risk increases in the recessions and falls in booms. In contrast, it may be more helpful to think of risk as increasing during upswings, as financial imbalances build up, and materializing in recessions.” — Andrew Crockett&lt;/p&gt;
+&lt;p&gt;“Risk cannot be eliminated; it just gets transferred and spread.”&lt;/p&gt;
+&lt;p&gt;“The road to long-term investment success runs through risk control more than through aggressiveness. Over a full career, most investors’ results will be determined more by how many losers they have, and how bad they are, than by the greatness of their winners. Skillful risk control is the mark of the superior investor.”&lt;/p&gt;
+&lt;p&gt;“Rule number one: most things will prove to be cyclical. Rule number two: some of the greatest opportunities for gain and loss come when other people forget rule number one.”&lt;/p&gt;
+&lt;p&gt;“Understanding that cycles are eventually self-correcting is one way to maintain some optimism when bargain hunting after large market drops.” — Joel Greenblatt&lt;/p&gt;
+&lt;p&gt;“When things are going well, extrapolation introduces great risk. Whether it’s company profitability, capital availability, price gains, or market liquidity, things that inevitably are bound to regress toward the mean are often counted on to improve forever.”&lt;/p&gt;
+&lt;p&gt;“Stocks are cheapest when everything looks grim.”&lt;/p&gt;
+&lt;p&gt;“The desire for more, the fear of missing out, the tendency to compare against others, the influence of the crowd and the dream of the sure thing—-these factors are near universal. Thus they have a profound collective impact on most investors and most markets. The result is mistakes, and those mistakes are frequent, widespread and recurring.”&lt;/p&gt;
+&lt;p&gt;“Nothing is easier than self-deceit. For what each man wishes, that he also believes to be true.” — Demosthenes&lt;/p&gt;
+&lt;p&gt;“The biggest investing errors come not from factors that are informational or analytical, but from those that are psychological.”&lt;/p&gt;
+&lt;p&gt;“Many of the mistakes I have made are the same ones that I had made before; they just look a little different each time—the same mistake slightly disguised.” — Joel Greenblatt&lt;/p&gt;
+&lt;p&gt;“Rising prices are a narcotic that affects the reasoning power up and down the line.” — Warren Buffett&lt;/p&gt;
+&lt;p&gt;“The tendency to compare results is one of the most invidious. The emphasis on relative returns over absolute returns shows how psychology can distort the process.”&lt;/p&gt;
+&lt;p&gt;“In my view, the road to investment success is usually marked by humility, not ego.”&lt;/p&gt;
+&lt;p&gt;“To buy when others are despondently selling and to sell when others are euphorically buying takes the greatest courage, but provides the greatest profit.” — John Templeton&lt;/p&gt;
+&lt;p&gt;“Investment success requires sticking with positions made uncomfortable by their variance with popular opinion.” — David Swensen&lt;/p&gt;
+&lt;p&gt;“Most people seem to think outstanding performance to date presages outstanding future performance. Actually, it’s more likely that outstanding performance to date has borrowed from the future and thus presages subpar performance from here on out.”&lt;/p&gt;
+&lt;p&gt;“There are two primary elements in superior investing: seeing some quality that others don’t see or appreciate (and that isn’t reflected in the price), and having it turn out to be true (or at least accepted by the market).”&lt;/p&gt;
+&lt;p&gt;“Investment is the discipline of relative selection.” — Sid Cottle&lt;/p&gt;
+&lt;p&gt;“Our goal isn’t to find good assets, but good buys. Thus, it’s not what you buy; it’s what you pay for it.”&lt;/p&gt;
+&lt;p&gt;“Investment bargains needn’t have anything to do with high quality. In fact, things tend to be cheaper if low quality has scared people away.”&lt;/p&gt;
+&lt;p&gt;“The market’s not a very accommodating machine; it won’t provide high returns just because you need them.” — Peter Bernstein&lt;/p&gt;
+&lt;p&gt;“Patient opportunism—waiting for bargains—is often your best strategy.”&lt;/p&gt;
+&lt;h1 id=&quot;references&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#references&quot; aria-label=&quot;references permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;References&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://novelinvestor.com/notes/the-most-important-thing-uncommon-sense-for-the-thoughtful-investor-by-howard-marks/&quot;&gt;The most important summary by novelinvestor&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[refactoring effectively legacy code to patterns]]></title><description><![CDATA[Goals/Context combine summary of refactoring to patterns and working effective with legacy code provide summary of refactoring at a higher…]]></description><link>https://tonytvo.github.io/refactor-legacy-code-to-patterns/</link><guid isPermaLink="false">https://tonytvo.github.io/refactor-legacy-code-to-patterns/</guid><pubDate>Tue, 19 Jul 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;goalscontext&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#goalscontext&quot; aria-label=&quot;goalscontext permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Goals/Context&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;combine summary of refactoring to patterns and working effective with legacy code&lt;/li&gt;
 &lt;li&gt;provide summary of refactoring at a higher level than &lt;a href=&quot;https://github.com/ittus/Refactoring-summary-2nd-javascript&quot;&gt;2nd refactoring book&lt;/a&gt;, as it would contains mega patterns which is the combinations of smaller refactoring snippets from the refactoring books&lt;/li&gt;
