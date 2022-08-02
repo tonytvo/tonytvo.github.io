@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 01 Aug 2022 20:57:57 GMT</lastBuildDate><item><title><![CDATA[value investing summary]]></title><description><![CDATA[bruce greenwald’s value investing value investing process  circle of competence - “know what you know” organize valuation components by…]]></description><link>https://tonytvo.github.io/value-investing-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/value-investing-summary/</guid><pubDate>Tue, 09 Aug 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;bruce-greenwalds-value-investing&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#bruce-greenwalds-value-investing&quot; aria-label=&quot;bruce greenwalds value investing permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;bruce greenwald’s value investing&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 02 Aug 2022 05:42:03 GMT</lastBuildDate><item><title><![CDATA[value investing summary]]></title><description><![CDATA[bruce greenwald’s value investing value investing process  circle of competence - “know what you know” organize valuation components by…]]></description><link>https://tonytvo.github.io/value-investing-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/value-investing-summary/</guid><pubDate>Tue, 09 Aug 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;bruce-greenwalds-value-investing&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#bruce-greenwalds-value-investing&quot; aria-label=&quot;bruce greenwalds value investing permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;bruce greenwald’s value investing&lt;/h1&gt;
 &lt;h2 id=&quot;value-investing-process&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#value-investing-process&quot; aria-label=&quot;value investing process permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;value investing process&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;span
+&lt;li&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 394px; &quot;
     &gt;
@@ -31,23 +30,23 @@
         decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;circle of competence - “know what you know”&lt;/p&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;circle of competence - “know what you know”
 &lt;ul&gt;
 &lt;li&gt;organize valuation components by reliability: most reliable -&gt; least reliable&lt;/li&gt;
 &lt;li&gt;organize valuation components by underlying strategic assumption: no competitive advantage -&gt; growing competitive advantage&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;“The search for undervalued stocks should start with companies that are undesirable, such as those in bankruptcy or suffering from financial distress”. Another way to think about is to focus on great company at fair price&lt;/p&gt;
+&lt;li&gt;“The search for undervalued stocks should start with companies that are undesirable, such as those in bankruptcy or suffering from financial distress”. Another way to think about is to focus on great company at fair price&lt;/li&gt;
+&lt;li&gt;the problem with the present value method is that it is a terminal value calculation as of today, and it does not avoid the problems with terminal calculation (terminal value is the value of a company’s cash flows projected beyond the end of year 10, when the cash flow grows perpetually at a constant proportional rate)&lt;/li&gt;
+&lt;li&gt;discounted cash flows models problems
+&lt;ul&gt;
+&lt;li&gt;companies grow at vastly different levels and rates&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;it is a rule for translating between the assumptions that you can make reliably about the future and the present day value of the security&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;combining bad information with good information and you are not using assumptions you can make but you are also throwing away information that is on the balance sheet&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;the problem with the present value method is that it is a terminal value calculation as of today, and it does not avoid the problems with terminal calculation (terminal value is the value of a company’s cash flows projected beyond the end of year 10, when the cash flow grows perpetually at a constant proportional rate)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;earnings power value technique&lt;/p&gt;
+&lt;li&gt;earnings power value technique
 &lt;ul&gt;
 &lt;li&gt;the value of assets a competitor will be required to have in order to achieve the same market value of incumbent company in the industry&lt;/li&gt;
 &lt;li&gt;earnings power value calculated based on current financial status where the resulting intrinsic value ignores business cycles&lt;/li&gt;
@@ -58,10 +57,86 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;search-strategy&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#search-strategy&quot; aria-label=&quot;search strategy permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;search strategy&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;“every time you sell stock, someone else is buying that security. &lt;strong&gt;One person on one side of the trade is always wrong&lt;/strong&gt;”&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;You have to know what you know and what you don’t know&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;not all value is measurable&lt;/li&gt;
+&lt;li&gt;not all value is measure by you&lt;/li&gt;
+&lt;li&gt;where do I have the advantage&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;great investors focus on specific opportunities in concentrated ways&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;value investing rests on 3 key characteristics of financial markets
+&lt;ul&gt;
+&lt;li&gt;emotionalism and short-term thinking rule market prices in the short-run&lt;/li&gt;
+&lt;li&gt;financial assets do have underlying or fundamental economic values that are relatively stable and can be measured by diligent and disciplined investor. Price and value often diverge&lt;/li&gt;
+&lt;li&gt;a strategy of buying when prices are 33% to 50% below the calculated intrinsic value will produce superior returns in the long-run. The size of the gap between price and value is the “margin of safety”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;when you identify a statistical irregularity, you want to be able to explain it with an enduring rational to individual and institutional behavior.
+&lt;ul&gt;
+&lt;li&gt;institutional bias
+&lt;ul&gt;
+&lt;li&gt;herding: money managers do not want to stray too far from the performance of indexes or “me-too” manager will jump on bandwagon as other people buy and drive stocks up to high P/Es&lt;/li&gt;
+&lt;li&gt;window-dressing: buy the best acting stocks near or before the end of quarter so you have more positive stocks to show investors&lt;/li&gt;
+&lt;li&gt;block-busters: people will be overly focused on looking for next blockbuster stock like microsoft. You want to be on the other side of their trade.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;individual bias
+&lt;ul&gt;
+&lt;li&gt;loss aversion: People will gamble to avoid a sure loss. People will take on more loss to avoid sure loss&lt;/li&gt;
+&lt;li&gt;lotteries: people like to buy lottery tickets and get rich quick, that is why people love buying glamour stocks&lt;/li&gt;
+&lt;li&gt;hindsight bias: people think they know what is going on. They don’t remember what they really did.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;set up a data collection and search strategy to find disappointing cheap stocks or where there is a temporary supply/demand imbalance. You want a less well informed, less rational person than you on the other side of the trade.&lt;/li&gt;
+&lt;li&gt;look at insiders
+&lt;ul&gt;
+&lt;li&gt;who is buying and selling the stock, insiders, management, and investors.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;search criteria: where are the unreflective sellers&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;obscure: small caps, spin-offs, post bankruptcy, boring with low analyst coverage&lt;/li&gt;
+&lt;li&gt;industry problems are your friend as long as you know the industry is viable.&lt;/li&gt;
+&lt;li&gt;undesirable:
+&lt;ul&gt;
+&lt;li&gt;financial distress, bankruptcy, low growth, low P/E, low M/B,&lt;/li&gt;
+&lt;li&gt;boring is your friend&lt;/li&gt;
+&lt;li&gt;industry problems (bad loans, regulatory threat, overcapacity)&lt;/li&gt;
+&lt;li&gt;company problem (lawsuit, poor subsidiary performance, poor year)&lt;/li&gt;
+&lt;li&gt;disappointing (long-term underperformance)&lt;/li&gt;
+&lt;li&gt;other supply, demand imbalance - RTC dumping indiscriminately, eastern europe dumping privatization, index deletions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;for large cap global stocks, you are in tough competition.
+&lt;ul&gt;
+&lt;li&gt;you would like to be the only one seriously studying a particular security or one of a few people.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;if you do nothing, but eliminate the high glamour growth stocks you get another one or two percent&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;inherent institutional and individual biases create ongoing opportunities and glamour stocks (high growth high P/E)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;look for companies with sustainable competitive advantages
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;you want a management that understands the source of of the company’s competitive advantage and will protect it and not tie it to competitive disadvantages or negative synergies in other segment the way Apple did&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&quot;valuation-strategy&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#valuation-strategy&quot; aria-label=&quot;valuation strategy permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;valuation strategy&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;start with tangible assets&lt;/p&gt;
+&lt;p&gt;is this industry viable or not?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;view tangible assets at liquidation costs&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;it’s the most reliable information.&lt;/li&gt;
 &lt;li&gt;if the industry is not viable and the company going to get liquidated, you would want to see the valuation in liquidation and that is closely tied to assets.&lt;/li&gt;
@@ -76,6 +151,9 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;the second most reliable measure of a firm’s intrinsic value is the value of its current earnings, properly adjusted. This value can be estimated with more certainty than future earnings or cash flows, and it is more relevant to today’s values than are earnings in the past.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;earnings, if they are sustainable, are supported by assets or barriers to entry.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Unless there is something to interfere with this process of entry, sooner or later the market value of the company will be driven down to the reproduction value of the assets. &lt;em&gt;Reversion to the Mean or the Uniformity of One Price&lt;/em&gt;&lt;/p&gt;
@@ -83,16 +161,19 @@
 &lt;li&gt;
 &lt;p&gt;If you have EPV in excess of reproduction value (AV) of the assets, there had better be something to interfere with the process of entry such as competitive advantage such as barriers of entry, etc…&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;then and only then you should worry about growth&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;then and only then you should worry about growth&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;the only case where growth has value is where the growth occurs behind the protection of an identifiable competitive advantage&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;growth only has value if it is a strong franchise&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;You have to adjust for any accounting shenanigans that are going on, you have to adjust for the cyclical situation, for the tax situation that may be short-lived, for excess depreciation over the cost of maintenance capital expense (MCX). And really for anything else that is going on that is causing current earnings to deviate from long run sustainable earnings. So &lt;strong&gt;valuation is calculated by a company’s long-run sustainable earnings multiplied by 1/cost of capital&lt;/strong&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;AV &gt; EPV&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;???&gt;
-&lt;/li&gt;
+&lt;li&gt;likely value lost due to poor management&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -102,13 +183,45 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
+&lt;p&gt;accounts receivable can be valued at book value, although in liquidation, you will recover 90% to 95% of it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;good management always adds value to the assets not already embedded in the earnings. Bad management subtracts value from the assets.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;growth is valued separately since growth is where all the uncertainty resides and you want to segregate that uncertainty from what you know.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
 &lt;p&gt;Growth is relatively rarely valuable in the long run. &lt;strong&gt;Growth at a competitive disadvantage has negative value&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;The only case where growth has value is where the growth occurs behind the protection of an identifiable competitive advantage&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;There is usually &lt;strong&gt;stable market share&lt;/strong&gt; which is symptomatic of that last situation that means in the long run,the company will grow at the industry rate. Andin the long run, almost all industries grow at the rate of global GDP&lt;/li&gt;
+&lt;li&gt;There is usually &lt;strong&gt;stable market share&lt;/strong&gt; which is symptomatic of that last situation that means in the long run,the company will grow at the industry rate. And in the long run, almost all industries grow at the rate of global GDP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;value of growth&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;verify the existence of a franchise&lt;/li&gt;
+&lt;li&gt;identify the cash distributions in terms of dividends and buybacks&lt;/li&gt;
+&lt;li&gt;don’t overestimate growth once the company is out of its rapid growth phase.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;competitive analysis&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Michael Porter’s 5 forces that effect the operations&lt;/li&gt;
+&lt;li&gt;the dominant force determining whether this is good business or not: entrants and expansion.&lt;/li&gt;
+&lt;li&gt;the companies who have sustainable competitive advantages are the ones like MSFT and INTI, WMT, CISCO who focus on narrow segments on geographical space or product space and dominate those particular segments&lt;/li&gt;
+&lt;li&gt;lower cost structure&lt;/li&gt;
+&lt;li&gt;customer captivity due to habits, search costs or switching costs&lt;/li&gt;
+&lt;li&gt;globalization and large, fast growth is the enemy of competitive advantage and profitability.&lt;/li&gt;
+&lt;li&gt;your local infrastructure in relation to the size of the market will determine your regional economies of scale.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&quot;review-process&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#review-process&quot; aria-label=&quot;review process permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;review process&lt;/h2&gt;
+&lt;p&gt;key issues, collateral evidence, personal biases&lt;/p&gt;
+&lt;h2 id=&quot;manage-risk&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#manage-risk&quot; aria-label=&quot;manage risk permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;manage risk&lt;/h2&gt;
 &lt;h1 id=&quot;graham-and-dodds-approach&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#graham-and-dodds-approach&quot; aria-label=&quot;graham and dodds approach permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Graham and Dodd’s approach&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Each of the elements in valuation — assets, earnings power, and growth — is useful in its own right, but the best insights into a firm’s value come from comparisons among them, especially the direct comparison between the asset value and the EPV.&lt;/li&gt;
@@ -955,6 +1068,16 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;/financial-statement-analysis&quot;&gt;interpretation of financial statements summary&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h1 id=&quot;questions&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#questions&quot; aria-label=&quot;questions permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Questions&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;what is your default strategy when there is nothing to do?
+&lt;ul&gt;
+&lt;li&gt;buy the market in an index fund vs cash?&lt;/li&gt;
+&lt;li&gt;what does the absence of opportunity tell you&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;why are you the only one seeing this opportunity?&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1 id=&quot;stock-hedging-strategies&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#stock-hedging-strategies&quot; aria-label=&quot;stock hedging strategies permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Stock Hedging Strategies&lt;/h1&gt;
 &lt;h2 id=&quot;low-correlation-alternatives&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#low-correlation-alternatives&quot; aria-label=&quot;low correlation alternatives permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;low correlation alternatives&lt;/h2&gt;
 &lt;h2 id=&quot;volatility-index-fear-against-stock-market-crash&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#volatility-index-fear-against-stock-market-crash&quot; aria-label=&quot;volatility index fear against stock market crash permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Volatility Index (Fear) against stock market crash&lt;/h2&gt;
@@ -1730,47 +1853,84 @@ Never sell a good stock unless the price is above its intrinsic value (as in 192
 &lt;li&gt;“You can’t mimic them because you’re not them. Learn it and adapt it and modify it into your own process.” — Lountzis&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Charlie Munger&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Charlie Munger&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;He constantly tries to avoid stupidity.&lt;/li&gt;
+&lt;li&gt;“Other people are trying to be smart. All I’m trying to be is non-idiotic. I find that all you have to do to get ahead in life is to be non-idiotic and live a long time. It’s harder to be non-idiotic than most people think.” — Munger&lt;/li&gt;
+&lt;li&gt;On Attacking Problems via Inversion: “It’s counterintuitive that you go at the problem backward. If you try and be smart, it’s difficult. If you just go around and identify all of the disasters and say, ‘What caused that?’ and try to avoid it, it turns out to be a very simple way to find opportunities and avoid troubles.” — Munger&lt;/li&gt;
+&lt;li&gt;The best way to avoid stupidity is to ask: How bad will this be? Instead of, How great will this be? Or about investing more broadly ask: what are all the stupid ways people lose money? Then don’t do those things.&lt;/li&gt;
+&lt;li&gt;“Finding out what’s wrong and trying to avoid it is different from finding out what’s good and trying to get it. You have to do both, of course, in life. But this inversion of looking for the trouble and trying to avoid it keeps you out of a lot of messes… It’s a precaution. It’s like a checklist before you take off in an airplane.” — Munger&lt;/li&gt;
+&lt;li&gt;“A lot of people are so interested in reaching for the prize that they don’t even think about the stupidities that might prevent them from getting it.” — Munger&lt;/li&gt;
+&lt;li&gt;Munger collects examples of other people’s exceptionally stupid behavior. So can he learn from others’ mistakes.&lt;/li&gt;
+&lt;li&gt;Common Errors:
+&lt;ul&gt;
+&lt;li&gt;Listening to market predictions.&lt;/li&gt;
+&lt;li&gt;Buying cyclicals at the top of the cycle or poor businesses at market tops.&lt;/li&gt;
+&lt;li&gt;Being close-minded.&lt;/li&gt;
+&lt;li&gt;Doing things because “other people do it.”&lt;/li&gt;
+&lt;li&gt;Rush to decisions.&lt;/li&gt;
+&lt;li&gt;Ego, overconfidence, overoptimism.&lt;/li&gt;
+&lt;li&gt;“I know I’ll perform better if I rub my nose in my mistakes. This is a wonderful trick to learn.” — Munger&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;He constantly tries to avoid stupidity.
-“Other people are trying to be smart. All I’m trying to be is non-idiotic. I find that all you have to do to get ahead in life is to be non-idiotic and live a long time. It’s harder to be non-idiotic than most people think.” — Munger
-On Attacking Problems via Inversion: “It’s counterintuitive that you go at the problem backward. If you try and be smart, it’s difficult. If you just go around and identify all of the disasters and say, ‘What caused that?’ and try to avoid it, it turns out to be a very simple way to find opportunities and avoid troubles.” — Munger
-The best way to avoid stupidity is to ask: How bad will this be? Instead of, How great will this be? Or about investing more broadly ask: what are all the stupid ways people lose money? Then don’t do those things.
-“Finding out what’s wrong and trying to avoid it is different from finding out what’s good and trying to get it. You have to do both, of course, in life. But this inversion of looking for the trouble and trying to avoid it keeps you out of a lot of messes… It’s a precaution. It’s like a checklist before you take off in an airplane.” — Munger
-“A lot of people are so interested in reaching for the prize that they don’t even think about the stupidities that might prevent them from getting it.” — Munger
-Munger collects examples of other people’s exceptionally stupid behavior. So can he learn from others’ mistakes.
-Common Errors:
-Listening to market predictions.
-Buying cyclicals at the top of the cycle or poor businesses at market tops.
-Being close-minded.
-Doing things because “other people do it.”
-Rush to decisions.
-Ego, overconfidence, overoptimism.
-“I know I’ll perform better if I rub my nose in my mistakes. This is a wonderful trick to learn.” — Munger
-On Incentives: “If you would persuade, appeal to interest and not to reason. This maxim is a wise guide to a great and simple precaution in life: Never, ever, think about something else when you should be thinking about the power of incentives.” — Munger
-On Discovering Your Own Errors: “If Berkshire has made modest progress, a good deal of it is because Warren and I are very good at destroying our own best-loved ideas. Any year that you don’t destroy one of your best-loved ideas is probably a wasted year.” — Munger
-A systematic process of studying counterarguments, taking a devil’s advocate approach, or writing premortems (assuming disaster) are ways to limit biases and improve decisions.
-Lists of your biggest biases, emotional tendencies, and mistakes serve as a good checklist before making a decision.
-“If you’re going to be in this game for the long pull, which is the way to do it, you better be able to handle a fifty percent decline without fussing too much about it. And so my lesson to all of you is, conduct your life so that you can handle the fifty percent decline with aplomb and grace. Don’t try to avoid it. It will come. In fact, I would say if it doesn’t come, you’re not being aggressive enough.” — Munger
-“You have to be like a man standing with a spear next to a stream. Most of the time he’s doing nothing. When a fat juicy salmon swims by, the man spears it. Then he goes back to doing nothing. It may be six months before the next salmon goes by.” — Munger
-Joel Tillinghast
-Manages Fidelity’s Low-Priced Stock Fund since 1989, outperforming by roughly 4% per year.
-He creates lists of things to avoid, “defensive principles and practices” that keep him focused and help outperformance.
-“Don’t pay too much. Don’t go for businesses that are prone to obsolescence and destruction. Don’t invest with crooks and idiots. Don’t invest in things you don’t understand.” — Tillinghast
-He also avoids cyclicals, fads, heavy leverage, sales-y management, questionable accounting.
-He won’t talk publicly about his positions (makes it harder to change his mind).
-“If you want to be superior, that’s difficult. But what you won’t do is easier to control and more attainable… I’m not going to lose fifteen pounds. But saying no to doughnuts, that’s easy for me.” — Tillinghast
-Ed Thorp
-“As far as gambling is concerned, if I don’t have an edge, I don’t play.” — Thorp
-He heavily relied on the Kelly Criterion to size positions.
-Had a chance to invest in LTCM but passed because they were “taking too much risk… So the probability of their ruin appeared substantial to me.”
-Peter Lynch
-“You get a lot of A’s and B’s in school. In the stock market, you get a lot of F’s. And if you’re right six or seven times out of ten, you’re very good.” — Lynch
-“Learning to play poker or learning to play bridge, anything that teaches you to play the probabilities…would be better than all the books on the stock market.” — Lynch
-Templeton, Soros, and Buffett share “the willingness to be lonely, the willingness to take a position that others don’t think is too bright. They have an inner conviction that a lot of people do not have.”– Michael Lipper
-“A necessary characteristic of great investors is that they can’t be overly influenced by what other people think. The easiest way not to be overly influenced by what other people think is not to be that aware of what they think. If you don’t really notice that and don’t really care about what other people think, that will make it easier to be a great investor.” — Chris Davis
-Rick Guerin tried to get rich faster than necessary. He was leveraged going into the 1973-74 crash, hit by margin calls, and forced to sell his shares in Berkshire Hathaway for less than they were worth (Buffett bought them).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;On Incentives: “If you would persuade, appeal to interest and not to reason. This maxim is a wise guide to a great and simple precaution in life: Never, ever, think about something else when you should be thinking about the power of incentives.” — Munger&lt;/li&gt;
+&lt;li&gt;On Discovering Your Own Errors: “If Berkshire has made modest progress, a good deal of it is because Warren and I are very good at destroying our own best-loved ideas. Any year that you don’t destroy one of your best-loved ideas is probably a wasted year.” — Munger&lt;/li&gt;
+&lt;li&gt;A systematic process of studying counterarguments, taking a devil’s advocate approach, or writing premortems (assuming disaster) are ways to limit biases and improve decisions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Lists of your biggest biases, emotional tendencies, and mistakes serve as a good checklist before making a decision.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;“If you’re going to be in this game for the long pull, which is the way to do it, you better be able to handle a fifty percent decline without fussing too much about it. And so my lesson to all of you is, conduct your life so that you can handle the fifty percent decline with aplomb and grace. Don’t try to avoid it. It will come. In fact, I would say if it doesn’t come, you’re not being aggressive enough.” — Munger&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“You have to be like a man standing with a spear next to a stream. Most of the time he’s doing nothing. When a fat juicy salmon swims by, the man spears it. Then he goes back to doing nothing. It may be six months before the next salmon goes by.” — Munger&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Joel Tillinghast&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Manages Fidelity’s Low-Priced Stock Fund since 1989, outperforming by roughly 4% per year.&lt;/li&gt;
+&lt;li&gt;He creates lists of things to avoid, “defensive principles and practices” that keep him focused and help outperformance.&lt;/li&gt;
+&lt;li&gt;“Don’t pay too much. Don’t go for businesses that are prone to obsolescence and destruction. Don’t invest with crooks and idiots. Don’t invest in things you don’t understand.” — Tillinghast&lt;/li&gt;
+&lt;li&gt;He also avoids cyclicals, fads, heavy leverage, sales-y management, questionable accounting.&lt;/li&gt;
+&lt;li&gt;He won’t talk publicly about his positions (makes it harder to change his mind).&lt;/li&gt;
+&lt;li&gt;“If you want to be superior, that’s difficult. But what you won’t do is easier to control and more attainable… I’m not going to lose fifteen pounds. But saying no to doughnuts, that’s easy for me.” — Tillinghast&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Ed Thorp&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“As far as gambling is concerned, if I don’t have an edge, I don’t play.” — Thorp&lt;/li&gt;
+&lt;li&gt;He heavily relied on the Kelly Criterion to size positions.&lt;/li&gt;
+&lt;li&gt;Had a chance to invest in LTCM but passed because they were “taking too much risk… So the probability of their ruin appeared substantial to me.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Peter Lynch&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“You get a lot of A’s and B’s in school. In the stock market, you get a lot of F’s. And if you’re right six or seven times out of ten, you’re very good.” — Lynch&lt;/li&gt;
+&lt;li&gt;“Learning to play poker or learning to play bridge, anything that teaches you to play the probabilities…would be better than all the books on the stock market.” — Lynch&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Templeton, Soros, and Buffett share “the willingness to be lonely, the willingness to take a position that others don’t think is too bright. They have an inner conviction that a lot of people do not have.”– Michael Lipper&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“A necessary characteristic of great investors is that they can’t be overly influenced by what other people think. The easiest way not to be overly influenced by what other people think is not to be that aware of what they think. If you don’t really notice that and don’t really care about what other people think, that will make it easier to be a great investor.” — Chris Davis&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Rick Guerin tried to get rich faster than necessary. He was leveraged going into the 1973-74 crash, hit by margin calls, and forced to sell his shares in Berkshire Hathaway for less than they were worth (Buffett bought them).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1 id=&quot;quotes&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quotes&quot; aria-label=&quot;quotes permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Quotes&lt;/h1&gt;
+&lt;p&gt;“If you want to be superior, that’s difficult. But what you won’t do is easier to control and more attainable… I’m not going to lose fifteen pounds. But saying no to doughnuts, that’s easy for me.” — Tillinghast&lt;/p&gt;
+&lt;p&gt;“If you’re going to be in this game for the long pull, which is the way to do it, you better be able to handle a fifty percent decline without fussing too much about it. And so my lesson to all of you is, conduct your life so that you can handle the fifty percent decline with aplomb and grace. Don’t try to avoid it. It will come. In fact, I would say if it doesn’t come, you’re not being aggressive enough.” — Munger&lt;/p&gt;
+&lt;p&gt;“You have to be like a man standing with a spear next to a stream. Most of the time he’s doing nothing. When a fat juicy salmon swims by, the man spears it. Then he goes back to doing nothing. It may be six months before the next salmon goes by.” — Munger&lt;/p&gt;
+&lt;p&gt;“I know I’ll perform better if I rub my nose in my mistakes. This is a wonderful trick to learn.” — Munger&lt;/p&gt;
+&lt;p&gt;“Other people are trying to be smart. All I’m trying to be is non-idiotic. I find that all you have to do to get ahead in life is to be non-idiotic and live a long time. It’s harder to be non-idiotic than most people think.” — Munger&lt;/p&gt;
+&lt;p&gt;“Finding out what’s wrong and trying to avoid it is different from finding out what’s good and trying to get it. You have to do both, of course, in life. But this inversion of looking for the trouble and trying to avoid it keeps you out of a lot of messes… It’s a precaution. It’s like a checklist before you take off in an airplane.” — Munger&lt;/p&gt;
+&lt;p&gt;“A lot of people are so interested in reaching for the prize that they don’t even think about the stupidities that might prevent them from getting it.” — Munger&lt;/p&gt;
 &lt;p&gt;“You need a maniacal focus to really be great at anything. Anyone who tells you that you can have everything all at once, you can’t. I mean, you don’t become Roger Federer by not playing tennis. It has to be consuming.” — Lountzis&lt;/p&gt;
 &lt;p&gt;“It’s been my experience that the richest people were those who found something good and held on to it. The people who seemed the least happy and the most frenzied and the least successful are those that are always chasing the next hot thing.” — Gayner&lt;/p&gt;
 &lt;p&gt;“You cannot control the outcome. You can only control the effort and the dedication and the giving of one hundred percent of yourself to the task at hand. And then whatever happens, happens.” — Gayner&lt;/p&gt;
