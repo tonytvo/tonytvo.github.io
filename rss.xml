@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 03 Aug 2022 00:36:00 GMT</lastBuildDate><item><title><![CDATA[value investing summary]]></title><description><![CDATA[bruce greenwald’s value investing value investing process  circle of competence - “know what you know” organize valuation components by…]]></description><link>https://tonytvo.github.io/value-investing-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/value-investing-summary/</guid><pubDate>Tue, 09 Aug 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;bruce-greenwalds-value-investing&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#bruce-greenwalds-value-investing&quot; aria-label=&quot;bruce greenwalds value investing permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;bruce greenwald’s value investing&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 03 Aug 2022 00:38:48 GMT</lastBuildDate><item><title><![CDATA[value investing summary]]></title><description><![CDATA[bruce greenwald’s value investing value investing process  circle of competence - “know what you know” organize valuation components by…]]></description><link>https://tonytvo.github.io/value-investing-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/value-investing-summary/</guid><pubDate>Tue, 09 Aug 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;bruce-greenwalds-value-investing&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#bruce-greenwalds-value-investing&quot; aria-label=&quot;bruce greenwalds value investing permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;bruce greenwald’s value investing&lt;/h1&gt;
 &lt;h2 id=&quot;value-investing-process&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#value-investing-process&quot; aria-label=&quot;value investing process permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;value investing process&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;span
@@ -4668,29 +4668,63 @@ That leaves only one real alternative: You must do it yourself.”&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;An acquisition spree followed, buying up failed companies for the assets. In 1905, Hubbard-Zemurray bought Thatcher Brothers Steamships and Cuyamel Fruit Company on the cheap. Cuyamel Fruit was a gamble on land deeds in Honduras, but the boats opened the door to importing bananas himself.&lt;/p&gt;
 &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In 1910, Zemurray started buying as much land as he could in Honduras for his first banana plantation, to better control his supply. It was all from borrowed money, sometimes from nefarious lenders at ridiculously high rates.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;He took full control of Cuyamel Fruit, buying Hubbard’s 45% share, giving Zemurray 90%, with United Fruit owning the 10%. Hubbard couldn’t handle the risk Zemurray was taking piling up debt to buy as much land as possible.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The Knox plan, an agreement to buy and refinance Honduran railroad bonds by J. Pierpont Morgan, jeopardized Zemurray’s plans in Honduras. The plan, if ratified would add up to a penny per bunch the Zemurray’s costs, making it impossible to stay in business. The only solution was to fund a coup via revolution, won in 1911. By 1912, Zemurray’s settlement with the new government of Honduras included duty-free imports, no taxes, a $500,000 loan to repay funds for the revolution, and 24,700 acres to be claimed later.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In 1913, Zemurray bought back the 10% stake in Cuyamel held by United Fruit.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Zemurray was a stickler for reputation. He believed his association with United Fruit damaged his reputation after United Fruit boycott by Nicaraguan banana growers (United Fruit used Cuyamel ships, instead of UF ships, to get around the boycott). Being totally independent was the only way to repair his reputation.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;By 1915, he was buying up ships and adding refrigeration for more control over transportation. He also started diversifying with land — in Nicaragua and Mexico — and products — coconuts, pineapple, palm oil, cattle, timber, sugarcane — to hedge against natural disaster and market conditions. Cuyamel survived WWI thanks to sugarcane.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;He redeemed his Honduran land claim in 1915 — his new 24,700 acres bordered United Fruit land, putting the two companies in direct conflict. The land grab and resulting conflict would trigger a merger of the two companies 14 years later.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;By 1925, Cuyamel was debt free.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Zemurray was a farmer at heart, preferring to be on the ground, working the plantation with the other workers. That gave him an advantage over other companies, like United Fruit, with suits who ran their companies a world away.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Despite being the small fish up against the behemoth of United Fruit, Zemurray had created a startup that could run circles around the bloated bureaucracy. He was more efficient, more innovation, more nimble, had a happier higher skilled workforce, and it all resulted in higher profit margins.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;His banana innovations produced bigger, fatter, better bananas (most seem obvious today, but it is new back then and looked on as unnecessary or crazy):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Selective Pruning: cut runts and dwarfs from bunches while still growing on the tree.&lt;/li&gt;
+&lt;li&gt;Drainage: improved drainage with canals and spillways.&lt;/li&gt;
+&lt;li&gt;Silting: purposely flooded fields because silt made an excellent fertilizer.&lt;/li&gt;
+&lt;li&gt;Staking: tied trees to bamboo to protect against high winds.&lt;/li&gt;
+&lt;li&gt;Overhead Irrigation: watered during the dry season since rain was consistent year round.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;In 1910, Zemurray started buying as much land as he could in Honduras for his first banana plantation, to better control his supply. It was all from borrowed money, sometimes from nefarious lenders at ridiculously high rates.
-He took full control of Cuyamel Fruit, buying Hubbard’s 45% share, giving Zemurray 90%, with United Fruit owning the 10%. Hubbard couldn’t handle the risk Zemurray was taking piling up debt to buy as much land as possible.
-The Knox plan, an agreement to buy and refinance Honduran railroad bonds by J. Pierpont Morgan, jeopardized Zemurray’s plans in Honduras. The plan, if ratified would add up to a penny per bunch the Zemurray’s costs, making it impossible to stay in business. The only solution was to fund a coup via revolution, won in 1911. By 1912, Zemurray’s settlement with the new government of Honduras included duty-free imports, no taxes, a $500,000 loan to repay funds for the revolution, and 24,700 acres to be claimed later.
-In 1913, Zemurray bought back the 10% stake in Cuyamel held by United Fruit.
-Zemurray was a stickler for reputation. He believed his association with United Fruit damaged his reputation after United Fruit boycott by Nicaraguan banana growers (United Fruit used Cuyamel ships, instead of UF ships, to get around the boycott). Being totally independent was the only way to repair his reputation.
-By 1915, he was buying up ships and adding refrigeration for more control over transportation. He also started diversifying with land — in Nicaragua and Mexico — and products — coconuts, pineapple, palm oil, cattle, timber, sugarcane — to hedge against natural disaster and market conditions. Cuyamel survived WWI thanks to sugarcane.
-He redeemed his Honduran land claim in 1915 — his new 24,700 acres bordered United Fruit land, putting the two companies in direct conflict. The land grab and resulting conflict would trigger a merger of the two companies 14 years later.
-By 1925, Cuyamel was debt free.
-Zemurray was a farmer at heart, preferring to be on the ground, working the plantation with the other workers. That gave him an advantage over other companies, like United Fruit, with suits who ran their companies a world away.
-Despite being the small fish up against the behemoth of United Fruit, Zemurray had created a startup that could run circles around the bloated bureaucracy. He was more efficient, more innovation, more nimble, had a happier higher skilled workforce, and it all resulted in higher profit margins.
-His banana innovations produced bigger, fatter, better bananas (most seem obvious today, but it is new back then and looked on as unnecessary or crazy):
-Selective Pruning: cut runts and dwarfs from bunches while still growing on the tree.
-Drainage: improved drainage with canals and spillways.
-Silting: purposely flooded fields because silt made an excellent fertilizer.
-Staking: tied trees to bamboo to protect against high winds.
-Overhead Irrigation: watered during the dry season since rain was consistent year round.
-In December 1929, Zemurray would merge Cuyamel with United Fruit in a stock swap. Zemurray received 300,000 shares in United Fruit, valued at roughly $30 million, making him the largest shareholder in the company.
-He briefly retired from the business after the merger thanks to a standard noncompete clause. He spent his short-lived retirement as a philanthropist (and returned to his philanthropic ways in a big way following WWII).
-By 1932, United Fruit stock had collapsed — $100/share in 1929 were trading at $10.25 in 1932. UF management was doing everything to lower costs, save their jobs, and it threatened the companies survival.
-Zemurray led and won a proxy fight for control of United Fruit in 1933. He went door to door talking shareholders and collecting their votes to oust management. Time reported the meeting this way: “One day last summer Samuel (“Sam”) Zemurray of New Orleans strode belligerently into a room at No. 1 Federal Street, Boston, where the directors of the potent, far-flung United Fruit Co. were holding a meeting. Down on the long table from his old enemy, President Victor Macomber Cutter, he flung a handful of proxies. Said he: “You’ve been fucking up this business long enough. I’m going to straighten it out.&quot;&quot;
-He would remake United Fruit in the image of Cuyamel by cutting out bureaucratic overlap and waste. He said, “I realized that the greatest mistake the United Fruit management had made was to assume it could run its activities in many tropical countries from an office on the 10th floor of a Boston office building… The management had tried to tell every executive in every country exactly what he must do and how he must do it. Executives on the spot were treated like messenger boys. I completely reversed that policy. I laid down what might be called a constitution for the company. This constitution provided for a maximum of home rule in the field. It was established as a fixed policy that if [a plantation manager] could not handle his difficulties reasonably satisfactorily, we would appoint some man who could.” He sold ships, rented space in other ships, left fields farrow to control prices, diversified into other products like sugarcane, pineapples, and quinine trees.
-By 1933, sentiment on United Fruits stock was turning, the price was up to $26/share.
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In December 1929, Zemurray would merge Cuyamel with United Fruit in a stock swap. Zemurray received 300,000 shares in United Fruit, valued at roughly $30 million, making him the largest shareholder in the company.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;He briefly retired from the business after the merger thanks to a standard noncompete clause. - He spent his short-lived retirement as a philanthropist (and returned to his philanthropic ways in a big way following WWII).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;By 1932, United Fruit stock had collapsed — $100/share in 1929 were trading at $10.25 in 1932. UF management was doing everything to lower costs, save their jobs, and it threatened the companies survival.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Zemurray led and won a proxy fight for control of United Fruit in 1933. He went door to door talking shareholders and collecting their votes to oust management. Time reported the meeting this way: “One day last summer Samuel (“Sam”) Zemurray of New Orleans strode belligerently into a room at No. 1 Federal Street, Boston, where the directors of the potent, far-flung United Fruit Co. were holding a meeting. Down on the long table from his old enemy, President Victor Macomber Cutter, he flung a handful of proxies. Said he: “You’ve been fucking up this business long enough. I’m going to straighten it out.&quot;&quot;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;He would remake United Fruit in the image of Cuyamel by cutting out bureaucratic overlap and waste. He said, “I realized that the greatest mistake the United Fruit management had made was to assume it could run its activities in many tropical countries from an office on the 10th floor of a Boston office building… The management had tried to tell every executive in every country exactly what he must do and how he must do it. Executives on the spot were treated like messenger boys. I completely reversed that policy. I laid down what might be called a constitution for the company. This constitution provided for a maximum of home rule in the field. It was established as a fixed policy that if [a plantation manager] could not handle his difficulties reasonably satisfactorily, we would appoint some man who could.” He sold ships, rented space in other ships, left fields farrow to control prices, diversified into other products like sugarcane, pineapples, and quinine trees.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By 1933, sentiment on United Fruits stock was turning, the price was up to $26/share.
 Zemurray would lead the company until 1951. He sold all his shares of United Fruit upon retirement.
 Banana Facts:
 The banana tree is an herb, not a tree.
