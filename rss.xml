@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 03 Aug 2022 00:38:48 GMT</lastBuildDate><item><title><![CDATA[value investing summary]]></title><description><![CDATA[bruce greenwald’s value investing value investing process  circle of competence - “know what you know” organize valuation components by…]]></description><link>https://tonytvo.github.io/value-investing-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/value-investing-summary/</guid><pubDate>Tue, 09 Aug 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;bruce-greenwalds-value-investing&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#bruce-greenwalds-value-investing&quot; aria-label=&quot;bruce greenwalds value investing permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;bruce greenwald’s value investing&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 03 Aug 2022 03:32:20 GMT</lastBuildDate><item><title><![CDATA[value investing summary]]></title><description><![CDATA[bruce greenwald’s value investing value investing process  circle of competence - “know what you know” organize valuation components by…]]></description><link>https://tonytvo.github.io/value-investing-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/value-investing-summary/</guid><pubDate>Tue, 09 Aug 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;bruce-greenwalds-value-investing&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#bruce-greenwalds-value-investing&quot; aria-label=&quot;bruce greenwalds value investing permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;bruce greenwald’s value investing&lt;/h1&gt;
 &lt;h2 id=&quot;value-investing-process&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#value-investing-process&quot; aria-label=&quot;value investing process permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;value investing process&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;span
@@ -2440,64 +2440,6 @@ The mass psychology has a way of taking hold of every new generation of investor
 &lt;h1 id=&quot;references&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#references&quot; aria-label=&quot;references permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;References&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://novelinvestor.com/notes/the-money-game-by-adam-smith/&quot;&gt;novelinvestor summary&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[The Lessons of History by Will and Ariel Durant summary]]></title><description><![CDATA[Will and Ariel Durant wrote the Lessons of History as a survey of human experience throughout history and the role human nature played in…]]></description><link>https://tonytvo.github.io/lessons-of-history-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/lessons-of-history-summary/</guid><pubDate>Fri, 29 Jul 2022 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;Will and Ariel Durant wrote the Lessons of History as a survey of human experience throughout history and the role human nature played in evolving and shaping civilization.&lt;/p&gt;
-&lt;p&gt;A Warning: “Our knowledge of any past event is always incomplete, probably inaccurate, beclouded by ambivalent evidence and biased historians, and perhaps distorted by our own patriotic or religious partisanship. ‘Most history is guessing, and the rest is prejudice.‘”
-Historians oversimplify, selecting a few facts to tell the story of a chaotic, complex past.
-The acceleration of change combined with chance affects how we apply order to a chaotic past. The past is fluid because of how we view it through new inventions, discoveries, and ideas.
-History is an art, not a science. It requires an ability to pull out facts that create meaningful order out of chaos.
-“We must operate with partial knowledge, and be provisionally content with probabilities, in history, as in science and politics, relativity rules, and all formula should be suspect. ‘History smiles at all attempts to force its flow into theoretical patterns or logical grooves; it plays havoc with our generalizations, breaks all our rules; history is baroque.’ Perhaps, within these limits, we can learn enough from history to bear reality patiently, and to respect one another’s delusions.”
-However incomplete, the past gives us a chance to understand today and prepare for tomorrow.
-Human history is a tiny blip on the historical timeline of Earth, the galaxy, and the universe.
-“The influence of geographical factors diminishes as technology grows.” — Transportation, commerce, and trade (power) were originally controlled by those who controlled the seas. Trains disrupted it some, but the airplane disrupted the old trade routes and created new routes into areas unreachable by sea, shifting the balance of power.
-“The laws of biology are the fundamental lessons of history. We are subject to the processes and trials of evolution, to the struggle for existence, and the survival of the fittest to survive. If some of us seem to escape the strife or the trials it is because our group protects us; but that group itself must meet the tests of survival.”
-Biological Lessons of History:
-Life is Competition — All species are in competition for survival — peaceful when foods aplenty, warring when food is sparse. They work in groups to improve competitive advantages. “We are acquisitive, greedy, and pugnacious because our blood remembers millenniums through which our forebears had to chase and fight and kill in order to survive, and had to eat to their gastric capacity for fear they should not soon capture another feast. War is a nation’s way of eating.”
-Life is Selection — In the struggle for survival, some are better equipped to succeed, while other’s fail. Nature produces anomalies, specialization, and exceptionalism. Genetic inequalities lead to artificial inequalities. It gives advantage to some groups via invention and discovery, which disadvantages others. So the strong become stronger, and weak become weaker. In other words, inequality rules. — “Nature loves difference as the necessary material of selection and evolution.”
-Life Must Breed — Nature prefers quantity over quality because quantity improves the odds of variation, competition, and selection. When populations are over-abundant, “nature has three agents to restore the balance: famine, pestilence, and war.”
-“History is color-blind, and can develop a civilization (in any favorable environment) under almost any skin.”
-Human Nature: “Known history shows little alteration in the conduct of mankind. The Greeks of Plato’s time behaved very much like the French of modern centuries; and the Romans behaved like the English. Means and instrumentalities change; motives and ends remain the same: to act or rest, to acquire or give, to fight or retreat, to seek association or privacy, to mate or reject, to offer or resent parental care.”
-Human evolution over the past few thousand years has been social, not biological. People evolved economically, politically, intellectually, and morally through education, innovation, or imitation. Imitators (the majority) following innovators (the minority).
-Intellect is the main driver of change but it can also drive destructive. So resistance to change plays an important role in questioning new ideas — to help weed out the good ideas from the bad.
-History reminds us that people have always been human…sin, mistakes, dishonesty, corruption, gambling has always existed. “We have noted the discovery of dice in the excavation near the site of Nineveh; men and women have gambled in every age.”
-“We must remind ourselves again that history as usually written is quite different from history as usually lived: the historian records the exceptional because it is interesting — because it is exceptional.”
-The boring parts of history tend to get lost for being unexceptional but would offer a truer picture of how the overwhelming majority of people lived.
-“History assures us that civilizations decay quite leisurely.”
-Early religion was not built on morals but the product of fear of mother nature and natural disasters. Fear was eventually redirected to promote morality and laws.
-The lesson of history is that religions have a life cycle — being born, thriving, and dying.
-History is driven by underlying economic interests.
-“The men who can manage men manage men who can manage only things, and the men who can manage money manage all.”
-Every economic system must have a way for people to gain wealth in exchange for productivity. Economic systems that tried to use other motives (not wealth) to achieve productivity were too unproductive.
-“Normally and generally men are judged by their ability to produce — except in war, when they are ranked according to their ability to destroy.”
-Since inequality rules, there always exists a small portion of the population with a better ability than most to gather wealth. This concentration of wealth is a recurring theme throughout history.
-The redistribution of wealth is also a recurring theme. The rate of wealth concentration depends on the morals and laws of the time. If the gap between rich and poor becomes too wide, revolution or new laws rebalance the wealth gap.
-“We conclude that the concentration of wealth is natural and inevitable, and is periodically alleviated by violent or peaceable partial redistribution, In this view all economic history is the slow heartbeat of the social organism, a vast systole and diastole of concentrating wealth and compulsive recirculation.”
-Socialism versus capitalism is part of the cycle of concentration and redistribution of wealth. Finding a balance between public and private has been a long struggle throughout history.
-Capitalism has shown its superior ability to put capital and people (talents) to work in the most productive and efficient way possible toward the production of goods and services.
-Socialism offers the possibility of equality to the most unequal through government-supported works like education, health, and recreation.
-Competition, unhindered by laws and morals, drives capitalism to extremes. Private monopolies, price manipulation, wage manipulation, and other abuses eventually lead to riot and revolt demanding change.
-Socialism, absent all liberty, leads to its own extremes. Government monopolies, price fixing, wage fixing, high taxation, and a police (military) force to maintain control, eventually lead to corruption, civil unrest, and revolution.
-“The fear of capitalism has compelled socialism to widen freedom, and the fear of socialism has compelled capitalism to increase equality.”
-History shows that power tends to centralize.
-Absolute freedom leads to chaos. So the role of government is to establish order without suffocating freedom.
-The history of governments is overwhelmingly one of monarchy, briefly interrupted by democracy. But monarchy has a poor poor track record thanks to hereditary succession. “When it is hereditary it is likely to be more prolific of stupidity, nepotism, irresponsibility, and extravagance than of nobility and statesmanship.”
-“If the majority of abilities is contained in a minority of men, minority government is as inevitable as the concentration of wealth; the majority can do no more than periodically throw out one minority and set up another.”
-Violent revolutions do more to destroy wealth than redistribute it and ultimately recreating the very thing it sought to change. The natural tendency of inequality leads to a concentration of possessions, wealth, and power in a minority of hands.
-“The only real revolution is in the enlightenment of the mind and the improvement of character, the only real emancipation is individual, and the only real revolutionists are philosophers and saints.”
-“Every advance in the complexity of the economy puts an added premium upon superior ability, and intensifies the concentration of wealth, responsibility, and power.”
-Democracy only succeeds with widespread intelligence. When intelligence is in the minority, democracy fails under widespread ignorance because ignorance is easily manipulated.
-“It may be true as Lincoln supposed, that ‘you can’t fool all the people all the time,’ but you can fool enough of them to rule a large country.”
-Democracy has done more good than any other form of government because, despite prevailing inequality, its role is to provide access to education and opportunity as equally as possible — to give every person the best opportunity to succeed on their own merits and abilities.
-War is a constant of history and the ultimate form of competition in humans. The reasons for war are the same for competition — a desire for more food, land, materials, fuels, power… Making long periods of peace as unnatural as equality.
-The only constant in history is change.
-“History repeats itself, but only in outline and in the large…because human nature changes with geological leisureliness, and man is equipped to respond in stereotyped ways to frequently occurring situations and stimuli like hunger, danger, and sex. But in a developed and complex civilization individuals are more differentiated and unique than in a primitive society, and many situations contain novel circumstances requiring modifications of instinctive response; custom recedes, reasoning spreads; the results are less predictable. There is no certainty that the future will repeat the past. Every year is an adventure.”
-Civilizations move between growth and decay. Growth depends on the right circumstances to produce highly intelligent, creative, able people equipped to successfully handle change. Civilizations decline because it fails to produce people capable of handling change.
-Science is neutral. It will kill or create, destroy or build.
-Despite all the progress in science, technology, and knowledge, people are still the same biological creatures they were thousands of years ago.
-“Consider education not as the painful accumulation of facts and dates and reigns, nor merely the necessary preparation of the individual to earn his keep in the world, but as the transmission of our mental, moral, technical, and aesthetic heritage as fully as possible to as many as possible, for the enlargement of man’s understanding, control, embellishment, and enjoyment of life.”&lt;/p&gt;
-&lt;h1 id=&quot;quotes&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quotes&quot; aria-label=&quot;quotes permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Quotes&lt;/h1&gt;
-&lt;h1 id=&quot;references&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#references&quot; aria-label=&quot;references permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;References&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://novelinvestor.com/notes/the-lessons-of-history-by-will-ariel-durant/&quot;&gt;novelinvestor summary&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Why dont we learn from history by Liddell Hart summary]]></title><description><![CDATA[B. H. Liddell Hart wrote the book as a summary of the history of warfare. Rather than writing the lessons we learn from history, he inverts…]]></description><link>https://tonytvo.github.io/why-dont-we-learn-from-history/</link><guid isPermaLink="false">https://tonytvo.github.io/why-dont-we-learn-from-history/</guid><pubDate>Fri, 29 Jul 2022 22:12:03 GMT</pubDate><content:encoded>&lt;ul&gt;
 &lt;li&gt;B. H. Liddell Hart wrote the book as a summary of the history of warfare. Rather than writing the lessons we learn from history, he inverts the message to the many lessons we fail to learn from history.&lt;/li&gt;
 &lt;li&gt;The value of history is in the countless repeated ways things can go wrong.&lt;/li&gt;
@@ -2542,6 +2484,128 @@ Despite all the progress in science, technology, and knowledge, people are still
 &lt;p&gt;“Looking back on the stages by which various fresh ideas gained acceptance, it can be seen that the process was eased when they could be presented not as something radically new but as the revival in modern terms of a time-honored principle or practice that had been forgotten. This required not deception but care to trace the connection — since “there is nothing new under the sun.&quot;&quot;&lt;/p&gt;
 &lt;p&gt;“The germs of war find a focus in the convenient belief that “the end justifies the means.” Each new generation repeats this argument—while succeeding generations have had reason to say that the end their predecessors thus pursued was never justified by the fulfillment conceived. If there is one lesson that should be clear from history it is that bad means deform the end, or deflect its course thither.”&lt;/p&gt;
 &lt;p&gt;“What can the individual learn from history — as a guide to living? Not what to do but what to strive for. And what to avoid in striving. The importance and intrinsic value of behaving decently. The importance of seeing clearly—not least of seeing himself clearly.”&lt;/p&gt;
+&lt;h1 id=&quot;references&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#references&quot; aria-label=&quot;references permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;References&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://novelinvestor.com/notes/the-lessons-of-history-by-will-ariel-durant/&quot;&gt;novelinvestor summary&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[The Lessons of History by Will and Ariel Durant summary]]></title><description><![CDATA[Will and Ariel Durant wrote the Lessons of History as a survey of human experience throughout history and the role human nature played in…]]></description><link>https://tonytvo.github.io/lessons-of-history-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/lessons-of-history-summary/</guid><pubDate>Fri, 29 Jul 2022 22:12:03 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Will and Ariel Durant wrote the Lessons of History as a survey of human experience throughout history and the role human nature played in evolving and shaping civilization.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A Warning: “Our knowledge of any past event is always incomplete, probably inaccurate, beclouded by ambivalent evidence and biased historians, and perhaps distorted by our own patriotic or religious partisanship. ‘Most history is guessing, and the rest is prejudice.‘”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Historians oversimplify, selecting a few facts to tell the story of a chaotic, complex past.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The acceleration of change combined with chance affects how we apply order to a chaotic past. - The past is fluid because of how we view it through new inventions, discoveries, and ideas.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;History is an art, not a science. It requires an ability to pull out facts that create meaningful order out of chaos.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“We must operate with partial knowledge, and be provisionally content with probabilities, in history, as in science and politics, relativity rules, and all formula should be suspect. ‘History smiles at all attempts to force its flow into theoretical patterns or logical grooves; it plays havoc with our generalizations, breaks all our rules; history is baroque.’ Perhaps, within these limits, we can learn enough from history to bear reality patiently, and to respect one another’s delusions.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;However incomplete, the past gives us a chance to understand today and prepare for tomorrow.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Human history is a tiny blip on the historical timeline of Earth, the galaxy, and the universe.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“The influence of geographical factors diminishes as technology grows.” — Transportation, commerce, and trade (power) were originally controlled by those who controlled the seas. Trains disrupted it some, but the airplane disrupted the old trade routes and created new routes into areas unreachable by sea, shifting the balance of power.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“The laws of biology are the fundamental lessons of history. We are subject to the processes and trials of evolution, to the struggle for existence, and the survival of the fittest to survive. If some of us seem to escape the strife or the trials it is because our group protects us; but that group itself must meet the tests of survival.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Biological Lessons of History:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Life is Competition — All species are in competition for survival — peaceful when foods aplenty, warring when food is sparse. They work in groups to improve competitive advantages. “We are acquisitive, greedy, and pugnacious because our blood remembers millenniums through which our forebears had to chase and fight and kill in order to survive, and had to eat to their gastric capacity for fear they should not soon capture another feast. War is a nation’s way of eating.”&lt;/li&gt;
+&lt;li&gt;Life is Selection — In the struggle for survival, some are better equipped to succeed, while other’s fail. Nature produces anomalies, specialization, and exceptionalism. Genetic inequalities lead to artificial inequalities. It gives advantage to some groups via invention and discovery, which disadvantages others. So the strong become stronger, and weak become weaker. In other words, inequality rules. — “Nature loves difference as the necessary material of selection and evolution.”&lt;/li&gt;
+&lt;li&gt;Life Must Breed — Nature prefers quantity over quality because quantity improves the odds of variation, competition, and selection. When populations are over-abundant, “nature has three agents to restore the balance: famine, pestilence, and war.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“History is color-blind, and can develop a civilization (in any favorable environment) under almost any skin.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Human Nature: “Known history shows little alteration in the conduct of mankind. The Greeks of Plato’s time behaved very much like the French of modern centuries; and the Romans behaved like the English. Means and instrumentalities change; motives and ends remain the same: to act or rest, to acquire or give, to fight or retreat, to seek association or privacy, to mate or reject, to offer or resent parental care.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Human evolution over the past few thousand years has been social, not biological. People evolved economically, politically, intellectually, and morally through education, innovation, or imitation. Imitators (the majority) following innovators (the minority).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Intellect is the main driver of change but it can also drive destructive. So resistance to change plays an important role in questioning new ideas — to help weed out the good ideas from the bad.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;History reminds us that people have always been human…sin, mistakes, dishonesty, corruption, gambling has always existed. “We have noted the discovery of dice in the excavation near the site of Nineveh; men and women have gambled in every age.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“We must remind ourselves again that history as usually written is quite different from history as usually lived: the historian records the exceptional because it is interesting — because it is exceptional.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The boring parts of history tend to get lost for being unexceptional but would offer a truer picture of how the overwhelming majority of people lived.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“History assures us that civilizations decay quite leisurely.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Early religion was not built on morals but the product of fear of mother nature and natural disasters. Fear was eventually redirected to promote morality and laws.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The lesson of history is that religions have a life cycle — being born, thriving, and dying.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;History is driven by underlying economic interests.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“The men who can manage men manage men who can manage only things, and the men who can manage money manage all.”&lt;/li&gt;
+&lt;li&gt;Every economic system must have a way for people to gain wealth in exchange for productivity. - Economic systems that tried to use other motives (not wealth) to achieve productivity were too unproductive.&lt;/li&gt;
+&lt;li&gt;“Normally and generally men are judged by their ability to produce — except in war, when they are ranked according to their ability to destroy.”&lt;/li&gt;
+&lt;li&gt;Since inequality rules, there always exists a small portion of the population with a better ability than most to gather wealth. This concentration of wealth is a recurring theme throughout history.&lt;/li&gt;
+&lt;li&gt;The redistribution of wealth is also a recurring theme. The rate of wealth concentration depends on the morals and laws of the time. If the gap between rich and poor becomes too wide, revolution or new laws rebalance the wealth gap.&lt;/li&gt;
+&lt;li&gt;“We conclude that the concentration of wealth is natural and inevitable, and is periodically alleviated by violent or peaceable partial redistribution, In this view all economic history is the slow heartbeat of the social organism, a vast systole and diastole of concentrating wealth and compulsive recirculation.”&lt;/li&gt;
+&lt;li&gt;Socialism versus capitalism is part of the cycle of concentration and redistribution of wealth. Finding a balance between public and private has been a long struggle throughout history.&lt;/li&gt;
+&lt;li&gt;Capitalism has shown its superior ability to put capital and people (talents) to work in the most productive and efficient way possible toward the production of goods and services.&lt;/li&gt;
+&lt;li&gt;Socialism offers the possibility of equality to the most unequal through government-supported works like education, health, and recreation.&lt;/li&gt;
+&lt;li&gt;Competition, unhindered by laws and morals, drives capitalism to extremes. Private monopolies, price manipulation, wage manipulation, and other abuses eventually lead to riot and revolt demanding change.&lt;/li&gt;
+&lt;li&gt;Socialism, absent all liberty, leads to its own extremes. Government monopolies, price fixing, wage fixing, high taxation, and a police (military) force to maintain control, eventually lead to corruption, civil unrest, and revolution.&lt;/li&gt;
+&lt;li&gt;“The fear of capitalism has compelled socialism to widen freedom, and the fear of socialism has compelled capitalism to increase equality.”&lt;/li&gt;
+&lt;li&gt;History shows that power tends to centralize.&lt;/li&gt;
+&lt;li&gt;Absolute freedom leads to chaos. So the role of government is to establish order without suffocating freedom.&lt;/li&gt;
+&lt;li&gt;The history of governments is overwhelmingly one of monarchy, briefly interrupted by democracy. But monarchy has a poor poor track record thanks to hereditary succession. “When it is hereditary it is likely to be more prolific of stupidity, nepotism, irresponsibility, and extravagance than of nobility and statesmanship.”&lt;/li&gt;
+&lt;li&gt;“If the majority of abilities is contained in a minority of men, minority government is as inevitable as the concentration of wealth; the majority can do no more than periodically throw out one minority and set up another.”&lt;/li&gt;
+&lt;li&gt;Violent revolutions do more to destroy wealth than redistribute it and ultimately recreating the very thing it sought to change. The natural tendency of inequality leads to a concentration of possessions, wealth, and power in a minority of hands.&lt;/li&gt;
+&lt;li&gt;“The only real revolution is in the enlightenment of the mind and the improvement of character, the only real emancipation is individual, and the only real revolutionists are philosophers and saints.”&lt;/li&gt;
+&lt;li&gt;“Every advance in the complexity of the economy puts an added premium upon superior ability, and intensifies the concentration of wealth, responsibility, and power.”&lt;/li&gt;
+&lt;li&gt;Democracy only succeeds with widespread intelligence. When intelligence is in the minority, democracy fails under widespread ignorance because ignorance is easily manipulated.&lt;/li&gt;
+&lt;li&gt;“It may be true as Lincoln supposed, that ‘you can’t fool all the people all the time,’ but you can fool enough of them to rule a large country.”&lt;/li&gt;
+&lt;li&gt;Democracy has done more good than any other form of government because, despite prevailing inequality, its role is to provide access to education and opportunity as equally as possible — to give every person the best opportunity to succeed on their own merits and abilities.&lt;/li&gt;
+&lt;li&gt;War is a constant of history and the ultimate form of competition in humans. The reasons for war are the same for competition — a desire for more food, land, materials, fuels, power… Making long periods of peace as unnatural as equality.&lt;/li&gt;
+&lt;li&gt;The only constant in history is change.&lt;/li&gt;
+&lt;li&gt;“History repeats itself, but only in outline and in the large…because human nature changes with geological leisureliness, and man is equipped to respond in stereotyped ways to frequently occurring situations and stimuli like hunger, danger, and sex. But in a developed and complex civilization individuals are more differentiated and unique than in a primitive society, and many situations contain novel circumstances requiring modifications of instinctive response; custom recedes, reasoning spreads; the results are less predictable. There is no certainty that the future will repeat the past. Every year is an adventure.”&lt;/li&gt;
+&lt;li&gt;Civilizations move between growth and decay. Growth depends on the right circumstances to produce highly intelligent, creative, able people equipped to successfully handle change. - Civilizations decline because it fails to produce people capable of handling change.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Science is neutral. It will kill or create, destroy or build.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Despite all the progress in science, technology, and knowledge, people are still the same biological creatures they were thousands of years ago.&lt;/li&gt;
+&lt;li&gt;“Consider education not as the painful accumulation of facts and dates and reigns, nor merely the necessary preparation of the individual to earn his keep in the world, but as the transmission of our mental, moral, technical, and aesthetic heritage as fully as possible to as many as possible, for the enlargement of man’s understanding, control, embellishment, and enjoyment of life.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;quotes&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quotes&quot; aria-label=&quot;quotes permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Quotes&lt;/h1&gt;
+&lt;p&gt;“Consider education not as the painful accumulation of facts and dates and reigns, nor merely the necessary preparation of the individual to earn his keep in the world, but as the transmission of our mental, moral, technical, and aesthetic heritage as fully as possible to as many as possible, for the enlargement of man’s understanding, control, embellishment, and enjoyment of life.”&lt;/p&gt;
+&lt;p&gt;“History repeats itself, but only in outline and in the large…because human nature changes with geological leisureliness, and man is equipped to respond in stereotyped ways to frequently occurring situations and stimuli like hunger, danger, and sex. But in a developed and complex civilization individuals are more differentiated and unique than in a primitive society, and many situations contain novel circumstances requiring modifications of instinctive response; custom recedes, reasoning spreads; the results are less predictable. There is no certainty that the future will repeat the past. Every year is an adventure.”&lt;/p&gt;
+&lt;p&gt;“It may be true as Lincoln supposed, that ‘you can’t fool all the people all the time,’ but you can fool enough of them to rule a large country.”&lt;/p&gt;
+&lt;p&gt;“The only real revolution is in the enlightenment of the mind and the improvement of character, the only real emancipation is individual, and the only real revolutionists are philosophers and saints.”&lt;/p&gt;
+&lt;p&gt;“If the majority of abilities is contained in a minority of men, minority government is as inevitable as the concentration of wealth; the majority can do no more than periodically throw out one minority and set up another.”&lt;/p&gt;
+&lt;p&gt;“The fear of capitalism has compelled socialism to widen freedom, and the fear of socialism has compelled capitalism to increase equality.”&lt;/p&gt;
+&lt;p&gt;“We conclude that the concentration of wealth is natural and inevitable, and is periodically alleviated by violent or peaceable partial redistribution, In this view all economic history is the slow heartbeat of the social organism, a vast systole and diastole of concentrating wealth and compulsive recirculation.”&lt;/p&gt;
+&lt;p&gt;“Normally and generally men are judged by their ability to produce — except in war, when they are ranked according to their ability to destroy.”&lt;/p&gt;
+&lt;p&gt;“The men who can manage men manage men who can manage only things, and the men who can manage money manage all.”&lt;/p&gt;
+&lt;p&gt;“History assures us that civilizations decay quite leisurely.”&lt;/p&gt;
+&lt;p&gt;“History is color-blind, and can develop a civilization (in any favorable environment) under almost any skin.”&lt;/p&gt;
+&lt;p&gt;“We must operate with partial knowledge, and be provisionally content with probabilities, in history, as in science and politics, relativity rules, and all formula should be suspect. ‘History smiles at all attempts to force its flow into theoretical patterns or logical grooves; it plays havoc with our generalizations, breaks all our rules; history is baroque.’ Perhaps, within these limits, we can learn enough from history to bear reality patiently, and to respect one another’s delusions.”&lt;/p&gt;
+&lt;p&gt;“The laws of biology are the fundamental lessons of history. We are subject to the processes and trials of evolution, to the struggle for existence, and the survival of the fittest to survive. If some of us seem to escape the strife or the trials it is because our group protects us; but that group itself must meet the tests of survival.”&lt;/p&gt;
+&lt;p&gt;“We must remind ourselves again that history as usually written is quite different from history as usually lived: the historian records the exceptional because it is interesting — because it is exceptional.”&lt;/p&gt;
 &lt;h1 id=&quot;references&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#references&quot; aria-label=&quot;references permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;References&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://novelinvestor.com/notes/the-lessons-of-history-by-will-ariel-durant/&quot;&gt;novelinvestor summary&lt;/a&gt;&lt;/li&gt;
@@ -4723,132 +4787,286 @@ That leaves only one real alternative: You must do it yourself.”&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;He would remake United Fruit in the image of Cuyamel by cutting out bureaucratic overlap and waste. He said, “I realized that the greatest mistake the United Fruit management had made was to assume it could run its activities in many tropical countries from an office on the 10th floor of a Boston office building… The management had tried to tell every executive in every country exactly what he must do and how he must do it. Executives on the spot were treated like messenger boys. I completely reversed that policy. I laid down what might be called a constitution for the company. This constitution provided for a maximum of home rule in the field. It was established as a fixed policy that if [a plantation manager] could not handle his difficulties reasonably satisfactorily, we would appoint some man who could.” He sold ships, rented space in other ships, left fields farrow to control prices, diversified into other products like sugarcane, pineapples, and quinine trees.&lt;/p&gt;
 &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;By 1933, sentiment on United Fruits stock was turning, the price was up to $26/share.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;By 1933, sentiment on United Fruits stock was turning, the price was up to $26/share.
-Zemurray would lead the company until 1951. He sold all his shares of United Fruit upon retirement.
-Banana Facts:
-The banana tree is an herb, not a tree.
-It can grow up to 20 inches in a day in perfect conditions, up to 30 feet tall.
-It’s the largest plant without a woody trunk, that grows from a rhizome.
-The bananas — the fruit — come at the end of a cycle. It can bear fruit year round.
-Bananas are a type of berry.
-The trees only bear fruit (i.e. berries — bananas) in the tropics, with two exceptions — Iceland, on a volcano’s slope, and Israel, for a yet unknown reason.
-The rhizome, much like a potato, can be divided up and replanted to grow more banana trees.
-There are no seeds. To get more trees, you split the rhizome and replant each cutting. In that sense, each rhizome cutting is a clone of the primary tree.
-The rhizome cuttings — the cloning — are its great strength and weakness from a business perspective.
-Strength: cheap, low-cost production growth with total uniformity between plants.
-Weakness: highly susceptible to disease. Since every banana tree is a clone, if one tree is susceptible, all species of that type are susceptible. There’s also poor weather (natural disasters) to deal with.
-The Big Mike was the first species of banana to be imported on a mass scale and the first to be wiped out by disease.
-The Cavendish species is currently the mass import and also battling extinction.
-United Fruit Facts:
-Also known as El Pulpo, the Octopus, because its tentacles reached everywhere.
-Founded in 1885, as Boston Fruit, by Lorenzo Baker, Andrew Preston, and 10 other investors who put up about $1,500 each.
-By 1897, Boston Fruit had $4 million in assets and couldn’t keep up with demand.
-Boston Fruit turned bananas into a volume business. Low prices were key to sales and lack of supply risked higher prices — the only way to control prices was to get much bigger.
-By 1899 — the worst year for bananas — Boston Fruit controlled 75% of the market. And it wasn’t big enough. It needed to diversify across different regions to protect itself from a repeat of 1899.
-On March 30, 1899, United Fruit was born. Boston Fruit merged with Keith Minor’s Tropical Trading &amp;#x26; Transport Company, giving the company $20 million, 212,349 acres across 6 countries, and 184,000 unsold shares to entice independent companies to join United Fruit. 27 small companies seized on the offer of security with United Fruit in the first 6 months.
-United Fruit purposely kept its ownership in the independent banana companies to 49%, to avoid anti-trust concerns.
-By 1908, it shipped 60% of all bananas to the US, 36 million stems.
-The first anti-trust lawsuit against United Fruit reached the Supreme Court in 1909 and failed. Too much of United Fruit’s business, being done overseas, couldn’t be judged by US law alone. The majority opinion in a nutshell: local law (non-US) allowed it so it wasn’t unlawful. Any other decision would have had an unknown ripple effect across multiple countries.
-By 1910, the company owned 115 ships (one of the largest navies in the world) that carried not only bananas but mail and cargo of Central America. The company had the power to control the region just by shutting down the ships.
-The 1929 merger with Cuyamel Fruit, gave United Fruit 68% market share.
-The company would hit its peak around 1940, under Zemurray’s leadership, with a workforce of 100,000.
-United Fruit orchestrated a successful coup (under Zemurray) in Guatemala, with the backing of the US government, in 1954. It triggered the beginning of the end for the company.
-“At the time of the coup, U.F. led its industry by every measure: in profits, market share, volume (and it wasn’t even close). Within a generation, it would trail Standard Fruit in nearly every category. The overthrow had all the ingredients of irony: meant to prevent the establishment of a Communist beachhead in the hemisphere, it would help create just such a beachhead in Cuba. Meant to make Guatemala friendly for the company, it would engender such hostility that the company was eventually forced to abandon the isthmus altogether.”
-Antitrust laws hit the company again in 1958. The company lost. The agreed settlement would create a competitor at 1/3 the size of UF in Guatemala. UF would have to sell 33% of its assets to an independent company — Del Monte, #3 in market share, became the buyer.
-It dropped out of first place in market share within a few years and the company would spiral from there.
-“A corporation ages like a person. As the years go by and the founders die off, making way for the bureaucrats of the second and third generations, the ecstatic, risk-taking, just-for-the-hell-of-it spirit that built the company gives way to a comfortable middle age. Where the firm had been forward-looking and creative, it becomes self-conscious in the way of a man, pestering itself with dozens of questions before it can act. How will it look? What will they say? If the business is wealthy and strong, the executives who come to power in these later generations will be characterized by the worst kind of self-confidence: they think the money will always be there because it always has been.”
-“The company brain is hardwired. Which is why a corporation, though conceivably immortal, tends to have a life span, tends to age and die. Unless remade by a new generation of pioneers—in which case it’s a different company—most corporations do not outlive the era of their first success. When the ideas and assumptions prevalent at the time of their founding go out of fashion, the company fades.”&lt;/p&gt;
+&lt;p&gt;Zemurray would lead the company until 1951. He sold all his shares of United Fruit upon retirement.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Banana Facts:
+&lt;ul&gt;
+&lt;li&gt;The banana tree is an herb, not a tree.&lt;/li&gt;
+&lt;li&gt;It can grow up to 20 inches in a day in perfect conditions, up to 30 feet tall.&lt;/li&gt;
+&lt;li&gt;It’s the largest plant without a woody trunk, that grows from a rhizome.&lt;/li&gt;
+&lt;li&gt;The bananas — the fruit — come at the end of a cycle. It can bear fruit year round.&lt;/li&gt;
+&lt;li&gt;Bananas are a type of berry.&lt;/li&gt;
+&lt;li&gt;The trees only bear fruit (i.e. berries — bananas) in the tropics, with two exceptions — Iceland, on a volcano’s slope, and Israel, for a yet unknown reason.&lt;/li&gt;
+&lt;li&gt;The rhizome, much like a potato, can be divided up and replanted to grow more banana trees.&lt;/li&gt;
+&lt;li&gt;There are no seeds. To get more trees, you split the rhizome and replant each cutting. In that sense, each rhizome cutting is a clone of the primary tree.&lt;/li&gt;
+&lt;li&gt;The rhizome cuttings — the cloning — are its great strength and weakness from a business perspective.&lt;/li&gt;
+&lt;li&gt;Strength: cheap, low-cost production growth with total uniformity between plants.&lt;/li&gt;
+&lt;li&gt;Weakness: highly susceptible to disease. Since every banana tree is a clone, if one tree is susceptible, all species of that type are susceptible. There’s also poor weather (natural disasters) to deal with.&lt;/li&gt;
+&lt;li&gt;The Big Mike was the first species of banana to be imported on a mass scale and the first to be wiped out by disease.&lt;/li&gt;
+&lt;li&gt;The Cavendish species is currently the mass import and also battling extinction.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;United Fruit Facts:
+&lt;ul&gt;
+&lt;li&gt;Also known as El Pulpo, the Octopus, because its tentacles reached everywhere.&lt;/li&gt;
+&lt;li&gt;Founded in 1885, as Boston Fruit, by Lorenzo Baker, Andrew Preston, and 10 other investors who put up about $1,500 each.&lt;/li&gt;
+&lt;li&gt;By 1897, Boston Fruit had $4 million in assets and couldn’t keep up with demand.&lt;/li&gt;
+&lt;li&gt;Boston Fruit turned bananas into a volume business. Low prices were key to sales and lack of supply risked higher prices — the only way to control prices was to get much bigger.&lt;/li&gt;
+&lt;li&gt;By 1899 — the worst year for bananas — Boston Fruit controlled 75% of the market. And it wasn’t big enough. It needed to diversify across different regions to protect itself from a repeat of 1899.&lt;/li&gt;
+&lt;li&gt;On March 30, 1899, United Fruit was born. Boston Fruit merged with Keith Minor’s Tropical Trading &amp;#x26; Transport Company, giving the company $20 million, 212,349 acres across 6 countries, and 184,000 unsold shares to entice independent companies to join United Fruit. 27 small companies seized on the offer of security with United Fruit in the first 6 months.&lt;/li&gt;
+&lt;li&gt;United Fruit purposely kept its ownership in the independent banana companies to 49%, to avoid anti-trust concerns.&lt;/li&gt;
+&lt;li&gt;By 1908, it shipped 60% of all bananas to the US, 36 million stems.&lt;/li&gt;
+&lt;li&gt;The first anti-trust lawsuit against United Fruit reached the Supreme Court in 1909 and failed. Too much of United Fruit’s business, being done overseas, couldn’t be judged by US law alone. The majority opinion in a nutshell: local law (non-US) allowed it so it wasn’t unlawful. Any other decision would have had an unknown ripple effect across multiple countries.&lt;/li&gt;
+&lt;li&gt;By 1910, the company owned 115 ships (one of the largest navies in the world) that carried not only bananas but mail and cargo of Central America. The company had the power to control the region just by shutting down the ships.&lt;/li&gt;
+&lt;li&gt;The 1929 merger with Cuyamel Fruit, gave United Fruit 68% market share.&lt;/li&gt;
+&lt;li&gt;The company would hit its peak around 1940, under Zemurray’s leadership, with a workforce of 100,000.&lt;/li&gt;
+&lt;li&gt;United Fruit orchestrated a successful coup (under Zemurray) in Guatemala, with the backing of the US government, in 1954. It triggered the beginning of the end for the company.&lt;/li&gt;
+&lt;li&gt;“At the time of the coup, U.F. led its industry by every measure: in profits, market share, volume (and it wasn’t even close). Within a generation, it would trail Standard Fruit in nearly every category. The overthrow had all the ingredients of irony: meant to prevent the establishment of a Communist beachhead in the hemisphere, it would help create just such a beachhead in Cuba. Meant to make Guatemala friendly for the company, it would engender such hostility that the company was eventually forced to abandon the isthmus altogether.”&lt;/li&gt;
+&lt;li&gt;Antitrust laws hit the company again in 1958. The company lost. The agreed settlement would create a competitor at 1/3 the size of UF in Guatemala. UF would have to sell 33% of its assets to an independent company — Del Monte, #3 in market share, became the buyer.&lt;/li&gt;
+&lt;li&gt;It dropped out of first place in market share within a few years and the company would spiral from there.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;“A corporation ages like a person. As the years go by and the founders die off, making way for the bureaucrats of the second and third generations, the ecstatic, risk-taking, just-for-the-hell-of-it spirit that built the company gives way to a comfortable middle age. Where the firm had been forward-looking and creative, it becomes self-conscious in the way of a man, pestering itself with dozens of questions before it can act. How will it look? What will they say? If the business is wealthy and strong, the executives who come to power in these later generations will be characterized by the worst kind of self-confidence: they think the money will always be there because it always has been.”&lt;/li&gt;
+&lt;li&gt;“The company brain is hardwired. Which is why a corporation, though conceivably immortal, tends to have a life span, tends to age and die. Unless remade by a new generation of pioneers—in which case it’s a different company—most corporations do not outlive the era of their first success. When the ideas and assumptions prevalent at the time of their founding go out of fashion, the company fades.”&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1 id=&quot;quotes&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quotes&quot; aria-label=&quot;quotes permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Quotes&lt;/h1&gt;
+&lt;p&gt;“A corporation ages like a person. As the years go by and the founders die off, making way for the bureaucrats of the second and third generations, the ecstatic, risk-taking, just-for-the-hell-of-it spirit that built the company gives way to a comfortable middle age. Where the firm had been forward-looking and creative, it becomes self-conscious in the way of a man, pestering itself with dozens of questions before it can act. How will it look? What will they say? If the business is wealthy and strong, the executives who come to power in these later generations will be characterized by the worst kind of self-confidence: they think the money will always be there because it always has been.”&lt;/p&gt;
+&lt;p&gt;“The company brain is hardwired. Which is why a corporation, though conceivably immortal, tends to have a life span, tends to age and die. Unless remade by a new generation of pioneers—in which case it’s a different company—most corporations do not outlive the era of their first success. When the ideas and assumptions prevalent at the time of their founding go out of fashion, the company fades.”&lt;/p&gt;
+&lt;p&gt;“At the time of the coup, U.F. led its industry by every measure: in profits, market share, volume (and it wasn’t even close). Within a generation, it would trail Standard Fruit in nearly every category. The overthrow had all the ingredients of irony: meant to prevent the establishment of a Communist beachhead in the hemisphere, it would help create just such a beachhead in Cuba. Meant to make Guatemala friendly for the company, it would engender such hostility that the company was eventually forced to abandon the isthmus altogether.”&lt;/p&gt;
 &lt;p&gt;“Zemurray had stumbled on a niche: ripes, overlooked at the bottom of the trade. It was logistics. Could he move the product faster than the product was ruined by time? This work was nothing but stress, the margins ridiculously small (like counterfeiting dollar bills), but it was a way in. Whereas the big fruit companies monopolized the upper precincts of the industry — you needed capital, railroads, and ships to operate in greens — the world of ripes was wide open.”&lt;/p&gt;
 &lt;p&gt;“The world is a mere succession of fortunes made and lost, lessons learned and forgotten and learned again.”&lt;/p&gt;
 &lt;h1 id=&quot;references&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#references&quot; aria-label=&quot;references permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;References&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://novelinvestor.com/notes/the-fish-that-ate-the-whale-by-rich-cohen/&quot;&gt;novelinvestor summary&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Enough True Measure of Money, Business, and Life by John Bogle summary]]></title><description><![CDATA[Bogle’s Enough draws from a lifetime of wisdom to reflect on the excesses of a financial system that led to the 2008 crisis and reminds…]]></description><link>https://tonytvo.github.io/enough-measure-money-business-life-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/enough-measure-money-business-life-summary/</guid><pubDate>Fri, 15 Jul 2022 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;Bogle’s Enough draws from a lifetime of wisdom to reflect on the excesses of a financial system that led to the 2008 crisis and reminds readers of the benefits of a less greedy, long-term, client-first system (society) where success in life is defined by more than just money.&lt;/p&gt;
-&lt;p&gt;“At a party given by a billionaire on Shelter Island, Kurt Vonnegut informs his pal, Joseph Heller, that their host, a hedge fund manager, had made more money in a single day than Heller had earned from his wildly popular novel Catch-22 over its whole history. Heller responds, “Yes, but I have something he will never have…enough.”
-Net Return to Investors = Gross Return – Costs/Fees. The financial system siphons (or skims) the top of the returns earned by investors, businesses, etc.
-“On balance, the financial system subtracts value from our society.”
-“Most money-making activity contains profoundly antisocial effects… As high-cost modality become ever more popular…the activity exacerbates the current harmful trend in which ever more of the nation’s ethical young brain-power is attracted into lucrative money-management and its attendant modern frictions, as distinguished from work providing much more value to others.” — Charlie Munger
-Advice for those in finance:
-“If you enter the financial field, do so with your eyes wide open, recognizing that any endeavor that extracts value from its clients may, in times more troubled than these, find that it has been hoist by its own petard. It is said on Wall Street, correctly, that “money has no conscience,” but don’t allow that truism to let you ignore your own conscience, nor to alter your own conduct and character.”
-“When you begin to invest so that you have enough for your own retirement many decades hence, do so in a way that minimizes the extraction by the financial community of the returns generated by business.”
-“No matter what career you choose, do your best to hold high its traditional professional values, no swiftly eroding, in which serving the client is always the highest priority. And don’t ignore the greater good of your community, your nation, and your world.”
-The magic of compounding works on costs, as well as returns. The higher the cost, the lower the return. Here’s an example: A $1,000 initial investment 50 years ago at 11% per year, would grow to $184,600. Of course, that’s before fees. A 2% fee per year, drops the net annual return down to 9% on that initial $1,000 investment and produces just $74,400. Now add 1.5% to cover income tax and capital gains every year — cutting the return down to 7.5% per year —  and the final total is $37,000. 80% of the total return is eaten by costs!
-Expect costs to rise if your strategy is more speculation than investing.
-“It is my basic thesis — for the future as for the past — that an intelligent and well-trained financial analyst can do a useful job as portfolio adviser for many different kinds of people, and thus amply justify his existence. Also I claim he can do this by adhering to relatively simple principles of sound investment; e.g., a proper balance between stocks and bonds; proper diversification; selection of a representative list; discouragement of speculation operations not suited for the client’s financial position or temperament — and for this he does not need to be a wizard in picking winners from the stock list or in foretelling market improvements.” — Ben Graham
-The Financial System is not all bad. It does:
-Facilitate optimal capital allocation for users.
-Enable efficient introduction of buyers and sellers.
-Provide ease of liquidity for assets.
-Allow investors to capitalize or acquire future cash flows.
-Allow investors to take additional risk or hedge risk through numerous financial instruments.
-Bogle wonders if the cost of the benefits above exceeds the benefits themselves. Do investors get what they pay for?
-“Investing is all about the long-term ownership of businesses… Speculation is precisely the opposite. It is all about the short-term trading, not long-term holding, of financial instruments — pieces of paper, not businesses — largely focused on the belief that their prices, as distinct from intrinsic values will rise; indeed, an expectation that the prices of the stocks that are selected will rise more than other stocks, as the expectations of other investors rise to match one’s own.”
-“The most that owners in the aggregate can earn between now and Judgment Day is what their business in the aggregate earns.” — Warren Buffett
-Speculation driven by emotion produces short-term volatility and opportunities for the patient long-term investors.
-“The stock market is a giant distraction from the business of investing.”
-The average turnover rate for stocks was about 25% in 1951 and stayed there for the next two decades. Then it gradually rose to over 100% by 1998 and 215% by 2007. Turnover = number of shares traded as a percentage of shares outstanding.
-In 2008, the value of futures and options derivatives of the S&amp;#x26;P 500 Index totaled $29 trillion. The value of the companies in the S&amp;#x26;P 500 at the time was $13 trillion.
-“Whenever stock prices lose touch with corporate values and bubbles begin to form, too many market participants seem to anticipate that values will soon rise to justify prices, instead of the other way around.”
-Speculation encourages investors “to ignore the inevitable even as they discount the probability of the improbable.”
-Rising speculation increases the chance of anything happening.
-“In financial markets, the improbable is, in fact, highly probable.”
-“Placing large bets on an unknown future is worse than gambling because at least in gambling you know the odds. Most of the decisions in life motivated by greed have unhappy outcomes.” — Peter Bernstein
-Market timing is hard, if not impossible, to make money consistently. It requires being right twice: in getting out and getting back in.
-“For me, simplicity has always been the key to successful investing, and the time-honored wisdom of Occam’s razor…has stood me in good stead: When confronted with multiple solutions to a problem, choose the simplest one.”
-Except, financial institutions and investors tend to choose complex solutions.
-Financial innovation revolves around complex products because it brings with it higher fees.
-Fund companies consistently create new funds to take advantage of the fad of the day, then charge a high fee for it.
-Investors favor complex products because they believe complex works better than simple.
-Investors in new fad funds often underperform the fund itself and a simpler broad market index fund.
-“Thanks to the innovation and creativity of fund sponsors — and surely the greed (or perceived need) of fund investors — the return that mutual fund investors received on their hard-earned capital was less than a third of the return offered by the stock market itself.”
-Fad funds have a higher than average failure rate.
-3,165 of the 6,125 funds that existed in 2001, were gone by 2008. Of the 4,356 equity funds, 2,314 fund managers failed to invest in the fund they managed.
-“There are three i‘s in every cycle: first the innovator, then the imitator, and finally the idiot.” — Warren Buffett
-“First principles: Commodities have no internal rate of return. Their prices are based entirely on supply and demand. That is why they are considered speculations, and rank speculations at that.”
-“In economics and finance, we place too much trust in numbers. Numbers are not reality. At best, they are a pale reflection of reality. At worst, they’re a gross distortion of the truths we seek to measure… Not only do we rely too heavily on historic economic and market data; our optimistic bias also leads us to misinterpret the data and give them credence that they rarely merit.”
-“…the only valid prism through which to view the market’s future is the one that takes into account not history, but the sources of stock returns.”
-Relying on historical returns ignores the sources of those returns. Those sources being earnings growth, dividend yield, and a speculative element that moves price multiples.
-CEOs and analysts fail at forecasting business growth. It’s almost always too optimistic.
-Since 1929, average after-tax profits grew at a 5.6% rate. GDP grew at a 6.6% rate.
-M&amp;#x26;A activity often creates fees for the finance system and costs shareholders.
-“When investors are focused, not on the intrinsic value of the corporation, but on the price of its stock, assuming some responsibility for corporate governance is the first casualty.”
-In 1980, average CEO pay was 42x the average worker’s pay. By 2004, it was 280x the average workers. Adjusted for inflation, the average worker’s income rose 0.3% per year. The average CEOs income rose 8.5% per year. In fact, CEO pay outpaced corporate profit growth (corporate profits, in real terms, grew at 2.9%).
-Shareholders rarely hold management accountable. Ben Graham complained about it in the 1940s and it hasn’t changed must since.
-The average mutual fund investors held shares for 16 years in 1951. The average holding period was down to 4 years in 2008.
-The average stock in the average mutual fund in 1951 was held for six years. By 2008, that holding period was down to one year.
-The average expense ratio of the average mutual fund doubled from 1951 to 2007.
-Bogle’s “dreams” for the fund industry:
-Give every investor a fair shake on costs.
-Serve the investors for a lifetime.
-Focus on long-term investment strategies.
-Serve long-term investors (today’s clients are tomorrow’s clients too).
-Push corporate governance that’s in the best interest of investors.
-Bogle’s Rules to Building a Great Organization:
-Make caring the soul of the organization.
-Forget about employees (he wanted “crew members,” committed people linked together as part of a greater whole)
-Set high standards and values — stick to them.
-Talk the talk — repeat the values endlessly.
-Walk the walk — Actions speak louder…
-Don’t overmanage.
-Recognize individual achievement.
-Loyalty is a two-way street.
-Lead/manage for the long term.
-Press on, regardless.
-Of the original Fortune 500 companies, first published in 1955, only 71 still exist. Of the 2000+ that have made the list at some point, most are gone. Few companies last.
-“I have had cause enough to know that the road to life is rarely smooth and that we need to be prepared for the inevitable reversals in our fortunes, whether constituted by wealth, or health, or family.”
-“Knowledge is not the personal property of its discoverer, but the common property of all. As we enjoy great advantages from the inventions of others, we should be glad of an opportunity to serve others by any invention of ours, and this we should do freely and generously.” — Benjamin Franklin
-Ben Franklin began each day with the question, “What good shall I do this day?” and ended each day with the question, “What good have I done today?”
-“In reality, there is, perhaps, no one of our natural passions so hard to subdue as pride. Disguise it, struggle with it, beat it down, stifle it, mortify it as much as one pleases, it is still alive, and will every now and then peep out and show itself; you will see it perhaps often in this history; for even if I could conceive that I had completely overcome it, I should probably be proud of my humility.” — Benjamin Franklin
-“I have come to recognize that wealth is ill measured by mere dollars, that fame is ill measured by public accolades, and that power is ill measured solely by control over others.”
-“Success, in short, can be measured not in what we attain for ourselves, but in what we contribute to our society.”
-“A man is incapable of comprehending any argument that interferes with his revenue.” — Rene Descartes
-“The world is moved along, not only by the mighty shoves of its heroes, but also by the aggregate of the tiny pushes of each honest worker.” — Helen Keller
-Bogle saved 15% of his salary, since 1951, toward retirement.
-Worried about excessive speculation in the market in 1999, Bogle reduced his equity holdings to 35%, raising bond holdings to 65%. Otherwise, he focused on a balanced allocation.
-“When you plan your financial future, don’t fool yourself by focusing on the nominal gross returns on stocks and bonds; subtract the costs you expect to be assessed, and work with net returns. Then assume that even those returns will be reduced by inflation. Set realistic goals that you can reasonably expect to achieve.”&lt;/p&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Enough True Measure of Money, Business, and Life by John Bogle summary]]></title><description><![CDATA[Bogle’s Enough draws from a lifetime of wisdom to reflect on the excesses of a financial system that led to the 2008 crisis and reminds…]]></description><link>https://tonytvo.github.io/enough-measure-money-business-life-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/enough-measure-money-business-life-summary/</guid><pubDate>Fri, 15 Jul 2022 22:12:03 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Bogle’s Enough draws from a lifetime of wisdom to reflect on the excesses of a financial system that led to the 2008 crisis and reminds readers of the benefits of a less greedy, long-term, client-first system (society) where success in life is defined by more than just money.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“At a party given by a billionaire on Shelter Island, Kurt Vonnegut informs his pal, Joseph Heller, that their host, a hedge fund manager, had made more money in a single day than Heller had earned from his wildly popular novel Catch-22 over its whole history. Heller responds, “Yes, but I have something he will never have…enough.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Net Return to Investors = Gross Return – Costs/Fees. The financial system siphons (or skims) the top of the returns earned by investors, businesses, etc.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“On balance, the financial system subtracts value from our society.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“Most money-making activity contains profoundly antisocial effects… As high-cost modality become ever more popular…the activity exacerbates the current harmful trend in which ever more of the nation’s ethical young brain-power is attracted into lucrative money-management and its attendant modern frictions, as distinguished from work providing much more value to others.” — Charlie Munger&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Advice for those in finance:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“If you enter the financial field, do so with your eyes wide open, recognizing that any endeavor that extracts value from its clients may, in times more troubled than these, find that it has been hoist by its own petard. It is said on Wall Street, correctly, that “money has no conscience,” but don’t allow that truism to let you ignore your own conscience, nor to alter your own conduct and character.”&lt;/li&gt;
+&lt;li&gt;“When you begin to invest so that you have enough for your own retirement many decades hence, do so in a way that minimizes the extraction by the financial community of the returns generated by business.”&lt;/li&gt;
+&lt;li&gt;“No matter what career you choose, do your best to hold high its traditional professional values, no swiftly eroding, in which serving the client is always the highest priority. And don’t ignore the greater good of your community, your nation, and your world.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The magic of compounding works on costs, as well as returns. The higher the cost, the lower the return. Here’s an example: A $1,000 initial investment 50 years ago at 11% per year, would grow to $184,600. Of course, that’s before fees. A 2% fee per year, drops the net annual return down to 9% on that initial $1,000 investment and produces just $74,400. Now add 1.5% to cover income tax and capital gains every year — cutting the return down to 7.5% per year —  and the final total is $37,000. 80% of the total return is eaten by costs!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Expect costs to rise if your strategy is more speculation than investing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“It is my basic thesis — for the future as for the past — that an intelligent and well-trained financial analyst can do a useful job as portfolio adviser for many different kinds of people, and thus amply justify his existence. Also I claim he can do this by adhering to relatively simple principles of sound investment; e.g., a proper balance between stocks and bonds; proper diversification; selection of a representative list; discouragement of speculation operations not suited for the client’s financial position or temperament — and for this he does not need to be a wizard in picking winners from the stock list or in foretelling market improvements.” — Ben Graham&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The Financial System is not all bad. It does:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Facilitate optimal capital allocation for users.&lt;/li&gt;
+&lt;li&gt;Enable efficient introduction of buyers and sellers.&lt;/li&gt;
+&lt;li&gt;Provide ease of liquidity for assets.&lt;/li&gt;
+&lt;li&gt;Allow investors to capitalize or acquire future cash flows.&lt;/li&gt;
+&lt;li&gt;Allow investors to take additional risk or hedge risk through numerous financial instruments.&lt;/li&gt;
+&lt;li&gt;Bogle wonders if the cost of the benefits above exceeds the benefits themselves. Do investors get what they pay for?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“Investing is all about the long-term ownership of businesses… Speculation is precisely the opposite. It is all about the short-term trading, not long-term holding, of financial instruments — pieces of paper, not businesses — largely focused on the belief that their prices, as distinct from intrinsic values will rise; indeed, an expectation that the prices of the stocks that are selected will rise more than other stocks, as the expectations of other investors rise to match one’s own.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“The most that owners in the aggregate can earn between now and Judgment Day is what their business in the aggregate earns.” — Warren Buffett&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Speculation driven by emotion produces short-term volatility and opportunities for the patient long-term investors.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“The stock market is a giant distraction from the business of investing.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The average turnover rate for stocks was about 25% in 1951 and stayed there for the next two decades. Then it gradually rose to over 100% by 1998 and 215% by 2007. Turnover = number of shares traded as a percentage of shares outstanding.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In 2008, the value of futures and options derivatives of the S&amp;#x26;P 500 Index totaled $29 trillion. The value of the companies in the S&amp;#x26;P 500 at the time was $13 trillion.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“Whenever stock prices lose touch with corporate values and bubbles begin to form, too many market participants seem to anticipate that values will soon rise to justify prices, instead of the other way around.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Speculation encourages investors “to ignore the inevitable even as they discount the probability of the improbable.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Rising speculation increases the chance of anything happening.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“In financial markets, the improbable is, in fact, highly probable.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“Placing large bets on an unknown future is worse than gambling because at least in gambling you know the odds. Most of the decisions in life motivated by greed have unhappy outcomes.” — Peter Bernstein&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Market timing is hard, if not impossible, to make money consistently. It requires being right twice: in getting out and getting back in.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“For me, simplicity has always been the key to successful investing, and the time-honored wisdom of Occam’s razor…has stood me in good stead: When confronted with multiple solutions to a problem, choose the simplest one.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Except, financial institutions and investors tend to choose complex solutions.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Financial innovation revolves around complex products because it brings with it higher fees.&lt;/li&gt;
+&lt;li&gt;Fund companies consistently create new funds to take advantage of the fad of the day, then charge a high fee for it.&lt;/li&gt;
+&lt;li&gt;Investors favor complex products because they believe complex works better than simple.&lt;/li&gt;
+&lt;li&gt;Investors in new fad funds often underperform the fund itself and a simpler broad market index fund.&lt;/li&gt;
+&lt;li&gt;“Thanks to the innovation and creativity of fund sponsors — and surely the greed (or perceived need) of fund investors — the return that mutual fund investors received on their hard-earned capital was less than a third of the return offered by the stock market itself.”&lt;/li&gt;
+&lt;li&gt;Fad funds have a higher than average failure rate.&lt;/li&gt;
+&lt;li&gt;3,165 of the 6,125 funds that existed in 2001, were gone by 2008. Of the 4,356 equity funds, 2,314 fund managers failed to invest in the fund they managed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“There are three i‘s in every cycle: first the innovator, then the imitator, and finally the idiot.” — Warren Buffett&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“First principles: Commodities have no internal rate of return. Their prices are based entirely on supply and demand. That is why they are considered speculations, and rank speculations at that.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“In economics and finance, we place too much trust in numbers. Numbers are not reality. At best, they are a pale reflection of reality. At worst, they’re a gross distortion of the truths we seek to measure… Not only do we rely too heavily on historic economic and market data; our optimistic bias also leads us to misinterpret the data and give them credence that they rarely merit.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“…the only valid prism through which to view the market’s future is the one that takes into account not history, but the sources of stock returns.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Relying on historical returns ignores the sources of those returns. Those sources being earnings growth, dividend yield, and a speculative element that moves price multiples.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CEOs and analysts fail at forecasting business growth. It’s almost always too optimistic.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Since 1929, average after-tax profits grew at a 5.6% rate. GDP grew at a 6.6% rate.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;M&amp;#x26;A activity often creates fees for the finance system and costs shareholders.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“When investors are focused, not on the intrinsic value of the corporation, but on the price of its stock, assuming some responsibility for corporate governance is the first casualty.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In 1980, average CEO pay was 42x the average worker’s pay. By 2004, it was 280x the average workers. Adjusted for inflation, the average worker’s income rose 0.3% per year. The average - CEOs income rose 8.5% per year. In fact, CEO pay outpaced corporate profit growth (corporate profits, in real terms, grew at 2.9%).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Shareholders rarely hold management accountable. Ben Graham complained about it in the 1940s and it hasn’t changed must since.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The average mutual fund investors held shares for 16 years in 1951. The average holding period was down to 4 years in 2008.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The average stock in the average mutual fund in 1951 was held for six years. By 2008, that holding period was down to one year.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The average expense ratio of the average mutual fund doubled from 1951 to 2007.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bogle’s “dreams” for the fund industry:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Give every investor a fair shake on costs.&lt;/li&gt;
+&lt;li&gt;Serve the investors for a lifetime.&lt;/li&gt;
+&lt;li&gt;Focus on long-term investment strategies.&lt;/li&gt;
+&lt;li&gt;Serve long-term investors (today’s clients are tomorrow’s clients too).&lt;/li&gt;
+&lt;li&gt;Push corporate governance that’s in the best interest of investors.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bogle’s Rules to Building a Great Organization:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Make caring the soul of the organization.&lt;/li&gt;
+&lt;li&gt;Forget about employees (he wanted “crew members,” committed people linked together as part of a greater whole)&lt;/li&gt;
+&lt;li&gt;Set high standards and values — stick to them.&lt;/li&gt;
+&lt;li&gt;Talk the talk — repeat the values endlessly.&lt;/li&gt;
+&lt;li&gt;Walk the walk — Actions speak louder…&lt;/li&gt;
+&lt;li&gt;Don’t overmanage.&lt;/li&gt;
+&lt;li&gt;Recognize individual achievement.&lt;/li&gt;
+&lt;li&gt;Loyalty is a two-way street.&lt;/li&gt;
+&lt;li&gt;Lead/manage for the long term.&lt;/li&gt;
+&lt;li&gt;Press on, regardless.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Of the original Fortune 500 companies, first published in 1955, only 71 still exist. Of the 2000+ that have made the list at some point, most are gone. Few companies last.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“I have had cause enough to know that the road to life is rarely smooth and that we need to be prepared for the inevitable reversals in our fortunes, whether constituted by wealth, or health, or family.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“Knowledge is not the personal property of its discoverer, but the common property of all. As we enjoy great advantages from the inventions of others, we should be glad of an opportunity to serve others by any invention of ours, and this we should do freely and generously.” — Benjamin Franklin&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ben Franklin began each day with the question, “What good shall I do this day?” and ended each day with the question, “What good have I done today?”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“In reality, there is, perhaps, no one of our natural passions so hard to subdue as pride. Disguise it, struggle with it, beat it down, stifle it, mortify it as much as one pleases, it is still alive, and will every now and then peep out and show itself; you will see it perhaps often in this history; for even if I could conceive that I had completely overcome it, I should probably be proud of my humility.” — Benjamin Franklin&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“I have come to recognize that wealth is ill measured by mere dollars, that fame is ill measured by public accolades, and that power is ill measured solely by control over others.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“Success, in short, can be measured not in what we attain for ourselves, but in what we contribute to our society.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“A man is incapable of comprehending any argument that interferes with his revenue.” — Rene Descartes&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“The world is moved along, not only by the mighty shoves of its heroes, but also by the aggregate of the tiny pushes of each honest worker.” — Helen Keller&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bogle saved 15% of his salary, since 1951, toward retirement.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Worried about excessive speculation in the market in 1999, Bogle reduced his equity holdings to 35%, raising bond holdings to 65%. Otherwise, he focused on a balanced allocation.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“When you plan your financial future, don’t fool yourself by focusing on the nominal gross returns on stocks and bonds; subtract the costs you expect to be assessed, and work with net returns. Then assume that even those returns will be reduced by inflation. Set realistic goals that you can reasonably expect to achieve.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1 id=&quot;quotes&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quotes&quot; aria-label=&quot;quotes permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Quotes&lt;/h1&gt;
+&lt;p&gt;“I have come to recognize that wealth is ill measured by mere dollars, that fame is ill measured by public accolades, and that power is ill measured solely by control over others.”
+“Success, in short, can be measured not in what we attain for ourselves, but in what we contribute to our society.”&lt;/p&gt;
+&lt;p&gt;“A man is incapable of comprehending any argument that interferes with his revenue.” — Rene Descartes&lt;/p&gt;
+&lt;p&gt;“The world is moved along, not only by the mighty shoves of its heroes, but also by the aggregate of the tiny pushes of each honest worker.” — Helen Keller&lt;/p&gt;
+&lt;p&gt;“I have had cause enough to know that the road to life is rarely smooth and that we need to be prepared for the inevitable reversals in our fortunes, whether constituted by wealth, or health, or family.”&lt;/p&gt;
+&lt;p&gt;“Knowledge is not the personal property of its discoverer, but the common property of all. As we enjoy great advantages from the inventions of others, we should be glad of an opportunity to serve others by any invention of ours, and this we should do freely and generously.” — Benjamin Franklin&lt;/p&gt;
+&lt;p&gt;“When investors are focused, not on the intrinsic value of the corporation, but on the price of its stock, assuming some responsibility for corporate governance is the first casualty.”&lt;/p&gt;
+&lt;p&gt;“First principles: Commodities have no internal rate of return. Their prices are based entirely on supply and demand. That is why they are considered speculations, and rank speculations at that.”&lt;/p&gt;
+&lt;p&gt;“In economics and finance, we place too much trust in numbers. Numbers are not reality. At best, they are a pale reflection of reality. At worst, they’re a gross distortion of the truths we seek to measure… Not only do we rely too heavily on historic economic and market data; our optimistic bias also leads us to misinterpret the data and give them credence that they rarely merit.”&lt;/p&gt;
+&lt;p&gt;“…the only valid prism through which to view the market’s future is the one that takes into account not history, but the sources of stock returns.”&lt;/p&gt;
+&lt;p&gt;“There are three i‘s in every cycle: first the innovator, then the imitator, and finally the idiot.” — Warren Buffett&lt;/p&gt;
+&lt;p&gt;“Thanks to the innovation and creativity of fund sponsors — and surely the greed (or perceived need) of fund investors — the return that mutual fund investors received on their hard-earned capital was less than a third of the return offered by the stock market itself.”&lt;/p&gt;
+&lt;p&gt;“In financial markets, the improbable is, in fact, highly probable.”&lt;/p&gt;
+&lt;p&gt;“Placing large bets on an unknown future is worse than gambling because at least in gambling you know the odds. Most of the decisions in life motivated by greed have unhappy outcomes.” — Peter Bernstein&lt;/p&gt;
+&lt;p&gt;“Whenever stock prices lose touch with corporate values and bubbles begin to form, too many market participants seem to anticipate that values will soon rise to justify prices, instead of the other way around.”&lt;/p&gt;
+&lt;p&gt;“The stock market is a giant distraction from the business of investing.”&lt;/p&gt;
+&lt;p&gt;“The most that owners in the aggregate can earn between now and Judgment Day is what their business in the aggregate earns.” — Warren Buffett&lt;/p&gt;
+&lt;p&gt;“Investing is all about the long-term ownership of businesses… Speculation is precisely the opposite. It is all about the short-term trading, not long-term holding, of financial instruments — pieces of paper, not businesses — largely focused on the belief that their prices, as distinct from intrinsic values will rise; indeed, an expectation that the prices of the stocks that are selected will rise more than other stocks, as the expectations of other investors rise to match one’s own.”&lt;/p&gt;
+&lt;p&gt;“It is my basic thesis — for the future as for the past — that an intelligent and well-trained financial analyst can do a useful job as portfolio adviser for many different kinds of people, and thus amply justify his existence. Also I claim he can do this by adhering to relatively simple principles of sound investment; e.g., a proper balance between stocks and bonds; proper diversification; selection of a representative list; discouragement of speculation operations not suited for the client’s financial position or temperament — and for this he does not need to be a wizard in picking winners from the stock list or in foretelling market improvements.” — Ben Graham&lt;/p&gt;
+&lt;p&gt;“If you enter the financial field, do so with your eyes wide open, recognizing that any endeavor that extracts value from its clients may, in times more troubled than these, find that it has been hoist by its own petard. It is said on Wall Street, correctly, that “money has no conscience,” but don’t allow that truism to let you ignore your own conscience, nor to alter your own conduct and character.”&lt;/p&gt;
+&lt;p&gt;“When you begin to invest so that you have enough for your own retirement many decades hence, do so in a way that minimizes the extraction by the financial community of the returns generated by business.”&lt;/p&gt;
+&lt;p&gt;“No matter what career you choose, do your best to hold high its traditional professional values, no swiftly eroding, in which serving the client is always the highest priority. And don’t ignore the greater good of your community, your nation, and your world.”&lt;/p&gt;
+&lt;p&gt;“At a party given by a billionaire on Shelter Island, Kurt Vonnegut informs his pal, Joseph Heller, that their host, a hedge fund manager, had made more money in a single day than Heller had earned from his wildly popular novel Catch-22 over its whole history. Heller responds, “Yes, but I have something he will never have…enough.”&lt;/p&gt;
+&lt;p&gt;“On balance, the financial system subtracts value from our society.”&lt;/p&gt;
+&lt;p&gt;“Most money-making activity contains profoundly antisocial effects… As high-cost modality become ever more popular…the activity exacerbates the current harmful trend in which ever more of the nation’s ethical young brain-power is attracted into lucrative money-management and its attendant modern frictions, as distinguished from work providing much more value to others.” — Charlie Munger&lt;/p&gt;
 &lt;h1 id=&quot;references&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#references&quot; aria-label=&quot;references permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;References&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://novelinvestor.com/notes/enough-true-measure-of-money-business-and-life-by-john-bogle/&quot;&gt;novelinvestor summary&lt;/a&gt;&lt;/li&gt;
