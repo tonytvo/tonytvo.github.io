@@ -1,223 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 10 Aug 2022 17:04:44 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><description><![CDATA[•
-Humans handle uncertainty poorly. Richard Heuer explains how inherent biases in our thought process work against us, that knowing about…]]></description><link>https://tonytvo.github.io/psychology-intelligence-analysis-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/psychology-intelligence-analysis-summary/</guid><content:encoded>&lt;p&gt;•
-Humans handle uncertainty poorly. Richard Heuer explains how inherent biases in our thought process work against us, that knowing about the biases is no help, but processes can be built to improve our critical thinking.&lt;/p&gt;
-&lt;p&gt;•
-The book is based on a collection of articles written by Heuer for the CIA to help analysts better understand how they process information involving uncertainty.&lt;/p&gt;
-&lt;p&gt;•
-3 Points (via Jack Davis in the Intro)
-• The human mind is not wired to handle uncertainty well.
-• Knowing biases exist, even being warned about a bias, is little help in avoiding said biases.
-• Processes can be created that help offset these biases while working through complex problems.&lt;/p&gt;
-&lt;p&gt;•
-Humans handle complexity terribly. So we developed shortcuts — simple rules of thumb or mental models — to help navigate complex information. The shortcuts work but within limits.&lt;/p&gt;
-&lt;p&gt;•
-The shortcuts — mental models, etc. — often determine how we interpret and organize information.&lt;/p&gt;
-&lt;p&gt;•
-Our education, culture, past experience, assumptions, preconceived ideas, etc. also impact how we process and interpret information.&lt;/p&gt;
-&lt;p&gt;•
-Major paradigm shifts mean that those that know the most about a subject — the experts — have the most to unlearn.&lt;/p&gt;
-&lt;p&gt;•
-4 Principles of Perception:
-• ” We tend to perceive what we expect to perceive . A corollary of this principle is that it takes more information, and more unambiguous information, to recognize an unexpected phenomenon than an expected one.”
-• An Experiment: A classic experiment showed how expectations influenced perception. Playing cards were altered so that some (not all) spades were red and hearts were blacks. Pictures of the cards were briefly flashed in front of test subjects. The subjects identified the unaltered cards quickly and accurately but the unaltered cards gave them trouble. Even after becoming aware that some spades were red and hearts black, their recognition was still slower than with the normal cards. It shows how expectations (of black spades and red hearts) can be so deeply embedded that it influences perception, despite knowing the data was manipulated.
-• In other words, we’re so good at pattern recognition that we have a hard time recognizing when patterns have changed, and have a hard time unlearning the patterns once we know it’s changed. Expectations trick our subconscious mind to see what should be there, not what is there.
-• “People have no conceivable way of coping with the volume of stimuli that impinge upon their senses, or with the volume and complexity of the data they have to analyze, without some kind of simplifying preconceptions about what to expect, what is important, and what is related to what.”&lt;/p&gt;
-&lt;p&gt;• “Mindsets tend to be quick to form but resistant to change.”
-• Once we have a pattern in our head, it’s hard to unlearn it or replace it with new information.&lt;/p&gt;
-&lt;p&gt;• “New information is assimilated to existing images.”
-• Slow or gradual change often goes unnoticed. Past experience can be a handicap.
-• “One of the more difficult mental feats is to take a familiar body of data and reorganize it visually or mentally to perceive it from a different perspective.”
-• Once we’ve experienced something, like an event, in a particular way, we resist interpreting it any differently.&lt;/p&gt;
-&lt;p&gt;• “Initial exposure to blurred or ambiguous stimuli interferes with accurate perception even after more and better information becomes available.”
-• An Experiment: People were shown pictures of everyday items. The pictures were initially shown out of focus but gradually brought into focus. Those who initially saw the images at the most out of focus had a harder time recognizing the items as the image become clearer than those who were initially shown a less out of focus image. Longer exposure to a blurred image also required a clearer image to recognize the item. In other words, people form an expectation of what something might be, confidence in their expectation grows with longer exposure, making changing our minds more difficult when faced with new information.
-• “People form impressions on the basis of very little information, but once formed, they do not reject or change them unless they obtain rather solid evidence.”
-• Becomes a bigger problem when information is sparse or nonexistent and new information trickles in — form the wrong conclusion early based on sparse info, don’t change your mind as new info rolls in…until it’s too late.
-• One solution is to try to withhold judgment as long as possible or as long as new information is coming in.&lt;/p&gt;
-&lt;p&gt;•
-Our accuracy takes the biggest hit when dealing with highly complex, ambiguous situations.&lt;/p&gt;
-&lt;p&gt;•
-“Intelligence seeks to illuminate the unknown.”&lt;/p&gt;
-&lt;p&gt;•
-Our preconceptions make being objective practically impossible.&lt;/p&gt;
-&lt;p&gt;•
-3 Ways to Learn:
-• By Rote: frequent repetition until it can be repeated from memory.
-• By Assimilation: teaching new information by tying it to previously learned information.
-• By Mnemonic Device: a way of organizing information to make it easier to remember.&lt;/p&gt;
-&lt;p&gt;•
-The best way to deal with complex problems is to externalize it. Write it out. Break the problem down into parts, then work through each individual part, while keeping sight of the whole problem.&lt;/p&gt;
-&lt;p&gt;•
-Our memory is affected by the order we learn something, the amount of time we spend on something, the credibility of the information, and the importance of it when we learned it.&lt;/p&gt;
-&lt;p&gt;•
-Uncertainty means always dealing with incomplete knowledge.&lt;/p&gt;
-&lt;p&gt;•
-How Analysts Generate and Evaluate Hypotheses:
-• Situational Logic:
-• Start with known facts about the current situation, then identify the consequences.
-• Deals with tracing cause-effect or means-ends relationships.
-• Weakness: 1) Difficult to figure out how other people might think or behave because we assume they do so like us. 2) Fails to consider historical knowledge — how things played out in similar past events — because it only focuses on the current situation.
-• Situational logic is better for estimating short-term outcomes of events.&lt;/p&gt;
-&lt;p&gt;• Applying Theory:
-• A theory is formed from many past examples that lead to similar outcomes. It states that given certain conditions, certain results will follow based on a reasonable probability.
-• A theory allows you to quickly separate signals from noise. It helps pick out the important points to a complex problem awash in massive amounts of information. It’s most handy in filtering out unimportant information.
-• Weakness: It often fails to identify time frames in the analysis. It may accidentally filter out important information.&lt;/p&gt;
-&lt;p&gt;• Comparison:
-• It compares the current situation to similar past events in order to understand possible outcomes. The past events help fill gaps where information is unavailable.
-• Often relies on historical analogies.
-• Unlike a theory, it’s used when the comparison sample size is small.
-• Weakness: 1) A historical event might be so strong that it influences your view of the outcome from the start. Analysis of the current event will forecast a similar fate to the past event. 2) It admits not only to a lack of current information to understand the present problem, but also a lack of historical precedent to understand it. 3) can lead to misusing historical events, by picking what your most familiar with, by picking the first similar historical event you come across, by lacking historical knowledge, and not researching further.
-• It’s like dealing with a situation that’s happened once or twice before and the odds of a similar outcome is far from certain.
-• Comparison is best used to highlight differences, not similarities, in the current problem as it relates to a past event, and not draw conclusions.&lt;/p&gt;
-&lt;p&gt;•
-The goal of data/information analysis is to be as objective as possible. It turns out being objective is almost impossible.&lt;/p&gt;
-&lt;p&gt;•
-Following the scientific method — present a theory, then seek to disprove it — leads to objectivity.&lt;/p&gt;
-&lt;p&gt;•
-Less Optimal Decision-Making Strategies (via Alexander George):
-• Satisficing — Settle for the first “good enough” option rather than studying all the options to find the best.
-• Incrementalism — Look at a narrow range of options that lead to marginal change rather than considering all the options including those that lead to dramatic change.
-• Consensus — Pick the option that gets the most agreement from others or what they want to hear.
-• Reasoning by Analogy — Pick the option that avoids a past error or repeats a past success.
-• Principles or Maxims — Use a rule of thumb to separate a “good” option from a “bad” option.&lt;/p&gt;
-&lt;p&gt;•
-Failures in Decision Making:
-• Selective Perception: We tend to see what we want to see, not what we need to see. We overlook information that doesn’t fit what we’re looking for, however relevant it is. It’s best to focus on multiple theories at once rather than one when researching information. Not focusing on a single theory means you’re less likely to miss important information that fits other hypotheses.
-• A big hurdle in theory generation is not coming up with a full range of potential outcomes. Most people take a lazy approach. They fail to put the time or effort into generating enough potential outcomes to a problem.
-• Diagnosticity: “Evidence is diagnostic when it influences an analyst’s judgment on the relative likelihood of the various hypotheses. If an item of evidence seems consistent with all the hypotheses, it may have no diagnostic value at all. It is a common experience to discover that most available evidence really is not very helpful, as it can be reconciled with all the hypotheses.”
-• Disproving Hypotheses: The goal should be to disprove theories, especially our favorite, rather than confirm them. The problem is that seeking disconfirming evidence doesn’t come naturally. So when we find disconfirming evidence we discount it, question its credibility, and/or write it off as an anomaly. When dealing with probabilistic outcomes, disproving outcomes is more beneficial than confirming outcomes, because oftentimes relevant information confirms multiple outcomes.&lt;/p&gt;
-&lt;p&gt;•
-Is More Information Better?:
-• Key #1: “Once an experienced analyst has the minimum information necessary to make an informed judgment, obtaining additional information generally does not improve the accuracy of his or her estimates. Additional information does, however, lead the analyst to become more confident in the judgment, to the point of overconfidence.”
-• Key #2: “Experienced analysts have an imperfect understanding of what information they actually use in making judgments. They are unaware of the extent to which their judgments are determined by a few dominant factors, rather than by the systematic integration of all available information. Analysts actually use much less of the available information than they think they do.”
-• In general, more information does not improve accuracy. However, in some cases it does, but also in some cases more information — especially contradictory info — decreases confidence in our analysis.
-• An Experiment: Horse handicappers were shown 88 variables for a past performance chart of horses. Things like the weight carried, race finishes (1st, 2nd, 3rd), jockey’s record, time since a horses last race. The handicappers had to identify the five most important variables if he were limited to just five per horse in order to handicap a race. Then they were asked to do the same thing for 10, 20, and 40 variables if limited to those amounts to handicap races. Each handicapper was then given real data based on the five variables he chose and asked to predict each race. They were also asked to rate the confidence in their accuracy from 0 to 100. The same was done for the 10, 20, and 40 variables. The results showed that average accuracy did not change as the information increased, but the handicapper confidence in their accuracy increased with more information. In other words, more information led to overconfidence.
-• An Experiment: Psychologists were given a case of a normal individual divided into four sections. They were asked to judge the case file and answer 25 questions on the personality of the person. The results show that more information did not improve accuracy in the questions but did increase confidence in their answers.
-• An Experiment: Doctors were asked how they made medical diagnoses. Doctors that prioritized being thorough with data were less accurate than doctors that approached diagnosis by identifying and testing hypotheses. Adding more data did not improve accuracy. Identifying, testing, and refuting hypotheses was actually more effective.
-• New information that confirms existing variables increases our confidence. Indepth information tends to be more persuasive to authors and readers.
-• New information that introduces new variables is unlikely to improve accuracy in estimates.
-• New information that changes variables critical to estimates has an impact but it depends on the amount of new information and the confidence in the accuracy of the new information.
-• New information that shifts the importance of a variable affects confidence and estimates.
-• More data backing up a conclusion leads to overconfidence.&lt;/p&gt;
-&lt;p&gt;•
-Learning to make better decisions requires constant feedback. Assess past decisions by linking accuracy in a decision with variables used to come to the decision. This works when the outcomes can be easily tied to specific variables, like in blackjack. In complex systems, with hundreds or thousands of variables involved, this can be difficult to impossible.&lt;/p&gt;
-&lt;p&gt;•
-Most analysis fails because we confuse signal for noise. Relevant information is discounted, misinterpreted, ignored, because of biases. Our biases limit how we view information.&lt;/p&gt;
-&lt;p&gt;•
-How to Stay Objective:
-• Sensitivity Analysis — Question assumptions. Try to disprove them. Ask what would make your assumptions out of date? Has it already happened? What would make you change your mind? If you fail to come up with an answer then your mind isn’t open.
-• Identify Alternatives — Seek out people who disagree with you.
-• Avoid Mirror-Images — Don’t assume that others will think or behave in the same way as you. Avoid the “If I were so and so, they would do X, Y, and Z.”
-• Seek Out Different Perspectives
-• Thinking Backwards — Start with the end in mind and work backward. Pick an alternative outcome and assume it happened. Then look back and explain how it happened. It changes the question from “what might happen” to “how it might happen.” Works great for low-probability, high-impact events.
-• Crystal Ball — Assume you have a crystal ball that can predict the future, only it predicts that your assumption is wrong. Explain how the crystal ball is right. It forces you to try a disprove your assumption or poke holes in it, at least.
-• Role-Playing — Take on the role of another person and act out that person’s actions. It requires a group environment.
-• Devil’s Advocate — Bring in someone to argue the other side.&lt;/p&gt;
-&lt;p&gt;• Know When to Change Your Mind:
-• Learn from Surprises — Keep track of unexpected events rather than discount or ignore it and try to explain it. A pattern of surprises might be a clue that your thinking needs to change.
-• Strategic Assumptions vs. Tactical Indicators — When indicators (like data points) disagree with assumptions try giving more weight to indicators then the assumptions. Maybe don’t use said indicator to sway a decision but rather to stay more alert.&lt;/p&gt;
-&lt;p&gt;• Boost Creative Thinking:
-• Defer Judgment — The most important. Hold off judgment until all ideas are written down. Judgment sours creativity. Separate idea generation from the evaluation.
-• Quantity Leads to Quality — The first ideas are the most typical, obvious, common ones. Coming up with as many ideas as possible inevitably comes up with a few quality ideas.
-• No Constraints — Make it as free-thinking as possible.
-• Cross Fertilization — Combine ideas to form new ideas.
-• These are best done in groups — brainstorming sessions — within an organizational environment that supports the process.&lt;/p&gt;
-&lt;p&gt;•
-Decomposition — breaks a problem down into separate parts i.e. divide and conquer.&lt;/p&gt;
-&lt;p&gt;•
-Externalization — gets the problem out of your head and onto paper. It’s most beneficial with complex problems because the many variables become too hard to track without it.&lt;/p&gt;
-&lt;p&gt;•
-Lists, outlines, tables, diagrams, flow charts, and matrices work in a similar way to Franklin’s pro/con list.&lt;/p&gt;
-&lt;p&gt;•
-Analysis of Competing Hypotheses:
-• Identify all the possible hypotheses. A group works best. Don’t overlook unproven hypotheses. Greater uncertainty in the outcome should lead to more hypotheses not less.
-• List the evidence/arguments for and against each one. Think about what evidence is missing too. Ask if a specific hypothesis is true, what evidence should exist? What evidence should not exist? What evidence should show up eventually?
-• Create matrix — hypotheses across the top, evidence down the side — to see which evidence overlaps into multiple hypotheses compared to evidence that is unique and helpful to one hypothesis (diagnosticity). Ask is the evidence consistent, inconsistent, or irrelevant? Add a probability scale to the evidence based on its importance.
-• Refine the matrix by reconsidering hypotheses and deleting evidence with no unique value.
-• Draw tentative conclusions and try to disprove the hypotheses. Accept only hypotheses that can not be rejected.
-• Analyze the sensitivity of conclusions. Ask what are the consequences if the evidence is wrong or incorrect? Are there alternative explanations? Is fraud or deception a possible alternative?
-• Report conclusions, including the probability of all the hypotheses.
-• Identify future points to reassess events. Be specific about what to watch for or what would change your mind.&lt;/p&gt;
-&lt;p&gt;•
-Analysis of competing hypotheses won’t guarantee correct answers. Uncertainty means there’s always a chance of being wrong. It’s about having a rational process that should increase the odds of being right. It also makes it easier to audit the process and make improvements.&lt;/p&gt;
-&lt;p&gt;•
-Biases:
-• Cognitive biases are subconscious mental errors caused by over-simplified rules of thumb that usually help us make quicker decisions. Under certain circumstances, those rules of thumb produce faulty decisions. Being aware of the bias won’t change the poor decision either. So biases are difficult to overcome.
-• Information we experience directly — we personally see, hear, etc. — has a greater impact than more informative information received secondhand. Things we experience personally are more memorable than the events we read about. Stories and anecdotes have a bigger impact than numbers. Statistical data lacks the vivid detail to elicit a memorable image, so it’s often overlooked. Even popular sayings back this up. “Seeing is believing.” or “Don’t believe everything you read.” It biases how we view information.
-• Common Error: The Sample Size of One — We let the experience of a single outcome outweigh the statistical probability of an outcome over a larger sample size. One bad shopping experience, one bad meal at a restaurant, one bad story about a particular car changes our thinking about that store, restaurant, or car model. Testimonials from close family or friends or the “Man-Who” Syndrome (“I know a man who…”) work in a similar way. Despite the statistical evidence, a single outlier experience outweighs the data.
-• It’s difficult to recognize important missing or incomplete information and factor it into our analysis. The solution is to identify important variables in advance and use it to track missing information. The lack of specific information may support or refute certain outcomes.
-• Oversensitive to Consistency — a consistent pattern is usually helpful but could be deceptive under certain situations like if the information is highly correlated to something else that’s not known yet or it’s drawn from a small sample size.
-• We tend to accept or reject information completely without weighing our confidence in the accuracy of the information or its source. Rather than saying we’re 60% or 70% certain about a piece of information, we treat it as 100% certain or 0% certain, which can lead to over or under-confidence.
-• False impressions persist after they’ve been discredited. For example, test subjects misled about their success or failure at performing a task, continued to believe in their ability or lack of ability even after they were told the truth. A similar phenomena was found in observers of experiments.
-• The Scientist Versus the Historian: a scientist starts with a theory and sets out to disprove it with data, accepting it when it can’t be rejected. A historian creates a story out of a few pieces of data. A historian may overlook data in order to make the story coherent. That coherence can lead to biases. It implies order, patterns, or relationships that may not exist.
-• We often seek out causes for random events because we prefer order. For example, during WWII people tried to explain the pattern of the German bombing of London. They used those explanations to decide where to live and which shelters to use. After the war, the bombings were shown to be randomly distributed. People focused on the bomb hits that fit their explanation and ignored the rest.
-• We underestimate how small causes can lead to large effects. Accidents, unintended consequences, coincidences get downplayed for more lofty or conspiratorial explanations. It’s another attempt to bring order to chance or randomness.
-• The Fallacy of Identity — we assume that the cause must resemble its effect. We use a rule of thumb that compares similar attributes between cause and effect to make judgments. We “tend to assume that economic events have primarily economic causes, that big events have important consequences, and that little events cannot affect the course of history. Such correspondence between cause and effect makes a more logical and persuasive–a more coherent–narrative, but there is little basis for expecting such inferences to correspond to historical fact.” It leads to conspiracy theories. We try to explain a big event with a similarly big cause.
-• Internal causes of behavior are personality, attitude, and beliefs. External causes are incentives, peer or social pressure, and role requirements that are situation-specific.
-• We put more weight on the internal causes of behavior and less weight on external causes. It’s also dependent on whether it’s someone else’s behavior or our own. Our own behavior is seen as being influenced by external factors but other’s behavior is seen as internal factors. We tend to explain our own behavior as being influenced by specific situations.
-• We overestimate how much we influence the behavior of others. We overlook unintended consequences and assume our actions had the desired effect.
-• We also believe that our actions caused our successes but not our failures.
-• We also overestimate our importance in other people’s actions. Again, we overlook unintended consequences and assume that actions that hurt us, were intended to hurt, not an unfortunate side effect of a decision.
-• Illusory Correlation — “Correlation alone does not necessarily imply causation. For example, two events might co-occur because they have a common cause, rather than because one causes the other. But when two events or changes do co-occur, and the time sequence is such that one always follows the other, people often infer that the first caused the second. Thus, inaccurate perception of correlation leads to inaccurate perception of cause and effect.”
-• We tend to focus on things that support the existence of a relationship, but ignore the things that don’t support it.
-• We’re bad at estimating and calculating probabilities.
-• Availability Rule — a rule of thumb used to estimate probability based on easily they can recall or how familiar they are with similar events. Generally, if something occurs often, its easier to remember, and likely to continue occurring often. Unless, our ability to remember or imagine something has nothing to do with its probability of happening. Problems arise because we tend to remember certain events better — recent events, events we were personally involved in, important events, etc. — and it affects our judgment.
-• “The act of constructing a detailed scenario for a possible future event makes that event more readily imaginable and, therefore, increases its perceived probability.” It can lead to taking unlikely scenarios too seriously.
-• Anchoring — when we use a starting point, like using a past estimate, to make a new estimate but rather than adjust the starting point based on new information, it acts as an anchor preventing adjustment. So estimates that start too low (too high) end up too low (too high).
-• Awareness of an anchoring bias won’t fix the problem. The best way to avoid the problem is to not use any prior estimates as a starting point. Start from scratch. Using Bayesian statistics might be another option.
-• We overuse subjective probabilities and underuse statistical probabilities. In other words, we rely on arbitrary words — possible, probable, likely, unlikely, could, etc. — that are too subjective, rather than actual numbers. Ask a bunch of people to put “probable” into percentage terms and you’ll get a wide range of answers. Use percentages or odds in place of or in brackets after ambiguous words to avoid confusion.
-• Time frames like “at this time” or “in the short term” can be similarly too subjective.
-• We’re bad at assessing the probability of a series of events — where each event has its own probability — when estimating the final outcome. The proper way is to multiply the probability of each event to get the final estimated probability. So the chance of getting three heads in a row while tossing a coin is .5 x .5 x .5 or .125 or 12.5%. Also, the event with the lowest probability sets the upper limit of the probability for the entire series.
-• Base Rate Fallacy — base rates highlight the probability of a thing occurring based on a large sample size of data. The fallacy ignores the data unless it fits with data specific to the situation at hand.
-• The Planning Fallacy — we overestimate our ability to finish a plan or project in a set amount of time despite past experience suggesting otherwise. It’s a perfect example of the base rate fallacy.
-• Hindsight Bias — we overestimate our accuracy, after the fact, in predicting an outcome before it happened. We also underestimate how much we learned from things we read, watched, etc. And when looking back at past outcomes, we view it as being obvious or foreseeable when, in fact, it wasn’t at the time.
-• An Experiment: Test subjects were asked to estimate the probability of several events occurring during President Nixon’s trip to Peking and Moscow in 1972. Afterward, they were asked at varying periods to repeat their previous estimates to each event and whether the event actually occurred or not during the President’s trip. The hindsight bias was evident at just three to six months after the trip. 84% claimed higher estimates than their original estimate to events that did occur, and lower estimates to events that did not occur.
-• We overestimate how much we previously expected an event to occur and underestimate how much we previously expected events that eventually did not occur. At some point after an event, knowing the outcome changes our memory of how much we previously expected said outcome. Our memory fades as time elapses which increases the effect of the bias.
-• We underestimate the impact of new information. It’s the “I knew it all along…” bias.
-• An Experiment: Test subjects were asked 75 questions based on facts from almanacs and encyclopedias and assigned a confidence percentage to each answer. Afterward, the subjects were divided into three groups. The first group was given 25 of the previous questions and asked to repeat their prior answers. The second group was given the same 25 questions, but with the correct answers circled, and asked to repeat their prior answers. The third group was given 25 new questions, just as difficult as the previous ones, with the correct answers marked and asked to give their answers as if they didn’t know the correct answer. The third group showed the most significant results. The number of correct answers far exceeded what they should have gotten correct had they not been given the correct answers in advance. They overexaggerated knowing the answers and their confidence in knowing it. Said another way, they underestimated what they learned and how much it helped them answer correctly.
-• We tend to think that once an event happens that it is was more easily foreseeable than it actually was.
-• An Experiment: Test subjects were divided into five groups. Each group received a summary of an event — between the British and Gurkhas in 1814 — with four possible outcomes. One group received the summary with all four possible outcomes. The other four groups received the summary and the four possible outcomes but with a new sentence added highlighting one outcome. So four groups, four sentences highlighting a different outcome. The groups were asked to estimate the probability of each outcome. The results showed that groups given a highlighted outcome gave a higher probability (almost double) to those outcomes.
-• One possible solution to hindsight bias is to ask: Would I be surprised if the opposite occurred? Would it be predictable if the opposite occurred?&lt;/p&gt;
-&lt;p&gt;•
-Analysis Checklist:
-• Define the Problem — make sure you’re asking the right questions.
-• Generate Hypotheses — as many as possible and hold off judgment.
-• Collect Information — collect information related to all hypotheses not just the most likely.
-• Evaluate Hypotheses — disprove hypotheses rather than confirm them.
-• Select the Most Likely Hypotheses — cite arguments for and against it, include the odds of it happening, your confidence in the conclusion, and do the same for the rejected hypotheses.
-• Monitor for New Information — Be specific about what to look for in advance. Watch for surprises. Situations change in a complex world.&lt;/p&gt;
-&lt;p&gt;Quotes&lt;/p&gt;
-&lt;p&gt;“A fundamental question posed in any postmortem investigation of intelligence failure is this: Given the information that was available at the time, should analysts have been able to foresee what was going to happen? Unbiased evaluation of intelligence performance depends upon the ability to provide an unbiased answer to this question.”&lt;/p&gt;
-&lt;p&gt;“Knowing the outcome of a situation makes it harder to imagine other outcomes that might have been considered.”&lt;/p&gt;
-&lt;p&gt;“When base rates are not well known but must be inferred or researched, they are even less likely to be used.”&lt;/p&gt;
-&lt;p&gt;“When analysts make quick, gut judgments without really analyzing the situation, they are likely to be influenced by the availability bias. The more a prospective scenario accords with one’s experience, the easier it is to imagine and the more likely it seems.”&lt;/p&gt;
-&lt;p&gt;“History is, by and large, a record of what people did, not what they failed to do.” — E.H. Carr&lt;/p&gt;
-&lt;p&gt;“When observing another’s behavior, people are too inclined to infer that the behavior was caused by broad personal qualities or dispositions of the other person and to expect that these same inherent qualities will determine the actor’s behavior under other circumstances. Not enough weight is assigned to external circumstances that may have influenced the other person’s choice of behavior.”&lt;/p&gt;
-&lt;p&gt;“As a general rule, biased attribution of causality helps sow the seeds of mistrust and misunderstanding between people and between governments. We tend to have quite different perceptions of the causes of each other’s behavior.”&lt;/p&gt;
-&lt;p&gt;People generally do not accept the notion of chance or randomness.&lt;/p&gt;
-&lt;p&gt;“People expect patterned events to look patterned, and random events to look random, but this is not the case. Random events often look patterned… However, events will almost never be perceived intuitively as being random; one can find an apparent pattern in almost any set of data or create a coherent narrative from any set of events.”&lt;/p&gt;
-&lt;p&gt;“Because of a need to impose order on our environment, we seek and often believe we find causes for what are actually accidental or random phenomena… People also tend to assume that causes are similar to their effects, in the sense that important or large effects must have large causes.”&lt;/p&gt;
-&lt;p&gt;“People do not have much intuitive feel for how large a sample has to be before they can draw valid conclusions from it. The so-called law of small numbers means that, intuitively, we make the mistake of treating small samples as though they were large ones.”&lt;/p&gt;
-&lt;p&gt;“We seldom take the absence of evidence into account.”&lt;/p&gt;
-&lt;p&gt;“Information that is vivid, concrete, and personal has a greater impact on our thinking than pallid, abstract information that may actually have substantially greater value as evidence.”&lt;/p&gt;
-&lt;p&gt;“The most probable hypothesis is usually the one with the least evidence against it, not the one with the most evidence for it.”&lt;/p&gt;
-&lt;p&gt;“Doubt is not a pleasant state, but certainty is a ridiculous one.” — Voltaire&lt;/p&gt;
-&lt;p&gt;“To get over this, my way is to divide half a sheet of paper by a line into two columns; writing over the one Pro, and over the other Con. Then, during three or four days of consideration, I put down under the different heads short hints of the different motives, that at different times occur to me, for or against the measure. When I have thus got them all together in one view, I endeavor to estimate their respective weights; and where I find two, one on each side, that seem equal, I strike them both out. If I find a reason pro equal to some two reasons con, I strike out the three…and thus proceeding I find at length where the balance lies; and if, after a day or two of further consideration, nothing new that is of importance occurs on either side, I come to a determination accordingly. And, though the weight of reasons cannot be taken with the precision of algebraic quantities, yet when each is thus considered, separately and comparatively, and the whole lies before me, I think I can judge better, and am less liable to make a rash step, and in fact I have found great advantage from this kind of equation.” — Benjamin Franklin&lt;/p&gt;
-&lt;p&gt;Minds are like parachutes. They only function when they are open.&lt;/p&gt;
-&lt;p&gt;“A new idea is the beginning, not the end, of the creative process.”&lt;/p&gt;
-&lt;p&gt;“New ideas result from the association of old elements in new combinations. Previously remote elements of thought suddenly become associated in a new and useful combination.”&lt;/p&gt;
-&lt;p&gt;“Information that is consistent with an existing mind-set is perceived and processed easily and reinforces existing beliefs. Because the mind strives instinctively for consistency, information that is inconsistent with an existing mental image tends to be overlooked, perceived in a distorted manner, or rationalized to fit existing assumptions and beliefs.”&lt;/p&gt;
-&lt;p&gt;“Experts overestimate the importance of factors that have only a minor impact on their judgment and underestimate the extent to which their decisions are based on a few major variables. In short, people’s mental models are simpler than they think, and the analyst is typically unaware not only of which variables should have the greatest influence, but also which variables actually are having the greatest influence.”&lt;/p&gt;
-&lt;p&gt;“When resorting to an analogy, they tend to seize upon the first that comes to mind. They do not research more widely. Nor do they pause to analyze the case, test its fitness, or even ask in what ways it might be misleading.” — Earnest May&lt;/p&gt;
-&lt;p&gt;“If information does not fit into what people know, or think they know, they have great difficulty processing it.”&lt;/p&gt;
-&lt;p&gt;“It is much easier after the fact to sort the relevant from the irrelevant signals. After the event, of course, a signal is always crystal clear. We can now see what disaster it was signaling since the disaster has occurred, but before the event it is obscure and pregnant with conflicting meanings.” — Roberta Wohlstetter&lt;/p&gt;
-&lt;p&gt;“One strategy too often used by intelligence analysts is described as “satisficing”– choosing the first hypothesis that appears good enough rather than carefully identifying all possible hypotheses and determining which is most consistent with the evidence.”&lt;/p&gt;
-&lt;p&gt;“…historical analogies often precede, rather than follow, a careful analysis of a situation.” — Robert Jarvis&lt;/p&gt;
-&lt;p&gt;“The tendency to relate contemporary events to earlier events as a guide to understanding is a powerful one. Comparison helps achieve understanding by reducing the unfamiliar to the familiar.”&lt;/p&gt;
-&lt;p&gt;“The question is not whether one’s prior assumptions and expectations influence analysis, but only whether this influence is made explicit or remains implicit.”&lt;/p&gt;
-&lt;p&gt;“Objectivity is gained by making assumptions explicit so that they may be examined and challenged, not by vain efforts to eliminate them from analysis.”&lt;/p&gt;
-&lt;p&gt;The simultaneous evaluation of multiple, competing hypotheses permits a more systematic and objective analysis than is possible when an analyst focuses on a single, most-likely explanation or estimate.&lt;/p&gt;
-&lt;p&gt;References
-• novelinvestor summary&lt;/p&gt;</content:encoded></item><item><title><![CDATA[value investing summary]]></title><description><![CDATA[bruce greenwald’s value investing value investing process  circle of competence - “know what you know” organize valuation components by…]]></description><link>https://tonytvo.github.io/value-investing-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/value-investing-summary/</guid><pubDate>Tue, 09 Aug 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;bruce-greenwalds-value-investing&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#bruce-greenwalds-value-investing&quot; aria-label=&quot;bruce greenwalds value investing permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;bruce greenwald’s value investing&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 10 Aug 2022 17:15:02 GMT</lastBuildDate><item><title><![CDATA[value investing summary]]></title><description><![CDATA[bruce greenwald’s value investing value investing process  circle of competence - “know what you know” organize valuation components by…]]></description><link>https://tonytvo.github.io/value-investing-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/value-investing-summary/</guid><pubDate>Tue, 09 Aug 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;bruce-greenwalds-value-investing&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#bruce-greenwalds-value-investing&quot; aria-label=&quot;bruce greenwalds value investing permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;bruce greenwald’s value investing&lt;/h1&gt;
 &lt;h2 id=&quot;value-investing-process&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#value-investing-process&quot; aria-label=&quot;value investing process permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;value investing process&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;span
@@ -2829,6 +2610,329 @@ The mass psychology has a way of taking hold of every new generation of investor
 &lt;h1 id=&quot;references&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#references&quot; aria-label=&quot;references permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;References&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://novelinvestor.com/notes/the-lessons-of-history-by-will-ariel-durant/&quot;&gt;novelinvestor summary&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Psychology of Intelligence Analysis by Richards summary]]></title><description><![CDATA[Humans handle uncertainty poorly. Richard Heuer explains how inherent biases in our thought process work against us, that knowing about the…]]></description><link>https://tonytvo.github.io/psychology-intelligence-analysis-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/psychology-intelligence-analysis-summary/</guid><pubDate>Thu, 28 Jul 2022 22:12:03 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Humans handle uncertainty poorly. Richard Heuer explains how inherent biases in our thought process work against us, that knowing about the biases is no help, but processes can be built to improve our critical thinking.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The book is based on a collection of articles written by Heuer for the CIA to help analysts better understand how they process information involving uncertainty.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;3 Points (via Jack Davis in the Intro)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The human mind is not wired to handle uncertainty well.&lt;/li&gt;
+&lt;li&gt;Knowing biases exist, even being warned about a bias, is little help in avoiding said biases.&lt;/li&gt;
+&lt;li&gt;Processes can be created that help offset these biases while working through complex problems.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Humans handle complexity terribly. So we developed shortcuts — simple rules of thumb or mental models — to help navigate complex information. The shortcuts work but within limits.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The shortcuts — mental models, etc. — often determine how we interpret and organize information.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Our education, culture, past experience, assumptions, preconceived ideas, etc. also impact how we process and interpret information.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Major paradigm shifts mean that those that know the most about a subject — the experts — have the most to unlearn.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;4 Principles of Perception:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;”&lt;strong&gt;We tend to perceive what we expect to perceive&lt;/strong&gt;. A corollary of this principle is that it takes more information, and more unambiguous information, to recognize an unexpected phenomenon than an expected one.”
+&lt;ul&gt;
+&lt;li&gt;An Experiment: A classic experiment showed how expectations influenced perception. Playing cards were altered so that some (not all) spades were red and hearts were blacks. Pictures of the cards were briefly flashed in front of test subjects. The subjects identified the unaltered cards quickly and accurately but the unaltered cards gave them trouble. Even after becoming aware that some spades were red and hearts black, their recognition was still slower than with the normal cards. It shows how expectations (of black spades and red hearts) can be so deeply embedded that it influences perception, despite knowing the data was manipulated.&lt;/li&gt;
+&lt;li&gt;In other words, we’re so good at pattern recognition that we have a hard time recognizing when patterns have changed, and have a hard time unlearning the patterns once we know it’s changed. Expectations trick our subconscious mind to see what should be there, not what is there.&lt;/li&gt;
+&lt;li&gt;“People have no conceivable way of coping with the volume of stimuli that impinge upon their senses, or with the volume and complexity of the data they have to analyze, without some kind of simplifying preconceptions about what to expect, what is important, and what is related to what.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;“Mindsets tend to be quick to form but resistant to change.”&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Once we have a pattern in our head, it’s hard to unlearn it or replace it with new information.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;“New information is assimilated to existing images.”&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Slow or gradual change often goes unnoticed. Past experience can be a handicap.&lt;/li&gt;
+&lt;li&gt;“One of the more difficult mental feats is to take a familiar body of data and reorganize it visually or mentally to perceive it from a different perspective.”&lt;/li&gt;
+&lt;li&gt;Once we’ve experienced something, like an event, in a particular way, we resist interpreting it any differently.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;“Initial exposure to blurred or ambiguous stimuli interferes with accurate perception even after more and better information becomes available.”&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;An Experiment: People were shown pictures of everyday items. The pictures were initially shown out of focus but gradually brought into focus. Those who initially saw the images at the most out of focus had a harder time recognizing the items as the image become clearer than those who were initially shown a less out of focus image. Longer exposure to a blurred image also required a clearer image to recognize the item. In other words, people form an expectation of what something might be, confidence in their expectation grows with longer exposure, making changing our minds more difficult when faced with new information.&lt;/li&gt;
+&lt;li&gt;“People form impressions on the basis of very little information, but once formed, they do not reject or change them unless they obtain rather solid evidence.”&lt;/li&gt;
+&lt;li&gt;Becomes a bigger problem when information is sparse or nonexistent and new information trickles in — form the wrong conclusion early based on sparse info, don’t change your mind as new info rolls in…until it’s too late.&lt;/li&gt;
+&lt;li&gt;One solution is to try to withhold judgment as long as possible or as long as new information is coming in.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Our accuracy takes the biggest hit when dealing with highly complex, ambiguous situations.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“Intelligence seeks to illuminate the unknown.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Our preconceptions make being objective practically impossible.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;3 Ways to Learn:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;By Rote: frequent repetition until it can be repeated from memory.&lt;/li&gt;
+&lt;li&gt;By Assimilation: teaching new information by tying it to previously learned information.&lt;/li&gt;
+&lt;li&gt;By Mnemonic Device: a way of organizing information to make it easier to remember.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The best way to deal with complex problems is to externalize it. Write it out. Break the problem down into parts, then work through each individual part, while keeping sight of the whole problem.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Our memory is affected by the order we learn something, the amount of time we spend on something, the credibility of the information, and the importance of it when we learned it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Uncertainty means always dealing with incomplete knowledge.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;How Analysts Generate and Evaluate Hypotheses:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Situational Logic:
+&lt;ul&gt;
+&lt;li&gt;Start with known facts about the current situation, then identify the consequences.&lt;/li&gt;
+&lt;li&gt;Deals with tracing cause-effect or means-ends relationships.&lt;/li&gt;
+&lt;li&gt;Weakness: 1) Difficult to figure out how other people might think or behave because we assume they do so like us. 2) Fails to consider historical knowledge — how things played out in similar past events — because it only focuses on the current situation.&lt;/li&gt;
+&lt;li&gt;Situational logic is better for estimating short-term outcomes of events.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Applying Theory:
+&lt;ul&gt;
+&lt;li&gt;A theory is formed from many past examples that lead to similar outcomes. It states that given certain conditions, certain results will follow based on a reasonable probability.&lt;/li&gt;
+&lt;li&gt;A theory allows you to quickly separate signals from noise. It helps pick out the important points to a complex problem awash in massive amounts of information. It’s most handy in filtering out unimportant information.&lt;/li&gt;
+&lt;li&gt;Weakness: It often fails to identify time frames in the analysis. It may accidentally filter out important information.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Comparison:
+&lt;ul&gt;
+&lt;li&gt;It compares the current situation to similar past events in order to understand possible outcomes. The past events help fill gaps where information is unavailable.&lt;/li&gt;
+&lt;li&gt;Often relies on historical analogies.&lt;/li&gt;
+&lt;li&gt;Unlike a theory, it’s used when the comparison sample size is small.&lt;/li&gt;
+&lt;li&gt;Weakness:
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;A historical event might be so strong that it influences your view of the outcome from the start. Analysis of the current event will forecast a similar fate to the past event.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;It admits not only to a lack of current information to understand the present problem, but also a lack of historical precedent to understand it.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;can lead to misusing historical events, by picking what your most familiar with, by picking the first similar historical event you come across, by lacking historical knowledge, and not researching further.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;It’s like dealing with a situation that’s happened once or twice before and the odds of a similar outcome is far from certain.&lt;/li&gt;
+&lt;li&gt;Comparison is best used to highlight differences, not similarities, in the current problem as it relates to a past event, and not draw conclusions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The goal of data/information analysis is to be as objective as possible. It turns out being objective is almost impossible.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Following the scientific method — present a theory, then seek to disprove it — leads to objectivity.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Less Optimal Decision-Making Strategies (via Alexander George):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Satisficing — Settle for the first “good enough” option rather than studying all the options to find the best.&lt;/li&gt;
+&lt;li&gt;Incrementalism — Look at a narrow range of options that lead to marginal change rather than considering all the options including those that lead to dramatic change.&lt;/li&gt;
+&lt;li&gt;Consensus — Pick the option that gets the most agreement from others or what they want to hear.&lt;/li&gt;
+&lt;li&gt;Reasoning by Analogy — Pick the option that avoids a past error or repeats a past success.&lt;/li&gt;
+&lt;li&gt;Principles or Maxims — Use a rule of thumb to separate a “good” option from a “bad” option.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Failures in Decision Making:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Selective Perception: We tend to see what we want to see, not what we need to see. We overlook information that doesn’t fit what we’re looking for, however relevant it is. It’s best to focus on multiple theories at once rather than one when researching information. Not focusing on a single theory means you’re less likely to miss important information that fits other hypotheses.&lt;/li&gt;
+&lt;li&gt;A big hurdle in theory generation is not coming up with a full range of potential outcomes. Most people take a lazy approach. They fail to put the time or effort into generating enough potential outcomes to a problem.&lt;/li&gt;
+&lt;li&gt;Diagnosticity: “Evidence is diagnostic when it influences an analyst’s judgment on the relative likelihood of the various hypotheses. If an item of evidence seems consistent with all the hypotheses, it may have no diagnostic value at all. It is a common experience to discover that most available evidence really is not very helpful, as it can be reconciled with all the hypotheses.”&lt;/li&gt;
+&lt;li&gt;Disproving Hypotheses: The goal should be to disprove theories, especially our favorite, rather than confirm them. The problem is that seeking disconfirming evidence doesn’t come naturally. So when we find disconfirming evidence we discount it, question its credibility, and/or write it off as an anomaly. When dealing with probabilistic outcomes, disproving outcomes is more beneficial than confirming outcomes, because oftentimes relevant information confirms multiple outcomes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Is More Information Better?:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Key #1: “Once an experienced analyst has the minimum information necessary to make an informed judgment, obtaining additional information generally does not improve the accuracy of his or her estimates. Additional information does, however, lead the analyst to become more confident in the judgment, to the point of overconfidence.”&lt;/li&gt;
+&lt;li&gt;Key #2: “Experienced analysts have an imperfect understanding of what information they actually use in making judgments. They are unaware of the extent to which their judgments are determined by a few dominant factors, rather than by the systematic integration of all available information. Analysts actually use much less of the available information than they think they do.”&lt;/li&gt;
+&lt;li&gt;In general, more information does not improve accuracy. However, in some cases it does, but also in some cases more information — especially contradictory info — decreases confidence in our analysis.&lt;/li&gt;
+&lt;li&gt;An Experiment: Horse handicappers were shown 88 variables for a past performance chart of horses. Things like the weight carried, race finishes (1st, 2nd, 3rd), jockey’s record, time since a horses last race. The handicappers had to identify the five most important variables if he were limited to just five per horse in order to handicap a race. Then they were asked to do the same thing for 10, 20, and 40 variables if limited to those amounts to handicap races. Each handicapper was then given real data based on the five variables he chose and asked to predict each race. They were also asked to rate the confidence in their accuracy from 0 to 100. The same was done for the 10, 20, and 40 variables. The results showed that average accuracy did not change as the information increased, but the handicapper confidence in their accuracy increased with more information. In other words, more information led to overconfidence.&lt;/li&gt;
+&lt;li&gt;An Experiment: Psychologists were given a case of a normal individual divided into four sections. They were asked to judge the case file and answer 25 questions on the personality of the person. The results show that more information did not improve accuracy in the questions but did increase confidence in their answers.&lt;/li&gt;
+&lt;li&gt;An Experiment: Doctors were asked how they made medical diagnoses. Doctors that prioritized being thorough with data were less accurate than doctors that approached diagnosis by identifying and testing hypotheses. Adding more data did not improve accuracy. Identifying, testing, and refuting hypotheses was actually more effective.&lt;/li&gt;
+&lt;li&gt;New information that confirms existing variables increases our confidence. Indepth information tends to be more persuasive to authors and readers.&lt;/li&gt;
+&lt;li&gt;New information that introduces new variables is unlikely to improve accuracy in estimates.&lt;/li&gt;
+&lt;li&gt;New information that changes variables critical to estimates has an impact but it depends on the amount of new information and the confidence in the accuracy of the new information.&lt;/li&gt;
+&lt;li&gt;New information that shifts the importance of a variable affects confidence and estimates.&lt;/li&gt;
+&lt;li&gt;More data backing up a conclusion leads to overconfidence.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Learning to make better decisions requires constant feedback. Assess past decisions by linking accuracy in a decision with variables used to come to the decision. This works when the outcomes can be easily tied to specific variables, like in blackjack. In complex systems, with hundreds or thousands of variables involved, this can be difficult to impossible.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Most analysis fails because we confuse signal for noise. Relevant information is discounted, misinterpreted, ignored, because of biases. Our biases limit how we view information.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;How to Stay Objective:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Sensitivity Analysis&lt;/strong&gt; — Question assumptions. Try to disprove them. Ask what would make your assumptions out of date? Has it already happened? What would make you change your mind? If you fail to come up with an answer then your mind isn’t open.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Identify Alternatives&lt;/strong&gt; — Seek out people who disagree with you.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Avoid Mirror-Images&lt;/strong&gt; — Don’t assume that others will think or behave in the same way as you. Avoid the “If I were so and so, they would do X, Y, and Z.”&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Seek Out Different Perspectives&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Thinking Backwards&lt;/strong&gt; — Start with the end in mind and work backward. Pick an alternative outcome and assume it happened. Then look back and explain how it happened. It changes the question from “what might happen” to “how it might happen.” Works great for low-probability, high-impact events.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Crystal Ball&lt;/strong&gt; — Assume you have a crystal ball that can predict the future, only it predicts that your assumption is wrong. Explain how the crystal ball is right. It forces you to try a disprove your assumption or poke holes in it, at least.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Role-Playing&lt;/strong&gt; — Take on the role of another person and act out that person’s actions. It requires a group environment.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Devil’s Advocate&lt;/strong&gt; — Bring in someone to argue the other side.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Know When to Change Your Mind:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Learn from Surprises&lt;/strong&gt; — Keep track of unexpected events rather than discount or ignore it and try to explain it. A pattern of surprises might be a clue that your thinking needs to change.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Strategic Assumptions vs. Tactical Indicators&lt;/strong&gt; — When indicators (like data points) disagree with assumptions try giving more weight to indicators then the assumptions. Maybe don’t use said indicator to sway a decision but rather to stay more alert.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Boost Creative Thinking:
+&lt;ul&gt;
+&lt;li&gt;Defer Judgment — The most important. Hold off judgment until all ideas are written down. Judgment sours creativity. Separate idea generation from the evaluation.&lt;/li&gt;
+&lt;li&gt;Quantity Leads to Quality —  The first ideas are the most typical, obvious, common ones. Coming up with as many ideas as possible inevitably comes up with a few quality ideas.&lt;/li&gt;
+&lt;li&gt;No Constraints — Make it as free-thinking as possible.&lt;/li&gt;
+&lt;li&gt;Cross Fertilization — Combine ideas to form new ideas.&lt;/li&gt;
+&lt;li&gt;These are best done in groups — brainstorming sessions — within an organizational environment that supports the process.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Decomposition — breaks a problem down into separate parts i.e. divide and conquer.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Externalization — gets the problem out of your head and onto paper. It’s most beneficial with complex problems because the many variables become too hard to track without it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lists, outlines, tables, diagrams, flow charts, and matrices work in a similar way to Franklin’s pro/con list.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Analysis of Competing Hypotheses:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Identify all the possible hypotheses. A group works best. Don’t overlook unproven hypotheses. Greater uncertainty in the outcome should lead to more hypotheses not less.&lt;/li&gt;
+&lt;li&gt;List the evidence/arguments for and against each one. Think about what evidence is missing too. Ask if a specific hypothesis is true, what evidence should exist? What evidence should not exist? What evidence should show up eventually?&lt;/li&gt;
+&lt;li&gt;Create matrix — hypotheses across the top, evidence down the side — to see which evidence overlaps into multiple hypotheses compared to evidence that is unique and helpful to one hypothesis (diagnosticity). Ask is the evidence consistent, inconsistent, or irrelevant? Add a probability scale to the evidence based on its importance.&lt;/li&gt;
+&lt;li&gt;Refine the matrix by reconsidering hypotheses and deleting evidence with no unique value.&lt;/li&gt;
+&lt;li&gt;Draw tentative conclusions and try to disprove the hypotheses. Accept only hypotheses that can not be rejected.&lt;/li&gt;
+&lt;li&gt;Analyze the sensitivity of conclusions. Ask what are the consequences if the evidence is wrong or incorrect? Are there alternative explanations? Is fraud or deception a possible alternative?&lt;/li&gt;
+&lt;li&gt;Report conclusions, including the probability of all the hypotheses.&lt;/li&gt;
+&lt;li&gt;Identify future points to reassess events. Be specific about what to watch for or what would change your mind.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Analysis of competing hypotheses won’t guarantee correct answers. Uncertainty means there’s always a chance of being wrong. It’s about having a rational process that should increase the odds of being right. It also makes it easier to audit the process and make improvements.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Biases:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cognitive biases&lt;/strong&gt; are subconscious mental errors caused by over-simplified rules of thumb that usually help us make quicker decisions. Under certain circumstances, those rules of thumb produce faulty decisions. Being aware of the bias won’t change the poor decision either. So biases are difficult to overcome.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Information we experience directly&lt;/strong&gt; — we personally see, hear, etc. — has a greater impact than more informative information received secondhand. Things we experience personally are more memorable than the events we read about. Stories and anecdotes have a bigger impact than numbers. Statistical data lacks the vivid detail to elicit a memorable image, so it’s often overlooked. Even popular sayings back this up. “Seeing is believing.” or “Don’t believe everything you read.” It biases how we view information.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Common Error&lt;/strong&gt;: The Sample Size of One — We let the experience of a single outcome outweigh the statistical probability of an outcome over a larger sample size. One bad shopping experience, one bad meal at a restaurant, one bad story about a particular car changes our thinking about that store, restaurant, or car model. Testimonials from close family or friends or the “Man-Who” Syndrome (“I know a man who…”) work in a similar way. Despite the statistical evidence, a single outlier experience outweighs the data.&lt;/li&gt;
+&lt;li&gt;It’s difficult to recognize important missing or incomplete information and factor it into our analysis. The solution is to identify important variables in advance and use it to track missing information. The lack of specific information may support or refute certain outcomes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Oversensitive to Consistency&lt;/strong&gt; — a consistent pattern is usually helpful but could be deceptive under certain situations like if the information is highly correlated to something else that’s not known yet or it’s drawn from a small sample size.&lt;/li&gt;
+&lt;li&gt;We tend to accept or reject information completely without weighing our confidence in the accuracy of the information or its source. Rather than saying we’re 60% or 70% certain about a piece of information, we treat it as 100% certain or 0% certain, which can lead to over or under-confidence.&lt;/li&gt;
+&lt;li&gt;False impressions persist after they’ve been discredited. For example, test subjects misled about their success or failure at performing a task, continued to believe in their ability or lack of ability even after they were told the truth. A similar phenomena was found in observers of experiments.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The Scientist Versus the Historian&lt;/strong&gt;: a scientist starts with a theory and sets out to disprove it with data, accepting it when it can’t be rejected. A historian creates a story out of a few pieces of data. A historian may overlook data in order to make the story coherent. That coherence can lead to biases. It implies order, patterns, or relationships that may not exist.&lt;/li&gt;
+&lt;li&gt;We often seek out causes for random events because we prefer order. For example, during WWII people tried to explain the pattern of the German bombing of London. They used those explanations to decide where to live and which shelters to use. After the war, the bombings were shown to be randomly distributed. People focused on the bomb hits that fit their explanation and ignored the rest.&lt;/li&gt;
+&lt;li&gt;We underestimate how small causes can lead to large effects. Accidents, unintended consequences, coincidences get downplayed for more lofty or conspiratorial explanations. It’s another attempt to bring order to chance or randomness.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The Fallacy of Identity&lt;/strong&gt; — we assume that the cause must resemble its effect. We use a rule of thumb that compares similar attributes between cause and effect to make judgments. We “tend to assume that economic events have primarily economic causes, that big events have important consequences, and that little events cannot affect the course of history. Such correspondence between cause and effect makes a more logical and persuasive–a more coherent–narrative, but there is little basis for expecting such inferences to correspond to historical fact.” It leads to conspiracy theories. We try to explain a big event with a similarly big cause.&lt;/li&gt;
+&lt;li&gt;Internal causes of behavior are personality, attitude, and beliefs. External causes are incentives, peer or social pressure, and role requirements that are situation-specific.&lt;/li&gt;
+&lt;li&gt;We put more weight on the internal causes of behavior and less weight on external causes. It’s also dependent on whether it’s someone else’s behavior or our own. Our own behavior is seen as being influenced by external factors but other’s behavior is seen as internal factors. We tend to explain our own behavior as being influenced by specific situations.&lt;/li&gt;
+&lt;li&gt;We overestimate how much we influence the behavior of others. We overlook unintended consequences and assume our actions had the desired effect.&lt;/li&gt;
+&lt;li&gt;We also believe that our actions caused our successes but not our failures.&lt;/li&gt;
+&lt;li&gt;We also overestimate our importance in other people’s actions. Again, we overlook unintended consequences and assume that actions that hurt us, were intended to hurt, not an unfortunate side effect of a decision.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Illusory Correlation&lt;/strong&gt; — “Correlation alone does not necessarily imply causation. For example, two events might co-occur because they have a common cause, rather than because one causes the other. But when two events or changes do co-occur, and the time sequence is such that one always follows the other, people often infer that the first caused the second. Thus, inaccurate perception of correlation leads to inaccurate perception of cause and effect.”&lt;/li&gt;
+&lt;li&gt;We tend to focus on things that support the existence of a relationship, but ignore the things that don’t support it.&lt;/li&gt;
+&lt;li&gt;We’re bad at estimating and calculating probabilities.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Availability Rule&lt;/strong&gt; — a rule of thumb used to estimate probability based on easily they can recall or how familiar they are with similar events. Generally, if something occurs often, its easier to remember, and likely to continue occurring often. Unless, our ability to remember or imagine something has nothing to do with its probability of happening. Problems arise because we tend to remember certain events better — recent events, events we were personally involved in, important events, etc. — and it affects our judgment.&lt;/li&gt;
+&lt;li&gt;“The act of constructing a detailed scenario for a possible future event makes that event more readily imaginable and, therefore, increases its perceived probability.” It can lead to taking unlikely scenarios too seriously.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Anchoring&lt;/strong&gt; — when we use a starting point, like using a past estimate, to make a new estimate but rather than adjust the starting point based on new information, it acts as an anchor preventing adjustment. So estimates that start too low (too high) end up too low (too high).&lt;/li&gt;
+&lt;li&gt;Awareness of an anchoring bias won’t fix the problem. The best way to avoid the problem is to not use any prior estimates as a starting point. Start from scratch. Using Bayesian statistics might be another option.&lt;/li&gt;
+&lt;li&gt;We overuse subjective probabilities and underuse statistical probabilities. In other words, we rely on arbitrary words — possible, probable, likely, unlikely, could, etc. — that are too subjective, rather than actual numbers. Ask a bunch of people to put “probable” into percentage terms and you’ll get a wide range of answers. Use percentages or odds in place of or in brackets after ambiguous words to avoid confusion.&lt;/li&gt;
+&lt;li&gt;Time frames like “at this time” or “in the short term” can be similarly too subjective.&lt;/li&gt;
+&lt;li&gt;We’re bad at assessing the probability of a series of events — where each event has its own probability — when estimating the final outcome. The proper way is to multiply the probability of each event to get the final estimated probability. So the chance of getting three heads in a row while tossing a coin is .5 x .5  x .5 or .125 or 12.5%. Also, the event with the lowest probability sets the upper limit of the probability for the entire series.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Base Rate Fallacy&lt;/strong&gt; — base rates highlight the probability of a thing occurring based on a large sample size of data. The fallacy ignores the data unless it fits with data specific to the situation at hand.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The Planning Fallacy&lt;/strong&gt; — we overestimate our ability to finish a plan or project in a set amount of time despite past experience suggesting otherwise. It’s a perfect example of the base rate fallacy.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hindsight Bias&lt;/strong&gt; — we overestimate our accuracy, after the fact, in predicting an outcome before it happened. We also underestimate how much we learned from things we read, watched, etc. And when looking back at past outcomes, we view it as being obvious or foreseeable when, in fact, it wasn’t at the time.&lt;/li&gt;
+&lt;li&gt;An Experiment: Test subjects were asked to estimate the probability of several events occurring during President Nixon’s trip to Peking and Moscow in 1972. Afterward, they were asked at varying periods to repeat their previous estimates to each event and whether the event actually occurred or not during the President’s trip. The hindsight bias was evident at just three to six months after the trip. 84% claimed higher estimates than their original estimate to events that did occur, and lower estimates to events that did not occur.&lt;/li&gt;
+&lt;li&gt;We overestimate how much we previously expected an event to occur and underestimate how much we previously expected events that eventually did not occur. At some point after an event, knowing the outcome changes our memory of how much we previously expected said outcome. Our memory fades as time elapses which increases the effect of the bias.&lt;/li&gt;
+&lt;li&gt;We underestimate the impact of new information. It’s the “I knew it all along…” bias.&lt;/li&gt;
+&lt;li&gt;An Experiment: Test subjects were asked 75 questions based on facts from almanacs and encyclopedias and assigned a confidence percentage to each answer. Afterward, the subjects were divided into three groups. The first group was given 25 of the previous questions and asked to repeat their prior answers. The second group was given the same 25 questions, but with the correct answers circled, and asked to repeat their prior answers. The third group was given 25 new questions, just as difficult as the previous ones, with the correct answers marked and asked to give their answers as if they didn’t know the correct answer. The third group showed the most significant results. The number of correct answers far exceeded what they should have gotten correct had they not been given the correct answers in advance. They over-exaggerated knowing the answers and their confidence in knowing it. Said another way, they underestimated what they learned and how much it helped them answer correctly.&lt;/li&gt;
+&lt;li&gt;We tend to think that once an event happens that it is was more easily foreseeable than it actually was.&lt;/li&gt;
+&lt;li&gt;An Experiment: Test subjects were divided into five groups. Each group received a summary of an event — between the British and Gurkhas in 1814 — with four possible outcomes. One group received the summary with all four possible outcomes. The other four groups received the summary and the four possible outcomes but with a new sentence added highlighting one outcome. So four groups, four sentences highlighting a different outcome. The groups were asked to estimate the probability of each outcome. The results showed that groups given a highlighted outcome gave a higher probability (almost double) to those outcomes.&lt;/li&gt;
+&lt;li&gt;One possible solution to hindsight bias is to ask: Would I be surprised if the opposite occurred? Would it be predictable if the opposite occurred?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Analysis Checklist&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Define the Problem&lt;/strong&gt; — make sure you’re asking the right questions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Generate Hypotheses&lt;/strong&gt; — as many as possible and hold off judgment.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Collect Information&lt;/strong&gt; — collect information related to all hypotheses not just the most likely.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Evaluate Hypotheses&lt;/strong&gt; — disprove hypotheses rather than confirm them.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Select the Most Likely Hypotheses&lt;/strong&gt; — cite arguments for and against it, include the odds of it happening, your confidence in the conclusion, and do the same for the rejected hypotheses.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Monitor for New Information&lt;/strong&gt; — Be specific about what to look for in advance. Watch for surprises. Situations change in a complex world.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;quotes&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quotes&quot; aria-label=&quot;quotes permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Quotes&lt;/h1&gt;
+&lt;p&gt;“A fundamental question posed in any postmortem investigation of intelligence failure is this: Given the information that was available at the time, should analysts have been able to foresee what was going to happen? Unbiased evaluation of intelligence performance depends upon the ability to provide an unbiased answer to this question.”&lt;/p&gt;
+&lt;p&gt;“Knowing the outcome of a situation makes it harder to imagine other outcomes that might have been considered.”&lt;/p&gt;
+&lt;p&gt;“When base rates are not well known but must be inferred or researched, they are even less likely to be used.”&lt;/p&gt;
+&lt;p&gt;“When analysts make quick, gut judgments without really analyzing the situation, they are likely to be influenced by the availability bias. The more a prospective scenario accords with one’s experience, the easier it is to imagine and the more likely it seems.”&lt;/p&gt;
+&lt;p&gt;“History is, by and large, a record of what people did, not what they failed to do.” — E.H. Carr&lt;/p&gt;
+&lt;p&gt;“When observing another’s behavior, people are too inclined to infer that the behavior was caused by broad personal qualities or dispositions of the other person and to expect that these same inherent qualities will determine the actor’s behavior under other circumstances. Not enough weight is assigned to external circumstances that may have influenced the other person’s choice of behavior.”&lt;/p&gt;
+&lt;p&gt;“As a general rule, biased attribution of causality helps sow the seeds of mistrust and misunderstanding between people and between governments. We tend to have quite different perceptions of the causes of each other’s behavior.”&lt;/p&gt;
+&lt;p&gt;“People generally do not accept the notion of chance or randomness.”&lt;/p&gt;
+&lt;p&gt;“People expect patterned events to look patterned, and random events to look random, but this is not the case. Random events often look patterned… However, events will almost never be perceived intuitively as being random; one can find an apparent pattern in almost any set of data or create a coherent narrative from any set of events.”&lt;/p&gt;
+&lt;p&gt;“Because of a need to impose order on our environment, we seek and often believe we find causes for what are actually accidental or random phenomena… People also tend to assume that causes are similar to their effects, in the sense that important or large effects must have large causes.”&lt;/p&gt;
+&lt;p&gt;“People do not have much intuitive feel for how large a sample has to be before they can draw valid conclusions from it. The so-called law of small numbers means that, intuitively, we make the mistake of treating small samples as though they were large ones.”&lt;/p&gt;
+&lt;p&gt;“We seldom take the absence of evidence into account.”&lt;/p&gt;
+&lt;p&gt;“Information that is vivid, concrete, and personal has a greater impact on our thinking than pallid, abstract information that may actually have substantially greater value as evidence.”&lt;/p&gt;
+&lt;p&gt;“The most probable hypothesis is usually the one with the least evidence against it, not the one with the most evidence for it.”&lt;/p&gt;
+&lt;p&gt;“Doubt is not a pleasant state, but certainty is a ridiculous one.” — Voltaire&lt;/p&gt;
+&lt;p&gt;“To get over this, my way is to divide half a sheet of paper by a line into two columns; writing over the one Pro, and over the other Con. Then, during three or four days of consideration, I put down under the different heads short hints of the different motives, that at different times occur to me, for or against the measure. When I have thus got them all together in one view, I endeavor to estimate their respective weights; and where I find two, one on each side, that seem equal, I strike them both out. If I find a reason pro equal to some two reasons con, I strike out the three…and thus proceeding I find at length where the balance lies; and if, after a day or two of further consideration, nothing new that is of importance occurs on either side, I come to a determination accordingly. And, though the weight of reasons cannot be taken with the precision of algebraic quantities, yet when each is thus considered, separately and comparatively, and the whole lies before me, I think I can judge better, and am less liable to make a rash step, and in fact I have found great advantage from this kind of equation.” — Benjamin Franklin&lt;/p&gt;
+&lt;p&gt;Minds are like parachutes. They only function when they are open.&lt;/p&gt;
+&lt;p&gt;“A new idea is the beginning, not the end, of the creative process.”&lt;/p&gt;
+&lt;p&gt;“New ideas result from the association of old elements in new combinations. Previously remote elements of thought suddenly become associated in a new and useful combination.”&lt;/p&gt;
+&lt;p&gt;“Information that is consistent with an existing mind-set is perceived and processed easily and reinforces existing beliefs. Because the mind strives instinctively for consistency, information that is inconsistent with an existing mental image tends to be overlooked, perceived in a distorted manner, or rationalized to fit existing assumptions and beliefs.”&lt;/p&gt;
+&lt;p&gt;“Experts overestimate the importance of factors that have only a minor impact on their judgment and underestimate the extent to which their decisions are based on a few major variables. In short, people’s mental models are simpler than they think, and the analyst is typically unaware not only of which variables should have the greatest influence, but also which variables actually are having the greatest influence.”&lt;/p&gt;
+&lt;p&gt;“When resorting to an analogy, they tend to seize upon the first that comes to mind. They do not research more widely. Nor do they pause to analyze the case, test its fitness, or even ask in what ways it might be misleading.” — Earnest May&lt;/p&gt;
+&lt;p&gt;“If information does not fit into what people know, or think they know, they have great difficulty processing it.”&lt;/p&gt;
+&lt;p&gt;“It is much easier after the fact to sort the relevant from the irrelevant signals. After the event, of course, a signal is always crystal clear. We can now see what disaster it was signaling since the disaster has occurred, but before the event it is obscure and pregnant with conflicting meanings.” — Roberta Wohlstetter&lt;/p&gt;
+&lt;p&gt;“One strategy too often used by intelligence analysts is described as “satisficing”– choosing the first hypothesis that appears good enough rather than carefully identifying all possible hypotheses and determining which is most consistent with the evidence.”&lt;/p&gt;
+&lt;p&gt;“…historical analogies often precede, rather than follow, a careful analysis of a situation.” — Robert Jarvis&lt;/p&gt;
+&lt;p&gt;“The tendency to relate contemporary events to earlier events as a guide to understanding is a powerful one. Comparison helps achieve understanding by reducing the unfamiliar to the familiar.”&lt;/p&gt;
+&lt;p&gt;“The question is not whether one’s prior assumptions and expectations influence analysis, but only whether this influence is made explicit or remains implicit.”&lt;/p&gt;
+&lt;p&gt;“Objectivity is gained by making assumptions explicit so that they may be examined and challenged, not by vain efforts to eliminate them from analysis.”&lt;/p&gt;
+&lt;p&gt;The simultaneous evaluation of multiple, competing hypotheses permits a more systematic and objective analysis than is possible when an analyst focuses on a single, most-likely explanation or estimate.&lt;/p&gt;
+&lt;h1 id=&quot;references&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#references&quot; aria-label=&quot;references permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;References&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://novelinvestor.com/notes/psychology-of-intelligence-analysis-by-richards-j-heuer-jr/&quot;&gt;novelinvestor summary&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Quantitative Momentum by Wesley Gray and Jack Vogel summary]]></title><description><![CDATA[Gray and Vogel introduce the theory behind momentum, what drives the effect, why it should persist, and how to build an improved…]]></description><link>https://tonytvo.github.io/quantitative-momentum-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/quantitative-momentum-summary/</guid><pubDate>Tue, 26 Jul 2022 22:12:03 GMT</pubDate><content:encoded>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Gray and Vogel introduce the theory behind momentum, what drives the effect, why it should persist, and how to build an improved quantitative momentum strategy that exploits the sustainable edge in investor misbehavior.&lt;/p&gt;
