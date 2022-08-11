@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 10 Aug 2022 17:22:57 GMT</lastBuildDate><item><title><![CDATA[value investing summary]]></title><description><![CDATA[bruce greenwald’s value investing value investing process  circle of competence - “know what you know” organize valuation components by…]]></description><link>https://tonytvo.github.io/value-investing-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/value-investing-summary/</guid><pubDate>Tue, 09 Aug 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;bruce-greenwalds-value-investing&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#bruce-greenwalds-value-investing&quot; aria-label=&quot;bruce greenwalds value investing permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;bruce greenwald’s value investing&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 11 Aug 2022 02:45:15 GMT</lastBuildDate><item><title><![CDATA[value investing summary]]></title><description><![CDATA[bruce greenwald’s value investing value investing process  circle of competence - “know what you know” organize valuation components by…]]></description><link>https://tonytvo.github.io/value-investing-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/value-investing-summary/</guid><pubDate>Tue, 09 Aug 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;bruce-greenwalds-value-investing&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#bruce-greenwalds-value-investing&quot; aria-label=&quot;bruce greenwalds value investing permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;bruce greenwald’s value investing&lt;/h1&gt;
 &lt;h2 id=&quot;value-investing-process&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#value-investing-process&quot; aria-label=&quot;value investing process permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;value investing process&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;span
@@ -2687,10 +2687,10 @@ The mass psychology has a way of taking hold of every new generation of investor
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;The best way to deal with complex problems is to externalize it. Write it out. Break the problem down into parts, then work through each individual part, while keeping sight of the whole problem.&lt;/p&gt;
+&lt;p&gt;The best way to deal with complex problems is to externalize them. Write it out. Break the problem into parts, then work through each while keeping sight of the whole problem.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Our memory is affected by the order we learn something, the amount of time we spend on something, the credibility of the information, and the importance of it when we learned it.&lt;/p&gt;
+&lt;p&gt;Our memory is affected by the order we learn something, the amount of time we spend on something, the credibility of the information, and the importance of it when we learn it.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Uncertainty means always dealing with incomplete knowledge.&lt;/p&gt;
@@ -2700,9 +2700,9 @@ The mass psychology has a way of taking hold of every new generation of investor
 &lt;ul&gt;
 &lt;li&gt;Situational Logic:
 &lt;ul&gt;
-&lt;li&gt;Start with known facts about the current situation, then identify the consequences.&lt;/li&gt;
+&lt;li&gt;Start with facts about the current situation, then identify the consequences.&lt;/li&gt;
 &lt;li&gt;Deals with tracing cause-effect or means-ends relationships.&lt;/li&gt;
-&lt;li&gt;Weakness: 1) Difficult to figure out how other people might think or behave because we assume they do so like us. 2) Fails to consider historical knowledge — how things played out in similar past events — because it only focuses on the current situation.&lt;/li&gt;
+&lt;li&gt;Weakness: 1) It is difficult to figure out how other people might think or behave because we assume they do like us. 2) Fails to consider historical knowledge — how things played out in similar past events — because it only focuses on the current situation.&lt;/li&gt;
 &lt;li&gt;Situational logic is better for estimating short-term outcomes of events.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -2715,7 +2715,7 @@ The mass psychology has a way of taking hold of every new generation of investor
 &lt;/li&gt;
 &lt;li&gt;Comparison:
 &lt;ul&gt;
-&lt;li&gt;It compares the current situation to similar past events in order to understand possible outcomes. The past events help fill gaps where information is unavailable.&lt;/li&gt;
+&lt;li&gt;It compares the current situation to similar past events to understand possible outcomes. The past events help fill gaps where information is unavailable.&lt;/li&gt;
 &lt;li&gt;Often relies on historical analogies.&lt;/li&gt;
 &lt;li&gt;Unlike a theory, it’s used when the comparison sample size is small.&lt;/li&gt;
 &lt;li&gt;Weakness:
@@ -2727,18 +2727,18 @@ The mass psychology has a way of taking hold of every new generation of investor
 &lt;/li&gt;
 &lt;li&gt;
 &lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;It admits not only to a lack of current information to understand the present problem, but also a lack of historical precedent to understand it.&lt;/li&gt;
+&lt;li&gt;It admits to a lack of current information to understand the present problem and a lack of historical precedent.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;ol start=&quot;3&quot;&gt;
-&lt;li&gt;can lead to misusing historical events, by picking what your most familiar with, by picking the first similar historical event you come across, by lacking historical knowledge, and not researching further.&lt;/li&gt;
+&lt;li&gt;can lead to misusing historical events by picking what you are most familiar with, by picking the first similar historical event you come across, by lacking historical knowledge, and not researching further.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;It’s like dealing with a situation that’s happened once or twice before and the odds of a similar outcome is far from certain.&lt;/li&gt;
-&lt;li&gt;Comparison is best used to highlight differences, not similarities, in the current problem as it relates to a past event, and not draw conclusions.&lt;/li&gt;
+&lt;li&gt;It’s like dealing with a situation that’s happened once or twice before, and the odds of a similar outcome are far from certain.&lt;/li&gt;
+&lt;li&gt;Comparison is best used to highlight differences, not similarities, in the current problem as it relates to a past event and not conclude.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
