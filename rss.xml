@@ -1,4 +1,73 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 20 Aug 2022 14:19:04 GMT</lastBuildDate><item><title><![CDATA[how to talk to kids will listen and listen so kids will talk By Adele Faber and Elaine Mazlish summary]]></title><description><![CDATA[Quotes References https://www.fatherly.com/play/the-classic-parenting-book-how-to-talk-so-kids-will-listen-in-under-1000-words https…]]></description><link>https://tonytvo.github.io/how-to-talk-so-kids-listen/</link><guid isPermaLink="false">https://tonytvo.github.io/how-to-talk-so-kids-listen/</guid><pubDate>Wed, 17 Aug 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;quotes&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quotes&quot; aria-label=&quot;quotes permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Quotes&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 21 Aug 2022 15:34:54 GMT</lastBuildDate><item><title><![CDATA[phan tich tai chinh kinh doanh CGBA]]></title><description><![CDATA[Quotes References https://novelinvestor.com/notes/the-acquirers-multiple-by-tobias-carlisle/]]></description><link>https://tonytvo.github.io/phan-tich-tai-chinh-kinh-doanh/</link><guid isPermaLink="false">https://tonytvo.github.io/phan-tich-tai-chinh-kinh-doanh/</guid><pubDate>Sun, 21 Aug 2022 22:12:03 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d786560d7e4158b226977d7f31a57844/91608/overview-cgba.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.32911392405063%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACPklEQVQoz12QS47TQBRFsxq2wwIYILEGRqyAKWLEBDbAACEhmDBCYkQ6Tbo75NdxHMexXeVP2Y7L5e9BsZtB86RXJd0qHR3diS41MkvZBz6q1CS6QKYKpQtyUxIkMdE55xiHRFmGqStyY3j95QfP3n3m6ZsvvP2+BlqqqmZSty1+mrA4HsibBlUZrMBDGYPpxjdZFkyPNm6qqOjRLTx//40nrz4wefGJlx/vuEzb9UzSNGW5Wg1B33XDPZ4QF5rbQCCKkp3MEbpCCIciSxB5hZskQx6fa8q2oe06JkopZrPZCLoA+35cIMw0d44kMSWhY5HqgvvAw1cJ/0/R1HT9g+Gf5fJBuRvs0kt3aUp26VQliChiHwSUfYfWesg9lXCQAt22A6homhF4MZzP5wPQNDWe77HcrDhJQcNoGiUx6+0GXwiaB/uzMbgnlzSKaLqO8z/DC/D6+nr4lBmDLXys45FYKaquJasqnDhk49jsZUBeV7R9T6Y1XihxpeBcVY8Nb29uBpeF43JQihv3RJCfKZuamXVgF8f8dlw2UcRWCJTWWDJkF8WsAsFOhiS1GYFJkjCdTh8VfOkxriqkLhGVIexqoq6hoKeBYS9/akBqTWwMBd0ILLRGhiF1XbO7v2e12TBfLZktFvxaLPi9XrO437JYr1hvt/xZr3C8E1vLYm3t+Hk958f0ipPvDzKTMk3p85xzGGHb9rAH28Y9Hgl8H9/zcBxnzA8H7P2eUEpc1+XkugghOO52WF+/kUyv+At58TnlC3JGDwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;tổng quan phân tích tài chính&quot;
+        title=&quot;tổng quan phân tích tài chính&quot;
+        src=&quot;/static/d786560d7e4158b226977d7f31a57844/f058b/overview-cgba.png&quot;
+        srcset=&quot;/static/d786560d7e4158b226977d7f31a57844/c26ae/overview-cgba.png 158w,
+/static/d786560d7e4158b226977d7f31a57844/6bdcf/overview-cgba.png 315w,
+/static/d786560d7e4158b226977d7f31a57844/f058b/overview-cgba.png 630w,
+/static/d786560d7e4158b226977d7f31a57844/40601/overview-cgba.png 945w,
+/static/d786560d7e4158b226977d7f31a57844/91608/overview-cgba.png 1251w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/33951fdd0641fc34357f47ecc69338de/c7dcc/caydupont.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.32911392405063%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACIElEQVQoz3WSS2/TQBSF86/YwIb/Byv23SMhkGCLBG2l0la0REnaxEkcO3ZsJ34/6nrGnvlQnJaKIq50NNKR7nmM7qBpGtD6gK5DNg1VVZIXOUVZIoVAPIMUkqudx/vlhKPZL95NLjkyhvh5xkApxdgyuZzd4tcVVpYwdG0uVgvOlgZSKx5Ho/vXqkten37m1fEnXn7/2OPFtw/8iHwGXddhBT7LjYtbFYRNzfX0ltFywcLb9IJaa/ayqheFVikuki1vjCFv50O++Bbe/R0odUj41yhNGscE24AwDJ/4KoG7FFrJ/0a27SHh9WLG2WTEusqxspiR5/DTsTg353h1RSruSd0p6XpCVsS0GmaOheF7FMGK1jOohUB16iC4iUOcXUBQV+StoN6tqJ0RIvVJlMLPYn7eTrgypqy2fp9mmyYEZUVdFeh8h2wle61/KgvREEZbvI2N5do9V95r1pFgEzeE+UPlroHch8z/s9s+Vj4dD/l6dclNGnGTRJw7DqeWzYlpYhQJy7zg2vYY+zvGYYJVV5iRj7G6Yb7Yn0t68NgL7hO2XUfdNCitqCU4KYQVbEtou8PBEC4hmEKd9ctxHGPaa0zboSirp4TPK2utMJcL5nODNI6IZMOdaFhZa6azOWGcEEmBkIK1beO6LloptJC0UjKQRYGMYtrq4KK6rndPkoQsy6j3n60UZVH0/L6NfAiRxDF5VdHlOdHxCcl4wm9rfj4cD7wOmwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;caydunt point&quot;
+        title=&quot;caydunt point&quot;
+        src=&quot;/static/33951fdd0641fc34357f47ecc69338de/f058b/caydupont.png&quot;
+        srcset=&quot;/static/33951fdd0641fc34357f47ecc69338de/c26ae/caydupont.png 158w,
+/static/33951fdd0641fc34357f47ecc69338de/6bdcf/caydupont.png 315w,
+/static/33951fdd0641fc34357f47ecc69338de/f058b/caydupont.png 630w,
+/static/33951fdd0641fc34357f47ecc69338de/c7dcc/caydupont.png 641w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;quotes&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quotes&quot; aria-label=&quot;quotes permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Quotes&lt;/h1&gt;
+&lt;h1 id=&quot;references&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#references&quot; aria-label=&quot;references permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;References&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://novelinvestor.com/notes/the-acquirers-multiple-by-tobias-carlisle/&quot;&gt;https://novelinvestor.com/notes/the-acquirers-multiple-by-tobias-carlisle/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[how to talk to kids will listen and listen so kids will talk By Adele Faber and Elaine Mazlish summary]]></title><description><![CDATA[Quotes References https://www.fatherly.com/play/the-classic-parenting-book-how-to-talk-so-kids-will-listen-in-under-1000-words https…]]></description><link>https://tonytvo.github.io/how-to-talk-so-kids-listen/</link><guid isPermaLink="false">https://tonytvo.github.io/how-to-talk-so-kids-listen/</guid><pubDate>Wed, 17 Aug 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;quotes&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quotes&quot; aria-label=&quot;quotes permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Quotes&lt;/h1&gt;
 &lt;h1 id=&quot;references&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#references&quot; aria-label=&quot;references permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;References&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.fatherly.com/play/the-classic-parenting-book-how-to-talk-so-kids-will-listen-in-under-1000-words&quot;&gt;https://www.fatherly.com/play/the-classic-parenting-book-how-to-talk-so-kids-will-listen-in-under-1000-words&lt;/a&gt;&lt;/li&gt;
@@ -363,7 +432,11 @@
 &lt;ul&gt;
 &lt;li&gt;For example, Coca-Cola has a great moat due to its enormous brand value, share of mind&lt;/li&gt;
 &lt;li&gt;Wal-Mart has a wide moat due to its cost structure where it can buy products with large volume from its suppliers at a cheaper price than its competitors.&lt;/li&gt;
-&lt;li&gt;Apple has networks effect: the more people join apple community the more profit it made&lt;/li&gt;
+&lt;li&gt;Apple has networks effect: the more people join apple community the more profit it made
+&lt;ul&gt;
+&lt;li&gt;A company enjoys a network effect advantage when the values of it’s product or service increases with the number of users. Network effect companies are often digital. Facebook, Google, eBay and Western Union are prime examples of such companies. Take Facebook as an example. The more users it has, the greater the reach it has with its ads, the more companies are willing to pay for its reach.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Geico has low cost when price significant to customers&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -371,17 +444,19 @@
 &lt;ul&gt;
 &lt;li&gt;intangible assets such as brands and patents
 &lt;ul&gt;
-&lt;li&gt;Disney is a strong brand and almost everyone in the world recognizes it.&lt;/li&gt;
+&lt;li&gt;Examples of intangible asset advantages include: patents, brand reputation and government licences such as Disney. Tiffany &amp;#x26; Co. is a prime example of a company with an excellent brand reputation. The company’s established brand name provides it with significant pricing power: a necklace from Tiffany &amp;#x26; Co. could easily costs several thousand more than a necklace from a less well-known brand. Vanguard’s patented technique that avoids taxes on mutual funds has enabled it to charge significantly less management fees for its financial products while preventing incumbents from imitating it. Bond rating agencies are great examples of companies that have a significant regulatory advantage. Ratings agencies must be granted a “Nationally Recognized Statistical Ratings Organization” recognition before they can practice in the United States. This stringent regulatory requirement limits the playing field and allows ratings agencies to enjoy absurd profit margins (Moody’s was 50% according to the book).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;low cost
 &lt;ul&gt;
 &lt;li&gt;Wal-Mart can buy at quantities and prices that competitors can’t match.&lt;/li&gt;
+&lt;li&gt;Cost advantages can stem from four sources: cheaper processes, better locations, unique assets and greater scale. Process based advantages are often less desirable because other companies might attempt to copy their process. These types of advantages are the most salient in industries where price plays a critical part in the customer’s purchasing decision. According to the author, Southwest Airlines had a process-based cost advantage moat in the airline industry. The company used only one type of jet, minimized ground time and rewarded employee thrift, which allowed them to charge less than their competitors. Southwest was an exception to the generalization that process-based moats are less desirable. Their thrift-centric process was so different from their competitor’s processes that it could not be du&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;high switching costs (“stickiness”)
 &lt;ul&gt;
 &lt;li&gt;most people will not bother with the hassle of changing operating system such as Microsoft, because they do not want to re-learn the new system.&lt;/li&gt;
+&lt;li&gt;Dorsey identifies three main flavours of switching costs — tight integration with a customer’s business, high monetary switching costs and high retraining costs. Oracle and Adobe are two companies in this category of companies. Oracle’s database systems are so heavily ingrained into their client’s businesses that it would be extremely costly for firms to replace them. Furthermore, replacing them could entail unwanted operational risks. Such tight integration with a customer’s business enables high retention rates, steady cash flows from customer annuities and a certain degree of pricing power for Oracle. Most digital designers have spent years mastering Adobe Photoshop. If a design firm were to force its designers to use a different image editing software it would incur a significant financial and timely retraining.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -657,6 +732,8 @@
 &lt;li&gt;calculate whether stock A or B yields the highest expected annual return based on a given time frame.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;The company has changed for the worse. Perhaps the company’s management has shifted their focus to an area where you believe to drive less growth than you would like.&lt;/li&gt;
+&lt;li&gt;there’s other investment with better opportunity cost&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&quot;intelligent-investor&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#intelligent-investor&quot; aria-label=&quot;intelligent investor permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Intelligent investor&lt;/h1&gt;
 &lt;ul&gt;
@@ -8989,10 +9066,34 @@ Investing is both Quantitative and Qualitative: “At bottom the ability to buy 
 &lt;/ul&gt;
 &lt;h3 id=&quot;capitalization-structure&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#capitalization-structure&quot; aria-label=&quot;capitalization structure permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;capitalization structure&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;principle of optimum capitalization structure&lt;/strong&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;principle of optimum capitalization structure&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;the optimum capitalization structure for any enterprise includes senior securities to the extent that they may be safely issued and bought for investment. the practical implication of this is that, under safe circumstances, no debt leads to an inefficient use of the shareholder’s capital. On the other hand, too much debt leaves no room for an appropriate margin of safety, as the interest coverage ratio is very small and risky&lt;/li&gt;
 &lt;li&gt;this safe environment may be composed both of a working capital of no less than the bond value and other conditions. Under such circumstances, a very conservative capitalization based only on the shareholders’ equity would make the shareholders’ dollars less productive.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;corporate practices resulting in shortage of sound industrial bonds&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;investors generally prefer strongly funded corporation issued bonds as these offer a wider range of choices and make the sale of unsound bonds less likely.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;the factor of leverage is speculative capitalization structure&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;speculative capitalized enterprises can be sold at somewhat high prices during good markets. On the contrary, the same venture might be undervalued during a depression.&lt;/li&gt;
+&lt;li&gt;the real advantage, however, lies in the fact that the stock can advance more than it can decline.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;speculative attractiveness of “shoestring” common stocks considered:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;practical aspects of foregoing:&lt;/em&gt;
+&lt;ul&gt;
+&lt;li&gt;senior capital for the company should be held in preferred shares rather than in bonds, as this would limit the risk of bankruptcy during bad times, permitting the common stockholder to wait for better times (preferred shares can omit dividend payments, while bonds in general are obliged to pay out coupon payments)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
