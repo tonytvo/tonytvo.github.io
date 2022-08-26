@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 25 Aug 2022 15:10:06 GMT</lastBuildDate><item><title><![CDATA[phan tich tai chinh kinh doanh CGBA]]></title><description><![CDATA[Quotes References https://novelinvestor.com/notes/the-acquirers-multiple-by-tobias-carlisle/]]></description><link>https://tonytvo.github.io/phan-tich-tai-chinh-kinh-doanh/</link><guid isPermaLink="false">https://tonytvo.github.io/phan-tich-tai-chinh-kinh-doanh/</guid><pubDate>Sun, 21 Aug 2022 22:12:03 GMT</pubDate><content:encoded>&lt;ul&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 26 Aug 2022 13:12:04 GMT</lastBuildDate><item><title><![CDATA[phan tich tai chinh kinh doanh CGBA]]></title><description><![CDATA[Quotes References https://novelinvestor.com/notes/the-acquirers-multiple-by-tobias-carlisle/]]></description><link>https://tonytvo.github.io/phan-tich-tai-chinh-kinh-doanh/</link><guid isPermaLink="false">https://tonytvo.github.io/phan-tich-tai-chinh-kinh-doanh/</guid><pubDate>Sun, 21 Aug 2022 22:12:03 GMT</pubDate><content:encoded>&lt;ul&gt;
 &lt;li&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
@@ -9357,6 +9357,49 @@ Investing is both Quantitative and Qualitative: “At bottom the ability to buy 
 &lt;li&gt;in reality, a company’s balance sheet does not provide exact information about liquidation value, but it does supply useful clues and hints. The first rule is that liabilities are real but the value of the assets must be questioned. This means that all true liabilities shown on the books must be deducted at their face amount. The value of the assets, however, must vary according to the character. Cash, for instance, is worth the carrying value, while inventory might only be worth 50-75% compared to the market price.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;object of this calculation&lt;/em&gt;: applying a general rule of thumb for a real-life company, it can ben seen that the stock was undervalued as it sold for less than the company’s cash holding - even after deducting all liabilities. &lt;strong&gt;The aim of using current asset value as a liquidation measure is not to find the exact liquidation number, but to establish a rough estimate.&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;prevalence of stocks selling below liquidating value&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;at some time in 1932, over 40% of all industrial companies listed on NYSE were quoted at less than their net current assets. Also at that time, a considerable number actually sold for less than their cash asset value. That actually means that the owner would profit more by shutting the company down than selling equity on a going concern basis.&lt;/li&gt;
+&lt;li&gt;one reason for the very low valuation is the high emphasis put on the income statement. A company with no current earnings will be considered highly negative by the stock market. The seller might not know she were disposing their interest in the company below liquidation value.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;local significance of this phenomenon&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;when a common stock sells persistently below its liquidating value, then either the price is too low or the company should be liquidated.&lt;/li&gt;
+&lt;li&gt;2 corollaries may be deducted from this principle:
+&lt;ul&gt;
+&lt;li&gt;although, the low price offers an attractive opportunity to buy, such price should incite the stockholders to question whether it is in their interest to continue the business&lt;/li&gt;
+&lt;li&gt;such a price should incite the management to take all proper steps to correct the obvious disparity between market quotation and intrinsic value, including a reconsideration of its own policies and frank justification to the stockholders of its decision to continue the business.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;there is a range of potential developments which may result in establishing a higher market price:
+&lt;ul&gt;
+&lt;li&gt;the creation of earning power that moves in lock-step with the company’s assets (for instance from a general improvement in the industry or a change in the company’s operating policies)
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;general improvement in the industry&lt;/em&gt;: when the textile business improved the share of pepperell increased more than eightfold in just 2 years&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;changes in operating policies&lt;/em&gt;: new lines of products, new sales methods, and reorganizing phases of production&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;a sale or merger, because some other concern is able to utilize the resources to better advantage and hence can pay at least liquidating value for the assets.
+&lt;ul&gt;
+&lt;li&gt;white motor company was suffering heavy losses and was selling at a price lower than the liquidation value. The big cash holding was found interesting by an acquiring company, and the sales price was based on the current asset value.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;complete or partial liquidation
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;complete liquidation&lt;/em&gt;: investors of mohawk mining company received 2.5 times the cost of shares when it was decided to completely liquidate the company. THe liquidation value proved to be identical with the current asset value, and could be directly derived from balance sheet.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;partial liquidation&lt;/em&gt;: sometimes an effective higher market value can be created by partially liquidating parts of the business and distributing that wealth out to the shareholders.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;discrimination required in selecting such issues&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;implications-of-liquidating-value-stock-holder-management-relationships&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#implications-of-liquidating-value-stock-holder-management-relationships&quot; aria-label=&quot;implications of liquidating value stock holder management relationships permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;implications of liquidating value, stock holder-management relationships&lt;/h3&gt;
