@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 04 Sep 2022 22:19:47 GMT</lastBuildDate><item><title><![CDATA[The Art of War by Sun Tzu summary]]></title><description><![CDATA[take-aways There is legend that this little book was Napoleon’s key to success and his secret weapon. Always remember, since ancient times…]]></description><link>https://tonytvo.github.io/art-of-war/</link><guid isPermaLink="false">https://tonytvo.github.io/art-of-war/</guid><pubDate>Sun, 04 Sep 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;take-aways&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#take-aways&quot; aria-label=&quot;take aways permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;take-aways&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 05 Sep 2022 11:14:59 GMT</lastBuildDate><item><title><![CDATA[The Art of War by Sun Tzu summary]]></title><description><![CDATA[take-aways There is legend that this little book was Napoleon’s key to success and his secret weapon. Always remember, since ancient times…]]></description><link>https://tonytvo.github.io/art-of-war/</link><guid isPermaLink="false">https://tonytvo.github.io/art-of-war/</guid><pubDate>Sun, 04 Sep 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;take-aways&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#take-aways&quot; aria-label=&quot;take aways permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;take-aways&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;There is legend that this little book was Napoleon’s key to success and his secret weapon.&lt;/li&gt;
 &lt;li&gt;Always remember, since ancient times, it has been known that…“the true object of war is peace.”&lt;/li&gt;
@@ -1558,10 +1558,14 @@
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Reward and Punishment Superresponse Tendency&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;“Never, ever, think about something else when you should be thinking about the power of incentives.”&lt;/li&gt;
-&lt;li&gt;“We should also heed the general lesson implicit in the injunction of Ben Franklin in Poor Richard’s Almanack: ‘If you would persuade, appeal to interest and not to reason.‘”&lt;/li&gt;
-&lt;li&gt;“One of the most important consequences of incentive superpower is what I call ‘incentive-caused bias.’ A man has an acculturated nature making him a pretty decent fellow, and yet, driven both consciously and subconsciously by incentives, he drifts into immoral behavior in order to get what he wants, a result he facilitates by rationalizing his bad behavior.”&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;
+&lt;p&gt;“Never, ever, think about something else when you should be thinking about the power of incentives.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“We should also heed the general lesson implicit in the injunction of Ben Franklin in Poor Richard’s Almanack: ‘If you would persuade, appeal to interest and not to reason.‘”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“One of the most important consequences of incentive superpower is what I call ‘incentive-caused bias.’ A man has an acculturated nature making him a pretty decent fellow, and yet, driven both consciously and subconsciously by incentives, he drifts into immoral behavior in order to get what he wants, a result he facilitates by rationalizing his bad behavior.”&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Incentives &amp;#x26; Perverse Incentives:&lt;/strong&gt;&lt;/p&gt;
@@ -1573,6 +1577,8 @@
 &lt;p&gt;&lt;strong&gt;Incentive-Caused Bias:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;“A natural cognitive drift toward the conclusion that what is good for the professional is good for the client and the wider civilization.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -1766,37 +1772,95 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Five Ws:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“The five Ws—you had to tell who was going to do what, where, when, and why … If you always tell people why, they’ll understand it better, they’ll consider it more important, and they’ll be more likely to comply. Even if they don’t understand your reason, they’ll be more likely to comply.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Not Fooling Yourself:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“It is, of course, irritating that extra care in thinking is not all good but also introduces extra error. But most good things have undesired ‘side effects,’ and thinking is no exception. The best defense is that of the best physicists, who systematically criticize themselves to an extreme degree, using a mindset described by Nobel laureate Richard Feynman as follows: ‘The first principle is that you must not fool yourself, and you’re the easiest person to fool.‘”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Disconfirming Evidence:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“Darwin paid special attention to disconfirming evidence, particularly when it disconfirmed something he believed and loved. Routines like that are required if a life is to maximize correct thinking … If you can get really good at destroying your own wrong ideas, that is a great gift.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Deserve What You Want:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“The safest way to try to get what you want is to try to deserve what you want. It’s such a simple idea. It’s the golden rule. You want to deliver to the world what you would buy if you were on the other end.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Chauffeur Knowledge:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“In this world I think we have two kinds of knowledge: One is Planck knowledge, that of the people who really know. They’ve paid the dues, they have the aptitude. Then we’ve got chauffeur knowledge. They have learned to prattle the talk. They may have a big head of hair. They often have fine timbre in their voices. They make a big impression. But in the end what they’ve got is chauffeur knowledge masquerading as real knowledge.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Unfairness:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“Tolerating a little unfairness to some to get a greater fairness for all is a model I recommend to all of you.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Second-Order Thinking:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“Consequences have consequences, and the consequences of the consequences have consequences, and so on.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Avoid Chemicals/Addiction:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“While susceptibility varies, addiction can happen to any of us through a subtle process where the bonds of degradation are too light to be felt until they are too strong to be broken. And yet, I have yet to meet anyone, in over six decades of life, whose life was worsened by fear and avoidance of such a deceptive pathway to destruction.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Envy, Resentment, Revenge, &amp;#x26; Self-Pity:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“Generally speaking, envy, resentment, revenge and self-pity are disastrous modes of thought. Self-pity can get pretty close to paranoia. And paranoia is one of the very hardest things to reverse. You do not want to drift into self-pity … The best way to avoid envy, recognized by Aristotle, is to plainly deserve the success we get.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Unreliability:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“Reliability is essential for progress in life and while quantum mechanics is unlearnable for a vast majority, reliability can be learned to great advantage by almost anyone.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Social Proof:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“Another advantage of scale comes from psychology. The psychologists use the term ‘social proof.’ We are all influenced—subconsciously and, to some extent, consciously—by what we see others do and approve.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Pavlovian Association:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“If people tell you what you really don’t want to hear—what’s unpleasant—there’s an almost automatic reaction of antipathy. You have to train yourself out of it.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Serpico Effects:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“If enough people are profiting in a general social climate of doing wrong, then they’ll turn on you and become dangerous enemies if you try and blow the whistle.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Crowd Folly:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“The tendency of humans, under some circumstances, to resemble lemmings, explains foolish thinking of brilliant men and much foolish behavior.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Reduce Material Needs:&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;“Most people will see declining returns (due to inflation). One of the great defenses if you’re worried about inflation is not to have a lot of silly needs in your life—you don’t need a lot of material goods.”&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;“The five Ws—you had to tell who was going to do what, where, when, and why … If you always tell people why, they’ll understand it better, they’ll consider it more important, and they’ll be more likely to comply. Even if they don’t understand your reason, they’ll be more likely to comply.”
-Not Fooling Yourself:
-“It is, of course, irritating that extra care in thinking is not all good but also introduces extra error. But most good things have undesired ‘side effects,’ and thinking is no exception. The best defense is that of the best physicists, who systematically criticize themselves to an extreme degree, using a mindset described by Nobel laureate Richard Feynman as follows: ‘The first principle is that you must not fool yourself, and you’re the easiest person to fool.‘”
-Disconfirming Evidence:
-“Darwin paid special attention to disconfirming evidence, particularly when it disconfirmed something he believed and loved. Routines like that are required if a life is to maximize correct thinking … If you can get really good at destroying your own wrong ideas, that is a great gift.”
-Deserve What You Want:
-“The safest way to try to get what you want is to try to deserve what you want. It’s such a simple idea. It’s the golden rule. You want to deliver to the world what you would buy if you were on the other end.”
-Chauffeur Knowledge:
-“In this world I think we have two kinds of knowledge: One is Planck knowledge, that of the people who really know. They’ve paid the dues, they have the aptitude. Then we’ve got chauffeur knowledge. They have learned to prattle the talk. They may have a big head of hair. They often have fine timbre in their voices. They make a big impression. But in the end what they’ve got is chauffeur knowledge masquerading as real knowledge.”
-Unfairness:
-“Tolerating a little unfairness to some to get a greater fairness for all is a model I recommend to all of you.”
-Second-Order Thinking:
-“Consequences have consequences, and the consequences of the consequences have consequences, and so on.”
-Avoid Chemicals/Addiction:
-“While susceptibility varies, addiction can happen to any of us through a subtle process where the bonds of degradation are too light to be felt until they are too strong to be broken. And yet, I have yet to meet anyone, in over six decades of life, whose life was worsened by fear and avoidance of such a deceptive pathway to destruction.”
-Envy, Resentment, Revenge, &amp;#x26; Self-Pity:
-“Generally speaking, envy, resentment, revenge and self-pity are disastrous modes of thought. Self-pity can get pretty close to paranoia. And paranoia is one of the very hardest things to reverse. You do not want to drift into self-pity … The best way to avoid envy, recognized by Aristotle, is to plainly deserve the success we get.”
-Unreliability:
-“Reliability is essential for progress in life and while quantum mechanics is unlearnable for a vast majority, reliability can be learned to great advantage by almost anyone.”
-Social Proof:
-“Another advantage of scale comes from psychology. The psychologists use the term ‘social proof.’ We are all influenced—subconsciously and, to some extent, consciously—by what we see others do and approve.”
-Pavlovian Association:
-“If people tell you what you really don’t want to hear—what’s unpleasant—there’s an almost automatic reaction of antipathy. You have to train yourself out of it.”
-Serpico Effects:
-“If enough people are profiting in a general social climate of doing wrong, then they’ll turn on you and become dangerous enemies if you try and blow the whistle.”
-Crowd Folly:
-“The tendency of humans, under some circumstances, to resemble lemmings, explains foolish thinking of brilliant men and much foolish behavior.”
-Reduce Material Needs:
-“Most people will see declining returns (due to inflation). One of the great defenses if you’re worried about inflation is not to have a lot of silly needs in your life—you don’t need a lot of material goods.”&lt;/p&gt;
 &lt;h1 id=&quot;charlies-checklist&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#charlies-checklist&quot; aria-label=&quot;charlies checklist permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;charlie’s checklist&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -2884,46 +2948,43 @@ much better off if instead of correctly forecasting a bear market, I had focused
 &lt;li&gt;&lt;a href=&quot;https://blog.seedly.sg/100-baggers-by-christopher-mayer/&quot;&gt;https://blog.seedly.sg/100-baggers-by-christopher-mayer/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://forum.valuepickr.com/t/100-baggers-by-cristopher-mayer/77351&quot;&gt;https://forum.valuepickr.com/t/100-baggers-by-cristopher-mayer/77351&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.good-investing.net/2022/05/17/chris-mayer-how-to-hunt-100-baggers/&quot;&gt;https://www.good-investing.net/2022/05/17/chris-mayer-how-to-hunt-100-baggers/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[one up on wall street by Peter Lynch summary]]></title><description><![CDATA[INVEST PHILOSOPHY In most cases, professional institutional/fund managers are restrained by cultural, legal and social barriers. Many are…]]></description><link>https://tonytvo.github.io/one-up-on-wall-street/</link><guid isPermaLink="false">https://tonytvo.github.io/one-up-on-wall-street/</guid><pubDate>Tue, 30 Aug 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;invest-philosophy&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#invest-philosophy&quot; aria-label=&quot;invest philosophy permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;INVEST PHILOSOPHY&lt;/h1&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[one up on wall street by Peter Lynch summary]]></title><description><![CDATA[INVEST PHILOSOPHY In most cases, professional, institutional/fund managers are restrained by cultural, legal and social barriers. Many are…]]></description><link>https://tonytvo.github.io/one-up-on-wall-street/</link><guid isPermaLink="false">https://tonytvo.github.io/one-up-on-wall-street/</guid><pubDate>Tue, 30 Aug 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;invest-philosophy&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#invest-philosophy&quot; aria-label=&quot;invest philosophy permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;INVEST PHILOSOPHY&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;In most cases, professional institutional/fund managers are restrained by cultural, legal and social barriers. Many are held back by various written rules and regulations. Some bank trust departments simply won’t’ allow the buying stock in any companies/unions, other won’t invest in non growth industries or in specific industry groups, such as electric utilities or oil or steel. Some funds are further restricted with  a market capitalization rule: they don’t own a stock in any company below, say, a $100-million size (Size is measured by multiplying the number of outstanding shares by the stock stock price.). Hence, individual and amateur investors have an edge on most professional and institutional investors.&lt;/p&gt;
+&lt;p&gt;In most cases, professional, institutional/fund managers are restrained by cultural, legal and social barriers. Many are held back by various written rules and regulations. Some bank trust departments simply won’t’ allow the buying of stock in any companies/unions. Others won’t invest in non-growth industries or specific industry groups, such as electric utilities or oil or steel. Some funds are further restricted with a market capitalization rule: they don’t own stock in any company below, say, a $100 million size (Size is measured by multiplying the number of outstanding shares by the stock price.). Hence, individual and amateur investors have the edge over most professional and institutional investors.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Lynch is a “story” investor. That is, each stock selection is based on a well-grounded expectation concerning the firm’s growth prospects. The expectations are derived from the company’s “story”—what it is that the company is going to do, or what it is that is going to happen, to bring about the desired results.&lt;/p&gt;
+&lt;p&gt;Lynch is a “story” investor. Each stock selection is based on a well-grounded expectation concerning the firm’s growth prospects. The expectations are derived from the company’s “story”—what it is that the company will do or what will happen to bring about the desired results.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;The more familiar you are with a company, and the better you understand its business and competitive environment, the better your chances of finding a good “story” that will actually come true. For this reason, Lynch is a strong advocate of investing in companies with which one is familiar, or whose products or services are relatively easy to understand. Thus, Lynch says he would rather invest in “pantyhose rather than communications satellites,” and “motel chains rather than fiber optics.”&lt;/p&gt;
+&lt;p&gt;The more familiar you are with a company, and the better you understand its business and competitive environment, the better your chances of finding a good “story” will come true. For this reason, Lynch is a strong advocate of investing in companies with which one is familiar or whose products or services are relatively easy to understand. Thus, Lynch says he would rather invest in “pantyhose rather than communications satellites,” and “motel chains rather than fibre optics.”&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Lynch does not believe in restricting investments to any one type of stock. His “story” approach, in fact, suggests the opposite, with investments in firms with various reasons for favorable expectations. In general, however, he tends to favor small, moderately fast-growing companies that can be bought at a reasonable price.&lt;/p&gt;
+&lt;p&gt;Lynch does not believe in restricting investments to any one type of stock. His “story” approach suggests the opposite: investments in firms with various reasons for favourable expectations. In general, however, he tends to favour small, moderately fast-growing companies that can be bought at a reasonable price.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;market-timing&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#market-timing&quot; aria-label=&quot;market timing permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;MARKET TIMING&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Lynch constantly rechecked stocks and stories, adding / subtracting as things changed. But he never went into cash – except to have enough of it to cover anticipated redemptions. Going into cash = getting out of the market&lt;/li&gt;
-&lt;li&gt;His idea was to stay in the market forever, and to rotate stocks depending on the fundamental situations. If you decide that a certain amount you’ve invested in the stock market will always be invested in the stock market, then you’ll save yourself a lot of mistimed moves and general agony.&lt;/li&gt;
-&lt;li&gt;The bearish argument always sounds more intelligent. It’s said that “the market climbs a wall of worry”, take note that the worry wall is fairly good sized &amp;#x26; growing every day. That’s not to say there’s no such thing as an overvalued market, but there’s no point worrying about it. The way you’ll know the market is overvalued is when you can’t find a single company that’s reasonably priced or meets your other investment criteria.&lt;/li&gt;
-&lt;li&gt;Corrections (&gt;10% decline) occur every 2 years, bear markets (&gt;20%) every 6 years, and severe bear markets (&gt;30%) have happened 5 times between 1932/33-2000.&lt;/li&gt;
+&lt;li&gt;Lynch constantly rechecked stocks and stories, adding/subtracting as things changed. But he never went into cash – except to have enough of it to cover anticipated redemptions. Going into cash = getting out of the market&lt;/li&gt;
+&lt;li&gt;His idea was to stay in the market forever and to rotate stocks depending on the fundamental situations. If you decide that a certain amount you’ve invested in the stock market will always be invested in the stock market, you’ll save yourself a lot of mistimed moves and general agony.&lt;/li&gt;
+&lt;li&gt;The bearish argument always sounds more intelligent. It’s said that “the market climbs a wall of worry” take note that the worry wall is fairly good-sized &amp;#x26; growing every day. That’s not to say there’s no such thing as an overvalued market, but there’s no point worrying about it. The way you’ll know the market is overvalued is when you can’t find a single company that’s reasonably priced or meets your other investment criteria.&lt;/li&gt;
+&lt;li&gt;Corrections (&gt;10% decline) occur every two years, bear markets (&gt;20%) every six years, and severe bear markets (&gt;30%) have happened five times between 1932/33-2000.&lt;/li&gt;
 &lt;li&gt;It’d be wonderful if we could avoid setbacks with timely exits, but nobody can predict them. Moreover, if you exit stocks &amp;#x26; avoid a decline, how can you be sure that you’ll get back in for the next rally?&lt;/li&gt;
 &lt;li&gt;Things inside humans make them terrible stock market timers. Unwary investors continually pass through 3 emotional states:
 &lt;ul&gt;
 &lt;li&gt;i) Concern: he’s concerned after a market drop or when the economy seems to falter, which keeps him from buying good companies at bargain prices.&lt;/li&gt;
-&lt;li&gt;ii) Complacency: after he buys at higher prices, he gets complacent because his stocks are going up. This is precisely the time he ought to be concerned enough to check the fundamentals, but isn’t.&lt;/li&gt;
-&lt;li&gt;iii) Capitulation: finally, when his stocks fall on hard times and prices fall below purchase price, he capitulates and sells in a fit of irritation.&lt;/li&gt;
+&lt;li&gt;ii) Complacency: after he buys at higher prices, he gets complacent because his stocks are going up. This is precisely when he ought to be concerned enough to check the fundamentals but isn’t.&lt;/li&gt;
+&lt;li&gt;iii) Capitulation: finally, when his stocks fall on hard times and prices fall below the purchase price, he capitulates and sells in a fit of irritation.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;If you spend 13 minutes on economics (as forecasting the future), you’ve wasted 10 minutes. Think about what’s happening - deal in facts, not forecasts. That’s crystal ball stuff, which doesn’t work.&lt;/li&gt;
-&lt;li&gt;Assuming you have a forecast of a big market decline, how can you prepare? Mostly by doing nothing. A market calamity is different from a meteorological calamity. Since we’ve learned to take action to protect ourselves from snowstorms, it’s only natural that we would try to prepare ourselves for corrections, even though this is one case where being prepared can be ruinous.
+&lt;li&gt;If you spend 13 minutes on economics (forecasting the future), you’ve wasted 10 minutes. Think about what’s happening - deal in facts, not forecasts. That’s crystal ball stuff, which doesn’t work.&lt;/li&gt;
+&lt;li&gt;Assuming you forecast a big market decline, how can you prepare? Mostly by doing nothing. A market calamity is different from a meteorological calamity. Since we’ve learned to take action to protect ourselves from snowstorms, it’s only natural that we would try to prepare ourselves for corrections, even though this is one case where being prepared can be ruinous.
 &lt;ul&gt;
-&lt;li&gt;i) The 1st mistake is hedging the portfolio. Anticipating a drop in the market, the skittish investor begins to dabble in futures and options, thinking of this as correction insurance. It seems cheap at first, but the options expire every couple of months, &amp;#x26; if stocks don’t go down on schedule people have to buy more options to renew the policy. Suddenly, investing isn’t so simple. Investors can’t decide whether they’re rooting for stocks to falter, so their insurance will pay off, or for a rally, for the sake of the portfolio. Hedging is a tricky business even the  pros haven’t mastered – otherwise, why’d so many hedge funds go out of business?&lt;/li&gt;
-&lt;li&gt;ii) The 2nd and more prevalent mistake is the ritual known as lightening up, selling some or all stocks. Or putting off buying stocks you like &amp;#x26; sitting on cash, waiting for the crash. “Better safe than sorry,” is the mantra. “I’ll wait for the day of reckoning, when all the suckers who didn’t see this coming are wailing and gnashing their teeth, and I’ll snap up bargains left and right.” (But once the market bottoms, cash sitters are likely to continue to sit on cash. They’re waiting for further declines that never come, and they miss the rebound.). They may still call themselves long-term investors, but they’re not. They’ve turned into market timers &amp;#x26; unless their timing is very good, the market will run away from them.&lt;/li&gt;
+&lt;li&gt;i) The 1st mistake is hedging the portfolio. Anticipating a drop in the market, the skittish investor begins to dabble in futures and options, thinking of this as correction insurance. It seems cheap at first, but the options expire every couple of months, &amp;#x26; if stocks don’t go down on schedule, people have to buy more options to renew the policy. Suddenly, investing isn’t so simple. Investors can’t decide whether they’re rooting for stocks to falter, so their insurance will pay off or for a rally for the sake of the portfolio. Hedging is a tricky business even the pros haven’t mastered – otherwise, why’d so many hedge funds go out of business?&lt;/li&gt;
+&lt;li&gt;ii) The 2nd and more prevalent mistake is the ritual known as lightening up, selling some or all stocks. Or putting off buying stocks you like &amp;#x26; sitting on cash, waiting for the crash. “Better safe than sorry” is the mantra. “I’ll wait for the day of reckoning when all the suckers who didn’t see this coming are wailing and gnashing their teeth, and I’ll snap up bargains left and right.” (But once the market bottoms, cash sitters are likely to continue to sit on cash. They’re waiting for further declines that never come, and they miss the rebound.). They may still call themselves long-term investors, but they’re not. They’ve turned into market timers &amp;#x26; unless their timing is very good, the market will run away from them.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;People waste so much time trying to figure out “When should I invest?” Lynch did a study – for 30 years (1965-1995), if you had incredible good luck to invest $1,000 at the yearly low, your return would’ve been 11.7%. Some other unlucky soul put $1,000 at the yearly high, earning 10.6%. That’s the only difference between the yearly high and low. Someone else put it on the 1st day of the year, earning 11%. Just buy, hold, and&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;when the market goes down 10%, add to it.&lt;/p&gt;
-&lt;ul&gt;
+&lt;li&gt;People waste time figuring out “When should I invest?” Lynch did a study – for 30 years (1965-1995), if you had incredibly good luck investing $1,000 at the yearly low, your return would’ve been 11.7%. Some other unlucky souls put $1,000 at the yearly high, earning 10.6%. That’s the only difference between the yearly high and low. Someone else put it on the 1st day of the year, earning 11%. Just buy, hold, and add to it when the market goes down 10%.&lt;/li&gt;
 &lt;li&gt;The only problem with market timing is getting the timing right. You’ll never meet many people who’ve done it successfully. Maybe once in a row, but not consistently.&lt;/li&gt;
 &lt;li&gt;There’s no telling how many timers miss big gains by making ill-timed exits. Far more money has been lost trying to anticipate corrections or preparing for corrections than has been lost in corrections themselves.&lt;/li&gt;
 &lt;li&gt;People have more time than they think to ride out corrections, which is why you shouldn’t worry about the next one. Corrections are unpredictable. By selling stocks to avoid pain, you can miss the next gain. As soon as you realize you can afford to wait out any correction, the calamity also&lt;/li&gt;
@@ -2934,7 +2995,7 @@ much better off if instead of correctly forecasting a bear market, I had focused
 &lt;/ul&gt;
 &lt;p&gt;you’d cash out, then do it now &amp;#x26; avoid the misery that is sure to come later.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;A 40 year review of the S&amp;#x26;P 500 going back to 1954 shows how expensive it is to be out of stocks during the short stretches when they make their biggest jumps. If you kept all your money in stocks throughout, your annual return was 11.4%. If you were out of stocks for the 10 most profitable months, your return dropped to 8.3%. If you missed the 20 most profitable months, your return was 6.1%; the 40 most profitable, and you made only 2.7%. If you cut enough losses, sooner or later there’s nothing left to cut.&lt;/li&gt;
+&lt;li&gt;A 40-year review of the S&amp;#x26;P 500 going back to 1954 shows how expensive it is to be out of stocks during the short stretches when they make their biggest jumps. If you kept all your money in stocks throughout, your annual return was 11.4%. If you were out of stock for the ten most profitable months, your return dropped to 8.3%. If you missed the 20 most profitable months, your return was 6.1%; in the 40 most profitable, you made only 2.7%. If you cut enough losses, there’s nothing left to cut sooner or later.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;silliest-and-most-dangerous-things-people-say-about-stock-prices&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#silliest-and-most-dangerous-things-people-say-about-stock-prices&quot; aria-label=&quot;silliest and most dangerous things people say about stock prices permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SILLIEST (AND MOST DANGEROUS) THINGS PEOPLE SAY ABOUT STOCK PRICES&lt;/h2&gt;
 &lt;ul&gt;
