@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 25 Sep 2022 16:03:12 GMT</lastBuildDate><item><title><![CDATA[blue ocean strategy by Chan Kim summary]]></title><description><![CDATA[take-aways Quotes References https://wisewords.blog/book-summaries/blue-ocean-strategy-book-summary/]]></description><link>https://tonytvo.github.io/blue-ocean-strategy/</link><guid isPermaLink="false">https://tonytvo.github.io/blue-ocean-strategy/</guid><pubDate>Thu, 08 Sep 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;take-aways&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#take-aways&quot; aria-label=&quot;take aways permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;take-aways&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 29 Sep 2022 03:36:24 GMT</lastBuildDate><item><title><![CDATA[blue ocean strategy by Chan Kim summary]]></title><description><![CDATA[take-aways Quotes References https://wisewords.blog/book-summaries/blue-ocean-strategy-book-summary/]]></description><link>https://tonytvo.github.io/blue-ocean-strategy/</link><guid isPermaLink="false">https://tonytvo.github.io/blue-ocean-strategy/</guid><pubDate>Thu, 08 Sep 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;take-aways&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#take-aways&quot; aria-label=&quot;take aways permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;take-aways&lt;/h1&gt;
 &lt;h1 id=&quot;quotes&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quotes&quot; aria-label=&quot;quotes permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Quotes&lt;/h1&gt;
 &lt;h1 id=&quot;references&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#references&quot; aria-label=&quot;references permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;References&lt;/h1&gt;
 &lt;ul&gt;
@@ -4555,9 +4555,9 @@ being foolishly optimistic. The story keeps changing for better or worse, and yo
 &lt;li&gt;It’s much easier to predict an upswing, vs, a downturn, so one has to detect early signs of business changes. You get a working edge if you’re in the same industry – to be used to your advantage. Most important in Cyclicals.&lt;/li&gt;
 &lt;li&gt;Unreliable dividend payers. If they’ve financial problems, then they become potential Turnaround candidates.&lt;/li&gt;
 &lt;li&gt;Inventory build-up = bad sign. Inventory growth &gt; Sales growth = red flag. Inventory build-up with companies having fluctuating end-product pricing causes larger problems.&lt;/li&gt;
-&lt;li&gt;Monitor inventory to figure out the business direction. If an inventory is depleting in a depressed company, it’s the first evidence of a possible business turnaround.&lt;/li&gt;
-&lt;li&gt;High Operating Profit Margin (OPM) = Lowest Cost producer, who’s got a better chance of survival if business conditions deteriorate.&lt;/li&gt;
-&lt;li&gt;Upswing favours companies with Low OPMs. Therefore, what you want to do is to Hold relatively High OPM companies for the long term and play relatively Low OPM companies for successful Turnarounds/cycle turns. The best time to get involved with Cyclicals is when the economy is at its weakest, earnings are at their lowest, and public sentiment is at its bleakest. Even though Cyclicals have rebounded in the same way eight times since WWII, buying them in the early stages of an economic recovery is never easy.&lt;/li&gt;
+&lt;li&gt;Monitor inventory to figure out the business direction. If an inventory depletes in a depressed company, it’s the first evidence of a possible business turnaround.&lt;/li&gt;
+&lt;li&gt;High Operating Profit Margin (OPM) = Lowest Cost producer with a better chance of survival if business conditions deteriorate.&lt;/li&gt;
+&lt;li&gt;Upswing favours companies with Low OPMs. Therefore, you want to hold relatively High OPM companies for the long term and play relatively Low OPM companies for successful Turnarounds/cycle turns. The best time to get involved with Cyclicals is when the economy is at its weakest, earnings are at their lowest, and public sentiment is at its bleakest. Even though Cyclicals have rebounded in the same way eight times since WWII, buying them in the early stages of an economic recovery is never easy.&lt;/li&gt;
 &lt;li&gt;Every recession brings out skeptics who doubt that we will ever come out of it, who predict depression and the country going bankrupt. If there’s any time not to own Cyclicals, it’s in a depression. “This one is different” is the doomsayer’s litany, and every recession is different, but that doesn’t mean it will ruin us.&lt;/li&gt;
 &lt;li&gt;Whenever there was a recession, Lynch paid attention to them. Since he always thought positively and assumed that the economy would improve, he was willing to invest in Cyclicals at their nadir. Things begin to get better when it seems it can’t get any worse. A comeback of depressed Cyclicals&lt;/li&gt;
 &lt;/ul&gt;
@@ -4622,9 +4622,7 @@ being foolishly optimistic. The story keeps changing for better or worse, and yo
 &lt;li&gt;Slow Growers (7-9x) &amp;#x3C; Cyclicals (7-20x) &amp;#x3C; Fast Growers (14-20x)&lt;/li&gt;
 &lt;li&gt;Assigning PE’s: Peak EPS (3-4x) &amp;#x3C; Decent EPS (5-8x) &amp;#x3C; Average EPS (8-10x)&lt;/li&gt;
 &lt;li&gt;Stock Pattern: 1990 EPS = $6.5, Price Range = $23 - $36, PE Range = 3.6-5.5x. 1991 EPS = $3.9, Price drops to $26. PE = 6.7x, higher than the previous year’s PE, which had higher EPS.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;A Low PE is a good thing with most stocks but not with Cyclicals. When Low, it’s usually a sign that they are at the end of a prosperous interlude.&lt;/p&gt;
-&lt;ul&gt;
+&lt;li&gt;A Low PE is good with most stocks but not with Cyclicals. When Low, it’s usually a sign that they are at the end of a prosperous interlude.&lt;/li&gt;
 &lt;li&gt;Unwary investors hold onto their shares since business is still good &amp;#x26; the company continues to show higher earnings, but this will change soon. Smart investors sell their shares early to avoid the rush.&lt;/li&gt;
 &lt;li&gt;When a large crowd begins to sell, the Price and PE drop, making a Cyclical more attractive to the uninitiated. This can be an expensive misconception. Soon, the economy will falter, and earnings will decline at a  breathtaking speed. As more investors head for the exit, the price will plummet. Buying Cyclicals after years of record earnings and when PE has hit a low point is a proven method to lose ~50% in a short time.&lt;/li&gt;
 &lt;li&gt;Conversely, a High PE may be good news for a Cyclical. Often, it means that a company is passing through the worst of the doldrums, and soon its business will improve, earnings will exceed expectations, and investors will start buying the stock.&lt;/li&gt;
@@ -4682,13 +4680,13 @@ being foolishly optimistic. The story keeps changing for better or worse, and yo
 &lt;li&gt;Land of the 10-40x, even 200x. 1-2 such companies can make a career.&lt;/li&gt;
 &lt;li&gt;Lousy Industry
 &lt;ul&gt;
-&lt;li&gt;May not belong to fast growing industry. Can expand in the room in a slow growth industry by taking market share.&lt;/li&gt;
-&lt;li&gt;Depressed industries are likely places to find potential bargains. If business improves from lousy to mediocre, you are rewarded, rewarded again when mediocre turns to good, and good to excellent.&lt;/li&gt;
-&lt;li&gt;Moderately fast growers (20-25%) in slow growth industries are ideal investments. Look for companies with niches that can capture market share without price competition. In business, competition is never as healthy as total domination.&lt;/li&gt;
-&lt;li&gt;Growth ≠ Expansion, leading people to overlook great companies like Phillip Morris. Industry wide cigarette consumption may decline, but company can increase earnings by cost cuts and price increases. Earnings growth is the only growth that really counts. If costs rise 4%, but prices rise 6%, and profit margin is 10%, then extra 2% price rise = 20% increase in earnings.&lt;/li&gt;
+&lt;li&gt;May not belong to a fast-growing industry. Can expand in the room in a slow growth industry by taking market share.&lt;/li&gt;
+&lt;li&gt;Depressed industries are likely places to find potential bargains. If business improves from lousy to mediocre, you are rewarded again when mediocre turns to good and good to excellent.&lt;/li&gt;
+&lt;li&gt;Moderately fast growers (20-25%) in slow-growth industries are ideal investments. Look for companies with niches that can capture market share without price competition. In business, competition is never as healthy as total domination.&lt;/li&gt;
+&lt;li&gt;Growth ≠ Expansion, leading people to overlook great companies like Phillip Morris. Industry-wide cigarette consumption may decline, but companies can increase earnings by cost cuts and price increases. Earnings growth is the only growth that counts. If costs rise 4%, but prices rise 6%, and profit margin is 10%, then extra 2% price rise = 20% increase in earnings.&lt;/li&gt;
 &lt;li&gt;Greatest companies in lousy industries share certain characteristics:
 &lt;ul&gt;
-&lt;li&gt;i) low cost operators / penny pinchers in the executive suite&lt;/li&gt;
+&lt;li&gt;i) low-cost operators / penny pinchers in the executive suite&lt;/li&gt;
 &lt;li&gt;ii) avoid leverage&lt;/li&gt;
 &lt;li&gt;iii) reject corporate hierarchies&lt;/li&gt;
 &lt;li&gt;iv) workers are well paid and have a stake in the company’s future&lt;/li&gt;
@@ -4700,76 +4698,78 @@ being foolishly optimistic. The story keeps changing for better or worse, and yo
 &lt;li&gt;Hot Industry
 &lt;ul&gt;
 &lt;li&gt;Hot Stocks + Hot Industry = Greater Competition. Companies can thrive only due to niche/moat/patents etc.&lt;/li&gt;
-&lt;li&gt;Growth ≠ Expansion. In low growth industries, companies expand by capturing market share, cutting costs and raising prices. When an industry gets too popular, nobody makes money there anymore. Life Phases of a Fast Grower: each may last several years. Keep checking earnings, growth, stores to check aura of prosperity. Ask, what will keep earnings going?
+&lt;li&gt;Growth ≠ Expansion. In low-growth industries, companies expand by capturing market share, cutting costs and raising prices. When an industry gets too popular, nobody makes money there anymore. Life Phases of a Fast Grower: each may last several years. Keep checking earnings, growth, and stores to check the aura of prosperity. Ask, what will keep earnings going?
 &lt;ul&gt;
 &lt;li&gt;i) Startup phase: companies work out kinks in the basic business. Riskiest phase for the investor because success is not yet established.&lt;/li&gt;
-&lt;li&gt;ii) Rapid Expansion: company enters new markets. Safest phase for investor where most amount of money is made, because growth is merely an act of duplication across markets. Company reinvests all FCF into expansion. No dividends help faster expansion. IPO helps in expanding without bank debt / leverage.&lt;/li&gt;
-&lt;li&gt;iii) Maturity / Saturation: company faces the fact that there’s no easy way to continue expansion. Most problematic phase because company runs into its own limitations. Other ways must be found to increase earnings, possibly only, via luring customers away from competitors. If M&amp;#x26;A / diworseification follows, then you know management is confused.&lt;/li&gt;
+&lt;li&gt;ii) Rapid Expansion: the company enters new markets. The safest phase for investors is where the most money is made because growth is merely an act of duplication across markets. The company reinvests all FCF into expansion. No dividends help faster expansion. IPO helps in expanding without bank debt/leverage.&lt;/li&gt;
+&lt;li&gt;iii) Maturity / Saturation: company faces the fact that there’s no easy way to continue expansion. Most problematic phase because the company runs into its limitations. Other ways must be found to increase earnings, possibly only via luring customers away from competitors. If M&amp;#x26;A / diworseification follows, then you know management is confused.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Find out growth plans and check if plan is working?
+&lt;li&gt;Find out growth plans and check if the plan is working?
 &lt;ul&gt;
-&lt;li&gt;i) Cost cuts – the proof is in decrease of selling and administrative costs.&lt;/li&gt;
+&lt;li&gt;i) Cost cuts – the proof is in the decrease in selling and administrative costs.&lt;/li&gt;
 &lt;li&gt;ii) Raise prices&lt;/li&gt;
 &lt;li&gt;iii) Entry into new markets&lt;/li&gt;
 &lt;li&gt;iv) Sell more volume in existing markets&lt;/li&gt;
-&lt;li&gt;v) Exit loss making operations&lt;/li&gt;
+&lt;li&gt;v) Exit loss-making operations&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;What continues to triumph, vs, flop, is:
+&lt;li&gt;What continues to triumph, vs, flop is:
 &lt;ul&gt;
 &lt;li&gt;i) Capable management&lt;/li&gt;
 &lt;li&gt;ii) Adequate financing&lt;/li&gt;
 &lt;li&gt;iii) Methodical approach to expansion – slow but steady wins this kind of race.
 &lt;ul&gt;
-&lt;li&gt;When a company tries to open &gt;100 stores/year, it’s likely to run into problems. In its rush to glory, it can pick the wrong sites or managers, pay too much for real estate, and, fail to properly train employees. It is easier to add 35-40 stores / year.&lt;/li&gt;
+&lt;li&gt;When a company tries to open &gt;100 stores/year, it’s likely to run into problems. In its rush to glory, it can pick the wrong sites or managers, pay too much for real estate, and fail to train employees properly. It is easier to add 35-40 stores/year.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Re-classification away from Fast Grower
 &lt;ul&gt;
-&lt;li&gt;A large fast growth company faces devaluation risk, since growth may slow down as it runs out of space for further expansion.&lt;/li&gt;
-&lt;li&gt;Inability to maintain double digit growth may see a re-classification into a Slow Grower, Cyclical or Stalwart. High fliers of one decade are groundhogs of the next.&lt;/li&gt;
+&lt;li&gt;A large fast, growth company faces devaluation risk since growth may slow down as it runs out of space for further expansion.&lt;/li&gt;
+&lt;li&gt;Inability to maintain double-digit growth may be re-classified into a Slow Grower, Cyclical or Stalwart. High fliers of one decade are groundhogs of the next.&lt;/li&gt;
 &lt;li&gt;Fast Growers like hotels/retail having prime real estate turn into Asset Plays.&lt;/li&gt;
-&lt;li&gt;There’s high risk, especially in younger companies that are overzealous and underfunded. The headache of underfinancing may lead to bankruptcy.&lt;/li&gt;
-&lt;li&gt;Fast Grower’s that can’t stand prosperity, diworseify, fall out of favour, and, turn into Turnaround candidates.&lt;/li&gt;
-&lt;li&gt;Every Fast Grower turns into a Slow Grower, fooling many people. People have a tendency to think that things won’t change, but eventually they do,&lt;/li&gt;
+&lt;li&gt;There’s a high risk, especially in younger companies that are overzealous and underfunded. The headache of underfinancing may lead to bankruptcy.&lt;/li&gt;
+&lt;li&gt;Fast Grower that can’t stand prosperity, diworseify, fall out of favour, and turn into Turnaround candidates.&lt;/li&gt;
+&lt;li&gt;Every Fast Grower turns into a Slow Grower, fooling many people. People tend to think that things won’t change, but eventually, they do,&lt;/li&gt;
 &lt;li&gt;Very few companies switch from being a Slow Grower to a Fast Grower.&lt;/li&gt;
-&lt;li&gt;Companies may fall into 2 categories at the same time, or, pass through all categories over time (Disney).&lt;/li&gt;
+&lt;li&gt;Companies may fall into two categories simultaneously or pass through all categories over time (Disney).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;During 1949-1995, an investment in the 50 growth stocks on Safian’s Growth Index returned 230x, while the Safian Cyclical Index only returned 19x.&lt;/li&gt;
-&lt;li&gt;Growth companies were the star performers during and after 2 corrections (1981-82 and 1987), and they held their own in the 1990 Saddam selloff. The only time you wished you didn’t own them was 1973­74, when growth stocks were grossly overpriced.&lt;/li&gt;
+&lt;li&gt;Growth companies were the star performers during and after two corrections (1981-82 and 1987), and they held their own in the 1990 Saddam selloff. The only time you wished you didn’t own them was 1973­74 when growth stocks were grossly overpriced.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Buying and Holding Tips&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Fast Grower =&gt; 2x GNP growth rate. Sustaining 30% growth rate is very difficult, even for 3 years. 20-25% growth rate is more sustainable (investing sweet spot).&lt;/li&gt;
-&lt;li&gt;Best place to find a 10x stock is close to home – if not the backyard, then in the kitchen, mall, workplace etc. You’ll find a likely prospect ~2/3 times a year. The person with the edge is always in a position to outguess the person without an edge.&lt;/li&gt;
-&lt;li&gt;Long shots almost never pay off. Better to miss the 1st stock move (during phase I), or even the late stage of phase I, when the company’s only reached 5-10% of market saturation, and wait to see if it’s plans are working. If you wait, you may never need to buy, since failure would’ve become visible.&lt;/li&gt;
-&lt;li&gt;Does the idea work elsewhere? Must prove that cloning works in other markets, and show its ability to survive early mistakes, limited capital, find required skilled labour.&lt;/li&gt;
-&lt;li&gt;The most fascinating part of long term, Fast Growers is how much time you have to catch them. Even a decade later and with stock already up 20x, it’s not too late to capitalize on an idea that has still not run its course.&lt;/li&gt;
-&lt;li&gt;Emerging growth stocks are much more volatile than larger companies, dropping and soaring like sparrow hawks around the stable flight of buzzards. After small caps have taken one of these extended dives, they eventually catch upto the buzzards.&lt;/li&gt;
-&lt;li&gt;Small Company Index PE / S&amp;#x26;P 500 PE: Since small companies are expected to grow faster than larger ones, they’re expected to sell at higher PE’s, theoretically. In practice, this isn’t always the case. During periods when Emerging Growth is unpopular with investors, these small caps get so cheap that their PE = S&amp;#x26;P 500 PE. When wildly popular and bid up to unreasonably high levels, it is = 2x S&amp;#x26;P 500 PE.&lt;/li&gt;
-&lt;li&gt;In such cases, small caps may get clobbered for several years afterward. Best time to buy is when Small PE / Large PE &amp;#x3C; 1.2x. To reap the reward from this strategy, you’ve to be patient. The rallies in small cap stocks can take a couple of years to gather storm and then several more years to develop.&lt;/li&gt;
-&lt;li&gt;A similar pattern applies to the Growth vs Value pots. Be patient. Watched stock never boils. When in doubt, tune in later.&lt;/li&gt;
-&lt;li&gt;Look for a good balance sheet and large profits. Trick is in figuring out when the growth stops and how much to pay for it? Recent price run-ups shouldn’t matter, so long as PEG still makes it attractive.&lt;/li&gt;
-&lt;li&gt;If PEG =1x, then 20% growth @ 20x PE is &gt; 10% growth @ 10x PE. Higher compounded earnings will compensate even for PE multiple shrinkage.&lt;/li&gt;
-&lt;li&gt;High PE leaves little room for error. Best way to handle a situation where you love the company but not the price (great company, high growth, but high PE), is to make a small commitment and then increase it in the next selloff. One can never predict how far the price may fall. Even if you buy after a setback, be prepared for further declines when you might consider buying even more shares. If the story is still good, after review, then you’re happy that the price fell.&lt;/li&gt;
-&lt;li&gt;So, the important issue is why has the stock fallen so much? If the long term story is still intact and the growth will continue for a long time, then buy more. If you can place the company in its attractive, mid-life phase, ex. 2nd decade of 30 years of growth, then you shouldn’t mind paying 20x PE for a 20-25% growth rate, especially if market PE = 18-20x with an 8-10% growth rate.&lt;/li&gt;
-&lt;li&gt;If you sell at 2x, you won’t get 10x. As long as same store sales are rising, company isn’t crippled with excess debt, and is following its stated expansion plans, stick around. If the original story stays intact, you’ll be amazed at the results in several years.&lt;/li&gt;
-&lt;li&gt;Trick is to not lose a potential 10x, but know that, if earnings shrink, then so will the PE that’s been bid up high – double whammy.&lt;/li&gt;
-&lt;li&gt;It’s harder to stick with a winning stock after price increases, vs, continuing to believe in a company after price falls. If you’re in danger of being faked out into selling, revisit the reasons / story, as to why you bought it in the first place. There are 2 ways investors can fake themselves out of the big returns that come from great growth companies.
+&lt;li&gt;Fast Grower =&gt; 2x GNP growth rate. Sustaining a 30% growth rate is very difficult, even for three years. 20-25% growth rate is more sustainable (investing sweet spot).&lt;/li&gt;
+&lt;li&gt;The best place to find a 10x stock is close to home – if not the backyard, then in the kitchen, mall, workplace etc. You’ll find a likely prospect ~2/3 times a year. The person with the edge can always outguess the person without an edge.&lt;/li&gt;
+&lt;li&gt;Long shots rarely pay off. Better to miss the 1st stock move (during phase I), or even the late stage of phase I, when the companies only reached 5-10% of market saturation, and wait to see if it’s plans are working. If you wait, you may never need to buy since failure would’ve become visible.&lt;/li&gt;
+&lt;li&gt;Does the idea work elsewhere? Must prove that cloning works in other markets and show its ability to survive early mistakes, limited capital, and find required skilled labour.&lt;/li&gt;
+&lt;li&gt;The fascinating part of long-term, Fast Growers is how much time you have to catch them. Even a decade later and with stock already up 20x, it’s not too late to capitalize on an idea that has still not run its course.&lt;/li&gt;
+&lt;li&gt;Emerging growth stocks are much more volatile than larger companies, dropping and soaring like sparrow hawks around the stable flight of buzzards. After small caps have taken one of these extended dives, they eventually catch up to the buzzards.&lt;/li&gt;
+&lt;li&gt;Small Company Index PE / S&amp;#x26;P 500 PE: Since small companies are expected to grow faster than larger ones, they’re expected to sell at higher PEs, theoretically. In practice, this isn’t always the case. When Emerging Growth is unpopular with investors, these small caps get so cheap that their PE = S&amp;#x26;P 500 PE. When wildly popular and bid up to unreasonably high levels, it is = 2x S&amp;#x26;P 500 PE.&lt;/li&gt;
+&lt;li&gt;In such cases, small caps may get clobbered for several years afterward. The best time to buy is when Small PE / Large PE &amp;#x3C; 1.2x. To reap the reward from this strategy, you’ve to be patient. The rallies in small-cap stocks can take a couple of years to gather storm and then several more years to develop.&lt;/li&gt;
+&lt;li&gt;A similar pattern applies to the Growth vs Value pots. Be patient. The watched stock never boils. When in doubt, tune in later.&lt;/li&gt;
+&lt;li&gt;Look for a good balance sheet and large profits. The trick is figuring out when the growth stops and how much to pay. Recent price run-ups shouldn’t matter as long as PEG makes it attractive.&lt;/li&gt;
+&lt;li&gt;If PEG =1x, then 20% growth @ 20x PE is &gt; 10% growth @ 10x PE. Higher compounded earnings will compensate even for PE multiple shrinkages.&lt;/li&gt;
+&lt;li&gt;High PE leaves little room for error. The best way to handle a situation where you love the company but not the price (great company, high growth, but high PE), is to make a small commitment and then increase it in the next selloff. One can never predict how far the price may fall. Even if you buy after a setback, be prepared for further declines when you might consider buying even more shares. If the story is still good after review, you’re happy that the price fell.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The important issue is why the stock has fallen so much. If the long-term story is still intact and the growth will continue for a long time, buy more. If you can place the company in its attractive, mid-life phase, ex. 2nd a decade of 30 years of growth, you shouldn’t mind paying 20x PE for a 20-25% growth rate, especially if market PE = 18-20x with an 8-10% growth rate.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;i) Waiting to buy the stock when it looks cheap: Throughout its 27-year rise from a split-adjusted 1.6 cents to $23, WalMart never looked cheap compared to the market. Its PE rarely dropped &amp;#x3C;20x, but earnings were growing at 25-30% Any business that keeps up a 20-25% growth rate for 20 years rewards its owners with a massive return even if the overall market is lower after 20 years.&lt;/li&gt;
-&lt;li&gt;ii) Underestimating how long a great growth company can keep up the pace. These “nowhere to grow” theories come up often &amp;#x26; should be viewed sceptically.
+&lt;li&gt;If you sell at 2x, you won’t get 10x. As long as same-store sales are rising, the company isn’t crippled with excess debt and is following its stated expansion plans. Stick around. If the original story stays intact, you’ll be amazed at the results in several years.&lt;/li&gt;
+&lt;li&gt;Trick is not to lose a potential 10x, but know that if earnings shrink, so will the PE that’s been bid up high – double whammy.&lt;/li&gt;
+&lt;li&gt;It’s harder to stick with a winning stock after price increases, vs, continuing to believe in a company after price falls. If you’re in danger of being faked out into selling, revisit the reasons/story as to why you bought it in the first place. There are two ways investors can fake themselves out of the big returns from great growth companies.
+&lt;ul&gt;
+&lt;li&gt;i) Waiting to buy the stock when it looks cheap: Throughout its 27-year rise from a split-adjusted 1.6 cents to $23, Walmart never looked cheap compared to the market. Its PE rarely dropped &amp;#x3C;20x, but earnings grew at 25-30%. Any business that keeps up a 20-25% growth rate for 20 years rewards its owners with a massive return even if the overall market is lower after 20 years.&lt;/li&gt;
+&lt;li&gt;ii) Underestimating how long a great growth company can keep up the pace. These “nowhere to grow” theories come up often &amp;#x26; should be viewed skeptically.
 &lt;ul&gt;
 &lt;li&gt;Don’t believe them until you check for yourself. Look carefully at where the company does business and at how much growing room is left. Whether or not it has growing room may have nothing to do with its age.&lt;/li&gt;
-&lt;li&gt;Wal-Mart IPO’d in 1970. By 1980 = stock 20x, with 7x number of stores. Was it time to sell, not be greedy, &amp;#x26; put money elsewhere? Stocks don’t care who owns it and questions of greed are best resolved in church, not in brokerage accounts. The important issue to analyze was not whether the Wal-Mart stock would punish its holders, but whether the company had saturated the market. The answer was No. Wal-Mart’s reach was only 15% of USA. Over the next 11 years, the stock went up another 50x.&lt;/li&gt;
+&lt;li&gt;Wal-Mart IPO’d in 1970. By 1980 = stock 20x, with 7x number of stores. Was it time to sell, not be greedy, &amp;#x26; put the money elsewhere? Stocks don’t care who owns them, and questions of greed are best resolved in church, not in brokerage accounts. The important issue to analyze was not whether the Wal-Mart stock would punish its holders but whether the company had saturated the market. The answer was No. Wal-Mart’s reach was only 15% of the USA. Over the next 11 years, the stock went up another 50x.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4779,13 +4779,13 @@ being foolishly optimistic. The story keeps changing for better or worse, and yo
 &lt;li&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Sell When&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Hold as long as earnings are growing, expansion continues and no impediments arise. Check the story every few months as if you’re hearing it for the very first time.&lt;/li&gt;
+&lt;li&gt;Hold as long as earnings are growing, expansion continues, and no impediments arise. Check the story every few months as if you’re hearing it for the first time.&lt;/li&gt;
 &lt;li&gt;If a Fast Grower rises 50% and the story starts sounding dubious, sell and rotate into another, where the current price is &amp;#x3C;= your purchase price, but the story sounds better.&lt;/li&gt;
-&lt;li&gt;Main thing to watch is the end of phase II of rapid expansion. Company has no new stores, old stores are shabby, and the stock is out of fashion.&lt;/li&gt;
-&lt;li&gt;Wall Street covers the stock widely, institutions hold 60%, and 3 national magazines fawn over the CEO.&lt;/li&gt;
-&lt;li&gt;Large companies with 50x PE!? Even at 40x, and with wide, saturated presence, where will the large company grow?&lt;/li&gt;
-&lt;li&gt;Last quarter same-store sales are down 3%, new store sales are disappointing, and the company is telling positive stories, vs, showing positive results.&lt;/li&gt;
-&lt;li&gt;Top executives / employees leave to join a rival.&lt;/li&gt;
+&lt;li&gt;The main thing to watch is the end of phase II of rapid expansion. The company has no new stores, old stores are shabby, and the stock is out of fashion.&lt;/li&gt;
+&lt;li&gt;Wall Street covers the stock widely, institutions hold 60%, and three national magazines fawn over the CEO.&lt;/li&gt;
+&lt;li&gt;Large companies with 50x PE!? Even at 40x, and with a wide, saturated presence, where will the large company grow?&lt;/li&gt;
+&lt;li&gt;Last quarter, same-store sales were down 3%, new store sales were disappointing, and the company is telling positive stories, vs, showing positive results.&lt;/li&gt;
+&lt;li&gt;Top executives/employees leave to join a rival.&lt;/li&gt;
 &lt;li&gt;PE = 30x, but next 2 years’ growth rate = 15%. Therefore, PEG = 2x (very negative)&lt;/li&gt;
 &lt;li&gt;Watch for the end of the second phase of rapid growth and/or when the company is entering into a mature phase&lt;/li&gt;
 &lt;/ul&gt;
@@ -4795,15 +4795,15 @@ being foolishly optimistic. The story keeps changing for better or worse, and yo
 &lt;ul&gt;
 &lt;li&gt;Annheuser Busch, Marriott, Taco Bell, Walmart, Gap, AMD, Texas Instruments, Holiday Inn, carpets, plastics, retail, calculators, disk drives, health maintenance, computers, restaurants&lt;/li&gt;
 &lt;li&gt;While it’s possible to make 2-5x in Cyclicals and Undervalued situations (if all goes well), payoffs in Fast Growers like restaurants and retailers are bigger. Restaurants/retailers can expand across the country and keep up the growth rate at 20% for 10-15 years.&lt;/li&gt;
-&lt;li&gt;Not only do they grow as fast as high tech companies, but unlike an electronics or shoe company, restaurants are protected from competition. Competition is slower to arrive and you can see it coming. A restaurant chain takes a long time to work its way across the country and no foreign company can service local customers.&lt;/li&gt;
+&lt;li&gt;Not only do they grow as fast as high-tech companies but unlike an electronics or shoe company, restaurants are protected from competition. Competition is slower to arrive, and you can see it coming. A restaurant chain takes a long time to work across the country, and no foreign company can service local customers.&lt;/li&gt;
 &lt;li&gt;Taste homogeneity helps scale in food, drinks, entertainment, makeup, fashion etc. Popularity in 1 mall = popularity in another. Certain brands prosper at else’s expense.&lt;/li&gt;
 &lt;li&gt;Ways to increase earnings (restaurants):
 &lt;ul&gt;
 &lt;li&gt;i) Add more locations&lt;/li&gt;
 &lt;li&gt;ii) Improve existing operations&lt;/li&gt;
-&lt;li&gt;iii) High turnover with low priced meals&lt;/li&gt;
-&lt;li&gt;iv) High priced meals with lower turnover&lt;/li&gt;
-&lt;li&gt;v) High OPM because of food made with cheaper ingredients, or, due to low operating costs To break even, a restaurants’ sales must = Capital Employed. Restaurant group as a whole may only grow slowly at 4%, but as long as Americans eat &gt;50% of their meals out of home, there’ll be new 20x stocks.&lt;/li&gt;
+&lt;li&gt;iii) High turnover with low-priced meals&lt;/li&gt;
+&lt;li&gt;iv) High-priced meals with lower turnover&lt;/li&gt;
+&lt;li&gt;v) High OPM because of food made with cheaper ingredients or low operating costs. To break even, a restaurant’s sales must = Capital Employed. The restaurant group may only grow slowly at 4%, but if Americans eat &gt;50% of their meals out of home, there’ll be new 20x stocks.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4818,11 +4818,11 @@ being foolishly optimistic. The story keeps changing for better or worse, and yo
 &lt;li&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;PE Ratio&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Highest for Fast Growers at 14-20x. Company with a High PE must have incredible growth (for next 2 years) to justify its price. It’s a miracle for even a small company to justify a 50x PE, as may so happen during a bull market.&lt;/li&gt;
-&lt;li&gt;1 year forward PE of 40x = dangerously high and in most cases extravagant. Even fastest growing companies can rarely achieve 25% growth, and 40% is a rarity. Such frenetic growth isn’t sustainable for long &amp;#x26; growing too fast tends to lead to self destruction.&lt;/li&gt;
+&lt;li&gt;Highest for Fast Growers at 14-20x. A company with a High PE must have incredible growth (for the next two years) to justify its price. It’s a miracle for even a small company to justify a 50x PE, as may happen during a bull market.&lt;/li&gt;
+&lt;li&gt;1 year forward PE of 40x = dangerously high and, in most cases, extravagant. Even the fastest growing companies can rarely achieve 25% growth, and 40% is a rarity. Such frenetic growth isn’t sustainable for long &amp;#x26; growing too fast leads to self-destruction.&lt;/li&gt;
 &lt;li&gt;40x PE @ 30% growth isn’t attractive, but not bad if S&amp;#x26;P 500 = 23x PE &amp;#x26; Coke PEG = 2x (PE = 30x @ 15% growth).&lt;/li&gt;
-&lt;li&gt;Unlike Cyclical where the PE contracts near the end of the cycle, Fast grower’s PE gets bigger and may reach absurd, illogical levels.&lt;/li&gt;
-&lt;li&gt;Earnings are not constant and PE of 40x vs 3x shows investor willingness to gamble on higher earnings, vs, scepticism about the cheaply priced company’s future.&lt;/li&gt;
+&lt;li&gt;Unlike Cyclical, where the PE contracts near the end of the cycle, Fast grower’s PE gets bigger and may reach absurd illogical levels.&lt;/li&gt;
+&lt;li&gt;Earnings are not constant, and PE of 40x vs 3x shows investor willingness to gamble on higher earnings, vs, skepticism about the cheaply priced company’s future.&lt;/li&gt;
 &lt;li&gt;PEG:
 &lt;ul&gt;
 &lt;li&gt;&amp;#x3C; 0.5x: very positive&lt;/li&gt;
@@ -4856,33 +4856,33 @@ being foolishly optimistic. The story keeps changing for better or worse, and yo
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;2 Minute Drill&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Where and how can the company continue to grow fast?&lt;/li&gt;
-&lt;li&gt;La Quinta Motels started in Texas. Company successfully duplicated its formula in Arkansas &amp;#x26; Louisiana. Last year it added 28% more units. Earnings have increased every quarter. Plans rapid future expansion &amp;#x26; debt isn’t excessive. Motels are low growth industry and very competitive but La Quinta&lt;/li&gt;
+&lt;li&gt;La Quinta Motels started in Texas. The company successfully duplicated its formula in Arkansas &amp;#x26; Louisiana. Last year it added 28% more units. Earnings have increased every quarter. Plans rapid future expansion &amp;#x26; debt isn’t excessive. Motels are a low-growth and competitive industry, but La Quinta&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;has found something of a niche. Long way to go before it saturates the market.&lt;/p&gt;
+&lt;p&gt;has found a niche. Long way to go before it saturates the market.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Checklist&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Percentage of sales – is a new fast growing product a large % of sales?&lt;/li&gt;
+&lt;li&gt;Percentage of sales – is a new fast-growing product a large % of sales?&lt;/li&gt;
 &lt;li&gt;Recent growth rate – favour 20-25% growth rates. Be wary if growth is &gt; 25%. Hot industries show growth &gt;50%.&lt;/li&gt;
-&lt;li&gt;Proof – has company duplicated its success in &gt;1 city, for planned expansion to work? Runway – does it still have room to grow?&lt;/li&gt;
-&lt;li&gt;PE – is it high or low, vs, growth rate?&lt;/li&gt;
-&lt;li&gt;Δ Growth rate – is expansion speeding up or slowing down? For companies doing sales via large, single deals, vs, selling high volume &amp;#x26; low ticket items, growth slowdown can be devastating because doing more volume at bigger ticket sizes is difficult. When growth slows, stock drops dramatically.&lt;/li&gt;
-&lt;li&gt;Institutional ownership / Analyst coverage – no presence is a positive, as growth expectations are still not captured in the Price or PE.&lt;/li&gt;
+&lt;li&gt;Proof – has the company duplicated its success in &gt;1 city for planned expansion to work? Runway – does it still have room to grow?&lt;/li&gt;
+&lt;li&gt;PE – is it high or low vs growth rate?&lt;/li&gt;
+&lt;li&gt;Δ Growth rate – is expansion speeding up or slowing down? For companies making sales via large, single deals, vs, selling high volume &amp;#x26; low ticket items, growth slowdown can be devastating because doing more volume at bigger ticket sizes is difficult. When growth slows, stock drops dramatically.&lt;/li&gt;
+&lt;li&gt;Institutional ownership / Analyst coverage – no presence is positive, as growth expectations are still not captured in the Price or PE.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Portfolio Allocation %&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;30-40% Allocation in Magellan. Magellan’s allocation to Fast Growers was never &gt;50%.&lt;/li&gt;
-&lt;li&gt;40% in Personal investor’s 10 stock portfolio&lt;/li&gt;
-&lt;li&gt;If looking for 10x stocks, likelihood increases as you hold more stocks. Among several, the one that actually goes the farthest maybe a&lt;/li&gt;
+&lt;li&gt;40% in Personal investor’s ten stock portfolio&lt;/li&gt;
+&lt;li&gt;If looking for 10x stocks, the likelihood increases as you hold more stocks. Among several, the one that goes the farthest may be a&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;surprise. The story may start at a certain point, with specific expectations, and get progressively better. There’s no way to anticipate pleasant surprises.&lt;/p&gt;
+&lt;p&gt;surprise. The story may start at a certain point with specific expectations and get progressively better. There’s no way to anticipate pleasant surprises.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;More stocks provide greater flexibility for fund rotation. If something happens to a secondary company, it may get promoted to being a primary selection.&lt;/p&gt;
@@ -4892,8 +4892,8 @@ being foolishly optimistic. The story keeps changing for better or worse, and yo
 &lt;ul&gt;
 &lt;li&gt;High Risk – High Gain. Higher potential upside = Greater potential downside.&lt;/li&gt;
 &lt;li&gt;+10x / (-100%)&lt;/li&gt;
-&lt;li&gt;Major bankruptcy risk for small fast grower’s via underfinanced, overzealous expansion&lt;/li&gt;
-&lt;li&gt;Major rapid devaluation risk for large fast growers once growth falters, because there’s no room left for future expansion&lt;/li&gt;
+&lt;li&gt;Major bankruptcy risk for small, fast grower’s via underfinanced, overzealous expansion&lt;/li&gt;
+&lt;li&gt;Major rapid devaluation risk for large fast growers once growth falters because there’s no room left for future expansion&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
