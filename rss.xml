@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 04 Nov 2022 12:20:21 GMT</lastBuildDate><item><title><![CDATA[becoming your own bank summary]]></title><description><![CDATA[take-aways The opportunity cost of money This is the first principle we learn from the book, and it says that everything a person buys is…]]></description><link>https://tonytvo.github.io/becoming-your-own-bank-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/becoming-your-own-bank-summary/</guid><pubDate>Fri, 21 Oct 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;take-aways&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#take-aways&quot; aria-label=&quot;take aways permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;take-aways&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 04 Nov 2022 15:23:45 GMT</lastBuildDate><item><title><![CDATA[becoming your own bank summary]]></title><description><![CDATA[take-aways The opportunity cost of money This is the first principle we learn from the book, and it says that everything a person buys is…]]></description><link>https://tonytvo.github.io/becoming-your-own-bank-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/becoming-your-own-bank-summary/</guid><pubDate>Fri, 21 Oct 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;take-aways&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#take-aways&quot; aria-label=&quot;take aways permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;take-aways&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;The opportunity cost of money&lt;/strong&gt;
 &lt;ul&gt;
@@ -3361,28 +3361,55 @@ Note: As more people store value in a form of money there is an incentive to inc
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Influence-from-Mere-Association Tendency&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“The most damaging miscalculations from mere association do not ordinarily come from advertisers and music providers. Some of the most important miscalculations come from what is accidentally associated with one’s past success, or one’s liking and loving, or one’s disliking and hating, which includes a natural hatred for bad news.”&lt;/li&gt;
+&lt;li&gt;“People disagree about how much blindness should accompany the association called love. In Poor Richard’s Almanack Franklin counseled: ‘Keep your eyes wide open before marriage and half shut thereafter.’ Perhaps this ‘eyes-half-shut’ solution is about right, but I favor a tougher prescription: ‘See it like it is and love anyway.‘”&lt;/li&gt;
+&lt;li&gt;“The proper antidote to creating Persian Messenger Syndrome and its bad effects is to develop, through exercise of will, a habit of welcoming bad news.”&lt;/li&gt;
+&lt;li&gt;“A final serious clump of bad thinking caused by mere association lies in the common use of classification stereotypes.”&lt;/li&gt;
+&lt;li&gt;We can be easily manipulated by mere association. It can be a group of people, the quality of a product, advertising, etc.&lt;/li&gt;
+&lt;li&gt;“some of the most important miscalculations come from what is accidentally associated with one’s past success, or one’s liking and loving, or one’s disliking and hating, which includes a natural hatred for bad news.”&lt;/li&gt;
+&lt;li&gt;Carefully examine each past success, looking for accidental, non-causative factors associated with the success that might mislead you to making correlative assumptions and look for dangerous aspects of the new undertaking that were not present when past success occurred&lt;/li&gt;
+&lt;li&gt;Hating and disliking cause equally many miscalculations based on mere association
+&lt;ul&gt;
+&lt;li&gt;Undervalue the competency and morals of people/businesses/products you dislike&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;Must develop a habit of welcoming bad news in order to live in reality&lt;/li&gt;
+&lt;li&gt;Be cautious of using classification stereotypes to judge others&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;“The most damaging miscalculations from mere association do not ordinarily come from advertisers and music providers. Some of the most important miscalculations come from what is accidentally associated with one’s past success, or one’s liking and loving, or one’s disliking and hating, which includes a natural hatred for bad news.”&lt;/p&gt;
-&lt;p&gt;“People disagree about how much blindness should accompany the association called love. In Poor Richard’s Almanack Franklin counseled: ‘Keep your eyes wide open before marriage and half shut thereafter.’ Perhaps this ‘eyes-half-shut’ solution is about right, but I favor a tougher prescription: ‘See it like it is and love anyway.‘”
-“The proper antidote to creating Persian Messenger Syndrome and its bad effects is to develop, through exercise of will, a habit of welcoming bad news.”
-“A final serious clump of bad thinking caused by mere association lies in the common use of classification stereotypes.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Simple, Pain-Avoiding Psychological Denial&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Simple, Pain-Avoiding Psychological Denial&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;“The reality is too painful to bear, so one distorts the facts until they become bearable.”&lt;/li&gt;
+&lt;li&gt;“We all do that to some extent, often causing terrible problems. The tendency’s most extreme outcomes are usually mixed up with love, death, and chemical dependency.”&lt;/li&gt;
+&lt;li&gt;“In chemical dependency, wherein morals usually break down horribly, addicted persons tend to believe that they remain in respectable condition, with respectable prospects. They thus display an extremely unrealistic denial of reality as they go deeper and deeper into deterioration.”&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;“The reality is too painful to bear, so one distorts the facts until they become bearable.”&lt;/p&gt;
-&lt;p&gt;“We all do that to some extent, often causing terrible problems. The tendency’s most extreme outcomes are usually mixed up with love, death, and chemical dependency.”
-“In chemical dependency, wherein morals usually break down horribly, addicted persons tend to believe that they remain in respectable condition, with respectable prospects. They thus display an extremely unrealistic denial of reality as they go deeper and deeper into deterioration.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Excessive Self-Regard Tendency&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Excessive Self-Regard Tendency&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;“We all commonly observe the excessive self-regard of man. He mostly misappraises himself on the high side.”&lt;/li&gt;
+&lt;li&gt;“Even man’s minor possessions tend to be overappraised. Once owned, they suddenly become worth more to him than he would pay if they were offered for sale to him and he didn’t already own them. There is a name in psychology for this overappraise-your-own-possessions phenomenon: the ‘endowment effect.’ And all man’s decisions are suddenly regarded by him as better than would have been the case just before he made them.”&lt;/li&gt;
+&lt;li&gt;“Excessive Self-Regard Tendency diminishes the foolish bettor’s accuracy in appraising his relative degree of talent.”&lt;/li&gt;
+&lt;li&gt;“There is a famous passage somewhere in Tolstoy that illuminates the power of Excessive Self-Regard Tendency. According to Tolstoy, the worst criminals don’t appraise themselves as all that bad. They come to believe either (1) that they didn’t commit their crimes or (2) that, considering the pressures and disadvantages of their lives, it is understandable and forgivable that they behaved as they did and became what they became.”&lt;/li&gt;
+&lt;li&gt;“The best antidote to folly from an excess of self-regard is to force yourself to be more objective when you are thinking about yourself, your family and friends, your property, and the value of your past and future activity. This isn’t easy to do well and won’t work perfectly, but it will work much better than simply letting psychological nature take its normal course.”&lt;/li&gt;
+&lt;li&gt;We all think we’re above average. This is where overconfidence comes from. Also tend to over-appraise our belongings (endowment effect)
+&lt;ul&gt;
+&lt;li&gt;If allow people to personalize anything (choose own numbers in the lottery, make own speculative bet) they will believe much more whole-heartedly that they will win&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;“We all commonly observe the excessive self-regard of man. He mostly misappraises himself on the high side.”&lt;/p&gt;
-&lt;p&gt;“Even man’s minor possessions tend to be overappraised. Once owned, they suddenly become worth more to him than he would pay if they were offered for sale to him and he didn’t already own them. There is a name in psychology for this overappraise-your-own-possessions phenomenon: the ‘endowment effect.’ And all man’s decisions are suddenly regarded by him as better than would have been the case just before he made them.”
-“Excessive Self-Regard Tendency diminishes the foolish bettor’s accuracy in appraising his relative degree of talent.”
-“There is a famous passage somewhere in Tolstoy that illuminates the power of Excessive Self-Regard Tendency. According to Tolstoy, the worst criminals don’t appraise themselves as all that bad. They come to believe either (1) that they didn’t commit their crimes or (2) that, considering the pressures and disadvantages of their lives, it is understandable and forgivable that they behaved as they did and became what they became.”
-“The best antidote to folly from an excess of self-regard is to force yourself to be more objective when you are thinking about yourself, your family and friends, your property, and the value of your past and future activity. This isn’t easy to do well and won’t work perfectly, but it will work much better than simply letting psychological nature take its normal course.”&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Overoptimism Tendency&lt;/strong&gt;&lt;/li&gt;
+&lt;/li&gt;
+&lt;li&gt;The greatest type of pride should be taking pride in being trustworthy to avoid developing an ego&lt;/li&gt;
+&lt;li&gt;Tend to like people more who are similar to ourselves and this leads to cliques&lt;/li&gt;
+&lt;li&gt;Underweight face-to-face encounters and overweight an applicant’s past record. &lt;strong&gt;The past is the strongest indicator of future results&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Fixable but unfixed bad performance is bad character and tends to create more of itself&lt;/li&gt;
+&lt;li&gt;Do not give excuses, simply perform and behave as you should&lt;/li&gt;
+&lt;li&gt;“Of all forms of pride, perhaps the most desirable is a justified pride in being trustworthy.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Overoptimism Tendency&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;“Man displays not only Simple, Pain-Avoiding Psychological Denial but also an excess of optimism even when he is already doing well … an excess of optimism being the normal human condition, even when pain or the threat of pain is absent.”&lt;/p&gt;
 &lt;p&gt;“One standard antidote to foolish optimism is trained, habitual use of the simple probability math of Fermat and Pascal, taught in my youth to high school sophomores.”&lt;/p&gt;
