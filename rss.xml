@@ -1,4 +1,89 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 07 Nov 2022 13:16:06 GMT</lastBuildDate><item><title><![CDATA[becoming your own bank summary]]></title><description><![CDATA[take-aways The opportunity cost of money This is the first principle we learn from the book, and it says that everything a person buys is…]]></description><link>https://tonytvo.github.io/becoming-your-own-bank-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/becoming-your-own-bank-summary/</guid><pubDate>Fri, 21 Oct 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;take-aways&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#take-aways&quot; aria-label=&quot;take aways permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;take-aways&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 07 Nov 2022 14:05:09 GMT</lastBuildDate><item><title><![CDATA[phan tich tai chinh kinh doanh CGBA TCB - wip]]></title><description><![CDATA[critical success factor quan tri qua ly dinh gia huong dan cgba Quotes References https://finance.vietstock.vn/SAB-saigon-beer-alcohol…]]></description><link>https://tonytvo.github.io/phan-tich-tai-chinh-kinh-doanh-tcb/</link><guid isPermaLink="false">https://tonytvo.github.io/phan-tich-tai-chinh-kinh-doanh-tcb/</guid><pubDate>Fri, 21 Oct 2022 22:12:03 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d786560d7e4158b226977d7f31a57844/91608/overview-cgba.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.32911392405063%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACPklEQVQoz12QS47TQBRFsxq2wwIYILEGRqyAKWLEBDbAACEhmDBCYkQ6Tbo75NdxHMexXeVP2Y7L5e9BsZtB86RXJd0qHR3diS41MkvZBz6q1CS6QKYKpQtyUxIkMdE55xiHRFmGqStyY3j95QfP3n3m6ZsvvP2+BlqqqmZSty1+mrA4HsibBlUZrMBDGYPpxjdZFkyPNm6qqOjRLTx//40nrz4wefGJlx/vuEzb9UzSNGW5Wg1B33XDPZ4QF5rbQCCKkp3MEbpCCIciSxB5hZskQx6fa8q2oe06JkopZrPZCLoA+35cIMw0d44kMSWhY5HqgvvAw1cJ/0/R1HT9g+Gf5fJBuRvs0kt3aUp26VQliChiHwSUfYfWesg9lXCQAt22A6homhF4MZzP5wPQNDWe77HcrDhJQcNoGiUx6+0GXwiaB/uzMbgnlzSKaLqO8z/DC/D6+nr4lBmDLXys45FYKaquJasqnDhk49jsZUBeV7R9T6Y1XihxpeBcVY8Nb29uBpeF43JQihv3RJCfKZuamXVgF8f8dlw2UcRWCJTWWDJkF8WsAsFOhiS1GYFJkjCdTh8VfOkxriqkLhGVIexqoq6hoKeBYS9/akBqTWwMBd0ILLRGhiF1XbO7v2e12TBfLZktFvxaLPi9XrO437JYr1hvt/xZr3C8E1vLYm3t+Hk958f0ipPvDzKTMk3p85xzGGHb9rAH28Y9Hgl8H9/zcBxnzA8H7P2eUEpc1+XkugghOO52WF+/kUyv+At58TnlC3JGDwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;tổng quan phân tích tài chính&quot;
+        title=&quot;tổng quan phân tích tài chính&quot;
+        src=&quot;/static/d786560d7e4158b226977d7f31a57844/f058b/overview-cgba.png&quot;
+        srcset=&quot;/static/d786560d7e4158b226977d7f31a57844/c26ae/overview-cgba.png 158w,
+/static/d786560d7e4158b226977d7f31a57844/6bdcf/overview-cgba.png 315w,
+/static/d786560d7e4158b226977d7f31a57844/f058b/overview-cgba.png 630w,
+/static/d786560d7e4158b226977d7f31a57844/40601/overview-cgba.png 945w,
+/static/d786560d7e4158b226977d7f31a57844/91608/overview-cgba.png 1251w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/33951fdd0641fc34357f47ecc69338de/c7dcc/caydupont.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.32911392405063%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACIElEQVQoz3WSS2/TQBSF86/YwIb/Byv23SMhkGCLBG2l0la0REnaxEkcO3ZsJ34/6nrGnvlQnJaKIq50NNKR7nmM7qBpGtD6gK5DNg1VVZIXOUVZIoVAPIMUkqudx/vlhKPZL95NLjkyhvh5xkApxdgyuZzd4tcVVpYwdG0uVgvOlgZSKx5Ho/vXqkten37m1fEnXn7/2OPFtw/8iHwGXddhBT7LjYtbFYRNzfX0ltFywcLb9IJaa/ayqheFVikuki1vjCFv50O++Bbe/R0odUj41yhNGscE24AwDJ/4KoG7FFrJ/0a27SHh9WLG2WTEusqxspiR5/DTsTg353h1RSruSd0p6XpCVsS0GmaOheF7FMGK1jOohUB16iC4iUOcXUBQV+StoN6tqJ0RIvVJlMLPYn7eTrgypqy2fp9mmyYEZUVdFeh8h2wle61/KgvREEZbvI2N5do9V95r1pFgEzeE+UPlroHch8z/s9s+Vj4dD/l6dclNGnGTRJw7DqeWzYlpYhQJy7zg2vYY+zvGYYJVV5iRj7G6Yb7Yn0t68NgL7hO2XUfdNCitqCU4KYQVbEtou8PBEC4hmEKd9ctxHGPaa0zboSirp4TPK2utMJcL5nODNI6IZMOdaFhZa6azOWGcEEmBkIK1beO6LloptJC0UjKQRYGMYtrq4KK6rndPkoQsy6j3n60UZVH0/L6NfAiRxDF5VdHlOdHxCcl4wm9rfj4cD7wOmwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;caydunt point&quot;
+        title=&quot;caydunt point&quot;
+        src=&quot;/static/33951fdd0641fc34357f47ecc69338de/f058b/caydupont.png&quot;
+        srcset=&quot;/static/33951fdd0641fc34357f47ecc69338de/c26ae/caydupont.png 158w,
+/static/33951fdd0641fc34357f47ecc69338de/6bdcf/caydupont.png 315w,
+/static/33951fdd0641fc34357f47ecc69338de/f058b/caydupont.png 630w,
+/static/33951fdd0641fc34357f47ecc69338de/c7dcc/caydupont.png 641w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/bd36a9fe68b7e25562d6bfe28a68154d/critical-success-factor-alcoho-beverage-vn-trung-vo.docx&quot;&gt;critical success factor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/8628990cbcf544754f1a6f0ddc728546/quan-tri-quan-ly-sab-trung-vo.docx&quot;&gt;quan tri qua ly&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/ecebddbe512202601fea7266c8fab023/HPG-dinh-gia-202206-v2.0.xlsx&quot;&gt;dinh gia&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/77632ac2b12911d0db30955fe5c067f1/Huong-dan-CGBA-Project.pdf&quot;&gt;huong dan cgba&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;quotes&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quotes&quot; aria-label=&quot;quotes permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Quotes&lt;/h1&gt;
+&lt;h1 id=&quot;references&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#references&quot; aria-label=&quot;references permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;References&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://finance.vietstock.vn/SAB-saigon-beer-alcohol-beverage-corporation.htm&quot;&gt;https://finance.vietstock.vn/SAB-saigon-beer-alcohol-beverage-corporation.htm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://s.cafef.vn/hose/SAB-tong-ctcp-bia-ruou-nuoc-giai-khat-sai-gon.chn&quot;&gt;https://s.cafef.vn/hose/SAB-tong-ctcp-bia-ruou-nuoc-giai-khat-sai-gon.chn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://danketoan.com/threads/phan-tich-bao-cao-tai-chinh-ctcp-bia-ruou-nuoc-giai-khat-sai-gon-sab-quy-2-2020.279579/&quot;&gt;http://danketoan.com/threads/phan-tich-bao-cao-tai-chinh-ctcp-bia-ruou-nuoc-giai-khat-sai-gon-sab-quy-2-2020.279579/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://content.acbs.com.vn/Files/Domains/ACBS/WFL-1585/220307094231-1015-1015000002.pdf&quot;&gt;https://content.acbs.com.vn/Files/Domains/ACBS/WFL-1585/220307094231-1015-1015000002.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://data.vdsc.com.vn/2022/09/vndirect-vnm-etf-co-the-loai-sab-va-thd-3358-999304.htm&quot;&gt;https://data.vdsc.com.vn/2022/09/vndirect-vnm-etf-co-the-loai-sab-va-thd-3358-999304.htm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.slideshare.net/guest2a6f47ef/chin-lc-bi-hon-chnh&quot;&gt;https://www.slideshare.net/guest2a6f47ef/chin-lc-bi-hon-chnh&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=sXiqwnsha70&quot;&gt;https://www.youtube.com/watch?v=sXiqwnsha70&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=N2eXM0P3u00&quot;&gt;https://www.youtube.com/watch?v=N2eXM0P3u00&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=QoEhr8nEh3Q&quot;&gt;https://www.youtube.com/watch?v=QoEhr8nEh3Q&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=PXbzVhrQ-B4&quot;&gt;https://www.youtube.com/watch?v=PXbzVhrQ-B4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=VsRxsMC0fA4&quot;&gt;https://www.youtube.com/watch?v=VsRxsMC0fA4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=8foSIrQ2Dso&quot;&gt;https://www.youtube.com/watch?v=8foSIrQ2Dso&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=3_g0O9jVQN0&quot;&gt;https://www.youtube.com/watch?v=3_g0O9jVQN0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[becoming your own bank by Nelson Nash summary]]></title><description><![CDATA[take-aways The opportunity cost of money This is the first principle we learn from the book, and it says that everything a person buys is…]]></description><link>https://tonytvo.github.io/becoming-your-own-bank-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/becoming-your-own-bank-summary/</guid><pubDate>Fri, 21 Oct 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;take-aways&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#take-aways&quot; aria-label=&quot;take aways permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;take-aways&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;The opportunity cost of money&lt;/strong&gt;
 &lt;ul&gt;
@@ -103,7 +188,7 @@
 &lt;p&gt;There can be periods where expected earnings are lower; businesses would turn to stockholders in this case, but this does not work for life insurance. Instead, capital is added to counteract this. For example, if accountants report that they have collected $1.10 from someone’s policy but found they only needed 80 cents to deliver the benefit, then the directors would decide what to do with the 30 cents. Most would put a portion of this into a contingency fund for unexpected risk and distribute the remaining dividend. Distributing the dividend is not a taxable event. If the client used the dividend to purchase additional paid-up insurance, it would result in an “ever-increasing tax-deferred accumulation of cash values that support an ever-increasing death benefit”&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&quot;human-problems&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#human-problems&quot; aria-label=&quot;human problems permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;human problems&lt;/h1&gt;
+&lt;h1 id=&quot;problems&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#problems&quot; aria-label=&quot;problems permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;problems&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;understand parkinson’s law&lt;/strong&gt;&lt;/p&gt;
@@ -169,6 +254,17 @@
 &lt;li&gt;Nash compares this to the common potato. In the late 1500s, conquistadors of Spain were in South America looking for gold. They did not find gold but instead found potatoes. However, when potatoes were brought back to Europe, they were viewed as poisonous due to their scientific classification. However, over time they realized the value of the potato for consumption and medicinal means. A similar misunderstanding happened with the tomato plant as well.&lt;/li&gt;
 &lt;li&gt;When choosing a plan to begin creating an entity with, it is best to select a close plan close to the Modified Endowment Contract (MEC) without crossing it. These are plans that are not treated as life insurance by the IRS. Therefore, these plans will be subject to taxation.&lt;/li&gt;
 &lt;li&gt;For this reason, it is best to choose a plan in the middle of the scale (figure on pg. 70) and add &lt;a href=&quot;https://livingwealth.com/paid-up-additions-pua-explained/&quot;&gt;Paid-Up Additions&lt;/a&gt; to it. The base policy and the Paid-Up Additions will pay dividends that can be used to buy more Paid-Up Additions insurance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;problem with current banking system&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Typical average young man is 29 years old and is making $28,500 per year after taxes — that is all he can spend. What does he do with the after-tax income? 20% is spent on transportation — 30% on housing — 45% on “living” (clothes, groceries, contributions to charitable causes, boat payments, casualty insurance on cars, vacations, etc.). Many of these items are financed by credit cards or bank notes. The balance is financed by paying cash for them — and thus, giving up interest that could be earned, otherwise. He is saving less than 5% of his after-tax income! (At the time of this writing he is saving absolutely nothing!) It is the first time in the history of America that this has happened. This scenario has all the ingredients for an impending disaster!&lt;/li&gt;
+&lt;li&gt;The typical financing package for an automobile for this hypothetical person is $10,550 for 48 months with an interest rate of at least 8.5% and this produces a monthly payment of $260.00 per month. It is a fact that 95% of the cars that are traded in are not paid for. This means, at the end of 30 months, that 21% of every payment is interest – and this is a perpetual factor. It never seems to dawn on him that the volume of interest is the real issue, not the annual percentage rate.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;This young man can qualify for a 30-year fixed-rate mortgage of about $93.000 at 7% APR with payments of $618.75 per month and closing costs of about $2,500.00. The problem is that within 5 years he will move to another city – maybe just move across town – or even refinance the mortgage. Something happens to a mortgage within 5 years. During the 60 months he has paid out $39,625, including closing costs but only $5,458 has gone to reduce the loan. This means that $34,167 has gone to interest and closing costs. Divide the amount paid out into the interest and closing costs and you find that 86% of every dollar paid out goes to the cost of financing! If he sells the house is less than 5 years, it is worse. This situation is also perpetual. He thinks he is buying a house, but all he is really doing is making the wheels of the banking business and the real estate business – in that order – turn. But, all the “financial experts”are advising him to indulge in this activity.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Now, add up all the interest he is paying out and you find that 34.5% of every dollar paid out is interest. For the average All-American male this proportion never changes. Let’s assume that he is saving 10% of is disposable income (which he is not doing!). This would mean that we have a 3.45 to 1 ratio of interest paid out as compared to savings.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Everything you do in the financial world is compared with what everyone else is doing. In America, most folks are doing the equivalent of flying with a 345 mile per hour headwind. Isn’t it obvious, if you have a 345 mile per hour tailwind, that the difference between you and them is 690 miles per hour? In all three examples the capability of the airplane is the same — 100 miles per hour.&lt;/li&gt;
+&lt;li&gt;Translate this example into the financial world and it is pretty obvious what is really going on. Many financial gurus are concentrating on encouraging people to “get out of debt” and that is a wonderful thing to do. In our airplane analogy that is the equivalent of flying with no headwind. But, I have yet to hear one of these folks recognize that the most profitable thing one can do is to create the perpetual “tailwind” to everything that you do financially. It seems that this thought never registers in their consciousness.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -406,6 +502,34 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;h1 id=&quot;examples&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#examples&quot; aria-label=&quot;examples permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Examples&lt;/h1&gt;
+&lt;h2 id=&quot;grocery&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#grocery&quot; aria-label=&quot;grocery permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;grocery&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Nash looks at the process of getting into a business where you are a consumer and a seller at the same time. An excellent example of this is a grocery store because everyone consumes groceries, and everyone around you is a potential customer.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When you begin studying the grocery business, you find the things necessary to succeed in this field, including a good location, high-quality merchandise, attentive staff, fully stocked inventory, etc. All of this will cost a lot of money.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Once the operation is set up, the difference between the “front door” and “back door” helps determine how you will be living. For example, if you sell a can of peas for 60 cents at the front door, and replace it at the back door for 57 cents, then you must turn the inventory 15 times to break even; this is the interest you must pay on the money borrowed to set up the grocery operations. If you turn the inventory 17 times, you make a profit; if you turn it 20 times in a year, it can help pay for early retirement.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Next, Nelson asks you to imagine if you were a male, married with children, and your wife bought groceries at your store, would she take groceries from the front or back? Many admit that the wife would want to go out the back door instead. However, this type of behavior is theft and can encourage more theft amongst employees and customers.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Many believe that they can do whatever they want with their business. However, the ones that pay for this theft are the customers getting their merchandise from the front door, and your business will need to sell more products to make up the deficit. The more you make, the more the IRS will take from you; this is another reason people would want to go out the back door instead.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If there is a situation where the profits from the grocery sales are not subject to income taxes, one of the incentives to go out the back door is taken away. The only reason left is the human instinct to use the back door. However, you and your family (plus some others) are captive customers in this scenario. If you charge wholesale prices, you are not creating more proceeds for retirement income. Charging the retail price on the can of peas helps you buy more cans of peas to sell to other customers. If you continue to do this for an extended period, it will create a profit. This will also create more value and income when selling the business down the line.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When you sell your business many years later, you are in competition with others that have not obeyed these principles. He and his family members took goods out the back door. His record books will never look as good as yours. In fact, he will probably have gone out of business some years ago. Even if he is still around, can you guess which business will bring the better price? Yours! With the proceeds from the sale you can buy a huge annuity and have income deposited monthly directly to your bank account at retirement time.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Grocery stores are in the business of moving groceries to customers. When you sell something, you must replace the item to sell again. If you own the store don’t steal the peas. Banks are in the business of “renting money” to customers. When they lend money, they must get it back, with interest. If you own the bank don’t steal the money!&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1 id=&quot;quotes&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quotes&quot; aria-label=&quot;quotes permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Quotes&lt;/h1&gt;
 &lt;p&gt;“So, in evaluating just the financial benefits of the college degree at a cost of $80,000 vs. putting that same $80,000 into high-premium whole life insurance, I don’t believe the degree is as valuable. As a matter of fact, the probability of the college-educated person ever learning the benefits of “banking” through the use of whole life insurance is not very good”&lt;/p&gt;
 &lt;p&gt;“If you are in command of the banking function, you do not have to go through all this expensive erosion. The Infinite Banking Concept does exactly that! You can make timely decisions. There is no cost of acquisition. You are in competition with others who must go through the erosion that has been outlined”&lt;/p&gt;
@@ -429,6 +553,7 @@
 &lt;p&gt;“Your need for finance, during your lifetime, exceeds your need for life insurance protection. If you solve your need for finance through life insurance cash values, you will end up with so much life insurance; you can’t get it past the underwriters. You will have to ensure every person in which you have an insurable interest” (pg. 158).&lt;/p&gt;
 &lt;h1 id=&quot;references&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#references&quot; aria-label=&quot;references permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;References&lt;/h1&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=FtqjARgA1I8&quot;&gt;https://www.youtube.com/watch?v=FtqjARgA1I8&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.whitecoatinvestor.com/infinite-banking-bank-on-yourself/&quot;&gt;https://www.whitecoatinvestor.com/infinite-banking-bank-on-yourself/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://medium.datadriveninvestor.com/infinite-banking-an-alternative-to-the-stock-market-3d3d64692d09&quot;&gt;https://medium.datadriveninvestor.com/infinite-banking-an-alternative-to-the-stock-market-3d3d64692d09&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PLabDKeNku_F9SAigr3eelsoWhliOxmgkA&quot;&gt;https://www.youtube.com/playlist?list=PLabDKeNku_F9SAigr3eelsoWhliOxmgkA&lt;/a&gt;&lt;/li&gt;
@@ -441,91 +566,7 @@
 &lt;li&gt;&lt;a href=&quot;https://wealthnation.io/blog/life-insurance-dividends/&quot;&gt;https://wealthnation.io/blog/life-insurance-dividends/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://livingwealth.com/summary-book-becoming-your-own-banker/&quot;&gt;https://livingwealth.com/summary-book-becoming-your-own-banker/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=R6d8lJU2CkY&quot;&gt;https://www.youtube.com/watch?v=R6d8lJU2CkY&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[phan tich tai chinh kinh doanh CGBA TCB - wip]]></title><description><![CDATA[critical success factor quan tri qua ly dinh gia huong dan cgba Quotes References https://finance.vietstock.vn/SAB-saigon-beer-alcohol…]]></description><link>https://tonytvo.github.io/phan-tich-tai-chinh-kinh-doanh-tcb/</link><guid isPermaLink="false">https://tonytvo.github.io/phan-tich-tai-chinh-kinh-doanh-tcb/</guid><pubDate>Fri, 21 Oct 2022 22:12:03 GMT</pubDate><content:encoded>&lt;ul&gt;
-&lt;li&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/d786560d7e4158b226977d7f31a57844/91608/overview-cgba.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 56.32911392405063%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACPklEQVQoz12QS47TQBRFsxq2wwIYILEGRqyAKWLEBDbAACEhmDBCYkQ6Tbo75NdxHMexXeVP2Y7L5e9BsZtB86RXJd0qHR3diS41MkvZBz6q1CS6QKYKpQtyUxIkMdE55xiHRFmGqStyY3j95QfP3n3m6ZsvvP2+BlqqqmZSty1+mrA4HsibBlUZrMBDGYPpxjdZFkyPNm6qqOjRLTx//40nrz4wefGJlx/vuEzb9UzSNGW5Wg1B33XDPZ4QF5rbQCCKkp3MEbpCCIciSxB5hZskQx6fa8q2oe06JkopZrPZCLoA+35cIMw0d44kMSWhY5HqgvvAw1cJ/0/R1HT9g+Gf5fJBuRvs0kt3aUp26VQliChiHwSUfYfWesg9lXCQAt22A6homhF4MZzP5wPQNDWe77HcrDhJQcNoGiUx6+0GXwiaB/uzMbgnlzSKaLqO8z/DC/D6+nr4lBmDLXys45FYKaquJasqnDhk49jsZUBeV7R9T6Y1XihxpeBcVY8Nb29uBpeF43JQihv3RJCfKZuamXVgF8f8dlw2UcRWCJTWWDJkF8WsAsFOhiS1GYFJkjCdTh8VfOkxriqkLhGVIexqoq6hoKeBYS9/akBqTWwMBd0ILLRGhiF1XbO7v2e12TBfLZktFvxaLPi9XrO437JYr1hvt/xZr3C8E1vLYm3t+Hk958f0ipPvDzKTMk3p85xzGGHb9rAH28Y9Hgl8H9/zcBxnzA8H7P2eUEpc1+XkugghOO52WF+/kUyv+At58TnlC3JGDwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;tổng quan phân tích tài chính&quot;
-        title=&quot;tổng quan phân tích tài chính&quot;
-        src=&quot;/static/d786560d7e4158b226977d7f31a57844/f058b/overview-cgba.png&quot;
-        srcset=&quot;/static/d786560d7e4158b226977d7f31a57844/c26ae/overview-cgba.png 158w,
-/static/d786560d7e4158b226977d7f31a57844/6bdcf/overview-cgba.png 315w,
-/static/d786560d7e4158b226977d7f31a57844/f058b/overview-cgba.png 630w,
-/static/d786560d7e4158b226977d7f31a57844/40601/overview-cgba.png 945w,
-/static/d786560d7e4158b226977d7f31a57844/91608/overview-cgba.png 1251w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/33951fdd0641fc34357f47ecc69338de/c7dcc/caydupont.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 56.32911392405063%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACIElEQVQoz3WSS2/TQBSF86/YwIb/Byv23SMhkGCLBG2l0la0REnaxEkcO3ZsJ34/6nrGnvlQnJaKIq50NNKR7nmM7qBpGtD6gK5DNg1VVZIXOUVZIoVAPIMUkqudx/vlhKPZL95NLjkyhvh5xkApxdgyuZzd4tcVVpYwdG0uVgvOlgZSKx5Ho/vXqkten37m1fEnXn7/2OPFtw/8iHwGXddhBT7LjYtbFYRNzfX0ltFywcLb9IJaa/ayqheFVikuki1vjCFv50O++Bbe/R0odUj41yhNGscE24AwDJ/4KoG7FFrJ/0a27SHh9WLG2WTEusqxspiR5/DTsTg353h1RSruSd0p6XpCVsS0GmaOheF7FMGK1jOohUB16iC4iUOcXUBQV+StoN6tqJ0RIvVJlMLPYn7eTrgypqy2fp9mmyYEZUVdFeh8h2wle61/KgvREEZbvI2N5do9V95r1pFgEzeE+UPlroHch8z/s9s+Vj4dD/l6dclNGnGTRJw7DqeWzYlpYhQJy7zg2vYY+zvGYYJVV5iRj7G6Yb7Yn0t68NgL7hO2XUfdNCitqCU4KYQVbEtou8PBEC4hmEKd9ctxHGPaa0zboSirp4TPK2utMJcL5nODNI6IZMOdaFhZa6azOWGcEEmBkIK1beO6LloptJC0UjKQRYGMYtrq4KK6rndPkoQsy6j3n60UZVH0/L6NfAiRxDF5VdHlOdHxCcl4wm9rfj4cD7wOmwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;caydunt point&quot;
-        title=&quot;caydunt point&quot;
-        src=&quot;/static/33951fdd0641fc34357f47ecc69338de/f058b/caydupont.png&quot;
-        srcset=&quot;/static/33951fdd0641fc34357f47ecc69338de/c26ae/caydupont.png 158w,
-/static/33951fdd0641fc34357f47ecc69338de/6bdcf/caydupont.png 315w,
-/static/33951fdd0641fc34357f47ecc69338de/f058b/caydupont.png 630w,
-/static/33951fdd0641fc34357f47ecc69338de/c7dcc/caydupont.png 641w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/bd36a9fe68b7e25562d6bfe28a68154d/critical-success-factor-alcoho-beverage-vn-trung-vo.docx&quot;&gt;critical success factor&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/8628990cbcf544754f1a6f0ddc728546/quan-tri-quan-ly-sab-trung-vo.docx&quot;&gt;quan tri qua ly&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/ecebddbe512202601fea7266c8fab023/HPG-dinh-gia-202206-v2.0.xlsx&quot;&gt;dinh gia&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/77632ac2b12911d0db30955fe5c067f1/Huong-dan-CGBA-Project.pdf&quot;&gt;huong dan cgba&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;quotes&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quotes&quot; aria-label=&quot;quotes permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Quotes&lt;/h1&gt;
-&lt;h1 id=&quot;references&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#references&quot; aria-label=&quot;references permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;References&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://finance.vietstock.vn/SAB-saigon-beer-alcohol-beverage-corporation.htm&quot;&gt;https://finance.vietstock.vn/SAB-saigon-beer-alcohol-beverage-corporation.htm&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://s.cafef.vn/hose/SAB-tong-ctcp-bia-ruou-nuoc-giai-khat-sai-gon.chn&quot;&gt;https://s.cafef.vn/hose/SAB-tong-ctcp-bia-ruou-nuoc-giai-khat-sai-gon.chn&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://danketoan.com/threads/phan-tich-bao-cao-tai-chinh-ctcp-bia-ruou-nuoc-giai-khat-sai-gon-sab-quy-2-2020.279579/&quot;&gt;http://danketoan.com/threads/phan-tich-bao-cao-tai-chinh-ctcp-bia-ruou-nuoc-giai-khat-sai-gon-sab-quy-2-2020.279579/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://content.acbs.com.vn/Files/Domains/ACBS/WFL-1585/220307094231-1015-1015000002.pdf&quot;&gt;https://content.acbs.com.vn/Files/Domains/ACBS/WFL-1585/220307094231-1015-1015000002.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://data.vdsc.com.vn/2022/09/vndirect-vnm-etf-co-the-loai-sab-va-thd-3358-999304.htm&quot;&gt;https://data.vdsc.com.vn/2022/09/vndirect-vnm-etf-co-the-loai-sab-va-thd-3358-999304.htm&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.slideshare.net/guest2a6f47ef/chin-lc-bi-hon-chnh&quot;&gt;https://www.slideshare.net/guest2a6f47ef/chin-lc-bi-hon-chnh&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=sXiqwnsha70&quot;&gt;https://www.youtube.com/watch?v=sXiqwnsha70&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=N2eXM0P3u00&quot;&gt;https://www.youtube.com/watch?v=N2eXM0P3u00&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=QoEhr8nEh3Q&quot;&gt;https://www.youtube.com/watch?v=QoEhr8nEh3Q&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=PXbzVhrQ-B4&quot;&gt;https://www.youtube.com/watch?v=PXbzVhrQ-B4&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=VsRxsMC0fA4&quot;&gt;https://www.youtube.com/watch?v=VsRxsMC0fA4&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=8foSIrQ2Dso&quot;&gt;https://www.youtube.com/watch?v=8foSIrQ2Dso&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=3_g0O9jVQN0&quot;&gt;https://www.youtube.com/watch?v=3_g0O9jVQN0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.insuranceandestates.com/pros-and-cons-of-the-infinite-banking-concept/&quot;&gt;https://www.insuranceandestates.com/pros-and-cons-of-the-infinite-banking-concept/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[phan tich tai chinh kinh doanh CGBA SAB - wip]]></title><description><![CDATA[critical success factor quan tri quan ly dinh gia huong dan cgba Cost of capital EBIT = [EBIT quy 1 2022] + [EBIT quy 2 2022] + [EBIT quy…]]></description><link>https://tonytvo.github.io/phan-tich-tai-chinh-kinh-doanh-sab/</link><guid isPermaLink="false">https://tonytvo.github.io/phan-tich-tai-chinh-kinh-doanh-sab/</guid><pubDate>Fri, 21 Oct 2022 22:12:03 GMT</pubDate><content:encoded>&lt;ul&gt;
 &lt;li&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
