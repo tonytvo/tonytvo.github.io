@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 20 Nov 2022 13:41:02 GMT</lastBuildDate><item><title><![CDATA[Notes on ABC Kata Nov 19h 2022]]></title><description><![CDATA[Questions What have you learned? it’s good exercise to practice domain and functional together by implementing the procedure first, it can…]]></description><link>https://tonytvo.github.io/abc-kata-notes-nov-19-2022/</link><guid isPermaLink="false">https://tonytvo.github.io/abc-kata-notes-nov-19-2022/</guid><pubDate>Sat, 19 Nov 2022 23:46:37 GMT</pubDate><content:encoded>&lt;h1 id=&quot;questions&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#questions&quot; aria-label=&quot;questions permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Questions&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 20 Nov 2022 13:44:09 GMT</lastBuildDate><item><title><![CDATA[Notes on ABC Kata Nov 19h 2022]]></title><description><![CDATA[Questions What have you learned? it’s good exercise to practice domain and functional together by implementing the procedure first, it can…]]></description><link>https://tonytvo.github.io/abc-kata-notes-nov-19-2022/</link><guid isPermaLink="false">https://tonytvo.github.io/abc-kata-notes-nov-19-2022/</guid><pubDate>Sat, 19 Nov 2022 23:46:37 GMT</pubDate><content:encoded>&lt;h1 id=&quot;questions&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#questions&quot; aria-label=&quot;questions permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Questions&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;What have you learned?&lt;/p&gt;
@@ -195,6 +195,237 @@
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=VsRxsMC0fA4&quot;&gt;https://www.youtube.com/watch?v=VsRxsMC0fA4&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=8foSIrQ2Dso&quot;&gt;https://www.youtube.com/watch?v=8foSIrQ2Dso&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=3_g0O9jVQN0&quot;&gt;https://www.youtube.com/watch?v=3_g0O9jVQN0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[phan tich tai chinh kinh doanh CGBA SAB - wip]]></title><description><![CDATA[critical success factor quan tri quan ly dinh gia huong dan cgba Cost of capital EBIT = [EBIT quy 1 2022] + [EBIT quy 2 2022] + [EBIT quy…]]></description><link>https://tonytvo.github.io/phan-tich-tai-chinh-kinh-doanh-sab/</link><guid isPermaLink="false">https://tonytvo.github.io/phan-tich-tai-chinh-kinh-doanh-sab/</guid><pubDate>Fri, 21 Oct 2022 22:12:03 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d786560d7e4158b226977d7f31a57844/91608/overview-cgba.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.32911392405063%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACPklEQVQoz12QS47TQBRFsxq2wwIYILEGRqyAKWLEBDbAACEhmDBCYkQ6Tbo75NdxHMexXeVP2Y7L5e9BsZtB86RXJd0qHR3diS41MkvZBz6q1CS6QKYKpQtyUxIkMdE55xiHRFmGqStyY3j95QfP3n3m6ZsvvP2+BlqqqmZSty1+mrA4HsibBlUZrMBDGYPpxjdZFkyPNm6qqOjRLTx//40nrz4wefGJlx/vuEzb9UzSNGW5Wg1B33XDPZ4QF5rbQCCKkp3MEbpCCIciSxB5hZskQx6fa8q2oe06JkopZrPZCLoA+35cIMw0d44kMSWhY5HqgvvAw1cJ/0/R1HT9g+Gf5fJBuRvs0kt3aUp26VQliChiHwSUfYfWesg9lXCQAt22A6homhF4MZzP5wPQNDWe77HcrDhJQcNoGiUx6+0GXwiaB/uzMbgnlzSKaLqO8z/DC/D6+nr4lBmDLXys45FYKaquJasqnDhk49jsZUBeV7R9T6Y1XihxpeBcVY8Nb29uBpeF43JQihv3RJCfKZuamXVgF8f8dlw2UcRWCJTWWDJkF8WsAsFOhiS1GYFJkjCdTh8VfOkxriqkLhGVIexqoq6hoKeBYS9/akBqTWwMBd0ILLRGhiF1XbO7v2e12TBfLZktFvxaLPi9XrO437JYr1hvt/xZr3C8E1vLYm3t+Hk958f0ipPvDzKTMk3p85xzGGHb9rAH28Y9Hgl8H9/zcBxnzA8H7P2eUEpc1+XkugghOO52WF+/kUyv+At58TnlC3JGDwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;tổng quan phân tích tài chính&quot;
+        title=&quot;tổng quan phân tích tài chính&quot;
+        src=&quot;/static/d786560d7e4158b226977d7f31a57844/f058b/overview-cgba.png&quot;
+        srcset=&quot;/static/d786560d7e4158b226977d7f31a57844/c26ae/overview-cgba.png 158w,
+/static/d786560d7e4158b226977d7f31a57844/6bdcf/overview-cgba.png 315w,
+/static/d786560d7e4158b226977d7f31a57844/f058b/overview-cgba.png 630w,
+/static/d786560d7e4158b226977d7f31a57844/40601/overview-cgba.png 945w,
+/static/d786560d7e4158b226977d7f31a57844/91608/overview-cgba.png 1251w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/33951fdd0641fc34357f47ecc69338de/c7dcc/caydupont.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.32911392405063%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACIElEQVQoz3WSS2/TQBSF86/YwIb/Byv23SMhkGCLBG2l0la0REnaxEkcO3ZsJ34/6nrGnvlQnJaKIq50NNKR7nmM7qBpGtD6gK5DNg1VVZIXOUVZIoVAPIMUkqudx/vlhKPZL95NLjkyhvh5xkApxdgyuZzd4tcVVpYwdG0uVgvOlgZSKx5Ho/vXqkten37m1fEnXn7/2OPFtw/8iHwGXddhBT7LjYtbFYRNzfX0ltFywcLb9IJaa/ayqheFVikuki1vjCFv50O++Bbe/R0odUj41yhNGscE24AwDJ/4KoG7FFrJ/0a27SHh9WLG2WTEusqxspiR5/DTsTg353h1RSruSd0p6XpCVsS0GmaOheF7FMGK1jOohUB16iC4iUOcXUBQV+StoN6tqJ0RIvVJlMLPYn7eTrgypqy2fp9mmyYEZUVdFeh8h2wle61/KgvREEZbvI2N5do9V95r1pFgEzeE+UPlroHch8z/s9s+Vj4dD/l6dclNGnGTRJw7DqeWzYlpYhQJy7zg2vYY+zvGYYJVV5iRj7G6Yb7Yn0t68NgL7hO2XUfdNCitqCU4KYQVbEtou8PBEC4hmEKd9ctxHGPaa0zboSirp4TPK2utMJcL5nODNI6IZMOdaFhZa6azOWGcEEmBkIK1beO6LloptJC0UjKQRYGMYtrq4KK6rndPkoQsy6j3n60UZVH0/L6NfAiRxDF5VdHlOdHxCcl4wm9rfj4cD7wOmwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;caydunt point&quot;
+        title=&quot;caydunt point&quot;
+        src=&quot;/static/33951fdd0641fc34357f47ecc69338de/f058b/caydupont.png&quot;
+        srcset=&quot;/static/33951fdd0641fc34357f47ecc69338de/c26ae/caydupont.png 158w,
+/static/33951fdd0641fc34357f47ecc69338de/6bdcf/caydupont.png 315w,
+/static/33951fdd0641fc34357f47ecc69338de/f058b/caydupont.png 630w,
+/static/33951fdd0641fc34357f47ecc69338de/c7dcc/caydupont.png 641w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/bd36a9fe68b7e25562d6bfe28a68154d/critical-success-factor-alcoho-beverage-vn-trung-vo.docx&quot;&gt;critical success factor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/8628990cbcf544754f1a6f0ddc728546/quan-tri-quan-ly-sab-trung-vo.docx&quot;&gt;quan tri quan ly&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/ecebddbe512202601fea7266c8fab023/HPG-dinh-gia-202206-v2.0.xlsx&quot;&gt;dinh gia&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/77632ac2b12911d0db30955fe5c067f1/Huong-dan-CGBA-Project.pdf&quot;&gt;huong dan cgba&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;cost-of-capital&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#cost-of-capital&quot; aria-label=&quot;cost of capital permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Cost of capital&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;EBIT = [EBIT quy 1 2022] + [EBIT quy 2 2022] + [EBIT quy 3 2022] + [EBIT quy 4 2021]
+&lt;ul&gt;
+&lt;li&gt;EBIT = earnings before interests and tax = Loi nhuan Ke Toan Truoc&lt;/li&gt;
+&lt;li&gt;per discussion, it seems like we should use EBITDA instead of EBIT&lt;/li&gt;
+&lt;li&gt;download bctc from cafef.vn (qui 1, qui 2, qui 3 2022 and qui 4 2021)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;questions&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#questions&quot; aria-label=&quot;questions permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Questions&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;what’s SAB governance?&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8b104edca6cb1c76355026e0b52984f7/fd8a5/board-of-governace.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.32911392405063%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAA7DAAAOwwHHb6hkAAACBElEQVQozz2PyZKbMBRF+fFklyySn0pVqrJNZXAP6W7bDdgMAjQLBKZPCtnJ4iDp8nT0XhYnzzyFxDKPRG/4+uEj3z595su79zQ/vgNvrDGwzmPiMo8scSMk/t3fyGJwRG+TaB5dont8oN39Qtz9Juoe1sjbMv7nMofEVeYTcdxwZNtmspoge+Yt9Jq3dWF25tpR9CxOcvGKi1PX/WhZgmEOJtVPTjN5wxQs2XYIcsD3Iv1YJsfsDWPfMqmedbKsk7nhUhaNYhntTaaYrCLogcnrm1ANBNUn4VY0O0WUgsVK1tGyBp14i56LNyxOc9ke3qRBJzbh6BTZ9glO4cyQZEG2TF7S1gWjkzC71OW2yq6iOb8ye8Wk2lQv+wZvJKPuCVbehFamMHrFqDvm0aD6hhgMa7zKWDzBSbRsr+Oaa0c2ibaRb0KvO/QgkF2TQtOUBDPQNafUoZcV0Q1pDXbAW8nkJLYt8apL96zqcEODky2ZFgVSVIi6QDUF4vURJUq6usD0Nf35haE6IutDGjc/vlzz/Ak71JyLA1oKdFPQlU9k1WFHX+fIrsYNNarKCaZHbFlbUu1/Ux/vaF7vOR8fyJ93NPkj1X6HKJ85HR4Qpz0i/0P18pOsPt4n4dCWmO6MrI7p5dTh0NCf98gmZ6sT5ROmO9FXB2RbpNyrBiOO2C5HdyV/AZlvQ3B4foliAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;board of governance&quot;
+        title=&quot;board of governance&quot;
+        src=&quot;/static/8b104edca6cb1c76355026e0b52984f7/f058b/board-of-governace.png&quot;
+        srcset=&quot;/static/8b104edca6cb1c76355026e0b52984f7/c26ae/board-of-governace.png 158w,
+/static/8b104edca6cb1c76355026e0b52984f7/6bdcf/board-of-governace.png 315w,
+/static/8b104edca6cb1c76355026e0b52984f7/f058b/board-of-governace.png 630w,
+/static/8b104edca6cb1c76355026e0b52984f7/40601/board-of-governace.png 945w,
+/static/8b104edca6cb1c76355026e0b52984f7/78612/board-of-governace.png 1260w,
+/static/8b104edca6cb1c76355026e0b52984f7/fd8a5/board-of-governace.png 1659w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;what’s the quality of SAB corporate governance?&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;what’s the quality of ThaiBev corporate governance?&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;how much Thaibev pay to acquire SAB?&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://vir.com.vn/the-15-biggest-ma-deals-2009-2018-61598.html&quot;&gt;https://vir.com.vn/the-15-biggest-ma-deals-2009-2018-61598.html&lt;/a&gt;. On December 18, 2017, Vietnam Beverage (49 per cent of which is owned by ThaiBev) won an auction to acquire more than 343.66 million Sabeco shares, equivalent to 53.59 per cent of the company’s stake, at VND320,000 ($14.16) per share. This brought the deal value to nearly $5 billion&lt;/li&gt;
+&lt;li&gt;apparently, ThaiBev looking to spin off Beer unit finance for the SAB acquisition recently. &lt;a href=&quot;https://www.inside.beer/news/detail/singaporethailand-thaibev-revives-plan-for-an-ipo/&quot;&gt;https://www.inside.beer/news/detail/singaporethailand-thaibev-revives-plan-for-an-ipo/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ThaiBev said in order to implement the deal, ThaiBev and BeerCo Ltd, a 100 percent ThaiBev owned subsidiary, got six loans, totaling $5 billion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;did Thaibev pay too much for the acquisition?&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;current price is around VND 190,000 compared to the acquire shares (VND 320,000)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.ft.com/content/f3436820-1288-11ea-a7e6-62bf4f9e548a&quot;&gt;https://www.ft.com/content/f3436820-1288-11ea-a7e6-62bf4f9e548a&lt;/a&gt;, ThaiBev potentially looking to buyers for SAB (potentially bud APAC)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;what’s sabeco yearly dividend from 2017?&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;what’s the revenue break down of ThaiBev?&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;SAB contribute to 1/4 revenue in 2018 (&lt;a href=&quot;https://www.inside.beer/news/detail/vietnam-thailand-thaibev-s-bet-on-sabeco-is-paying-off/&quot;&gt;https://www.inside.beer/news/detail/vietnam-thailand-thaibev-s-bet-on-sabeco-is-paying-off/&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;what’s the products of ThaiBev?&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;what’s the costs of ThaiBev?&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;what the types of SAB?&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;is it fast growers? stalwarts? turnover?&lt;/li&gt;
+&lt;li&gt;looks like it somewhere between stalwarts and turn over, so the strategies for stalwarts and turn over can be employed. &lt;a href=&quot;/one-up-on-wall-street&quot;&gt;SAB strategies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;why ThaiBev want to spin-off beer business?&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.inside.beer/news/detail/singaporethailand-thaibev-again-postpones-planned-spin-off-of-beer-business/&quot;&gt;https://www.inside.beer/news/detail/singaporethailand-thaibev-again-postpones-planned-spin-off-of-beer-business/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;what’s the revenue break down for SAB?&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;what’s the cost break down for SAB?&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;what’s the conflict between ThaiBev and Carlsbert?&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;in 1995, ThaiBev launched Chang Beer and formed a 50-50 joint-venture with Carlsberg which was dissolved eight years later in 2003 after the two sides failed to resolve their disagreements.&lt;/li&gt;
+&lt;li&gt;(need more information on this)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;what are the main competitors used for reference?&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;hanoi beer alcohol, chongquing, heineken.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;how was Sabeco managed before 2017?&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;very bad, the number is often wrong and most of the managers has been misreprented (or sometimes wrong)&lt;/li&gt;
+&lt;li&gt;management has been trialed (Vo Huy Hoang, etc…, &lt;a href=&quot;https://www.youtube.com/watch?v=e2THiGLF_FY&quot;&gt;https://www.youtube.com/watch?v=e2THiGLF_FY&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;who is Charoen Sirivadhanabakdi?&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Charoen_Sirivadhanabhakdi&quot;&gt;https://en.wikipedia.org/wiki/Charoen_Sirivadhanabhakdi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Koh Poh Tiong is the first legal representative, while Neo Gim Siong Bennett is the second legal representative of the enterprise&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;how much impact decree 100 on SAB?&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;what’s other thoughts on SAB?&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;gross profit margin in 2021 -&gt; 30.8%&lt;/li&gt;
+&lt;li&gt;current ratio in 2021 -&gt; 3.* -&gt; inefficient in managing current assets/liabilities&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;what’s the plans for earnings growth&lt;/strong&gt;?
+&lt;ul&gt;
+&lt;li&gt;is there any plan to increase the market shares?&lt;/li&gt;
+&lt;li&gt;is there any plan to improve the export?&lt;/li&gt;
+&lt;li&gt;what’s the plan to improve on-trade, off trade?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;what’s the plan to implement ESOAP?&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;currently, the company has no plan for ESOAP. However, they mentioned they have the plan for that, not sure when?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;depreciation and amortization = khau hao va phan bo&lt;/li&gt;
+&lt;li&gt;capital spending = tien chi mua sam xay dung tai san co dinh = (accumulatd 2021 full year - accumulated 2021 quarter 3) + accumulated 2022 q3&lt;/li&gt;
+&lt;li&gt;interestg expense on debt = chi phi lai vay&lt;/li&gt;
+&lt;li&gt;EBITDA = EBIT + Depreciation + Interest Expense = loi nhuan ke toan truoc thue&lt;/li&gt;
+&lt;li&gt;cash and marketable securities = tien va cac khoan tuong duong tien + dau tu tai chinh ngan han?
+&lt;ul&gt;
+&lt;li&gt;why plus dau tu tai chinh ngan han?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;book value of debt = vay ngan han + vay va no thue tai chinh dai han
+&lt;ul&gt;
+&lt;li&gt;why not total No phai tra -L line 300&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;check lai zoom 5?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;quotes&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quotes&quot; aria-label=&quot;quotes permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Quotes&lt;/h1&gt;
+&lt;h1 id=&quot;references&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#references&quot; aria-label=&quot;references permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;References&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://finance.vietstock.vn/SAB-saigon-beer-alcohol-beverage-corporation.htm&quot;&gt;https://finance.vietstock.vn/SAB-saigon-beer-alcohol-beverage-corporation.htm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://s.cafef.vn/hose/SAB-tong-ctcp-bia-ruou-nuoc-giai-khat-sai-gon.chn&quot;&gt;https://s.cafef.vn/hose/SAB-tong-ctcp-bia-ruou-nuoc-giai-khat-sai-gon.chn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://danketoan.com/threads/phan-tich-bao-cao-tai-chinh-ctcp-bia-ruou-nuoc-giai-khat-sai-gon-sab-quy-2-2020.279579/&quot;&gt;http://danketoan.com/threads/phan-tich-bao-cao-tai-chinh-ctcp-bia-ruou-nuoc-giai-khat-sai-gon-sab-quy-2-2020.279579/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://content.acbs.com.vn/Files/Domains/ACBS/WFL-1585/220307094231-1015-1015000002.pdf&quot;&gt;https://content.acbs.com.vn/Files/Domains/ACBS/WFL-1585/220307094231-1015-1015000002.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://data.vdsc.com.vn/2022/09/vndirect-vnm-etf-co-the-loai-sab-va-thd-3358-999304.htm&quot;&gt;https://data.vdsc.com.vn/2022/09/vndirect-vnm-etf-co-the-loai-sab-va-thd-3358-999304.htm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.slideshare.net/guest2a6f47ef/chin-lc-bi-hon-chnh&quot;&gt;https://www.slideshare.net/guest2a6f47ef/chin-lc-bi-hon-chnh&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=UtOFRUxDi-g&quot;&gt;https://www.youtube.com/watch?v=UtOFRUxDi-g&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=MR8m6AV5iK&quot;&gt;https://www.youtube.com/watch?v=MR8m6AV5iK&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=4XrWeSZO3qI&quot;&gt;https://www.youtube.com/watch?v=4XrWeSZO3qI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=r1GeHPBqmbY&quot;&gt;https://www.youtube.com/watch?v=r1GeHPBqmbY&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://valueinvesting.substack.com/p/sabeco&quot;&gt;https://valueinvesting.substack.com/p/sabeco&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.sabeco.com.vn/en-US/media/company-news/en-agm-2022&quot;&gt;https://www.sabeco.com.vn/en-US/media/company-news/en-agm-2022&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://vir.com.vn/sabeco-sitting-in-good-stead-for-2022-92845.html&quot;&gt;https://vir.com.vn/sabeco-sitting-in-good-stead-for-2022-92845.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://foodnhotelvietnam.com/2022/04/12/sabeco-dat-ke-hoach-lai-gan-4-600-ty-dong/?lang=en&quot;&gt;https://foodnhotelvietnam.com/2022/04/12/sabeco-dat-ke-hoach-lai-gan-4-600-ty-dong/?lang=en&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.vietstock.vn/970-441558/brewing-up-change-with-modern-strategy.htm&quot;&gt;https://en.vietstock.vn/970-441558/brewing-up-change-with-modern-strategy.htm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.reuters.com/article/us-heineken-vietnam-idUSKCN1T5321&quot;&gt;https://www.reuters.com/article/us-heineken-vietnam-idUSKCN1T5321&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.just-drinks.com/analysis/the-battle-for-beer-dominance-in-vietnam-market-data/&quot;&gt;https://www.just-drinks.com/analysis/the-battle-for-beer-dominance-in-vietnam-market-data/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://cafef.vn/ve-tay-thaibev-doanh-thu-sabeco-ngay-cang-thut-lui-so-voi-heineken-thi-phan-lon-hon-nhung-lai-chi-bang-nua-2021081316423239.chn&quot;&gt;https://cafef.vn/ve-tay-thaibev-doanh-thu-sabeco-ngay-cang-thut-lui-so-voi-heineken-thi-phan-lon-hon-nhung-lai-chi-bang-nua-2021081316423239.chn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://e.theleader.vn/heineken-vietnam-reaped-hefty-profit-despite-still-modest-market-share-1537502321036.htm&quot;&gt;https://e.theleader.vn/heineken-vietnam-reaped-hefty-profit-despite-still-modest-market-share-1537502321036.htm&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[becoming your own bank by Nelson Nash summary]]></title><description><![CDATA[take-aways The opportunity cost of money This is the first principle we learn from the book, and it says that everything a person buys is…]]></description><link>https://tonytvo.github.io/becoming-your-own-bank-summary/</link><guid isPermaLink="false">https://tonytvo.github.io/becoming-your-own-bank-summary/</guid><pubDate>Fri, 21 Oct 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;take-aways&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#take-aways&quot; aria-label=&quot;take aways permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;take-aways&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;The opportunity cost of money&lt;/strong&gt;
@@ -298,6 +529,12 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;There can be periods where expected earnings are lower; businesses would turn to stockholders in this case, but this does not work for life insurance. Instead, capital is added to counteract this. For example, if accountants report that they have collected $1.10 from someone’s policy but found they only needed 80 cents to deliver the benefit, then the directors would decide what to do with the 30 cents. Most would put a portion of this into a contingency fund for unexpected risk and distribute the remaining dividend. Distributing the dividend is not a taxable event. If the client used the dividend to purchase additional paid-up insurance, it would result in an “ever-increasing tax-deferred accumulation of cash values that support an ever-increasing death benefit”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;/6dd3f9d1aea7d479e112c9e9cf1e25dd/sun-life-cash-value-loan-options.pdf&quot;&gt;sun life cash value loan options&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;it seems like accessing the policy’s cash value using a collateral assignment is interesting&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&quot;problems&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#problems&quot; aria-label=&quot;problems permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;problems&lt;/h1&gt;
@@ -679,237 +916,6 @@
 &lt;li&gt;&lt;a href=&quot;https://livingwealth.com/summary-book-becoming-your-own-banker/&quot;&gt;https://livingwealth.com/summary-book-becoming-your-own-banker/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=R6d8lJU2CkY&quot;&gt;https://www.youtube.com/watch?v=R6d8lJU2CkY&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.insuranceandestates.com/pros-and-cons-of-the-infinite-banking-concept/&quot;&gt;https://www.insuranceandestates.com/pros-and-cons-of-the-infinite-banking-concept/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[phan tich tai chinh kinh doanh CGBA SAB - wip]]></title><description><![CDATA[critical success factor quan tri quan ly dinh gia huong dan cgba Cost of capital EBIT = [EBIT quy 1 2022] + [EBIT quy 2 2022] + [EBIT quy…]]></description><link>https://tonytvo.github.io/phan-tich-tai-chinh-kinh-doanh-sab/</link><guid isPermaLink="false">https://tonytvo.github.io/phan-tich-tai-chinh-kinh-doanh-sab/</guid><pubDate>Fri, 21 Oct 2022 22:12:03 GMT</pubDate><content:encoded>&lt;ul&gt;
-&lt;li&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/d786560d7e4158b226977d7f31a57844/91608/overview-cgba.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 56.32911392405063%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACPklEQVQoz12QS47TQBRFsxq2wwIYILEGRqyAKWLEBDbAACEhmDBCYkQ6Tbo75NdxHMexXeVP2Y7L5e9BsZtB86RXJd0qHR3diS41MkvZBz6q1CS6QKYKpQtyUxIkMdE55xiHRFmGqStyY3j95QfP3n3m6ZsvvP2+BlqqqmZSty1+mrA4HsibBlUZrMBDGYPpxjdZFkyPNm6qqOjRLTx//40nrz4wefGJlx/vuEzb9UzSNGW5Wg1B33XDPZ4QF5rbQCCKkp3MEbpCCIciSxB5hZskQx6fa8q2oe06JkopZrPZCLoA+35cIMw0d44kMSWhY5HqgvvAw1cJ/0/R1HT9g+Gf5fJBuRvs0kt3aUp26VQliChiHwSUfYfWesg9lXCQAt22A6homhF4MZzP5wPQNDWe77HcrDhJQcNoGiUx6+0GXwiaB/uzMbgnlzSKaLqO8z/DC/D6+nr4lBmDLXys45FYKaquJasqnDhk49jsZUBeV7R9T6Y1XihxpeBcVY8Nb29uBpeF43JQihv3RJCfKZuamXVgF8f8dlw2UcRWCJTWWDJkF8WsAsFOhiS1GYFJkjCdTh8VfOkxriqkLhGVIexqoq6hoKeBYS9/akBqTWwMBd0ILLRGhiF1XbO7v2e12TBfLZktFvxaLPi9XrO437JYr1hvt/xZr3C8E1vLYm3t+Hk958f0ipPvDzKTMk3p85xzGGHb9rAH28Y9Hgl8H9/zcBxnzA8H7P2eUEpc1+XkugghOO52WF+/kUyv+At58TnlC3JGDwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;tổng quan phân tích tài chính&quot;
-        title=&quot;tổng quan phân tích tài chính&quot;
-        src=&quot;/static/d786560d7e4158b226977d7f31a57844/f058b/overview-cgba.png&quot;
-        srcset=&quot;/static/d786560d7e4158b226977d7f31a57844/c26ae/overview-cgba.png 158w,
-/static/d786560d7e4158b226977d7f31a57844/6bdcf/overview-cgba.png 315w,
-/static/d786560d7e4158b226977d7f31a57844/f058b/overview-cgba.png 630w,
-/static/d786560d7e4158b226977d7f31a57844/40601/overview-cgba.png 945w,
-/static/d786560d7e4158b226977d7f31a57844/91608/overview-cgba.png 1251w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/33951fdd0641fc34357f47ecc69338de/c7dcc/caydupont.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 56.32911392405063%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACIElEQVQoz3WSS2/TQBSF86/YwIb/Byv23SMhkGCLBG2l0la0REnaxEkcO3ZsJ34/6nrGnvlQnJaKIq50NNKR7nmM7qBpGtD6gK5DNg1VVZIXOUVZIoVAPIMUkqudx/vlhKPZL95NLjkyhvh5xkApxdgyuZzd4tcVVpYwdG0uVgvOlgZSKx5Ho/vXqkten37m1fEnXn7/2OPFtw/8iHwGXddhBT7LjYtbFYRNzfX0ltFywcLb9IJaa/ayqheFVikuki1vjCFv50O++Bbe/R0odUj41yhNGscE24AwDJ/4KoG7FFrJ/0a27SHh9WLG2WTEusqxspiR5/DTsTg353h1RSruSd0p6XpCVsS0GmaOheF7FMGK1jOohUB16iC4iUOcXUBQV+StoN6tqJ0RIvVJlMLPYn7eTrgypqy2fp9mmyYEZUVdFeh8h2wle61/KgvREEZbvI2N5do9V95r1pFgEzeE+UPlroHch8z/s9s+Vj4dD/l6dclNGnGTRJw7DqeWzYlpYhQJy7zg2vYY+zvGYYJVV5iRj7G6Yb7Yn0t68NgL7hO2XUfdNCitqCU4KYQVbEtou8PBEC4hmEKd9ctxHGPaa0zboSirp4TPK2utMJcL5nODNI6IZMOdaFhZa6azOWGcEEmBkIK1beO6LloptJC0UjKQRYGMYtrq4KK6rndPkoQsy6j3n60UZVH0/L6NfAiRxDF5VdHlOdHxCcl4wm9rfj4cD7wOmwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;caydunt point&quot;
-        title=&quot;caydunt point&quot;
-        src=&quot;/static/33951fdd0641fc34357f47ecc69338de/f058b/caydupont.png&quot;
-        srcset=&quot;/static/33951fdd0641fc34357f47ecc69338de/c26ae/caydupont.png 158w,
-/static/33951fdd0641fc34357f47ecc69338de/6bdcf/caydupont.png 315w,
-/static/33951fdd0641fc34357f47ecc69338de/f058b/caydupont.png 630w,
-/static/33951fdd0641fc34357f47ecc69338de/c7dcc/caydupont.png 641w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/bd36a9fe68b7e25562d6bfe28a68154d/critical-success-factor-alcoho-beverage-vn-trung-vo.docx&quot;&gt;critical success factor&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/8628990cbcf544754f1a6f0ddc728546/quan-tri-quan-ly-sab-trung-vo.docx&quot;&gt;quan tri quan ly&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/ecebddbe512202601fea7266c8fab023/HPG-dinh-gia-202206-v2.0.xlsx&quot;&gt;dinh gia&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/77632ac2b12911d0db30955fe5c067f1/Huong-dan-CGBA-Project.pdf&quot;&gt;huong dan cgba&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;cost-of-capital&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#cost-of-capital&quot; aria-label=&quot;cost of capital permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Cost of capital&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;EBIT = [EBIT quy 1 2022] + [EBIT quy 2 2022] + [EBIT quy 3 2022] + [EBIT quy 4 2021]
-&lt;ul&gt;
-&lt;li&gt;EBIT = earnings before interests and tax = Loi nhuan Ke Toan Truoc&lt;/li&gt;
-&lt;li&gt;per discussion, it seems like we should use EBITDA instead of EBIT&lt;/li&gt;
-&lt;li&gt;download bctc from cafef.vn (qui 1, qui 2, qui 3 2022 and qui 4 2021)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;questions&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#questions&quot; aria-label=&quot;questions permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Questions&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;what’s SAB governance?&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/8b104edca6cb1c76355026e0b52984f7/fd8a5/board-of-governace.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 56.32911392405063%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAA7DAAAOwwHHb6hkAAACBElEQVQozz2PyZKbMBRF+fFklyySn0pVqrJNZXAP6W7bDdgMAjQLBKZPCtnJ4iDp8nT0XhYnzzyFxDKPRG/4+uEj3z595su79zQ/vgNvrDGwzmPiMo8scSMk/t3fyGJwRG+TaB5dont8oN39Qtz9Juoe1sjbMv7nMofEVeYTcdxwZNtmspoge+Yt9Jq3dWF25tpR9CxOcvGKi1PX/WhZgmEOJtVPTjN5wxQs2XYIcsD3Iv1YJsfsDWPfMqmedbKsk7nhUhaNYhntTaaYrCLogcnrm1ANBNUn4VY0O0WUgsVK1tGyBp14i56LNyxOc9ke3qRBJzbh6BTZ9glO4cyQZEG2TF7S1gWjkzC71OW2yq6iOb8ye8Wk2lQv+wZvJKPuCVbehFamMHrFqDvm0aD6hhgMa7zKWDzBSbRsr+Oaa0c2ibaRb0KvO/QgkF2TQtOUBDPQNafUoZcV0Q1pDXbAW8nkJLYt8apL96zqcEODky2ZFgVSVIi6QDUF4vURJUq6usD0Nf35haE6IutDGjc/vlzz/Ak71JyLA1oKdFPQlU9k1WFHX+fIrsYNNarKCaZHbFlbUu1/Ux/vaF7vOR8fyJ93NPkj1X6HKJ85HR4Qpz0i/0P18pOsPt4n4dCWmO6MrI7p5dTh0NCf98gmZ6sT5ROmO9FXB2RbpNyrBiOO2C5HdyV/AZlvQ3B4foliAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;board of governance&quot;
-        title=&quot;board of governance&quot;
-        src=&quot;/static/8b104edca6cb1c76355026e0b52984f7/f058b/board-of-governace.png&quot;
-        srcset=&quot;/static/8b104edca6cb1c76355026e0b52984f7/c26ae/board-of-governace.png 158w,
-/static/8b104edca6cb1c76355026e0b52984f7/6bdcf/board-of-governace.png 315w,
-/static/8b104edca6cb1c76355026e0b52984f7/f058b/board-of-governace.png 630w,
-/static/8b104edca6cb1c76355026e0b52984f7/40601/board-of-governace.png 945w,
-/static/8b104edca6cb1c76355026e0b52984f7/78612/board-of-governace.png 1260w,
-/static/8b104edca6cb1c76355026e0b52984f7/fd8a5/board-of-governace.png 1659w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;what’s the quality of SAB corporate governance?&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;what’s the quality of ThaiBev corporate governance?&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;how much Thaibev pay to acquire SAB?&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://vir.com.vn/the-15-biggest-ma-deals-2009-2018-61598.html&quot;&gt;https://vir.com.vn/the-15-biggest-ma-deals-2009-2018-61598.html&lt;/a&gt;. On December 18, 2017, Vietnam Beverage (49 per cent of which is owned by ThaiBev) won an auction to acquire more than 343.66 million Sabeco shares, equivalent to 53.59 per cent of the company’s stake, at VND320,000 ($14.16) per share. This brought the deal value to nearly $5 billion&lt;/li&gt;
-&lt;li&gt;apparently, ThaiBev looking to spin off Beer unit finance for the SAB acquisition recently. &lt;a href=&quot;https://www.inside.beer/news/detail/singaporethailand-thaibev-revives-plan-for-an-ipo/&quot;&gt;https://www.inside.beer/news/detail/singaporethailand-thaibev-revives-plan-for-an-ipo/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;ThaiBev said in order to implement the deal, ThaiBev and BeerCo Ltd, a 100 percent ThaiBev owned subsidiary, got six loans, totaling $5 billion&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;did Thaibev pay too much for the acquisition?&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;current price is around VND 190,000 compared to the acquire shares (VND 320,000)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.ft.com/content/f3436820-1288-11ea-a7e6-62bf4f9e548a&quot;&gt;https://www.ft.com/content/f3436820-1288-11ea-a7e6-62bf4f9e548a&lt;/a&gt;, ThaiBev potentially looking to buyers for SAB (potentially bud APAC)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;what’s sabeco yearly dividend from 2017?&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;what’s the revenue break down of ThaiBev?&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;SAB contribute to 1/4 revenue in 2018 (&lt;a href=&quot;https://www.inside.beer/news/detail/vietnam-thailand-thaibev-s-bet-on-sabeco-is-paying-off/&quot;&gt;https://www.inside.beer/news/detail/vietnam-thailand-thaibev-s-bet-on-sabeco-is-paying-off/&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;what’s the products of ThaiBev?&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;what’s the costs of ThaiBev?&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;what the types of SAB?&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;is it fast growers? stalwarts? turnover?&lt;/li&gt;
-&lt;li&gt;looks like it somewhere between stalwarts and turn over, so the strategies for stalwarts and turn over can be employed. &lt;a href=&quot;/one-up-on-wall-street&quot;&gt;SAB strategies&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;why ThaiBev want to spin-off beer business?&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.inside.beer/news/detail/singaporethailand-thaibev-again-postpones-planned-spin-off-of-beer-business/&quot;&gt;https://www.inside.beer/news/detail/singaporethailand-thaibev-again-postpones-planned-spin-off-of-beer-business/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;what’s the revenue break down for SAB?&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;what’s the cost break down for SAB?&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;what’s the conflict between ThaiBev and Carlsbert?&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;in 1995, ThaiBev launched Chang Beer and formed a 50-50 joint-venture with Carlsberg which was dissolved eight years later in 2003 after the two sides failed to resolve their disagreements.&lt;/li&gt;
-&lt;li&gt;(need more information on this)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;what are the main competitors used for reference?&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;hanoi beer alcohol, chongquing, heineken.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;how was Sabeco managed before 2017?&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;very bad, the number is often wrong and most of the managers has been misreprented (or sometimes wrong)&lt;/li&gt;
-&lt;li&gt;management has been trialed (Vo Huy Hoang, etc…, &lt;a href=&quot;https://www.youtube.com/watch?v=e2THiGLF_FY&quot;&gt;https://www.youtube.com/watch?v=e2THiGLF_FY&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;who is Charoen Sirivadhanabakdi?&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Charoen_Sirivadhanabhakdi&quot;&gt;https://en.wikipedia.org/wiki/Charoen_Sirivadhanabhakdi&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Koh Poh Tiong is the first legal representative, while Neo Gim Siong Bennett is the second legal representative of the enterprise&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;how much impact decree 100 on SAB?&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;what’s other thoughts on SAB?&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;gross profit margin in 2021 -&gt; 30.8%&lt;/li&gt;
-&lt;li&gt;current ratio in 2021 -&gt; 3.* -&gt; inefficient in managing current assets/liabilities&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;what’s the plans for earnings growth&lt;/strong&gt;?
-&lt;ul&gt;
-&lt;li&gt;is there any plan to increase the market shares?&lt;/li&gt;
-&lt;li&gt;is there any plan to improve the export?&lt;/li&gt;
-&lt;li&gt;what’s the plan to improve on-trade, off trade?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;what’s the plan to implement ESOAP?&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;currently, the company has no plan for ESOAP. However, they mentioned they have the plan for that, not sure when?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;depreciation and amortization = khau hao va phan bo&lt;/li&gt;
-&lt;li&gt;capital spending = tien chi mua sam xay dung tai san co dinh = (accumulatd 2021 full year - accumulated 2021 quarter 3) + accumulated 2022 q3&lt;/li&gt;
-&lt;li&gt;interestg expense on debt = chi phi lai vay&lt;/li&gt;
-&lt;li&gt;EBITDA = EBIT + Depreciation + Interest Expense = loi nhuan ke toan truoc thue&lt;/li&gt;
-&lt;li&gt;cash and marketable securities = tien va cac khoan tuong duong tien + dau tu tai chinh ngan han?
-&lt;ul&gt;
-&lt;li&gt;why plus dau tu tai chinh ngan han?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;book value of debt = vay ngan han + vay va no thue tai chinh dai han
-&lt;ul&gt;
-&lt;li&gt;why not total No phai tra -L line 300&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;check lai zoom 5?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;quotes&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quotes&quot; aria-label=&quot;quotes permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Quotes&lt;/h1&gt;
-&lt;h1 id=&quot;references&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#references&quot; aria-label=&quot;references permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;References&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://finance.vietstock.vn/SAB-saigon-beer-alcohol-beverage-corporation.htm&quot;&gt;https://finance.vietstock.vn/SAB-saigon-beer-alcohol-beverage-corporation.htm&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://s.cafef.vn/hose/SAB-tong-ctcp-bia-ruou-nuoc-giai-khat-sai-gon.chn&quot;&gt;https://s.cafef.vn/hose/SAB-tong-ctcp-bia-ruou-nuoc-giai-khat-sai-gon.chn&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://danketoan.com/threads/phan-tich-bao-cao-tai-chinh-ctcp-bia-ruou-nuoc-giai-khat-sai-gon-sab-quy-2-2020.279579/&quot;&gt;http://danketoan.com/threads/phan-tich-bao-cao-tai-chinh-ctcp-bia-ruou-nuoc-giai-khat-sai-gon-sab-quy-2-2020.279579/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://content.acbs.com.vn/Files/Domains/ACBS/WFL-1585/220307094231-1015-1015000002.pdf&quot;&gt;https://content.acbs.com.vn/Files/Domains/ACBS/WFL-1585/220307094231-1015-1015000002.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://data.vdsc.com.vn/2022/09/vndirect-vnm-etf-co-the-loai-sab-va-thd-3358-999304.htm&quot;&gt;https://data.vdsc.com.vn/2022/09/vndirect-vnm-etf-co-the-loai-sab-va-thd-3358-999304.htm&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.slideshare.net/guest2a6f47ef/chin-lc-bi-hon-chnh&quot;&gt;https://www.slideshare.net/guest2a6f47ef/chin-lc-bi-hon-chnh&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=UtOFRUxDi-g&quot;&gt;https://www.youtube.com/watch?v=UtOFRUxDi-g&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=MR8m6AV5iK&quot;&gt;https://www.youtube.com/watch?v=MR8m6AV5iK&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=4XrWeSZO3qI&quot;&gt;https://www.youtube.com/watch?v=4XrWeSZO3qI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=r1GeHPBqmbY&quot;&gt;https://www.youtube.com/watch?v=r1GeHPBqmbY&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://valueinvesting.substack.com/p/sabeco&quot;&gt;https://valueinvesting.substack.com/p/sabeco&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.sabeco.com.vn/en-US/media/company-news/en-agm-2022&quot;&gt;https://www.sabeco.com.vn/en-US/media/company-news/en-agm-2022&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://vir.com.vn/sabeco-sitting-in-good-stead-for-2022-92845.html&quot;&gt;https://vir.com.vn/sabeco-sitting-in-good-stead-for-2022-92845.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://foodnhotelvietnam.com/2022/04/12/sabeco-dat-ke-hoach-lai-gan-4-600-ty-dong/?lang=en&quot;&gt;https://foodnhotelvietnam.com/2022/04/12/sabeco-dat-ke-hoach-lai-gan-4-600-ty-dong/?lang=en&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://en.vietstock.vn/970-441558/brewing-up-change-with-modern-strategy.htm&quot;&gt;https://en.vietstock.vn/970-441558/brewing-up-change-with-modern-strategy.htm&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.reuters.com/article/us-heineken-vietnam-idUSKCN1T5321&quot;&gt;https://www.reuters.com/article/us-heineken-vietnam-idUSKCN1T5321&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.just-drinks.com/analysis/the-battle-for-beer-dominance-in-vietnam-market-data/&quot;&gt;https://www.just-drinks.com/analysis/the-battle-for-beer-dominance-in-vietnam-market-data/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://cafef.vn/ve-tay-thaibev-doanh-thu-sabeco-ngay-cang-thut-lui-so-voi-heineken-thi-phan-lon-hon-nhung-lai-chi-bang-nua-2021081316423239.chn&quot;&gt;https://cafef.vn/ve-tay-thaibev-doanh-thu-sabeco-ngay-cang-thut-lui-so-voi-heineken-thi-phan-lon-hon-nhung-lai-chi-bang-nua-2021081316423239.chn&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://e.theleader.vn/heineken-vietnam-reaped-hefty-profit-despite-still-modest-market-share-1537502321036.htm&quot;&gt;https://e.theleader.vn/heineken-vietnam-reaped-hefty-profit-despite-still-modest-market-share-1537502321036.htm&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[bitcoin standard by Saifedean Ammous summary]]></title><description><![CDATA[take-aways money was first used as a medium of exchange gold became the basis for sound money european governments devalued their currencies…]]></description><link>https://tonytvo.github.io/bitcoin-standard/</link><guid isPermaLink="false">https://tonytvo.github.io/bitcoin-standard/</guid><pubDate>Thu, 08 Sep 2022 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;take-aways&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#take-aways&quot; aria-label=&quot;take aways permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;take-aways&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;money was first used as a medium of exchange&lt;/li&gt;
