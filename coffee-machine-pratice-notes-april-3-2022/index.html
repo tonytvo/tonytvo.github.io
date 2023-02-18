@@ -54,6 +54,33 @@
   </script><link rel="alternate" type="application/rss+xml" title="Tony Vo Blog RSS Feed" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=b811602c8c8ce14b66aae6613c8968f4" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=b811602c8c8ce14b66aae6613c8968f4"/><title data-react-helmet="true">Notes on coffee machine kata practice April 3rd 2022 | Conversations on agile technical practices and investments</title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="global-wrapper" data-is-root-path="false"><header class="global-header"><a class="header-link-home" href="/">Conversations on agile technical practices and investments</a></header><main><article class="blog-post" itemscope="" itemType="http://schema.org/Article"><header><h1 itemProp="headline">Notes on coffee machine kata practice April 3rd 2022</h1><p>April 03, 2022</p></header><section itemProp="articleBody"><h1 id="questions" style="position:relative;"><a href="#questions" aria-label="questions permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Questions</h1>
 <ul>
 <li>
+<p>what’s the right input?</p>
+</li>
+<li>
+<p>how can we write tests wihtout writing the parser</p>
+</li>
+<li>
+<p>which one is correct?</p>
+<ul>
+<li>seems like we lean toward T:0:1 on the input intent?</li>
+</ul>
+</li>
+<li>
+<p>What have you learned?</p>
+<ul>
+<li>
+<p>this kata is very rich in term of domain/functional tibbits</p>
+</li>
+<li>
+<p>once I finish encapsulating drinks and ingredients, I started to realize couple other domain concepts like inventory, recipes, etc…</p>
+</li>
+<li>
+<p>seems like introduce parameter is very helpful, keep surface to the top as much as possible</p>
+</li>
+<li>
+<p>the better we are as introduce parameter, dependency, the more we can clear recognize the boundaries between different parts, like model, view controller</p>
+</li>
+<li>
 <p>focus more on reading so we can understand more on what’s needed</p>
 </li>
 <li>
@@ -64,12 +91,6 @@
 </li>
 <li>
 <p>before we spend time on the task, we need to spened time on understanding the r3quiremnt</p>
-</li>
-<li>
-<p>what’s the right input?</p>
-</li>
-<li>
-<p>how can we write tests wihtout writing the parser</p>
 </li>
 <li>
 <p>we expect the string and then use some regex .. kind of like cucumber</p>
@@ -86,17 +107,6 @@
 <li>
 <p>we all have our interpretation</p>
 </li>
-<li>
-<p>which one is correct?</p>
-</li>
-<li>
-<p>seems like we lean toward T:0:1 on the input intent?</p>
-</li>
-<li>
-<p>What have you learned?</p>
-<ul>
-<li>seems like introduce parameter is very helpful, keep surface to the top as much as possible</li>
-<li>the better we are as introduce parameter, dependency, the more we can clear recognize the boundaries between different parts, like model, view controller</li>
 <li></li>
 </ul>
 </li>
@@ -131,4 +141,4 @@
           >
             window.___chunkMapping="{\"app\":[\"/app-dff359f42b4b1323adff.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-fe49012c596fa8e02e94.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-137bafc43fb95c27cc25.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-2fd0383b8dc4270b2974.js\"],\"component---src-pages-using-typescript-tsx\":[\"/component---src-pages-using-typescript-tsx-b3f1483ead526a95c936.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-161de0eab28c1f89b9c7.js\"],\"component---src-templates-tags-js\":[\"/component---src-templates-tags-js-937a80c11540749e5e6b.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="b9d65c87af26bd83aaf8";</script><script src="/webpack-runtime-647158e94add31207306.js" async></script><script src="/framework-24a4af5e8d436029005a.js" async></script><script src="/app-dff359f42b4b1323adff.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="622739c5566122b98539";</script><script src="/webpack-runtime-647158e94add31207306.js" async></script><script src="/framework-24a4af5e8d436029005a.js" async></script><script src="/app-dff359f42b4b1323adff.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
