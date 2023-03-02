@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 20 Feb 2023 21:02:58 GMT</lastBuildDate><item><title><![CDATA[software design x ray by Adam Tornhill summary wip]]></title><description><![CDATA[key-takeaways Quotes References https://kula.blog/posts/software_design_x-rays/ https://skarlso.github.io/2021/11/27/summary-of-programmers…]]></description><link>https://tonytvo.github.io/software-design-x-ray/</link><guid isPermaLink="false">https://tonytvo.github.io/software-design-x-ray/</guid><pubDate>Sun, 19 Feb 2023 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;key-takeaways&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#key-takeaways&quot; aria-label=&quot;key takeaways permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;key-takeaways&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 02 Mar 2023 14:45:41 GMT</lastBuildDate><item><title><![CDATA[software design x ray by Adam Tornhill summary wip]]></title><description><![CDATA[key-takeaways Quotes References https://kula.blog/posts/software_design_x-rays/ https://skarlso.github.io/2021/11/27/summary-of-programmers…]]></description><link>https://tonytvo.github.io/software-design-x-ray/</link><guid isPermaLink="false">https://tonytvo.github.io/software-design-x-ray/</guid><pubDate>Sun, 19 Feb 2023 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;key-takeaways&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#key-takeaways&quot; aria-label=&quot;key takeaways permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;key-takeaways&lt;/h1&gt;
 &lt;h1 id=&quot;quotes&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quotes&quot; aria-label=&quot;quotes permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Quotes&lt;/h1&gt;
 &lt;h1 id=&quot;references&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#references&quot; aria-label=&quot;references permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;References&lt;/h1&gt;
 &lt;ul&gt;
@@ -8,22 +8,18 @@
 &lt;li&gt;&lt;a href=&quot;https://understandlegacycode.com/blog/key-points-of-software-design-x-rays/&quot;&gt;https://understandlegacycode.com/blog/key-points-of-software-design-x-rays/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://yoan-thirion.gitbook.io/knowledge-base/software-craftsmanship/software-design-x-rays&quot;&gt;https://yoan-thirion.gitbook.io/knowledge-base/software-craftsmanship/software-design-x-rays&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://yoan-thirion.gitbook.io/knowledge-base/software-craftsmanship/the-programmers-brain&quot;&gt;https://yoan-thirion.gitbook.io/knowledge-base/software-craftsmanship/the-programmers-brain&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Notes on coffee machine kata practice Feb 18th 2023]]></title><description><![CDATA[Questions what’s the right input? how can we write tests wihtout writing the parser which one is correct? seems like we lean toward T:0:1 on…]]></description><link>https://tonytvo.github.io/coffee-machine-pratice-notes-feb-18-2023/</link><guid isPermaLink="false">https://tonytvo.github.io/coffee-machine-pratice-notes-feb-18-2023/</guid><pubDate>Sat, 18 Feb 2023 23:46:37 GMT</pubDate><content:encoded>&lt;h1 id=&quot;questions&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#questions&quot; aria-label=&quot;questions permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Questions&lt;/h1&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Notes on coffee machine kata practice Feb 18th 2023]]></title><description><![CDATA[Questions github repo for this kata: https://github.com/tonytvo/coffee-machine-kata what’s the right input? how can we write tests without…]]></description><link>https://tonytvo.github.io/coffee-machine-pratice-notes-feb-18-2023/</link><guid isPermaLink="false">https://tonytvo.github.io/coffee-machine-pratice-notes-feb-18-2023/</guid><pubDate>Sat, 18 Feb 2023 23:46:37 GMT</pubDate><content:encoded>&lt;h1 id=&quot;questions&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#questions&quot; aria-label=&quot;questions permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Questions&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;what’s the right input?&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;how can we write tests wihtout writing the parser&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;which one is correct?&lt;/p&gt;
+&lt;li&gt;github repo for this kata: &lt;a href=&quot;https://github.com/tonytvo/coffee-machine-kata&quot;&gt;https://github.com/tonytvo/coffee-machine-kata&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;what’s the right input?&lt;/li&gt;
+&lt;li&gt;how can we write tests without writing the parser&lt;/li&gt;
+&lt;li&gt;which one is correct?
 &lt;ul&gt;
 &lt;li&gt;seems like we lean toward T:0:1 on the input intent?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;What have you learned?&lt;/p&gt;
+&lt;li&gt;here’s the PR I have on refactoring practice -&gt; &lt;a href=&quot;https://github.com/tonytvo/coffee-machine-kata/pull/1&quot;&gt;https://github.com/tonytvo/coffee-machine-kata/pull/1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;What have you learned?
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;this kata is very rich in term of domain/functional tibbits&lt;/p&gt;
@@ -41,13 +37,13 @@
 &lt;p&gt;focus more on reading so we can understand more on what’s needed&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;we have disagree on what th requiremnts looks like&lt;/p&gt;
+&lt;p&gt;we have disagreed on what the requirements looks like&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;we don’t have to understand test fraework, we spend itme in the wrong direction&lt;/p&gt;
+&lt;p&gt;we don’t have to understand test framework, we spend time in the wrong direction&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;before we spend time on the task, we need to spened time on understanding the r3quiremnt&lt;/p&gt;
+&lt;p&gt;before we spend time on the task, we need to spent time on understanding the requirement&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;we expect the string and then use some regex .. kind of like cucumber&lt;/p&gt;
@@ -59,7 +55,7 @@
 &lt;p&gt;communicate with kindness, intention, respect, and considerate&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;we’re confusing on the sstring format&lt;/p&gt;
+&lt;p&gt;we’re confusing on the string format&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;we all have our interpretation&lt;/p&gt;
@@ -73,14 +69,12 @@
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;a strategy I followed?&lt;/p&gt;
+&lt;li&gt;a strategy I followed?
 &lt;ul&gt;
 &lt;li&gt;functional calisthenics and object calisthenics&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;the steps I followed?&lt;/p&gt;
+&lt;li&gt;the steps I followed?
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/RefactoringCombos/ArlosCommitNotation&quot;&gt;Arlo commit notation&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
