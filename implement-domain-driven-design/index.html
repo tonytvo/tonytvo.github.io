@@ -170,14 +170,60 @@
     </span></p>
 <h1 id="model-driven-design" style="position:relative;"><a href="#model-driven-design" aria-label="model driven design permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>model-driven design</h1>
 <ul>
-<li>tightly relating the code to an underlying model gives the code meaning and makes the model relevant.</li>
-<li>Design a portion of the software system to reflect the domain model literally so that the mapping is obvious.</li>
-<li>Revisit the model and modify it to be implemented more naturally in software, even as you seek to make it reflect deeper insight into the domain</li>
-<li>demand a single model that serves both purposes well, in addition to supporting a ubiquitous fluent language.</li>
-<li>Any technical person contributing to the model must spend some time touching the code, whatever primary role they play on the project.</li>
-<li><strong>Anyone responsible for changing code must learn to express a model through the code.</strong></li>
-<li>Every developer must be involved in discussing the model and contact domain experts.</li>
-<li>Those who contribute in different ways must consciously engage those who touch the code in a dynamic exchange of model ideas through the ubiquitous language.</li>
+<li>
+<p>tightly relating the code to an underlying model gives the code meaning and makes the model relevant.</p>
+</li>
+<li>
+<p>Design a portion of the software system to reflect the domain model literally so that the mapping is obvious.</p>
+</li>
+<li>
+<p>Revisit the model and modify it to be implemented more naturally in software, even as you seek to make it reflect deeper insight into the domain</p>
+</li>
+<li>
+<p>demand a single model that serves both purposes well, in addition to supporting a ubiquitous fluent language.</p>
+</li>
+<li>
+<p>Any technical person contributing to the model must spend some time touching the code, whatever primary role they play on the project.</p>
+</li>
+<li>
+<p><strong>Anyone responsible for changing code must learn to express a model through the code.</strong></p>
+</li>
+<li>
+<p>Every developer must be involved in discussing the model and contact domain experts.</p>
+</li>
+<li>
+<p>Those who contribute in different ways must consciously engage those who touch the code in a dynamic exchange of model ideas through the ubiquitous language.</p>
+</li>
+<li>
+<p>A model can be very descriptive of the domain while being unrepresentable in code. If the implementation is not considered while building the model:</p>
+<ul>
+<li>The model can have objects and relations that cannot be stored in a database.</li>
+<li>Model will detail irrelevant subjects and ignore important subjects.</li>
+<li>Some discoveries about the domain might not be apparent without considering the implementation details.</li>
+</ul>
+</li>
+<li>
+<p><strong>Design Model vs Analysis Model</strong></p>
+<ul>
+<li>
+<p>There are 2 types of models:</p>
+<ul>
+<li>Analysis Model: Captures the fundamentals of the domain concepts in comprehensible, expressive way. (Focuses on the domain)</li>
+<li>Design Model: Specify a set of components that can be constructed using programming tools and correctly solves the problem. (Focuses on the implementation)</li>
+</ul>
+</li>
+</ul>
+<p>Model-Driven Design</p>
+<ul>
+<li>Model-Driven Design integrates both Analysis and Design models and it serves both purposes.</li>
+</ul>
+</li>
+<li>
+<p>The underlying model of the system should be the same model shown to users. Otherwise, confusion will arise and the language will not be descriptive enough. Having different models can also cause unexpected behaviors to the users. An example to that is how Microsoft Internet Explorer modeled the bookmarks.</p>
+<ul>
+<li>For the user, “Favorites” was a list of URLs but to the actual implementation a “Favorite” is a file that contains a URL. This meant that URL names had to follow windows file naming restrictions. So if a user saved a URL and named it “AOT: 3” they will get an error stating that file names cannot contain special characters like ”:” which is very confusing.</li>
+</ul>
+</li>
 </ul>
 <h2 id="layered-architecture" style="position:relative;"><a href="#layered-architecture" aria-label="layered architecture permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>layered architecture</h2>
 <ul>
@@ -478,7 +524,95 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li>a pluggable component framework usually only comes into play after a few applications have already been implemented in the same domain.</li>
 <li>Distill an abstract core of interfaces and interactions and create a framework that allows diverse implementations of those interfaces to be freely substituted. Likewise, it will enable any application to use those components, so long as it operates strictly through the interfaces of the abstract core.</li>
 </ul>
-<h1 id="dd-with-legacy-code" style="position:relative;"><a href="#dd-with-legacy-code" aria-label="dd with legacy code permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="/ddd-with-legacy-code">DD with legacy code</a></h1>
+<h1 id="ddd-with-legacy-code" style="position:relative;"><a href="#ddd-with-legacy-code" aria-label="ddd with legacy code permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DDD with legacy code</h1>
+<ul>
+<li><a href="/ddd-with-legacy-code">DDD with legacy code</a></li>
+</ul>
+<h1 id="questions" style="position:relative;"><a href="#questions" aria-label="questions permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Questions</h1>
+<ul>
+<li>
+<p><strong>how to mange same model in different sub-systems?</strong></p>
+<ul>
+<li>like user in participant? financial reporting? plan admin?</li>
+</ul>
+</li>
+<li>
+<p><strong>what are the common domain concepts between tax and financial reporting?</strong></p>
+</li>
+<li>
+<p><strong>Knowledge Crunching: How a team can accumulate, distill and apply domain knowledge to software development?</strong></p>
+<ul>
+<li>12-15 (from “Ingredients of…“)</li>
+</ul>
+</li>
+<li>
+<p><strong>Ubiquitous Language: How to bring about a clearer and more dynamic flow of domain knowledge throughout the project?</strong></p>
+<ul>
+<li>24-27 Example 27-30 Consequences 32-34</li>
+</ul>
+</li>
+<li>
+<p><strong>How documents &#x26; diagrams can work for a project instead of just being work?</strong></p>
+<ul>
+<li>It’s important to know that diagrams do not need to have the full context of the model. The goal of the diagram is to explain the model and they should be as simple as possible. You should use diagram and documents to explain the model but they don’t have to be a replica of the model.</li>
+<li>a document should not do what the code already does well, which is to provide details</li>
+<li>a document must be involved in project activities</li>
+<li>light-weight architecture decision records?</li>
+<li>is the document written in the language people speak on the project? is it written in the language embedded in the code?</li>
+<li>if the terms explained in a design document don’t start showing up in conversations and code, the document is not fullfilling its purpose.</li>
+<li>as the domain model comes to reflect the most relevant knowledge of the business applications become scenarios within that model, and the ubiquitous language can be used to describe such a scenario in terms that directly connect to the model driven design, as a result, specifications can be written more simply because they do not have to convey the business knowledge that lies behind the model.</li>
+<li>keeping documents minimal and focusing them on complementing code and conversation, documents can stay connected to the project.</li>
+</ul>
+</li>
+<li>
+<p><strong>What is model driven design?</strong></p>
+<ul>
+<li>35-40 How to make modeling relevant to the the goals of a software project:</li>
+<li>ModelDriven Design. 47-50?</li>
+<li>Why models matter to users?</li>
+<li>57-59 The necessity of eliminating the distinction between modelers and programmers. 60-62</li>
+</ul>
+</li>
+<li>
+<p><strong>What Constitutes a Useful Model-Driven Design and How to Go About Finding Such a Design?</strong></p>
+<ul>
+<li>True story: How model-driven design rescued a project and created unexpected opportunities. 193-203</li>
+<li>How software experts can work with domain experts to explore and refine models. 207-210</li>
+<li>Supple Design: How a system can become easier to extend and adapt rather than ossifying into legacy 243-245</li>
+</ul>
+</li>
+</ul>
+<p>Overview of the rhythm of domain-driven design and how it allows for upside surprise opportunities to emerge.
+Introduction to three principles for applying domain-driven design to large projects and enterprises. 328-329
+Bounded Context: Strategies for dealing with the inevitability of multiple viewpoints and conflicting needs. 331-338
+How much integration do you need?
+How can you structure relationships between teams to get it? 341-371, (headings and bold)
+Whimsical, non-technical example 378-381
+Broad tradeoffs between context strategies Figure 14.13 (on p. 388)
+Distillation: How do you focus on your central problem and keep from drowning in a sea of side issues?
+400-405 A Tale of Two Time Zones: A right way and a wrong way to deploy your people to tackle essential supporting components 410-412
+Reducing project risk by tackling the core domain early 413-414
+Crafting a domain vision statement 415-416
+Large-scale structure: How to make a sprawling system comprehensible and encourage consistency across subsystems?
+How to have structure without stifling development? 439-442, 444-446
+Several specific techniques for large-scale structure are discussed, but are skipped in this tour. Non-technical example of how a large-scale structure allowed thousands of people to contribute to the AIDS Memorial Quilt 478(bottom)-479
+Putting the pieces together to develop a design strategy 490-497
+Tracking five real domain-driven design projects and their long-term outcomes. 500-505
+How to avoid common pitfalls of modeling in software development?
+How to bring business people and developers into an effective collaboration?
+How to bring rigor to the modeling process to help the system scale?
+How to apply modeling in a multi-team environment?
+How to focus design effort on high-value areas and avoid over-investing elsewhere?
+References
+<a href="https://herbertograca.com/2015/09/16/domain-driven-design-by-eric-evans-chap-3-binding-model-and-implementation/">https://herbertograca.com/2015/09/16/domain-driven-design-by-eric-evans-chap-3-binding-model-and-implementation/</a>
+<a href="https://dev.to/ielgohary/domain-driven-design-by-eric-evans-part-i-5d8m">https://dev.to/ielgohary/domain-driven-design-by-eric-evans-part-i-5d8m</a>
+<a href="https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD-Nontechnical-path-through-the-blue-book.pdf">https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD-Nontechnical-path-through-the-blue-book.pdf</a></p>
+<ul>
+<li>
+<p><strong>Knowledge crunching: How a team can accumulate, distill and apply domain knowledge to software development?</strong></p>
+</li>
+<li></li>
+</ul>
 <h1 id="exercises" style="position:relative;"><a href="#exercises" aria-label="exercises permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exercises</h1>
 <ul>
 <li><a href="https://medium.com/nick-tune-tech-strategy-blog/architecture-ddd-kata-online-car-dealership-540c534121e2">https://medium.com/nick-tune-tech-strategy-blog/architecture-ddd-kata-online-car-dealership-540c534121e2</a></li>
@@ -557,4 +691,4 @@ review design DDD quickly</p>
           >
             window.___chunkMapping="{\"app\":[\"/app-dff359f42b4b1323adff.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-fe49012c596fa8e02e94.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-137bafc43fb95c27cc25.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-2fd0383b8dc4270b2974.js\"],\"component---src-pages-using-typescript-tsx\":[\"/component---src-pages-using-typescript-tsx-b3f1483ead526a95c936.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-161de0eab28c1f89b9c7.js\"],\"component---src-templates-tags-js\":[\"/component---src-templates-tags-js-937a80c11540749e5e6b.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="348f013e3c47d286ffc0";</script><script src="/webpack-runtime-4b2de8b3ea950f000edc.js" async></script><script src="/framework-24a4af5e8d436029005a.js" async></script><script src="/app-dff359f42b4b1323adff.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="622739c5566122b98539";</script><script src="/webpack-runtime-647158e94add31207306.js" async></script><script src="/framework-24a4af5e8d436029005a.js" async></script><script src="/app-dff359f42b4b1323adff.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
