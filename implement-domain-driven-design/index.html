@@ -224,6 +224,9 @@
 <li>For the user, “Favorites” was a list of URLs but to the actual implementation a “Favorite” is a file that contains a URL. This meant that URL names had to follow windows file naming restrictions. So if a user saved a URL and named it “AOT: 3” they will get an error stating that file names cannot contain special characters like ”:” which is very confusing.</li>
 </ul>
 </li>
+<li>
+<p><a href="https://www.domainlanguage.com/wp-content/uploads/2016/04/DDD_Model_Exploration_Whirlpool.png">model exploration whirlpool</a></p>
+</li>
 </ul>
 <h2 id="layered-architecture" style="position:relative;"><a href="#layered-architecture" aria-label="layered architecture permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>layered architecture</h2>
 <ul>
@@ -537,18 +540,56 @@ keep an aggregate together on one server. Allow different sums to be distributed
 </ul>
 </li>
 <li>
-<p><strong>what are the common domain concepts between tax and financial reporting?</strong></p>
-</li>
-<li>
 <p><strong>Knowledge Crunching: How a team can accumulate, distill and apply domain knowledge to software development?</strong></p>
 <ul>
-<li>12-15 (from “Ingredients of…“)</li>
+<li><strong>Effective modelling is based on:</strong>
+<ul>
+<li>Binding model and implementation
+<ul>
+<li>The implementation is strictly based on the model;</li>
+</ul>
+</li>
+<li>Cultivating a language based on the model
+<ul>
+<li>The model contains terms which are the base of a language common to both Domain Exerts and Developers;</li>
+</ul>
+</li>
+<li>Developing a knowledge rich model
+<ul>
+<li>The model must be more than a representation of data structures, it must contain all kinds of knowledge. It must contain ideas, data structures, objects, behaviours, enforced rules, etc.</li>
+</ul>
+</li>
+<li>Distilling the model
+<ul>
+<li>A model must contain all, but also only, the relevant knowledge. This means that as we gain knowledge about the domain, we add the relevant knowledge to the model, but we can and must also remove, from the model, the domain knowledge that we end up figuring out that is not relevant after all.</li>
+</ul>
+</li>
+<li>Brainstorming and experimenting
+<ul>
+<li>Brainstorming and experimentation meetings between domain experts and developers, where massive experimentation and discussion takes place, is what ends up providing a distilled and knowledge rich model.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>The most productive teams are continuously learning about:</strong>
+<ul>
+<li>Technical knowledge</li>
+<li>Domain modeling knowledge</li>
+<li>Knowledge specific to the domain of the project</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
 <p><strong>Ubiquitous Language: How to bring about a clearer and more dynamic flow of domain knowledge throughout the project?</strong></p>
 <ul>
-<li>24-27 Example 27-30 Consequences 32-34</li>
+<li><strong>The Ubiquitous Language will include the terms used to discuss the model and the high level principles and patterns incorporated into the model. It must be used as much as possible, among developers, domain experts and between both of them</strong>.</li>
+<li>the terminology of day-to-day discussions is disconnected from the terminology embedded in the code (ultimately the most important of a software project). And even the same person uses different language in speech and in writing, so that the most incisive expressions of the domain often emerge in a transient form that is never captured in the code or even in writing.</li>
+<li>translation blunts communication and makes knowledge crunching anemic</li>
+<li>iron out difficulties by experimenting with alternative expressions, which reflect alternative models. Then refactor the code, renaming classes, methods, and modules to conform to the new model. Resolve confusion over terms in conversation, in just the way we come to agree on the meaning of ordinary words.</li>
+<li>domain experts should object to terms or structures that are awkward or inadequate to convey domain understanding; developers should watch for ambiguity or inconsistency that will trip up design.</li>
+<li>play with the model as you talk about the system. Describe scenarios out loud using the elements and interactions of the model, combining concepts in ways allowed by the model. Find easier ways to say what you need to say, and then take those new ideas back down to the diagrams and code.</li>
+<li>if sophisticated domain experts don’t understand the model, there is something wrong with the model.</li>
 </ul>
 </li>
 <li>
@@ -579,35 +620,51 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li>True story: How model-driven design rescued a project and created unexpected opportunities. 193-203</li>
 <li>How software experts can work with domain experts to explore and refine models. 207-210</li>
 <li>Supple Design: How a system can become easier to extend and adapt rather than ossifying into legacy 243-245</li>
+<li>Overview of the rhythm of domain-driven design and how it allows for upside surprise opportunities to emerge.</li>
+<li>Introduction to three principles for applying domain-driven design to large projects and enterprises. 328-329</li>
 </ul>
 </li>
-</ul>
-<p>Overview of the rhythm of domain-driven design and how it allows for upside surprise opportunities to emerge.
-Introduction to three principles for applying domain-driven design to large projects and enterprises. 328-329
-Bounded Context: Strategies for dealing with the inevitability of multiple viewpoints and conflicting needs. 331-338
-How much integration do you need?
-How can you structure relationships between teams to get it? 341-371, (headings and bold)
-Whimsical, non-technical example 378-381
-Broad tradeoffs between context strategies Figure 14.13 (on p. 388)
-Distillation: How do you focus on your central problem and keep from drowning in a sea of side issues?
-400-405 A Tale of Two Time Zones: A right way and a wrong way to deploy your people to tackle essential supporting components 410-412
-Reducing project risk by tackling the core domain early 413-414
-Crafting a domain vision statement 415-416
-Large-scale structure: How to make a sprawling system comprehensible and encourage consistency across subsystems?
-How to have structure without stifling development? 439-442, 444-446
-Several specific techniques for large-scale structure are discussed, but are skipped in this tour. Non-technical example of how a large-scale structure allowed thousands of people to contribute to the AIDS Memorial Quilt 478(bottom)-479
-Putting the pieces together to develop a design strategy 490-497
-Tracking five real domain-driven design projects and their long-term outcomes. 500-505
-How to avoid common pitfalls of modeling in software development?
-How to bring business people and developers into an effective collaboration?
-How to bring rigor to the modeling process to help the system scale?
-How to apply modeling in a multi-team environment?
-How to focus design effort on high-value areas and avoid over-investing elsewhere?
-References
-<a href="https://herbertograca.com/2015/09/16/domain-driven-design-by-eric-evans-chap-3-binding-model-and-implementation/">https://herbertograca.com/2015/09/16/domain-driven-design-by-eric-evans-chap-3-binding-model-and-implementation/</a>
-<a href="https://dev.to/ielgohary/domain-driven-design-by-eric-evans-part-i-5d8m">https://dev.to/ielgohary/domain-driven-design-by-eric-evans-part-i-5d8m</a>
-<a href="https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD-Nontechnical-path-through-the-blue-book.pdf">https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD-Nontechnical-path-through-the-blue-book.pdf</a></p>
+<li>
+<p><strong>Bounded Context: Strategies for dealing with the inevitability of multiple viewpoints and conflicting needs. 331-338</strong></p>
 <ul>
+<li>How much integration do you need?</li>
+<li>How can you structure relationships between teams to get it? 341-371, (headings and bold)</li>
+<li>Whimsical, non-technical example 378-381</li>
+<li>Broad tradeoffs between context strategies Figure 14.13 (on p. 388)</li>
+</ul>
+</li>
+<li>
+<p><strong>Distillation: How do you focus on your central problem and keep from drowning in a sea of side issues?</strong></p>
+<ul>
+<li>400-405 A Tale of Two Time Zones: A right way and a wrong way to deploy your people to tackle essential supporting components 410-412</li>
+<li>Reducing project risk by tackling the core domain early 413-414</li>
+<li>Crafting a domain vision statement 415-416</li>
+</ul>
+</li>
+<li>
+<p><strong>Large-scale structure: How to make a sprawling system comprehensible and encourage consistency across subsystems?</strong></p>
+<ul>
+<li>How to have structure without stifling development? 439-442, 444-446</li>
+<li>Several specific techniques for large-scale structure are discussed, but are skipped in this tour. Non-technical example of how a large-scale structure allowed thousands of people to contribute to the AIDS Memorial Quilt 478(bottom)-479</li>
+<li>Putting the pieces together to develop a design strategy 490-497</li>
+<li>Tracking five real domain-driven design projects and their long-term outcomes. 500-505</li>
+</ul>
+</li>
+<li>
+<p><strong>How to avoid common pitfalls of modeling in software development?</strong></p>
+</li>
+<li>
+<p><strong>How to bring business people and developers into an effective collaboration?</strong></p>
+</li>
+<li>
+<p><strong>How to bring rigor to the modeling process to help the system scale?</strong></p>
+</li>
+<li>
+<p><strong>How to apply modeling in a multi-team environment?</strong></p>
+</li>
+<li>
+<p><strong>How to focus design effort on high-value areas and avoid over-investing elsewhere?</strong></p>
+</li>
 <li>
 <p><strong>Knowledge crunching: How a team can accumulate, distill and apply domain knowledge to software development?</strong></p>
 </li>
@@ -685,10 +742,12 @@ review design DDD quickly</p>
 <li><a href="https://speakerdeck.com/mploed/visualizing-sociotechnical-architectures-with-context-maps">https://speakerdeck.com/mploed/visualizing-sociotechnical-architectures-with-context-maps</a></li>
 <li><a href="https://www.youtube.com/watch?v=ekMPm78KFj0&#x26;t=1820s">https://www.youtube.com/watch?v=ekMPm78KFj0&#x26;t=1820s</a></li>
 <li><a href="/55149ad1016f6c8b1475bb172facbdc1/visualcollaborationtools.pdf">visual collaboration tools</a></li>
+<li><a href="https://dev.to/ielgohary/domain-driven-design-by-eric-evans-part-i-5d8m">https://dev.to/ielgohary/domain-driven-design-by-eric-evans-part-i-5d8m</a></li>
+<li><a href="https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD-Nontechnical-path-through-the-blue-book.pdf">https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD-Nontechnical-path-through-the-blue-book.pdf</a></li>
 </ul></section><hr/><footer><div class="bio"><div data-gatsby-image-wrapper="" style="width:50px;height:50px" class="gatsby-image-wrapper bio-avatar"><div aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear;background-color:#685848;width:50px;height:50px;position:relative"></div><picture><source type="image/avif" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/d4bf4/tony-avatar.avif 50w,/static/b811602c8c8ce14b66aae6613c8968f4/ee81f/tony-avatar.avif 100w" sizes="50px"/><source type="image/webp" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/3faea/tony-avatar.webp 50w,/static/b811602c8c8ce14b66aae6613c8968f4/6a679/tony-avatar.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="opacity:0" sizes="50px" decoding="async" loading="lazy" data-src="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg 50w,/static/b811602c8c8ce14b66aae6613c8968f4/64618/tony-avatar.jpg 100w" alt="Profile picture"/></picture><noscript><picture><source type="image/avif" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/d4bf4/tony-avatar.avif 50w,/static/b811602c8c8ce14b66aae6613c8968f4/ee81f/tony-avatar.avif 100w" sizes="50px"/><source type="image/webp" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/3faea/tony-avatar.webp 50w,/static/b811602c8c8ce14b66aae6613c8968f4/6a679/tony-avatar.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="opacity:0" sizes="50px" decoding="async" loading="lazy" src="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg 50w,/static/b811602c8c8ce14b66aae6613c8968f4/64618/tony-avatar.jpg 100w" alt="Profile picture"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><p>Written by <strong>Tony Vo</strong> <!-- -->father, husband, son and software developer<!-- --> <a href="https://twitter.com/ttrungvo">Twitter</a></p></div></footer></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/ddd-with-legacy-code/">← <!-- -->DDD with legacy code - wip</a></li><li><a rel="next" href="/tools-of-titans/">tools of titans summary<!-- --> →</a></li></ul></nav><div><div id="disqus_thread"></div></div></main><footer>© <!-- -->2023<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.com">Gatsby</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/implement-domain-driven-design/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
             id="gatsby-chunk-mapping"
           >
             window.___chunkMapping="{\"app\":[\"/app-dff359f42b4b1323adff.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-fe49012c596fa8e02e94.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-137bafc43fb95c27cc25.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-2fd0383b8dc4270b2974.js\"],\"component---src-pages-using-typescript-tsx\":[\"/component---src-pages-using-typescript-tsx-b3f1483ead526a95c936.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-161de0eab28c1f89b9c7.js\"],\"component---src-templates-tags-js\":[\"/component---src-templates-tags-js-937a80c11540749e5e6b.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="622739c5566122b98539";</script><script src="/webpack-runtime-647158e94add31207306.js" async></script><script src="/framework-24a4af5e8d436029005a.js" async></script><script src="/app-dff359f42b4b1323adff.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="348f013e3c47d286ffc0";</script><script src="/webpack-runtime-4b2de8b3ea950f000edc.js" async></script><script src="/framework-24a4af5e8d436029005a.js" async></script><script src="/app-dff359f42b4b1323adff.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
