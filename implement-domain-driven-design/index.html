@@ -596,6 +596,103 @@ keep an aggregate together on one server. Allow different sums to be distributed
 </ul>
 </li>
 </ul>
+<h2 id="refactoring-bounded-contexts-ecosystem" style="position:relative;"><a href="#refactoring-bounded-contexts-ecosystem" aria-label="refactoring bounded contexts ecosystem permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Refactoring Bounded Contexts ecosystem</h2>
+<ul>
+<li>
+<p>When we already have a system in place and we want to refactor it, the first step is to identify the current situation. For this, we need to create a schema of the current configuration of the bounded contexts (sub-models) in our system.</p>
+</li>
+<li>
+<p>From this clear view of the current situation, we can start breaking or merging contexts. While breaking up a bounded context is usually easy, merging them is usually quite difficult, as there can exist very different concepts and models. We will typically want to merge contexts when there is too much translation overhead or duplication.</p>
+</li>
+<li>
+<p><strong>From SEPARATE WAYS to SHARED KERNEL</strong></p>
+<ul>
+<li>Define one of 3 strategies:
+<ul>
+<li>Refactor one context into the other context model;</li>
+<li>Create a new context with the best pieces of each of the contexts;</li>
+<li>Create a completely new, deeper model, which can replace both the initial models.</li>
+</ul>
+</li>
+<li>Create a small team with developers from both the initial teams;</li>
+<li>Define the new shared model:
+<ul>
+<li>Decide the code to be shared, identifying overlaps/duplications in both initial models;</li>
+<li>Decide naming conventions;</li>
+</ul>
+</li>
+<li>Create a basic test suite for the shared kernel, which will grow along with the implementation;</li>
+<li>Implement the new model, merging frequently and rethinking it when needed;
+<ul>
+<li>Start simple, with code that is non-critical, duplicated in both contexts. Something being translated is a good choice;</li>
+</ul>
+</li>
+<li>Integrate the original contexts with the new Shared Kernel;</li>
+<li>Remove any obsolete code (translation layers, etc.).</li>
+</ul>
+</li>
+<li>
+<p><strong>From SHARED KERNEL to CONTINUOUS INTEGRATION</strong></p>
+<ul>
+<li>
+<p>If the Shared Kernel continues to grow, maybe we should completely merge the Bounded Contexts. This, however, involves not only the code but also the teams structure, their work-flow and their language.</p>
+<ul>
+<li>Create the same work-flow in both teams;</li>
+<li>Set-up Continuous Integration in both teams;</li>
+<li>Circulate developers in both teams, as means to sharing and spreading knowledge;</li>
+<li>Distil each model individually;</li>
+<li>Start merging the core domain, doing it as fast as possible, prioritizing it above most new development, so we don’t lose the momentum. Beware not to leave out any specialized functionality needed by the users;</li>
+<li>As the Shared Kernel grows, increase the integration frequency until we have continuous integration;</li>
+<li>The goal is to, in the end, have one big team, or two small teams who circulate members and do continuous integration.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Phasing out a legacy system</strong></p>
+</li>
+</ul>
+<p>Phasing out a legacy system means, most of the times, replacing it for one or several newer systems.</p>
+<ul>
+<li>
+<p>Identify a small piece of the legacy system that can be moved to one of the new systems;</p>
+</li>
+<li>
+<p>Identify additions needed in the Anti-Corruption layer;</p>
+</li>
+<li>
+<p>Implement</p>
+</li>
+<li>
+<p>Deploy</p>
+</li>
+<li>
+<p>Identify obsolete code in the Anti-Corruption layer and remove it;</p>
+</li>
+<li>
+<p>Identify obsolete code in the legacy system and, if possible, remove it.</p>
+</li>
+<li>
+<p><strong>From OPEN HOST SERVICE to PUBLISHED LANGUAGE</strong></p>
+</li>
+</ul>
+<p>Sometimes, when in an Open Host Service architecture, we will have several ad-hoc protocols specific to each communication situation. There is no common, standard communication protocol.</p>
+<p>As the need to integrate with more systems grows, the amount of communication specificities grows as well: Scalability and maintainability are at risk.</p>
+<p>Therefore we need a common, standard, communication Interchange Language that any system con use to communicate with our system, we need a published language:</p>
+<ul>
+<li>If possible, use an industry standard language;</li>
+<li>If its not possible to use an industry standard language, create your own:
+<ul>
+<li>Start by making the core domain as clear as possible;</li>
+<li>Use the core domain as the base for the new interchange language;</li>
+<li>If possible, use a general purpose Interchange Language Syntax (XML, JSON) as a base for our new Interchange Language;</li>
+<li>Publish the language, making it known to all involved in the systems collaboration;</li>
+<li>Publish any architectural changes as well;</li>
+<li>Build translation layers for all collaborating systems;</li>
+<li>Switch to the new Interchange Language.</li>
+</ul>
+</li>
+</ul>
 <h2 id="core-domain" style="position:relative;"><a href="#core-domain" aria-label="core domain permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>core domain</h2>
 <ul>
 <li>to make a domain model an asset, the critical core of that model has to be sleek and fully leveraged to create application functionality.</li>
