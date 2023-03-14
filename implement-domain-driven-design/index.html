@@ -403,11 +403,21 @@ keep an aggregate together on one server. Allow different sums to be distributed
 </ul>
 <h2 id="context-map" style="position:relative;"><a href="#context-map" aria-label="context map permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>context map</h2>
 <ul>
-<li>to plot strategy, we need a realistic, large-scale view of model development extending across our project and others we integrate with.</li>
-<li>Identify each model in play on the project and define its bounded context. This includes the implicit models of non-object-oriented subsystems.</li>
+<li>we should not directly use functionality and data structures through different bounded contexts. The bounded contexts must be encapsulated, as independent as possible. To reach this goal, bounded contexts must communicate through abstractions (interfaces) and, if necessary, translation layers or even anti-corruption layers.</li>
+</ul>
+<p>To make the bounded contexts ecosystems explicitly clear, encapsulated, loosely coupled and high cohesive, we should:</p>
+<ul>
+<li>Create a global view of all bounded contexts and their relations, using context maps, naming them and adding them to the ubiquitous language.
+<ul>
+<li>Identify the points of contact between bounded contexts, together with the used translations and abstractions. All developers must know the boundaries and to what context any given code unit belongs to.</li>
+<li>Personally, I find that having diagrams of the context maps hanging in the walls of the development offices is a great way of communicating the boundaries to the team, and keeping them in mind at all times. They should include their components, contact points, translator layers, and anti-corruption layers.</li>
+<li>Define teams organization to match the technical and conceptual bounded contexts we (want to) have in the project (Conway’s law).</li>
+<li>Personally I also find it natural and logic to explicitly define the bounded contexts as modules and sub-modules, in the project structure.</li>
 <li>Name each bounded context, and make the names part of the ubiquitous language</li>
 <li>describe the point of contact between the models, outlining explicit translation for any communication. Highlighting any sharing, isolation mechanism, and levels of influence.</li>
 <li>Map the existing terrain. Take up the transformations later.</li>
+</ul>
+</li>
 </ul>
 <h2 id="partnership" style="position:relative;"><a href="#partnership" aria-label="partnership permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>partnership</h2>
 <ul>
@@ -431,7 +441,9 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li>when 2 teams are in an upstream-downstream relationship, where the upstream team may succeed independently of the fate of the downstream team, the needs of the downstream come to be addressed in a variety of ways with a wide range of consequences.</li>
 <li>Establish a clear customer/supplier relationship between the two teams, meaning downstream priorities factor into upstream planning.</li>
 <li>Negotiate and budget tasks for downstream requirements so that everyone understands the commitment and schedule</li>
+<li>The customer needs are the priority while deciding the schedule of the supplier.</li>
 <li>jointly developed automated acceptance tests and validate the expected interface from the upstream. Adding these tests to the upstream team’s test suite, to be run as part of its continuous integration, will free the upstream team to make changes without fear of downstream side effects.</li>
+<li>Crucial, for a customer/supplier relation to work, its that the involved teams work under the same management, who should be as hierarchically close as possible to the actual teams.</li>
 </ul>
 <h2 id="conformist" style="position:relative;"><a href="#conformist" aria-label="conformist permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>conformist</h2>
 <ul>
@@ -439,6 +451,10 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li>to eliminate the complexity of translation between bounded contexts by slavishly adhering to the model of the upstream team.</li>
 <li>Ubiquitous language with your upstream team will be shared.</li>
 <li>Altruism may be sufficient to get them to share information with you.</li>
+<li><strong>Abandon the supplier</strong>:  In case there are better options or the added value of maintaining such relation is not worth it. [SEPARATE WAYS]</li>
+<li><strong>Take full responsibility for translation</strong>: If the supplier can not be abandoned but the technical quality is less than acceptable. [ANTI-CORRUPTION LAYER]</li>
+<li><strong>Adopt the foreign model</strong>: If the quality of the supplier is acceptable and compatible, we can fully adopt its model. [CONFORMIST]</li>
+<li>The conformist approach can simplify integration enormously, as no translation nor anti-corruption layers would be needed, and it would provide the same ubiquitous language to both teams.</li>
 </ul>
 <h2 id="anticorruption-layer" style="position:relative;"><a href="#anticorruption-layer" aria-label="anticorruption layer permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>anticorruption layer</h2>
 <ul>
