@@ -455,12 +455,50 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li><strong>Take full responsibility for translation</strong>: If the supplier can not be abandoned but the technical quality is less than acceptable. [ANTI-CORRUPTION LAYER]</li>
 <li><strong>Adopt the foreign model</strong>: If the quality of the supplier is acceptable and compatible, we can fully adopt its model. [CONFORMIST]</li>
 <li>The conformist approach can simplify integration enormously, as no translation nor anti-corruption layers would be needed, and it would provide the same ubiquitous language to both teams.</li>
-</ul>
-<h2 id="anticorruption-layer" style="position:relative;"><a href="#anticorruption-layer" aria-label="anticorruption layer permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>anticorruption layer</h2>
+<li><strong>Shared Kernel Vs Conformist</strong>
 <ul>
-<li>Translation becomes more complex when control or communication is insufficient to pull off a shared kernel, partner, or customer/supplier relationship. As a result, the translation takes on a more defensive tone.</li>
-<li>As a downstream client, create an isolating layer to provide your system with the functionality of the upstream system in terms of your own domain model.</li>
-<li>This layer talks to the other system through its existing interface, requiring little or no modification to the other system. Internally, the layer translates in one or both directions as necessary between the two models.</li>
+<li>They both deal with a situation where two bounded contexts share part of the model. However, the shared kernel is appropriate only when the teams owning the modules can coordinate and collaborate tightly. When we have a situation where there is a customer/supplier frame, and collaboration is not possible, we need to use a conformist approach, or an Anti-Corruption layer.</li>
+</ul>
+</li>
+</ul>
+<h2 id="anti-corruption-layer" style="position:relative;"><a href="#anti-corruption-layer" aria-label="anti corruption layer permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>anti-corruption layer</h2>
+<ul>
+<li>
+<p>Translation becomes more complex when control or communication is insufficient to pull off a shared kernel, partner, or customer/supplier relationship. As a result, the translation takes on a more defensive tone.</p>
+</li>
+<li>
+<p>As a downstream client, create an isolating layer to provide your system with the functionality of the upstream system in terms of your own domain model.</p>
+</li>
+<li>
+<p>This layer talks to the other system through its existing interface, requiring little or no modification to the other system. Internally, the layer translates in one or both directions as necessary between the two models.</p>
+</li>
+<li>
+<p>The Anti-Corruption layer is implemented using:</p>
+<ul>
+<li><strong>FACADE</strong>
+<ul>
+<li>An abstraction layer on top of a system API, as to limit and simplify the usage of the underlying API.</li>
+</ul>
+</li>
+<li><strong>ADAPTER</strong>
+<ul>
+<li>Which allow us to connect to different subsystems/APIs through a stable interface, implemented by all adapters who connect to equivalent subsystems/APIs.</li>
+</ul>
+</li>
+<li><strong>TRANSLATOR</strong>
+<ul>
+<li>A stateless object used by the adapters, and which belongs to a specific adapter. They hold the logic to perform the conversion of conceptual objects or Entities, from one subsystem to another.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Translation layer Vs Anti-corruption layer</p>
+<ul>
+<li>The translation layer is collaboratively maintained by the teams owning both bounded contexts.</li>
+<li>The anti-corruption layer is fully maintained by one of the team, the one owning the client module.</li>
+</ul>
+</li>
 </ul>
 <h2 id="open-host-service" style="position:relative;"><a href="#open-host-service" aria-label="open host service permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>open-host service</h2>
 <ul>
@@ -476,7 +514,11 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li>Published language is often combined with open-host service.</li>
 </ul>
 <h2 id="separate-ways" style="position:relative;"><a href="#separate-ways" aria-label="separate ways permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>separate ways</h2>
-<p>declare a bounded context to have no connection to the others, allowing developers to find simple, specialized solutions within this small scope.</p>
+<ul>
+<li>declare a bounded context to have no connection to the others, allowing developers to find simple, specialized solutions within this small scope.</li>
+<li>”<em>Integration is always expensive. Sometimes the benefit is small.</em>”</li>
+<li>We should only integrate sub-systems if we really, REALLY, need to. We should, as much as possible, define bounded contexts that are completely independent, completely disconnected from other bounded contexts, and therefore have no need for integration.</li>
+</ul>
 <h2 id="big-ball-of-mud" style="position:relative;"><a href="#big-ball-of-mud" aria-label="big ball of mud permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>big ball of mud</h2>
 <ul>
 <li>well-defined context boundaries only emerge from intellectual choices and social forces (even though the people creating the systems may not always have been consciously aware of these causes at the time).</li>
