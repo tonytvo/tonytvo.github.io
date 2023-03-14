@@ -531,6 +531,71 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li>Distillation is the process of separating the components of a mixture to extract the essence in a form that makes it more valuable and useful</li>
 <li>A model is a distillation of knowledge.</li>
 </ul>
+<h2 id="integrating-sub-modules" style="position:relative;"><a href="#integrating-sub-modules" aria-label="integrating sub modules permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Integrating sub-modules</h2>
+<ul>
+<li>
+<p>A large scale domain model is composed of smaller domain models.</p>
+</li>
+<li>
+<p>However, the smaller domain models don’t even have to agree on their view of the global domain model. As long as they operate on their own, we can maintain their integrity.</p>
+</li>
+<li>
+<p>It’s only when they need to integrate, that we might need to find common views on the models.</p>
+</li>
+<li>
+<p>Several strategies can be used to integrate sub-models:</p>
+<ul>
+<li>Draw a Context Map of the <strong>current</strong> state of the model;</li>
+<li>Define the Bounded Contexts borders with the whole dev team;</li>
+<li>Guarantee that the Bounded Contexts borders and relation are known and understood by the whole dev team;</li>
+<li>We must carefully model <strong>aiming at small or large Bounded Contexts</strong> by considering their advantages:
+<ul>
+<li>Advantages of large models:
+<ul>
+<li>Its easier to understand one model than several models plus their mappings;</li>
+<li>There is no need for translation layers, which might be complex;</li>
+<li>One shared language eases communication.</li>
+</ul>
+</li>
+<li>Advantages of small models:
+<ul>
+<li>Needs less communication between developers working in the same model;</li>
+<li>Its easier to manage smaller code bases and teams;</li>
+<li>Smaller contexts are simpler, requiring less skills from the developers;</li>
+<li>Smaller models provide more flexibility to the global model.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Identify and alienate what is not part of our bounded context. A good starting is to exclude <strong>what can not change</strong> and <strong>what we do not need</strong> in our bounded context;</li>
+<li>When <strong>integrating external systems</strong>, we can consider 3 patterns:
+<ul>
+<li>SEPARATE WAYS: Only integrate if we really need to, otherwise keep them completely isolated;</li>
+<li>CONFORMIST: Fully adhere and rely on the external system model;</li>
+<li>ANTI-CORRUPTION LAYER: Completely isolate the two systems, allowing them to communicate through a middle-ware, requiring no changes to either system.</li>
+</ul>
+</li>
+<li>When <strong>integrating internal systems</strong> (inside the same bounded context) we can:
+<ul>
+<li>Use a SHARED KERNEL to split relatively independent functionality into separate bounded contexts.</li>
+<li>Set up CUSTOMER/SUPPLIER DEV TEAMS, if all the dependencies of the subsystems go in one direction;</li>
+<li>Go SEPARATE WAYS, if for some reason its not possible to integrate the sub-systems;</li>
+<li>Use a TRANSLATION LAYER, to connect both systems, which is maintained by the teams of both systems.</li>
+</ul>
+</li>
+<li>Deployment of new versions must be carefully coordinated by the teams owning the bounded contexts that connect, and as such the Bounded Contexts boundaries must be defined with these issues in mind:
+<ul>
+<li>Customer/Supplier structures must be tested together to prevent regressions;</li>
+<li>Long deployments must be managed carefully to minimize issues with data migration temporary inconsistencies;</li>
+<li>A Shared Kernel update must be tested and verified to satisfy all client systems to prevent regressions.</li>
+</ul>
+</li>
+<li>In the end, like most architectural decisions, the decision of how to integrate the sub-models in our global model, relies on trade-offs.</li>
+<li>Here, in the extremes, we are trading off decoupled logic and management of that logic, for easier and faster integration of functionality.</li>
+<li><a href="./decoupling_vs_simplicity.png">decouple logic and simplicity trade off</a></li>
+</ul>
+</li>
+</ul>
 <h2 id="core-domain" style="position:relative;"><a href="#core-domain" aria-label="core domain permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>core domain</h2>
 <ul>
 <li>to make a domain model an asset, the critical core of that model has to be sleek and fully leveraged to create application functionality.</li>

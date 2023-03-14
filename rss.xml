@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 14 Mar 2023 18:35:29 GMT</lastBuildDate><item><title><![CDATA[software design x ray by Adam Tornhill summary wip]]></title><description><![CDATA[key-takeaways Quotes References https://kula.blog/posts/software_design_x-rays/ https://skarlso.github.io/2021/11/27/summary-of-programmers…]]></description><link>https://tonytvo.github.io/software-design-x-ray/</link><guid isPermaLink="false">https://tonytvo.github.io/software-design-x-ray/</guid><pubDate>Sun, 19 Feb 2023 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;key-takeaways&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#key-takeaways&quot; aria-label=&quot;key takeaways permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;key-takeaways&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tony Vo Blog RSS Feed]]></title><description><![CDATA[Conversations on agile technical practice and investments.]]></description><link>https://tonytvo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 14 Mar 2023 18:50:43 GMT</lastBuildDate><item><title><![CDATA[software design x ray by Adam Tornhill summary wip]]></title><description><![CDATA[key-takeaways Quotes References https://kula.blog/posts/software_design_x-rays/ https://skarlso.github.io/2021/11/27/summary-of-programmers…]]></description><link>https://tonytvo.github.io/software-design-x-ray/</link><guid isPermaLink="false">https://tonytvo.github.io/software-design-x-ray/</guid><pubDate>Sun, 19 Feb 2023 22:12:03 GMT</pubDate><content:encoded>&lt;h1 id=&quot;key-takeaways&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#key-takeaways&quot; aria-label=&quot;key takeaways permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;key-takeaways&lt;/h1&gt;
 &lt;h1 id=&quot;quotes&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#quotes&quot; aria-label=&quot;quotes permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Quotes&lt;/h1&gt;
 &lt;h1 id=&quot;references&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#references&quot; aria-label=&quot;references permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;References&lt;/h1&gt;
 &lt;ul&gt;
@@ -30946,6 +30946,71 @@ keep an aggregate together on one server. Allow different sums to be distributed
 &lt;li&gt;how do you focus on your central problem and keep from drowning in a sea of side issues?&lt;/li&gt;
 &lt;li&gt;Distillation is the process of separating the components of a mixture to extract the essence in a form that makes it more valuable and useful&lt;/li&gt;
 &lt;li&gt;A model is a distillation of knowledge.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;integrating-sub-modules&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#integrating-sub-modules&quot; aria-label=&quot;integrating sub modules permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Integrating sub-modules&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;A large scale domain model is composed of smaller domain models.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;However, the smaller domain models don’t even have to agree on their view of the global domain model. As long as they operate on their own, we can maintain their integrity.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It’s only when they need to integrate, that we might need to find common views on the models.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Several strategies can be used to integrate sub-models:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Draw a Context Map of the &lt;strong&gt;current&lt;/strong&gt; state of the model;&lt;/li&gt;
+&lt;li&gt;Define the Bounded Contexts borders with the whole dev team;&lt;/li&gt;
+&lt;li&gt;Guarantee that the Bounded Contexts borders and relation are known and understood by the whole dev team;&lt;/li&gt;
+&lt;li&gt;We must carefully model &lt;strong&gt;aiming at small or large Bounded Contexts&lt;/strong&gt; by considering their advantages:
+&lt;ul&gt;
+&lt;li&gt;Advantages of large models:
+&lt;ul&gt;
+&lt;li&gt;Its easier to understand one model than several models plus their mappings;&lt;/li&gt;
+&lt;li&gt;There is no need for translation layers, which might be complex;&lt;/li&gt;
+&lt;li&gt;One shared language eases communication.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Advantages of small models:
+&lt;ul&gt;
+&lt;li&gt;Needs less communication between developers working in the same model;&lt;/li&gt;
+&lt;li&gt;Its easier to manage smaller code bases and teams;&lt;/li&gt;
+&lt;li&gt;Smaller contexts are simpler, requiring less skills from the developers;&lt;/li&gt;
+&lt;li&gt;Smaller models provide more flexibility to the global model.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Identify and alienate what is not part of our bounded context. A good starting is to exclude &lt;strong&gt;what can not change&lt;/strong&gt; and &lt;strong&gt;what we do not need&lt;/strong&gt; in our bounded context;&lt;/li&gt;
+&lt;li&gt;When &lt;strong&gt;integrating external systems&lt;/strong&gt;, we can consider 3 patterns:
+&lt;ul&gt;
+&lt;li&gt;SEPARATE WAYS: Only integrate if we really need to, otherwise keep them completely isolated;&lt;/li&gt;
+&lt;li&gt;CONFORMIST: Fully adhere and rely on the external system model;&lt;/li&gt;
+&lt;li&gt;ANTI-CORRUPTION LAYER: Completely isolate the two systems, allowing them to communicate through a middle-ware, requiring no changes to either system.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;When &lt;strong&gt;integrating internal systems&lt;/strong&gt; (inside the same bounded context) we can:
+&lt;ul&gt;
+&lt;li&gt;Use a SHARED KERNEL to split relatively independent functionality into separate bounded contexts.&lt;/li&gt;
+&lt;li&gt;Set up CUSTOMER/SUPPLIER DEV TEAMS, if all the dependencies of the subsystems go in one direction;&lt;/li&gt;
+&lt;li&gt;Go SEPARATE WAYS, if for some reason its not possible to integrate the sub-systems;&lt;/li&gt;
+&lt;li&gt;Use a TRANSLATION LAYER, to connect both systems, which is maintained by the teams of both systems.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Deployment of new versions must be carefully coordinated by the teams owning the bounded contexts that connect, and as such the Bounded Contexts boundaries must be defined with these issues in mind:
+&lt;ul&gt;
+&lt;li&gt;Customer/Supplier structures must be tested together to prevent regressions;&lt;/li&gt;
+&lt;li&gt;Long deployments must be managed carefully to minimize issues with data migration temporary inconsistencies;&lt;/li&gt;
+&lt;li&gt;A Shared Kernel update must be tested and verified to satisfy all client systems to prevent regressions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;In the end, like most architectural decisions, the decision of how to integrate the sub-models in our global model, relies on trade-offs.&lt;/li&gt;
+&lt;li&gt;Here, in the extremes, we are trading off decoupled logic and management of that logic, for easier and faster integration of functionality.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;./decoupling_vs_simplicity.png&quot;&gt;decouple logic and simplicity trade off&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;core-domain&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#core-domain&quot; aria-label=&quot;core domain permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;core domain&lt;/h2&gt;
 &lt;ul&gt;
