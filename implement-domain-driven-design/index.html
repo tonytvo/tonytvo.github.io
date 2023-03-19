@@ -550,6 +550,13 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li>how do you focus on your central problem and keep from drowning in a sea of side issues?</li>
 <li>Distillation is the process of separating the components of a mixture to extract the essence in a form that makes it more valuable and useful</li>
 <li>A model is a distillation of knowledge.</li>
+<li>Going through this distillation process has several benefits:
+<ul>
+<li>Makes the overall design explicit and known;</li>
+<li>Distinguishes what is Core Domain from what is Generic Domain, reducing them to manageable sizes;</li>
+<li>Focus the software evolution (development and refactoring) in what is more relevant at a given moment.</li>
+</ul>
+</li>
 </ul>
 <h2 id="integrating-sub-modules" style="position:relative;"><a href="#integrating-sub-modules" aria-label="integrating sub modules permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Integrating sub-modules</h2>
 <ul>
@@ -626,6 +633,13 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <p>From this clear view of the current situation, we can start breaking or merging contexts. While breaking up a bounded context is usually easy, merging them is usually quite difficult, as there can exist very different concepts and models. We will typically want to merge contexts when there is too much translation overhead or duplication.</p>
 </li>
 <li>
+<p>Eric Evans gives us two options:</p>
+<ul>
+<li>If in a “pain driven” refactoring, we need to find the root cause of the problem and start there, wherever that is.</li>
+<li>If in a “all out” refactoring, we need to start by refactoring the Core Domain into segregated Core Domains, Generic Subdomains and Cohesive Mechanisms.</li>
+</ul>
+</li>
+<li>
 <p><strong>From SEPARATE WAYS to SHARED KERNEL</strong></p>
 <ul>
 <li>Define one of 3 strategies:
@@ -671,38 +685,37 @@ keep an aggregate together on one server. Allow different sums to be distributed
 </li>
 <li>
 <p><strong>Phasing out a legacy system</strong></p>
-</li>
-</ul>
-<p>Phasing out a legacy system means, most of the times, replacing it for one or several newer systems.</p>
 <ul>
 <li>
-<p>Identify a small piece of the legacy system that can be moved to one of the new systems;</p>
+<p>Phasing out a legacy system means, most of the times, replacing it for one or several newer systems.</p>
+<ul>
+<li>Identify a small piece of the legacy system that can be moved to one of the new systems;</li>
+<li>Identify additions needed in the Anti-Corruption layer;</li>
+<li>Implement</li>
+<li>Deploy</li>
+<li>Identify obsolete code in the Anti-Corruption layer and remove it;</li>
+<li>Identify obsolete code in the legacy system and, if possible, remove it.</li>
+</ul>
 </li>
-<li>
-<p>Identify additions needed in the Anti-Corruption layer;</p>
-</li>
-<li>
-<p>Implement</p>
-</li>
-<li>
-<p>Deploy</p>
-</li>
-<li>
-<p>Identify obsolete code in the Anti-Corruption layer and remove it;</p>
-</li>
-<li>
-<p>Identify obsolete code in the legacy system and, if possible, remove it.</p>
+</ul>
 </li>
 <li>
 <p><strong>From OPEN HOST SERVICE to PUBLISHED LANGUAGE</strong></p>
-</li>
-</ul>
-<p>Sometimes, when in an Open Host Service architecture, we will have several ad-hoc protocols specific to each communication situation. There is no common, standard communication protocol.</p>
-<p>As the need to integrate with more systems grows, the amount of communication specificities grows as well: Scalability and maintainability are at risk.</p>
-<p>Therefore we need a common, standard, communication Interchange Language that any system con use to communicate with our system, we need a published language:</p>
 <ul>
-<li>If possible, use an industry standard language;</li>
-<li>If its not possible to use an industry standard language, create your own:
+<li>
+<p>Sometimes, when in an Open Host Service architecture, we will have several ad-hoc protocols specific to each communication situation. There is no common, standard communication protocol.</p>
+</li>
+<li>
+<p>As the need to integrate with more systems grows, the amount of communication specificities grows as well: Scalability and maintainability are at risk.</p>
+</li>
+<li>
+<p>Therefore we need a common, standard, communication Interchange Language that any system con use to communicate with our system, we need a published language:</p>
+</li>
+<li>
+<p>If possible, use an industry standard language;</p>
+</li>
+<li>
+<p>If its not possible to use an industry standard language, create your own:</p>
 <ul>
 <li>Start by making the core domain as clear as possible;</li>
 <li>Use the core domain as the base for the new interchange language;</li>
@@ -713,34 +726,71 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li>Switch to the new Interchange Language.</li>
 </ul>
 </li>
-<li>the published language must be stable, yet you’ll still need the freedom to change the host’s model as you continue your relentless refactoring. Therefore, do not equate the interchange language and the model of the host. Keeping them close together will reduce the translation overhead.</li>
+<li>
+<p>the published language must be stable, yet you’ll still need the freedom to change the host’s model as you continue your relentless refactoring. Therefore, do not equate the interchange language and the model of the host. Keeping them close together will reduce the translation overhead.</p>
+</li>
 </ul>
-<h2 id="core-domain" style="position:relative;"><a href="#core-domain" aria-label="core domain permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>core domain</h2>
+</li>
+</ul>
+<h2 id="core-domain" style="position:relative;"><a href="#core-domain" aria-label="core domain permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Core Domain</h2>
 <ul>
 <li>to make a domain model an asset, the critical core of that model has to be sleek and fully leveraged to create application functionality.</li>
 <li>Boil the model down. Define a core domain and provide a means of easily distinguishing it from the mass of supporting model and code.</li>
 <li><strong>Bring the most valuable and specialized concepts into sharp relief. Make the core small.</strong></li>
-<li>Apply top talent to the core domain, and recruit accordingly.</li>
 <li><strong>Spend the effort in the core to find a deep model and develop a supple design - sufficient to fulfill the system’s vision.</strong></li>
+<li>Within the Domain, the Core Domain is the actual purpose of the application, is the reason of its existence, its why we started building it in the first place.</li>
+<li>The distillation and definition of the core domain is crucial and it should drive human resources hiring and allocation, as well as the biggest design effort to create a supple and maintainable design:
+<ul>
+<li>Hire developers that fit best with the Core Domain;</li>
+<li>Assign the best developers to the Core Domain;</li>
+<li>Try your best to keep the Core Domain the priority in suppleness and maintainability;</li>
+<li>Refactorings that most closely affect the Core Domain should have priority;</li>
+</ul>
+</li>
+<li><strong>The greatest value of custom software comes from the total control of the Core Domain</strong>.
+<ul>
+<li>Create long term relations with your best, most committed and interested domain experts;</li>
+<li>Create opportunities for our best technical experts to learn the Domain;</li>
+<li>Assign our best, most committed, interested and long term connected developers to develop and maintain the Core Domain;</li>
+<li>Use a well designed framework to save us from developing the most generic parts and leave us free to focus on the core.</li>
+</ul>
+</li>
 </ul>
 <h2 id="generic-subdomains" style="position:relative;"><a href="#generic-subdomains" aria-label="generic subdomains permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>generic subdomains</h2>
 <ul>
 <li>some parts of the model add complexity without capturing or communicating specialized knowledge.</li>
-<li>Identify cohesive subdomains that are not the motivation for your project, factor out generic models of these subdomains and place them in separate modules.</li>
+<li>An example of a Generic Sub-Domain is “time-zones”. Although time-zones are needed, and maybe even crucial, they are not part of our main business.</li>
+<li>We need to:
+<ul>
+<li>Identify cohesive Sub-Domains that are not the main motivation of our project;</li>
+<li>Extract those Sub-Domains into cohesive and decoupled modules;</li>
+<li>Consider using existing solutions (community off-the-shelve solutions).</li>
 <li>Leave no trace of your specialties in them.</li>
 <li>once they have been separated, give their continuing development lower priority than the core domain, and avoid assigning your core developers to the tasks (because they will gain little domain knowledge from them)</li>
 <li>also, consider off-the-shelf solutions or published models for these generic subdomains.</li>
+</ul>
+</li>
 </ul>
 <h2 id="domain-vision-statement" style="position:relative;"><a href="#domain-vision-statement" aria-label="domain vision statement permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>domain vision statement</h2>
 <ul>
 <li>the critical aspects of the domain model may span multiple bounded contexts, but by definition, these distinct models can’t be structured to show their common focus.</li>
 <li>Write a short description (about one page) of the core domain and the value it will bring, the “value proposition.” ignore those aspects that do not distinguish this domain model from others.</li>
 <li>Write this statement early and revise it as you gain new insight.</li>
+<li>It can be derived from a Project Vision Statement, but it is more specific, it focus on the nature of the Domain Model, its value and differential.</li>
+<li>It is a document that should be used through the whole development process, helping to guide resource allocation, guide modelling choices and educate team members.</li>
+<li>This will help keep the team focus on what is really important in the project and the Domain at hand.</li>
 </ul>
 <h2 id="highlighted-core" style="position:relative;"><a href="#highlighted-core" aria-label="highlighted core permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>highlighted core</h2>
 <ul>
 <li>a domain vision statement identifies the core domain in broad terms, but it leaves the identification of the specific core model elements up to the vagaries of individual interpretation. Unless there is an exceptionally high level of communication on the team, the vision statement alone will have little impact.</li>
-<li><strong>The mental labour of constantly filtering the model to identify the essential parts absorbs concentration better spent on design thinking, and it requires comprehensive knowledge of the model. Therefore, the core domain must be made easier to see.</strong></li>
+<li><strong>The mental labour of constantly filtering the model to identify the essential parts absorbs concentration better spent on design thinking, and it requires comprehensive knowledge of the model. Therefore, the core domain must be made easier to see.</strong>
+<ul>
+<li>extensive formal documentation, using UML and other diagramming. For example, a digital document vault</li>
+<li>reduced and informal, but visible, documentation of concepts. For example, a context diagram, hand drawn, hanging on the office wall.</li>
+<li>light-weight architecture records.</li>
+<li>brief documents describing the Core Domain and the interactions between its elements. This document should be minimalistic, should not contain implementation details, on the contrary, it should focus on abstraction, broad strokes, the stable concepts.</li>
+</ul>
+</li>
 <li><strong>Write a brief document (3-7 sparse pages) describing the core domain and the primary interactions among core elements.</strong></li>
 <li>Flag the elements of the core domain within the primary repository of the model without particularly trying to elucidate its role. Make it effortless for a developer to know what is in or out of the core.</li>
 <li>Although the vision statement and highlighted core inform and guide, they do not modify the model or the code itself.</li>
@@ -748,13 +798,52 @@ keep an aggregate together on one server. Allow different sums to be distributed
 </ul>
 <h2 id="cohesive-mechanisms" style="position:relative;"><a href="#cohesive-mechanisms" aria-label="cohesive mechanisms permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>cohesive mechanisms</h2>
 <ul>
-<li>structurally change the model and the design to make the core domain more visible and manageable.</li>
-<li><strong>The conceptual “what” is swamped by the mechanistic “how.” Many methods that provide algorithms for resolving the problem obscure the methods that express the problem.</strong></li>
-<li>Partition a conceptually cohesive mechanism into a separate lightweight framework. Particularly watch for formalisms or well-documented categories of algorithms.</li>
-<li><strong>Expose the capabilities of the framework with an intention-revealing interface.</strong></li>
-<li>The other elements of the domain can focus on expressing the problem (“what”), delegating the intricacies of the solution (“how”) to the framework.</li>
-<li><strong>Factoring out generic subdomains reduces clutter, and cohesive mechanisms serve to encapsulate complex operations. This leaves behind a more focused model, with fewer distractions that add no particular value to how users conduct their activities.</strong></li>
-<li>You are unlikely to find good homes for everything in the domain model that is not core.</li>
+<li>
+<p>structurally change the model and the design to make the core domain more visible and manageable.</p>
+</li>
+<li>
+<p><strong>The conceptual “what” is swamped by the mechanistic “how.” Many methods that provide algorithms for resolving the problem obscure the methods that express the problem.</strong></p>
+</li>
+<li>
+<p>Partition a conceptually cohesive mechanism into a separate lightweight framework. Particularly watch for formalisms or well-documented categories of algorithms.</p>
+</li>
+<li>
+<p><strong>Expose the capabilities of the framework with an intention-revealing interface.</strong></p>
+</li>
+<li>
+<p>The other elements of the domain can focus on expressing the problem (“what”), delegating the intricacies of the solution (“how”) to the framework.</p>
+</li>
+<li>
+<p><strong>Factoring out generic subdomains reduces clutter, and cohesive mechanisms serve to encapsulate complex operations. This leaves behind a more focused model, with fewer distractions that add no particular value to how users conduct their activities.</strong></p>
+</li>
+<li>
+<p>You are unlikely to find good homes for everything in the domain model that is not core.</p>
+</li>
+<li>
+<p>To help maintainability, simplicity and usability of the Domain classes, we should extract cohesive mechanisms sets into separate libraries which can then be used by the Domain objects, through interfaces, keeping these smaller, focused and more expressive.</p>
+</li>
+<li>
+<p>The CORE DOMAIN and a GENERIC SUBDOMAIN formulate facts, rules or problems.</p>
+</li>
+<li>
+<p>A COHESIVE MECHANISM resolves a rule as needed by the model, and can be used as a separate library.</p>
+</li>
+<li>
+<p>An example of a COHESIVE MECHANISM is a graph traversal framework which, although being a generic programming theme with many possible algorithms, implements only the traversal algorithms needed by the Domain.</p>
+</li>
+<li>
+<p>Another example can be a STATE MACHINE library, which is a generic cohesive concept who’s complexity can be kept away from the Domain and used through an intention revealing interface.</p>
+</li>
+<li>
+<p>Yet another example can be a library to construct SPECIFICATION objects.</p>
+</li>
+<li>
+<p><strong>Generic Subdomains Vs Cohesive Mechanisms</strong></p>
+<ul>
+<li>Both Generic Subdomains and Cohesive Mechanisms share the goal of responsibility segregation and keeping the Core Domain focused on what is more relevant in the domain.</li>
+<li>The difference is that the Generic Subdomain is still part of the Domain, although not as important as the Core Domain, and a Cohesive Mechanism is not part of the Domain at all, it is used by the Domain to solve a very generic problem, using a set of cohesive algorithms.</li>
+</ul>
+</li>
 </ul>
 <h2 id="the-segregated-core" style="position:relative;"><a href="#the-segregated-core" aria-label="the segregated core permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The segregated core</h2>
 <ul>
@@ -1024,6 +1113,10 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <p>I never design a building before I’ve seen the site and met the people who will be using it.</p>
 <p>the only important thing about design is how it relates to people.</p>
 <p>a design isn’t finished until somebody is using it.</p>
+<p>Each of these techniques requires a successively greater commitment, but a knife gets sharper as its blade is ground finer. Successive distillation of a domain model produces an asset that gives the project speed, agility, and precision of execution.</p>
+<p>Creating distinctive software comes back to a stable team accumulating specialized knowledge and crunching it into a rich model</p>
+<p>Generic Subdomains reduce the clutter in the Core Domain, leaving it focused on what is more important.</p>
+<p>Cohesive Mechanisms are used to encapsulate complex operations used by the Domain.</p>
 <p><strong>still under constructions</strong>
 <strong>Next Steps:</strong>
 review Distilled DDD from vaugh vernon
