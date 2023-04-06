@@ -390,6 +390,7 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li>The effects of its code must be transparently obvious, so the consequences of a change will be easy to anticipate.</li>
 <li><strong>Making behaviour obvious</strong></li>
 <li><strong>reduces the cost of change</strong></li>
+<li><a href="./supple-design-overview.png">supple design overview</a></li>
 </ul>
 <h2 id="intention-revealing-interfaces" style="position:relative;"><a href="#intention-revealing-interfaces" aria-label="intention revealing interfaces permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>intention-revealing interfaces</h2>
 <ul>
@@ -1011,7 +1012,7 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <p>refer to the “How documents &#x26; diagrams can work for a project instead of just being work?” question on how documents and diagrams can help with model driven design</p>
 </li>
 <li>
-<p>refer to <a href="#model-driven-design">model driven design</a> 47-50?</p>
+<p>refer to <a href="#model-driven-design">model driven design</a></p>
 </li>
 <li>
 <p>when a design is based on a model that reflects the basic concerns of the users and domain experts, the bones of the design can be revealed to the user to a greater extent than with other design approaches. Revealing the model gives the user more access to the potential of the software and yields consistent, predictable behaviors.</p>
@@ -1021,16 +1022,133 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li>
 <p><strong>What Constitutes a Useful Model-Driven Design and How to Go About Finding Such a Design?</strong></p>
 <ul>
-<li>True story: How model-driven design rescued a project and created unexpected opportunities. 193-203</li>
-<li>How software experts can work with domain experts to explore and refine models. 207-210</li>
-<li>Supple Design: How a system can become easier to extend and adapt rather than ossifying into legacy 243-245</li>
-<li>Overview of the rhythm of domain-driven design and how it allows for upside surprise opportunities to emerge.</li>
-<li>Introduction to three principles for applying domain-driven design to large projects and enterprises. 328-329</li>
+<li>
+<p>True story: How model-driven design rescued a project and created unexpected opportunities.</p>
+<ul>
+<li><a href="./original-models.png">original modesl</a></li>
+<li>model incrementally changed to solve problems. Loan Adjustments track departures from the share a lender originally agreed to in the Facility.
+<ul>
+<li><a href="./incrementally-model-changed.png">model-incrementally-changed</a></li>
+<li>refinements of this kind allowed the team to keep up as the rules of various transactions became clearer. But complexity was increasing, and we did not seem to be converging quickly onto really solid functionality.</li>
+<li>deeper model
+<ul>
+<li><a href="./abstract-model-of-shares.png">abstract-model-of-shares</a></li>
+<li>The <strong>Loan Investment</strong> had disappeared, and at this point we realized that “loan investment” was not a banking term. In fact, the business experts had told us a number of times that they didn’t understand it. They had deferred to our software knowledge and assumed it was useful to the technical design. Actually, we had created it based on our incomplete understanding of the domain.</li>
+<li>suddenly, on the basis of this new way of looking at the domain, we could run through every scenario we had ever encountered relatively effortlessly, much more simply than ever before. And our model diagrams made perfect sense to the business experts, who had often indicated that the diagrams were “too technical” for them. Even just sketching on a whiteboard, we could see that our most persistent rounding problems would be pulled out by the roots, allowing us to scrap some of the complicated rounding code.</li>
+<li>it takes about 3 weeks to refactor to the new model without enough tests. Luckily, the project manager can take the heat and manage through the unstable political situation.</li>
+<li><strong>Share Pie</strong> became the unifying theme of the whole application. Marketing people used it to explain the features to prospective customers. Those prospects and customers immediately grasped it and used it to discuss features. It truly became part of the UBIQUITOUS LANGUAGE because it got to the heart of what loan syndication is about.</li>
+<li>To set the stage for a breakthrough, concentrate on knowledge crunching andn cultivating a robust UBIQUITOUS LANGUAGE. Probe for important domain concepts and make them explicit in the model. Refine the design to be suppler. Distill the model. Push on these more predictable levers, which crease clarity, usually a precursor of breakthroughs.</li>
+<li>dont’t hold back from modest improvements, which gradually deepen the model, even if confined within the same general conceptual framework. Don’t be paralyzed by looking too far forward. Just be watchful for the opportunity.</li>
+<li><a href="./another-model-breakthrough-contrains-transactions.png">another model breakthrough where contrains on transactions could be expressed with easy precision</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>How software experts can work with domain experts to explore and refine models. 207-210</p>
+<ul>
+<li><strong>many transformations of domain models and the corresponding code happen when developers recognize a concept that has been hinted at in discussion or present implicitly in the design, and they then represent it explicitly in the model with one or more objects or relationships.</strong></li>
+<li><strong>listen to the language the domain experts use. Are there terms that succinctly state something complicated? Are they correcting your word choice (perhaps diplomatically)? do the puzzled looks on their faces go away when you use a particular phrase? These are hints of a concept that might benefit the model.</strong></li>
+<li><a href="./original-cargo-design-with-database.png">original cargo design with database</a></li>
+<li><a href="./after-cargo-design-with-routing-service.png">after cargo design with routing service</a></li>
+<li>benefits of refactoring to the explicit Itinerary object:
+<ul>
+<li>Defining the interface of the <strong>routing service</strong> more expressively</li>
+<li>decoupling the <strong>routing service</strong> from the booking database tables</li>
+<li>clarifying the relationship between the booking application and the operations support application (the sharing of the <strong>Itinerrary</strong> object)</li>
+<li>reducing duplication, because the <strong>Itinerary</strong> derives loading/unloading times for both the booking report and the operations support application.</li>
+<li>removing domain logic from the booking report and placing it in the isolated domain layer.</li>
+<li>expanding the “UBIQUITOUS LANGUAGE”, allowing a more precise discussion of the model and design between developers and domain experts and among the developers themselves.</li>
+</ul>
+</li>
+<li><strong>scrutinize awkwardness</strong>
+<ul>
+<li>the place to dig is the most awkward part of your design. The place where procedures are doing complicated things that are hard to explain. The place where every new requirements seems to add complexity</li>
+<li>If you are lucky, the domain experts may enjoy playing with ideas and experimenting with the model. If you are not that lucky, you and your fellow developers will have to come up with the ideas, using the domain expert as a validator, watching for discomfort or recognition on this or her face.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Supple Design: How a system can become easier to extend and adapt rather than ossifying into legacy 243-245</p>
+<ul>
+<li><strong>explicit constraints</strong>
+<ul>
+<li>factoring constraint into its own method allows us to give it an intention-revealing name that makes the constraint explicit in our design.</li>
+<li>here’s some warning signs that a constraint is distorting the design of its host object.
+<ul>
+<li>evaluating a constraint requires data that does not otherwise fit the object’s definition</li>
+<li>related rules appear in multiple objects, forcing duplication or inheritance between objects that are not otherwise family</li>
+<li>a lot of design and requirements conversation revolves around the constraints, but in the implementation, they are hidden away in procedural code.</li>
+</ul>
+</li>
+<li>when the constraints are obscuring the object’s basic responsibility, or when the constraint is prominent in the domain yet not prominent in the model, you can factor it out into an explicit object or even model it as a set of objects and relationships.</li>
+</ul>
+</li>
+<li><a href="./supple-design-overview.png">supple design overview</a></li>
+<li><a href="#supple-design">supple design</a></li>
+</ul>
+</li>
+<li>
+<p>Overview of the rhythm of domain-driven design and how it allows for upside surprise opportunities to emerge.</p>
+<ul>
+<li>refactoring toward deeper insight
+<ul>
+<li>it maybe a response to a problem in the code, some complexity of awkwardness. Perhaps a concept is missing. Maybe some relationship is wrong.</li>
+<li>is the language of the model disconnected from the domain experts?</li>
+<li>are the requirements fitting in naturally?</li>
+<li><strong>exploration teams</strong>
+<ul>
+<li>self-determination: a small-team can be assembled on the fly to explore a design problem. The team can operate for a few days and then disband. There is no need for long-term, elaborate organizational structures</li>
+<li>scope and sleep: 2 or 3 short meetings spaced out over a few days should produce a design worth trying. Dragging it out doesn’t help. If you get stuck, you may be taking on too much at once. Pick a smaller aspect of the design and focus on that.</li>
+<li>exercising the UBIQUITOUS LANGUAGE: involving the other team members - particularly the subject matter expert, in the brainstorming session creates an opportunity to exercise and refine the UBIQUITOUS LANGUAGE. The end result of the effort is a refinement of that LANGUAGE which the original developer(s) will take back and formalize in code.</li>
+</ul>
+</li>
+<li><strong>prior art</strong>
+<ul>
+<li>although the in the field may not have created a model suitable for running software, they may well have organized the concepts and found some useful abstractions.</li>
+<li>analysis patterns can give you subtle model concepts and help you avoid lots of mistakes. But they don’t give you a cookbook recipe. They feed the knowledge crunching process.</li>
+</ul>
+</li>
+<li>a design for developers
+<ul>
+<li>software isn’t just for users. It’s also for developers. Developers have to integrate code with other parts of the system.</li>
+<li>a supple design communicates its intent. The design makes it easy to anticipate the effect of running code, and therefore it easy to anticipate the consequences of changing it. A supple design helps limit mental overload primarily by reducing dependencies and side effects. It is based on a deep model of the domain that is fine-grained only where most critical to the users. This makes for flexibility where change is most common, and simplicity elsewhere.</li>
+</ul>
+</li>
+<li><strong>timing</strong>
+<ul>
+<li><em>if you wait until you can make a complete justification for a change, you’ve waited too long.</em> Therefore, refactor when:
+<ul>
+<li>the design does not express the team’s current understanding of the domain</li>
+<li>important concepts are implicit in the design (and you see a way to make them explicit)</li>
+<li>you see an opportunity to make some important part of the design suppler.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>What are the three principles for applying domain-driven design to large projects and enterprises?</p>
+<ul>
+<li>strategic design principles must guide design decision to reduce the interdependence of parts and improve clarity without losing critical interoperability and synergy. They must focus the model to capture the conceptual core of the system, the “vision” of the system. And <em>they must do all this without bogging the project down</em>. To help accomplish these goals, there are 3 board theme, context, distillation, and large-scale structures</li>
+<li><strong>context</strong>: a successful model, large or small, has to be logically consistent throughout, without contradictory or overlapping definitions. By explicitly defining the BOUNDED CONTEXT within which a model applies and then, when necessary, defining its relationship with other contexts, the modeler can avoid bastardizing the model.</li>
+<li><strong>distillation</strong>: reduces the clutter and focuses attention appropriately. Often a great deal of effort is spent on peripheral issues in the domain. The overall domain model needs to make prominent the most value-adding and special aspects of your system and be structured to give that part as much power as possible. While some supporting components are critical, they must be put into their proper perspective. This focus not only helps to direct efforts toward vital parts of the system, but it keeps the vision of the system from being lost. Strategic distillation can bring clarity to a large model. And with clearer view, the design the CORE DOMAIN can be made more useful.</li>
+<li><strong>large scale structure</strong>: In a very complex model, you may not see the forest for the trees. Some system-wide design elements and patterns can help. Some such structure can bring a uniformity to the design and accelerates development and improve integration.</li>
+<li>these 3 principles, useful separately but particularly powerful taken together, help to produce good designs, even in a sprawling system that no one completely understands. Large scale structure brings consistency to disparate parts to help those parts mesh. Structure and distillation make the complex relationships between parts comprehensible while keeping the big picture in iew. BOUNDED CONTEXTS allow work to proceed in different parts without corrupting the model or unintentionally fragmenting it. Adding these concepts to the team’s UBIQUITOUS LANGUAGE helps developers work out their own solutions.</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
 <p><strong>Bounded Context: Strategies for dealing with the inevitability of multiple viewpoints and conflicting needs. 331-338</strong></p>
 <ul>
+<li><a href="./model-integrity-patterns.png">model integrity patterns</a></li>
 <li>How much integration do you need?</li>
 <li>How can you structure relationships between teams to get it? 341-371, (headings and bold)</li>
 <li>Whimsical, non-technical example 378-381</li>
@@ -1158,4 +1276,4 @@ review design DDD quickly</p>
           >
             window.___chunkMapping="{\"app\":[\"/app-dff359f42b4b1323adff.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-fe49012c596fa8e02e94.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-137bafc43fb95c27cc25.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-2fd0383b8dc4270b2974.js\"],\"component---src-pages-using-typescript-tsx\":[\"/component---src-pages-using-typescript-tsx-b3f1483ead526a95c936.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-161de0eab28c1f89b9c7.js\"],\"component---src-templates-tags-js\":[\"/component---src-templates-tags-js-937a80c11540749e5e6b.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="622739c5566122b98539";</script><script src="/webpack-runtime-647158e94add31207306.js" async></script><script src="/framework-24a4af5e8d436029005a.js" async></script><script src="/app-dff359f42b4b1323adff.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="348f013e3c47d286ffc0";</script><script src="/webpack-runtime-4b2de8b3ea950f000edc.js" async></script><script src="/framework-24a4af5e8d436029005a.js" async></script><script src="/app-dff359f42b4b1323adff.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
