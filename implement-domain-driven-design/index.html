@@ -479,6 +479,15 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li>everyone has to know where the boundaries lie, and be able to recognize the CONTEXT of any piece of code or any situation.</li>
 </ul>
 </li>
+<li>
+<p>how to keep track what modules belong to what contexts?</p>
+<ul>
+<li>maybe naming conventions?</li>
+</ul>
+</li>
+<li>
+<p>working the CONTEXT MAP into discussions is essentials if the names are to enter the UBIQUITOUS LANGUAGE. Don’t say, “George team’s stuff is changing, so we’re going to have to change our stuff that talks to it” Say instead, “The Transport Network model is changing, so we’re going to have to change the translator for Booking context.”</p>
+</li>
 </ul>
 <h2 id="partnership" style="position:relative;"><a href="#partnership" aria-label="partnership permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>partnership</h2>
 <ul>
@@ -496,6 +505,9 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li>Within this boundary, include this subset of the model, the subset of code or the database design associated with that part of the model.</li>
 <li>This explicitly shared stuff has a special status and shouldn’t be changed without consultation with the other team.</li>
 <li>When functional integration is limited, the overhead of continuous integration of a significant context may be deemed too high. This may especially be true when the team does not have the skill or the political organization to maintain continuous integration or when a single team is simply too big and unwieldy.</li>
+<li>uncoordinated teams working on closely related applications can go racing forward for a while, but what they produce may not fit together. They can end up spending more on translation layers and retrofitting than they would have on CONTINUOUS INTEGRATION in the first place, meanwhile duplicating efforts and lose benefits of common UBIQUITOUS LANGUAGE.</li>
+<li>integrate a functional system frequently, but somewhat less often than the pace of CONTINUOUS INTEGRATION within the teams. At these integrations, run the tests of both teams.</li>
+<li>SHARED KERNEL is often CORE DOMAIN, some set of GENERIC SUB-DOMAINS or both, but it can be any part of the model that is needed by both team. The goal is to reduce duplication (but not to eliminate it, as would be the case if there were just one BOUNDED CONTEXT), and make the integration between the two sub-systems relatively easy.</li>
 </ul>
 <h2 id="customersupplier-development" style="position:relative;"><a href="#customersupplier-development" aria-label="customersupplier development permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>customer/supplier development</h2>
 <ul>
@@ -528,17 +540,33 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <p>Translation becomes more complex when control or communication is insufficient to pull off a shared kernel, partner, or customer/supplier relationship. As a result, the translation takes on a more defensive tone.</p>
 </li>
 <li>
+<p>when a new system being built that must have a large interface with another, the difficulty of relating the 2 models can eventually overwhelm the intent of the new model altogether, causing it to be modified to resemble the other system’s model, in an adhoc fashion. The models of legacy systems are usually weak, and even the exception that is well developed may not fit the needs of the current project. Yet there is lot of value in integration, and sometimes, it is an absolute requirements.</p>
+</li>
+<li>
+<p>create an isolating layer to provide clients with functionality in terms of their own domain model. The layer talks to the other system through its existing interface, requiring little or no modification to the other system. Internally, the layer translates in both directions as necessary between 2 models.</p>
+</li>
+<li>
+<p><strong>Design interface of the ANTICORRUPTION LAYER</strong></p>
+<ul>
+<li>the public interface of the ANTICORRUPTION LAYER usually appears as set of services, although occasionally it can take the form of ENTITY.</li>
+<li>building a whole new layer responsible for the translation between the semantics of the two systems gives us an opportunity to reabstract the other system’s behavior and offer its services and information to our system consistently with our model.</li>
+</ul>
+</li>
+<li>
 <p>As a downstream client, create an isolating layer to provide your system with the functionality of the upstream system in terms of your own domain model.</p>
 </li>
 <li>
 <p>This layer talks to the other system through its existing interface, requiring little or no modification to the other system. Internally, the layer translates in one or both directions as necessary between the two models.</p>
 </li>
 <li>
+<p>functionality an be added to the anticorruption layer if it is specific to the relationship of the 2 subsystems. An audit trail for use of the external system or trace logic for debugging the calls to other interface are 2 examples features.</p>
+</li>
+<li>
 <p>The Anti-Corruption layer is implemented using:</p>
 <ul>
 <li><strong>FACADE</strong>
 <ul>
-<li>An abstraction layer on top of a system API, as to limit and simplify the usage of the underlying API.</li>
+<li>An abstraction layer on top of a system API, as to limit and simplify the usage of the underlying API. Facade belongs in the BOUNDED CONTEXT of the other system.</li>
 </ul>
 </li>
 <li><strong>ADAPTER</strong>
@@ -1191,7 +1219,15 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <p><strong>Bounded Context: Strategies for dealing with the inevitability of multiple viewpoints and conflicting needs.</strong></p>
 <ul>
 <li><a href="./model-integrity-patterns.png">model integrity patterns</a></li>
-<li><a href="#bounded-context">refer to bounded context</a></li>
+<li><a href="#bounded-context">bounded context</a></li>
+<li><a href="#continuous-integration">continuous integration</a></li>
+<li><a href="#shared-kernel">context map</a></li>
+<li><a href="#customersupplier-development">customer supplier development</a></li>
+<li><a href="#conformist">conformist</a></li>
+<li><a href="#anti-corruption-layer">anticorruption layer</a></li>
+<li><a href="#separate-ways">separate ways</a></li>
+<li><a href="#open-host-service">open host service</a></li>
+<li><a href="#published-language">published language</a></li>
 <li>How can you structure relationships between teams to get it? 341-371, (headings and bold)</li>
 <li>Whimsical, non-technical example 378-381</li>
 <li>Broad tradeoffs between context strategies Figure 14.13 (on p. 388)</li>
