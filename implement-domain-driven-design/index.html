@@ -420,6 +420,22 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li>Observe the axes of change and stability through successive refactorings, and look for underlying conceptual contours that explain these shearing patterns.</li>
 <li>Align the model with the consistent aspects of the domain that make it a viable area of knowledge in the first place.</li>
 </ul>
+<h2 id="continuous-integration" style="position:relative;"><a href="#continuous-integration" aria-label="continuous integration permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>continuous integration</h2>
+<ul>
+<li>
+<p><strong>when a number of people are working in the same BOUNDED CONTEXT, there is a strong tendency for the model to fragment. The bigger the team, the bigger the problem, but as few as 3 or 4 people can encounter serious problems. Yet breaking down the system into ever-smaller CONTEXTs eventually loses a valuable level of integration coherency.</strong></p>
+</li>
+<li>
+<p>CONTINUOUS INTEGRATION means that all work within the context is being merged and made consistent frequently enough that when splinters happen they are caught and corrected quickly. CONTINUOUS INTEGRATION operates at 2 levels:</p>
+<ul>
+<li>the integration of model concepts</li>
+<li>and the integration of the implementation.</li>
+</ul>
+</li>
+<li>
+<p>institute a process of merging all code and other implementation artifacts frequently, with automated tests to flag fragmentation quickly. Relentlessly exercise the UBIQUITOUS LANGUAGE to hammer out a shared view of the model as the concepts evolve in different people’s head.</p>
+</li>
+</ul>
 <h2 id="context-map" style="position:relative;"><a href="#context-map" aria-label="context map permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>context map</h2>
 <ul>
 <li>we should not directly use functionality and data structures through different bounded contexts. The bounded contexts must be encapsulated, as independent as possible. To reach this goal, bounded contexts must communicate through abstractions (interfaces) and, if necessary, translation layers or even anti-corruption layers.</li>
@@ -1146,10 +1162,10 @@ keep an aggregate together on one server. Allow different sums to be distributed
 </ul>
 </li>
 <li>
-<p><strong>Bounded Context: Strategies for dealing with the inevitability of multiple viewpoints and conflicting needs. 331-338</strong></p>
+<p><strong>Bounded Context: Strategies for dealing with the inevitability of multiple viewpoints and conflicting needs.</strong></p>
 <ul>
 <li><a href="./model-integrity-patterns.png">model integrity patterns</a></li>
-<li>How much integration do you need?</li>
+<li><a href="#bounded-context">refer to bounded context</a></li>
 <li>How can you structure relationships between teams to get it? 341-371, (headings and bold)</li>
 <li>Whimsical, non-technical example 378-381</li>
 <li>Broad tradeoffs between context strategies Figure 14.13 (on p. 388)</li>
