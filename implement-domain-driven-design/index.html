@@ -442,7 +442,32 @@ keep an aggregate together on one server. Allow different sums to be distributed
 </ul>
 <p>To make the bounded contexts ecosystems explicitly clear, encapsulated, loosely coupled and high cohesive, we should:</p>
 <ul>
-<li>Create a global view of all bounded contexts and their relations, using context maps, naming them and adding them to the ubiquitous language.
+<li>
+<p><strong>people on other teams won’t be very aware of the CONTEXT bounds and will unknowingly make changes that blur the edges or complicate the interconnections. When connections must be made between different contexts, they tend to bleed into each other.</strong></p>
+</li>
+<li>
+<p><a href="./translator-example-route-network.png">translator example</a></p>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">Itinerary</span> <span class="token function">route</span><span class="token punctuation">(</span><span class="token class-name">Specification</span> spec<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token class-name">BookingNetworkTranslator</span> translator <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">List</span> constraintLocations <span class="token class-name">BookingNetworkTranslator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  translator<span class="token punctuation">.</span><span class="token function">convert</span><span class="token punctuation">(</span>spec<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">//... get access to NetworkTraversalService</span>
+  <span class="token class-name">List</span> pathNodes <span class="token operator">=</span> traversalService<span class="token punctuation">.</span><span class="token function">findPath</span><span class="token punctuation">(</span>constraintLocations<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token class-name">Itinerary</span> itinerary <span class="token operator">=</span> translator<span class="token punctuation">.</span><span class="token function">convert</span><span class="token punctuation">(</span>pathNodes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>
+<p>translator objects need to be maintained by both teams.</p>
+</li>
+<li>
+<p>testing at CONTEXT boundaries</p>
+<ul>
+<li>contacts points with other BOUNDED CONTEXTS are particular important to test. Test help compensate for the subtleties of translation and the lower level of communication that typically exists at the boundaries. They can act as valuable early earning systems, especially reassure in cases where you depend on the details of models you don’t control</li>
+</ul>
+</li>
+<li>
+<p>Create a global view of all bounded contexts and their relations, using context maps, naming them and adding them to the ubiquitous language.</p>
 <ul>
 <li>Identify the points of contact between bounded contexts, together with the used translations and abstractions. All developers must know the boundaries and to what context any given code unit belongs to.</li>
 <li>Personally, I find that having diagrams of the context maps hanging in the walls of the development offices is a great way of communicating the boundaries to the team, and keeping them in mind at all times. They should include their components, contact points, translator layers, and anti-corruption layers.</li>
@@ -451,6 +476,7 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li>Name each bounded context, and make the names part of the ubiquitous language</li>
 <li>describe the point of contact between the models, outlining explicit translation for any communication. Highlighting any sharing, isolation mechanism, and levels of influence.</li>
 <li>Map the existing terrain. Take up the transformations later.</li>
+<li>everyone has to know where the boundaries lie, and be able to recognize the CONTEXT of any piece of code or any situation.</li>
 </ul>
 </li>
 </ul>
