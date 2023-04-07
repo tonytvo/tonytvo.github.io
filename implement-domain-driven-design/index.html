@@ -637,6 +637,7 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li>guides outsourcing, use of off-the-shelf components, and decisions about assignment.</li>
 </ul>
 </li>
+<li><a href="./strategic-distillation-navigation-map.png">navigation map for strategic distillation map</a></li>
 </ul>
 <h2 id="integrating-sub-modules" style="position:relative;"><a href="#integrating-sub-modules" aria-label="integrating sub modules permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Integrating sub-modules</h2>
 <ul>
@@ -814,11 +815,17 @@ keep an aggregate together on one server. Allow different sums to be distributed
 </ul>
 <h2 id="core-domain" style="position:relative;"><a href="#core-domain" aria-label="core domain permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Core Domain</h2>
 <ul>
-<li>to make a domain model an asset, the critical core of that model has to be sleek and fully leveraged to create application functionality.</li>
+<li>to make a domain model an asset, the critical core (the real business asset) of that model has to be sleek and fully leveraged to create application functionality.</li>
 <li>Boil the model down. Define a core domain and provide a means of easily distinguishing it from the mass of supporting model and code.</li>
 <li><strong>Bring the most valuable and specialized concepts into sharp relief. Make the core small.</strong></li>
-<li><strong>Spend the effort in the core to find a deep model and develop a supple design - sufficient to fulfill the system’s vision.</strong></li>
-<li>Within the Domain, the Core Domain is the actual purpose of the application, is the reason of its existence, its why we started building it in the first place.</li>
+<li><strong>Spend the effort in the core to find a deep model and develop a supple design - sufficient to fulfill the system’s vision. Justify investment in any other party by how it supports the distilled CORE</strong></li>
+<li><strong>The harsh reality is that not all parts of the design are going to be equally refined. Priorities must be set. To make the domain model an asset, the model’s critical core has to be sleek and fully leveraged to create application functionality. But scarce, highly skilled developers tend to gravitate to technical infrastructure or neatly definable domain problems that can be understood without specialized domain knowledge.</strong>
+<ul>
+<li>such parts of the system seem interesting to computer scientists, and are perceived to build transferable professional skills and provide better resume material. The specialized core, that part of the model that really differentiates the application and makes it a business asset, typically ends up being put together by less skilled developers who work with DBA(s) to create a data schema and then code feature-by-feature without drawing on any conceptual power in the model at all.</li>
+</ul>
+</li>
+<li>Within the Domain, the Core Domain (the real business asset) is the actual purpose of the application, is the reason of its existence, its why we started building it in the first place.</li>
+<li>In shipping application, the CORE could be the model of how cargoes are consolidated for shipping, how liability is transferred when containers change hands, or how a particular container is routed on various transports to reach its destination.</li>
 <li>The distillation and definition of the core domain is crucial and it should drive human resources hiring and allocation, as well as the biggest design effort to create a supple and maintainable design:
 <ul>
 <li>Hire developers that fit best with the Core Domain;</li>
@@ -833,6 +840,13 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li>Create opportunities for our best technical experts to learn the Domain;</li>
 <li>Assign our best, most committed, interested and long term connected developers to develop and maintain the Core Domain;</li>
 <li>Use a well designed framework to save us from developing the most generic parts and leave us free to focus on the core.</li>
+<li>a well designed framework may be able to provide high-level abstractions that you can specialize for your use. It may save you from developing the more generic parts and leave you free to concentrate on your CORE, however, cautious the followings:
+<ul>
+<li>you are losing an essential software asset. Back off restrictive frameworks in your CORE DOMAIN</li>
+<li>the area treated by the framework is not as pivotal as you thought. Redraw the boundaries of the CORE DOMAIN to the truly distinctive part of the model</li>
+<li>you don’t have special needs in your CORE DOMAIN. Consider a lower-risk solution, such as purchasing software to integrate with your applications</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -859,6 +873,8 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li>It can be derived from a Project Vision Statement, but it is more specific, it focus on the nature of the Domain Model, its value and differential.</li>
 <li>It is a document that should be used through the whole development process, helping to guide resource allocation, guide modelling choices and educate team members.</li>
 <li>This will help keep the team focus on what is really important in the project and the Domain at hand.</li>
+<li><a href="./domain-vision-example-1.png">domain vision example 1</a></li>
+<li><a href="./domain-vision-example-2.png">domain vision example 2</a></li>
 </ul>
 <h2 id="highlighted-core" style="position:relative;"><a href="#highlighted-core" aria-label="highlighted core permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>highlighted core</h2>
 <ul>
@@ -1228,17 +1244,19 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li><a href="#separate-ways">separate ways</a></li>
 <li><a href="#open-host-service">open host service</a></li>
 <li><a href="#published-language">published language</a></li>
-<li>How can you structure relationships between teams to get it? 341-371, (headings and bold)</li>
-<li>Whimsical, non-technical example 378-381</li>
-<li>Broad tradeoffs between context strategies Figure 14.13 (on p. 388)</li>
+<li>unifying multiple models almost always means creating a new model.</li>
+<li>By explicitly defining a context within which each model applies, you can maintain the integrity of each and clearly see the implication of any particular interface you want to create between the two.</li>
+<li><a href="./decoupling_vs_simplicity.png">context strategies trade-off</a></li>
 </ul>
 </li>
 <li>
 <p><strong>Distillation: How do you focus on your central problem and keep from drowning in a sea of side issues?</strong></p>
 <ul>
+<li><a href="#distillation-for-strategic-design">distillation for strategic design</a></li>
+<li><a href="#core-domain">core domain</a></li>
 <li>400-405 A Tale of Two Time Zones: A right way and a wrong way to deploy your people to tackle essential supporting components 410-412</li>
 <li>Reducing project risk by tackling the core domain early 413-414</li>
-<li>Crafting a domain vision statement 415-416</li>
+<li><a href="#domain-vision-statement">domain vision statement</a></li>
 </ul>
 </li>
 <li>
