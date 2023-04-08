@@ -1214,6 +1214,81 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li>a pluggable component framework usually only comes into play after a few applications have already been implemented in the same domain.</li>
 <li>Distill an abstract core of interfaces and interactions and create a framework that allows diverse implementations of those interfaces to be freely substituted. Likewise, it will enable any application to use those components, so long as it operates strictly through the interfaces of the abstract core.</li>
 </ul>
+<h1 id="project-assessment" style="position:relative;"><a href="#project-assessment" aria-label="project assessment permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Project assessment</h1>
+<ul>
+<li>Draw a context map. Can you draw consistent one, or are there ambiguous situations?</li>
+<li>Establish or refine the Ubiquitous Language. is it rich enough to help development?</li>
+<li>is the CORE DOMAIN identified? is there a DOMAIN VISION STATEMENT? Can you write one?</li>
+<li>Is the technology of the project work for or against a MODEL DRIVEN DESIGN?</li>
+<li>Assess the team developers skills to match them to the project complexity</li>
+<li>Are the developers knowledgeable about the domain? Are they interested in the domain?</li>
+</ul>
+<h1 id="who-sets-the-strategy" style="position:relative;"><a href="#who-sets-the-strategy" aria-label="who sets the strategy permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Who sets the strategy?</h1>
+<ul>
+<li>
+<p><strong>Ivory tower architect</strong></p>
+<ul>
+<li>This is an organizational style that has an architect which analyses the project at hand and determines the strategy before the project starts to be developed. This fits with the waterfall project management style but goes against the DDD approach, based in an Agile methodology and evolving architecture.</li>
+</ul>
+</li>
+<li>
+<p><strong>Emergent structure from application development</strong></p>
+<ul>
+<li>Typically, in a team doing Extreme Programming, the architectural structure emerges from the development process itself. However, the global design may become inconsistent. In order to keep the global architecture design consistent, it is a good practise to have a strategic design leadership (also hands-on developer), as a role played by one or several of the team developers.</li>
+</ul>
+</li>
+<li>
+<p><strong>Customer focused architecture team</strong></p>
+<ul>
+<li>This is a team of architects who is there to serve, to help the development teams by collaborating, experimenting, distillating the domain with the developers.</li>
+<li>Eric Evans gives us 6 guidelines for this collaboration:
+<ul>
+<li><strong>Decisions must reach the entire team</strong>
+<ul>
+<li>This can achieved by having an architecture team with official authority to formalize rules, or it can be achieved by having the strategy come out of the application development team;</li>
+</ul>
+</li>
+<li><strong>The decision process must absorb feedback</strong>
+<ul>
+<li>The architecture decision makers need to receive, accept and respond to the development team feedback. This can be achieved through collaboration, and it is a good practise to rotate the architects through the development teams;</li>
+</ul>
+</li>
+<li><strong>The plan must allow evolution</strong>
+<ul>
+<li>It’s good to have some higher level design rules, but we must be flexible and allow them to change/evolve as needed.</li>
+<li>EVOLVING ORDER emphasize ongoing change to the large-scale structure in response to deepening insight.</li>
+</ul>
+</li>
+<li><strong>Architecture teams must not absorb all good designers</strong>
+<ul>
+<li>It is essential to have good designers in all application teams:
+<ul>
+<li>In the architecture teams, so that a good design is created</li>
+<li>In the development teams, so that the design is properly implemented</li>
+</ul>
+</li>
+<li>It is essential to have domain knowledge in all application teams:
+<ul>
+<li>In the Architecture teams so that the design created matches the domain</li>
+<li>In the development teams so that the domain is well reflected in the implementation</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Strategic design requires minimalism and humility</strong>
+<ul>
+<li>We need to not get carried away when creating an architectural design. Over engineering a system will in fact bring more problems than solutions. We need to keep it simple and be humble when our great design idea is found to be, in fact, counter productive.</li>
+</ul>
+</li>
+<li>Objects are specialists, developers are generalists</li>
+<li>Developers, in the other hand, should be application generalists, with knowledge about architecture, development and domain.</li>
+<li>beware of technical frameworks that interfere with expressive implementation of the domain model and easy change</li>
+<li>Alexander and his colleagues advocated for a set of principles for all community members to apply to every act of piecemeal growth, so that “organic” order emerges, well adapted to circumstances.</li>
+</ul>
+</li>
+</ul>
 <h1 id="ddd-with-legacy-code" style="position:relative;"><a href="#ddd-with-legacy-code" aria-label="ddd with legacy code permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DDD with legacy code</h1>
 <ul>
 <li><a href="/ddd-with-legacy-code">DDD with legacy code</a></li>
@@ -1475,7 +1550,7 @@ keep an aggregate together on one server. Allow different sums to be distributed
 </ul>
 </li>
 <li>
-<p>How software experts can work with domain experts to explore and refine models. 207-210</p>
+<p>How software experts can work with domain experts to explore and refine models.</p>
 <ul>
 <li><strong>many transformations of domain models and the corresponding code happen when developers recognize a concept that has been hinted at in discussion or present implicitly in the design, and they then represent it explicitly in the model with one or more objects or relationships.</strong></li>
 <li><strong>listen to the language the domain experts use. Are there terms that succinctly state something complicated? Are they correcting your word choice (perhaps diplomatically)? do the puzzled looks on their faces go away when you use a particular phrase? These are hints of a concept that might benefit the model.</strong></li>
@@ -1820,7 +1895,7 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li><a href="#large-scale-structure-for-strategic-design">large scale structure for strategic design</a></li>
 <li><a href="#evolving-order">evolving order</a></li>
 <li>Several specific techniques for large-scale structure are discussed, but are skipped in this tour. Non-technical example of how a large-scale structure allowed thousands of people to contribute to the AIDS Memorial Quilt 478(bottom)-479</li>
-<li>Putting the pieces together to develop a design strategy 490-497</li>
+<li><a href="#who-sets-the-strategy">who sets the strategy</a></li>
 <li>Tracking five real domain-driven design projects and their long-term outcomes. 500-505</li>
 </ul>
 </li>
@@ -1893,6 +1968,8 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <p>Creating distinctive software comes back to a stable team accumulating specialized knowledge and crunching it into a rich model</p>
 <p>Generic Subdomains reduce the clutter in the Core Domain, leaving it focused on what is more important.</p>
 <p>Cohesive Mechanisms are used to encapsulate complex operations used by the Domain.</p>
+<p>Realizing that your best idea is likely to get in somebody’s way takes humility</p>
+<p>The essence of good object design is to give each object a clear and narrow responsibility and to reduce interdependency to an absolute minimum</p>
 <p><strong>still under constructions</strong>
 <strong>Next Steps:</strong>
 review Distilled DDD from vaugh vernon
