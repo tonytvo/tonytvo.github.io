@@ -1254,13 +1254,40 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <ul>
 <li><a href="#distillation-for-strategic-design">distillation for strategic design</a></li>
 <li><a href="#core-domain">core domain</a></li>
-<li>A Tale of Two Time Zones: A right way and a wrong way to deploy your people to tackle essential supporting components 410-412
+<li>A Tale of Two Time Zones: A right way and a wrong way to deploy your people to tackle essential supporting components
 <ul>
 <li><a href="./tale-of-2-time-zone.png">tale of 2 timezone trade off</a></li>
 <li>we technical people tend to enjoy definable problem like timezone conversion, and we can easily justify spending our time on them, but disciplined look at priorities usually point to the CORE DOMAIN</li>
 </ul>
 </li>
-<li>Reducing project risk by tackling the core domain early 413-414</li>
+<li>Reducing project risk by tackling the core domain early 413-414
+<ul>
+<li><strong>generic doesn’t mean reusable</strong>
+<ul>
+<li>you should be applying as much of your effort to the CORE DOMAIN as possible and investing in supporting GENERIC SUB DOMAINS only as necessary.</li>
+<li>though you should seldom design for reusability, you must be strict about keeping within the generic concept.</li>
+<li>introducing industry-specific model elements will have 2 costs
+<ul>
+<li>first, it will impede future development. By introducing anything to the design that is not part of the concept, you make it much more difficult to expand the system cleanly without completely rebuilding the older part and redesigning the other modules that use it</li>
+<li>second, those industry specific concepts belong either in the CORE DOMAIN or in their own more specialized, subdomains, and those specialized models are even more valuable than the generic ones.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>project risk management</strong>
+<ul>
+<li>tackling the riskiest tasks early, XP specially calls for getting an end-to-end system up and running immediately.</li>
+<li>some projects have greater technical risks and others greater domain modeling risks
+<ul>
+<li>therefore, except when the team has proven skills and the domain is very familiar, the first-cut system should be based on some part of the CORE DOMAIN, however, simple.</li>
+<li>CORE DOMAIN is high risk because it is often unexpectedly difficult and without it, the project can not succeed</li>
+<li>domain vision statement and high-lighted core shows how the use of supplemental documents can, with a very minor investment, improve communication and awareness of the CORE and focus development effort.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#domain-vision-statement">domain vision statement</a></li>
 </ul>
 </li>
