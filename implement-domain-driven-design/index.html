@@ -956,13 +956,27 @@ keep an aggregate together on one server. Allow different sums to be distributed
 </ul>
 <h1 id="large-scale-structure-for-strategic-design" style="position:relative;"><a href="#large-scale-structure-for-strategic-design" aria-label="large scale structure for strategic design permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>large scale structure for strategic design</h1>
 <ul>
-<li>A “large-scale structure” is a language that lets you discuss and understand the system in broad strokes. A set of high-level concepts or rules, or both, establishes a pattern of design for an entire system.</li>
-<li><strong>Devise a pattern of rules or roles and relationships that will span the entire system and allow some understanding of each part’s place in the whole-even without detailed knowledge of the part’s responsibility.</strong></li>
+<li>
+<p><em>layers would outline their story of the system</em></p>
+</li>
+<li>
+<p>in a large system without any overarching principle that allows to be interpreted in terms of their role in patterns that span the whole design, developers cannot see the forest for the trees.</p>
+</li>
+<li>
+<p>A “large-scale structure” is a language that lets you discuss and understand the system in broad strokes. A set of high-level concepts or rules, or both, establishes a pattern of design for an entire system.</p>
+</li>
+<li>
+<p><strong>Devise a pattern of rules or roles and relationships that will span the entire system and allow some understanding of each part’s place in the whole-even without detailed knowledge of the part’s responsibility.</strong></p>
+</li>
+<li>
+<p><a href="./some-patterns-large-scale-structure.png">some patterns of large scale structure</a></p>
+</li>
 </ul>
 <h2 id="evolving-order" style="position:relative;"><a href="#evolving-order" aria-label="evolving order permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>evolving order</h2>
 <ul>
 <li>Architectures can straitjacket a project with up-front design assumptions and take too much power away from the developers/designers of particular application parts. Soon, developers/designers of specific details of the applications will dumb down the application to fit the structure, or they will subvert it and have no structure, bringing back the problems of uncoordinated development.</li>
 <li>Let this large-scale conceptual structure evolve with the application, possibly changing to a completely different type of structure along the way. Don’t constraint the detailed design and model decisions that must be made with thorough knowledge.</li>
+<li>unlike the CONTEXT MAP, a large-scale structure is optional. One should be imposed when costs and benefits favor it, and when a fitting structure is found.</li>
 <li>The large-scale structure should be applied when a structure can be found that dramatically clarifies the system without forcing unnatural constraints on model development. Because an ill-fitting structure is worse than none, it is best not to shoot for comprehensiveness but rather to find a minimal set that solves the emerging problem. Less is more.</li>
 </ul>
 <h2 id="system-metaphor" style="position:relative;"><a href="#system-metaphor" aria-label="system metaphor permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>system metaphor</h2>
@@ -1294,7 +1308,8 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li>
 <p><strong>Large-scale structure: How to make a sprawling system comprehensible and encourage consistency across subsystems?</strong></p>
 <ul>
-<li>How to have structure without stifling development? 439-442, 444-446</li>
+<li><a href="#large-scale-structure-for-strategic-design">large scale structure for strategic design</a></li>
+<li><a href="#evolving-order">evolving order</a></li>
 <li>Several specific techniques for large-scale structure are discussed, but are skipped in this tour. Non-technical example of how a large-scale structure allowed thousands of people to contribute to the AIDS Memorial Quilt 478(bottom)-479</li>
 <li>Putting the pieces together to develop a design strategy 490-497</li>
 <li>Tracking five real domain-driven design projects and their long-term outcomes. 500-505</li>
@@ -1314,9 +1329,6 @@ keep an aggregate together on one server. Allow different sums to be distributed
 </li>
 <li>
 <p><strong>How to focus design effort on high-value areas and avoid over-investing elsewhere?</strong></p>
-</li>
-<li>
-<p><strong>Knowledge crunching: How a team can accumulate, distill and apply domain knowledge to software development?</strong></p>
 </li>
 <li></li>
 </ul>
