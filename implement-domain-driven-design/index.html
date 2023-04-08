@@ -274,7 +274,7 @@
 </ul>
 </li>
 <li>
-<p><a href="https://www.domainlanguage.com/wp-content/uploads/2016/04/DDD_Model_Exploration_Whirlpool.png">model exploration whirlpool</a></p>
+<p><img src="https://www.domainlanguage.com/wp-content/uploads/2016/04/DDD_Model_Exploration_Whirlpool.png" alt="model exploration whirlpool"></p>
 </li>
 <li>
 <p>if the people who write the code do not feel responsible for the model, or don’t understand how to make the model work for an application, then the model has nothing to do with the software. If developers don’t realize that changing code changes the model, then their refactoring will weaken the model rather than strengthen it. Meanwhile, when a modeler is separated from the implementation process, he or she never acquires, or quickly loses, a feel for the constraints of implementation. The basic constraint of MODEL-DRIVEN-DESIGN - that the model supports an effective implementation and abstracts key domain knowledge - is half gone, and the resulting models will be impractical. Finally, the knowledge and skills of experienced designers won’t be transferred to other developers if the division of labor prevents the kind of collaboration that conveys the subtleties of coding a MODEL-DRIVEN-DESIGN.</p>
@@ -357,7 +357,7 @@
 <ul>
 <li><strong>it challenging to guarantee the consistency of changes to objects in a model with complex associations.</strong></li>
 <li>Cluster the entities and value objects into aggregates and define boundaries around each.</li>
-<li><strong>Choose one entity to be the root of each sum, and allow external objects to hold references to the source only (regarding internal members passed out for use within a single operation only.</strong></li>
+<li><strong>Choose one entity to be the root of each sum, and allow external objects to hold references to the source only (regarding internal members passed out for use within a single operation only).</strong></li>
 <li>define properties and invariants for the aggregate as a whole and give enforcement responsibility to the root or some designated framework mechanism</li>
 <li>Use the exact aggregate boundaries to govern transactions and distribution</li>
 </ul>
@@ -390,7 +390,37 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li>The effects of its code must be transparently obvious, so the consequences of a change will be easy to anticipate.</li>
 <li><strong>Making behaviour obvious</strong></li>
 <li><strong>reduces the cost of change</strong></li>
-<li><a href="./supple-design-overview.png">supple design overview</a></li>
+<li><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/e8e34efa5d0f5b5c3a2f43a4630a8f44/f1d1f/supple-design-overview.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 67.72151898734178%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsTAAALEwEAmpwYAAABe0lEQVR42oWU247CMAxE8/+fxBcADzwiKoQAIWi5X8utpV4dr4bNdqnWkmWSOJOxPSVYZFVVvWPs2O12s+PxaHme2+FwsPV6bYvFwrIss9Vq5ftYsJoJoG5c6vV67tPp1J7PpxVFYY/Hw67Xq71er2/AT2yIJF0uF2ez3+/fFxSVB7Pdbue5nIV6qYqn08m2260Dns9nK8vSI07pOsPn87mDkhP+K5XLMKSHXMJZa0+VwY4YaOxoNPKX6AkHvESP8G63a61Wy3vYZAL0HgI4GAz8RYAAXi6XDqbSOaNHTJSzNE29ZMofDofW7/f9tzNsehVwXJPUQFQBkUdns5lNJpMf2fAyE2WDyyoXJvQLveHk0DP1jVxYso4tJEli7Xbby7jf7w4GuAC0t9lsrNPpGPmspT8IxB9DYINLYoZJezCDhUoFhByBfFJIiAWNRJgmETD1jsHE4q1/njHoL2HTF8mFcmAO6Hg8dvmgiCagPwybhC2Nabr1P5C6fQHMNUDIzAwwBQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="supple design overview"
+        title=""
+        src="/static/e8e34efa5d0f5b5c3a2f43a4630a8f44/f058b/supple-design-overview.png"
+        srcset="/static/e8e34efa5d0f5b5c3a2f43a4630a8f44/c26ae/supple-design-overview.png 158w,
+/static/e8e34efa5d0f5b5c3a2f43a4630a8f44/6bdcf/supple-design-overview.png 315w,
+/static/e8e34efa5d0f5b5c3a2f43a4630a8f44/f058b/supple-design-overview.png 630w,
+/static/e8e34efa5d0f5b5c3a2f43a4630a8f44/f1d1f/supple-design-overview.png 739w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></li>
 </ul>
 <h2 id="intention-revealing-interfaces" style="position:relative;"><a href="#intention-revealing-interfaces" aria-label="intention revealing interfaces permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>intention-revealing interfaces</h2>
 <ul>
@@ -446,7 +476,37 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <p><strong>people on other teams won’t be very aware of the CONTEXT bounds and will unknowingly make changes that blur the edges or complicate the interconnections. When connections must be made between different contexts, they tend to bleed into each other.</strong></p>
 </li>
 <li>
-<p><a href="./translator-example-route-network.png">translator example</a></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/09501eb20faa36d22dbb05eddf149186/4597d/translator-example-route-network.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 67.08860759493672%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABWElEQVR42nWT7c6CMAyFuf+78gJA+QH8MUQEQmKCCsinH33zLOkyF98mdXNrz05PS/D5fARj1f37/ZZhGKTve3k8HmbP+nw+v2J9x4J1XWVZFnGNyyzL5HA4yH6/lyiK5Ha7yev1som/jLuAn3meZRxH69u2SZqmBizPczkej3K/3w1z4rn3cyxDF1296zrjLnPOAVQgyv9Zsq8dZeGaBDN1wNDTJ+HuAxeIUlgBIrFtW1N2kiQShqE0TSPTNFm2arq3gDSmrmspikKqqjJJnAFKMA+o022kgK1qTIzq+8VQk/Q/Y+OfA8Q51cD8fD5/ddo2Bc14XVdeg4nOnqsbMRj3Oq/X69XsAw2i5NPpJGVZmrIpmdJdfbQB3PEosxnHsex2O8MWzQN/UFVwEkhUSdxu+o2EmVZiAXW+YMXeB/Bn1TeA7Zfitt5NVm35DBH/crn8+y3r2PwBWvL0xkQyEoIAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="translator example"
+        title=""
+        src="/static/09501eb20faa36d22dbb05eddf149186/f058b/translator-example-route-network.png"
+        srcset="/static/09501eb20faa36d22dbb05eddf149186/c26ae/translator-example-route-network.png 158w,
+/static/09501eb20faa36d22dbb05eddf149186/6bdcf/translator-example-route-network.png 315w,
+/static/09501eb20faa36d22dbb05eddf149186/f058b/translator-example-route-network.png 630w,
+/static/09501eb20faa36d22dbb05eddf149186/4597d/translator-example-route-network.png 631w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
 </li>
 </ul>
 <div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">Itinerary</span> <span class="token function">route</span><span class="token punctuation">(</span><span class="token class-name">Specification</span> spec<span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -637,7 +697,37 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li>guides outsourcing, use of off-the-shelf components, and decisions about assignment.</li>
 </ul>
 </li>
-<li><a href="./strategic-distillation-navigation-map.png">navigation map for strategic distillation map</a></li>
+<li><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/6bcaa2ed714d8931ea5489240fa80046/1bba8/strategic-distillation-navigation-map.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 72.78481012658227%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAABiklEQVR42n2U6a6CQAyF5/1fzcRfRiVGwSC44gK44dKbr0nJOOJtMplxltNzTotOROT9fovN/vAj3A/PLdwvAGK9XstwOJTZbCaXy+UD/BcB519omkau16vcbjedz+ezxHEsWZbJ8/nUe6/X6wMsTOD8g7IsJU1TyfNcttutAhOwi6JI5vN5uxeCWSJXVZVK2+12+vBwOAh7gDNg/Xg8pCgK3fcZwprE4/FY33LmDIQHyCSYN5uN7hkgYOydTiddLxYLqetagVarld5TQL8IeAb48XjUi763gAwGA1VjLDsl+1UiOxKQj1xY9Pt9TYA8AracmZqwOM5nAbv9fq9MrUjL5bL1DonIJgHrsH2+2saoI5dWodohA1uTnJZCjV8o13UZRqPRSFsFcBgnSSKTyURZE/f7XX8DbHZ0AoZfjWUHAN94zJdDv+Lnl4f/fZddAWCv19PhN3nroS04RCoSYYLpyGMPyTbTCcjEOwoYVrsFtI6nEPQakvhjmE6n6h8zbYSvrBn4TFP7gH/X+oy7uCLSJwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="navigation map for strategic distillation map"
+        title=""
+        src="/static/6bcaa2ed714d8931ea5489240fa80046/f058b/strategic-distillation-navigation-map.png"
+        srcset="/static/6bcaa2ed714d8931ea5489240fa80046/c26ae/strategic-distillation-navigation-map.png 158w,
+/static/6bcaa2ed714d8931ea5489240fa80046/6bdcf/strategic-distillation-navigation-map.png 315w,
+/static/6bcaa2ed714d8931ea5489240fa80046/f058b/strategic-distillation-navigation-map.png 630w,
+/static/6bcaa2ed714d8931ea5489240fa80046/1bba8/strategic-distillation-navigation-map.png 642w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></li>
 </ul>
 <h2 id="integrating-sub-modules" style="position:relative;"><a href="#integrating-sub-modules" aria-label="integrating sub modules permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Integrating sub-modules</h2>
 <ul>
@@ -701,7 +791,39 @@ keep an aggregate together on one server. Allow different sums to be distributed
 </li>
 <li>In the end, like most architectural decisions, the decision of how to integrate the sub-models in our global model, relies on trade-offs.</li>
 <li>Here, in the extremes, we are trading off decoupled logic and management of that logic, for easier and faster integration of functionality.</li>
-<li><a href="./decoupling_vs_simplicity.png">decouple logic and simplicity trade off</a></li>
+<li><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/e2551a6492a302fbb3bc7299f36bb112/6c2de/decoupling_vs_simplicity.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.32911392405063%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA6UlEQVR42oWS227DIAxA8/9/GYVLIENk4Y4NmRQW1NGuPS8WiIMx9nTeIGKt9fwHRLTWEkKO40DEtjm1AAAppZdyvQAAdaG1BoA/8rZtxphn7TzPGOPXhfd+uH1qa8bYINdajTGEEKVUSinGmHMebv+VOeeDXErRWgshlFLWWmNMf+0oCyGajIghhJ6n1lpKkVJSSgGglPJOzjlLKed5ds61o+WBMXML/sY5572PN8/CC7k1Y9/37wvvvVKqJ/8gt2o7OecYYyv+kRACAIxD0oehfUFKaV1XSinnnFJKCFmWhTHGOQeA3u0fO+2ENcyCq28AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="decouple logic and simplicity trade off"
+        title=""
+        src="/static/e2551a6492a302fbb3bc7299f36bb112/f058b/decoupling_vs_simplicity.png"
+        srcset="/static/e2551a6492a302fbb3bc7299f36bb112/c26ae/decoupling_vs_simplicity.png 158w,
+/static/e2551a6492a302fbb3bc7299f36bb112/6bdcf/decoupling_vs_simplicity.png 315w,
+/static/e2551a6492a302fbb3bc7299f36bb112/f058b/decoupling_vs_simplicity.png 630w,
+/static/e2551a6492a302fbb3bc7299f36bb112/40601/decoupling_vs_simplicity.png 945w,
+/static/e2551a6492a302fbb3bc7299f36bb112/78612/decoupling_vs_simplicity.png 1260w,
+/static/e2551a6492a302fbb3bc7299f36bb112/6c2de/decoupling_vs_simplicity.png 1334w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></li>
 </ul>
 </li>
 </ul>
@@ -873,8 +995,66 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li>It can be derived from a Project Vision Statement, but it is more specific, it focus on the nature of the Domain Model, its value and differential.</li>
 <li>It is a document that should be used through the whole development process, helping to guide resource allocation, guide modelling choices and educate team members.</li>
 <li>This will help keep the team focus on what is really important in the project and the Domain at hand.</li>
-<li><a href="./domain-vision-example-1.png">domain vision example 1</a></li>
-<li><a href="./domain-vision-example-2.png">domain vision example 2</a></li>
+<li><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 606px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/35a43a01cf1c4f43df8946c2c59bbbb3/4d4a2/domain-vision-example-1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 58.22784810126582%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAABe0lEQVR42k2Tia6CUAxE+f/PMxE3xF3cFwQXovblzMsYSJq7TdvptCTT6TTyPI/ZbBbL5TJ2u118Pp9of5xHo5Fwg8FAe5/X63XM5/PY7/fx/X4jSdNUoG63K8Dj8YimaeL1ev2srmthsF6vpzXLMpHYbrd6x57PZyQACMZKcFguFgtlXq1WcgA4HA6F63Q6v6CwulwucTqd4nq9xvv9jgRWk8lEtDEkGI/H2vOGAyWfz2clIGFRFNo7YVmWMnCJAxlAGZvNRixxhh0fZ3CsJGUPluQYycUQLfr9vsyltLWCDZmRA0fuwLIiA4FIDBkxdGYuyUiXMTSknPv9ru6hk0vmzWVTjXWkmdLQ5QK63W4yNAHogDh6xKy15YEAKxOiLjNT7jJltEuCER/O3HPn0h2c5DRNAemwNaB8HFlhy2whtEumVGM9VpwPh0Mcj8f/gB4bj4r1ISgO/lPcYbAkNRGficMsJmhhIxD0eUA/VvSsqkr7tvkdsw8V/QEk5HhVNdH+ogAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="domain vision example 1"
+        title=""
+        src="/static/35a43a01cf1c4f43df8946c2c59bbbb3/4d4a2/domain-vision-example-1.png"
+        srcset="/static/35a43a01cf1c4f43df8946c2c59bbbb3/c26ae/domain-vision-example-1.png 158w,
+/static/35a43a01cf1c4f43df8946c2c59bbbb3/6bdcf/domain-vision-example-1.png 315w,
+/static/35a43a01cf1c4f43df8946c2c59bbbb3/4d4a2/domain-vision-example-1.png 606w"
+        sizes="(max-width: 606px) 100vw, 606px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></li>
+<li><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 626px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/7ea4f5f1bb49ffc075927d2ee6f4fc11/af590/domain-vision-example-2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 47.46835443037975%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABPUlEQVR42k2Sh66CUAyGef/3Y6iIIjIElRlZSs1X05tr0pzBf/7R6mRZJp7nyfF4lDAMJY5jaZpG7Pf5fHTN81xc15XdbqdrEASKT5JEq6oqxTn3+11B5/NZAZfLRZ7Pp3A/jqPM86xVFIXs93s5nU4SRdEfHjJw1LIsP0Lf9/UjdTgcVJ26Xq9SlqVM0ySPx0NxJMEAOFbSkaqu659DgHxEEWUcUCgjAAGEXdcpDjwJaAtmICLu6/XS9jjDMCiROYSMlTuKHr/fb2nbVgn5jjiuLLq9QUQj4wJHaZpqTFbO7C0KzngIEff0GgxnRBkaSZy+75XwdrvpIwoSi4SzbduEJOD+u7MJW3SSOGwMZBMEhAPuKJQh5I4hIQoJokwfd/QVYYeNDYHGI4ArWylS6LlplNz+JgzC9tS6rvIFgwKc/AuRXZMAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="domain vision example 2"
+        title=""
+        src="/static/7ea4f5f1bb49ffc075927d2ee6f4fc11/af590/domain-vision-example-2.png"
+        srcset="/static/7ea4f5f1bb49ffc075927d2ee6f4fc11/c26ae/domain-vision-example-2.png 158w,
+/static/7ea4f5f1bb49ffc075927d2ee6f4fc11/6bdcf/domain-vision-example-2.png 315w,
+/static/7ea4f5f1bb49ffc075927d2ee6f4fc11/af590/domain-vision-example-2.png 626w"
+        sizes="(max-width: 626px) 100vw, 626px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></li>
 </ul>
 <h2 id="highlighted-core" style="position:relative;"><a href="#highlighted-core" aria-label="highlighted core permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>highlighted core</h2>
 <ul>
@@ -1125,21 +1305,140 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li>
 <p>True story: How model-driven design rescued a project and created unexpected opportunities.</p>
 <ul>
-<li><a href="./original-models.png">original modesl</a></li>
+<li><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 576px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/75e0d76e1c8ee85ce3df31dd03a60808/533c1/original-models.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 72.78481012658227%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB0klEQVR42pWT54oDMQyE9/1fLKSTnpDee+91jk9Byybc/TiDsC2rjEZycD6fdbvdtF6vNR6PtVgsdL1eQ/GFzeVyMR07dqvVyvQIcR6Ph4Ln82kOk8lEmUxGuVxO9/td6HH0FT2/Xi9VKhW1Wq3wTiL8gna7rV6vp8FgoH6/r+12aw9kRHxx7na7ajablnw4HApfKgPZ8Xh8B1wul9psNgYfo8PhEGYFFUgRHKbTqUajkQUhKAD2+70FPJ1O74A4/rbQE8S5xBFEtVpNxWJRhULByiYBCxvjkAMIuCCOiGxR3ii5VCoZx+l02gTOSeABDSFOLijhEDSc6Z4vTwAllOzdJpHvAAm+S93tdh/jQulRWrz8v1ZAZIzciQY5YlBFEXowJJoIZCFClJSZzWaVSqWMl06nE6IlENx6WeVy2biEO3iMx+PWHOyMQzjBcTabaT6fW9cYIQKQCB4xdDvGBVuEMeOOXTg29XrdkJGZuWIkEomEqtXqR8mgQ8c7FTQaDeXzeQNAqSS0gPwSph/YCH/Uv5V/y/+sAOhAZoiB7b+G8hHeuPOj2LH3d2wRQPCLaFoQi8WsEfwCOIHwZDJp5dAoymSYseHMG/SgY4cCdmiD4x+XxnWW1AsbxwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="original models"
+        title=""
+        src="/static/75e0d76e1c8ee85ce3df31dd03a60808/533c1/original-models.png"
+        srcset="/static/75e0d76e1c8ee85ce3df31dd03a60808/c26ae/original-models.png 158w,
+/static/75e0d76e1c8ee85ce3df31dd03a60808/6bdcf/original-models.png 315w,
+/static/75e0d76e1c8ee85ce3df31dd03a60808/533c1/original-models.png 576w"
+        sizes="(max-width: 576px) 100vw, 576px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></li>
 <li>model incrementally changed to solve problems. Loan Adjustments track departures from the share a lender originally agreed to in the Facility.
 <ul>
-<li><a href="./incrementally-model-changed.png">model-incrementally-changed</a></li>
+<li><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/6812a49f4b4d98c7a3c60c8818db922b/f8915/incrementally-model-changed.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 68.9873417721519%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsTAAALEwEAmpwYAAABrUlEQVR42o2T54oCQRCE5/2fS0UxYM6Kgphzzn18Bb2s3v24hmZ2Z6arqqt3w/v9NpJ4PB72fD71vl6vrdfr2eVy0f7tdtPKGevr9dLeaDSy8/msvfv9biEOCMhyubTVaqXD4/EYEQDAHrHb7WyxWOj5er1GZKwfgPP5XKoGg4HNZjO9TyYTPZOo5S5gnU5Hdx2YgDxYLFBwOp20wgwAiVL2UUGMx2PL5XKWz+etUqkIFML9fm/BC7wY2e6bR7wL95rEOyeHkDUMh0MrFotiymQylk6ntcIGCCsKKKYlEj8RgdebzUYCPASI/EKhYMlk0hKJhHxDAeb3+31rtVraQwFgkOAfZ+1227bbbTS80O12BZhKpaQUs/GIFpg6oBQwfZ8ygChDIUoBAlAKD4eDDilwJnz04u+Ie4nab4/DXwV+6M/fSevT6VQfNZYhxMFD/OJ/gy7ojNaxhKH8AiSazaaVy2UxYzie1ut1DaVWq1mpVIrusMdAuBfvLjgYjNlsVgPiTyEpIBlco9EQEOfccwISlR+ADsr3BjOTrlarYgcEMBK1/qngHaQIiQ/rBx4WKldFAonSAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="model-incrementally-changed"
+        title=""
+        src="/static/6812a49f4b4d98c7a3c60c8818db922b/f058b/incrementally-model-changed.png"
+        srcset="/static/6812a49f4b4d98c7a3c60c8818db922b/c26ae/incrementally-model-changed.png 158w,
+/static/6812a49f4b4d98c7a3c60c8818db922b/6bdcf/incrementally-model-changed.png 315w,
+/static/6812a49f4b4d98c7a3c60c8818db922b/f058b/incrementally-model-changed.png 630w,
+/static/6812a49f4b4d98c7a3c60c8818db922b/f8915/incrementally-model-changed.png 748w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></li>
 <li>refinements of this kind allowed the team to keep up as the rules of various transactions became clearer. But complexity was increasing, and we did not seem to be converging quickly onto really solid functionality.</li>
 <li>deeper model
 <ul>
-<li><a href="./abstract-model-of-shares.png">abstract-model-of-shares</a></li>
+<li><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/21d1df3a242b80074514346c820a5374/7e509/abstract-model-of-shares.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 112.0253164556962%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAACXBIWXMAAAsTAAALEwEAmpwYAAACKUlEQVR42n2V5w4iMQyE9/2fDIHgB0j03kWvouPT59Mg72rvIpkkG2cyticheb1eFtt4PLbBYGDr9drnrMto3+/XbrebfT4fu9/vNplM7Hq92vv9dp/kcDjYYrGw+Xxuy+XSptOpjUYj76Pj6XSyx+Nhz+fTxwAzx5cD8GOeAFQoFKxUKrnV63VrNBpWLpedab/f902wAYTG5mazab1ez9cqlYpHBOtETmoKiYaDGDJWY75ardw2m41Hcz6f/wIKBMMRAAAjiNazh2st+qQYAhBZxTCjTxY8jhOSTDEoDNQvl0uqqszJI/ki3wqZw7LsnSGAJHQ2m/kGAariGEUCdDgcuh95izKKLfkXdTbXajVrtVrW6XRcn3xDBbDNMvwB8sMimqNSjNEThZG+lNeY4zwSP4aErDyivWq16j1zhL/dbu14PNp+v/fxbrfzeaxwimG2ioChMTYRKvlTyNFyATmNzbCkhwVXCxMzCsV35S1Phz9ANmCERwUBUkjq+c5h5DjmMpchLHAWK2REUWgAAAgzFSLKJc/8tUFX9BihAQIDWBeLRZcK31BC9rnLtiReJUkC0yOhlCgCDOaAk1siYp/egURgkkQeA9akUYTOzcEkclImzf5eG04DEIuhMyclrLMJAG6O+m636xLSlU1ilSgGDHBqt9s+xjiARnjkFYMVd58xfwOMOTAFyAdEjLBhwO1hI/LJewvzNJkCJLmwxMhX9oH9n1y0/gdjT6AYG6xbBgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="abstract-model-of-shares"
+        title=""
+        src="/static/21d1df3a242b80074514346c820a5374/f058b/abstract-model-of-shares.png"
+        srcset="/static/21d1df3a242b80074514346c820a5374/c26ae/abstract-model-of-shares.png 158w,
+/static/21d1df3a242b80074514346c820a5374/6bdcf/abstract-model-of-shares.png 315w,
+/static/21d1df3a242b80074514346c820a5374/f058b/abstract-model-of-shares.png 630w,
+/static/21d1df3a242b80074514346c820a5374/7e509/abstract-model-of-shares.png 745w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></li>
 <li>The <strong>Loan Investment</strong> had disappeared, and at this point we realized that “loan investment” was not a banking term. In fact, the business experts had told us a number of times that they didn’t understand it. They had deferred to our software knowledge and assumed it was useful to the technical design. Actually, we had created it based on our incomplete understanding of the domain.</li>
 <li>suddenly, on the basis of this new way of looking at the domain, we could run through every scenario we had ever encountered relatively effortlessly, much more simply than ever before. And our model diagrams made perfect sense to the business experts, who had often indicated that the diagrams were “too technical” for them. Even just sketching on a whiteboard, we could see that our most persistent rounding problems would be pulled out by the roots, allowing us to scrap some of the complicated rounding code.</li>
 <li>it takes about 3 weeks to refactor to the new model without enough tests. Luckily, the project manager can take the heat and manage through the unstable political situation.</li>
 <li><strong>Share Pie</strong> became the unifying theme of the whole application. Marketing people used it to explain the features to prospective customers. Those prospects and customers immediately grasped it and used it to discuss features. It truly became part of the UBIQUITOUS LANGUAGE because it got to the heart of what loan syndication is about.</li>
 <li>To set the stage for a breakthrough, concentrate on knowledge crunching andn cultivating a robust UBIQUITOUS LANGUAGE. Probe for important domain concepts and make them explicit in the model. Refine the design to be suppler. Distill the model. Push on these more predictable levers, which crease clarity, usually a precursor of breakthroughs.</li>
 <li>dont’t hold back from modest improvements, which gradually deepen the model, even if confined within the same general conceptual framework. Don’t be paralyzed by looking too far forward. Just be watchful for the opportunity.</li>
-<li><a href="./another-model-breakthrough-contrains-transactions.png">another model breakthrough where contrains on transactions could be expressed with easy precision</a></li>
+<li><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/95ef5f6f74b1bcce31491431887168c1/8c857/another-model-breakthrough-contrains-transactions.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 55.06329113924051%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABLklEQVR42o2T646CQAyF5/0fEQUjEEQEEQlyEaj5uimZZf2xTZoZy/T0nLa6dV3lP44NwyBxHEuSJPJ6vTTmf8ecBf3TbP+46zoJgkCOx6OCfwX0wfBxHDVxnuftUd/38ng85P1+fy3ou5umSa7XqyYBlGWZSjLgqqrkdrspIG/xpmmkKIo/ipThsizKho/cSbAYfaIQvy1mZ57ncrlctBiEuNd1/dNDo48kY0GiGXEYc5rDGAfk+XyqQ8D5vUMGYG3bblMkIQzDrX/IjaJI77TjfD7/lryfFMz2k0MOspgsRSl4v9+1mD88HYqfuG8yLEkuy1IdiQZEEfoIY38D3LfxY1QmOU1TORwOcjqddAPoFXHAKIJstsF67vZj9/fSpk8Sq8S/BIcd4LbcvuQPxORZFJUQ2iIAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="another model breakthrough where contrains on transactions could be expressed with easy precision"
+        title=""
+        src="/static/95ef5f6f74b1bcce31491431887168c1/f058b/another-model-breakthrough-contrains-transactions.png"
+        srcset="/static/95ef5f6f74b1bcce31491431887168c1/c26ae/another-model-breakthrough-contrains-transactions.png 158w,
+/static/95ef5f6f74b1bcce31491431887168c1/6bdcf/another-model-breakthrough-contrains-transactions.png 315w,
+/static/95ef5f6f74b1bcce31491431887168c1/f058b/another-model-breakthrough-contrains-transactions.png 630w,
+/static/95ef5f6f74b1bcce31491431887168c1/8c857/another-model-breakthrough-contrains-transactions.png 761w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></li>
 </ul>
 </li>
 </ul>
@@ -1151,8 +1450,68 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <ul>
 <li><strong>many transformations of domain models and the corresponding code happen when developers recognize a concept that has been hinted at in discussion or present implicitly in the design, and they then represent it explicitly in the model with one or more objects or relationships.</strong></li>
 <li><strong>listen to the language the domain experts use. Are there terms that succinctly state something complicated? Are they correcting your word choice (perhaps diplomatically)? do the puzzled looks on their faces go away when you use a particular phrase? These are hints of a concept that might benefit the model.</strong></li>
-<li><a href="./original-cargo-design-with-database.png">original cargo design with database</a></li>
-<li><a href="./after-cargo-design-with-routing-service.png">after cargo design with routing service</a></li>
+<li><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/1ca937dc3daf33a549ec20d93a129d12/d54e4/original-cargo-design-with-database.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 58.86075949367089%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAABLklEQVR42o1S2aqFMAzs/3+dL+qDoqKiuOKGu+YwgZTeQw/cQGibtpPJJOp5HoLleU5d19F933SeJ4nh/n1fMg1niWEVDOxVVVUMtO87uwDKh2EYyPd9mqaJ7+DYp2lKWZZRWZb8TxIrz/PIdd0/LPBJzni4LAtt26aZHcfBMXjf9wwoTBXYtW3LrK7r0qt8tpUsBmAQSpKEmqahuq5J0T9NEpjamUnBElUoBOZ5Zq2gDXxdV47hwTiOXNo3uLmHRKgKxgxB2XEciuOYGxCGIXsQBOxRFHFCAJvaikQAFFPSSdQPVtACDqYSw31RFBwHgOgs42JKoMyOmplk/z1niNuA9ByanRRwuDmLtnGyNUiXbBNaWKB7KBmli/A2IK3hr0yyostoFDRE938BCeAHS8mqO0jfv6kAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="original cargo design with database"
+        title=""
+        src="/static/1ca937dc3daf33a549ec20d93a129d12/f058b/original-cargo-design-with-database.png"
+        srcset="/static/1ca937dc3daf33a549ec20d93a129d12/c26ae/original-cargo-design-with-database.png 158w,
+/static/1ca937dc3daf33a549ec20d93a129d12/6bdcf/original-cargo-design-with-database.png 315w,
+/static/1ca937dc3daf33a549ec20d93a129d12/f058b/original-cargo-design-with-database.png 630w,
+/static/1ca937dc3daf33a549ec20d93a129d12/d54e4/original-cargo-design-with-database.png 747w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></li>
+<li><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/8dfa5fdf751389061ef3c8bfe7d0207f/5bb8b/after-cargo-design-with-routing-service.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 86.0759493670886%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsTAAALEwEAmpwYAAABd0lEQVR42pWTWY/CMAyE8/9/GA+8oQqeKBJXEYVyQw8Orz5Ljkx3lyOSlThNJzP2JIiI3O93uV6vLKUoChmNRtI0jYbtPx6PX2HD58EWq9VKptOpgpRlKbfbTYP80wFWBIRVt9uV/X7/dMgYHo9HvbCqqsiIi7fbrex2O53Jg31kc7lcKisvwxheLhcZj8eqhEs4Z5cQk8lE8+Dp+noyE36fsJLUda25H+QBCRywOJ/PGjAiZ+aMMac0nU5Her2erttNCmhHKlLyPJf1eq0S5vO57pFvNpvIghoj/XA4RNa+RMHTNdvwgzFq//Bfd23EpsAEIGQMBgNla170YMxW2/b+kw/pErVJkiR2jq7B9BW79giGTmfpnDdyu0YfAXpbsDZ/0WFvm68Y8iPWgN3pdJLZbKZrz/hrhovFQvr9vkaaprH4HvATthEQ3/GWh8OhZFmm5vZv+S+LvATEJrADEC8inXoi21vlLUPvLQDaXeWV4Euz0TvAHx+sMGWCBKPHAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="after cargo design with routing service"
+        title=""
+        src="/static/8dfa5fdf751389061ef3c8bfe7d0207f/f058b/after-cargo-design-with-routing-service.png"
+        srcset="/static/8dfa5fdf751389061ef3c8bfe7d0207f/c26ae/after-cargo-design-with-routing-service.png 158w,
+/static/8dfa5fdf751389061ef3c8bfe7d0207f/6bdcf/after-cargo-design-with-routing-service.png 315w,
+/static/8dfa5fdf751389061ef3c8bfe7d0207f/f058b/after-cargo-design-with-routing-service.png 630w,
+/static/8dfa5fdf751389061ef3c8bfe7d0207f/5bb8b/after-cargo-design-with-routing-service.png 749w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></li>
 <li>benefits of refactoring to the explicit Itinerary object:
 <ul>
 <li>Defining the interface of the <strong>routing service</strong> more expressively</li>
@@ -1187,7 +1546,37 @@ keep an aggregate together on one server. Allow different sums to be distributed
 <li>when the constraints are obscuring the object’s basic responsibility, or when the constraint is prominent in the domain yet not prominent in the model, you can factor it out into an explicit object or even model it as a set of objects and relationships.</li>
 </ul>
 </li>
-<li><a href="./supple-design-overview.png">supple design overview</a></li>
+<li><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/e8e34efa5d0f5b5c3a2f43a4630a8f44/f1d1f/supple-design-overview.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 67.72151898734178%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsTAAALEwEAmpwYAAABe0lEQVR42oWU247CMAxE8/+fxBcADzwiKoQAIWi5X8utpV4dr4bNdqnWkmWSOJOxPSVYZFVVvWPs2O12s+PxaHme2+FwsPV6bYvFwrIss9Vq5ftYsJoJoG5c6vV67tPp1J7PpxVFYY/Hw67Xq71er2/AT2yIJF0uF2ez3+/fFxSVB7Pdbue5nIV6qYqn08m2260Dns9nK8vSI07pOsPn87mDkhP+K5XLMKSHXMJZa0+VwY4YaOxoNPKX6AkHvESP8G63a61Wy3vYZAL0HgI4GAz8RYAAXi6XDqbSOaNHTJSzNE29ZMofDofW7/f9tzNsehVwXJPUQFQBkUdns5lNJpMf2fAyE2WDyyoXJvQLveHk0DP1jVxYso4tJEli7Xbby7jf7w4GuAC0t9lsrNPpGPmspT8IxB9DYINLYoZJezCDhUoFhByBfFJIiAWNRJgmETD1jsHE4q1/njHoL2HTF8mFcmAO6Hg8dvmgiCagPwybhC2Nabr1P5C6fQHMNUDIzAwwBQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="supple design overview"
+        title=""
+        src="/static/e8e34efa5d0f5b5c3a2f43a4630a8f44/f058b/supple-design-overview.png"
+        srcset="/static/e8e34efa5d0f5b5c3a2f43a4630a8f44/c26ae/supple-design-overview.png 158w,
+/static/e8e34efa5d0f5b5c3a2f43a4630a8f44/6bdcf/supple-design-overview.png 315w,
+/static/e8e34efa5d0f5b5c3a2f43a4630a8f44/f058b/supple-design-overview.png 630w,
+/static/e8e34efa5d0f5b5c3a2f43a4630a8f44/f1d1f/supple-design-overview.png 739w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></li>
 <li><a href="#supple-design">supple design</a></li>
 </ul>
 </li>
