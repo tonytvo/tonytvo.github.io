@@ -424,31 +424,120 @@ keep an aggregate together on one server. Allow different sums to be distributed
 </ul>
 <h2 id="intention-revealing-interfaces" style="position:relative;"><a href="#intention-revealing-interfaces" aria-label="intention revealing interfaces permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>intention-revealing interfaces</h2>
 <ul>
-<li><strong>name classes and operations to describe their effect and purpose, without reference to how they do what they promise.</strong></li>
-<li>This relieves the client developer of the need to understand the internals.</li>
-<li><strong>These names should conform to the ubiquitous language so that team members can quickly infer their meaning.</strong></li>
-<li><strong>Before creating it, write a test for behaviour to force your thinking into client developer mode.</strong></li>
+<li>
+<p>if a developer must consider the implementation of a component in order to use it, the value of encapsulation is lost. If someone other than the original developer must infer the purpose of an object or operation based on its implementation, that new developer may infer a purpose that the operation or class fulfills only by chance. If that was not the intent, the code may work for the moment, but the conceptual basis of the design will have been corrupted, and the 2 developers will be working at cross purposes.</p>
+</li>
+<li>
+<p><strong>name classes and operations to describe their effect and purpose, without reference to how they do what they promise.</strong></p>
+</li>
+<li>
+<p>This relieves the client developer of the need to understand the internals.</p>
+</li>
+<li>
+<p><strong>These names should conform to the ubiquitous language so that team members can quickly infer their meaning.</strong></p>
+</li>
+<li>
+<p><strong>Before creating it, write a test for behaviour to force your thinking into client developer mode.</strong></p>
+</li>
 </ul>
 <h2 id="assertions" style="position:relative;"><a href="#assertions" aria-label="assertions permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>assertions</h2>
 <ul>
+<li>when the side effects of operations are only defined implicitly by their implementation, designs with a lot of delegation become a table of cause and effect. The only way to understand a program is to trace execution through branching paths. The value of encapsulation is lost. The necessity of tracing concrete execution defeats abstraction.</li>
 <li>state post-conditions of operations and invariants of classes and aggregates with assertions</li>
 <li><strong>if assertions cannot be coded directly in your programming language, write automated unit tests for them.</strong></li>
 <li>Write them into documentation or diagrams to fit the project’s development process style.</li>
+<li>seek models with coherent sets of concepts, which lead a developer to infer the intended ASSERTIONS, accelerating the learning curve and reducing the risk of contradictory code.</li>
+</ul>
+<h2 id="side-effect-free-functions" style="position:relative;"><a href="#side-effect-free-functions" aria-label="side effect free functions permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>side effect free functions</h2>
+<ul>
+<li>the developer calling an operation must understand its implementation and the implementation of all its delegations in order to anticipate the result. The usefulness of any abstraction of interfaces is limited if the developers are forced to pierce the veil. Without safely predictable abstractions, the developers must limit the combinatory explosion, placing a low ceiling on the richness of behavior that is feasible to build.</li>
+<li>place as much the logic of the program as possible into functions, operations that return results with no observable side effects. Strictly sepregate commands (methods that result in modifications to observable state) into very simple operations that do not return domain information. Further control side effects by moving complex logic into VALUE OBJECTS when a concept fitting the responsibility presents itself.</li>
+</ul>
+<h2 id="standalone-classes" style="position:relative;"><a href="#standalone-classes" aria-label="standalone classes permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>standalone classes</h2>
+<ul>
+<li>even within a MODULE, the difficulty of interpreting a design increases wildly as dependencies are added. This adds to mental overload, limiting the design complexity a developer can handle. Implicit concepts contribute to this load even more than explicit references.</li>
+<li>Low coupling is fundamental to object design. When you can, go all the way. Eliminate all other concepts from the picture. Then the class will be completely self-contained and can be studied and understood alone. Every such self-contained class significantly eases the burden of understanding a MODULE.</li>
 </ul>
 <h2 id="closure-of-operations-not-very-clear-to-me-yet" style="position:relative;"><a href="#closure-of-operations-not-very-clear-to-me-yet" aria-label="closure of operations not very clear to me yet permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>closure of operations (not very clear to me yet)</h2>
 <ul>
 <li>where it fits, define a function whose return type is the same as its arguments</li>
-<li>if the implementer has a state used in the computation. The implementer is a compelling operation argument, so the argument(s) and the return value should be the same type as the implementer.???</li>
-<li>Such an operation is closed under the set of instances of that type.</li>
-<li>A closed operation provides a high-level interface without introducing any dependency on other concepts.???</li>
+<li>if the implementer has a state used in the computation. The implementer is a compelling operation argument, so the argument(s) and the return value should be the same type as the implementer.Such an operation is closed under the set of instances of that type.</li>
+<li>A closed operation provides a high-level interface without introducing any dependency on other concepts.</li>
 </ul>
 <h2 id="declarative-design" style="position:relative;"><a href="#declarative-design" aria-label="declarative design permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>declarative design</h2>
-<p>many of the benefits of the declarative design are obtained once you have combinable elements that communicate their meaning and have characterized or apparent effects or no observable effects at all</p>
+<ul>
+<li>many of the benefits of the declarative design are obtained once you have combinable elements that communicate their meaning and have characterized or apparent effects or no observable effects at all</li>
+<li>problems with declarative design
+<ul>
+<li>a declaration language not expressive enough to do everything needed, but a framework that makes it very difficult to extend the software beyond the automated portion.</li>
+<li>code-generation techniques that cripple the iterative cycle by merging generated code into hand-written code in a way that makes regeneration very destructive.</li>
+</ul>
+</li>
+</ul>
 <h2 id="conceptual-contours" style="position:relative;"><a href="#conceptual-contours" aria-label="conceptual contours permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>conceptual contours</h2>
 <ul>
+<li>when elements of a model or design are embedded in a monolithic construct, their functionality gets duplicated. The external interface doesn’t say everything a client might care about. Their meaning is hard to understand, because different concepts are mixed together.</li>
+<li>On the other hand, breaking down classes and methods can pointlessly complicate the client, forcing client objects to understand how tiny pieces fit together. Worse, a concept can be lost completely.</li>
+<li>with each decision, ask yourself, “Is this an expedient based on a particular set of relationships in the current model and code, or does it echo some contour of the underlying domain?”</li>
 <li>decompose design elements (operations, interfaces, classes, and aggregates) into cohesive units, considering your intuition of the essential divisions in the domain.</li>
 <li>Observe the axes of change and stability through successive refactorings, and look for underlying conceptual contours that explain these shearing patterns.</li>
 <li>Align the model with the consistent aspects of the domain that make it a viable area of knowledge in the first place.</li>
+<li>INTENTION-REVEALING INTERFACES allow clients to present objects as units of meaning rather than just mechanisms. SIDE-EFFECT-FREE FUNCTIONS, and ASSERTIONS make it safe to use those units and make complex combinations. The emergence of CONCEPTUAL CONTOURS stabilizes parts of the model and also makes the units more intuitive to use and combine.</li>
+</ul>
+<h2 id="supple-design-strategies" style="position:relative;"><a href="#supple-design-strategies" aria-label="supple design strategies permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>supple design strategies</h2>
+<ul>
+<li>carve off subdomains
+<ul>
+<li>you may see a part of the model that can be viewed as specialized math; separate that.</li>
+<li>your application enforces complex rules, restricting state changes; pull this out into a separate model or simple framework that lets you declare the rules.</li>
+<li>with each such step, not only is the new module clean, but also the part left behind is smaller and clearer</li>
+<li>part of what’s left is written in declarative style, a declaration in terms of special math or validation framework</li>
+<li>it’s more useful to make a big impact on one area, making a part of design really supple, than to spread your efforts thin.</li>
+</ul>
+</li>
+<li>draw on established formalisms, when you can
+<ul>
+<li>you can often use and adapt conceptual systems that are long established in your domain or others, some of which have been refined and distilled over centurties.</li>
+<li>many business applications involve accounting, for example. Accounting defines a well-developed set of ENTITIES and rules that make for an easy adaptation to deep model and a supple design.</li>
+</ul>
+</li>
+</ul>
+<h2 id="integrating-the-patterns-shares-math" style="position:relative;"><a href="#integrating-the-patterns-shares-math" aria-label="integrating the patterns shares math permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>integrating the patterns: Shares Math</h2>
+<ul>
+<li>seperate commands and side-effect free functions
+<ul>
+<li>the <code class="language-text">distributePaymentPrincipal()</code> method does dangerous thing: it calculates the shares for distribution and also modifies the loan.</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Map distribution = aLoan.calculatePrincipalPaymentShares(paymentAmount)
+aLoan.applyPrincipalPaymentShares(distribution)</code></pre></div>
+<ul>
+<li>
+<p><em>make implicit concept explicit</em></p>
+<ul>
+<li>most of the rules and calculation about shares don’t apply to single shares, but to groups of them. There are missing concepts: shares are related to each other as parts of making up a whole. The <strong>Share Pie</strong> represents the total distribution of a specific <strong>Loan</strong>. It is an ENTITY whose entity is local within the AGGREGATE of the <strong>Loan</strong>. The actual distribution calculations can be delegated to the <strong>Share Pie</strong></li>
+</ul>
+</li>
+<li>
+<p>certain characteristics of the <strong>SharePie</strong> design make for this easy recombination and communication in the code</p>
+<ul>
+<li>complex logic is encapsulated in specialized VALUE OBJECTS with SIDE-EFFECT FREE FUNCTIONS.</li>
+<li>none of the <strong>SharePie</strong> methods cause any change to any existing object. This allows us to use <code class="language-text">plus(), minus(), and prorated()</code> freely in intermediate calculations, combining them, expecting them to do what their names suggest, and nothing more.</li>
+</ul>
+</li>
+<li>
+<p><em>State-modifying operations are simple and characterized with ASSERTIONS</em>. The high-level abstractions of Shares Math allow invariants of transactions to be written concisely in a declarative style. For example, the deviation is the actual pie minus the Loan amount prorates based on the Facility’s SharePie.</p>
+</li>
+<li>
+<p><em>model concepts are decoupled; operations entable a minimum of other types</em>. Some methods on SharePie exhibit CLOSURE OF OPERATIONS (the methods to add or subtract are closed under <strong>SharePie</strong>)</p>
+</li>
+<li>
+<p><em>familiar formalism makes the protocol easy to grasp</em>. A wholly original protocol for manipulating shares could have been devised based on financial terminology. In principle, it could have been made supple. But it would have had 2 disadvantages. First, it would have to be invented, a difficult and uncertain task. Second, it would have to be learned by each person who dealt with it. People who see SharesMath recognize a system they already know, and because the design has been kept carefully consistent with the rules of arithmetic, those people are not misled.</p>
+</li>
+<li>
+<p>pulling out the part of problem that corresponded to the formalism of math, we arrived at a supple design for Shares that further distills the core <strong>Loan</strong> and <strong>Facility</strong> methods</p>
+</li>
 </ul>
 <h2 id="continuous-integration" style="position:relative;"><a href="#continuous-integration" aria-label="continuous integration permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>continuous integration</h2>
 <ul>
@@ -2014,6 +2103,7 @@ review Distilled DDD from vaugh vernon
 review design DDD quickly</p>
 <h1 id="references" style="position:relative;"><a href="#references" aria-label="references permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>References</h1>
 <ul>
+<li><a href="https://www.infoq.com/articles/architecture-modernization-domain-driven-discovery/">https://www.infoq.com/articles/architecture-modernization-domain-driven-discovery/</a></li>
 <li><a href="https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf">https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf</a></li>
 <li><a href="https://devopedia.org/domain-driven-design">https://devopedia.org/domain-driven-design</a></li>
 <li><a href="https://philippe.bourgau.net/categories/#squash-bduf-with-event-storming-series">https://philippe.bourgau.net/categories/#squash-bduf-with-event-storming-series</a></li>
@@ -2040,4 +2130,4 @@ review design DDD quickly</p>
           >
             window.___chunkMapping="{\"app\":[\"/app-dff359f42b4b1323adff.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-fe49012c596fa8e02e94.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-137bafc43fb95c27cc25.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-2fd0383b8dc4270b2974.js\"],\"component---src-pages-using-typescript-tsx\":[\"/component---src-pages-using-typescript-tsx-b3f1483ead526a95c936.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-161de0eab28c1f89b9c7.js\"],\"component---src-templates-tags-js\":[\"/component---src-templates-tags-js-937a80c11540749e5e6b.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="622739c5566122b98539";</script><script src="/webpack-runtime-647158e94add31207306.js" async></script><script src="/framework-24a4af5e8d436029005a.js" async></script><script src="/app-dff359f42b4b1323adff.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="348f013e3c47d286ffc0";</script><script src="/webpack-runtime-4b2de8b3ea950f000edc.js" async></script><script src="/framework-24a4af5e8d436029005a.js" async></script><script src="/app-dff359f42b4b1323adff.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
