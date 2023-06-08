@@ -167,7 +167,22 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <ul>
 <li>A function literal defines a function value</li>
 <li>More details in <a href="#functions">functions</a></li>
-<li><a href="https://github.com/nickaigi/effective-javascript/blob/master/chapter_3/item_19.js">higher order function examples</a></li>
+<li><a href="/bd2a7d60e5f1106dcc5c3715f1274495/higher-order-function.js">higher order function examples</a></li>
+<li><a href="/1eb75a33e5a8827fb7395afba1323a17/variadic-function.js">variadic function</a></li>
+<li><a href="/1863ca677fad5214149516e2c1143e79/iterator-protocol.js">iterator protocol</a></li>
+<li><a href="/7ebd74afce430219fce2598f5d75a890/currying.js">currying</a></li>
+<li><a href="/e94f6a5774b8c7729454a06e1f456e2c/tostring.js">avoid relying on toString method of functions</a></li>
+<li><a href="/23e40a105ce1ae7b4daac0efb76a7f4d/avoid-nonstandard-stack-inspection-properties.js">Avoid nonstandard stack inspection properties</a></li>
+<li><a href="/cf2bc51f441fa46e8fde7cfb885acf4a/store-methods-on-prototypes.js">Store methods on Prototypes</a></li>
+<li><a href="/dbab502b67c1b435b66d84db65feb6c2/avoid-reckless-monkey-patching.js">avoid reckless monkey-patching</a></li>
+<li><a href="./lightweight-dictionaries-instances-object.js">lightweight Dictionaries from direct instances of ‘object’</a></li>
+<li><a href="/8c6e918c2f5f25272392f28f9377b624/use-hasownproperty-to-protect-against-prototype-pollution.js">use ‘hasOwnProperty’ to protect against prototype pollution</a></li>
+<li><a href="prefer-arrays-to-dict-for-ordered-collections.s">Prefer arrays to dictionaries for ordered collections</a></li>
+<li><a href="/f4535d33d7b44180e90922311b50f65d/never-add-enumerable-properties-to-object-prototype.js">never-add-enumerable-properties-to-object-prototype’</a></li>
+<li><a href="/58107095cbfc97d4c01fa7b39409582a/prefer-iteration-methods-to-loops.js">prefer iteration methods to loops</a></li>
+<li><a href="/7a94526fea285aad0202cb7ea20aba62/reuse-generic-array-methods-on-array-like-objects.js">Reuse generic array methods on array-like objects</a></li>
+<li><a href="/2572986d68ff619ded371b026b66d1be/avoid-state.js">Avoid unnescessary state</a></li>
+<li><a href="/77cee0e69aa627ac1c0d3fbb4adb0485/method-chaining.js">Method Chaining</a></li>
 </ul>
 <h2 id="a-nameobjects-objects" style="position:relative;"><a href="#a-nameobjects-objects" aria-label="a nameobjects objects permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a name="objects"/> Objects</h2>
 <p>Javascript simple types:</p>
@@ -225,7 +240,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 </li>
 <li>A new property is <em>immediately visible</em> to all of the objects below it in the chain once created</li>
 </ul>
-<p>More details in <a href="#arrays">Chapter 6</a></p>
+<p>More details in <a href="#arrays">arrays</a></p>
 <h3 id="reflection" style="position:relative;"><a href="#reflection" aria-label="reflection permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reflection</h3>
 <ul>
 <li>Determining what properties an object has</li>
@@ -496,7 +511,7 @@ document<span class="token punctuation">.</span><span class="token function">wri
 <li>This includes later on, even if <em>the outer function has completed its execution and returned</em>, when the inner function is called, it will still have <strong>access to all the variables it had access to at the time it was defined</strong> (i.e. the variables that were <em>in context</em> when the inner function was defined)</li>
 </ul>
 </li>
-<li><a href="https://github.com/nickaigi/effective-javascript/blob/master/chapter_2/item_11.js">closures examples</a></li>
+<li><a href="./closures-samples.js">closures examples</a></li>
 </ul>
 <h3 id="callbacks" style="position:relative;"><a href="#callbacks" aria-label="callbacks permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callbacks</h3>
 <ul>
@@ -1245,4 +1260,4 @@ In JavaScript, this actually <em>takes</em> a value and <em>returns</em> <code c
           >
             window.___chunkMapping="{\"app\":[\"/app-dff359f42b4b1323adff.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-fe49012c596fa8e02e94.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-137bafc43fb95c27cc25.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-2fd0383b8dc4270b2974.js\"],\"component---src-pages-using-typescript-tsx\":[\"/component---src-pages-using-typescript-tsx-b3f1483ead526a95c936.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-161de0eab28c1f89b9c7.js\"],\"component---src-templates-tags-js\":[\"/component---src-templates-tags-js-937a80c11540749e5e6b.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="622739c5566122b98539";</script><script src="/webpack-runtime-647158e94add31207306.js" async></script><script src="/framework-24a4af5e8d436029005a.js" async></script><script src="/app-dff359f42b4b1323adff.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="348f013e3c47d286ffc0";</script><script src="/webpack-runtime-4b2de8b3ea950f000edc.js" async></script><script src="/framework-24a4af5e8d436029005a.js" async></script><script src="/app-dff359f42b4b1323adff.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
