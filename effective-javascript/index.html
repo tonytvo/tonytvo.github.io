@@ -83,6 +83,7 @@ something can be clarified, improved on or have an example added to it.</p>
 <li><a href="#beautiful-features">Beautiful Features</a></li>
 <li><a href="#awful-parts">the Awful Parts</a></li>
 <li><a href="#bad-parts">the Bad Parts</a></li>
+<li><a href="#effective-javascript">effective javascript</a></li>
 <li><a href="#jslint">JSLint</a></li>
 </ul>
 <h2 id="a-namegood-parts-good-parts" style="position:relative;"><a href="#a-namegood-parts-good-parts" aria-label="a namegood parts good parts permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a name="good-parts"/> Good Parts</h2>
@@ -105,6 +106,7 @@ something can be clarified, improved on or have an example added to it.</p>
 <li>There is a single, 64-bit floating point number type.</li>
 <li><code class="language-text">NaN</code> (Not-a-Number) is not equal to any value (including itself) and is essentially an <strong>illegal number value</strong>, but <em>typeOf(NaN)===number is true</em></li>
 <li>Use <code class="language-text">isNaN(number)</code> to check for NaNs</li>
+<li><a href="/2102396bbfc5976ef462fdaf101b0ec7/floating-point-number.js">understanding javascript floating point number</a></li>
 </ul>
 <p>Number methods are discussed in <a href="#methods">methods</a>.</p>
 <h3 id="strings" style="position:relative;"><a href="#strings" aria-label="strings permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Strings</h3>
@@ -173,14 +175,8 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <li><a href="/7ebd74afce430219fce2598f5d75a890/currying.js">currying</a></li>
 <li><a href="/e94f6a5774b8c7729454a06e1f456e2c/tostring.js">avoid relying on toString method of functions</a></li>
 <li><a href="/23e40a105ce1ae7b4daac0efb76a7f4d/avoid-nonstandard-stack-inspection-properties.js">Avoid nonstandard stack inspection properties</a></li>
-<li><a href="/cf2bc51f441fa46e8fde7cfb885acf4a/store-methods-on-prototypes.js">Store methods on Prototypes</a></li>
 <li><a href="/dbab502b67c1b435b66d84db65feb6c2/avoid-reckless-monkey-patching.js">avoid reckless monkey-patching</a></li>
 <li><a href="./lightweight-dictionaries-instances-object.js">lightweight Dictionaries from direct instances of ‘object’</a></li>
-<li><a href="/8c6e918c2f5f25272392f28f9377b624/use-hasownproperty-to-protect-against-prototype-pollution.js">use ‘hasOwnProperty’ to protect against prototype pollution</a></li>
-<li><a href="prefer-arrays-to-dict-for-ordered-collections.s">Prefer arrays to dictionaries for ordered collections</a></li>
-<li><a href="/f4535d33d7b44180e90922311b50f65d/never-add-enumerable-properties-to-object-prototype.js">never-add-enumerable-properties-to-object-prototype’</a></li>
-<li><a href="/58107095cbfc97d4c01fa7b39409582a/prefer-iteration-methods-to-loops.js">prefer iteration methods to loops</a></li>
-<li><a href="/7a94526fea285aad0202cb7ea20aba62/reuse-generic-array-methods-on-array-like-objects.js">Reuse generic array methods on array-like objects</a></li>
 <li><a href="/2572986d68ff619ded371b026b66d1be/avoid-state.js">Avoid unnescessary state</a></li>
 <li><a href="/77cee0e69aa627ac1c0d3fbb4adb0485/method-chaining.js">Method Chaining</a></li>
 </ul>
@@ -239,6 +235,9 @@ console<span class="token punctuation">.</span><span class="token function">log<
 </ul>
 </li>
 <li>A new property is <em>immediately visible</em> to all of the objects below it in the chain once created</li>
+<li><a href="/cf2bc51f441fa46e8fde7cfb885acf4a/store-methods-on-prototypes.js">Store methods on Prototypes</a></li>
+<li><a href="/8c6e918c2f5f25272392f28f9377b624/use-hasownproperty-to-protect-against-prototype-pollution.js">use ‘hasOwnProperty’ to protect against prototype pollution</a></li>
+<li><a href="/f4535d33d7b44180e90922311b50f65d/never-add-enumerable-properties-to-object-prototype.js">never-add-enumerable-properties-to-object-prototype’</a></li>
 </ul>
 <p>More details in <a href="#arrays">arrays</a></p>
 <h3 id="reflection" style="position:relative;"><a href="#reflection" aria-label="reflection permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reflection</h3>
@@ -698,6 +697,11 @@ document<span class="token punctuation">.</span><span class="token function">wri
 <p>Javascript only has <strong>array-like objects</strong> which are slower than ‘real’ arrays.</p>
 <p><strong>Retrieval and updating</strong> of properties works the <strong>same as with an object <em>except with integer property names</em></strong>.</p>
 <p>Arrays have their <strong>own literal format</strong> and their own set of methods (<a href="#methods">Methods</a>).</p>
+<ul>
+<li><a href="prefer-arrays-to-dict-for-ordered-collections.s">Prefer arrays to dictionaries for ordered collections</a></li>
+<li><a href="/58107095cbfc97d4c01fa7b39409582a/prefer-iteration-methods-to-loops.js">prefer iteration methods to loops</a></li>
+<li><a href="/7a94526fea285aad0202cb7ea20aba62/reuse-generic-array-methods-on-array-like-objects.js">Reuse generic array methods on array-like objects</a></li>
+</ul>
 <h3 id="array-literals" style="position:relative;"><a href="#array-literals" aria-label="array literals permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Array Literals</h3>
 <ul>
 <li>An array literal is a <strong>pair of square brackets surrounding zero or more comma-seperated values</strong> <code class="language-text">[a, b, c, etc]</code>
@@ -1245,6 +1249,21 @@ To use JavaScript well, important to understand that <strong>functions are value
 Functions that are intended to be used with <code class="language-text">new</code> (conventionally starting with a capital letter) should be avoided (don’t define them) as they can cause all kinds of issues and complex bugs which are difficult to catch.</p>
 <p><strong>void</strong>:
 In JavaScript, this actually <em>takes</em> a value and <em>returns</em> <code class="language-text">undefined</code>, which is hugely confusing and not helpful. <strong>Don’t use it</strong>.</p>
+<h2 id="a-nameeffective-javascript-effective-javascript" style="position:relative;"><a href="#a-nameeffective-javascript-effective-javascript" aria-label="a nameeffective javascript effective javascript permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a name="effective-javascript"/> effective javascript</h2>
+<ul>
+<li><a href="/e8b43a50891f3706522081c884861749/beware-of-implicit-coercions.js">beware of implicit coercions</a></li>
+<li><a href="/a74e79c1b384012059be21b920a7456f/prefer-primitives-to-obj-wrapper.js">prefer primitives to Object Wrappers</a></li>
+<li><a href="/554ab7909480be3e7fa829f33460f45a/avoid-using-==-with-mixed-types.js">avoid using == with mixed types</a></li>
+<li><a href="/de8ee5c0460884d90a878d01a2ed7be5/learn-the-limits-of-semicolon-insertion.js">learn the limits of Semicolon insertion</a></li>
+<li><a href="/863f15cdfaf6f96297d1a00cda223191/variable-hoisting.js">understand variable hoisting</a></li>
+<li><a href="/835e157b54461291ef37ca8c53f65049/immediately-invoked-function-expression.js">use immediately invoked function expression</a></li>
+<li><a href="/8149067097de13c76660b26793189b34/unportable-scoping-of-named-function-expressions.js">unportable scoping of named function expressions</a></li>
+<li><a href="/b4c54714fb9943a6e86c413acb59eeea/unportable-scope-block-local-func-declare.js">unportable scoping of block-local function declarations</a></li>
+<li><a href="/039509cbc68a55b455933e446ed9ac43/avoid-creating-local-functions-with-eval.js">avoid creating local functions with eval</a></li>
+<li><a href="/07be35085df906a565064e0c52337b32/prefer-indirect-to-direct-eval.js">prefer indirect  ‘eval’ to direct ‘eval’</a></li>
+<li><a href="/6c5303047c270048a32b5bb3cc654cb7/minimize-global-object.js">minimize Use of the Global object</a></li>
+<li><a href="/867afe586165e026d05e992ff448d8fd/function-vs-method-vsconstructor.js">understand the difference between function, method, constructor calls</a></li>
+</ul>
 <h2 id="a-namejslint-jslint" style="position:relative;"><a href="#a-namejslint-jslint" aria-label="a namejslint jslint permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a name="jslint"/> JSLint</h2>
 <p>JSLint is a <strong>code quality tool</strong> for JavaScript which checks your syntax.</p>
 <p>Having read through this appendix (you can read more about <a href="https://www.jslint.com">JSLint here</a>), I tend more towards <a href="http://jshint.com/about/"><strong><em>JSHint</em></strong></a>, a <em>fork</em> of JSLint. It allows programmers to customise for themselves which the good parts and bad parts are and define their own subset, although naturally there are a number of pre-defined options. <a href="https://github.com/nelsonic/learn-jshint">This is a really fantastic article on using JSHint</a>; it’s simple and aimed at having you using JSHint in a few minutes as well as providing various sources for pre-defined subsets.</p>
