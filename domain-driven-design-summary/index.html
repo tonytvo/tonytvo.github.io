@@ -282,6 +282,18 @@
 <li>
 <p>any technical person contributing to the model must spend some time touching the code, whatever primary role he or she plays on the project. Anyone responsible for changing the model must learn to express a model through the code. Every developer must be involved in some level of discussion about the model and have contact with domain experts. Those who contribute to different ways must consciously engage those who touch the code in a dynamic exchange of model ideas through the UBIQUITOUS LANGUAGE.</p>
 </li>
+<li>
+<p>Although a MODEL-DRIVEN DESIGN does not have to be object oriented, it does depend on having an expressive implementation of the model constructs, be they objects, rules, or workflows. If the available tool does not facilitate that expressiveness, reconsider the choice of tools. An unexpressive implementation negates the advantage of the extra paradigm.</p>
+</li>
+<li>
+<p>Here are four rules of thumb for mixing non-object elements into a predominantly object-oriented system:</p>
+<ul>
+<li>Don’t fight the implementation paradigm. There’s always another way to think about a domain. Find model concepts that fit the paradigm.</li>
+<li>Lean on the ubiquitous language. Even when there is no rigorous connection between tools, very consistent use of language can keep parts of the design from diverging.</li>
+<li>Don’t get hung up on UML. Sometimes the fixation on a tool, such as UML diagramming, leads people to distort the model to make it fit what can easily be drawn. For example, UML does have some features for representing constraints, but they are not always sufficient. Some other style of drawing (perhaps conventional for the other paradigm), or simple English descriptions, are better than tortuous adaptation of a drawing style intended for a certain view of objects.</li>
+<li>Be skeptical. Is the tool really pulling its weight? Just because you have some rules, that doesn’t necessarily mean you need the overhead of a rules engine. Rules can be expressed as objects, perhaps a little less neatly; multiple paradigms complicate matters enormously.</li>
+</ul>
+</li>
 </ul>
 <h2 id="layered-architecture" style="position:relative;"><a href="#layered-architecture" aria-label="layered architecture permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>layered architecture</h2>
 <ul>
@@ -289,17 +301,52 @@
 <li><strong>The domain objects, free of the responsibility of displaying themselves, storing themselves, managing application tasks, and so forth, can be focused on expressing the domain model.</strong></li>
 <li>This allows a model to evolve to be rich enough and clear enough to capture essential business knowledge and put it to work.</li>
 </ul>
+<h2 id="associations" style="position:relative;"><a href="#associations" aria-label="associations permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>associations</h2>
+<ul>
+<li>
+<p><em>for every traversable association in the model, there is a mechanism in the software with the same properties</em></p>
+</li>
+<li>
+<p>An association between objects can be compared at a DB level as the connections between two tables that represent objects. It can be seen at OOP level as an object that contains another object, or collection of objects, as one of its properties.</p>
+</li>
+<li>
+<p>A pragmatic rule, to maintain code simple and maintainable, is to not create nor keep dead code (code that is not used). Associations are reflected, in the implementation of the domain, by code. Therefore it makes total sense to keep associations to the minimum required by the domain. This means that although a bidirectional association might make sense in a generic context, if in our specific domain it only makes sense as a unidirectional association, we must not waste time and resources to create unnecessary code. It does not reflect the model and increases complexity and maintainability costs. Basically it bloats the application.</p>
+</li>
+<li>
+<p>Associations can be reduced in three ways:</p>
+<ul>
+<li><strong>Imposing a unidirectional association</strong>
+<ul>
+<li>For example: We can say that a country had many presidents, and that a president was president of a specific country. This reflects a bidirectional association, however if in our specific domain we always think in terms of “this country had this set of presidents” and never in terms of “this person was president of that country”, we must not create the code to support the second direction, therefore imposing a unidirectional association;</li>
+</ul>
+</li>
+<li><strong>Adding a qualifier (filter)</strong>
+<ul>
+<li>For example: If in the previous unidirectional association we realize that in our specific domain it only makes sense to query about a country president by providing a date, and knowing that at a specific date there is only one president, then we can reduce the association from unidirectional 1-n to unidirectional 1-1. Thus again creating a better reflection of the domain and simplifying the implementation;</li>
+</ul>
+</li>
+<li><strong>Eliminating non essential associations</strong>
+<ul>
+<li>If an association is of no use in our specific domain at hand, it must be completely removed;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h2 id="entities" style="position:relative;"><a href="#entities" aria-label="entities permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>entities</h2>
 <ul>
 <li>When an object is distinguished by its identity rather than its attributes, make this primary to its definition in the model.</li>
 <li><strong>Keep the class definition simple and focused on life cycle continuity and identity.</strong></li>
 <li>Define a means of distinguishing each object regardless of its form or history</li>
 <li>be alert to requirements that call for matching objects by attributes.</li>
-<li>Define an operator that is guaranteed unique. This means of identification may come from the outside, or it may be an arbitrary identifier created by and for the system. Still, it must correspond to the identity distinctions in the model.</li>
+<li>Define an operator that is guaranteed unique (even if distributed, even when objects are archived). This means of identification may come from the outside, or it may be an arbitrary identifier created by and for the system. Still, it must correspond to the identity distinctions in the model.</li>
 <li>aka reference objects</li>
+<li><strong>Entities are objects that represent something relevant in the domain model. They exist on their own right, they can not be swapped by another object with the same data, they are crucial in the domain logic.</strong></li>
+<li><strong>An entity must not have logic that handles objects they do not own.</strong></li>
 </ul>
 <h2 id="value-objects" style="position:relative;"><a href="#value-objects" aria-label="value objects permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>value objects</h2>
 <ul>
+<li>value objects have no conceptual identity. These objects describe some characteristic of a thing. <strong>If we think value objects as just the absence of identity, we haven’t added much to our toolbox or vocabulary. In fact, these objects have characteristics of their own and their own significance to the model. These are the objects that describe things</strong></li>
 <li>when you care only about the attributes and logic of an element of the model, classify it as a value object.</li>
 <li>Make it express the meaning of the attributes it conveys and give it related functionality.</li>
 <li><strong>Treat the value object as immutable. Make all operations side-effect-free functions that don’t depend on any mutable state.</strong></li>
@@ -335,6 +382,17 @@
       />
   </a>
     </span></p>
+<ul>
+<li>special cases: when to allow mutability
+<ul>
+<li>if the VALUE changes frequently</li>
+<li>if object creation or deletion is expensive</li>
+<li>if replacement (rather than modification) will disturb clustering</li>
+<li>if there is not much sharing VALUES, or if such sharing is forgone to improve clustering or for some other technical reason</li>
+<li>VALUE’s implementation is to be mutable, then it must not be shared. Whether you will be sharing or not, design VALUE OBJECTS as immutable when you can.</li>
+</ul>
+</li>
+</ul>
 <h2 id="domain-events" style="position:relative;"><a href="#domain-events" aria-label="domain events permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>domain events</h2>
 <ul>
 <li>model information about activity in the domain as a series of discrete events. Represent each event as a domain event object.</li>
@@ -343,15 +401,57 @@
 </ul>
 <h2 id="services" style="position:relative;"><a href="#services" aria-label="services permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>services</h2>
 <ul>
-<li>when a significant transformation process in the domain is not a natural responsibility of an entity or value object, add an operation to the model as a standalone interface declared as a service.</li>
-<li>Define a service contract, a set of assertions about interactions with the service. State these assertions in the ubiquitous language of a specific bounded context.</li>
-<li>Give the service a name, which also becomes a ubiquitous language.</li>
+<li>
+<p><strong>some concepts from the domain aren’t natural to model as objects. Forcing the required domain functionality to be the responsibility of an ENTITY or VALUE either distorts the definition of a model-based object or adds meaningless artificial objects</strong></p>
+</li>
+<li>
+<p>when a significant transformation process in the domain is not a natural responsibility of an entity or value object, add an operation to the model as a standalone interface declared as a service.</p>
+</li>
+<li>
+<p>Define a service contract, a set of assertions about interactions with the service. State these assertions in the ubiquitous language of a specific bounded context.</p>
+</li>
+<li>
+<p>Give the service a name, which also becomes a ubiquitous language.</p>
+</li>
+<li>
+<p>a good SERVICE has 3 characteristics</p>
+<ul>
+<li>the operation relates to a domain concept that is not a natural part of an ENTITY or VALUE OBJECT</li>
+<li>the interface is defined in terms of other lements of the domain model</li>
+<li>the operation <strong>is stateless, meaning it does not hold a state that alters its behaviour.</strong> Therefore it could, and should, be a singleton;</li>
+</ul>
+</li>
+<li>
+<p><a href="./partitioning-services-into-layers.png">partitioning services into layers</a></p>
+</li>
+<li>
+<p>The differences between a domain service and an application services are subtle but critical:</p>
+<ul>
+<li>Domain services are very granular where as application services are a facade purposed with providing an API.</li>
+<li>Domain services contain domain logic that can’t naturally be placed in an entity or value object whereas application services orchestrate the execution of domain logic and don’t themselves implement any domain logic.</li>
+<li>Domain service methods can have other domain elements as operands and return values whereas application services operate upon trivial operands such as identity values and primitive data structures.</li>
+<li>Application services declare dependencies on infrastructural services required to execute domain logic.</li>
+<li>Command handlers are a flavor of application services which focus on handling a single command typically in a CQRS architecture.</li>
+</ul>
+</li>
+<li>
+<p>can a domain service be injected into an entity?</p>
+<ul>
+<li>I personally distinct two types of domain services: pure (isolated) and impure (non-isolated). The former is closed under entities and value objects and doesn’t depend on the external world. AtmService is an example of an impure domain service.</li>
+<li>Injection of an impure domain service into entities breaks the isolation, so I’d recommend against it. On the other hand, a pure domain service doesn’t do any harm, so it’s totally fine to refer to them from your entities and value objects.</li>
+</ul>
+</li>
 </ul>
 <h2 id="modules" style="position:relative;"><a href="#modules" aria-label="modules permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>modules</h2>
 <ul>
 <li>concepts should be divided into modules.</li>
-<li>Choose modules that tell the story of the system and contain a cohesive set of ideas. Give the modules the names that become part of the ubiquitous language. Modules are part of the model, and their names should reflect insight into the domain.</li>
+<li>Choose modules that tell the story of the system and contain a cohesive set of ideas. This often yields low coupling between MODULES, but if it doesn’t, look for a way to change the model to disentangle the concepts, or search for an overlooked concept that might be the basis of a MODULE that would bring the elements together in a meaningful way.</li>
+<li>Give the modules the names that become part of the ubiquitous language. Modules are part of the model, and their names should reflect insight into the domain.</li>
 <li>Seek low coupling in the sense of concepts that can be understood and reasoned about independently. Then, refine the model until it partitions according to high-level domain concepts and decouples the corresponding code.</li>
+<li><strong>everyone use modules, but few treat them as full-fledged part of the model. Code gets broken down into all sorts of categories, from aspects of the technical architecture to developers’ work assignments. Even developers who refactor a lot tend to content themselves with MODULES conceived early in the project</strong></li>
+<li>MODULES are a communication mechanism. The meaning of the objects being partitioned needs to drive the choice of MODULES. When you place some classes together in a MODULE, you are telling the next developer who looks at your design to think about them together. If your model is telling a story, the MODULES are chapters. “Now let’s talk about the ‘customer’s module’, you might say to a business expert, and the context is set for your conversation.</li>
+<li><strong>unless there is a real intention to distribute code on different servers, keep all the code that implements a single conceptual object in the same MODULE, if not the same object</strong></li>
+<li><strong>use packaging to separate the domain layer from other code. Otherwise, leave as much freedom as possible to the domain developers to package the domain objects in ways that support their model and design choices.</strong></li>
 </ul>
 <h2 id="aggregates" style="position:relative;"><a href="#aggregates" aria-label="aggregates permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>aggregates</h2>
 <ul>
