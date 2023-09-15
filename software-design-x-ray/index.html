@@ -339,65 +339,130 @@
 <p><strong>Pay Off Your Technical Debt</strong></p>
 <ul>
 <li>Refactoring code that’s under heavy development, perhaps even shared between multiple teams, adds another dimension to the problem.</li>
-<li>Follow the Principle of Proximity
+<li><strong>Follow the Principle of Proximity</strong>
 <ul>
 <li>Proximity focuses on How well organized your code is with respect to Readability and change</li>
 <li>Proximity implies that <strong>functions that are changed together are moved closer together</strong>. Proximity is a design principle</li>
-<li>Proximity principle is a refactoring technique that uses feedback from how our code evolves :</li>
+<li>Proximity principle is a refactoring technique that uses feedback from how our code evolves :
+<ul>
+<li>By ordering our functions and methods according to our change patterns</li>
+<li><strong>We communicate information that isn’t expressible in programming-language syntax</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Automate Proximity Recommendations</strong>
+<ul>
+<li>A proximity refactoring serves as a mental note that the two functions belong together.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Refactor Congested Code with the Splinter Pattern</strong></p>
+<ul>
+<li>Splinter pattern provides a structured way to break up hotspots into manageable pieces that can be divided among several developers to work on</li>
+</ul>
+</li>
+<li>
+<p><strong>Parallel Development Is at Conflict with Refactoring</strong></p>
+<ul>
+<li>Our refactoring goal conflicts with the short-term evolution of the overall system
+<ul>
+<li>Most organizations just cannot afford to pause ongoing work so that we can refactor in a safe, development-free vacuum</li>
+</ul>
+</li>
+<li>The splinter pattern resolves this dilemma by recognizing that refactoring a hotspot is an iterative process
+<ul>
+<li>In a splinter refactoring you
+<ul>
+<li>Won’t even improve the code quality as such</li>
+<li>BUT rather <strong>transform the code to a structure where multiple people can work together in parallel toward the overall refactoring goal.</strong></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<p>By ordering our functions and methods according to our change patterns
-We communicate information that isn’t expressible in programming-language syntax
-Automate Proximity Recommendations
-A proximity refactoring serves as a mental note that the two functions belong together.
-Refactor Congested Code with the Splinter Pattern
-Splinter pattern provides a structured way to break up hotspots into
-Manageable pieces that can be divided among several developers to work on
-Parallel Development Is at Conflict with Refactoring
-Our refactoring goal conflicts with the short-term evolution of the overall system
-Most organizations just cannot afford to pause ongoing work
-so that we can refactor in a safe, development-free vacuum
-The splinter pattern resolves this dilemma by recognizing that refactoring a hotspot is an iterative process
-In a splinter refactoring you
-Won’t even improve the code quality as such
-BUT rather transform the code to a structure where multiple people can work together in parallel toward the overall refactoring goal.
-Split a Hotspot File Along Its Responsibilities
-The intent of the splinter pattern is to break a hotspot into smaller parts along its responsibilities while maintaining the original API for a transient period.
-Keep the original method signatures and replace the method bodies with a simple delegation to the extracted modules.
-Steps behind an iterative splinter refactoring :
-Ensure your tests cover the splinter candidate : have an adequate test suite
-Identify the behaviors inside your hotspot :  look at the names of the methods inside the hotspot / identify code that forms groups of behaviors
-Refactor for proximity : form groups of functions with related behavior inside the larger file, based on the behaviors you identified earlier
-Extract a new module for the behavior with the most development activity : use X-Ray
-Delegate to the new module. Replace the body of the original methods with delegations to your new module
-Perform the necessary regression tests to ensure you haven’t altered the behavior of the system
-Select the next behavior to refactor and start over at step 4
-Consequences of Splinters
-The hotspot now acts as a facade that maintains the original API
-The Curse of a Successful System
-Much code decay isn’t due to incompetence but rather is owed to the success of an evolving product.
-The Principles of Code Age
-Stabilize Code by Age :
-Organize our code by its age
-Turn stable packages into libraries
-Move and refactor code we fail to stabilize
-Related advantages
-Promotes long-term memory models of code : Stable packages serve as chunks that remain valid over time, which means our expectations of a piece of code won’t be broken
-Lessens cognitive load since there’s less active code : The more code you manage to stabilize, the less knowledge you need to keep in your head
-Prioritizes test suites to shorten lead times : Identify which parts of the software you can safely skip test runs
-3 generations of code
-Dan North claims that we want our code to be either :
-very recent
-Or old
-The kind of code that’s hard to understand lies in between these two extremes
-Ebbinghaus forgetting curve
-To retain the information we need to repeat it, and with each repetition we’re able to improve our performance by remembering more.
-Each time we revisit mid-aged code we need to relearn its inner workings, which comes at a cost of both time and effort.
-Part II - Work with Large Codebases and Organizations
-Work at an architectural level to gain insights into the system as a whole.
+</li>
+<li>
+<p><strong>Split a Hotspot File Along Its Responsibilities</strong></p>
+</li>
+</ul>
+<blockquote>
+<p>The intent of the splinter pattern is to break a hotspot into smaller parts along its responsibilities while maintaining the original API for a transient period.</p>
+</blockquote>
+<ul>
+<li>
+<p>Keep the original method signatures and replace the method bodies with a simple delegation to the extracted modules.</p>
+</li>
+<li>
+<p>Steps behind an iterative splinter refactoring :</p>
+<ul>
+<li><em>Ensure your tests cover the splinter candidate:</em> have an adequate test suite</li>
+<li><em>Identify the behaviors inside your hotspot:</em>  look at the names of the methods inside the hotspot / identify code that forms groups of behaviors</li>
+<li><em>Refactor for proximity:</em> form groups of functions with related behavior inside the larger file, based on the behaviors you identified earlier</li>
+<li><em>Extract a new module</em> for the behavior with the most development activity : use X-Ray</li>
+<li><em>Delegate to the new module.</em> Replace the body of the original methods with delegations to your new module</li>
+<li><em>Perform the necessary regression tests to ensure you haven’t altered the behavior of the system</em></li>
+<li><em>Select the next behavior to refactor and start over at step 4</em></li>
+</ul>
+</li>
+<li>
+<p><strong>Consequences of Splinters</strong></p>
+<ul>
+<li>The hotspot now acts as a facade that maintains the original API</li>
+</ul>
+</li>
+<li>
+<p><strong>The Curse of a Successful System</strong></p>
+</li>
+</ul>
+<blockquote>
+<p><em>Much code decay isn’t due to incompetence but rather is owed to the success of an evolving product.</em></p>
+</blockquote>
+<ul>
+<li><strong>The Principles of Code Age</strong>
+<ul>
+<li>
+<p>Stabilize Code by Age :</p>
+<ul>
+<li>Organize our code by its age</li>
+<li>Turn stable packages into libraries</li>
+<li>Move and refactor code we fail to stabilize</li>
+</ul>
+</li>
+<li>
+<p><strong>Related advantages</strong></p>
+<ul>
+<li><em>Promotes long-term memory models of code:</em> Stable packages serve as chunks that remain valid over time, which means our expectations of a piece of code won’t be broken</li>
+<li><em>Lessens cognitive load since there’s less active code:</em> The more code you manage to stabilize, the less knowledge you need to keep in your head</li>
+<li><em>Prioritizes test suites to shorten lead times:</em> Identify which parts of the software you can safely skip test runs</li>
+</ul>
+</li>
+<li>
+<p><strong>3 generations of code</strong></p>
+<ul>
+<li>Dan North claims that we want our code to be either :
+<ul>
+<li>very recent</li>
+<li>Or old</li>
+<li>The kind of code that’s hard to understand lies in between these two extremes</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Ebbinghaus forgetting curve</strong></p>
+<ul>
+<li>To retain the information we need to repeat it, and with each repetition we’re able to improve our performance by remembering more.</li>
+<li>Each time we revisit mid-aged code we need to relearn its inner workings, which comes at a cost of both time and effort.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="work-with-large-codebases-and-organizations" style="position:relative;"><a href="#work-with-large-codebases-and-organizations" aria-label="work with large codebases and organizations permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Work with Large Codebases and Organizations</h1>
+<p>Work at an architectural level to gain insights into the system as a whole.
 Spot Your System’s Tipping Point
 Use social code analysis to make sense of large-scale systems by
 Breaking them down into subsystems
@@ -531,4 +596,4 @@ Change coupling data.</p>
           >
             window.___chunkMapping="{\"app\":[\"/app-dff359f42b4b1323adff.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-fe49012c596fa8e02e94.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-137bafc43fb95c27cc25.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-2fd0383b8dc4270b2974.js\"],\"component---src-pages-using-typescript-tsx\":[\"/component---src-pages-using-typescript-tsx-b3f1483ead526a95c936.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-161de0eab28c1f89b9c7.js\"],\"component---src-templates-tags-js\":[\"/component---src-templates-tags-js-937a80c11540749e5e6b.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="622739c5566122b98539";</script><script src="/webpack-runtime-647158e94add31207306.js" async></script><script src="/framework-24a4af5e8d436029005a.js" async></script><script src="/app-dff359f42b4b1323adff.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="f0eae0ed376362d86dc6";</script><script src="/webpack-runtime-367126daf6d5ad1339b6.js" async></script><script src="/framework-24a4af5e8d436029005a.js" async></script><script src="/app-dff359f42b4b1323adff.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
