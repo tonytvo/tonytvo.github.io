@@ -462,43 +462,113 @@
 </li>
 </ul>
 <h1 id="work-with-large-codebases-and-organizations" style="position:relative;"><a href="#work-with-large-codebases-and-organizations" aria-label="work with large codebases and organizations permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Work with Large Codebases and Organizations</h1>
-<p>Work at an architectural level to gain insights into the system as a whole.
-Spot Your System’s Tipping Point
-Use social code analysis to make sense of large-scale systems by
-Breaking them down into subsystems
-Large systems become even more complex once we add the social dimension
-As a project grows beyond 12 or 15 developers :
-Coordination, motivation and communication issues tend to cause a significant cost overhead.
-Know if a specific part of the code is a coordination bottleneck
-The scale of a codebase has to be reflected in both the organization of people and the architecture of the system.
-Divide and Conquer with Architectural Hotspots
-Identify your architectural boundaries:
-Sometimes those boundaries are documented
-If not, you need to reverse-engineer those boundaries, and a good starting point is to base them on the folder structure of the codebase.
-Run a hotspot analysis on an architectural level :
-Identify the subsystems with the most development effort
-Visualize the complexity trend of a whole architectural component.
-Analyze the files in each architectural hotspot :
-Focus on individual files
-Our analysis scope is smaller since we focus on one subsystem at a time
-Always remember that just because some code is a hotspot, that doesn’t necessarily mean it’s a problem.
-A hotspot means
-We’ve identified a part of the code that requires our attention
-Since it attracts many changes
-The more often something is changed
-The more important it is that the corresponding code is of
-High quality so
-all those changes are simple and low risk
-Analyze subsystems
-Size alone may be problematic
-Large files are likely to contain many different responsibilities and be hard to navigate
-Complexity trends of the code
-Prioritize Function Hotspots and Code Clones
-Launch X-Ray on
-Have a prioritized list of refactoring candidates
-There are no hard rules, but with a heuristic you want to inspect the top 10 hotspots in your subsystem.
-Fight the Normalization of Deviance
-Each time you accept a risk, the deviations become the new normal. (see Challenger Launch study by sociologist Diane Vaughan)
+<ul>
+<li>
+<p>Work at an architectural level to gain insights into the system as a whole.</p>
+</li>
+<li>
+<p><strong>Spot Your System’s Tipping Point</strong></p>
+<ul>
+<li>Use social code analysis to make sense of large-scale systems by Breaking them down into subsystems</li>
+<li>Large systems become even more complex once we add the social dimension
+<ul>
+<li>As a project grows beyond 12 or 15 developers :
+<ul>
+<li><strong>Coordination, motivation and communication issues tend to cause a significant cost overhead.</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Know if a specific part of the code is a coordination bottleneck</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li>The scale of a codebase has to be reflected in both the organization of people and the architecture of the system.</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Divide and Conquer with Architectural Hotspots</strong>
+<ul>
+<li><em>Identify your architectural boundaries:</em>
+<ul>
+<li>Sometimes those boundaries are documented</li>
+<li>If not, you need to reverse-engineer those boundaries, and a good starting point is to <em><strong>base them on the folder structure of the codebase.</strong></em></li>
+</ul>
+</li>
+<li><em>Run a hotspot analysis on an architectural level:</em>
+<ul>
+<li>Identify the subsystems with the most development effort</li>
+<li>Visualize the complexity trend of a whole architectural component.</li>
+</ul>
+</li>
+<li><em>Analyze the files in each architectural hotspot:</em>
+<ul>
+<li>Focus on individual files</li>
+<li>Our analysis scope is smaller since we focus on one subsystem at a time</li>
+<li><a href="./hotspot-analysis.png">hotspot analysis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li>Always remember that just because some code is a hotspot, that doesn’t necessarily mean it’s a problem.</li>
+</ul>
+</blockquote>
+<ul>
+<li>
+<p>A hotspot means</p>
+<ul>
+<li>We’ve identified a part of the code that requires our attention</li>
+<li>Since it attracts many changes</li>
+</ul>
+</li>
+<li>
+<p><strong>The more often something is changed</strong></p>
+<ul>
+<li>**The more important it is that the corresponding code is of **
+<ul>
+<li>High quality so</li>
+<li>all those changes are simple and low risk</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Analyze subsystems</strong></p>
+<ul>
+<li>Size alone may be problematic
+<ul>
+<li>Large files are likely to contain many different responsibilities and be hard to navigate</li>
+</ul>
+</li>
+<li>Complexity trends of the code</li>
+</ul>
+</li>
+<li>
+<p><strong>Prioritize Function Hotspots and Code Clones</strong></p>
+<ul>
+<li>Launch X-Ray on
+<ul>
+<li>Have a prioritized list of refactoring candidates</li>
+<li><a href="./refactor-candidates.png">refactoring candidates</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li>There are no hard rules, but with a heuristic you want to inspect the top 10 hotspots in your subsystem.</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Fight the Normalization of Deviance</strong></li>
+</ul>
+<p>Each time you accept a risk, the deviations become the new normal. (see Challenger Launch study by sociologist Diane Vaughan)
 We have plenty of normalization of deviance in software development :
 Inherit a file with 15,000 lines of code
 First : shocked by the amount of code and the lack of higher-level organization.
