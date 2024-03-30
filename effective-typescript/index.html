@@ -90,6 +90,109 @@
 </ul>
 </li>
 </ul>
+<h1 id="understand-evolving-any" style="position:relative;"><a href="#understand-evolving-any" aria-label="understand evolving any permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Understand Evolving any</h1>
+<ul>
+<li>example 1:</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// Type is any[]</span>
+result<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+result  <span class="token comment">// Type is string[]</span>
+result<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+result  <span class="token comment">// Type is (string | number)[]</span></code></pre></div>
+<ul>
+<li>Implicit any types do not evolve through function calls. The arrow function here trips up inference:</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">makeSquares</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">start</span><span class="token operator">:</span> number<span class="token punctuation">,</span> <span class="token literal-property property">limit</span><span class="token operator">:</span> number</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> out <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+     <span class="token comment">// ~~~ Variable 'out' implicitly has type 'any[]' in some locations</span>
+  <span class="token function">range</span><span class="token punctuation">(</span>start<span class="token punctuation">,</span> limit<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">i</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    out<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>i <span class="token operator">*</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> out<span class="token punctuation">;</span>
+      <span class="token comment">// ~~~ Variable 'out' implicitly has an 'any[]' type</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>
+<p>In cases like this, you may want to consider using an array’s map and filter methods to build arrays in a single statement and avoid iteration and evolving any entirely</p>
+</li>
+<li>
+<p><strong>Things to Remember</strong></p>
+<ul>
+<li>While TypeScript types typically only refine, implicit any and any[] types are allowed to evolve. You should be able to recognize and understand this construct where it occurs.</li>
+<li>For better error checking, consider providing an explicit type annotation instead of using evolving any.</li>
+</ul>
+</li>
+</ul>
+<h1 id="push-null-values-to-the-perimeter-of-your-types" style="position:relative;"><a href="#push-null-values-to-the-perimeter-of-your-types" aria-label="push null values to the perimeter of your types permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>push null values to the perimeter of your types</h1>
+<ul>
+<li>example 1:
+<ul>
+<li>avoid</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> min<span class="token punctuation">,</span> max<span class="token punctuation">;</span>
+<span class="token operator">...</span>
+<span class="token keyword">return</span> <span class="token punctuation">[</span>min<span class="token punctuation">,</span> max<span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>better approach would be:</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> <span class="token literal-property property">result</span><span class="token operator">:</span> <span class="token punctuation">[</span>number<span class="token punctuation">,</span> number<span class="token punctuation">]</span> <span class="token operator">|</span> <span class="token keyword">null</span> <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token operator">...</span>
+<span class="token keyword">return</span> result<span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>mix of null and non-null values can also lead to problems in classes. For example</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">UserPosts</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">user</span><span class="token operator">:</span> UserInfo <span class="token operator">|</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token literal-property property">posts</span><span class="token operator">:</span> Post <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">|</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+
+  <span class="token function">constructor</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>user <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>posts <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">async</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">userId</span><span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+      <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">this</span><span class="token punctuation">.</span>user <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetchUser</span><span class="token punctuation">(</span>userId<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">this</span><span class="token punctuation">.</span>posts <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetchPostsForUser</span><span class="token punctuation">(</span>userId<span class="token punctuation">)</span>
+    <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>better design would wait until all the data used by the class is available</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">UserPosts</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">user</span><span class="token operator">:</span> UserInfo<span class="token punctuation">;</span>
+  <span class="token literal-property property">posts</span><span class="token operator">:</span> Post <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token function">constructor</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>user <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>posts <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">async</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">userId</span><span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">[</span>user<span class="token punctuation">,</span> posts<span class="token punctuation">]</span> <span class="token operator">=</span> Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+      <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">this</span><span class="token punctuation">.</span>user <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetchUser</span><span class="token punctuation">(</span>userId<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">this</span><span class="token punctuation">.</span>posts <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetchPostsForUser</span><span class="token punctuation">(</span>userId<span class="token punctuation">)</span>
+    <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">UserPosts</span><span class="token punctuation">(</span>user<span class="token punctuation">,</span> posts<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>
+<p>don’t be tempted to replace nullable properties with promises. This tends to lead to even more confusing code and forces all your methods to be async. Promises clarify the code that loads data but tend to have the opposite effect on the class that uses that data.)</p>
+</li>
+<li>
+<p><strong>Things to Remember</strong></p>
+<ul>
+<li>Avoid designs in which one value being null or not null is implicitly related to another value being null or not null.</li>
+<li>Push null values to the perimeter of your API by making larger objects either null or fully non-null. This will make code clearer both for human readers and for the type checker.</li>
+<li>Consider creating a fully non-null class and constructing it when all values are available.</li>
+<li>While strictNullChecks may flag many issues in your code, it’s indispensable for surfacing the behavior of functions with respect to null values.</li>
+</ul>
+</li>
+</ul>
 <h1 id="avoid-cluttering-your-code-with-inferable-types" style="position:relative;"><a href="#avoid-cluttering-your-code-with-inferable-types" aria-label="avoid cluttering your code with inferable types permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Avoid Cluttering Your Code with Inferable Types</h1>
 <ul>
 <li>example 1:</li>
