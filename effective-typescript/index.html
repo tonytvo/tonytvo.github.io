@@ -51,7 +51,46 @@
         }
       }
     })
-  </script><link rel="alternate" type="application/rss+xml" title="Tony Vo Blog RSS Feed" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=b811602c8c8ce14b66aae6613c8968f4" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=b811602c8c8ce14b66aae6613c8968f4"/><title data-react-helmet="true">effective typescript summary | Conversations on agile technical practices and investments</title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="global-wrapper" data-is-root-path="false"><header class="global-header"><a class="header-link-home" href="/">Conversations on agile technical practices and investments</a></header><main><article class="blog-post" itemscope="" itemType="http://schema.org/Article"><header><h1 itemProp="headline">effective typescript summary</h1><p>March 05, 2024</p></header><section itemProp="articleBody"><h1 id="avoid-cluttering-your-code-with-inferable-types" style="position:relative;"><a href="#avoid-cluttering-your-code-with-inferable-types" aria-label="avoid cluttering your code with inferable types permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Avoid Cluttering Your Code with Inferable Types</h1>
+  </script><link rel="alternate" type="application/rss+xml" title="Tony Vo Blog RSS Feed" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=b811602c8c8ce14b66aae6613c8968f4" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=b811602c8c8ce14b66aae6613c8968f4"/><title data-react-helmet="true">effective typescript summary | Conversations on agile technical practices and investments</title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="global-wrapper" data-is-root-path="false"><header class="global-header"><a class="header-link-home" href="/">Conversations on agile technical practices and investments</a></header><main><article class="blog-post" itemscope="" itemType="http://schema.org/Article"><header><h1 itemProp="headline">effective typescript summary</h1><p>March 05, 2024</p></header><section itemProp="articleBody"><h1 id="understand-the-relationship-between-typescript-and-javascript" style="position:relative;"><a href="#understand-the-relationship-between-typescript-and-javascript" aria-label="understand the relationship between typescript and javascript permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Understand the relationship between typescript and javascript</h1>
+<ul>
+<li>
+<p>If you’re migrating an existing javascript codebase to typesript. It means that you don’t have to rewrite any of your code in another language to start using TypeScript and get the benefits it provides.</p>
+</li>
+<li>
+<p>one of the goals of TypeScript’s type system is to detect code that will throw an exception at runtime, without having to run your code. The type checker cannot always spot code that will throw exceptions, but it will try.</p>
+</li>
+<li>
+<p>type annotations tell TypeScript what your intent is, and this lets it spot places where your code’s behavior does not match your intent.</p>
+</li>
+<li>
+<p><a href="./ts-superset-js.png">typescript is superset of javascript</a></p>
+</li>
+<li>
+<p>Things to remember</p>
+<ul>
+<li>TypeScript is a superset of JavaScript. In other words, all JavaScript programs are already TypeScript programs. TypeScript has some syntax of its own, so typeScript programs are not, in general, valid JavaScript programs.</li>
+<li>TypeScript adds a type system that models JavaScript’s runtime behavior and tries to spot code which will throw exceptions at runtime. But you shouldn’t expect it to flag every exception. It is possible for code to pass the type checker but still throw at runtime.</li>
+<li>While TypeScript’s type system largely models JavaScript behavior, there are some constructs that JavaScript allows but TypeScript chooses to bar, such as calling functions with the wrong number of arguments. This is largely a matter of taste.</li>
+</ul>
+</li>
+</ul>
+<h1 id="know-which-typescript-options-youre-using" style="position:relative;"><a href="#know-which-typescript-options-youre-using" aria-label="know which typescript options youre using permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>know which TypeScript Options You’re Using</h1>
+<ul>
+<li>if you mean to allow null, you can fix the error by making your intent explicit:</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token literal-property property">x</span><span class="token operator">:</span> number <span class="token operator">|</span> <span class="token keyword">null</span> <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li><strong>Things to Remember</strong>
+<ul>
+<li>The TypeScript compiler includes several settings which affect core aspects of the language.</li>
+<li>Configure TypeScript using tsconfig.json rather than command-line. options.</li>
+<li>Turn on noImplicit Any unless you are transitioning a JavaScript project to TypeScript.</li>
+<li>Use strictNullChecks to prevent “undefined is not an object”- style runtime errors.</li>
+<li>Aim to enable strict to get the most thorough checking that TypeScript can offer.</li>
+</ul>
+</li>
+</ul>
+<h1 id="avoid-cluttering-your-code-with-inferable-types" style="position:relative;"><a href="#avoid-cluttering-your-code-with-inferable-types" aria-label="avoid cluttering your code with inferable types permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Avoid Cluttering Your Code with Inferable Types</h1>
 <ul>
 <li>example 1:</li>
 </ul>
