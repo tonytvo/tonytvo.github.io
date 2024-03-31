@@ -90,6 +90,142 @@
 </ul>
 </li>
 </ul>
+<h1 id="understand-that-code-generation-is-independent-of-types" style="position:relative;"><a href="#understand-that-code-generation-is-independent-of-types" aria-label="understand that code generation is independent of types permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>understand that code generation is independent of types</h1>
+<ul>
+<li>At a high level, tsc (the TypeScript compiler) does two things:
+<ul>
+<li>It converts next-generation TypeScript/JavaScript to an older version of JavaScript that works in browsers (“transpiling”).</li>
+<li>It checks your code for type errors.</li>
+</ul>
+</li>
+<li>The types in your code cannot affect the JavaScript that TypeScript emits. Since it’s this JavaScript that gets executed, this means that your types can’t affect the way your code runs.</li>
+<li>Code with Type Errors Can Produce Output because Because code output is independent of type checking</li>
+</ul>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">$ <span class="token function">cat</span> test.ts
+<span class="token builtin class-name">let</span> x <span class="token string">'hello'</span><span class="token punctuation">;</span>
+X <span class="token operator">=</span> <span class="token number">1234</span><span class="token punctuation">;</span>
+$ tsc test.ts
+test.ts:2:1- error TS2322: Type <span class="token string">'1234'</span> is not assignable to <span class="token builtin class-name">type</span> <span class="token string">'string'</span>
+<span class="token number">2</span> x <span class="token operator">=</span> <span class="token number">1234</span><span class="token punctuation">;</span>
+
+$ <span class="token function">cat</span> test.js
+var x <span class="token operator">=</span> <span class="token string">'hello'</span><span class="token punctuation">;</span>
+x <span class="token operator">=</span> <span class="token number">1234</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>
+<p>You can think of all TypeScript errors as being similar to warnings in those languages: it’s likely that they indicate a problem and are worth investigating, but they won’t stop the build.</p>
+<ul>
+<li>It’s better to say that your code has errors, or that it “doesn’t type check.”</li>
+</ul>
+</li>
+<li>
+<p>You should aim for zero errors when you commit code, lest you fall into the trap of having to remember what is an expected or unexpected error. If you want to disable output on errors, you can use the noEmitOnError option in tsconfig.json, or the equivalent in your build tool.</p>
+</li>
+<li>
+<p><strong>You Cannot Check TypeScript Types at Runtime</strong></p>
+</li>
+<li>
+<p><strong>Things to Remember</strong></p>
+<ul>
+<li>Code generation is independent of the type system. This means that TypeScript types cannot affect the runtime behavior or performance of your code.
+<ul>
+<li>the TypeScript compiler will introduce build time overhead. The TypeScript team takes compiler performance seriously and compilation is usually quite fast, especially for incremental builds. If the overhead becomes significant, your build tool may have a “transpile only” option to skip the type checking.</li>
+<li>The code that TypeScript emits to support older runtimes may incur a performance overhead vs. native implementations. For example, if you use generator functions and target ES5, which predates generators, then tsc will emit some helper code to make things work. This may have some overhead vs. a native implementation of generators. In any case, this has to do with the emit target and language levels and is still independent of the types.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token keyword">as</span> <span class="token function">Number</span> <span class="token punctuation">(</span>val<span class="token operator">:</span> number <span class="token operator">|</span> string<span class="token punctuation">)</span><span class="token operator">:</span> number <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> val <span class="token keyword">as</span> number<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// Looking at the generated JavaScript makes it clear what this function really does:</span>
+<span class="token keyword">function</span> <span class="token keyword">as</span> <span class="token function">Number</span> <span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> val<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//There is no conversion going on whatsoever. The as number is a type operation, so it cannot affect the runtime behavior of your code. To normalize the value you'll need to check its runtime type and do the conversion using JavaScript constructs:</span>
+<span class="token keyword">function</span> <span class="token function">asNumber</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">val</span><span class="token operator">:</span> number <span class="token operator">|</span> string</span><span class="token punctuation">)</span><span class="token operator">:</span> number <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">typeof</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">'string'</span> <span class="token operator">?</span> <span class="token function">Number</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token operator">:</span> val<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li><strong>runtime types may not be the same as declared types</strong></li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">setLightSwitch</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">value</span><span class="token operator">:</span> boolean</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+  <span class="token keyword">switch</span> <span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> <span class="token boolean">true</span><span class="token operator">:</span>
+      <span class="token function">turnLighton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> <span class="token boolean">false</span><span class="token operator">:</span>
+      <span class="token function">turnLightOff</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">default</span><span class="token operator">:</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Im afraid I cant do that."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// The key is to remember that boolean is the declared type. Because it is a TypeScript type, it goes away at runtime. In JavaScript code, a user might inadvertently call setLightSwitch with a value like "ON"</span></code></pre></div>
+<ul>
+<li><strong>You Cannot Overload a Function Based on TypeScript Types</strong>
+<ul>
+<li>Languages like C++ allow you to define multiple versions of a function that differ only in the types of their parameters. This is called “function overloading” Because the runtime behavior of your code is independent of its TypeScript types, this construct isn’t possible in TypeScript:</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">a</span><span class="token operator">:</span> number<span class="token punctuation">,</span> <span class="token literal-property property">b</span><span class="token operator">:</span> number</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span> <span class="token punctuation">}</span> <span class="token comment">// Duplicate function implementation </span>
+<span class="token keyword">function</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">a</span><span class="token operator">:</span> string<span class="token punctuation">,</span> <span class="token literal-property property">b</span><span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span> <span class="token punctuation">}</span> <span class="token comment">// Duplicate function implementation</span>
+
+<span class="token comment">// TypeScript does provide a facility for overloading functions, but it operates entirely at the type level. You can provide multiple declarations for a function, but only a single implementation:</span>
+<span class="token keyword">function</span> <span class="token function">add</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">a</span><span class="token operator">:</span> number<span class="token punctuation">,</span> <span class="token literal-property property">b</span><span class="token operator">:</span> number</span><span class="token punctuation">)</span><span class="token operator">:</span> number<span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">add</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">a</span><span class="token operator">:</span> string<span class="token punctuation">,</span> <span class="token literal-property property">b</span><span class="token operator">:</span> string</span><span class="token punctuation">)</span><span class="token operator">:</span> string<span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">add</span> <span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> three <span class="token function">add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Type is number</span>
+<span class="token keyword">const</span> twelve <span class="token operator">=</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token string">'1'</span><span class="token punctuation">,</span> <span class="token string">'2'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Type is string</span>
+<span class="token comment">//The first two declarations of add only provide type information. When TypeScript produces JavaScript output, they are removed, and only the implementation remains. </span></code></pre></div>
+<ul>
+<li>It is possible for a program with type errors to produce code (“compile”).</li>
+<li>TypeScript types are not available at runtime. To query a type at runtime, you need some way to reconstruct it. Tagged unions and property checking are common ways to do this. Some constructs, such as class, introduce both a TypeScript type and a value that is available at runtime.</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">//check for property example</span>
+<span class="token keyword">function</span> calculate <span class="token function">Area</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">shape</span><span class="token operator">:</span> Shape</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">'height'</span> <span class="token keyword">in</span> shape<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+shape<span class="token punctuation">;</span> <span class="token comment">// Type is Rectangle</span>
+<span class="token keyword">return</span> shape<span class="token punctuation">.</span>width <span class="token operator">*</span> shape<span class="token punctuation">.</span>height<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+shape<span class="token punctuation">;</span> <span class="token comment">// Type is Square</span>
+
+<span class="token comment">// tagged unions example</span>
+<span class="token keyword">interface</span> <span class="token class-name">Square</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">kind</span><span class="token operator">:</span> <span class="token string">'square'</span><span class="token punctuation">;</span>
+  <span class="token literal-property property">width</span><span class="token operator">:</span> number<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">interface</span> <span class="token class-name">Rectangle</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">kind</span><span class="token operator">:</span> <span class="token string">'rectangle'</span><span class="token punctuation">;</span>
+  <span class="token literal-property property">height</span><span class="token operator">:</span> number<span class="token punctuation">;</span>
+  <span class="token literal-property property">width</span><span class="token operator">:</span> number<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+type Shape <span class="token operator">=</span> Square <span class="token operator">|</span> Rectangle<span class="token punctuation">;</span>
+
+<span class="token comment">// class constructs introduce both a type and a value</span>
+<span class="token keyword">class</span> <span class="token class-name">Square</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token keyword">public</span> <span class="token literal-property property">width</span><span class="token operator">:</span> number</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Rectangle</span> <span class="token keyword">extends</span> <span class="token class-name">Square</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token keyword">public</span> <span class="token literal-property property">width</span><span class="token operator">:</span> number<span class="token punctuation">,</span> <span class="token keyword">public</span> <span class="token literal-property property">height</span><span class="token operator">:</span> number</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">super</span><span class="token punctuation">(</span>width<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+type Shape <span class="token operator">=</span> Square <span class="token operator">|</span> Rectangle<span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">calculateArea</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">shape</span><span class="token operator">:</span> Shape</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>shape <span class="token keyword">instanceof</span> <span class="token class-name">Rectangle</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    shape<span class="token punctuation">;</span> <span class="token comment">// Type is Rectangle </span>
+    <span class="token keyword">return</span> shape<span class="token punctuation">.</span>width <span class="token operator">*</span> shape<span class="token punctuation">.</span>height<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    shape<span class="token punctuation">;</span><span class="token comment">// Type is Square return shape.width</span>
+    <span class="token keyword">return</span> shape<span class="token punctuation">.</span>width<span class="token operator">*</span>shape<span class="token punctuation">.</span>width<span class="token punctuation">;</span> <span class="token comment">// OK</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//this works because class Rectangle introduces both a type and a value, whereas interface only introduced a type</span>
+<span class="token comment">//The Rectangle in type Shape = Square | Rectangle refers to the type, but the Rectangle in shape instanceof Rectangle refers to the value.</span></code></pre></div>
 <h1 id="understand-evolving-any" style="position:relative;"><a href="#understand-evolving-any" aria-label="understand evolving any permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Understand Evolving any</h1>
 <ul>
 <li>example 1:</li>
