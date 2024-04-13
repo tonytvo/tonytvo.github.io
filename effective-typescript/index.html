@@ -331,6 +331,92 @@ type Shape <span class="token operator">=</span> Square <span class="token opera
 <span class="token comment">// And your tests don't need to know anything about your production database: no mocking libraries necessary!</span>
 <span class="token comment">// By introducing an abstraction (DB), we've freed our logic (and tests) from the details of a specific implementation (PostgresDB).</span>
 <span class="token comment">// Another advantage of structural typing is that it can cleanly sever dependencies between libraries.</span></code></pre></div>
+<h1 id="limit-use-of-the-any-type" style="position:relative;"><a href="#limit-use-of-the-any-type" aria-label="limit use of the any type permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>limit use of the any Type</h1>
+<ul>
+<li>
+<p>The “any type” effectively silences the type checker and TypeScript language services. It can mask real problems, harm developer experience, and undermine confidence in the type system. Avoid using it when you can!</p>
+</li>
+<li>
+<p>TypeScript’s type system is <em>gradual and optional</em>: <em>gradual</em> because you can add types to your code bit by bit and <em>optional</em> because you can disable the type checker whenever you like. The key to these features is the any type:</p>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> <span class="token literal-property property">age</span><span class="token operator">:</span> number<span class="token punctuation">;</span>
+age <span class="token operator">=</span> <span class="token string">'12'</span><span class="token punctuation">;</span> <span class="token comment">// Type "12" is not assignable to type 'number'</span>
+age <span class="token operator">=</span> <span class="token string">'12'</span> <span class="token keyword">as</span> any<span class="token punctuation">;</span> <span class="token comment">// OK</span>
+<span class="token comment">//The type checker is right to complain here, but you can silence it just by typing as any.</span></code></pre></div>
+<ul>
+<li><strong>There’s No Type Safety with any Types</strong>
+<ul>
+<li>In the preceding example, the type declaration says that age is a number. But any lets you assign a string to it. The type checker will believe that it’s a number (that’s what you said, after all), and the chaos will go uncaught:</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">age <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// OK; at runtime, age is now "121"</span></code></pre></div>
+<ul>
+<li>
+<p><strong>any Lets You Break Contracts</strong></p>
+<ul>
+<li>When you write a function, you are specifying a contract: if the caller gives you a certain type of input, you’ll produce a certain type of output. But with an any type you can break these contracts:</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">calculateAge</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">birthDate</span><span class="token operator">:</span> Date</span><span class="token punctuation">)</span><span class="token operator">:</span> number <span class="token punctuation">{</span> <span class="token comment">// ... </span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> <span class="token literal-property property">birthDate</span><span class="token operator">:</span> any <span class="token operator">=</span> <span class="token string">'1990-01-19'</span><span class="token punctuation">;</span> <span class="token function">calculateAge</span> <span class="token punctuation">(</span>birthDate<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// OK</span></code></pre></div>
+<ul>
+<li><strong>There Are No Language Services for any Types</strong>
+<ul>
+<li>
+<p>When a symbol has a type, the TypeScript language services are able to provide intelligent autocomplete and contextual documentation  but for symbols with an any type, you’re on your own</p>
+</li>
+<li>
+<p>Renaming is another such service. If you have a Person type and functions to format a person’s name:</p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">interface</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span> <span class="token literal-property property">first</span><span class="token operator">:</span> string<span class="token punctuation">;</span> last<span class="token operator">:</span> string<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token keyword">const</span> <span class="token function-variable function">formatName</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">p</span><span class="token operator">:</span> Person</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>p<span class="token punctuation">.</span>first<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>p<span class="token punctuation">.</span>last<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span> <span class="token keyword">const</span> <span class="token function-variable function">formatNameAny</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">p</span><span class="token operator">:</span> any</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>p<span class="token punctuation">.</span>first<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>p<span class="token punctuation">.</span>last<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>
+<p>TypeScript’s motto is “JavaScript that scales.” A key part of “scales” is the language services, which are a core part of the TypeScript experience. Losing them will lead to a loss in productivity, not just for you but for everyone else working with your code.</p>
+</li>
+<li>
+<p><strong>any Types Mask Bugs When You Refactor Code</strong></p>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">interface</span> <span class="token class-name">Component</span> Props <span class="token punctuation">{</span>
+  <span class="token function-variable function">onSelectItem</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">item</span><span class="token operator">:</span> any</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">void</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Here's code that manages that component:</span>
+<span class="token keyword">function</span> render <span class="token function">Selector</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">props</span><span class="token operator">:</span> ComponentProps</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">/*...*/</span> <span class="token punctuation">}</span>
+<span class="token keyword">let</span> <span class="token literal-property property">selectedId</span><span class="token operator">:</span> number <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">handleSelectItem</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">item</span><span class="token operator">:</span> any</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  selectedId<span class="token operator">=</span> item<span class="token punctuation">.</span> id<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">renderSelector</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token literal-property property">onSelectItem</span><span class="token operator">:</span> handleSelectItem<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//Later you rework the selector in a way that makes it harder to pass the whole item object through to onSelectItem. </span>
+<span class="token comment">//But that's no big deal since you just need the ID. You change the signature in Component Props. It passed type checker but it produces runtime exception</span>
+<span class="token keyword">interface</span> <span class="token class-name">Component</span> Props <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+<span class="token function-variable function">onSelectItem</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">id</span><span class="token operator">:</span> number</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">void</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>
+<p><strong>any Hides Your Type Design</strong></p>
+</li>
+<li>
+<p><strong>any Undermines Confidence in the Type System</strong></p>
+<ul>
+<li>
+<p>Every time you make a mistake and the type checker catches it, it boosts your confidence in the type system. But when you see a type error at runtime, that confidence takes a hit. If you’re introducing TypeScript on a larger team, this might make your coworkers question whether TypeScript is worth the effort. any types are often the source of these uncaught errors.</p>
+</li>
+<li>
+<p>TypeScript aims to make your life easier, but TypeScript with lots of any types can be harder to work with than untyped JavaScript because you have to fix type errors and still keep track of the real types in your head. When your types match reality, it frees you from the burden of having to keep type information in your head. TypeScript will keep track of it for you.</p>
+</li>
+</ul>
+</li>
+</ul>
 <h1 id="understand-evolving-any" style="position:relative;"><a href="#understand-evolving-any" aria-label="understand evolving any permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Understand Evolving any</h1>
 <ul>
 <li>example 1:</li>
