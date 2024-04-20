@@ -417,6 +417,105 @@ age <span class="token operator">=</span> <span class="token string">'12'</span>
 </ul>
 </li>
 </ul>
+<h1 id="use-your-editor-to-interrogate-and-explore-the-type-system" style="position:relative;"><a href="#use-your-editor-to-interrogate-and-explore-the-type-system" aria-label="use your editor to interrogate and explore the type system permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use Your Editor to Interrogate and Explore the Type System</h1>
+<ul>
+<li>Take advantage of the TypeScript language services by using an editor that can use them.</li>
+</ul>
+<p>Use your editor to build an intuition for how the type system works and how TypeScript infers types.</p>
+<ul>
+<li>
+<p>Know how to jump into type declaration files to see how they model behavior.</p>
+</li>
+<li>
+<p>When you install TypeScript, you get two executables:</p>
+<ul>
+<li>tsc, the TypeScript compiler</li>
+<li>tsserver, the TypeScript standalone server</li>
+</ul>
+</li>
+<li>
+<p>You’re much more likely to run the TypeScript compiler directly, but the server is every bit as important because it provides language services. These include autocomplete, inspection, navigation, and refactoring. You typically use these services through your editor. If yours isn’t configured to provide them, then you’re missing out! Services like autocomplete are one of the things that make TypeScript such a joy to use. But beyond convenience, your editor is the best place to build and test your knowledge of the type system. This will help you build an intuition for when TypeScript is able to infer types, which is key to writing compact, idiomatic code (see Item 19).</p>
+</li>
+</ul>
+<p>The details will vary from editor to editor, but you can generally mouse over a symbol to see what TypeScript considers its type (see Figure 2-1).
+let num: number
+let num = 10;
+Figure 2-1. An editor (vscode) showing that the inferred type of the num symbol is number You didn’t write number here, but TypeScript was able to figure it out based on the value 10.
+You can also inspect functions, as shown in Figure 2-2.
+function add(a: number, b: number): number function add (a: number, b: number) { return a + b;
+}
+Figure 2-2. Using an editor to reveal the inferred type for a function</p>
+<p>The noteworthy bit of information is the inferred value for the return type, number. If this does not match your expectation, you should add a type declaration and track down the discrepancy (see Item 9).
+Seeing TypeScript’s understanding of a variable’s type at any given point is essential for building an intuition around widening (Item 21) and narrowing (Item 22). Seeing the type of a variable change in the branch of a conditional is a tremendous way to build confidence in the type system (see Figure 2-3).
+function logMessage(message: string | null) { if (message) {
+}
+}
+(parameter) message: string
+message
+Figure 2-3. The type of message is string/ null outside the branch but string inside.
+You can inspect individual properties in a larger object to see what TypeScript has inferred about them (see Figure 2-4).</p>
+<p>const foo = {
+(property) x: number []
+x: [1, 2, 3],
+bar: {
+To see inferred generic types in the middle of a
+chain of operations, inspect the method name (as shown in Figure 2-5).
+function restOfPath(path: string) {
+(method) Array<string>.slice(start?: number, end?: number): string[] Returns section of an array.
+@param start - The beginning of the specified portion of the array.
+@param end The end of the specified portion of the array.
+name: ‘Fred’
+}
+};
+Figure 2-4. Inspecting how TypeScript has inferred types in an object
+If your intention was for x to be a tuple type ([number, number, number]), then a type annotation will be required.
+}
+return path.split(’/‘).slice(1).join(’/’);
+Figure 2-5. Revealing inferred generic types in a chain of method calls
+The Array<string> indicates that TypeScript understands that split produced an array of strings. While there was little ambiguity in this case, this information can prove essential in writing and debugging long chains of function calls.</p>
+<p>Seeing type errors in your editor can also be a great way to learn the nuances of the type system. For example, this function tries to get an HTMLElement by its ID, or return a default one. TypeScript flags two errors:
+function getElement (el0rId: string| HTMLElement | null): HTMLElement { if (typeof el0rId === ‘object’) { return el0rId;
+//
+‘HTMLElement | null’ is not assignable to ‘HTMLElement’ } else if (el0rId === null) { return document.body;
+} else {
+const el =
+document.getElementById(el0rId);
+return el;
+// ~~~~~~~
+‘HTMLElement | null’ is not assignable to ‘HTMLElement’
+}
+The intent in the first branch of the if statement was to filter down to just the objects, namely, the HTMLElements. But oddly enough, in JavaScript typeof null is “object”, so el0rId could still be null in that branch. You can fix this by putting the null check first. The second error is because document.getElementById can return null, so you need to handle that case as well, perhaps by throwing an exception. Language services can also help you navigate through libraries and type declarations. Suppose you see a call to the fetch function in code and want to learn more about it. Your editor should
+}</p>
+<h1 id="provide-a-go-to-definition-option-in-mine-it-looks-like-it-does-in-figure-2-6const-response--fetchhttpexamplecomgo-to-definitionf12peek-definitionxf12go-to-type-definitionfind-all-referencesxf12f12peek-referencesfigure-2-6-the-typescript-language-service-provides-a-go-to-definition-feature-that-should-be-surfaced-in-your-editorselecting-this-option-takes-you-into-libdomdts-the-type-declarations-which-typescript-includes-for-the-domdeclare-function-fetchinput-request-info-init-requestinit--promiseresponseyou-can-see-that-fetch-returns-a-promise-and-takes-two-arguments-clicking-through-on-requestinfo-brings-you-heretype-request-info-request-string" style="position:relative;"><a href="#provide-a-go-to-definition-option-in-mine-it-looks-like-it-does-in-figure-2-6const-response--fetchhttpexamplecomgo-to-definitionf12peek-definitionxf12go-to-type-definitionfind-all-referencesxf12f12peek-referencesfigure-2-6-the-typescript-language-service-provides-a-go-to-definition-feature-that-should-be-surfaced-in-your-editorselecting-this-option-takes-you-into-libdomdts-the-type-declarations-which-typescript-includes-for-the-domdeclare-function-fetchinput-request-info-init-requestinit--promiseresponseyou-can-see-that-fetch-returns-a-promise-and-takes-two-arguments-clicking-through-on-requestinfo-brings-you-heretype-request-info-request-string" aria-label="provide a go to definition option in mine it looks like it does in figure 2 6const response  fetchhttpexamplecomgo to definitionf12peek definitionxf12go to type definitionfind all referencesxf12f12peek referencesfigure 2 6 the typescript language service provides a go to definition feature that should be surfaced in your editorselecting this option takes you into libdomdts the type declarations which typescript includes for the domdeclare function fetchinput request info init requestinit  promiseresponseyou can see that fetch returns a promise and takes two arguments clicking through on requestinfo brings you heretype request info request string permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>provide a “Go to Definition” option. In mine it looks like it does in Figure 2-6.
+const response = fetch(’<a href="http://example.com">http://example.com</a>’);
+Go to Definition
+F12
+Peek Definition
+XF12
+Go to Type Definition
+Find All References
+XF12
+F12
+Peek References
+Figure 2-6. The TypeScript language service provides a “Go to Definition” feature that should be surfaced in your editor.
+Selecting this option takes you into lib.dom.d.ts, the type declarations which TypeScript includes for the DOM:
+declare function fetch(
+input: Request Info, init?: RequestInit ): Promise<Response>;
+You can see that fetch returns a Promise and takes two arguments. Clicking through on RequestInfo brings you here:
+type Request Info Request string;</h1>
+<p>from which you can go to Request:
+declare var Request: {
+prototype: Request;
+new(input: Request Info, init?: RequestInit): Request;
+};
+Here you can see that the Request type and value are being modeled separately (see Item 8). You’ve seen Request Info already. Clicking through on RequestInit shows everything you can use to construct a Request:</p>
+<p>interface RequestInit {
+}
+body?: BodyInit | null; cache? RequestCache;
+credentials?: RequestCredentials; headers?: Headers Init;
+// …
+There are many more types you could follow here, but you get the idea. Type declarations can be challenging to read at first, but they’re an excellent way to see what can be done with TypeScript, how the library you’re using is modeled, and how you might debug errors. For much more on type declarations, see Chapter 6.
+Things to Remember</p>
 <h1 id="understand-evolving-any" style="position:relative;"><a href="#understand-evolving-any" aria-label="understand evolving any permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Understand Evolving any</h1>
 <ul>
 <li>example 1:</li>
@@ -683,4 +782,4 @@ app<span class="token punctuation">.</span><span class="token function">get</spa
           >
             window.___chunkMapping="{\"app\":[\"/app-dff359f42b4b1323adff.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-fe49012c596fa8e02e94.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-137bafc43fb95c27cc25.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-2fd0383b8dc4270b2974.js\"],\"component---src-pages-using-typescript-tsx\":[\"/component---src-pages-using-typescript-tsx-b3f1483ead526a95c936.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-161de0eab28c1f89b9c7.js\"],\"component---src-templates-tags-js\":[\"/component---src-templates-tags-js-937a80c11540749e5e6b.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="f0eae0ed376362d86dc6";</script><script src="/webpack-runtime-367126daf6d5ad1339b6.js" async></script><script src="/framework-24a4af5e8d436029005a.js" async></script><script src="/app-dff359f42b4b1323adff.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="622739c5566122b98539";</script><script src="/webpack-runtime-647158e94add31207306.js" async></script><script src="/framework-24a4af5e8d436029005a.js" async></script><script src="/app-dff359f42b4b1323adff.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
