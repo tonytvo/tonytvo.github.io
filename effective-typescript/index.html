@@ -434,88 +434,153 @@ age <span class="token operator">=</span> <span class="token string">'12'</span>
 </ul>
 </li>
 <li>
-<p>You’re much more likely to run the TypeScript compiler directly, but the server is every bit as important because it provides language services. These include autocomplete, inspection, navigation, and refactoring. You typically use these services through your editor. If yours isn’t configured to provide them, then you’re missing out! Services like autocomplete are one of the things that make TypeScript such a joy to use. But beyond convenience, your editor is the best place to build and test your knowledge of the type system. This will help you build an intuition for when TypeScript is able to infer types, which is key to writing compact, idiomatic code (see Item 19).</p>
+<p>configure the language services with your editor for services like autocomplete, inspection, navigation, and refactoring.</p>
+</li>
+<li>
+<p>if the inferred type does not match your expectation, you should add a type declaration and track down the discrepancy.</p>
 </li>
 </ul>
-<p>The details will vary from editor to editor, but you can generally mouse over a symbol to see what TypeScript considers its type (see Figure 2-1).
-let num: number
-let num = 10;
-Figure 2-1. An editor (vscode) showing that the inferred type of the num symbol is number You didn’t write number here, but TypeScript was able to figure it out based on the value 10.
-You can also inspect functions, as shown in Figure 2-2.
-function add(a: number, b: number): number function add (a: number, b: number) { return a + b;
-}
-Figure 2-2. Using an editor to reveal the inferred type for a function</p>
-<p>The noteworthy bit of information is the inferred value for the return type, number. If this does not match your expectation, you should add a type declaration and track down the discrepancy (see Item 9).
-Seeing TypeScript’s understanding of a variable’s type at any given point is essential for building an intuition around widening (Item 21) and narrowing (Item 22). Seeing the type of a variable change in the branch of a conditional is a tremendous way to build confidence in the type system (see Figure 2-3).
-function logMessage(message: string | null) { if (message) {
-}
-}
-(parameter) message: string
-message
-Figure 2-3. The type of message is string/ null outside the branch but string inside.
-You can inspect individual properties in a larger object to see what TypeScript has inferred about them (see Figure 2-4).</p>
-<p>const foo = {
-(property) x: number []
-x: [1, 2, 3],
-bar: {
-To see inferred generic types in the middle of a
-chain of operations, inspect the method name (as shown in Figure 2-5).
-function restOfPath(path: string) {
-(method) Array<string>.slice(start?: number, end?: number): string[] Returns section of an array.
-@param start - The beginning of the specified portion of the array.
-@param end The end of the specified portion of the array.
-name: ‘Fred’
-}
-};
-Figure 2-4. Inspecting how TypeScript has inferred types in an object
-If your intention was for x to be a tuple type ([number, number, number]), then a type annotation will be required.
-}
-return path.split(’/‘).slice(1).join(’/’);
-Figure 2-5. Revealing inferred generic types in a chain of method calls
-The Array<string> indicates that TypeScript understands that split produced an array of strings. While there was little ambiguity in this case, this information can prove essential in writing and debugging long chains of function calls.</p>
-<p>Seeing type errors in your editor can also be a great way to learn the nuances of the type system. For example, this function tries to get an HTMLElement by its ID, or return a default one. TypeScript flags two errors:
-function getElement (el0rId: string| HTMLElement | null): HTMLElement { if (typeof el0rId === ‘object’) { return el0rId;
-//
-‘HTMLElement | null’ is not assignable to ‘HTMLElement’ } else if (el0rId === null) { return document.body;
-} else {
-const el =
-document.getElementById(el0rId);
-return el;
-// ~~~~~~~
-‘HTMLElement | null’ is not assignable to ‘HTMLElement’
-}
-The intent in the first branch of the if statement was to filter down to just the objects, namely, the HTMLElements. But oddly enough, in JavaScript typeof null is “object”, so el0rId could still be null in that branch. You can fix this by putting the null check first. The second error is because document.getElementById can return null, so you need to handle that case as well, perhaps by throwing an exception. Language services can also help you navigate through libraries and type declarations. Suppose you see a call to the fetch function in code and want to learn more about it. Your editor should
-}</p>
-<h1 id="provide-a-go-to-definition-option-in-mine-it-looks-like-it-does-in-figure-2-6const-response--fetchhttpexamplecomgo-to-definitionf12peek-definitionxf12go-to-type-definitionfind-all-referencesxf12f12peek-referencesfigure-2-6-the-typescript-language-service-provides-a-go-to-definition-feature-that-should-be-surfaced-in-your-editorselecting-this-option-takes-you-into-libdomdts-the-type-declarations-which-typescript-includes-for-the-domdeclare-function-fetchinput-request-info-init-requestinit--promiseresponseyou-can-see-that-fetch-returns-a-promise-and-takes-two-arguments-clicking-through-on-requestinfo-brings-you-heretype-request-info-request-string" style="position:relative;"><a href="#provide-a-go-to-definition-option-in-mine-it-looks-like-it-does-in-figure-2-6const-response--fetchhttpexamplecomgo-to-definitionf12peek-definitionxf12go-to-type-definitionfind-all-referencesxf12f12peek-referencesfigure-2-6-the-typescript-language-service-provides-a-go-to-definition-feature-that-should-be-surfaced-in-your-editorselecting-this-option-takes-you-into-libdomdts-the-type-declarations-which-typescript-includes-for-the-domdeclare-function-fetchinput-request-info-init-requestinit--promiseresponseyou-can-see-that-fetch-returns-a-promise-and-takes-two-arguments-clicking-through-on-requestinfo-brings-you-heretype-request-info-request-string" aria-label="provide a go to definition option in mine it looks like it does in figure 2 6const response  fetchhttpexamplecomgo to definitionf12peek definitionxf12go to type definitionfind all referencesxf12f12peek referencesfigure 2 6 the typescript language service provides a go to definition feature that should be surfaced in your editorselecting this option takes you into libdomdts the type declarations which typescript includes for the domdeclare function fetchinput request info init requestinit  promiseresponseyou can see that fetch returns a promise and takes two arguments clicking through on requestinfo brings you heretype request info request string permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>provide a “Go to Definition” option. In mine it looks like it does in Figure 2-6.
-const response = fetch(’<a href="http://example.com">http://example.com</a>’);
-Go to Definition
-F12
-Peek Definition
-XF12
-Go to Type Definition
-Find All References
-XF12
-F12
-Peek References
-Figure 2-6. The TypeScript language service provides a “Go to Definition” feature that should be surfaced in your editor.
-Selecting this option takes you into lib.dom.d.ts, the type declarations which TypeScript includes for the DOM:
-declare function fetch(
-input: Request Info, init?: RequestInit ): Promise<Response>;
-You can see that fetch returns a Promise and takes two arguments. Clicking through on RequestInfo brings you here:
-type Request Info Request string;</h1>
-<p>from which you can go to Request:
-declare var Request: {
-prototype: Request;
-new(input: Request Info, init?: RequestInit): Request;
-};
-Here you can see that the Request type and value are being modeled separately (see Item 8). You’ve seen Request Info already. Clicking through on RequestInit shows everything you can use to construct a Request:</p>
-<p>interface RequestInit {
-}
-body?: BodyInit | null; cache? RequestCache;
-credentials?: RequestCredentials; headers?: Headers Init;
-// …
-There are many more types you could follow here, but you get the idea. Type declarations can be challenging to read at first, but they’re an excellent way to see what can be done with TypeScript, how the library you’re using is modeled, and how you might debug errors. For much more on type declarations, see Chapter 6.
-Things to Remember</p>
+<p>Seeing TypeScript’s understanding of a variable’s type at any given point is essential for building an intuition around widening (Item 21) and narrowing (Item 22). Seeing the type of a variable change in the branch of a conditional is a tremendous way to build confidence in the type system (see Figure 2-3).</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">logMessage</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">message</span><span class="token operator">:</span> string <span class="token operator">|</span> <span class="token keyword">null</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// type of message is string | null outside the branch but string inside</span>
+    message
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> foo <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">//If your intention was for x to be a tuple type ([number, number, number]), then a type annotation will be required.</span>
+  <span class="token comment">//(property) x: number []</span>
+  <span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">bar</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>Seeing type errors in your editor can also be a great way to learn the nuances of the type system. For example, this function tries to get an HTMLElement by its ID, or return a default one. TypeScript flags two errors:</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">getElement</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">el0rId</span><span class="token operator">:</span> string<span class="token operator">|</span> HTMLElement <span class="token operator">|</span> <span class="token keyword">null</span></span><span class="token punctuation">)</span><span class="token operator">:</span> HTMLElement <span class="token punctuation">{</span> 
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> el0rId <span class="token operator">===</span> <span class="token string">'object'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+    <span class="token comment">// 'HTMLElement | null' is not assignable to 'HTMLElement'</span>
+    <span class="token comment">// The intent in the first branch of the if statement was to filter down</span>
+    <span class="token comment">// to just the objects, namely, the HTMLElements.</span>
+    <span class="token comment">// But oddly enough, in JavaScript typeof null is "object", </span>
+    <span class="token comment">// so el0rId could still be null in that branch. </span>
+    <span class="token comment">// You can fix this by putting the null check first. </span>
+    <span class="token keyword">return</span> el0rId<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>el0rId <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+    <span class="token keyword">return</span> document<span class="token punctuation">.</span>body<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> el <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span>el0rId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// ~~~~~~~'HTMLElement | null' is not assignable to 'HTMLElement'</span>
+    <span class="token comment">// The second error is because document.getElementById can return null,</span>
+    <span class="token comment">// so you need to handle that case as well, perhaps by throwing an exception.</span>
+    <span class="token keyword">return</span> el<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h1 id="think-of-types-as-sets-of-values" style="position:relative;"><a href="#think-of-types-as-sets-of-values" aria-label="think of types as sets of values permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>think of types as sets of values</h1>
+<ul>
+<li>
+<p>Think of types as sets of values (the type’s domain). These sets can either be finite (e.g., boolean or literal types) or infinite (e.g., number or string).</p>
+<ul>
+<li>The smallest set is the empty set, which contains no values. It corresponds to the never type in TypeScript. Because its domain is empty, no values are assignable to a variable with a never type:</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token literal-property property">x</span><span class="token operator">:</span> never <span class="token operator">=</span> <span class="token number">12</span><span class="token punctuation">;</span>
+<span class="token comment">// Type '12' is not assignable to type 'never'</span></code></pre></div>
+<ul>
+<li>The next smallest sets are those which contain single values. These correspond to literal types in TypeScript, also known as unit types:</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">type <span class="token constant">A</span> <span class="token operator">=</span> <span class="token string">'A'</span><span class="token punctuation">;</span>
+type <span class="token constant">B</span> <span class="token operator">=</span> <span class="token string">'B'</span><span class="token punctuation">;</span>
+type Twelve <span class="token operator">=</span> <span class="token number">12</span><span class="token punctuation">;</span>
+<span class="token comment">// To form types with two or three values, you can union unit types:</span>
+type <span class="token constant">AB</span> <span class="token operator">=</span> <span class="token string">'A'</span> <span class="token operator">|</span> <span class="token string">'B'</span><span class="token punctuation">;</span> 
+type <span class="token constant">AB12</span> <span class="token operator">=</span> <span class="token string">'A'</span> <span class="token operator">|</span> <span class="token string">'B'</span> <span class="token operator">|</span> <span class="token number">12</span><span class="token punctuation">;</span>
+<span class="token comment">// and so on. Union types correspond to unions of sets of values.</span></code></pre></div>
+<ul>
+<li>
+<p>The word “assignable” appears in many TypeScript errors. In the context of sets of values, it means either “member of” (for a relationship between a value and a type) or “subset of” (for a relationship between two types):</p>
+</li>
+<li>
+<p>At the end of the day, almost all the type checker is doing is testing whether one set is a subset of another</p>
+</li>
+<li>
+<p>Think of Identified interface as a description of the values in the domain of its type. Does the value have an id property whose value is assignable to (a member of) string? Then it’s an Identified.</p>
+</li>
+<li>
+<p>Two ways of thinking of type relationships: as a hierarchy or as overlapping sets</p>
+</li>
+<li>
+<p>With the Venn diagram, it’s clear that the subset/subtype/assignability relationships are unchanged if you rewrite the interfaces without extends:</p>
+</li>
+<li>
+<p>Typescript types form intersecting sets (a Venn diagram) rather than a strict hierarchy. Two types can overlap without either being a subtype of the other.</p>
+<ul>
+<li>Remember that an object can still belong to a type even if it has additional properties that were not mentioned in the type declaration.</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">interface</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span> 
+  <span class="token literal-property property">name</span><span class="token operator">:</span> string<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">interface</span> <span class="token class-name">Lifespan</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">birth</span><span class="token operator">:</span> Date<span class="token punctuation">;</span>
+  death<span class="token operator">?</span> Date<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+type PersonSpan <span class="token operator">=</span> Person <span class="token operator">&amp;</span> Lifespan<span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token literal-property property">ps</span><span class="token operator">:</span> PersonSpan <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Alan Turing'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">birth</span><span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">'1912/06/23'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">death</span><span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">'1954/06/07'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">// OK</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>Type operations apply to a set’s domain. The intersection of A and B is the intersection of A’s domain and B’s domain. For object types, this means that values in A &#x26; B have the properties of both A and B.
+<ul>
+<li>Think of “extends,” “assignable to,” and “subtype of” as synonyms for “subset of.”</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">interface</span> <span class="token class-name">Point</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">x</span><span class="token operator">:</span> number<span class="token punctuation">;</span>
+  <span class="token literal-property property">y</span><span class="token operator">:</span> number<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+type PointKeys <span class="token operator">=</span> keyof Point<span class="token punctuation">;</span> <span class="token comment">// Type is "x" | "y"</span>
+<span class="token keyword">function</span> sortBy<span class="token operator">&lt;</span><span class="token constant">K</span> <span class="token keyword">extends</span> <span class="token class-name">keyof</span> <span class="token constant">T</span><span class="token punctuation">,</span> <span class="token constant">T</span><span class="token operator">></span><span class="token punctuation">(</span>vals<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token literal-property property">key</span><span class="token operator">:</span> <span class="token constant">K</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">const</span> <span class="token literal-property property">pts</span><span class="token operator">:</span> Point<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token literal-property property">y</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token literal-property property">y</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token function">sortBy</span> <span class="token punctuation">(</span>pts<span class="token punctuation">,</span> <span class="token string">'x'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// OK, 'x' extends'x'|'y' (aka keyof T)</span>
+<span class="token function">sortBy</span> <span class="token punctuation">(</span>pts<span class="token punctuation">,</span> <span class="token string">'y'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// OK, 'y' extends 'x'|'y'</span>
+<span class="token function">sortBy</span><span class="token punctuation">(</span>pts<span class="token punctuation">,</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">0.5</span> <span class="token operator">?</span> <span class="token string">'x'</span><span class="token operator">:</span> <span class="token string">'y'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// OK, 'x', 'y' extends 'x'|'y'</span>
+<span class="token function">sortBy</span> <span class="token punctuation">(</span>pts<span class="token punctuation">,</span> <span class="token string">'z'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//Type "z" is not assignable to parameter of type "x"|"y"</span>
+</code></pre></div>
+<ul>
+<li>
+<p>What’s the relationship between string|number and string|Date, for instance? Their intersection is non-empty (it’s string), but neither is a subset of the other. The relationship between their domains is clear, even though these types don’t fit into a strict hierarchy.</p>
+<ul>
+<li>Union types may not fit into a hierarchy but can be thought of in terms of sets of values</li>
+</ul>
+</li>
+<li>
+<p>Thinking of types as sets can also clarify the relationships between arrays and tuples.</p>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// Type is number[] </span>
+
+<span class="token comment">// Type 'number[]' is missing the following properties from type</span>
+<span class="token comment">// [number, number]': 0, 1</span>
+<span class="token keyword">const</span> <span class="token literal-property property">tuple</span><span class="token operator">:</span> <span class="token punctuation">[</span>number<span class="token punctuation">,</span> number<span class="token punctuation">]</span> <span class="token operator">=</span> list<span class="token punctuation">;</span> 
+<span class="token comment">//The empty list and the list [1] are list of numbers which are not pairs of numbers. It therefore makes sense that number [] is not assignable to [number, number] since it's not a subset of it. (The reverse assignment does work.)</span>
+
+<span class="token comment">//'[number, number, number]' is not assignable to '[number, number]' </span>
+<span class="token comment">//Types of property 'length are incompatible</span>
+<span class="token comment">//Type '3' is not assignable to type '2'</span>
+<span class="token keyword">const</span> <span class="token literal-property property">triple</span><span class="token operator">:</span> <span class="token punctuation">[</span>number<span class="token punctuation">,</span> number<span class="token punctuation">,</span> number<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token literal-property property">double</span><span class="token operator">:</span> <span class="token punctuation">[</span>number<span class="token punctuation">,</span> number<span class="token punctuation">]</span> <span class="token operator">=</span> triple<span class="token punctuation">;</span> 
+<span class="token comment">//TypeScript models a pairs of numbers as {0: number, 1: number, length: 2}.</span></code></pre></div>
+<ul>
+<li>Finally, it’s worth noting that not all sets of values correspond to TypeScript types. There is no TypeScript type for all the integers, or for all the objects that have x and y properties but no others. You can sometimes subtract types using Exclude, but only when it would result in a proper TypeScript type:</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">type <span class="token constant">T</span> <span class="token operator">=</span> Exclude <span class="token operator">&lt;</span>string <span class="token operator">|</span> Date<span class="token punctuation">,</span> string<span class="token operator">|</span> number<span class="token operator">></span><span class="token punctuation">;</span> <span class="token comment">// Type is Date</span>
+type NonZeroNums <span class="token operator">=</span> Exclude <span class="token operator">&lt;</span>number<span class="token punctuation">,</span> <span class="token number">0</span><span class="token operator">></span> <span class="token punctuation">;</span> <span class="token comment">// Type is still just number</span></code></pre></div>
 <h1 id="understand-evolving-any" style="position:relative;"><a href="#understand-evolving-any" aria-label="understand evolving any permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Understand Evolving any</h1>
 <ul>
 <li>example 1:</li>
