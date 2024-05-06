@@ -581,6 +581,95 @@ type PointKeys <span class="token operator">=</span> keyof Point<span class="tok
 </ul>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">type <span class="token constant">T</span> <span class="token operator">=</span> Exclude <span class="token operator">&lt;</span>string <span class="token operator">|</span> Date<span class="token punctuation">,</span> string<span class="token operator">|</span> number<span class="token operator">></span><span class="token punctuation">;</span> <span class="token comment">// Type is Date</span>
 type NonZeroNums <span class="token operator">=</span> Exclude <span class="token operator">&lt;</span>number<span class="token punctuation">,</span> <span class="token number">0</span><span class="token operator">></span> <span class="token punctuation">;</span> <span class="token comment">// Type is still just number</span></code></pre></div>
+<h1 id="prefer-type-declarations-to-type-assertions" style="position:relative;"><a href="#prefer-type-declarations-to-type-assertions" aria-label="prefer type declarations to type assertions permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>prefer type declarations to type assertions</h1>
+<ul>
+<li>Prefer type declarations <code class="language-text">(: Type)</code> to type assertions <code class="language-text">(as Type)</code>.</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token literal-property property">alice</span><span class="token operator">:</span> Person <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span> 
+<span class="token comment">// type '{}' Property 'name' is missing in but required in type 'Person'</span>
+<span class="token keyword">const</span> bob <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token keyword">as</span> Person<span class="token punctuation">;</span> <span class="token comment">// No error</span></code></pre></div>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">interface</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> string <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token literal-property property">alice</span><span class="token operator">:</span> Person <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Alice'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token comment">// Type is Person</span>
+<span class="token keyword">const</span> bob <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Bob'</span> <span class="token keyword">as</span> Person<span class="token punctuation">;</span> <span class="token punctuation">}</span> <span class="token comment">// Type is Person</span>
+<span class="token comment">// The first (alice: Person) adds a type declaration to the variable </span>
+<span class="token comment">// and ensures that the value conforms to the type. </span>
+<span class="token comment">// The latter (as Person) performs a type assertion. </span>
+<span class="token comment">// This tells TypeScript that, despite the type it inferred,</span>
+<span class="token comment">// you know better and would like the type to be Person.</span>
+
+<span class="token comment">// The same thing happens if you specify an additional property:</span>
+<span class="token keyword">const</span> <span class="token literal-property property">alice</span><span class="token operator">:</span> Person <span class="token operator">=</span> <span class="token punctuation">{</span> 
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Alice'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">occupation</span><span class="token operator">:</span> <span class="token string">'TypeScript developer'</span> 
+  <span class="token comment">// Object literal may only specify known properties</span>
+  <span class="token comment">// and 'occupation' does not exist in type 'Person'</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> bob <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Bob'</span><span class="token punctuation">,</span> 
+  <span class="token literal-property property">occupation</span><span class="token operator">:</span> <span class="token string">'JavaScript developer'</span>
+<span class="token punctuation">}</span> <span class="token keyword">as</span> Person<span class="token punctuation">;</span> <span class="token comment">// No error</span></code></pre></div>
+<ul>
+<li>Know how to annotate the return type of an arrow function.</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">//It's tempting to use a type assertion here, and it seems to solve the problem:</span>
+<span class="token keyword">const</span> people <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'alice'</span><span class="token punctuation">,</span> <span class="token string">'bob'</span><span class="token punctuation">,</span> <span class="token string">'jan'</span><span class="token punctuation">]</span>
+<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">name</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>name<span class="token punctuation">}</span> <span class="token keyword">as</span> Person<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Type is Person[]</span>
+
+
+<span class="token comment">//But this suffers from all the same issues as a more direct use of type assertions.</span>
+<span class="token comment">//For example:</span>
+<span class="token keyword">const</span> people <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'alice'</span><span class="token punctuation">,</span> <span class="token string">'jan'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">name</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token keyword">as</span> Person<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// No error</span>
+
+<span class="token comment">//A more concise way is to declare the return type of the arrow function:</span>
+<span class="token keyword">const</span> people <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'alice'</span><span class="token punctuation">,</span> <span class="token string">'bob'</span><span class="token punctuation">,</span> <span class="token string">'jan'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token parameter">Person</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>name<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token comment">// Type is Person []</span></code></pre></div>
+<ul>
+<li>Use type assertions and non-null assertions when you know something about types that TypeScript does not.</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">//For instance, you may know the type of a DOM element more precisely than TypeScript does:</span>
+document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#myButton'</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token parameter">e</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  e<span class="token punctuation">.</span>currentTarget <span class="token comment">// Type is Event Target </span>
+  <span class="token keyword">const</span> button <span class="token operator">=</span> e<span class="token punctuation">.</span>currentTarget <span class="token keyword">as</span> HTMLButtonElement<span class="token punctuation">;</span>
+  button <span class="token comment">// Type is HTMLButtonElement </span>
+<span class="token comment">//Because TypeScript doesn't have access to the DOM of your page,</span>
+<span class="token comment">//it has no way of knowing that #myButton is a button element.</span>
+<span class="token comment">//And it doesn't know that the currentTarget of the event should be that same button.</span>
+<span class="token comment">//Since you have information that TypeScript does not,</span>
+<span class="token comment">//a type assertion makes sense here</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//You may also run into the non-null assertion,</span>
+<span class="token comment">//which is so common that it gets a special syntax:</span>
+<span class="token keyword">const</span> elNull <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Type is HTMLElement | null </span>
+<span class="token keyword">const</span> el <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">)</span><span class="token operator">!</span><span class="token punctuation">;</span> <span class="token comment">// Type is HTMLElement</span>
+<span class="token comment">//Used as a prefix, ! is boolean negation.</span>
+<span class="token comment">//But as a suffix, is interpreted as an assertion that the value is non-null.</span>
+<span class="token comment">//You should treat ! just like any other assertion: </span>
+<span class="token comment">//it is erased during compilation, </span>
+<span class="token comment">//so you should only use it if you have information that the type checker lacks</span>
+<span class="token comment">//and can ensure that the value is non-null.</span>
+<span class="token comment">//If you can't, you should use a conditional to check for the null case.</span>
+
+
+<span class="token keyword">interface</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> string<span class="token punctuation">;</span> <span class="token punctuation">}</span> 
+<span class="token keyword">const</span> body <span class="token operator">=</span> document<span class="token punctuation">.</span>body<span class="token punctuation">;</span> <span class="token keyword">const</span> el body <span class="token keyword">as</span> Person<span class="token punctuation">;</span>
+<span class="token comment">//Conversion of type 'HTMLElement' to type 'Person' may be a mistake</span>
+<span class="token comment">//because neither type sufficiently overlaps with the other. If this was intentional,</span>
+</code></pre></div>
+<p>Type assertions have their limits: they don’t let you convert between arbitrary types. The general idea is that you can use a type assertion to convert between A and B if either is a subset of the other. HTMLElement is a subtype of HTMLElement | null, so this type assertion is OK. HTMLButtonElement is a subtype of EventTarget, so that was OK, too. And Person is a subtype of {}, so that assertion is also fine. But you can’t convert between a Person and an HTMLElement since neither is a subtype of the
+other:</p>
+<p>convert the
+expression to ‘unknown’
+first
+The error suggests an escape hatch, namely, using the unknown type (Item 42). Every type is a subtype of unknown, so assertions involving unknown are always OK. This lets you convert between arbitrary types, but at least you’re being explicit that you’re doing something suspicious!
+document.body as unknown as
+const el Person; // OK
+Things to Remember
+Prefer type declarations (: Type) to type assertions (as Type).
+. Know how to annotate the return type of an arrow function.
+. Use type assertions and non-null assertions when you know something about types that TypeScript does not.</p>
 <h1 id="understand-evolving-any" style="position:relative;"><a href="#understand-evolving-any" aria-label="understand evolving any permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Understand Evolving any</h1>
 <ul>
 <li>example 1:</li>
