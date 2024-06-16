@@ -662,68 +662,42 @@ document<span class="token punctuation">.</span><span class="token function">que
 <span class="token keyword">const</span> el <span class="token operator">=</span> document<span class="token punctuation">.</span>body <span class="token keyword">as</span> unknown <span class="token keyword">as</span> Person<span class="token punctuation">;</span> <span class="token comment">// OK</span></code></pre></div>
 <h1 id="avoid-object-wrapper-types-string-number-boolean-symbol-bigint" style="position:relative;"><a href="#avoid-object-wrapper-types-string-number-boolean-symbol-bigint" aria-label="avoid object wrapper types string number boolean symbol bigint permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Avoid Object Wrapper Types (String, Number, Boolean, Symbol, BigInt)</h1>
 <ul>
-<li>Understand how object wrapper types are used to provide methods on primitive values. Avoid instantiating them or using them directly.</li>
-<li>Avoid TypeScript object wrapper types. Use the primitive types instead: string instead of String, number instead of Number, boolean instead of Boolean, symbol instead of Symbol, and bigint instead of BigInt.</li>
+<li>
+<p>Understand how object wrapper types are used to provide methods on primitive values. Avoid instantiating them or using them directly.</p>
+</li>
+<li>
+<p>While a string primitive does not have methods, JavaScript also defines a String object type that does. JavaScript freely converts between these types. When you access a method like charAt on a string primitive, JavaScript wraps it in a String object, calls the method, and then throws the object away.</p>
+</li>
+<li>
+<p>Avoid TypeScript object wrapper types. Use the primitive types instead: string instead of String, number instead of Number, boolean instead of Boolean, symbol instead of Symbol, and bigint instead of BigInt.</p>
+</li>
 </ul>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">In addition to objects, JavaScript has seven types of primitive values: strings, numbers, booleans, null, undefined, symbol, and bigint. The first five have been around since the beginning. The symbol primitive was added in ES2015, and bigint is in the process of being finalized.
-Primitives are distinguished from objects by being immutable and not having methods. You might object that strings do have methods:
-> 'primitive'.charAt(3) "m"
-But things are not quite as they seem. There's actually something surprising and subtle going on here. While a string primitive does not have methods, JavaScript also defines a String object type that does. JavaScript freely converts between these types. When you access a method like charAt on a string primitive, JavaScript wraps it in a String object, calls the method, and then throws the object away.
-You can observe this if you monkey-patch String.prototype (Item 43):
-// Don't do this!
-const originalCharAt = String.prototype.charAt; String.prototype.charAt = function(pos) { console.log(this, typeof this, pos);
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// Don't do this!</span>
+<span class="token keyword">const</span> originalCharAt <span class="token operator">=</span> <span class="token class-name">String</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>charAt<span class="token punctuation">;</span> 
+<span class="token class-name">String</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">charAt</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">pos</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> <span class="token keyword">typeof</span> <span class="token keyword">this</span><span class="token punctuation">,</span> pos<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token function">originalCharAt</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> pos<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'primitive'</span><span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-
-};
-return originalCharAt.call(this, pos);
-console.log('primitive'.charAt(3));
-This produces the following output:
-[String: 'primitive'] object 3
+<span class="token comment">// This produces the following output:</span>
+<span class="token punctuation">[</span>String<span class="token operator">:</span> <span class="token string">'primitive'</span><span class="token punctuation">]</span> object <span class="token number">3</span>
 m
-The this value in the method is a String object wrapper, not a string primitive. You can instantiate a String object directly and it will sometimes behave like a string primitive. But not always. For example, a String object is only ever equal to itself:
-> "hello" === new String("hello") false
-> new String("hello") === new String("hello") false
-The implicit conversion to object wrapper types explains an odd phenomenon in JavaScript-if you assign a property to a primitive, it disappears:
-> x = "hello"
-> x.language = 'English' 'English'
-> x.language undefined
-Now you know the explanation: x is converted to a String instance, the language property is set on that, and then the object (with its language property) is thrown away.
-There are object wrapper types for the other primitives as well: Number for numbers, Boolean for booleans, Symbol for symbols, and BigInt for bigints (there are no object wrappers for null and undefined).
 
+<span class="token comment">// The this value in the method is a String object wrapper, not a string primitive. </span>
+<span class="token comment">// You can instantiate a String object directly and it will sometimes behave like a string primitive. But not always. For example, a String object is only ever equal to itself:</span>
+<span class="token string">"hello"</span> <span class="token operator">===</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">false</span>
+<span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">false</span>
 
-
-These wrapper types exist as a convenience to provide methods on the primitive values and to provide static methods (e.g., String.fromCharCode). But there's usually no reason to instantiate them directly.
-TypeScript models this distinction by having distinct types for the primitives and their object wrappers:
-⚫ string and String
-⚫ number and Number
-⚫ boolean and Boolean
-symbol and Symbol
-⚫ bigint and BigInt
-It's easy to inadvertently type String (especially if you're coming from Java or C#) and it even seems to work, at least initially:
-function getStringLen(foo: String) { return foo.length;
-}
-getStringLen("hello"); // OK
-getStringLen(new String("hello")); // OK
-But things go awry when you try to pass a String object to a method that expects a string:
-function isGreeting(phrase: String) {
-return [ 'hello',
-'good day' J.includes(phrase);
-~~~~~~//
-// Argument of type 'String' is not assignable to parameter
-// of type 'string'.
-
-
-}
-//'string' is a primitive, but 'String' is a wrapper object; // prefer using 'string' when possible
-So string is assignable to String, but String is not assignable to string. Confusing? Follow the advice in the error message and stick with string. All the type declarations that ship with TypeScript use it, as do the typings for almost all other libraries. Another way you can wind up with wrapper objects is if you provide an explicit type annotation with a capital letter:
-const s: String = "primitive"; const n: Number = 12;
-const b: Boolean = true;
-Of course, the values at runtime are still
-primitives, not objects. But TypeScript permits
-these declarations because the primitive types are assignable to the object wrappers. These annotations are both misleading and redundant (Item 19). Better to stick with the primitive types. As a final note, it's OK to call BigInt and Symbol without new, since these create primitives:
-> typeof BigInt(1234) "bigint"
-> typeof Symbol('sym') "symbol"
-These are the BigInt and Symbol values, not the TypeScript types (Item 8). Calling them results in values of type bigint and symbol.</code></pre></div>
+<span class="token comment">// The implicit conversion to object wrapper types explains an odd phenomenon in JavaScript-if you assign a property to a primitive, it disappears:</span>
+<span class="token operator">></span> x <span class="token operator">=</span> <span class="token string">"hello"</span>
+<span class="token operator">></span> x<span class="token punctuation">.</span>language <span class="token operator">=</span> <span class="token string">'English'</span> <span class="token string">'English'</span>
+<span class="token operator">></span> x<span class="token punctuation">.</span>language <span class="token keyword">undefined</span>
+Now you know the explanation<span class="token operator">:</span> x is converted to a String instance<span class="token punctuation">,</span> the language property is <span class="token keyword">set</span> on that<span class="token punctuation">,</span> and then the <span class="token function">object</span> <span class="token punctuation">(</span><span class="token keyword">with</span> its language property<span class="token punctuation">)</span> is thrown away<span class="token punctuation">.</span>
+There are object wrapper types <span class="token keyword">for</span> the other primitives <span class="token keyword">as</span> <span class="token literal-property property">well</span><span class="token operator">:</span> Number <span class="token keyword">for</span> numbers<span class="token punctuation">,</span> Boolean <span class="token keyword">for</span> booleans<span class="token punctuation">,</span> Symbol <span class="token keyword">for</span> symbols<span class="token punctuation">,</span> and BigInt <span class="token keyword">for</span> <span class="token function">bigints</span> <span class="token punctuation">(</span>there are no object wrappers <span class="token keyword">for</span> <span class="token keyword">null</span> and <span class="token keyword">undefined</span><span class="token punctuation">)</span><span class="token punctuation">.</span></code></pre></div>
+<ul>
+<li>As a final note, it’s OK to call BigInt and Symbol without new, since these create primitives:</li>
+</ul>
 <h1 id="using-eitherresult-in-typescript-for-error-handling" style="position:relative;"><a href="#using-eitherresult-in-typescript-for-error-handling" aria-label="using eitherresult in typescript for error handling permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using Either/Result in TypeScript for Error Handling</h1>
 <ul>
 <li>from <a href="https://gcanti.github.io/fp-ts/">fp-ts</a> library:</li>
@@ -1028,4 +1002,4 @@ app<span class="token punctuation">.</span><span class="token function">get</spa
           >
             window.___chunkMapping="{\"app\":[\"/app-dff359f42b4b1323adff.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-fe49012c596fa8e02e94.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-137bafc43fb95c27cc25.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-2fd0383b8dc4270b2974.js\"],\"component---src-pages-using-typescript-tsx\":[\"/component---src-pages-using-typescript-tsx-b3f1483ead526a95c936.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-161de0eab28c1f89b9c7.js\"],\"component---src-templates-tags-js\":[\"/component---src-templates-tags-js-937a80c11540749e5e6b.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="622739c5566122b98539";</script><script src="/webpack-runtime-647158e94add31207306.js" async></script><script src="/framework-24a4af5e8d436029005a.js" async></script><script src="/app-dff359f42b4b1323adff.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="01b9fd0a6bece9b6ddee";</script><script src="/webpack-runtime-69f62d54f4ba18373f23.js" async></script><script src="/framework-24a4af5e8d436029005a.js" async></script><script src="/app-dff359f42b4b1323adff.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
