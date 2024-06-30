@@ -1581,6 +1581,45 @@ result  <span class="token comment">// Type is (string | number)[]</span></code>
 </ul>
 </li>
 </ul>
+<h1 id="use-different-variables-for-different-types" style="position:relative;"><a href="#use-different-variables-for-different-types" aria-label="use different variables for different types permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use Different Variables for Different Types</h1>
+<h2 id="things-to-remember-6" style="position:relative;"><a href="#things-to-remember-6" aria-label="things to remember 6 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Things to Remember</h2>
+<ul>
+<li>While a variable’s value can change, its type generally does not.</li>
+<li>To avoid confusion, both for human readers and for the type checker, avoid reusing variables for differently typed values.</li>
+</ul>
+<h2 id="code-samples-6" style="position:relative;"><a href="#code-samples-6" aria-label="code samples 6 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code Samples</h2>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">let</span> productId <span class="token operator">=</span> <span class="token string">"12-34-56"</span><span class="token punctuation">;</span>
+<span class="token function">fetchProduct</span><span class="token punctuation">(</span>productId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+productId <span class="token operator">=</span> <span class="token number">123456</span><span class="token punctuation">;</span>
+<span class="token comment">// ~~~~~~ Type 'number' is not assignable to type 'string'</span>
+<span class="token function">fetchProductBySerialNumber</span><span class="token punctuation">(</span>productId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//                         ~~~~~~~~~</span>
+<span class="token comment">// Argument of type 'string' is not assignable to parameter of type 'number'</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/GYVwdgxgLglg9mABMAplCALACgJzgExGgAoZ8AuRAZyhxjAHMBKRAbwF8AoUSWBZNJlwEiUAEIBPAMoo6AQwA2AORABbAEazSFRGDWacLDpwVpEABzyFoASXyIAvIgBEARgBMAWgDMAFk8ArABszgDc3ILYVqLEliK2+EzhnHHWUHaOiB5+weEA9HmIAH4lpYgAKhLmKIgA5HoasrWIMFS6cFCIclRUMAxgcuqmiFBwI1U1tTR0jLUR6FHx4tKyMIoqjTix0QlJnAWIh0fHJ6fHpRcl+4UAgjgMaihgnXDA49V10-QMza3tnd1ev1BsNRhY5Dg5Ko0LJEK93pMGgY5kA">💻 playground</a></p>
+<hr>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">let</span> productId<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">|</span> <span class="token builtin">number</span> <span class="token operator">=</span> <span class="token string">"12-34-56"</span><span class="token punctuation">;</span>
+<span class="token function">fetchProduct</span><span class="token punctuation">(</span>productId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+productId <span class="token operator">=</span> <span class="token number">123456</span><span class="token punctuation">;</span>  <span class="token comment">// OK</span>
+<span class="token function">fetchProductBySerialNumber</span><span class="token punctuation">(</span>productId<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// OK</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/GYVwdgxgLglg9mABMAplCALACgJzgExGgAoZ8AuRAZyhxjAHMBKRAbwF8AoUSWBZNJlwEiUAEIBPAMoo6AQwA2AORABbAEazSFRGDWacLDpwVpEABzyFoASR006jRAB9d+2YgC8iAEQBGACYAWgBmABYggFYANh8Abm5BbCtRYksRW3wmBM506yg7L0RA8Ji4xEQAekrEAHkAaUT0ZIzxaVkYRRUNLTzRO2yK6rrGoA">💻 playground</a></p>
+<hr>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">const</span> productId <span class="token operator">=</span> <span class="token string">"12-34-56"</span><span class="token punctuation">;</span>
+<span class="token function">fetchProduct</span><span class="token punctuation">(</span>productId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> serial <span class="token operator">=</span> <span class="token number">123456</span><span class="token punctuation">;</span>  <span class="token comment">// OK</span>
+<span class="token function">fetchProductBySerialNumber</span><span class="token punctuation">(</span>serial<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// OK</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/GYVwdgxgLglg9mABMAplCALACgJzgExGgAoZ8AuRAZyhxjAHMBKRAbwF8AoUSWBZNJlwEiUAEIBPAMoo6AQwA2AORABbAEazSFRGDWacLDpwgIaiAA55C0AJL5EAXkQAiAIwAmALQBmACxeAKwAbC4A3NyC2NaixFYidvhMESZmUNSyMIpOiJ7+IWGIiAD0xYgA8gDSkejRCeLSmYoqGlpUTQrJRaUV1UA">💻 playground</a></p>
+<hr>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">const</span> productId <span class="token operator">=</span> <span class="token string">"12-34-56"</span><span class="token punctuation">;</span>
+<span class="token function">fetchProduct</span><span class="token punctuation">(</span>productId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">{</span>
+  <span class="token keyword">const</span> productId <span class="token operator">=</span> <span class="token number">123456</span><span class="token punctuation">;</span>  <span class="token comment">// OK</span>
+  <span class="token function">fetchProductBySerialNumber</span><span class="token punctuation">(</span>productId<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// OK</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/GYVwdgxgLglg9mABMAplCALACgJzgExGgAoZ8AuRAZyhxjAHMBKRAbwF8AoUSWBZNJlwEiUAEIBPAMoo6AQwA2AORABbAEazSFRGDWacLDpwgIaiAA55C0AJL5EAXkQAiAIwAmALQBmACxeAKwAbC4A3NyC2NaixFYidvhMEZysnIiIpmDm8TZQ9k6Inv4hYRkA9OWIAPIA0ukC6NEJ4tKyMIoqGlq5ovbJFVV1nFxAA">💻 playground</a></p>
 <h1 id="push-null-values-to-the-perimeter-of-your-types" style="position:relative;"><a href="#push-null-values-to-the-perimeter-of-your-types" aria-label="push null values to the perimeter of your types permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>push null values to the perimeter of your types</h1>
 <ul>
 <li>example 1:
@@ -1814,4 +1853,4 @@ app<span class="token punctuation">.</span><span class="token function">get</spa
           >
             window.___chunkMapping="{\"app\":[\"/app-dff359f42b4b1323adff.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-fe49012c596fa8e02e94.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-137bafc43fb95c27cc25.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-2fd0383b8dc4270b2974.js\"],\"component---src-pages-using-typescript-tsx\":[\"/component---src-pages-using-typescript-tsx-b3f1483ead526a95c936.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-161de0eab28c1f89b9c7.js\"],\"component---src-templates-tags-js\":[\"/component---src-templates-tags-js-937a80c11540749e5e6b.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="01b9fd0a6bece9b6ddee";</script><script src="/webpack-runtime-69f62d54f4ba18373f23.js" async></script><script src="/framework-24a4af5e8d436029005a.js" async></script><script src="/app-dff359f42b4b1323adff.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="622739c5566122b98539";</script><script src="/webpack-runtime-647158e94add31207306.js" async></script><script src="/framework-24a4af5e8d436029005a.js" async></script><script src="/app-dff359f42b4b1323adff.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
