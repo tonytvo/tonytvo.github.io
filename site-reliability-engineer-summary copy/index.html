@@ -1,0 +1,772 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 5.13.6"/><meta data-react-helmet="true" name="description" content="site reliability engineering by Chris Jones summary"/><meta data-react-helmet="true" property="og:title" content="site reliability engineering by Chris Jones summary - wip"/><meta data-react-helmet="true" property="og:description" content="site reliability engineering by Chris Jones summary"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="ttrungvo"/><meta data-react-helmet="true" name="twitter:title" content="site reliability engineering by Chris Jones summary - wip"/><meta data-react-helmet="true" name="twitter:description" content="site reliability engineering by Chris Jones summary"/><style data-href="/styles.8dfba4a7c3d44b256d62.css" data-identity="gatsby-global-css">@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-8d7d79679b70dbe27172b6460e7a7910.woff2) format("woff2"),url(/static/montserrat-latin-100-ec38980a9e0119a379e2a9b3dbb1901a.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-e279051046ba1286706adc886cf1c96b.woff2) format("woff2"),url(/static/montserrat-latin-100italic-3b325a3173c8207435cd1b76e19bf501.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-9d266fbbfa6cab7009bd56003b1eeb67.woff2) format("woff2"),url(/static/montserrat-latin-200-2d8ba08717110d27122e54c34b8a5798.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-6e5b3756583bb2263eb062eae992735e.woff2) format("woff2"),url(/static/montserrat-latin-200italic-a0d6f343e4b536c582926255367a57da.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-00b3e893aab5a8fd632d6342eb72551a.woff2) format("woff2"),url(/static/montserrat-latin-300-ea303695ceab35f17e7d062f30e0173b.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-56f34ea368f6aedf89583d444bbcb227.woff2) format("woff2"),url(/static/montserrat-latin-300italic-54b0bf2c8c4c12ffafd803be2466a790.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-b71748ae4f80ec8c014def4c5fa8688b.woff2) format("woff2"),url(/static/montserrat-latin-400-0659a9f4e90db5cf51b50d005bff1e41.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-6eed6b4cbb809c6efc7aa7ddad6dbe3e.woff2) format("woff2"),url(/static/montserrat-latin-400italic-7583622cfde30ae49086d18447ab28e7.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-091b209546e16313fd4f4fc36090c757.woff2) format("woff2"),url(/static/montserrat-latin-500-edd311588712a96bbf435fad264fff62.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-c90ced68b46050061d1a41842d6dfb43.woff2) format("woff2"),url(/static/montserrat-latin-500italic-5146cbfe02b1deea5dffea27a5f2f998.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-0480d2f8a71f38db8633b84d8722e0c2.woff2) format("woff2"),url(/static/montserrat-latin-600-b77863a375260a05dd13f86a1cee598f.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-cf46ffb11f3a60d7df0567f8851a1d00.woff2) format("woff2"),url(/static/montserrat-latin-600italic-c4fcfeeb057724724097167e57bd7801.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-7dbcc8a5ea2289d83f657c25b4be6193.woff2) format("woff2"),url(/static/montserrat-latin-700-99271a835e1cae8c76ef8bba99a8cc4e.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-c41ad6bdb4bd504a843d546d0a47958d.woff2) format("woff2"),url(/static/montserrat-latin-700italic-6779372f04095051c62ed36bc1dcc142.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-db9a3e0ba7eaea32e5f55328ace6cf23.woff2) format("woff2"),url(/static/montserrat-latin-800-4e3c615967a2360f5db87d2f0fd2456f.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-bf45bfa14805969eda318973947bc42b.woff2) format("woff2"),url(/static/montserrat-latin-800italic-fe82abb0bcede51bf724254878e0c374.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-e66c7edc609e24bacbb705175669d814.woff2) format("woff2"),url(/static/montserrat-latin-900-8211f418baeb8ec880b80ba3c682f957.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-4454c775e48152c1a72510ceed3603e2.woff2) format("woff2"),url(/static/montserrat-latin-900italic-efcaa0f6a82ee0640b83a0916e6e8d68.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-fc117160c69a8ea0851b26dd14748ee4.woff2) format("woff2"),url(/static/merriweather-latin-300-58b18067ebbd21fda77b67e73c241d3b.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-fe29961474f8dbf77c0aa7b9a629e4bc.woff2) format("woff2"),url(/static/merriweather-latin-300italic-23c3f1f88683618a4fb8d265d33d383a.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-d9479e8023bef9cbd9bf8d6eabd6bf36.woff2) format("woff2"),url(/static/merriweather-latin-400-040426f99ff6e00b86506452e0d1f10b.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-2de7bfeaf08fb03d4315d49947f062f7.woff2) format("woff2"),url(/static/merriweather-latin-400italic-79db67aca65f5285964ab332bd65f451.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-4b08e01d805fa35d7bf777f1b24314ae.woff2) format("woff2"),url(/static/merriweather-latin-700-22fb8afba4ab1f093b6ef9e28a9b6e92.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-cd92541b177652fffb6e3b952f1c33f1.woff2) format("woff2"),url(/static/merriweather-latin-700italic-f87f3d87cea0dd0979bfc8ac9ea90243.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-f813fc6a4bee46eda5224ac7ebf1b7be.woff2) format("woff2"),url(/static/merriweather-latin-900-5d4e42cb44410674acd99153d57df032.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-b7901d85486871c1779c0e93ddd85656.woff2) format("woff2"),url(/static/merriweather-latin-900italic-9647f9fdab98756989a8a5550eb205c3.woff) format("woff")}
+
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{-webkit-text-size-adjust:100%;line-height:1.15}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}[hidden]{display:none}:root{--maxWidth-none:"none";--maxWidth-xs:20rem;--maxWidth-sm:24rem;--maxWidth-md:28rem;--maxWidth-lg:32rem;--maxWidth-xl:36rem;--maxWidth-2xl:42rem;--maxWidth-3xl:48rem;--maxWidth-4xl:56rem;--maxWidth-full:"100%";--maxWidth-wrapper:var(--maxWidth-2xl);--spacing-px:"1px";--spacing-0:0;--spacing-1:0.25rem;--spacing-2:0.5rem;--spacing-3:0.75rem;--spacing-4:1rem;--spacing-5:1.25rem;--spacing-6:1.5rem;--spacing-8:2rem;--spacing-10:2.5rem;--spacing-12:3rem;--spacing-16:4rem;--spacing-20:5rem;--spacing-24:6rem;--spacing-32:8rem;--fontFamily-sans:Montserrat,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--fontFamily-serif:"Merriweather","Georgia",Cambria,"Times New Roman",Times,serif;--font-body:var(--fontFamily-serif);--font-heading:var(--fontFamily-sans);--fontWeight-normal:400;--fontWeight-medium:500;--fontWeight-semibold:600;--fontWeight-bold:700;--fontWeight-extrabold:800;--fontWeight-black:900;--fontSize-root:16px;--lineHeight-none:1;--lineHeight-tight:1.1;--lineHeight-normal:1.5;--lineHeight-relaxed:1.625;--fontSize-0:0.833rem;--fontSize-1:1rem;--fontSize-2:1.2rem;--fontSize-3:1.44rem;--fontSize-4:1.728rem;--fontSize-5:2.074rem;--fontSize-6:2.488rem;--fontSize-7:2.986rem;--color-primary:#005b99;--color-text:#2e353f;--color-text-light:#4f5969;--color-heading:#1a202c;--color-heading-black:#000;--color-accent:#d1dce5}*,:after,:before{box-sizing:border-box}html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:var(--fontSize-root);line-height:var(--lineHeight-normal)}body{color:var(--color-text);font-family:var(--font-body);font-size:var(--fontSize-1)}footer{padding:var(--spacing-6) var(--spacing-0)}hr{background:var(--color-accent);border:0;height:1px}h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);letter-spacing:-.025em;line-height:var(--lineHeight-tight);margin-bottom:var(--spacing-6);margin-top:var(--spacing-12)}h2,h3,h4,h5,h6{color:var(--color-heading);font-weight:var(--fontWeight-bold)}h1{color:var(--color-heading-black);font-size:var(--fontSize-6);font-weight:var(--fontWeight-black)}h2{font-size:var(--fontSize-5)}h3{font-size:var(--fontSize-4)}h4{font-size:var(--fontSize-3)}h5{font-size:var(--fontSize-2)}h6{font-size:var(--fontSize-1)}h1>a,h2>a,h3>a,h4>a,h5>a,h6>a{color:inherit;text-decoration:none}p{--baseline-multiplier:0.179;--x-height-multiplier:0.35;line-height:var(--lineHeight-relaxed);margin:var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0)}ol,p,ul{padding:var(--spacing-0)}ol,ul{list-style-image:none;list-style-position:outside;margin-bottom:var(--spacing-8);margin-left:var(--spacing-0);margin-right:var(--spacing-0)}ol li,ul li{padding-left:var(--spacing-0)}li>p,ol li,ul li{margin-bottom:calc(var(--spacing-8)/2)}li :last-child{margin-bottom:var(--spacing-0)}li>ul{margin-left:var(--spacing-8);margin-top:calc(var(--spacing-8)/2)}blockquote{border-left:var(--spacing-1) solid var(--color-primary);color:var(--color-text-light);font-size:var(--fontSize-2);font-style:italic;margin-bottom:var(--spacing-8);margin-left:calc(var(--spacing-6)*-1);margin-right:var(--spacing-8);padding:var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6)}blockquote>:last-child{margin-bottom:var(--spacing-0)}blockquote>ol,blockquote>ul{list-style-position:inside}table{border-collapse:collapse;border-spacing:.25rem;margin-bottom:var(--spacing-8);width:100%}table thead tr th{border-bottom:1px solid var(--color-accent)}a{color:var(--color-primary)}a:focus,a:hover{text-decoration:none}.global-wrapper{margin:var(--spacing-0) auto;max-width:var(--maxWidth-wrapper);padding:var(--spacing-10) var(--spacing-5)}.global-wrapper[data-is-root-path=true] .bio{margin-bottom:var(--spacing-20)}.global-header{margin-bottom:var(--spacing-12)}.main-heading{font-size:var(--fontSize-7);margin:0}.post-list-item{margin-bottom:var(--spacing-8);margin-top:var(--spacing-8)}.post-list-item p{margin-bottom:var(--spacing-0)}.post-list-item h2{color:var(--color-primary);font-size:var(--fontSize-4);margin-bottom:var(--spacing-2);margin-top:var(--spacing-0)}.post-list-item header{margin-bottom:var(--spacing-4)}.header-link-home{font-family:var(--font-heading);font-size:var(--fontSize-2);font-weight:var(--fontWeight-bold);text-decoration:none}.bio{display:flex;margin-bottom:var(--spacing-16)}.bio p,.bio-avatar{margin-bottom:var(--spacing-0)}.bio-avatar{border-radius:100%;margin-right:var(--spacing-4);min-width:50px}.blog-post header h1{margin:var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0)}.blog-post header p{font-family:var(--font-heading);font-size:var(--fontSize-2)}.blog-post-nav ul{margin:var(--spacing-0)}.gatsby-highlight{margin-bottom:var(--spacing-8)}@media (max-width:42rem){blockquote{margin-left:var(--spacing-0);padding:var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4)}ol,ul{list-style-position:inside}}code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;text-shadow:0 1px #fff;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#b3d4fc;text-shadow:none}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{background:hsla(0,0%,100%,.5);color:#9a6e3a}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="alternate" type="application/rss+xml" title="Tony Vo Blog RSS Feed" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=b811602c8c8ce14b66aae6613c8968f4" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=b811602c8c8ce14b66aae6613c8968f4"/><title data-react-helmet="true">site reliability engineering by Chris Jones summary - wip | Conversations on agile technical practices and investments</title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="global-wrapper" data-is-root-path="false"><header class="global-header"><a class="header-link-home" href="/">Conversations on agile technical practices and investments</a></header><main><article class="blog-post" itemscope="" itemType="http://schema.org/Article"><header><h1 itemProp="headline">site reliability engineering by Chris Jones summary - wip</h1><p>July 23, 2024</p></header><section itemProp="articleBody"><h1 id="todo" style="position:relative;"><a href="#todo" aria-label="todo permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>todo</h1>
+<ul>
+<li>summarize devops handbook and site reliability engineering</li>
+</ul>
+<h1 id="key-takeaways" style="position:relative;"><a href="#key-takeaways" aria-label="key takeaways permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>key takeaways</h1>
+<h1 id="introduction" style="position:relative;"><a href="#introduction" aria-label="introduction permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>introduction</h1>
+<p>The book starts with a story about a time Margaret Hamilton brought her young daughter with her to NASA, back in the days of the Apollo program. During a simulation mission, her daughter caused the mission to crash by pressing some keys that caused a prelaunch program to run during the simulated mission. Hamilton submitted a change request to add error checking code to prevent the error from happening again, but the request was rejected because the error case should never happen.</p>
+<p>On the next mission, Apollo 8, that exact error condition occurred and a potentially fatal problem that could have been prevented with a trivial check took NASA’s engineers 9 hours to resolve.</p>
+<ul>
+<li>Two approaches to hiring people to manage system stability:
+<ul>
+<li>
+<p><strong>Traditional approach: sysadmins</strong></p>
+<ul>
+<li>Assemble existing components and deploy to produce a service</li>
+<li>Respond to events and updates as they occur</li>
+<li>Grow team to absorb increased work as service grows</li>
+<li>Pros
+<ul>
+<li>Easy to implement because it’s standard</li>
+<li>Large talent pool to hire from</li>
+<li>Lots of available software</li>
+</ul>
+</li>
+<li>Cons
+<ul>
+<li>Manual intervention for change management and event handling causes size of team to scale with load on system</li>
+<li>Ops is fundamentally at odds with dev, which can cause pathological resistance to changes, which causes similarly pathological response from devs, which reclassify “launches” as “incremental updates”, “flag flips”, etc.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Google’s approach: SREs</strong></p>
+</li>
+<li>
+<p>Have software engineers do operations</p>
+</li>
+<li>
+<p>Candidates should be able to pass or nearly pass normal dev hiring bar, and may have some additional skills that are rare among devs (e.g., L1 - L3 networking or UNIX system internals).</p>
+</li>
+<li>
+<p>Career progress comparable to dev career track</p>
+</li>
+<li>
+<p>Results</p>
+</li>
+</ul>
+SREs would be bored by doing tasks by hand
+Have the skillset necessary to automate tasks
+Do the same work as an operations team, but with automation instead of manual labor
+To avoid manual labor trap that causes team size to scale with service load, Google places a 50% cap on the amount of “ops” work for SREs
+Upper bound. Actual amount of ops work is expected to be much lower
+Pros
+Cheaper to scale
+Circumvents devs/ops split
+Cons
+Hard to hire for
+May be unorthodox in ways that require management support (e.g., product team may push back against decision to stop releases for the quarter because the error budget is depleted)
+I don’t really understand how this is an example of circumventing the dev/ops split. I can see how it’s true in one sense, but the example of stopping all releases because an error budget got hit doesn’t seem fundamentally different from the “sysadmin” example where teams push back against launches. It seems that SREs have more political capital to spend and that, in the specific examples given, the SREs might be more reasonable, but there’s no reason to think that sysadmins can’t be reasonable.</li>
+</ul>
+<p>Tenets of SRE
+SRE team responsible for latency, performance, efficiency, change management, monitoring, emergency response, and capacity planning
+Ensuring a durable focus on engineering
+50% ops cap means that extra ops work is redirected to product teams on overflow
+Provides feedback mechanism to product teams as well as keeps load down
+Target max 2 events per 8-12 hour on-call shift
+Postmortems for all serious incidents, even if they didn’t trigger a page
+Blameless postmortems
+2 events per shift is the max, but what’s the average? How many on-call events are expected to get sent from the SRE team to the dev team per week?</p>
+<p>How do you get from a blameful postmortem culture to a blameless postmortem culture? Now that everyone knows that you should have blameless postmortems, everyone will claim to do them. Sort of like having good testing and deployment practices. I’ve been lucky to be on an on call rotation that’s never gotten paged, but when I talk to folks who joined recently and are on call, they have not so great stories of finger pointing, trash talk, and blame shifting. The fact that everyone knows you’re supposed to be blameless seems to make it harder to call out blamefulness, not easier.</p>
+<p>Move fast without breaking SLO
+Error budget. 100% is the wrong reliability target for basically everything
+Going from 5 9s to 100% reliability isn’t noticeable to most users and requires tremendous effort
+Set a goal that acknowledges the trade-off and leaves an error budget
+Error budget can be spent on anything: launching features, etc.
+Error budget allows for discussion about how phased rollouts and 1% experiments can maintain tolerable levels of errors
+Goal of SRE team isn’t “zero outages” — SRE and product devs are incentive aligned to spend the error budget to get maximum feature velocity
+It’s not explicitly stated, but for teams that need to “move fast”, consistently coming in way under the error budget could be taken as a sign that the team is spending too much effort on reliability.</p>
+<p>I like this idea a lot, but when I discussed this with Jessica Kerr, she pushed back on this idea because maybe you’re just under your error budget because you got lucky and a single really bad event can wipe out your error budget for the next decade. Followup question: how can you be confident enough in your risk model that you can purposefully consume error budget to move faster without worrying that a downstream (in time) bad event will put you overbudget? Nat Welch (a former Google SRE) responded to this by saying that you can build confidence through simulated disasters and other testing.</p>
+<p>Monitoring
+Monitoring should never require a human to interpret any part of the alerting domain
+Three valid kinds of monitoring output
+Alerts: human needs to take action immediately
+Tickets: human needs to take action eventually
+Logging: no action needed
+Note that, for example, graphs are a type of log
+Emergency Response
+Reliability is a function of MTTF (mean-time-to-failure) and MTTR (mean-time-to-recovery)
+For evaluating responses, we care about MTTR
+Humans add latency
+Systems that don’t require humans to respond will have higher availability due to lower MTTR
+Having a “playbook” produces 3x lower MTTR
+Having hero generalists who can respond to everything works, but having playbooks works better
+I personally agree, but boy do we like our on call heros. I wonder how we can foster a culture of documentation.</p>
+<p>Change management
+70% of outages due to changes in a live system. Mitigation:
+Implement progressive rollouts
+Monitoring
+Rollback
+Remove humans from the loop, avoid standard human problems on repetitive tasks
+Demand forecasting and capacity planning
+Straightforward, but a surprising number of teams/services don’t do it
+Provisioning
+Adding capacity riskier than load shifting, since it often involves spinning up new instances/locations, making significant changes to existing systems (config files, load balancers, etc.)
+Expensive enough that it should be done only when necessary; must be done quickly
+If you don’t know what you actually need and overprovision that costs money
+Efficiency and performance
+Load slows down systems
+SREs provision to meet capacity target with a specific response time goal
+Efficiency == money</p>
+<h1 id="embracing-risk" style="position:relative;"><a href="#embracing-risk" aria-label="embracing risk permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Embracing risk</h1>
+<p>Ex: if a user is on a smartphone with 99% reliability, they can’t tell the difference between 99.99% and 99.999% reliability
+Managing risk
+Reliability isn’t linear in cost. It can easily cost 100x more to get one additional increment of reliability
+Cost associated with redundant equipment
+Cost of building out features for reliability as opposed to “normal” features
+Goal: make systems reliable enough, but not too reliable!
+Measuring service risk
+Standard practice: identify metric to represent property of system to optimize
+Possible metric = uptime / (uptime + downtime)
+Problematic for a globally distributed service. What does uptime really mean?
+Aggregate availability = successful requests / total requests
+Obv, not all requests are equal, but aggregate availability is an ok first order approximation
+Usually set quarterly targets
+Risk tolerance of services
+Usually not objectively obvious
+SREs work with product owners to translate business objectives into explicit objectives
+Identifying risk tolerance of consumer services
+TODO: maybe read this in detail on second pass</p>
+<p>Identifying risk tolerance of infrastructure services
+Target availability
+Running ex: Bigtable
+Some consumer services serve data directly from Bigtable — need low latency and high reliability
+Some teams use bigtable as a backing store for offline analysis — care more about throughput than reliability
+Too expensive to meet all needs generically
+Ex: Bigtable instance
+Low-latency Bigtable user wants low queue depth
+Throughput oriented Bigtable user wants moderate to high queue depth
+Success and failure are diametrically opposed in these two cases!
+Cost
+Partition infra and offer different levels of service
+In addition to obv. benefits, allows service to externalize the cost of providing different levels of service (e.g., expect latency oriented service to be more expensive than throughput oriented service)
+Motivation for error budgets
+No notes on this because I already believe all of this. Maybe go back and re-read this if involved in debate about this.</p>
+<h1 id="service-level-objectives" style="position:relative;"><a href="#service-level-objectives" aria-label="service level objectives permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Service level objectives</h1>
+<p>Note: skipping notes on terminology section.</p>
+<p>Ex: Chubby planned outages
+Google found that Chubby was consistently over its SLO, and that global Chubby outages would cause unusually bad outages at Google
+Chubby was so reliable that teams were incorrectly assuming that it would never be down and failing to design systems that account for failures in Chubby
+Solution: take Chubby down globally when it’s too far above its SLO for a quarter to “show” teams that Chubby can go down
+What do you and your users care about?
+Too many indicators: hard to pay attention
+Too few indicators: might ignore important behavior
+Different classes of services should have different indicators
+User-facing: availability, latency, throughput
+Storage: latency, availability, durability
+Big data: throughput, end-to-end latency
+All systems care about correctness
+Collecting indicators
+Can often do naturally from server, but client-side metrics sometimes needed.
+Aggregation
+Use distributions and not averages
+User studies show that people usually prefer slower average with better tail latency
+Standardize on common defs, e.g., average over 1 minute, average over tasks in cluster, etc.
+Can have exceptions, but having reasonable defaults makes things easier
+Choosing targets
+Don’t pick target based on current performance
+Current performance may require heroic effort
+Keep it simple
+Avoid absolutes
+Unreasonable to talk about “infinite” scale or “always” available
+Minimize number of SLOs
+Perfection can wait
+Can always redefine SLOs over time
+SLOs set expectations
+Keep a safety margin (internal SLOs can be defined more loosely than external SLOs)
+Don’t overachieve
+See Chubby example, above
+Another example is making sure that the system isn’t too fast under light loads
+Chapter 5: Eliminating toil
+Carla Geisser: “If a human operator needs to touch your system during normal operations, you have a bug. The definition of normal changes as your systems grow.”</p>
+<p>Def: Toil
+Not just “work I don’t want to do”
+Manual
+Repetitive
+Automatable
+Tactical
+No enduring value
+O(n) with service growth
+In surveys, find 33% toil on average
+Numbers can be as low as 0% and as high as 80%
+Toil > 50% is a sign that the manager should spread toil load more evenly
+Is toil always bad?
+Predictable and repetitive tasks can be calming
+Can produce a sense of accomplishment, can be low-risk / low-stress activities
+Section on why toil is bad. Skipping notetaking for that section.</p>
+<h1 id="monitoring-distributed-systems" style="position:relative;"><a href="#monitoring-distributed-systems" aria-label="monitoring distributed systems permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Monitoring distributed systems</h1>
+<p>Why monitor?
+Analyze long-term trends
+Compare over time or do experiments
+Alerting
+Building dashboards
+Debugging
+As Alex Clemmer is wont to say, our problem isn’t that we move too slowly, it’s that we build the wrong thing. I wonder how we could get from where we are today to having enough instrumentation to be able to make informed decisions when building new systems.</p>
+<p>Setting reasonable expectations
+Monitoring is non-trivial
+10-12 person SRE team typically has 1-2 people building and maintaining monitoring
+Number has decreased over time due to improvements in tooling/libs/centralized monitoring infra
+General trend towards simpler/faster monitoring systems, with better tools for post hoc analysis
+Avoid “magic” systems
+Limited success with complex dependency hierarchies (e.g., “if DB slow, alert for DB, otherwise alert for website”).
+Used mostly (only?) for very stable parts of system
+Rules that generate alerts for humans should be simple to understand and represent a clear failure
+Avoiding magic includes avoiding ML?</p>
+<p>Lots of white-box monitoring
+Some black-box monitoring for critical stuff
+Four golden signals
+Latency
+Traffic
+Errors
+Saturation
+Interesting examples from Bigtable and Gmail from chapter not transcribed. A lot of information on the importance of keeping alerts simple also not transcribed.</p>
+<p>The long run
+There’s often a tension between long-run and short-run availability
+Can sometimes fix unreliable systems through heroic effort, but that’s a burnout risk and also a failure risk
+Taking a controlled hit in short-term reliability is usually the better trade
+Chapter 7: Evolution of automation at Google
+“Automation is a force multiplier, not a panacea”
+Value of automation
+Consistency
+Extensibility
+MTTR
+Faster non-repair actions
+Time savings
+Multiple interesting case studies and explanations skipped in notes.</p>
+<p>Chapter 8: Release engineering
+This is a specific job function at Google
+Release engineer role
+Release engineers work with SWEs and SREs to define how software is released
+Allows dev teams to focus on dev work
+Define best practices
+Compiler flags, formats for build ID tags, etc.
+Releases automated
+Models vary between teams
+Could be “push on green” and deploy every build
+Could be hourly builds and deploys
+etc.
+Hermetic builds
+Building same rev number should always give identical results
+Self-contained — this includes versioning everything down the compiler used
+Can cherry-pick fixes against an old rev to fix production software
+Virtually all changes require code review
+Branching
+All code in main branch
+Releases are branched off
+Fixes can go from master to branch
+Branches never merged back
+Testing
+CI
+Release process creates an audit trail that runs tests and shows that tests passed
+Config management
+Deceptively simple, can cause instability
+Many possible schemes (all involve storing config in source control and having strict config review)
+Use mainline for config — config maintained at head and applied immediately
+Originally used for Borg (and pre-Borg systems)
+Binary releases and config changes decoupled!
+Include config files and binaries in same package
+Simple
+Tightly couples binary and config — ok for projects with few config files or where few configs change
+Package config into “configuration packages”
+Same hermetic principle as for code
+Release engineering shouldn’t be an afterthought!
+Budget resources at beginning of dev cycle
+Chapter 9: Simplicity
+Stability vs. agility
+Can make things stable by freezing — need to balance the two
+Reliable systems can increase agility
+Reliable rollouts make it easier to link changes to bugs
+Virtue of boring!
+Essential vs. accidental complexity
+SREs should push back when accidental complexity is introduced
+Code is a liability
+Remove dead code or other bloat
+Minimal APIs
+Smaller APIs easier to test, more reliable
+Modularity
+API versioning
+Same as code, where you’d avoid misc/util classes
+Releases
+Small releases easier to measure
+Can’t tell what happened if we released 100 changes together
+Chapter 10: Altering from time-series data
+Borgmon
+Similar-ish to Prometheus
+Common data format for logging
+Data used for both dashboards and alerts
+Formalized a legacy data format, “varz”, which allowed metrics to be viewed via HTTP
+To view metrics manually, go to <a href="http://foo:80/varz">http://foo:80/varz</a>
+Adding a metric only requires a single declaration in code
+low user-cost to add new metric
+Borgmon fetches /varz from each target periodically
+Also includes synthetic data like health check, if name was resolved, etc.,
+Time series arena
+Data stored in-memory, with checkpointing to disk
+Fixed sized allocation
+GC expires oldest entries when full
+conceptually a 2-d array with time on one axis and items on the other axis
+24 bytes for a data point -> 1M unique time series for 12 hours at 1-minute intervals = 17 GB
+Borgmon rules
+Algebraic expressions
+Compute time-series from other time-series
+Rules evaluated in parallel on a threadpool
+Counters vs. gauges
+Def: counters are non-decreasing
+Def: can take any value
+Counters preferred to gauges because gauges can lose information depending on sampling interval
+Altering
+Borgmon rules can trigger alerts
+Have minimum duration to prevent “flapping”
+Usually set to two duration cycles so that missed collections don’t trigger an alert
+Scaling
+Borgmon can take time-series data from other Borgmon (uses binary streaming protocol instead of the text-based varz protocol)
+Can have multiple tiers of filters
+Prober
+Black-box monitoring that monitors what the user sees
+Can be queried with varz or directly send alerts to Altertmanager
+Configuration
+Separation between definition of rules and targets being monitored
+Chapter 11: Being on-call
+Typical response time
+5 min for user-facing or other time-critical tasks
+30 min for less time-sensitive stuff
+Response times linked to SLOs
+Ex: 99.99% for a quarter is 13 minutes of downtime; clearly can’t have response time above 13 minutes
+Services with looser SLOs can have response times in the 10s of minutes (or more?)
+Primary vs secondary on-call
+Work distribution varies by team
+In some, secondary can be backup for primary
+In others, secondary handles non-urgent / non-paging events, primary handles pages
+Balanced on-call
+Def: quantity: percent of time on-call
+Def: quality: number of incidents that occur while on call
+This is great. We should do this. People sometimes get really rough on-call rotations a few times in a row and considering the infrequency of on-call rotations there’s no reason to expect that this should randomly balance out over the course of a year or two.</p>
+<p>Balance in quantity</p>
+<blockquote>
+<p>= 50% of SRE time goes into engineering</p>
+</blockquote>
+<p>Of remainder, no more than 25% spent on-call
+Prefer multi-site teams
+Night shifts are bad for health, multi-site teams allow elimination of night shifts
+Balance in quality
+On average, dealing with an incident (incl root-cause analysis, remediation, writing postmortem, fixing bug, etc.) takes 6 hours.
+=> shouldn’t have more than 2 incidents in a 12-hour on-call shift
+To stay within upper bound, want very flat distribution of pages, with median value of 0
+Compensation — extra pay for being on-call (time-off or cash)
+Chapter 12: Effective troubleshooting
+No notes for this chapter.</p>
+<p>Chapter 13: Emergency response
+Test-induced emergency
+SREs break systems to see what happens
+Ex: want to flush out hidden dependencies on a distributed MySQL database
+Plan: block access to 1/100 of DBs
+Response: dependent services report that they’re unable to access key systems
+SRE response: SRE aborts exercise, tries to roll back permissions change
+Rollback attempt fails
+Attempt to restore access to replicas works
+Normal operation restored in 1 hour
+What went well: dependent teams escalated issues immediately, were able to restore access
+What we learned: had an insufficient understanding of the system and its interaction with other systems, failed to follow incident response that would have informed customers of outage, hadn’t tested rollback procedures in test env
+Change-induced emergency
+Changes can cause failures!
+Ex: config change to abuse prevention infra pushed on Friday triggered crash-loop bug
+Almost all externally facing systems depend on this, become unavailable
+Many internal systems also have dependency and become unavailable
+Alerts start firing with seconds
+Within 5 minutes of config push, engineer who pushed change rolled back change and services started recovering
+What went well: monitoring fired immediately, incident management worked well, out-of-band communications systems kept people up to date even though many systems were down, luck (engineer who pushed change was following real-time comms channels, which isn’t part of the release procedure)
+What we learned: push to canary didn’t trigger same issue because it didn’t hit a specific config keyword combination; push was considered low-risk and went through less stringent canary process, alerting was too noisy during outage
+Process-induced emergency
+No notes on process-induced example.</p>
+<p>Chapter 14: Managing incidents
+This is an area where we seem to actually be pretty good. No notes on this chapter.</p>
+<p>Chapter 15: Postmortem culture: learning from failure
+I’m in strong agreement with most of this chapter. No notes.</p>
+<p>Chapter 16: Tracking outages
+Escalator: centralized system that tracks ACKs to alerts, notifies other people if necessary, etc.
+Outalator: gives time-interleaved view of notifications for multiple queues
+Also saves related email and allows marking some messages as “important”, can collapse non-important messages, etc.
+Our version of Escalator seems fine. We could really use something like Outalator, though.</p>
+<p>Chapter 17: Testing for reliability
+Preaching to the choir. No notes on this section. We could really do a lot better here, though.</p>
+<p>Chapter 18: Software engineering in SRE
+Ex: Auxon, capacity planning automation tool
+Background: traditional capacity planning cycle</p>
+<ol>
+<li>collect demand forecasts (quarters to years in advance)</li>
+<li>Plan allocations</li>
+<li>Review plan</li>
+<li>Deploy and config resources</li>
+</ol>
+<p>Traditional approach cons
+Many things can affect plan: increase in efficiency, increase in adoption rate, cluster delivery date slips, etc.
+Even small changes require rechecking allocation plan
+Large changes may require total rewrite of plan
+Labor intensive and error prone
+Google solution: intent-based capacity planning
+Specify requirements, not implementation
+Encode requirements and autogenerate a capacity plan
+In addition to saving labor, solvers can do better than human generated solutions => cost savings
+Ladder of examples of increasingly intent based planning</p>
+<ol>
+<li>Want 50 cores in clusters X, Y, and Z — why those resources in those clusters?</li>
+<li>Want 50-core footprint in any 3 clusters in region — why that many resources and why 3?</li>
+<li>Want to meet demand with N+2 redundancy — why N+2?</li>
+<li>Want 5 9s of reliability. Could find, for example, that N+2 isn’t sufficient</li>
+</ol>
+<p>Found that greatest gains are from going to (3)
+Some sophisticated services may go for (4)
+Putting constraints into tools allows tradeoffs to be consistent across fleet
+As opposed to making individual ad hoc decisions
+Auxon inputs
+Requirements (e.g., “service must be N+2 per continent”, “frontend servers no more than 50ms away from backend servers”
+Dependencies
+Budget priorities
+Performance data (how a service scales)
+Demand forecast data (note that services like Colossus have derived forecasts from dependent services)
+Resource supply &#x26; pricing
+Inputs go into solver (mixed-integer or linear programming solver)
+No notes on why SRE software, how to spin up a group, etc. TODO: re-read back half of this chapter and take notes if it’s ever directly relevant for me.</p>
+<p>Chapter 19: Load balancing at the frontend
+No notes on this section. Seems pretty similar to what we have in terms of high-level goals, and the chapter doesn’t go into low-level details. It’s notable that they do [redacted] differently from us, though. For more info on lower-level details, there’s the Maglev paper.</p>
+<p>Chapter 20: Load balancing in the datacenter
+Flow control
+Need to avoid unhealthy tasks
+Naive flow control for unhealthy tasks
+Track number of requests to a backend
+Treat backend as unhealthy when threshold is reached
+Cons: generally terrible
+Health-based flow control
+Backend task can be in one of three states: {healthy, refusing connections, lame duck}
+Lame duck state can still take connections, but sends backpressure request to all clients
+Lame duck state simplifies clean shutdown
+Def: subsetting: limiting pool of backend tasks that a client task can interact with
+Clients in RPC system maintain pool of connections to backends
+Using pool reduces latency compared to doing setup/teardown when needed
+Inactive connections are relatively cheap, but not free, even in “inactive” mode (reduced health checks, UDP instead of TCP, etc.)
+Choosing the correct subset
+Typ: 20-100, choose base on workload
+Subset selection: random
+Bad utilization
+Subset selection: round robin
+Order is permuted; each round has its own permutation
+Load balancing
+Subset selection is for connection balancing, but we still need to balance load
+Load balancing: round robin
+In practice, observe 2x difference between most loaded and least load
+In practice, most expensive request can be 1000x more expensive than cheapest request
+In addition, there’s random unpredictable variation in requests
+Load balancing: least-loaded round robin
+Exactly what it sounds like: round-robin among least loaded backends
+Load appears to be measured in terms of connection count; may not always be the best metric
+This is per client, not globally, so it’s possible to send requests to a backend with many requests from other clients
+In practice, for larg services, find that most-loaded task uses twice as much CPU as least-loaded; similar to normal round robin
+Load balancing: weighted round robin
+Same as above, but weight with other factors
+In practice, much better load distribution than least-loaded round robin
+I wonder what Heroku meant when they responded to Rap Genius by saying “after extensive research and experimentation, we have yet to find either a theoretical model or a practical implementation that beats the simplicity and robustness of random routing to web backends that can support multiple concurrent connections”.</p>
+<p>Chapter 21: Handling overload
+Even with “good” load balancing, systems will become overloaded
+Typical strategy is to serve degraded responses, but under very high load that may not be possible
+Modeling capacity as QPS or as a function of requests (e.g., how many keys the requests read) is failure prone
+These generally change slowly, but can change rapidly (e.g., because of a single checkin)
+Better solution: measure directly available resources
+CPU utilization is usually a good signal for provisioning
+With GC, memory pressure turns into CPU utilization
+With other systems, can provision other resources such that CPU is likely to be limiting factor
+In cases where over-provisioning CPU is too expensive, take other resources into account
+How much does it cost to generally over-provision CPU like that?</p>
+<p>Client-side throttling
+Backends start rejecting requests when customer hits quota
+Requests still use resources, even when rejected — without throttling, backends can spend most of their resources on rejecting requests
+Criticality
+Seems to be priority but with a different name?
+First-class notion in RPC system
+Client-side throttling keeps separate stats for each level of criticality
+By default, criticality is propagated through subsequent RPCs
+Handling overloaded errors
+Shed load to other DCs if DC is overloaded
+Shed load to other backends if DC is ok but some backends are overloaded
+Clients retry when they get an overloaded response
+Per-request retry budget (3)
+Per-client retry budget (10%)
+Failed retries from client cause “overloaded; don’t retry” response to be returned upstream
+Having a “don’t retry” response is “obvious”, but relatively rare in practice. A lot of real systems have a problem with failed retries causing more retries up the stack. This is especially true when crossing a hardware/software boundary (e.g., filesystem read causes many retries on DVD/SSD/spinning disk, fails, and then gets retried at the filesystem level), but seems to be generally true in pure software too.</p>
+<p>Chapter 22: Addressing cascading failures
+Typical failure scenarios?
+Server overload
+Ex: have two servers
+One gets overloaded, failing
+Other one now gets all traffic and also fails
+Resource exhaustion
+CPU/memory/threads/file descriptors/etc.
+Ex: dependencies among resources</p>
+<ol>
+<li>Java frontend has poorly tuned GC params</li>
+<li>Frontend runs out of CPU due to GC</li>
+<li>CPU exhaustion slows down requests</li>
+<li>Increased queue depth uses more RAM</li>
+<li>Fixed memory allocation for entire frontend means that less memory is available for caching</li>
+<li>Lower hit rate</li>
+<li>More requests into backend</li>
+<li>Backend runs out of CPU or threads</li>
+<li>Health checks fail, starting cascading failure</li>
+</ol>
+<p>Difficult to determine cause during outage
+Note: policies that avoid servers that serve errors can make things worse
+fewer backends available, which get too many requests, which then become unavailable
+Preventing server overload
+Load test! Must have realistic environment
+Serve degraded results
+Fail cheaply and early when overloaded
+Have higher-level systems reject requests (at reverse proxy, load balancer, and on task level)
+Perform capacity planning
+Queue management
+Queues do nothing in steady state
+Queued reqs consume memory and increase latency
+If traffic is steady-ish, better to keep small queue size (say, 50% or less of thread pool size)
+Ex: Gmail uses queueless servers with failover when threads are full
+For bursty workloads, queue size should be function of #threads, time per req, size/freq of bursts
+See also, adaptive LIFO and CoDel
+Graceful degradation
+Note that it’s important to test graceful degradation path, maybe by running a small set of servers near overload regularly, since this path is rarely exercised under normal circumstances
+Best to keep simple and easy to understand
+Retries
+Always use randomized exponential backoff
+See previous chapter on only retrying at a single level
+Consider having a server-wide retry budget
+Deadlines
+Don’t do work where deadline has been missed (common theme for cascading failure)
+At each stage, check that deadline hasn’t been hit
+Deadlines should be propagated (e.g., even through RPCs)
+Bimodal latency
+Ex: problem with long deadline
+Say frontend has 10 servers, 100 threads each (1k threads of total cap)
+Normal operation: 1k QPS, reqs take 100ms => 100 worker threads occupied (1k QPS * .1s)
+Say 5% of operations don’t complete and there’s a 100s deadline
+That consumes 5k threads (50 QPS * 100s)
+Frontend oversubscribed by 5x. Success rate = 1k / (5k + 95) = 19.6% => 80.4% error rate
+Using deadlines instead of timeouts is great. We should really be more systematic about this.</p>
+<p>Not allowing systems to fill up with pointless zombie requests by setting reasonable deadlines is “obvious”, but a lot of real systems seem to have arbitrary timeouts at nice round human numbers (30s, 60s, 100s, etc.) instead of deadlines that are assigned with load/cascading failures in mind.</p>
+<p>Try to avoid intra-layer communication
+Simpler, avoids possible cascading failure paths
+Testing for cascading failures
+Load test components!
+Load testing both reveals breaking and point ferrets out components that will totally fall over under load
+Make sure to test each component separately
+Test non-critical backends (e.g., make sure that spelling suggestions for search don’t impede the critical path)
+Immediate steps to address cascading failures
+Increase resources
+Temporarily stop health check failures/deaths
+Restart servers (only if that would help — e.g., in GC death spiral or deadlock)
+Drop traffic — drastic, last resort
+Enter degraded mode — requires having built this into service previously
+Eliminate batch load
+Eliminate bad traffic
+Chapter 23: Distributed consensus for reliability
+How do we agree on questions like…
+Which process is the leader of a group of processes?
+What is the set of processes in a group?
+Has a message been successfully committed to a distributed queue?
+Does a process hold a particular lease?
+What’s the value in a datastore for a particular key?
+Ex1: split-brain
+Service has replicated file servers in different racks
+Must avoid writing simultaneously to both file servers in a set to avoid data corruption
+Each pair of file servers has one leader &#x26; one follower
+Servers monitor each other via heartbeats
+If one server can’t contact the other, it sends a STONITH (shoot the other node in the head)
+But what happens if the network is slow or packets get dropped?
+What happens if both servers issue STONITH?
+This reminds me of one of my favorite distributed database postmortems. The database is configured as a ring, where each node talks to and replicates data into a “neighborhood” of 5 servers. If some machines in the neighborhood go down, other servers join the neighborhood and data gets replicated appropriately.</p>
+<p>Sounds good, but in the case where a server goes bad and decides that no data exists and all of its neighbors are bad, it can return results faster than any of its neighbors, as well as tell its neighbors that they’re all bad. Because the bad server has no data it’s very fast and can report that its neighbors are bad faster than its neighbors can report that it’s bad. Whoops!</p>
+<p>Ex2: failover requires human intervention
+A highly sharded DB has a primary for each shard, which replicates to a secondary in another DC
+External health checks decide if the primary should failover to its secondary
+If the primary can’t see the secondary, it makes itself unavailable to avoid the problems from “Ex1”
+This increases operational load
+Problems are correlated and this is relatively likely to run into problems when people are busy with other issues
+If there’s a network issues, there’s no reason to think that a human will have a better view into the state of the world than machines in the system
+Ex3: faulty group-membership algorithms
+What it sounds like. No notes on this part
+Impossibility results
+CAP: P is impossible in real networks, so choose C or A
+FLP: async distributed consensus can’t gaurantee progress with unreliable network
+Paxos
+Sequence of proposals, which may or may not be accepted by the majority of processes
+Not accepted => fails
+Sequence number per proposal, must be unique across system
+Proposal
+Proposer sends seq number to acceptors
+Acceptor agrees if it hasn’t seen a higher seq number
+Proposers can try again with higher seq number
+If proposer recvs agreement from majority, it commits by sending commit message with value
+Acceptors must journal to persistent storage when they accept
+Patterns
+Distributed consensus algorithms are a low-level primitive
+Reliable replicated state machines
+Fundamental building block for data config/storage, locking, leader election, etc.
+See these papers: Schnieder, Aguilera, Amir &#x26; Kirsch
+Reliable repliacted data and config stores
+Non distributed-consensus-based systems often use timestamps: problematic because clock synchrony can’t be gauranteed
+See Spanner paper for an example of using distributed consensus
+Leader election
+Equivalent to distributed consensus
+Where work of the leader can performed performed by one process or sharded, leader election pattern allows writing distributed system as if it were a simple program
+Used by, for example, GFS and Colussus
+Distributed coordination and locking services
+Barrier used, for example, in MapReduce to make sure that Map is finished before Reduce proceeds
+Distributed queues and messaging
+Queues: can tolerate failures from worker nodes, but system needs to ensure that claimed tasks are processed
+Can use leases instead of removal from queue
+Using RSM means that system can continue processing even when queue goes down
+Performance
+Conventional wisdom that consensus algorithms can’t be used for high-throughput low-latency systems is false
+Distributed consensus at the core of many Google systems
+Scale makes this worse for Google than most other companies, but it still works
+Multi-Paxos
+Strong leader process: unless a leader has not yet been elected or a failure occurs, only one round trip required to reach consensus
+Note that another process in the group can propose at any time
+Can ping pong back and forth and pseudo-livelock
+Not unqique to multi-paxos,
+Standard solutions are to elect a proposer process or use rotating proposer
+Scaling read-heavy workloads
+Ex: Photon allows reads from any replica
+Read from stale replica requres extra work, but doesn’t produce bad incorrect results
+To gaurantee reads are up to date, do one of the following:</p>
+<ol>
+<li>Perform a read-only consensus operation</li>
+<li>Read data from replica that’s guaranteed to be most-up-to-date (stable leader can provide this guarantee)</li>
+<li>Use quorum leases</li>
+</ol>
+<p>Quorum leases
+Replicas can be granted lease over some (or all) data in the system
+Fast Paxos
+Designed to be faster over WAN
+Each client can send Propose to each member of a group of acceptors directly, instead of through a leader
+Not necessarily faster than classic Paxos — if RTT to acceptors is long, we’ve traded one message across slow link plus N in parallel across fast link for N across slow link
+Stable leaders
+“Almost all distributed consensus systems that have been designed with performance in mind use either the single stable leader pattern or a system of rotating leadership”
+TODO: finish this chapter?</p>
+<p>Chapter 24: Distributed cron
+TODO: go back and read in more detail, take notes.</p>
+<p>Chapter 25: Data processing pipelines
+Examples of this are MapReduce or Flume
+Convenient and easy to reason about the happy case, but fragile
+Initial install is usually ok because worker sizing, chunking, parameters are carefully tuned
+Over time, load changes, causes problems
+Chapter 26: Data integrity
+Definition not necessarily obvious
+If an interface bug causes Gmail to fail to display messages, that’s the same as the data being gone from the user’s standpoint
+99.99% uptime means 1 hour of downtime per year. Probably ok for most apps
+99.99% good bytes in a 2GB file means 200K corrupt. Probably not ok for most apps
+Backup is non-trivial
+May have mixture of transactional and non-transactional backup and restore
+Different versions of business logic might be live at once
+If services are independently versioned, maybe have many combinations of versions
+Replicas aren’t sufficient — replicas may sync corruption
+Study of 19 data recovery efforts at Google
+Most common user-visible data loss caused by deletion or loss of referential integrity due to software bugs
+Hardest cases were low-grade corruption discovered weeks to months later
+Defense in depth
+First layer: soft deletion
+Users should be able to delete their data
+But that means that users will be able to accidentally delete their data
+Also, account hijacking, etc.
+Accidentally deletion can also happen due to bugs
+Soft deletion delays actual deletion for some period of time
+Second layer: backups
+Need to figure out how much data it’s ok to lose during recovery, how long recovery can take, and how far back backups need to go
+Want backups to go back forever, since corruption can go unnoticed for months (or longer)
+But changes to code and schema can make recovery of older backups expensive
+Google usually has 30 to 90 day window, depending on the service
+Third layer: early detection
+Out-of-band integrity checks
+Hard to do this right!
+Correct changes can cause checkers to fail
+But loosening checks can cause failures to get missed
+No notes on the two interesting case studies covered.</p>
+<p>Chapter 27: Reliable product launches at scale
+No notes on this chapter in particular. A lot of this material is covered by or at least implied by material in other chapters. Probably worth at least looking at example checklist items and action items before thinking about launch strategy, though. Also see appendix E, launch coordination checklist.</p>
+<p>Chapters 28-32: Various chapters on management
+No notes on these.</p>
+<p>Notes on the notes
+I like this book a lot. If you care about building reliable systems, reading through this book and seeing what the teams around you don’t do seems like a good exercise. That being said, the book isn’t perfect. The two big downsides for me stem from the same issue: this is one of those books that’s a collection of chapters by different people. Some of the editors are better than others, meaning that some of the chapters are clearer than others and that because the chapters seem designed to be readable as standalone chapters, there’s a fair amount of redundancy in the book if you just read it straight through. Depending on how you plan to use the book, that can be a positive, but it’s a negative to me. But even including he downsides, I’d say that this is the most valuable technical book I’ve read in the past year and I’ve covered probably 20% of the content in this set of notes. If you really like these notes, you’ll probably want to read the full book.</p>
+<p>If you found this set of notes way too dry, maybe try this much more entertaining set of notes on a totally different book. If you found this to only be slightly too dry, maybe try this set of notes on classes of errors commonly seen in postmortems. In any case, I’d appreciate feedback on these notes. Writing up notes is an experiment for me. If people find these useful, I’ll try to write up notes on books I read more often. If not, I might try a different approach to writing up notes or some other kind of post entirely.</p>
+<p>← Some programming blogs to consider reading
+We only hire the trendiest →
+Archive
+Mastodon
+Threads
+Patreon
+LinkedIn
+Twitter
+RSS</p>
+<h1 id="references" style="position:relative;"><a href="#references" aria-label="references permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>References</h1>
+<ul>
+<li><a href="https://github.com/s905060/site-reliability-engineer-handbook">https://github.com/s905060/site-reliability-engineer-handbook</a></li>
+<li><a href="https://dev.to/bitmaybewise/series/21343">https://dev.to/bitmaybewise/series/21343</a></li>
+<li><a href="https://danluu.com/google-sre-book/">https://danluu.com/google-sre-book/</a></li>
+<li><a href="https://kevinczarzasty.medium.com/summarizing-the-devops-handbook-how-to-create-world-class-agility-reliability-and-security-in-86d8357d9995">https://kevinczarzasty.medium.com/summarizing-the-devops-handbook-how-to-create-world-class-agility-reliability-and-security-in-86d8357d9995</a></li>
+<li><a href="https://srinathramakrishnan.wordpress.com/wp-content/uploads/2017/02/the-devops-handbook-e28093-summary.pdf">https://srinathramakrishnan.wordpress.com/wp-content/uploads/2017/02/the-devops-handbook-e28093-summary.pdf</a></li>
+</ul></section><hr/><footer><div class="bio"><div data-gatsby-image-wrapper="" style="width:50px;height:50px" class="gatsby-image-wrapper bio-avatar"><div aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear;background-color:#685848;width:50px;height:50px;position:relative"></div><picture><source type="image/avif" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/d4bf4/tony-avatar.avif 50w,/static/b811602c8c8ce14b66aae6613c8968f4/ee81f/tony-avatar.avif 100w" sizes="50px"/><source type="image/webp" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/3faea/tony-avatar.webp 50w,/static/b811602c8c8ce14b66aae6613c8968f4/6a679/tony-avatar.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="opacity:0" sizes="50px" decoding="async" loading="lazy" data-src="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg 50w,/static/b811602c8c8ce14b66aae6613c8968f4/64618/tony-avatar.jpg 100w" alt="Profile picture"/></picture><noscript><picture><source type="image/avif" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/d4bf4/tony-avatar.avif 50w,/static/b811602c8c8ce14b66aae6613c8968f4/ee81f/tony-avatar.avif 100w" sizes="50px"/><source type="image/webp" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/3faea/tony-avatar.webp 50w,/static/b811602c8c8ce14b66aae6613c8968f4/6a679/tony-avatar.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="opacity:0" sizes="50px" decoding="async" loading="lazy" src="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg 50w,/static/b811602c8c8ce14b66aae6613c8968f4/64618/tony-avatar.jpg 100w" alt="Profile picture"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><p>Written by <strong>Tony Vo</strong> <!-- -->father, husband, son and software developer<!-- --> <a href="https://twitter.com/ttrungvo">Twitter</a></p></div></footer></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/observability-engineer-summary/">← <!-- -->site reliability engineering by Charity, Liz Fong and George summary - wip</a></li><li></li></ul></nav><div><div id="disqus_thread"></div></div></main><footer>© <!-- -->2024<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.com">Gatsby</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/site-reliability-engineer-summary copy/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-dca0c5d2d81acd577286.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-c5ce6f61d00d5bc2a364.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-85895703483e94bddc30.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-5f4699c03df20c034ba6.js\"],\"component---src-pages-using-typescript-tsx\":[\"/component---src-pages-using-typescript-tsx-a71142f2de4e781bfbb8.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-e6b9723f7baba56e9afc.js\"],\"component---src-templates-tags-js\":[\"/component---src-templates-tags-js-396a8b4d37b1d972a6c6.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="ea05f3a7291f5248abef";</script><script src="/webpack-runtime-892cf9f4c5a767f9164f.js" async></script><script src="/framework-dd535bfdf9fc8b5d9656.js" async></script><script src="/app-dca0c5d2d81acd577286.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
