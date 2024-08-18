@@ -2028,7 +2028,8 @@ polygon<span class="token punctuation">.</span>bbox
 <span class="token keyword">let</span> language <span class="token operator">=</span> <span class="token string">'JavaScript'</span><span class="token punctuation">;</span>
 <span class="token function">setLanguage</span><span class="token punctuation">(</span>language<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//          ~~~~~~~~ Argument of type 'string' is not assignable</span>
-<span class="token comment">//                   to parameter of type 'Language'</span></code></pre></div>
+<span class="token comment">//                   to parameter of type 'Language'</span>
+<span class="token comment">// Typescript determines the type of a variable when it is first introduced (unlike some languages are able to infer types for variables based on their eventual usage.)</span></code></pre></div>
 <p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/C4TwDgpgBAMghgOwOYFc5OgXigcgFJwBucAygMYBOAlmMDlAD64Aq4E51t9TOACiMAAWAewQ4A3ACgAZigRlgVUVADOEYPGRoMACgA2iVOggAuWIe0QAlFADeUAPQAqKADp3UJw6gBfSZLUNC2MdfCJSSho6K3EoR28AeQBpfz11KAMtYyhsMOIOKIkA9U0jXUyy6ykHbzi6+oA-JuamqABBClQAWwgEYChhaShQSFwVYGpkeioVKARhfrgVFSokBDgAIzTJGvq9-frgYSgwOAo4HuAICgGhkegcUsscSSA">💻 playground</a></p>
 <hr>
 <div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">let</span> language<span class="token operator">:</span> Language <span class="token operator">=</span> <span class="token string">'JavaScript'</span><span class="token punctuation">;</span>
@@ -2037,7 +2038,8 @@ polygon<span class="token punctuation">.</span>bbox
 <hr>
 <div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">const</span> language <span class="token operator">=</span> <span class="token string">'JavaScript'</span><span class="token punctuation">;</span>
 <span class="token comment">//    ^? const language: "JavaScript"</span>
-<span class="token function">setLanguage</span><span class="token punctuation">(</span>language<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// OK</span></code></pre></div>
+<span class="token function">setLanguage</span><span class="token punctuation">(</span>language<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// OK</span>
+<span class="token comment">// By using const, we've told the type checker that this variable cannot change. So TypeScript can infer a more precise type for language.</span></code></pre></div>
 <p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/C4TwDgpgBAMghgOwOYFc5OgXigcgFJwBucAygMYBOAlmMDlAD64Aq4E51t9TOACiMAAWAewQ4A3ACgAZigRlgVUVADOEYPGRoMACgA2iVOggAuWIe0QAlFADeUAPQAqKADp3UJw6gBfSWVEVYCgDLWMobHwiUkoaOikHbyhkgD0AfigAhCCQi2MzACICYg44gsk1DTzdUKMMK3FkxKgAeQBpSSA">💻 playground</a></p>
 <hr>
 <div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token comment">// Parameter is a (latitude, longitude) pair.</span>
@@ -2072,7 +2074,8 @@ polygon<span class="token punctuation">.</span>bbox
 <span class="token function">panTo</span><span class="token punctuation">(</span>loc<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//    ~~~ Argument of type 'readonly [10, 20, 30]' is not assignable to</span>
 <span class="token comment">//        parameter of type 'readonly [number, number]'</span>
-<span class="token comment">//          Source has 3 element(s) but target allows only 2.</span></code></pre></div>
+<span class="token comment">//          Source has 3 element(s) but target allows only 2.</span>
+<span class="token comment">// const contexts can neatly solve issues around losing context in inference, but they do have an unfortunate downside, if you make a mistake in the definition (say you add a third element to the tuple), then the error will be flagged at the call site, not at the definition. This may be confusing, especially if the error in a deeply nested object that's used for from where it's defined. For this reason, it's preferable to use the inline form or apply a type declaration.</span></code></pre></div>
 <p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/GYVwdgxgLglg9mABABwIZgCpwBQHcAWApgE6EBcipqAJggDYCeiA2mCALYBGJANIm1xIBdAJSIA3ogD0AKkQA6RYhlTEAXwBQEBAGcoiOnAiIAvCwCMABj4Ama4gDMloYlQ7E2sHoDciaapJiOGJEGHcqOkZEIlJ5DTRMHEMIEW8NKVU-RAA-XMQAQWIAcw5CMH04YEQoBmRCRAByKlowKOYrW3snIQbQ9zA4fTcdGCKwVE46eqg4dMysrLRiVHZCKBJESura+qbCGnomVg5uYj4BU565hZvEAGU4EGIIevw3R0RCKdXy7B0xTggfRQVDFNauSJwXDuQ6IGxxIA">💻 playground</a></p>
 <hr>
 <div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">type</span> <span class="token class-name">Language</span> <span class="token operator">=</span> <span class="token string">'JavaScript'</span> <span class="token operator">|</span> <span class="token string">'TypeScript'</span> <span class="token operator">|</span> <span class="token string">'Python'</span><span class="token punctuation">;</span>
@@ -2093,7 +2096,8 @@ polygon<span class="token punctuation">.</span>bbox
 <span class="token comment">//       ~~ Argument of type '{ language: string; organization: string; }'</span>
 <span class="token comment">//            is not assignable to parameter of type 'GovernedLanguage'</span>
 <span class="token comment">//          Types of property 'language' are incompatible</span>
-<span class="token comment">//            Type 'string' is not assignable to type 'Language'</span></code></pre></div>
+<span class="token comment">//            Type 'string' is not assignable to type 'Language'</span>
+<span class="token comment">//as before, the solution is to add a type annotation (const ts: )</span></code></pre></div>
 <p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/C4TwDgpgBAMghgOwOYFc5OgXigcgFJwBucAygMYBOAlmMDlAD64Aq4E51t9TOACiMAAWAewQ4A3ACgqCYBAoAzOGWgBxYYXkIIAE3jI0GKAG9JUKABtEqdBABcsa4YhTzwikkRUAXnGBVRBwBnYGpkKQBfSUkFFAQyf1EoMmEAWzArGQAKKwNbB3VNCm09J1sAShMoAHoAKigAOiaoWuqoKMkU9MyELONLMowHHFZIDho6ABood08EHz8AhGGAWSpKYSDhBTp28vFzaraAeQBpaJSEEKhgIKhsU3NcmyGWNnGuSbMZjy9fROWuDWGy2OxwXwiUi6GTg2Vu+0kR3MyPMAD9UVAAIIeFCpCCyGYKG5sXD9Z7OYKhGRIA6zP6LQJQEJhGntHCItoornmKh3BDCYBQOBBIJUJAIOAAIws0GAwigYDgFDgeLkFEJxMguEKWl0+heEHZSO5yNGEDu2wVFGEkAooFw5Ns9CV0Bk0MW0ogHJNXLNuGZ1PovKg-MFwtF4qlMpu8tAWpw+uc7KAA">💻 playground</a></p>
 <hr>
 <div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">function</span> <span class="token function">callWithRandomNumbers</span><span class="token punctuation">(</span><span class="token function-variable function">fn</span><span class="token operator">:</span> <span class="token punctuation">(</span>n1<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> n2<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -2104,6 +2108,9 @@ polygon<span class="token punctuation">.</span>bbox
   <span class="token comment">//                   ^? (parameter) a: number</span>
   <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a <span class="token operator">+</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token comment">//              ^? (parameter) b: number</span>
+  <span class="token comment">// when you pass a callback to another function, TypeScript uses context to infer the parameter types of the callback</span>
+  <span class="token comment">// if you factor the callback out into a constant, you lose that context and get noImplicitAny errors</span>
+  <span class="token comment">// if the function is only used in one place, prefer the inline form since it reduces the need for annotations</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/GYVwdgxgLglg9mABBAhgGzQdRlAFgJRTABM4BbAORDICMBTAJwGcAKYMALkRbAEYuw1egwA0iMACYBQxgEpEAXgB8iAG5wYxeQG8AUIkTsWAWRR4AdAyKkyLWWNMWrJcndkBuXQF9du1Bmw8QhdKGWYWFhQxGnllRD0DAHpEg1S09PSAPQB+bgAHFCsyOig5RBRpWkZ9ZAQmODQ6czQ4AHNIxABqRBjPJJSMwZz8wpRi0oZ5Gkrhbw9dIA">💻 playground</a></p>
 <hr>
