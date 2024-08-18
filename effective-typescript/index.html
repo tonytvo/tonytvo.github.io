@@ -1551,6 +1551,115 @@ date<span class="token punctuation">.</span><span class="token function">setFull
   length<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>  <span class="token comment">// OK</span></code></pre></div>
 <p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/MYewdgzgLgBAHhGBeGBtAjAGhgJmwZgF0BuAKFEligFcAHAGwFMAZASwGtGAuGAQQCd+AQwCebTgB5o-VmADmAPmQwA3qRgwA5AAZNPTb02Z1W9Hq0AhIyabyoACx55SAX2IaA9B5gB5ANKkQA">💻 playground</a></p>
+<h1 id="avoid-cluttering-your-code-with-inferable-types" style="position:relative;"><a href="#avoid-cluttering-your-code-with-inferable-types" aria-label="avoid cluttering your code with inferable types permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Avoid Cluttering Your Code with Inferable Types</h1>
+<ul>
+<li>example 1:</li>
+</ul>
+<p>Don’t write:</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> <span class="token literal-property property">x</span><span class="token operator">:</span> number <span class="token operator">=</span> <span class="token number">12</span><span class="token punctuation">;</span></code></pre></div>
+<p>Instead, just write:</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> x <span class="token operator">=</span> <span class="token number">12</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>example 2:</li>
+</ul>
+<p>Instead of:</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token literal-property property">person</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> string<span class="token punctuation">;</span>
+  <span class="token literal-property property">born</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">where</span><span class="token operator">:</span> string<span class="token punctuation">;</span>
+    <span class="token literal-property property">when</span><span class="token operator">:</span> string<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token literal-property property">died</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">where</span><span class="token operator">:</span> string<span class="token punctuation">;</span>
+    <span class="token literal-property property">when</span><span class="token operator">:</span> string<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Sojourner Truth'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">born</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">where</span><span class="token operator">:</span> <span class="token string">'Swartekill, NY'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">when</span><span class="token operator">:</span> <span class="token string">'c.1797'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">died</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">where</span><span class="token operator">:</span> <span class="token string">'Battle Creek, MI'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">when</span><span class="token operator">:</span> <span class="token string">'Nov. 26, 1883'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
+<p>you can just write:</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Sojourner Truth'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">born</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">where</span><span class="token operator">:</span> <span class="token string">'Swartekill, NY'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">when</span><span class="token operator">:</span> <span class="token string">'c.1797'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">died</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">where</span><span class="token operator">:</span> <span class="token string">'Battle Creek, MI'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">when</span><span class="token operator">:</span> <span class="token string">'Nov. 26, 1883'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>example 3:</li>
+</ul>
+<p>instead of:</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">interface</span> <span class="token class-name">Product</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">id</span><span class="token operator">:</span> number<span class="token punctuation">;</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> string<span class="token punctuation">;</span>
+  <span class="token literal-property property">price</span><span class="token operator">:</span> number<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">logProduct</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">product</span><span class="token operator">:</span> Product</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token literal-property property">id</span><span class="token operator">:</span> number <span class="token operator">=</span> product<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token literal-property property">name</span><span class="token operator">:</span> string <span class="token operator">=</span> product<span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token literal-property property">price</span><span class="token operator">:</span> number <span class="token operator">=</span> product<span class="token punctuation">.</span>price<span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span> name<span class="token punctuation">,</span> price<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>you can just write:</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">interface</span> <span class="token class-name">Product</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">id</span><span class="token operator">:</span> number<span class="token punctuation">;</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> string<span class="token punctuation">;</span>
+  <span class="token literal-property property">price</span><span class="token operator">:</span> number<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">logProduct</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">product</span><span class="token operator">:</span> Product</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span>id<span class="token punctuation">,</span> name<span class="token punctuation">,</span> price<span class="token punctuation">}</span> <span class="token operator">=</span> product<span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span> name<span class="token punctuation">,</span> price<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ul>
+<li>example 4:</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// Don't do this:</span>
+app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/health'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">request</span><span class="token operator">:</span> express<span class="token punctuation">.</span>Request<span class="token punctuation">,</span> <span class="token literal-property property">response</span><span class="token operator">:</span> express<span class="token punctuation">.</span>Response</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  response<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'OK'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// Do this:</span>
+app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/health'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">request<span class="token punctuation">,</span> response</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  response<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'OK'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<ul>
+<li>
+<p>There are a few situations where you may still want to specify a type even where it can be inferred.</p>
+<ul>
+<li>when you define an object literal</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token literal-property property">elmo</span><span class="token operator">:</span> Product <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Tickle Me Elmo'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'048188 627152'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">price</span><span class="token operator">:</span> <span class="token number">28.99</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">- When you specify a type on a definition like this, you enable excess property checking. This can help catch errors, particularly for types with optional fields.
+- You also increase the odds that an error will be reported in the right place (type error where it's defined vs type error where it's used)</code></pre></div>
+<ul>
+<li>
+<p>You may still want to annotate return type even when it can be inferred to ensure that implementation errors don’t leak out into uses of the function.</p>
+<ul>
+<li>Writing out the return type may also help you think more clearly about your function: you should know what its input and output types are before you implement it. While the implementation may shift around a bit, the function’s contract (its type signature) generally should not. This is similar in spirit to test-driven development (TDD), in which you write the tests that exercise a function before you implement it. Writing the full type signature first helps get you the function you want, rather than the one the implementation makes expedient.</li>
+</ul>
+</li>
+<li>
+<p>If you are using a linter, the eslint rule no-inferrable-types (note the variant spelling) can help ensure that all your type annotations are really necessary.</p>
+</li>
+</ul>
 <h1 id="use-different-variables-for-different-types" style="position:relative;"><a href="#use-different-variables-for-different-types" aria-label="use different variables for different types permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use Different Variables for Different Types</h1>
 <h2 id="things-to-remember-6" style="position:relative;"><a href="#things-to-remember-6" aria-label="things to remember 6 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Things to Remember</h2>
 <ul>
@@ -2522,6 +2631,151 @@ fetcher<span class="token punctuation">.</span><span class="token function">fetc
   <span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token constant">API</span><span class="token punctuation">[</span>Path<span class="token punctuation">]</span><span class="token operator">></span> <span class="token operator">=></span> <span class="token function">fetch</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>r <span class="token operator">=></span> r<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre></div>
 <p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/JYOwLgpgTgZghgYwgAgMoQgE2QbwFDLLCYBcyAzmFKAOYDcByIcAthGZdSPXgL54QAHgAcA9lDBFw0eEjQZMAQQAKASVyMA5AHpyC8prLosAbQC6DQjr1ZtcYcIA2EQ-KyXk1hbqpwA7gBG0FAAnq7GmB7a2sgAdPF8eDAAriAIYMCiIMgwEGAIABYqqgA8xQB8ABQAlBqEYCHCKABKosmQ5MgAvMgA1hAhojDIxcgAZBRUtHSE0ciOoghwjsgNTcjLwHDkeIxQeclQ2SXKcGAFyEKQIJidre0Q5FWMhMJnBWSn54zVn1CiLGAejKahMXwKZnK3ShuXyBUqb3O1Vi5wgIEqUGhyCgsQAVuQsjVqgx+EA">💻 playground</a></p>
+<h1 id="item-29-prefer-types-that-always-represent-valid-states" style="position:relative;"><a href="#item-29-prefer-types-that-always-represent-valid-states" aria-label="item 29 prefer types that always represent valid states permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Item 29: Prefer Types That Always Represent Valid States</h1>
+<h2 id="things-to-remember-15" style="position:relative;"><a href="#things-to-remember-15" aria-label="things to remember 15 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Things to Remember</h2>
+<ul>
+<li>Types that represent both valid and invalid states are likely to lead to confusing and error-prone code.</li>
+<li>Prefer types that only represent valid states. Even if they are longer or harder to express, they will save you time and pain in the end!</li>
+</ul>
+<h2 id="code-samples-14" style="position:relative;"><a href="#code-samples-14" aria-label="code samples 14 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code Samples</h2>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">interface</span> <span class="token class-name">State</span> <span class="token punctuation">{</span>
+  pageText<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  isLoading<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">;</span>
+  error<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/JYOwLgpgTgZghgYwgAgMpjpZBvAUM5ABzgHMIAVCADzAC5kBnMKUEgbn2WAYBkB7OABNW9AEZ8+AGwhwQHAtCh8oAfnpMWIdrgC+uIA">💻 playground</a></p>
+<hr>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">function</span> <span class="token function">renderPage</span><span class="token punctuation">(</span>state<span class="token operator">:</span> State<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>state<span class="token punctuation">.</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Error! Unable to load </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>currentPage<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>state<span class="token punctuation">.</span>error<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>state<span class="token punctuation">.</span>isLoading<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Loading </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>currentPage<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">...</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;h1></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>currentPage<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/h1>\n</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>state<span class="token punctuation">.</span>pageText<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/JYOwLgpgTgZghgYwgAgMpjpZBvAUM5ABzgHMIAVCADzAC5kBnMKUEgbn2WAYBkB7OABNW9AEZ8+AGwhwQHAtCh8oAfnpMWIdrgC+uQRASS4UFNLDIEAVyinwABVIR1zVhxhWQCMMD4hkdgZQjmQAFEyYzmgYkACUOJzAMMjhMRAAdIrK8XgEBKZgNv4ABgCitsoAhMgAqiBwotLIYHzIkgKCyAAk2Na2EA5OOvQ9EZCZFVA6xfLIOsgQkgwoSSljGdz8Qqw5nPkQhVAlW8Ja3b02dmAhEDrp9zOcevuHJQA8ABYAjAB8PX1XG46N4Aem+PwAOiBRml0sQyJQaNMOHogA">💻 playground</a></p>
+<hr>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">changePage</span><span class="token punctuation">(</span>state<span class="token operator">:</span> State<span class="token punctuation">,</span> newPage<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  state<span class="token punctuation">.</span>isLoading <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token function">getUrlForPage</span><span class="token punctuation">(</span>newPage<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>response<span class="token punctuation">.</span>ok<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Unable to load </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>newPage<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>response<span class="token punctuation">.</span>statusText<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">const</span> text <span class="token operator">=</span> <span class="token keyword">await</span> response<span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    state<span class="token punctuation">.</span>isLoading <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    state<span class="token punctuation">.</span>pageText <span class="token operator">=</span> text<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    state<span class="token punctuation">.</span>error <span class="token operator">=</span> <span class="token string">''</span> <span class="token operator">+</span> e<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/JYOwLgpgTgZghgYwgAgMpjpZBvAUM5ABzgHMIAVCADzAC5kBnMKUEgbn2WAYBkB7OABNW9AEZ8+AGwhwQHAtCh8oAfnpMWIdrgC+uQRASS4UFNLDIEAVyinwABVIR1zVhxhWQCMMD4hkZGAAqlCSAGLKjmQAFIQumiQAlDjIpmA2-gDkmWzIenAMAJ5eyB5ePn6WABayZFEQ0UyYzmgYkAA0yCAQAO718azJeARNkAB03PxCrMgAvMjMVhDyC1CFOJwECH5MqRAMhDso83A9cMAWMBBgCFXRgSHhkU7R3X1OiYkrBMAwyNEAQlMByOYz4AGshpsCAsqkoel1esgAKK2ZTRAAGQRAcFE0gWfGQkgEgmQABJsG96jp6BTgYcQAwIGNRlYGJQaDoMV9oXoYZYdhZIDQ5shTucLPTQcKwNEefzRszJiSZvN4JImd9GG1mcQyByLPMZSsdJZMLd-hAoQqdWNFMpRdlkABqZDLTh6PRAA">💻 playground</a></p>
+<hr>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">interface</span> <span class="token class-name">RequestPending</span> <span class="token punctuation">{</span>
+  state<span class="token operator">:</span> <span class="token string">'pending'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">interface</span> <span class="token class-name">RequestError</span> <span class="token punctuation">{</span>
+  state<span class="token operator">:</span> <span class="token string">'error'</span><span class="token punctuation">;</span>
+  error<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">interface</span> <span class="token class-name">RequestSuccess</span> <span class="token punctuation">{</span>
+  state<span class="token operator">:</span> <span class="token string">'ok'</span><span class="token punctuation">;</span>
+  pageText<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">type</span> <span class="token class-name">RequestState</span> <span class="token operator">=</span> RequestPending <span class="token operator">|</span> RequestError <span class="token operator">|</span> RequestSuccess<span class="token punctuation">;</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">State</span> <span class="token punctuation">{</span>
+  currentPage<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  requests<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">[</span>page<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">]</span><span class="token operator">:</span> RequestState<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/JYOwLgpgTgZghgYwgAgEoQI4FcIGcwAKEIAJqAObIDeAUMsvnJAFzIDkADsWSOWwNw0AvjVCRYiFOmx4wAUShQA9lGp0GYJhFZtoyqAPV6VrfFAqCRY6PCRpMOfAGUsCJLlxr6jFuyUBrQ3oOOHIIABUIAA8wUzBzXksaMABPLnsZZ01IZABeDMdCbgpkAB8C2QV9MornV3dcQVFwG0lkJ2yUWnoELEViQlDtDQTyQXooB1lcVioAbRCwuNGAXVZpQo6tISSgA">💻 playground</a></p>
+<hr>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">function</span> <span class="token function">renderPage</span><span class="token punctuation">(</span>state<span class="token operator">:</span> State<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span>currentPage<span class="token punctuation">}</span> <span class="token operator">=</span> state<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> requestState <span class="token operator">=</span> state<span class="token punctuation">.</span>requests<span class="token punctuation">[</span>currentPage<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">switch</span> <span class="token punctuation">(</span>requestState<span class="token punctuation">.</span>state<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> <span class="token string">'pending'</span><span class="token operator">:</span>
+      <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Loading </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>currentPage<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">...</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> <span class="token string">'error'</span><span class="token operator">:</span>
+      <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Error! Unable to load </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>currentPage<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>requestState<span class="token punctuation">.</span>error<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> <span class="token string">'ok'</span><span class="token operator">:</span>
+      <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;h1></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>currentPage<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/h1>\n</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>requestState<span class="token punctuation">.</span>pageText<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">changePage</span><span class="token punctuation">(</span>state<span class="token operator">:</span> State<span class="token punctuation">,</span> newPage<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  state<span class="token punctuation">.</span>requests<span class="token punctuation">[</span>newPage<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>state<span class="token operator">:</span> <span class="token string">'pending'</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  state<span class="token punctuation">.</span>currentPage <span class="token operator">=</span> newPage<span class="token punctuation">;</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token function">getUrlForPage</span><span class="token punctuation">(</span>newPage<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>response<span class="token punctuation">.</span>ok<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Unable to load </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>newPage<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>response<span class="token punctuation">.</span>statusText<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">const</span> pageText <span class="token operator">=</span> <span class="token keyword">await</span> response<span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    state<span class="token punctuation">.</span>requests<span class="token punctuation">[</span>newPage<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>state<span class="token operator">:</span> <span class="token string">'ok'</span><span class="token punctuation">,</span> pageText<span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    state<span class="token punctuation">.</span>requests<span class="token punctuation">[</span>newPage<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>state<span class="token operator">:</span> <span class="token string">'error'</span><span class="token punctuation">,</span> error<span class="token operator">:</span> <span class="token string">''</span> <span class="token operator">+</span> e<span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/JYOwLgpgTgZghgYwgAgEoQI4FcIGcwAKEIAJqAObIDeAUMsvnJAFzIDkADsWSOWwNw0AvjVCRYiFOmx4wAUShQA9lGp0GYJhFZtoyqAPV6VrfFAqCRY6PCRpMOfAGUsCJLlxr6jFuyUBrQ3oOOHIIABUIAA8wUzBzXksaMABPLnsZZ01IZABeDMdCbgpkAB8C2QV9MornV3dcQVFwG0lkJ2yUWnoELEViQlDtDQTyQXooB1lcVioAbRCwuNGAXVZpQo6tISSYLBAEMGAlEGQwsABVKAAbADEVAiGACg5ligBKamRJsD7TtgEyBEewORxO3240EeYSePmGW0gn26yAQJ3w1F6-XA0IgQjyGi04xRaLAEMyYARKHycIAdJNybg5pjJtihisibgAO7AMAIAAWyCe9M2nRpcKR6h6cFwKE4xV4bGYkvoEN+UFOAAMADJKOA8SgAEiozIGOKENItGqJUpl7GMBiVKpVPz+yA1VRUAEJkBcQHAAEbXFBgJTIa66kjII0m1lhISsI3C2SUmn2oRW5UIaWygKK5UTCBqzUAHj5AEYAHzRvoswZx4sAenLFYAOiBE1MsloaYsItEwOmiSIRDRpSkDsgQYdjqd+XBeBAcbDOqxKQAaZAgCCcnFvXgS7yipP4Rlbnds-FUOE6LikChsHbqWkxutUzfbnFE+IpLwq1EgdFJlwDg0TfOBOTgHlJ0LfknnOK47geZ4zxxd53mtZBgBgQVPSAkCAIgGkAgPJ1kDAPllE5d8qI9KAng1X0AyDMjQ3DPUoyoFChnjDi8NAsVsiwXBIhidN0OVEQnX-dFexE0l8nAyDST4giaUgGInnEp1aWPMBTw-C98ivFc-ECDdZP7R96DxLNeQFJ4IBIw9u10-TzzCFZL2vO1FBUNgN3tHQ2GQABqZBcSHYQaCAA">💻 playground</a></p>
+<hr>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">interface</span> <span class="token class-name">CockpitControls</span> <span class="token punctuation">{</span>
+  <span class="token comment">/** Angle of the left side stick in degrees, 0 = neutral, + = forward */</span>
+  leftSideStick<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+  <span class="token comment">/** Angle of the right side stick in degrees, 0 = neutral, + = forward */</span>
+  rightSideStick<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/JYOwLgpgTgZghgYwgAgEoQI4FcIGcwAKEIAJqAObIDeAUMsvnJAFzIDkADsWSOWwNw0AvjVCRYiFOmx4wAUShQA9lGp0GYJhFZtoyqAPV6VrfFAqCRY6PCRpMOfAGUsCJLlxr6jFuyUBrQ3oOOHIIABUIAA8wUzBzXksaMABPLnsZZ01IZABeDMdCbgpkAB8C2QV9MornV3dcQVFwG0lkJ2yUWnoELEViQlDtDQTyQXooB1lcVioAbRCwuNGAXVZpQo6tISSYLBAEMGAlEGQwsABVKAAbADEVAiGACg5ligBKamRJsD7TtgEyCsLQkdgAwkoEP4OMAwBDwMprp5usgAPQAKnRyAAgrxriglDBkGAABYofEwMAMYAkFD4YBQ5CgZC08iTPAAGmQAAY8sgQBAsPE4NcuQBqPkwFQAdzgUBIyHRqPUFLAThpEA6DP8rBAWAAtgAjaDjNGYnF4glE0koczkElU3AajTapmnVns3Bc3n5AVCqAi8WSmVyhVK9R2h3q2laqG6g3GqBJIA">💻 playground</a></p>
+<hr>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">function</span> <span class="token function">getStickSetting</span><span class="token punctuation">(</span>controls<span class="token operator">:</span> CockpitControls<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> controls<span class="token punctuation">.</span>leftSideStick<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/JYOwLgpgTgZghgYwgAgEoQI4FcIGcwAKEIAJqAObIDeAUMsvnJAFzIDkADsWSOWwNw0AvjVCRYiFOmx4wAUShQA9lGp0GYJhFZtoyqAPV6VrfFAqCRY6PCRpMOfAGUsCJLlxr6jFuyUBrQ3oOOHIIABUIAA8wUzBzXksaMABPLnsZZ01IZABeDMdCbgpkAB8C2QV9MornV3dcQVFwG0lkJ2yUWnoELEViQlDtDQTyQXooB1lcVioAbRCwuNGAXVZpQo6tISSYLBAEMGAlEGQwsABVKAAbADEVAiGACg5ligBKamRJsD7TtgEyCsLQkdgAwkoEP4OMAwBDwMprp5usgAPQAKnRyAAgrxriglDBkGAABYofEwMAMYAkFD4YBQ5CgZC08iTPAAGmQAAY8sgQBAsPE4NcuQBqPkwFQAdzgUBIyHRqPUFLAThpEA6DP8rBAWAAtgAjaDjNGYnF4glE0koczkElU3AajTapmnVns3Bc3n5AVCqAi8WSmVyhVK9R2h3q2laqG6g3GqC7faHY6nc6x-xOCBgI68J4IE7xJRI1gQqEwuFFxG4T4on5-ZCFhEl3AAOlV0c1RyhSSAA">💻 playground</a></p>
+<hr>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">function</span> <span class="token function">getStickSetting</span><span class="token punctuation">(</span>controls<span class="token operator">:</span> CockpitControls<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span>leftSideStick<span class="token punctuation">,</span> rightSideStick<span class="token punctuation">}</span> <span class="token operator">=</span> controls<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>leftSideStick <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> rightSideStick<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> leftSideStick<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/JYOwLgpgTgZghgYwgAgEoQI4FcIGcwAKEIAJqAObIDeAUMsvnJAFzIDkADsWSOWwNw0AvjVCRYiFOmx4wAUShQA9lGp0GYJhFZtoyqAPV6VrfFAqCRY6PCRpMOfAGUsCJLlxr6jFuyUBrQ3oOOHIIABUIAA8wUzBzXksaMABPLnsZZ01IZABeDMdCbgpkAB8C2QV9MornV3dcQVFwG0lkJ2yUWnoELEViQlDtDQTyQXooB1lcVioAbRCwuNGAXVZpQo6tISSYLBAEMGAlEGQwsABVKAAbADEVAiGACg5ligBKamRJsD7TtgEyCsLQkdgAwkoEP4OMAwBDwMprp5usgAPQAKnRyAAgrxriglDBkGAABYofEwMAMYAkFD4YBQ5CgZC08iTPAAGmQAAY8sgQBAsPE4NcuQBqPkwFQAdzgUBIyHRqPUFLAThpEA6DP8rBAWAAtgAjaDjNGYnF4glE0koczkElU3AajTapmnVns3Bc3n5AVCqAi8WSmVyhVK9R2h3q2laqG6g3GqC7faHY6nc6x-xOCBgI68J4IE7xJRI1gQqEwuFFxG4T4owsgfDUVXRzVHKFcyNqjWZoR8hvFpGm4BEp4tnvt-x5XL5bl19QTHN-b7Ae3dmOT00iRe-KCnccb7VJIA">💻 playground</a></p>
+<hr>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">function</span> <span class="token function">getStickSetting</span><span class="token punctuation">(</span>controls<span class="token operator">:</span> CockpitControls<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span>leftSideStick<span class="token punctuation">,</span> rightSideStick<span class="token punctuation">}</span> <span class="token operator">=</span> controls<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>leftSideStick <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> rightSideStick<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>rightSideStick <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> leftSideStick<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// ???</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/JYOwLgpgTgZghgYwgAgEoQI4FcIGcwAKEIAJqAObIDeAUMsvnJAFzIDkADsWSOWwNw0AvjVCRYiFOmx4wAUShQA9lGp0GYJhFZtoyqAPV6VrfFAqCRY6PCRpMOfAGUsCJLlxr6jFuyUBrQ3oOOHIIABUIAA8wUzBzXksaMABPLnsZZ01IZABeDMdCbgpkAB8C2QV9MornV3dcQVFwG0lkJ2yUWnoELEViQlDtDQTyQXooB1lcVioAbRCwuNGAXVZpQo6tISSYLBAEMGAlEGQwsABVKAAbADEVAiGACg5ligBKamRJsD7TtgEyCsLQkdgAwkoEP4OMAwBDwMprp5usgAPQAKnRyAAgrxriglDBkGAABYofEwMAMYAkFD4YBQ5CgZC08iTPAAGmQAAY8sgQBAsPE4NcuQBqPkwFQAdzgUBIyHRqPUFLAThpEA6DP8rBAWAAtgAjaDjNGYnF4glE0koczkElU3AajTapmnVns3Bc3n5AVCqAi8WSmVyhVK9R2h3q2laqG6g3GqC7faHY6nc6x-xOCBgI68J4IE7xJRI1gQqEwuFFxG4T4owsgfDUVXRzVHKFcyNqjWZoR8hvFpGm4BEp4tnvt-x5XL5bl19QTHN-b7Ae3dmOT019iBIlAj5BPLutzPT2fz+iL35QU7jjfarfqVGo5AAfjfwhoQA">💻 playground</a></p>
+<hr>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">function</span> <span class="token function">getStickSetting</span><span class="token punctuation">(</span>controls<span class="token operator">:</span> CockpitControls<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span>leftSideStick<span class="token punctuation">,</span> rightSideStick<span class="token punctuation">}</span> <span class="token operator">=</span> controls<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>leftSideStick <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> rightSideStick<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>rightSideStick <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> leftSideStick<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span>leftSideStick <span class="token operator">-</span> rightSideStick<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>leftSideStick <span class="token operator">+</span> rightSideStick<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// ???</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/JYOwLgpgTgZghgYwgAgEoQI4FcIGcwAKEIAJqAObIDeAUMsvnJAFzIDkADsWSOWwNw0AvjVCRYiFOmx4wAUShQA9lGp0GYJhFZtoyqAPV6VrfFAqCRY6PCRpMOfAGUsCJLlxr6jFuyUBrQ3oOOHIIABUIAA8wUzBzXksaMABPLnsZZ01IZABeDMdCbgpkAB8C2QV9MornV3dcQVFwG0lkJ2yUWnoELEViQlDtDQTyQXooB1lcVioAbRCwuNGAXVZpQo6tISSYLBAEMGAlEGQwsABVKAAbADEVAiGACg5ligBKamRJsD7TtgEyCsLQkdgAwkoEP4OMAwBDwMprp5usgAPQAKnRyAAgrxriglDBkGAABYofEwMAMYAkFD4YBQ5CgZC08iTPAAGmQAAY8sgQBAsPE4NcuQBqPkwFQAdzgUBIyHRqPUFLAThpEA6DP8rBAWAAtgAjaDjNGYnF4glE0koczkElU3AajTapmnVns3Bc3n5AVCqAi8WSmVyhVK9R2h3q2laqG6g3GqC7faHY6nc6x-xOCBgI68J4IE7xJRI1gQqEwuFFxG4T4owsgfDUVXRzVHKFcyNqjWZoR8hvFpGm4BEp4tnvt-x5XL5bl19QTHN-b7Ae3dmOT019iBIlAj5BPLutzPT2fz+iL35QU7jjfarfqfdPACyTBJADo4IbcGOIJTj5OyAALQrmuAHap8AA8yAAKznhePzLr+-4Tq6EpHqhUKfKiyAAEwPvQqI4QA-KRwg0EAA">💻 playground</a></p>
+<hr>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">function</span> <span class="token function">getStickSetting</span><span class="token punctuation">(</span>controls<span class="token operator">:</span> CockpitControls<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>controls<span class="token punctuation">.</span>leftSideStick <span class="token operator">+</span> controls<span class="token punctuation">.</span>rightSideStick<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/JYOwLgpgTgZghgYwgAgEoQI4FcIGcwAKEIAJqAObIDeAUMsvnJAFzIDkADsWSOWwNw0AvjVCRYiFOmx4wAUShQA9lGp0GYJhFZtoyqAPV6VrfFAqCRY6PCRpMOfAGUsCJLlxr6jFuyUBrQ3oOOHIIABUIAA8wUzBzXksaMABPLnsZZ01IZABeDMdCbgpkAB8C2QV9MornV3dcQVFwG0lkJ2yUWnoELEViQlDtDQTyQXooB1lcVioAbRCwuNGAXVZpQo6tISSYLBAEMGAlEGQwsABVKAAbADEVAiGACg5ligBKamRJsD7TtgEyCsLQkdgAwkoEP4OMAwBDwMprp5usgAPQAKnRyAAgrxriglDBkGAABYofEwMAMYAkFD4YBQ5CgZC08iTPAAGmQAAY8sgQBAsPE4NcuQBqPkwFQAdzgUBIyHRqPUFLAThpEA6DP8rBAWAAtgAjaDjNGYnF4glE0koczkElU3AajTapmnVns3Bc3n5AVCqAi8WSmVyhVK9R2h3q2laqG6g3GqC7faHY6nc6x-xOCBgI68J4IE7xJRI1gQqEwuFFxG4T4on5-ZAF6sl3AAOlV0c1R0ZEsLCNbbcjao1mc+qOQACYkkA">💻 playground</a></p>
+<hr>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">interface</span> <span class="token class-name">CockpitControls</span> <span class="token punctuation">{</span>
+  <span class="token comment">/** Angle of the stick in degrees, 0 = neutral, + = forward */</span>
+  stickAngle<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/JYOwLgpgTgZghgYwgAgMIHsEGsAOwwbhToA2AzsgN4BQyyA9AFSPICCIA5iSujMmAAsUZMMGzJQyACYQOUCBDIAaZAAZkAXmQgIAVzBQ4JFQGpNyGOigB3OFCnJG9WshFis7LhABc23QFsAI2gAbmoAX2ogA">💻 playground</a></p>
 <h1 id="push-null-values-to-the-perimeter-of-your-types" style="position:relative;"><a href="#push-null-values-to-the-perimeter-of-your-types" aria-label="push null values to the perimeter of your types permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>push null values to the perimeter of your types</h1>
 <ul>
 <li>example 1:
@@ -2590,115 +2844,6 @@ fetcher<span class="token punctuation">.</span><span class="token function">fetc
 <li>Consider creating a fully non-null class and constructing it when all values are available.</li>
 <li>While strictNullChecks may flag many issues in your code, it’s indispensable for surfacing the behavior of functions with respect to null values.</li>
 </ul>
-</li>
-</ul>
-<h1 id="avoid-cluttering-your-code-with-inferable-types" style="position:relative;"><a href="#avoid-cluttering-your-code-with-inferable-types" aria-label="avoid cluttering your code with inferable types permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Avoid Cluttering Your Code with Inferable Types</h1>
-<ul>
-<li>example 1:</li>
-</ul>
-<p>Don’t write:</p>
-<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> <span class="token literal-property property">x</span><span class="token operator">:</span> number <span class="token operator">=</span> <span class="token number">12</span><span class="token punctuation">;</span></code></pre></div>
-<p>Instead, just write:</p>
-<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> x <span class="token operator">=</span> <span class="token number">12</span><span class="token punctuation">;</span></code></pre></div>
-<ul>
-<li>example 2:</li>
-</ul>
-<p>Instead of:</p>
-<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token literal-property property">person</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-  <span class="token literal-property property">name</span><span class="token operator">:</span> string<span class="token punctuation">;</span>
-  <span class="token literal-property property">born</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token literal-property property">where</span><span class="token operator">:</span> string<span class="token punctuation">;</span>
-    <span class="token literal-property property">when</span><span class="token operator">:</span> string<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">;</span>
-  <span class="token literal-property property">died</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token literal-property property">where</span><span class="token operator">:</span> string<span class="token punctuation">;</span>
-    <span class="token literal-property property">when</span><span class="token operator">:</span> string<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
-  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Sojourner Truth'</span><span class="token punctuation">,</span>
-  <span class="token literal-property property">born</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token literal-property property">where</span><span class="token operator">:</span> <span class="token string">'Swartekill, NY'</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">when</span><span class="token operator">:</span> <span class="token string">'c.1797'</span><span class="token punctuation">,</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token literal-property property">died</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token literal-property property">where</span><span class="token operator">:</span> <span class="token string">'Battle Creek, MI'</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">when</span><span class="token operator">:</span> <span class="token string">'Nov. 26, 1883'</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
-<p>you can just write:</p>
-<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
-  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Sojourner Truth'</span><span class="token punctuation">,</span>
-  <span class="token literal-property property">born</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token literal-property property">where</span><span class="token operator">:</span> <span class="token string">'Swartekill, NY'</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">when</span><span class="token operator">:</span> <span class="token string">'c.1797'</span><span class="token punctuation">,</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token literal-property property">died</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token literal-property property">where</span><span class="token operator">:</span> <span class="token string">'Battle Creek, MI'</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">when</span><span class="token operator">:</span> <span class="token string">'Nov. 26, 1883'</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
-<ul>
-<li>example 3:</li>
-</ul>
-<p>instead of:</p>
-<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">interface</span> <span class="token class-name">Product</span> <span class="token punctuation">{</span>
-  <span class="token literal-property property">id</span><span class="token operator">:</span> number<span class="token punctuation">;</span>
-  <span class="token literal-property property">name</span><span class="token operator">:</span> string<span class="token punctuation">;</span>
-  <span class="token literal-property property">price</span><span class="token operator">:</span> number<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">function</span> <span class="token function">logProduct</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">product</span><span class="token operator">:</span> Product</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">const</span> <span class="token literal-property property">id</span><span class="token operator">:</span> number <span class="token operator">=</span> product<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
-  <span class="token keyword">const</span> <span class="token literal-property property">name</span><span class="token operator">:</span> string <span class="token operator">=</span> product<span class="token punctuation">.</span>name<span class="token punctuation">;</span>
-  <span class="token keyword">const</span> <span class="token literal-property property">price</span><span class="token operator">:</span> number <span class="token operator">=</span> product<span class="token punctuation">.</span>price<span class="token punctuation">;</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span> name<span class="token punctuation">,</span> price<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre></div>
-<p>you can just write:</p>
-<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">interface</span> <span class="token class-name">Product</span> <span class="token punctuation">{</span>
-  <span class="token literal-property property">id</span><span class="token operator">:</span> number<span class="token punctuation">;</span>
-  <span class="token literal-property property">name</span><span class="token operator">:</span> string<span class="token punctuation">;</span>
-  <span class="token literal-property property">price</span><span class="token operator">:</span> number<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">function</span> <span class="token function">logProduct</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">product</span><span class="token operator">:</span> Product</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">const</span> <span class="token punctuation">{</span>id<span class="token punctuation">,</span> name<span class="token punctuation">,</span> price<span class="token punctuation">}</span> <span class="token operator">=</span> product<span class="token punctuation">;</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span> name<span class="token punctuation">,</span> price<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre></div>
-<ul>
-<li>example 4:</li>
-</ul>
-<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// Don't do this:</span>
-app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/health'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">request</span><span class="token operator">:</span> express<span class="token punctuation">.</span>Request<span class="token punctuation">,</span> <span class="token literal-property property">response</span><span class="token operator">:</span> express<span class="token punctuation">.</span>Response</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-  response<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'OK'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
-<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// Do this:</span>
-app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/health'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">request<span class="token punctuation">,</span> response</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-  response<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'OK'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
-<ul>
-<li>
-<p>There are a few situations where you may still want to specify a type even where it can be inferred.</p>
-<ul>
-<li>when you define an object literal</li>
-</ul>
-</li>
-</ul>
-<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token literal-property property">elmo</span><span class="token operator">:</span> Product <span class="token operator">=</span> <span class="token punctuation">{</span>
-  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Tickle Me Elmo'</span><span class="token punctuation">,</span>
-  <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'048188 627152'</span><span class="token punctuation">,</span>
-  <span class="token literal-property property">price</span><span class="token operator">:</span> <span class="token number">28.99</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">- When you specify a type on a definition like this, you enable excess property checking. This can help catch errors, particularly for types with optional fields.
-- You also increase the odds that an error will be reported in the right place (type error where it's defined vs type error where it's used)</code></pre></div>
-<ul>
-<li>
-<p>You may still want to annotate return type even when it can be inferred to ensure that implementation errors don’t leak out into uses of the function.</p>
-<ul>
-<li>Writing out the return type may also help you think more clearly about your function: you should know what its input and output types are before you implement it. While the implementation may shift around a bit, the function’s contract (its type signature) generally should not. This is similar in spirit to test-driven development (TDD), in which you write the tests that exercise a function before you implement it. Writing the full type signature first helps get you the function you want, rather than the one the implementation makes expedient.</li>
-</ul>
-</li>
-<li>
-<p>If you are using a linter, the eslint rule no-inferrable-types (note the variant spelling) can help ensure that all your type annotations are really necessary.</p>
 </li>
 </ul>
 <h1 id="dont-repeat-type-information-in-documentation" style="position:relative;"><a href="#dont-repeat-type-information-in-documentation" aria-label="dont repeat type information in documentation permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Don’t Repeat Type Information in Documentation</h1>
