@@ -3036,6 +3036,139 @@ fetcher<span class="token punctuation">.</span><span class="token function">fetc
 </ul>
 </li>
 </ul>
+<h1 id="item-34-prefer-unions-of-interfaces-to-interfaces-with-unions" style="position:relative;"><a href="#item-34-prefer-unions-of-interfaces-to-interfaces-with-unions" aria-label="item 34 prefer unions of interfaces to interfaces with unions permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Item 34: Prefer Unions of Interfaces to Interfaces with Unions</h1>
+<h2 id="things-to-remember-18" style="position:relative;"><a href="#things-to-remember-18" aria-label="things to remember 18 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Things to Remember</h2>
+<ul>
+<li>Interfaces with multiple properties that are union types are often a mistake because they obscure the relationships between these properties.</li>
+<li>Unions of interfaces are more precise and can be understood by TypeScript.</li>
+<li>Use tagged unions to facilitate control flow analysis. Because they are so well supported, this pattern is ubiquitous in TypeScript code.</li>
+<li>Consider whether multiple optional properties could be grouped to more accurately model your data.</li>
+</ul>
+<h2 id="code-samples-17" style="position:relative;"><a href="#code-samples-17" aria-label="code samples 17 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code Samples</h2>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">interface</span> <span class="token class-name">Layer</span> <span class="token punctuation">{</span>
+  layout<span class="token operator">:</span> FillLayout <span class="token operator">|</span> LineLayout <span class="token operator">|</span> PointLayout<span class="token punctuation">;</span>
+  paint<span class="token operator">:</span> FillPaint <span class="token operator">|</span> LinePaint <span class="token operator">|</span> PointPaint<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/PTAEBUAsFMGdtAO2tAJqALge1AIwQJaIDGWAtgA4CGGBuANggGSimWMAeo0iWArgHNImHLwygB0cUXpE0oItwBOSrEtBk4sKpNgA6AFAYAnhQQAxAvXoAFKkXEBeUAG9L1uw4BcoAOS+AXwBuI1MEABk5T0QnV0jkaIwff2DQs1AbLAdE0GcXTOz7GOTAkJN093pwqmN+WLcrKpq6ktTyiLlq2r56+Ogulr9StIQCmIGe3NcxjAmkodSHaCUAMypiCJrl1wNQUHpmnp9KudAAH1A+04uZuZC96m9QSpyLvteMrJjEkICDIA">💻 playground</a></p>
+<hr>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">interface</span> <span class="token class-name">FillLayer</span> <span class="token punctuation">{</span>
+  layout<span class="token operator">:</span> FillLayout<span class="token punctuation">;</span>
+  paint<span class="token operator">:</span> FillPaint<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">interface</span> <span class="token class-name">LineLayer</span> <span class="token punctuation">{</span>
+  layout<span class="token operator">:</span> LineLayout<span class="token punctuation">;</span>
+  paint<span class="token operator">:</span> LinePaint<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">interface</span> <span class="token class-name">PointLayer</span> <span class="token punctuation">{</span>
+  layout<span class="token operator">:</span> PointLayout<span class="token punctuation">;</span>
+  paint<span class="token operator">:</span> PointPaint<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">type</span> <span class="token class-name">Layer</span> <span class="token operator">=</span> FillLayer <span class="token operator">|</span> LineLayer <span class="token operator">|</span> PointLayer<span class="token punctuation">;</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/PTAEBUAsFMGdtAO2tAJqALge1AIwQJaIDGWAtgA4CGGBuANggGSimWMAeo0iWArgHNImHLwygB0cUXpE0oItwBOSrEtBk4sKpNgA6AFAYAnhQQAxAvXoAFKkXEBeUAG9L1uw4BcoAOS+AXwBuI1MEABk5T0QnV0jkaIwff2DQs1AbLAdE0GcXTOz7GOTAkJN093pwqmN+WLcrKpq6ktTyiLlq2r56+Ogulr9StIQCmIGe3NcxjAmkodSHaCUAMypiC0au5dcDUFB6Zp6fSrmQ-epvUErEkICDJdX1juRt9Rc9g6P5vrPPy+KoD6twM90eaw2GSy4xqOw++0O3XmMz+FyKyOhGBB93aQNh6mcp3xoAAPkDOsSySj8SEgA">💻 playground</a></p>
+<hr>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">interface</span> <span class="token class-name">Layer</span> <span class="token punctuation">{</span>
+  type<span class="token operator">:</span> <span class="token string">'fill'</span> <span class="token operator">|</span> <span class="token string">'line'</span> <span class="token operator">|</span> <span class="token string">'point'</span><span class="token punctuation">;</span>
+  layout<span class="token operator">:</span> FillLayout <span class="token operator">|</span> LineLayout <span class="token operator">|</span> PointLayout<span class="token punctuation">;</span>
+  paint<span class="token operator">:</span> FillPaint <span class="token operator">|</span> LinePaint <span class="token operator">|</span> PointPaint<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/PTAEBUAsFMGdtAO2tAJqALge1AIwQJaIDGWAtgA4CGGBuANggGSimWMAeo0iWArgHNImHLwygB0cUXpE0oItwBOSrEtBk4sKpNgA6AFAYAnhQQAxAvXoAFKkXEBeUAG9L1uw4BcoAOS+AXwBuI1MEABk5T0QnV0jkaIwff2DQs1AbLAdE0GcXTOz7GOTAkJN093pwqmN+WLcrKpq6ktTyiLlq2r56+Ogulr9StIQCmIGe3NcxjAmkodSHaCUAMypiCJrl1wNQTDDklcbfUAAfP1lkE-PfCiyY3xC9+maen0q5s9A+z-OZuaeoGo3lAlRy5z64Iy9wwiRCAQMQA">💻 playground</a></p>
+<hr>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">interface</span> <span class="token class-name">FillLayer</span> <span class="token punctuation">{</span>
+  type<span class="token operator">:</span> <span class="token string">'fill'</span><span class="token punctuation">;</span>
+  layout<span class="token operator">:</span> FillLayout<span class="token punctuation">;</span>
+  paint<span class="token operator">:</span> FillPaint<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">interface</span> <span class="token class-name">LineLayer</span> <span class="token punctuation">{</span>
+  type<span class="token operator">:</span> <span class="token string">'line'</span><span class="token punctuation">;</span>
+  layout<span class="token operator">:</span> LineLayout<span class="token punctuation">;</span>
+  paint<span class="token operator">:</span> LinePaint<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">interface</span> <span class="token class-name">PointLayer</span> <span class="token punctuation">{</span>
+  type<span class="token operator">:</span> <span class="token string">'paint'</span><span class="token punctuation">;</span>
+  layout<span class="token operator">:</span> PointLayout<span class="token punctuation">;</span>
+  paint<span class="token operator">:</span> PointPaint<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">type</span> <span class="token class-name">Layer</span> <span class="token operator">=</span> FillLayer <span class="token operator">|</span> LineLayer <span class="token operator">|</span> PointLayer<span class="token punctuation">;</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/PTAEBUAsFMGdtAO2tAJqALge1AIwQJaIDGWAtgA4CGGBuANggGSimWMAeo0iWArgHNImHLwygB0cUXpE0oItwBOSrEtBk4sKpNgA6AFAYAnhQQAxAvXoAFKkXEBeUAG9L1uw4BcoAOS+AXwBuI1MEABk5T0QnV0jkaIwff2DQs1AbLAdE0GcXTOz7GOTAkJN093pwqmN+WLcrKpq6ktTyiLlq2r56+Ogulr9StIQCmIGe3NcxjAmkodSHaCUAMypiC0au5dcDUEww5JXG3xD9+maen0q5s9Bqb1BKxJCAgyXV9Y7kbfUXPYOZmSsmQpwBF268z6twBD2KoD6LwMbw+aw2GSy4xqO3++3ayThGDB50u8xmMP2hJ8MyRb3aCOx6mcN0ZoAAPgjOqyOeTGSEgA">💻 playground</a></p>
+<hr>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">function</span> <span class="token function">drawLayer</span><span class="token punctuation">(</span>layer<span class="token operator">:</span> Layer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>layer<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">'fill'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>paint<span class="token punctuation">}</span> <span class="token operator">=</span> layer<span class="token punctuation">;</span>
+    <span class="token comment">//     ^? const paint: FillPaint</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>layout<span class="token punctuation">}</span> <span class="token operator">=</span> layer<span class="token punctuation">;</span>
+    <span class="token comment">//     ^? const layout: FillLayout</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>layer<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">'line'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>paint<span class="token punctuation">}</span> <span class="token operator">=</span> layer<span class="token punctuation">;</span>
+    <span class="token comment">//     ^? const paint: LinePaint</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>layout<span class="token punctuation">}</span> <span class="token operator">=</span> layer<span class="token punctuation">;</span>
+    <span class="token comment">//     ^? const layout: LineLayout</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>paint<span class="token punctuation">}</span> <span class="token operator">=</span> layer<span class="token punctuation">;</span>
+    <span class="token comment">//     ^? const paint: PointPaint</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>layout<span class="token punctuation">}</span> <span class="token operator">=</span> layer<span class="token punctuation">;</span>
+    <span class="token comment">//     ^? const layout: PointLayout</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/PTAEBUAsFMGdtAO2tAJqALge1AIwQJaIDGWAtgA4CGGBuANggGSimWMAeo0iWArgHNImHLwygB0cUXpE0oItwBOSrEtBk4sKpNgA6AFAYAnhQQAxAvXoAFKkXEBeUAG9L1uw4BcoAOS+AXwBuI1MEABk5T0QnV0jkaIwff2DQs1AbLAdE0GcXTOz7GOTAkJN093pwqmN+WLcrKpq6ktTyiLlq2r56+Ogulr9StIQCmIGe3NcxjAmkodSHaCUAMypiC0au5dcDUEww5JXG3xD9+maen0q5s9Bqb1BKxJCAgyXV9Y7kbfUXPYOZmSsmQpwBF268z6twBD2KoD6LwMbw+aw2GSy4xqO3++3ayThGDB50u8xmMP2hJ8MyRb3aCOx6mcN0ZoAAPgjOqyOeTGSEVnwSLQsIhQKglFQAO6-AAUEOWPl+AEpdvsCCtQHLGXp6Y49X5jtZfCrcftWCLYOIXISAlN5Uo7vsQGb9gA9AD85sQlvuRXmzz9AP2pG9VohdVtzntjtAzpdHq9PvDVyeW1JANt0Ho8AUGq1xmWOrCuX1vhB0GNqrNIZ91r9kdA0aDsbA8c9NfEVM5CUDLo7rmTGAbTZdcbNCf7g8VXMhGe42YQpuDFqtNrtfObY7d7ZXvseNN71d3LkHw43o9b453ocbpOpmNm6f2bzeQA">💻 playground</a></p>
+<hr>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">interface</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  <span class="token comment">// These will either both be present or not be present</span>
+  placeOfBirth<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  dateOfBirth<span class="token operator">?</span><span class="token operator">:</span> Date<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/JYOwLgpgTgZghgYwgAgArQM4HsTIN4BQyyIcAthAFzIZhSgDmA3EcgPRvIAqAFhBigDuwADYjkEYGD5RkAIyzT5KAA5R+EcMiyyQi5cjUbwrFSMQQA8jABCwKNID81WvRDNWAEziRrdhzzOyAAiPhAsAL4EQA">💻 playground</a></p>
+<hr>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">interface</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  birth<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    place<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+    date<span class="token operator">:</span> Date<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/JYOwLgpgTgZghgYwgAgArQM4HsTIN4BQyyIcAthAFzIZhSgDmA3EcgEbBRgAWA-NYWLEADgBtEVGnUYshyACZxI1ACJKIs5AF8COoA">💻 playground</a></p>
+<hr>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">const</span> alanT<span class="token operator">:</span> Person <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'Alan Turing'</span><span class="token punctuation">,</span>
+  birth<span class="token operator">:</span> <span class="token punctuation">{</span>
+<span class="token comment">// ~~~~ Property 'date' is missing in type</span>
+<span class="token comment">//      '{ place: string; }' but required in type</span>
+<span class="token comment">//      '{ place: string; date: Date; }'</span>
+    place<span class="token operator">:</span> <span class="token string">'London'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/JYOwLgpgTgZghgYwgAgArQM4HsTIN4BQyyIcAthAFzIZhSgDmA3EcgEbBRgAWA-NYWLEADgBtEVGnUYshyACZxI1ACJKIs5AF8COhDlrI44kABVq6KNlwBefK1IVqAcgCCJ5KYCu9EA2cANKwcXNwCBAD0EcgAfnExaFBYwtBgAJ7IzoqQzsjAGMhk+RiMebjpKZHRcpl4yGIS1LS+zNq5bF5gyFAQAI5enBDyZcgVEFU1tfXiSE3SfkwK6qrqi1rOrCIzks4AMjjyOBvEOjpAA">💻 playground</a></p>
+<hr>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">function</span> <span class="token function">eulogize</span><span class="token punctuation">(</span>person<span class="token operator">:</span> Person<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span>birth<span class="token punctuation">}</span> <span class="token operator">=</span> person<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>birth<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">was born on </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>birth<span class="token punctuation">.</span>date<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> in </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>birth<span class="token punctuation">.</span>place<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/JYOwLgpgTgZghgYwgAgArQM4HsTIN4BQyyIcAthAFzIZhSgDmA3EcgEbBRgAWA-NYWLEADgBtEVGnUYshyACZxI1ACJKIs5AF8COmAFcQCMMBzII+0VgbAAXhAAUwzDmroo2EAEp8rBDmxRCAA6KwYnFxBg0govTX8QWnwOLm4tZABeZGcPHE1gGGQHFJ4fQSEEwJCwhwADAHc4DHYsKFwzABI8Eu5gxUh00GQunuCxCS1g2rjWHR0gA">💻 playground</a></p>
+<hr>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">interface</span> <span class="token class-name">Name</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">PersonWithBirth</span> <span class="token keyword">extends</span> <span class="token class-name">Name</span> <span class="token punctuation">{</span>
+  placeOfBirth<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  dateOfBirth<span class="token operator">:</span> Date<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">type</span> <span class="token class-name">Person</span> <span class="token operator">=</span> Name <span class="token operator">|</span> PersonWithBirth<span class="token punctuation">;</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/JYOwLgpgTgZghgYwgAgHJwLYoN4ChnIiYQBcyAzmFKAOYDcuAvrrqJLIigArTkD2IAOrAwACwBCwKGOQQAHpBAATcmmLI8BAA4AbTgHkYk6aLKVqIevmRK4kQ8bFkAInYgNmuMAE8t3XgLIALxqWMgAPsg8UPxCIhJSYgxAA">💻 playground</a></p>
+<hr>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">function</span> <span class="token function">eulogize</span><span class="token punctuation">(</span>person<span class="token operator">:</span> Person<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">'placeOfBirth'</span> <span class="token keyword">in</span> person<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    person
+    <span class="token comment">// ^? (parameter) person: PersonWithBirth</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>dateOfBirth<span class="token punctuation">}</span> <span class="token operator">=</span> person<span class="token punctuation">;</span>  <span class="token comment">// OK</span>
+    <span class="token comment">//     ^? const dateOfBirth: Date</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><a href="https://www.typescriptlang.org/play/?ts=5.4.5#code/JYOwLgpgTgZghgYwgAgHJwLYoN4ChnIiYQBcyAzmFKAOYDcuAvrrqJLIigArTkD2IAOrAwACwBCwKGOQQAHpBAATcmmLI8BAA4AbTgHkYk6aLKVqIevmRK4kQ8bFkAInYgNmuMAE8t3XgLIALxqWMgAPsg8UPxCIhJSYgwwAK4gCGDAgRApOnw0wABeEAAUfjECZNGxAJQa1sAwyCUA5LoGRomiLcigyOW19QTaASDWBAD0E8gAegD8zVpwUMTsdQOVUaPCYo6i48gIApQatvadJozB-aN0k9P6ANIHU8ME84fHYDZuDl0ubmszGYQA">💻 playground</a></p>
 <h1 id="quotes" style="position:relative;"><a href="#quotes" aria-label="quotes permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Quotes</h1>
 <h1 id="references" style="position:relative;"><a href="#references" aria-label="references permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>References</h1>
 <ul>
