@@ -1836,6 +1836,243 @@ B = [B earliest, B latest]</code></pre></div>
 <p>We should stop regarding users as metrics to be optimised, and remember that they are humans who deserve respect, dignity, and agency. We should self-regulate our data collection and processing practices in order to establish an maintain the trust of the people who depend on our software. And we should take it upon ourselves to educate end users about how their data is used, rather than keeping them in the dark.</p>
 <p>We should allow each individual to maintain their privacy, their control over their own data, and not steal that control from them through surveillance.</p>
 <p>We should not retain data forever, but purge it as soon as it is no longer needed.</p>
+<h1 id="introduction" style="position:relative;"><a href="#introduction" aria-label="introduction permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Introduction</strong></h1>
+<p>The introduction of “Systems Performance: Enterprise and the Cloud” by Brendan Gregg sets the foundation for understanding the complex field of systems performance. It covers key concepts, methodologies, and examples that lay the groundwork for the rest of the book. Below is an in-depth breakdown of the content found in the Introduction chapter:</p>
+<h3 id="11-systems-performance" style="position:relative;"><a href="#11-systems-performance" aria-label="11 systems performance permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1.1 Systems Performance</strong></h3>
+<ul>
+<li><strong>Definition and Scope</strong>: Systems performance is defined as the study of the performance of an entire computer system, including all major software and hardware components. This can include any component within the data path, from storage devices to application software, or even a collection of servers in a distributed system.</li>
+<li><strong>End-to-End Analysis</strong>: Emphasis is placed on understanding the relationships between components across the entire system stack. For distributed systems, this often means analyzing multiple servers and applications that contribute to a common user experience.</li>
+<li><strong>Goals</strong>: The two primary goals of systems performance are improving end-user experience by reducing latency and reducing computing costs by eliminating inefficiencies and improving throughput.</li>
+</ul>
+<h3 id="12-roles" style="position:relative;"><a href="#12-roles" aria-label="12 roles permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1.2 Roles</strong></h3>
+<ul>
+<li><strong>Who Does Systems Performance?</strong>: A variety of roles are involved, including system administrators, site reliability engineers (SREs), network engineers, database administrators, and more. Each of these roles may focus on specific aspects of systems performance, such as network health, application efficiency, or resource allocation.</li>
+<li><strong>Performance Engineers</strong>: Dedicated performance engineers may work across multiple teams to conduct a holistic study of the entire system, coordinate efforts, and identify bottlenecks that require multidisciplinary expertise to resolve. Gregg provides an example from Netflix, where a cloud performance team assists multiple teams with performance analysis.</li>
+</ul>
+<h3 id="13-activities" style="position:relative;"><a href="#13-activities" aria-label="13 activities permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1.3 Activities</strong></h3>
+<ul>
+<li><strong>Performance Lifecycle</strong>: Systems performance encompasses a wide range of activities, which can be organized as steps in the lifecycle of a software project. These activities include:
+<ol>
+<li>Setting <strong>performance objectives</strong> and creating performance models.</li>
+<li><strong>Characterizing</strong> the performance of prototype software and hardware.</li>
+<li><strong>Analyzing</strong> the performance of in-development products in a controlled environment.</li>
+<li><strong>Non-regression testing</strong> for verifying the performance of new versions.</li>
+<li><strong>Benchmarking</strong> to measure and validate performance metrics.</li>
+<li><strong>Proof-of-concept testing</strong> in production environments.</li>
+<li><strong>Performance tuning</strong> in real-world production.</li>
+<li><strong>Monitoring</strong> systems while in production.</li>
+<li><strong>Analyzing performance issues</strong> in production.</li>
+<li>Conducting <strong>incident reviews</strong> for performance problems, looking for ways to prevent similar issues in the future.</li>
+</ol>
+</li>
+</ul>
+<h3 id="14-perspectives" style="position:relative;"><a href="#14-perspectives" aria-label="14 perspectives permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1.4 Perspectives</strong></h3>
+<ul>
+<li><strong>Two Primary Perspectives</strong>: Systems performance analysis can be approached from two perspectives:
+<ul>
+<li><strong>Resource Analysis</strong>: Analyzing system resources like CPU, memory, disk, and network from the bottom up. This is the typical approach taken by system administrators.</li>
+<li><strong>Workload Analysis</strong>: Analyzing workloads, including applications, from the top down. This perspective is used by developers who focus on application performance and seek to optimize how the workload utilizes underlying resources.</li>
+</ul>
+</li>
+<li><strong>Full Stack Approach</strong>: Performance engineers often combine both perspectives to conduct a thorough analysis of a system, providing insights that are sometimes missed when only one perspective is used.</li>
+</ul>
+<h3 id="15-performance-is-challenging" style="position:relative;"><a href="#15-performance-is-challenging" aria-label="15 performance is challenging permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1.5 Performance is Challenging</strong></h3>
+<ul>
+<li><strong>Subjectivity</strong>: Performance is often subjective, meaning that a “good” performance level for one user might be “bad” for another. Gregg discusses how setting objective goals, such as specific latency targets, can help eliminate subjectivity.</li>
+<li><strong>Complexity</strong>: Systems are inherently complex. Performance issues can be influenced by cascading failures between components, making analysis difficult. Performance engineers must understand the interactions between all components and often adopt a holistic approach to analysis.</li>
+<li><strong>Multiple Causes and Issues</strong>: Performance problems can arise from multiple, simultaneous causes rather than a single issue. Understanding and quantifying the magnitude of various issues is essential to identifying the highest impact opportunities for improvement.</li>
+</ul>
+<h3 id="16-latency" style="position:relative;"><a href="#16-latency" aria-label="16 latency permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1.6 Latency</strong></h3>
+<ul>
+<li><strong>Key Metric for Performance</strong>: Latency is one of the most important metrics for measuring performance. It measures the time taken to complete operations such as an application request or database query.</li>
+<li><strong>Estimating Speedup</strong>: The use of latency as a metric can help estimate potential speedups by analyzing time spent in different operations. For example, identifying latency in disk reads can help quantify the benefit of improving or caching those reads.</li>
+<li><strong>Ambiguity</strong>: The term “latency” can be ambiguous without additional context. In the context of systems performance, latency may refer to the time required for connection setup, data transfer, or other operations. The chapter provides definitions to clarify such ambiguities.</li>
+</ul>
+<h3 id="17-observability" style="position:relative;"><a href="#17-observability" aria-label="17 observability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1.7 Observability</strong></h3>
+<ul>
+<li><strong>Understanding Through Observation</strong>: Observability refers to understanding a system by observing its external outputs. The chapter introduces the concepts of counters, metrics, profiling, and tracing.</li>
+<li><strong>Types of Observability</strong>:
+<ul>
+<li><strong>Counters, Statistics, and Metrics</strong>: Basic numerical outputs that give insight into system behavior.</li>
+<li><strong>Profiling</strong>: Capturing snapshots of resource usage over time, which is useful for understanding periodic resource bottlenecks.</li>
+<li><strong>Tracing</strong>: Tracking the flow of requests through components to understand bottlenecks.</li>
+</ul>
+</li>
+</ul>
+<h3 id="18-experimentation" style="position:relative;"><a href="#18-experimentation" aria-label="18 experimentation permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1.8 Experimentation</strong></h3>
+<ul>
+<li><strong>The Importance of Experimentation</strong>: Performance tuning is an iterative process involving trial and error. Experimentation is often essential to gain insights and validate assumptions.</li>
+</ul>
+<h3 id="19-cloud-computing" style="position:relative;"><a href="#19-cloud-computing" aria-label="19 cloud computing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1.9 Cloud Computing</strong></h3>
+<ul>
+<li><strong>Unique Challenges of Cloud</strong>: The chapter introduces cloud computing and the specific challenges it presents for systems performance. Cloud environments are highly dynamic, with frequent scaling and resource sharing. These factors affect observability and optimization efforts.</li>
+</ul>
+<h3 id="110-methodologies" style="position:relative;"><a href="#110-methodologies" aria-label="110 methodologies permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1.10 Methodologies</strong></h3>
+<ul>
+<li>
+<p><strong>Linux Perf Analysis in 60 Seconds</strong>: Brendan Gregg provides a practical checklist to quickly assess the performance of a Linux system in under 60 seconds. This rapid analysis method is particularly useful for time-critical scenarios, such as troubleshooting performance issues in production environments. The checklist involves running a series of quick commands to gather an overview of system health:</p>
+<ol>
+<li><strong>uptime</strong>: Checks system load averages to identify if the system is currently overloaded.</li>
+<li><strong>dmesg | tail</strong>: Reviews recent kernel messages to check for errors or warnings.</li>
+<li><strong>vmstat 1 5</strong>: Provides a quick summary of CPU, memory, and I/O activity over a short period. This helps identify CPU saturation, swapping, or I/O bottlenecks.</li>
+<li><strong>mpstat -P ALL 1 5</strong>: Shows CPU usage for all processors to help identify if the workload is balanced across CPU cores.</li>
+<li><strong>pidstat 1 5</strong>: Displays per-process resource usage, including CPU, memory, and I/O, which can help identify processes using the most resources.</li>
+<li><strong>iostat -xz 1 5</strong>: Provides detailed disk I/O statistics, which can indicate if any disks are saturated or experiencing high latency.</li>
+<li><strong>free -m</strong>: Checks memory usage, including available memory and swap usage, to determine if the system is experiencing memory pressure.</li>
+<li><strong>sar -n DEV 1 5</strong>: Monitors network interface statistics to identify potential network bottlenecks.</li>
+<li><strong>top</strong>: Provides a real-time view of system activity, including CPU, memory, and process information, useful for identifying resource-hungry processes.</li>
+</ol>
+</li>
+<li>
+<p><strong>Objective</strong>: The goal is to gather a high-level snapshot of system performance quickly, enabling the performance engineer to identify any glaring issues and determine where more detailed analysis is needed.</p>
+</li>
+<li>
+<p><strong>Performance Analysis Techniques</strong>: Key methodologies for analyzing systems performance are introduced here, including ways to identify and resolve common performance issues.</p>
+</li>
+</ul>
+<h3 id="111-case-studies" style="position:relative;"><a href="#111-case-studies" aria-label="111 case studies permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1.11 Case Studies</strong></h3>
+<ul>
+<li><strong>Real-World Examples</strong>: The chapter concludes with case studies to illustrate common performance problems and solutions, including slow disks, software changes, and more complex scenarios. These examples demonstrate how performance analysis works in practice and serve as practical guides for dealing with similar challenges.</li>
+</ul>
+<h3 id="112-references" style="position:relative;"><a href="#112-references" aria-label="112 references permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1.12 References</strong></h3>
+<ul>
+<li><strong>Sources for Further Reading</strong>: The introduction provides references to help readers learn more about the topics covered in the chapter and to deepen their understanding of performance analysis.</li>
+</ul>
+<h1 id="methodologies" style="position:relative;"><a href="#methodologies" aria-label="methodologies permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Methodologies</strong></h1>
+<ul>
+<li>
+<p><strong>Terminology</strong></p>
+<ul>
+<li>Establishes key definitions that set a shared understanding across performance topics.</li>
+<li>Terms like latency, throughput, utilization, saturation, profiling, and tracing are clarified to ensure consistency and precision in analysis.</li>
+</ul>
+</li>
+<li>
+<p><strong>Models</strong></p>
+<ul>
+<li><strong>System Under Test (SUT)</strong>: Describes how a performance engineer should define the boundaries of the system or component being analyzed.</li>
+<li><strong>Queueing System</strong>: Introduces the concept of systems as queueing models where resources (e.g., CPU, disk) serve requests that may arrive faster than they can be processed, causing queues.
+<ul>
+<li>The queueing model aids in understanding delays and bottlenecks that occur when demand exceeds resource capacity.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Concepts</strong></p>
+<ul>
+<li><strong>Latency</strong>: Measures the time an operation takes from start to end, focusing on its role as a critical performance metric.</li>
+<li><strong>Time Scales</strong>: Explains that performance analysis must consider different time scales, such as real-time (microseconds), periodic intervals (seconds), or historical trends (hours, days).</li>
+<li><strong>Trade-Offs</strong>: Introduces the balancing act between various system resources (e.g., memory vs. CPU) and performance characteristics (e.g., latency vs. throughput).</li>
+<li><strong>Tuning Efforts</strong>: Discusses the diminishing returns on tuning, where initial optimization yields significant results but further adjustments bring smaller gains.</li>
+<li><strong>Level of Appropriateness</strong>: Stresses choosing the right level of detail for analysis, which varies based on the system’s complexity and performance needs.</li>
+<li><strong>Point-in-Time Recommendations</strong>: Highlights the temporary nature of performance optimizations, as system demands and configurations evolve over time.</li>
+<li><strong>Load vs. Architecture</strong>: Differentiates between load (the amount of work imposed on the system) and architecture (the system’s structure and capabilities).</li>
+<li><strong>Scalability</strong>: Examines how systems cope with increasing loads and the factors that determine a system’s ability to scale.</li>
+<li><strong>Metrics</strong>: Describes key performance metrics (e.g., CPU utilization, memory usage) and how they inform performance analysis.</li>
+<li><strong>Utilization, Saturation, and Profiling</strong>: These are explored as essential metrics to measure how fully resources are utilized and where congestion occurs.</li>
+<li><strong>Caching</strong>: Outlines caching strategies and their effects on performance, covering the balance between cache hits and misses.</li>
+<li><strong>Known-Unknowns</strong>: Discusses the limitations of system knowledge and the need to account for potential blind spots.</li>
+</ul>
+</li>
+<li>
+<p><strong>Perspectives</strong></p>
+<ul>
+<li>Introduces two primary analysis perspectives:
+<ul>
+<li><strong>Resource Analysis</strong>: Focuses on understanding each resource (e.g., CPU, memory) independently to identify constraints and inefficiencies.</li>
+<li><strong>Workload Analysis</strong>: Involves characterizing the demand that applications and processes place on system resources to see how they affect performance.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Methodology</strong></p>
+<ul>
+<li>Describes structured approaches to systems analysis that go beyond ad hoc troubleshooting:
+<ul>
+<li><strong>Anti-Methods</strong>: Covers ineffective approaches like the “Streetlight” (focusing only on observable areas) and “Blame-Someone-Else” (assigning responsibility without proper analysis).</li>
+<li><strong>Ad Hoc Checklist</strong>: Highlights quick checks, though unstructured, often used in urgent performance issues.</li>
+<li><strong>Scientific Method</strong>: Advocates a hypothesis-driven approach to investigate performance systematically, using empirical data to validate or refute assumptions.</li>
+<li><strong>Diagnosis Cycle</strong>: Encourages iterative testing and refinement of hypotheses.</li>
+<li><strong>Tools Method</strong>: Details how to employ specific tools for performance insights.</li>
+<li><strong>The USE Method (Utilization, Saturation, Errors)</strong>: A structured approach for identifying bottlenecks by examining each system resource for utilization, saturation, and errors.</li>
+<li><strong>The RED Method (Rate, Errors, Duration)</strong>: Primarily used for microservices, it involves examining the rate of requests, error rates, and the duration of each request.</li>
+<li><strong>Workload Characterization</strong>: Details how to categorize and measure workloads accurately to understand their demands on the system.</li>
+<li><strong>Drill-Down Analysis</strong>: Involves progressively investigating deeper into the system layers to locate issues.</li>
+<li><strong>Latency Analysis</strong>: Describes using latency as a primary metric, analyzing latency distributions and trends to uncover performance constraints.</li>
+<li><strong>Method R</strong>: Focuses on maximizing user experience by analyzing and prioritizing time delays.</li>
+<li><strong>Event Tracing</strong>: Highlights the importance of event tracing to understand the sequence of events and pinpoint delays.</li>
+<li><strong>Baseline Statistics</strong>: Emphasizes the importance of gathering baseline data to distinguish normal from abnormal behavior.</li>
+<li><strong>Static Performance Tuning</strong>: Adjusting configurations and parameters in advance to optimize performance.</li>
+<li><strong>Cache Tuning</strong>: Discusses strategies to optimize caching, including tuning cache sizes and policies.</li>
+<li><strong>Micro-Benchmarking</strong>: Advises creating small, controlled tests to measure the performance impact of specific changes.</li>
+<li><strong>Performance Mantras</strong>: Encourages adopting simplified, guiding principles (e.g., “optimize the common case”) for efficient performance management.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Modeling</strong></p>
+<ul>
+<li>Explores theoretical models and practical applications for predicting performance under different scenarios:
+<ul>
+<li><strong>Enterprise vs. Cloud</strong>: Compares traditional enterprise systems with cloud systems, highlighting differences in scalability and performance characteristics.</li>
+<li><strong>Visual Identification</strong>: Stresses visual methods like diagrams to understand system structure and data flow.</li>
+<li><strong>Amdahl’s Law of Scalability</strong>: Describes the law’s implications on system performance, particularly in highlighting diminishing returns as parallel processing increases.</li>
+<li><strong>Universal Scalability Law</strong>: A model that predicts performance gains and limitations of scaling by addressing contention and coherence issues.</li>
+<li><strong>Queueing Theory</strong>: Introduces queueing models as they apply to performance, helping predict delays based on resource usage and wait times.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Capacity Planning</strong></p>
+<ul>
+<li><strong>Resource Limits</strong>: Identifies maximum resource thresholds and the implications of exceeding them.</li>
+<li><strong>Factor Analysis</strong>: Details the factors impacting performance, such as hardware constraints, software configurations, and workload types.</li>
+<li><strong>Scaling Solutions</strong>: Examines strategies to scale resources to meet demand without degrading performance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Statistics</strong></p>
+<ul>
+<li>Covers statistical methods for quantifying performance characteristics:
+<ul>
+<li><strong>Quantifying Performance Gains</strong>: Provides ways to calculate improvements objectively.</li>
+<li><strong>Averages</strong>: Cautions against relying solely on averages and suggests using additional metrics like percentiles.</li>
+<li><strong>Standard Deviation, Percentiles, Median</strong>: Discusses variability measures and their importance for understanding performance consistency.</li>
+<li><strong>Coefficient of Variation</strong>: Examines relative variability, particularly for understanding performance stability.</li>
+<li><strong>Multimodal Distributions</strong>: Recognizes patterns with multiple peaks, indicating varied workload behaviors.</li>
+<li><strong>Outliers</strong>: Advises on interpreting outliers as potential indicators of performance bottlenecks or anomalies.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Monitoring</strong></p>
+<ul>
+<li><strong>Time-Based Patterns</strong>: Recognizes patterns in performance metrics over time to detect trends, periodic spikes, and anomalies.</li>
+<li><strong>Monitoring Products</strong>: Introduces common monitoring tools and their roles in long-term performance tracking.</li>
+<li><strong>Summary-Since-Boot</strong>: Explains methods for obtaining cumulative performance data since system boot for an overarching view.</li>
+</ul>
+</li>
+<li>
+<p><strong>Visualizations</strong></p>
+<ul>
+<li>Describes various data visualization methods for interpreting performance metrics:
+<ul>
+<li><strong>Line Chart</strong>: Useful for tracking metrics over time.</li>
+<li><strong>Scatter Plots</strong>: Effective for exploring relationships between two variables.</li>
+<li><strong>Heat Maps</strong>: Helps detect hot spots or anomalies in large datasets.</li>
+<li><strong>Timeline Charts</strong>: Shows events and trends over a period.</li>
+<li><strong>Surface Plot</strong>: Three-dimensional views of performance characteristics.</li>
+<li><strong>Visualization Tools</strong>: Introduces tools available for creating these visualizations to simplify analysis.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h1 id="questions" style="position:relative;"><a href="#questions" aria-label="questions permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Questions</h1>
 <ul>
 <li>how to get consistent results when benchmarking on linux?
@@ -1870,7 +2107,7 @@ B = [B earliest, B latest]</code></pre></div>
 <li><a href="https://elvischidera.com/2022-01-20-designing-data-intensive-applications">https://elvischidera.com/2022-01-20-designing-data-intensive-applications</a></li>
 <li><a href="https://danlebrero.com/2021/09/01/designing-data-intensive-applications-summary/">https://danlebrero.com/2021/09/01/designing-data-intensive-applications-summary/</a></li>
 <li><a href="https://github.com/keyvanakbary/learning-notes/blob/master/books/designing-data-intensive-applications.md">https://github.com/keyvanakbary/learning-notes/blob/master/books/designing-data-intensive-applications.md</a></li>
-</ul></section><hr/><footer><div class="bio"><div data-gatsby-image-wrapper="" style="width:50px;height:50px" class="gatsby-image-wrapper bio-avatar"><div aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear;background-color:#685848;width:50px;height:50px;position:relative"></div><picture><source type="image/avif" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/d4bf4/tony-avatar.avif 50w,/static/b811602c8c8ce14b66aae6613c8968f4/ee81f/tony-avatar.avif 100w" sizes="50px"/><source type="image/webp" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/3faea/tony-avatar.webp 50w,/static/b811602c8c8ce14b66aae6613c8968f4/6a679/tony-avatar.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="opacity:0" sizes="50px" decoding="async" loading="lazy" data-src="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg 50w,/static/b811602c8c8ce14b66aae6613c8968f4/64618/tony-avatar.jpg 100w" alt="Profile picture"/></picture><noscript><picture><source type="image/avif" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/d4bf4/tony-avatar.avif 50w,/static/b811602c8c8ce14b66aae6613c8968f4/ee81f/tony-avatar.avif 100w" sizes="50px"/><source type="image/webp" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/3faea/tony-avatar.webp 50w,/static/b811602c8c8ce14b66aae6613c8968f4/6a679/tony-avatar.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="opacity:0" sizes="50px" decoding="async" loading="lazy" src="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg 50w,/static/b811602c8c8ce14b66aae6613c8968f4/64618/tony-avatar.jpg 100w" alt="Profile picture"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><p>Written by <strong>Tony Vo</strong> <!-- -->father, husband, son and software developer<!-- --> <a href="https://twitter.com/ttrungvo">Twitter</a></p></div></footer></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/system-performance-summary/">← <!-- -->system performance summary - wip</a></li><li><a rel="next" href="/observability-engineer-summary/">observability engineer by Charity, Liz Fong and George summary - wip<!-- --> →</a></li></ul></nav><div><div id="disqus_thread"></div></div></main><footer>© <!-- -->2024<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.com">Gatsby</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/data-intensive-system-perf/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+</ul></section><hr/><footer><div class="bio"><div data-gatsby-image-wrapper="" style="width:50px;height:50px" class="gatsby-image-wrapper bio-avatar"><div aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear;background-color:#685848;width:50px;height:50px;position:relative"></div><picture><source type="image/avif" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/d4bf4/tony-avatar.avif 50w,/static/b811602c8c8ce14b66aae6613c8968f4/ee81f/tony-avatar.avif 100w" sizes="50px"/><source type="image/webp" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/3faea/tony-avatar.webp 50w,/static/b811602c8c8ce14b66aae6613c8968f4/6a679/tony-avatar.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="opacity:0" sizes="50px" decoding="async" loading="lazy" data-src="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg 50w,/static/b811602c8c8ce14b66aae6613c8968f4/64618/tony-avatar.jpg 100w" alt="Profile picture"/></picture><noscript><picture><source type="image/avif" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/d4bf4/tony-avatar.avif 50w,/static/b811602c8c8ce14b66aae6613c8968f4/ee81f/tony-avatar.avif 100w" sizes="50px"/><source type="image/webp" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/3faea/tony-avatar.webp 50w,/static/b811602c8c8ce14b66aae6613c8968f4/6a679/tony-avatar.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="opacity:0" sizes="50px" decoding="async" loading="lazy" src="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg 50w,/static/b811602c8c8ce14b66aae6613c8968f4/64618/tony-avatar.jpg 100w" alt="Profile picture"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><p>Written by <strong>Tony Vo</strong> <!-- -->father, husband, son and software developer<!-- --> <a href="https://twitter.com/ttrungvo">Twitter</a></p></div></footer></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/site-reliability-engineer-summary/">← <!-- -->site reliability engineering by Chris Jones summary - wip</a></li><li><a rel="next" href="/building-second-brain/">building the second brain by Tiago Forte summary<!-- --> →</a></li></ul></nav><div><div id="disqus_thread"></div></div></main><footer>© <!-- -->2024<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.com">Gatsby</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/data-intensive-system-perf/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
             id="gatsby-chunk-mapping"
           >
