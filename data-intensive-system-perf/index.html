@@ -1941,78 +1941,6 @@ B = [B earliest, B latest]</code></pre></div>
 <h1 id="methodologies" style="position:relative;"><a href="#methodologies" aria-label="methodologies permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Methodologies</strong></h1>
 <ul>
 <li>
-<p><strong>Terminology</strong></p>
-<ul>
-<li>Establishes key definitions that set a shared understanding across performance topics.</li>
-<li>Terms like latency, throughput, utilization, saturation, profiling, and tracing are clarified to ensure consistency and precision in analysis.</li>
-</ul>
-</li>
-<li>
-<p><strong>Models</strong></p>
-<ul>
-<li><strong>System Under Test (SUT)</strong>: Describes how a performance engineer should define the boundaries of the system or component being analyzed.</li>
-<li><strong>Queueing System</strong>: Introduces the concept of systems as queueing models where resources (e.g., CPU, disk) serve requests that may arrive faster than they can be processed, causing queues.
-<ul>
-<li>The queueing model aids in understanding delays and bottlenecks that occur when demand exceeds resource capacity.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Concepts</strong></p>
-<ul>
-<li><strong>Latency</strong>: Measures the time an operation takes from start to end, focusing on its role as a critical performance metric.</li>
-<li><strong>Time Scales</strong>: Explains that performance analysis must consider different time scales, such as real-time (microseconds), periodic intervals (seconds), or historical trends (hours, days).</li>
-<li><strong>Trade-Offs</strong>: Introduces the balancing act between various system resources (e.g., memory vs. CPU) and performance characteristics (e.g., latency vs. throughput).</li>
-<li><strong>Tuning Efforts</strong>: Discusses the diminishing returns on tuning, where initial optimization yields significant results but further adjustments bring smaller gains.</li>
-<li><strong>Level of Appropriateness</strong>: Stresses choosing the right level of detail for analysis, which varies based on the system’s complexity and performance needs.</li>
-<li><strong>Point-in-Time Recommendations</strong>: Highlights the temporary nature of performance optimizations, as system demands and configurations evolve over time.</li>
-<li><strong>Load vs. Architecture</strong>: Differentiates between load (the amount of work imposed on the system) and architecture (the system’s structure and capabilities).</li>
-<li><strong>Scalability</strong>: Examines how systems cope with increasing loads and the factors that determine a system’s ability to scale.</li>
-<li><strong>Metrics</strong>: Describes key performance metrics (e.g., CPU utilization, memory usage) and how they inform performance analysis.</li>
-<li><strong>Utilization, Saturation, and Profiling</strong>: These are explored as essential metrics to measure how fully resources are utilized and where congestion occurs.</li>
-<li><strong>Caching</strong>: Outlines caching strategies and their effects on performance, covering the balance between cache hits and misses.</li>
-<li><strong>Known-Unknowns</strong>: Discusses the limitations of system knowledge and the need to account for potential blind spots.</li>
-</ul>
-</li>
-<li>
-<p><strong>Perspectives</strong></p>
-<ul>
-<li>Introduces two primary analysis perspectives:
-<ul>
-<li><strong>Resource Analysis</strong>: Focuses on understanding each resource (e.g., CPU, memory) independently to identify constraints and inefficiencies.</li>
-<li><strong>Workload Analysis</strong>: Involves characterizing the demand that applications and processes place on system resources to see how they affect performance.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Methodology</strong></p>
-<ul>
-<li>Describes structured approaches to systems analysis that go beyond ad hoc troubleshooting:
-<ul>
-<li><strong>Anti-Methods</strong>: Covers ineffective approaches like the “Streetlight” (focusing only on observable areas) and “Blame-Someone-Else” (assigning responsibility without proper analysis).</li>
-<li><strong>Ad Hoc Checklist</strong>: Highlights quick checks, though unstructured, often used in urgent performance issues.</li>
-<li><strong>Scientific Method</strong>: Advocates a hypothesis-driven approach to investigate performance systematically, using empirical data to validate or refute assumptions.</li>
-<li><strong>Diagnosis Cycle</strong>: Encourages iterative testing and refinement of hypotheses.</li>
-<li><strong>Tools Method</strong>: Details how to employ specific tools for performance insights.</li>
-<li><strong>The USE Method (Utilization, Saturation, Errors)</strong>: A structured approach for identifying bottlenecks by examining each system resource for utilization, saturation, and errors.</li>
-<li><strong>The RED Method (Rate, Errors, Duration)</strong>: Primarily used for microservices, it involves examining the rate of requests, error rates, and the duration of each request.</li>
-<li><strong>Workload Characterization</strong>: Details how to categorize and measure workloads accurately to understand their demands on the system.</li>
-<li><strong>Drill-Down Analysis</strong>: Involves progressively investigating deeper into the system layers to locate issues.</li>
-<li><strong>Latency Analysis</strong>: Describes using latency as a primary metric, analyzing latency distributions and trends to uncover performance constraints.</li>
-<li><strong>Method R</strong>: Focuses on maximizing user experience by analyzing and prioritizing time delays.</li>
-<li><strong>Event Tracing</strong>: Highlights the importance of event tracing to understand the sequence of events and pinpoint delays.</li>
-<li><strong>Baseline Statistics</strong>: Emphasizes the importance of gathering baseline data to distinguish normal from abnormal behavior.</li>
-<li><strong>Static Performance Tuning</strong>: Adjusting configurations and parameters in advance to optimize performance.</li>
-<li><strong>Cache Tuning</strong>: Discusses strategies to optimize caching, including tuning cache sizes and policies.</li>
-<li><strong>Micro-Benchmarking</strong>: Advises creating small, controlled tests to measure the performance impact of specific changes.</li>
-<li><strong>Performance Mantras</strong>: Encourages adopting simplified, guiding principles (e.g., “optimize the common case”) for efficient performance management.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
 <p><strong>Modeling</strong></p>
 <ul>
 <li>Explores theoretical models and practical applications for predicting performance under different scenarios:
@@ -2050,28 +1978,757 @@ B = [B earliest, B latest]</code></pre></div>
 </ul>
 </li>
 <li>
-<p><strong>Monitoring</strong></p>
+<p><strong>Terminology</strong></p>
 <ul>
-<li><strong>Time-Based Patterns</strong>: Recognizes patterns in performance metrics over time to detect trends, periodic spikes, and anomalies.</li>
-<li><strong>Monitoring Products</strong>: Introduces common monitoring tools and their roles in long-term performance tracking.</li>
-<li><strong>Summary-Since-Boot</strong>: Explains methods for obtaining cumulative performance data since system boot for an overarching view.</li>
+<li>Establishes key definitions that set a shared understanding across performance topics.</li>
+<li>Terms like latency, throughput, utilization, saturation, profiling, and tracing are clarified to ensure consistency and precision in analysis.</li>
 </ul>
 </li>
 <li>
-<p><strong>Visualizations</strong></p>
+<p><strong>Models</strong></p>
 <ul>
-<li>Describes various data visualization methods for interpreting performance metrics:
+<li><strong>System Under Test (SUT)</strong>: Describes how a performance engineer should define the boundaries of the system or component being analyzed.</li>
+<li><strong>Queueing System</strong>: Introduces the concept of systems as queueing models where resources (e.g., CPU, disk) serve requests that may arrive faster than they can be processed, causing queues.
 <ul>
-<li><strong>Line Chart</strong>: Useful for tracking metrics over time.</li>
-<li><strong>Scatter Plots</strong>: Effective for exploring relationships between two variables.</li>
-<li><strong>Heat Maps</strong>: Helps detect hot spots or anomalies in large datasets.</li>
-<li><strong>Timeline Charts</strong>: Shows events and trends over a period.</li>
-<li><strong>Surface Plot</strong>: Three-dimensional views of performance characteristics.</li>
-<li><strong>Visualization Tools</strong>: Introduces tools available for creating these visualizations to simplify analysis.</li>
+<li>The queueing model aids in understanding delays and bottlenecks that occur when demand exceeds resource capacity.</li>
 </ul>
 </li>
 </ul>
 </li>
+</ul>
+<h2 id="concepts" style="position:relative;"><a href="#concepts" aria-label="concepts permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Concepts</h2>
+<ul>
+<li>
+<p><strong>Latency</strong></p>
+<ul>
+<li><strong>Definition</strong>: Latency is the time taken for a single operation to complete, from start to end. This can apply to a wide range of operations, from CPU cycles and disk I/O to network requests.</li>
+<li><strong>Types of Latency</strong>:
+<ul>
+<li><strong>Response Time</strong>: The end-to-end delay perceived by a user or system component.</li>
+<li><strong>Queueing Delay</strong>: The time a request waits before it can be processed due to resource saturation.</li>
+</ul>
+</li>
+<li><strong>Importance</strong>: Latency is a key performance metric, as it directly affects user experience. High latency in critical paths can lead to slow application performance or dissatisfied users.</li>
+<li><strong>Measurement</strong>: Measured in milliseconds (ms) or microseconds (µs), with tools like <code class="language-text">perf</code>, <code class="language-text">tcpdump</code>, or application logs providing insights into latency at various stages.</li>
+<li><strong>Application</strong>: In performance tuning, reducing latency often means optimizing resources (e.g., CPU, memory) and addressing bottlenecks.</li>
+</ul>
+</li>
+<li>
+<p><strong>Time Scales</strong></p>
+<ul>
+<li><strong>Definition</strong>: Time scales refer to the different temporal levels at which performance metrics and events are examined.</li>
+<li><strong>Levels</strong>:
+<ul>
+<li><strong>Microsecond and Millisecond</strong>: Useful for analyzing short-duration events like CPU instructions, system calls, or high-performance network requests.</li>
+<li><strong>Second</strong>: Often used for observing resource utilization patterns, like CPU or disk utilization over time.</li>
+<li><strong>Long-Term (Minutes to Days)</strong>: Important for trend analysis, identifying recurring patterns, or observing workload behavior changes over days or weeks.</li>
+</ul>
+</li>
+<li><strong>Importance</strong>: Different time scales reveal different performance characteristics. For example, microsecond granularity may expose CPU contention in a highly parallel application, while daily patterns could reveal peak and off-peak load times.</li>
+<li><strong>Application</strong>: Analysts select the appropriate time scale based on the performance question being investigated, ensuring insights match the relevant time frame of the observed issue.</li>
+</ul>
+</li>
+<li>
+<p><strong>Trade-Offs</strong></p>
+<ul>
+<li><strong>Definition</strong>: Trade-offs in system performance involve balancing conflicting resource demands to optimize overall efficiency.</li>
+<li><strong>Examples of Common Trade-Offs</strong>:
+<ul>
+<li><strong>Memory vs. CPU Usage</strong>: Algorithms that save memory might use more CPU and vice versa.</li>
+<li><strong>Throughput vs. Latency</strong>: Increasing throughput might raise latency if resources become saturated.</li>
+<li><strong>Resource Usage vs. Power Consumption</strong>: High CPU utilization can improve processing speed but consumes more power, which can be a concern in power-sensitive environments.</li>
+</ul>
+</li>
+<li><strong>Importance</strong>: Trade-offs guide decision-making in tuning and resource allocation, ensuring that gains in one area don’t lead to unacceptable losses in another.</li>
+<li><strong>Application</strong>: Analysts weigh trade-offs to find optimal configurations, often needing to compromise based on system requirements or priorities.</li>
+</ul>
+</li>
+<li>
+<p><strong>Tuning Efforts</strong></p>
+<ul>
+<li><strong>Definition</strong>: Tuning efforts refer to the time and resources invested in optimizing a system, with the goal of achieving measurable performance improvements.</li>
+<li><strong>Diminishing Returns</strong>: Initial tuning often yields significant gains, but further tuning may have limited impact, requiring increasingly complex and costly interventions.</li>
+<li><strong>Importance</strong>: Helps analysts decide when to stop optimizing and when further efforts are not justified by the potential gains.</li>
+<li><strong>Application</strong>: Tuning is balanced against available resources and deadlines, ensuring that time and effort are spent where they provide maximum impact.</li>
+</ul>
+</li>
+<li>
+<p><strong>Level of Appropriateness</strong></p>
+<ul>
+<li><strong>Definition</strong>: Refers to selecting the right level of detail in performance analysis, tailored to the scope and complexity of the problem.</li>
+<li><strong>Granularity Choices</strong>:
+<ul>
+<li><strong>High-Level (System-Wide)</strong>: Suitable for general performance monitoring and identifying overarching bottlenecks.</li>
+<li><strong>Low-Level (Component or Process-Level)</strong>: Essential for diagnosing specific issues within a particular application or resource.</li>
+</ul>
+</li>
+<li><strong>Importance</strong>: Choosing the appropriate level prevents unnecessary complexity and focuses efforts where they are most likely to yield insights.</li>
+<li><strong>Application</strong>: Analysts balance detail levels, starting broad and drilling down as needed, depending on the complexity of the issue.</li>
+</ul>
+</li>
+<li>
+<p><strong>When to Stop Analysis</strong></p>
+<ul>
+<li><strong>Definition</strong>: Establishing a threshold at which performance analysis is considered complete or when further analysis may yield minimal returns.</li>
+<li><strong>Stopping Criteria</strong>:
+<ul>
+<li><strong>Performance Goals Met</strong>: If objectives like response time or utilization targets are achieved.</li>
+<li><strong>Resource Constraints</strong>: If further analysis is too costly or resource-intensive.</li>
+<li><strong>Plateauing Improvements</strong>: If tuning and troubleshooting reach diminishing returns.</li>
+</ul>
+</li>
+<li><strong>Importance</strong>: Prevents wasted effort and resources, allowing teams to allocate time effectively and focus on pressing issues.</li>
+<li><strong>Application</strong>: Used in iterative performance tuning cycles, where each cycle is evaluated for the necessity of further efforts.</li>
+</ul>
+</li>
+<li>
+<p><strong>Point-in-Time Recommendations</strong></p>
+<ul>
+<li><strong>Definition</strong>: Recommendations are based on current system state and workload, acknowledging that performance requirements and system configuration may change over time.</li>
+<li><strong>Importance</strong>: Recognizes that performance tuning is a moving target; as workloads evolve, so too must optimizations.</li>
+<li><strong>Application</strong>: Analysts document the rationale for tuning choices, noting that they may need adjustment as the system or application grows or changes.</li>
+</ul>
+</li>
+<li>
+<p><strong>Load vs. Architecture</strong></p>
+<ul>
+<li><strong>Definition</strong>: Differentiates between the system’s workload (load) and its design or capabilities (architecture).
+<ul>
+<li><strong>Load</strong>: The volume and type of demand placed on a system at any given time.</li>
+<li><strong>Architecture</strong>: The underlying design, such as hardware capacity, software configuration, and resource distribution.</li>
+</ul>
+</li>
+<li><strong>Importance</strong>: Analyzing load helps in understanding if performance issues are due to demand outpacing capacity, while architecture analysis evaluates if the system design supports the workload efficiently.</li>
+<li><strong>Application</strong>: Analysts determine if performance improvements should focus on scaling the architecture (e.g., adding servers) or adjusting the workload (e.g., throttling requests).</li>
+</ul>
+</li>
+<li>
+<p><strong>Scalability</strong></p>
+<ul>
+<li><strong>Definition</strong>: Scalability is the system’s ability to handle increased load by proportionally increasing resources or optimizing current resources.</li>
+<li><strong>Scalability Models</strong>:
+<ul>
+<li><strong>Vertical Scaling</strong>: Adding more power to an existing machine (e.g., more CPU cores).</li>
+<li><strong>Horizontal Scaling</strong>: Adding more machines to distribute load.</li>
+</ul>
+</li>
+<li><strong>Importance</strong>: Ensures the system can adapt to growth without major redesigns.</li>
+<li><strong>Application</strong>: Analysts often simulate increased load or benchmark scenarios to evaluate if the current system scales efficiently or if new solutions are required.</li>
+</ul>
+</li>
+<li>
+<p><strong>Metrics</strong></p>
+<ul>
+<li><strong>Definition</strong>: Metrics are quantitative measurements that provide insight into system performance.</li>
+<li><strong>Types of Metrics</strong>:
+<ul>
+<li><strong>Throughput</strong>: Volume of operations completed per unit time (e.g., requests per second).</li>
+<li><strong>Utilization</strong>: Percentage of time a resource is actively in use.</li>
+<li><strong>Error Rate</strong>: Frequency of errors or faults.</li>
+</ul>
+</li>
+<li><strong>Importance</strong>: Reliable metrics form the backbone of performance analysis, enabling data-driven decisions.</li>
+<li><strong>Application</strong>: Analysts collect, monitor, and analyze these metrics to identify trends, issues, and bottlenecks.</li>
+</ul>
+</li>
+<li>
+<p><strong>Utilization and Saturation</strong></p>
+<ul>
+<li><strong>Utilization</strong>:
+<ul>
+<li><strong>Definition</strong>: The percentage of time a resource is in use, showing how busy it is.</li>
+<li><strong>Importance</strong>: High utilization indicates heavy use, which could signal impending bottlenecks.</li>
+</ul>
+</li>
+<li><strong>Saturation</strong>:
+<ul>
+<li><strong>Definition</strong>: The extent to which a resource is overused, resulting in queuing and delays.</li>
+<li><strong>Importance</strong>: High saturation levels are a strong indicator of bottlenecks and degraded performance.</li>
+</ul>
+</li>
+<li><strong>Application</strong>: Both metrics are used in concert to assess resource availability and identify overtaxed components.</li>
+</ul>
+</li>
+<li>
+<p><strong>Profiling</strong></p>
+<ul>
+<li><strong>Definition</strong>: Profiling is the process of collecting detailed data on system performance, often focusing on specific components (e.g., CPU, memory).</li>
+<li><strong>Purpose</strong>: Identifies which parts of the system or application consume the most resources.</li>
+<li><strong>Tools</strong>: <code class="language-text">perf</code>, <code class="language-text">gprof</code>, <code class="language-text">bpftrace</code>, among others, can capture profiling data.</li>
+<li><strong>Application</strong>: Profiling is used to optimize hotspots, or areas consuming disproportionate resources.</li>
+</ul>
+</li>
+<li>
+<p><strong>Caching</strong></p>
+<ul>
+<li><strong>Definition</strong>: Caching temporarily stores frequently accessed data in a faster storage area to reduce access latency.</li>
+<li><strong>Types of Caches</strong>:
+<ul>
+<li><strong>Memory Cache</strong>: Stores data in RAM for quicker access.</li>
+<li><strong>Disk Cache</strong>: Stores data in faster storage for disk I/O efficiency.</li>
+<li><strong>Web Cache</strong>: Stores web resources closer to end users.</li>
+</ul>
+</li>
+<li><strong>Importance</strong>: Caching significantly improves response times by reducing latency on repeated data requests.</li>
+<li><strong>Application</strong>: Analysts often tune cache sizes and policies to strike a balance between memory usage and cache hit rate.</li>
+</ul>
+</li>
+<li>
+<p><strong>Known-Unknowns</strong></p>
+<ul>
+<li><strong>Definition</strong>: Known-unknowns are areas of the system that might impact performance but lack sufficient visibility.</li>
+<li><strong>Examples</strong>:
+<ul>
+<li>Areas without monitoring or logging (blind spots).</li>
+<li>Components where full performance impact is uncertain.</li>
+</ul>
+</li>
+<li><strong>Importance</strong>: Recognizing known-unknowns helps analysts identify blind spots where performance issues may be lurking.</li>
+<li><strong>Application</strong>: Analysts continuously assess and expand observability to reduce known-unknown, such as adding monitoring tools to unmonitored components.</li>
+</ul>
+</li>
+<li>
+<p><strong>Perspectives</strong></p>
+<ul>
+<li>Introduces two primary analysis perspectives:
+<ul>
+<li><strong>Resource Analysis</strong>: Focuses on understanding each resource (e.g., CPU, memory) independently to identify constraints and inefficiencies.</li>
+<li><strong>Workload Analysis</strong>: Involves characterizing the demand that applications and processes place on system resources to see how they affect performance.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="methodology" style="position:relative;"><a href="#methodology" aria-label="methodology permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Methodology</strong></h2>
+<ul>
+<li>
+<p><strong>Anti-Methods</strong></p>
+<ul>
+<li>Streetlight Anti-Method: This involves focusing on what is easy to observe or measure rather than investigating areas that may actually need attention. The name comes from the “streetlight effect,” where someone looks for a lost item under a streetlight simply because it’s brighter there, even if the item was lost elsewhere.
+<ul>
+<li>Pitfall: Limits the analyst’s scope and may miss the root cause, as easy-to-observe metrics are not always the relevant metrics.</li>
+</ul>
+</li>
+<li>Random Change Anti-Method: Here, changes are applied randomly without a scientific basis or understanding of the system’s behavior.
+<ul>
+<li>Pitfall: Can create new issues, making troubleshooting harder. This method often lacks controlled testing and documentation, so changes and their effects are not fully understood.</li>
+</ul>
+</li>
+<li>Blame-Someone-Else Anti-Method: Rather than analyzing the system comprehensively, blame is shifted to other teams or components without sufficient evidence.
+<ul>
+<li>Pitfall: Leads to misdiagnosis and delays in issue resolution. Effective analysis requires collaboration rather than assumption.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Ad Hoc Checklist Method</strong></p>
+<ul>
+<li>This involves using a quick, often experience-based checklist of typical performance checks and fixes.</li>
+<li>Application: Useful for addressing known performance problems rapidly, especially in high-pressure situations.</li>
+<li>Pitfall: Lacks thoroughness and can miss complex or novel issues. Often reactive rather than proactive.</li>
+</ul>
+</li>
+<li>
+<p><strong>Scientific Method</strong></p>
+<ul>
+<li>Steps: Hypothesis formation, experiment design, data collection, analysis, and conclusion.</li>
+<li>Purpose: A rigorous, repeatable approach where hypotheses are tested against observations and adjusted based on results.</li>
+<li>Advantages: Reduces guesswork by grounding findings in empirical data, allowing for evidence-based solutions.</li>
+<li>Application: Ideal for complex issues that require in-depth understanding and a high degree of accuracy.</li>
+</ul>
+</li>
+<li>
+<p><strong>Diagnosis Cycle</strong></p>
+<ul>
+<li>Involves an iterative approach to performance analysis where the analyst forms hypotheses, tests them, and refines the understanding of the problem with each cycle.</li>
+<li>Steps: Problem identification → Hypothesis generation → Testing and data collection → Adjustment of hypothesis.</li>
+<li>Purpose: Allows performance issues to be systematically narrowed down through repeated analysis.</li>
+<li>Application: Suitable for complex, multi-faceted problems where direct observation does not reveal clear causes.</li>
+</ul>
+</li>
+<li>
+<p><strong>Tools Method</strong></p>
+<ul>
+<li>Focuses on using specific tools and their outputs to address and analyze performance.</li>
+<li>Example: Using CPU profilers (e.g., perf), memory tools (e.g., vmstat), and network monitors (e.g., tcpdump) to identify resource bottlenecks.</li>
+<li>Pitfall: Tool-centric analysis can lead to over-reliance on certain metrics or types of data, potentially overlooking the broader context or interactions between system components.</li>
+</ul>
+</li>
+<li>
+<p><strong>The USE Method (Utilization, Saturation, Errors)</strong></p>
+<ul>
+<li>Steps: Examine each resource in a system (e.g., CPU, memory, disk, network) for:</li>
+<li>Utilization: The percentage of resource use, identifying how busy the resource is.</li>
+<li>Saturation: The demand exceeding the resource’s capacity, leading to queuing and delays.</li>
+<li>Errors: Faults or abnormal behaviors impacting resource performance.</li>
+<li>Purpose: Provides a comprehensive view by systematically examining the key factors affecting each resource.</li>
+<li>Advantages: Helps quickly locate bottlenecks and provides a structured approach to address them.</li>
+<li>Application: Effective for diagnosing common performance issues, especially in complex systems where multiple resources are used.</li>
+</ul>
+</li>
+<li>
+<p><strong>The RED Method (Rate, Errors, Duration)</strong></p>
+<ul>
+<li>Primarily applied to microservices and request-driven architectures:</li>
+<li>Rate: Frequency of requests.</li>
+<li>Errors: Error rate per unit time or request.</li>
+<li>Duration: Time taken per request (latency).</li>
+<li>Purpose: Focuses on user-facing services and provides a user-centered perspective.</li>
+<li>Advantages: Ideal for web services and microservices, helping quickly identify service-level bottlenecks.</li>
+<li>Application: Effective in customer-centric systems where request handling is crucial, such as e-commerce and cloud services.</li>
+</ul>
+</li>
+<li>
+<p><strong>Workload Characterization</strong></p>
+<ul>
+<li>Involves understanding the nature of the workload being run on the system: how it demands CPU, memory, I/O, and network resources.</li>
+<li>Elements: Identify types (e.g., batch processing, real-time requests), frequency, intensity, and resource distribution of workloads.</li>
+<li>Purpose: Provides context for performance metrics by relating them to actual workload demands.</li>
+<li>Application: Essential for accurate benchmarking, capacity planning, and understanding how different workloads impact performance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Drill-Down Analysis</strong></p>
+<ul>
+<li>A technique to focus progressively deeper on a specific metric or subsystem.</li>
+<li>Steps: Start with high-level metrics and drill down into details (e.g., from system-level CPU usage to per-thread CPU usage).</li>
+<li>Purpose: Isolates the exact layer or component contributing to a performance issue.</li>
+<li>Application: Useful when initial indicators suggest an issue in a particular area, but detailed analysis is needed to locate the exact source.</li>
+</ul>
+</li>
+<li>
+<p><strong>Latency Analysis</strong></p>
+<ul>
+<li>Examines response times, queuing delays, and processing times at various stages in the system.</li>
+<li>Steps: Measure latency at key points (e.g., application, network, storage) and plot latency distribution to identify outliers.</li>
+<li>Purpose: Helps to identify components or processes with excessive delay.</li>
+<li>Application: Particularly valuable in user-facing systems where response time directly impacts user experience.</li>
+</ul>
+</li>
+<li>
+<p><strong>Method R</strong></p>
+<ul>
+<li>Objective: Reducing response times by focusing on critical paths and delays within applications.</li>
+<li>Steps: Identify critical paths, focus on optimizing slow segments, and estimate the maximum potential speedup.</li>
+<li>Purpose: Focuses on maximizing system responsiveness, especially important in user-interactive systems.</li>
+<li>Application: Commonly used in database and application performance tuning where response time is critical.</li>
+</ul>
+</li>
+<li>
+<p><strong>Event Tracing</strong></p>
+<ul>
+<li>Uses trace events within the system (e.g., function calls, context switches) to monitor detailed operations and interactions.</li>
+<li>Tools: Event tracers like perf, Ftrace, bpftrace.</li>
+<li>Purpose: Provides insight into fine-grained activities, revealing interactions and performance at the microsecond level.</li>
+<li>Application: Helpful for diagnosing intricate issues in application performance, kernel operations, or system resource contention.</li>
+</ul>
+</li>
+<li>
+<p><strong>Baseline Statistics</strong></p>
+<ul>
+<li>Involves gathering data over time to establish a baseline of normal performance.</li>
+<li>Purpose: Baselines provide context for identifying deviations and anomalies.</li>
+<li>Application: Useful in long-term monitoring, enabling early detection of problems by comparing current performance to historical averages.</li>
+</ul>
+</li>
+<li>
+<p><strong>Static Performance Tuning</strong></p>
+<ul>
+<li>Pre-emptive adjustments made to configurations based on known best practices, tuning known bottlenecks.</li>
+<li>Purpose: Optimizes resource usage without requiring real-time troubleshooting.</li>
+<li>Application: Commonly applied in database, memory, and CPU resource allocation.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cache Tuning</strong></p>
+<ul>
+<li>Focuses on optimizing cache behavior to reduce access times and improve hit ratios.</li>
+<li>Purpose: Ensures frequently accessed data is stored closer to the processing units, minimizing latency.</li>
+<li>Application: Used extensively in memory, file system, and application-level caches.</li>
+</ul>
+</li>
+<li>
+<p><strong>Micro-Benchmarking</strong></p>
+<ul>
+<li>Involves running small, controlled tests to evaluate the impact of specific changes.</li>
+<li>Purpose: Provides precise measurements in an isolated environment.</li>
+<li>Application: Ideal for testing hardware upgrades, configuration changes, or new algorithms on performance-sensitive tasks.</li>
+</ul>
+</li>
+<li>
+<p><strong>Performance Mantras</strong></p>
+<ul>
+<li>Examples: “Measure, don’t guess,” “Optimize the common case,” “Make it work, make it right, make it fast.”</li>
+<li>Purpose: These simplified principles serve as reminders to follow best practices and avoid common pitfalls.</li>
+<li>Application: Applied as guiding rules to improve analysis focus and efficiency.</li>
+</ul>
+</li>
+</ul>
+<h2 id="monitoring" style="position:relative;"><a href="#monitoring" aria-label="monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Monitoring</h2>
+<h3 id="time-based-patterns" style="position:relative;"><a href="#time-based-patterns" aria-label="time based patterns permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Time-Based Patterns</strong></h3>
+<ul>
+<li><strong>Definition</strong>: Time-based patterns refer to the cyclical or recurring behaviors in system performance metrics observed over different time intervals.</li>
+<li><strong>Examples of Time-Based Patterns</strong>:
+<ul>
+<li><strong>Daily Patterns</strong>: Systems often have predictable cycles, like increased usage during business hours and reduced usage at night.</li>
+<li><strong>Weekly Patterns</strong>: Some systems, particularly those related to business operations, may have lower activity on weekends and peak activity during weekdays.</li>
+<li><strong>Seasonal Patterns</strong>: E-commerce platforms might see spikes during holiday seasons or special events.</li>
+</ul>
+</li>
+<li><strong>Importance</strong>: Recognizing these patterns is crucial for identifying what is “normal” versus what is a potential anomaly. Understanding time-based patterns also assists in capacity planning and helps avoid false alerts due to expected load changes.</li>
+<li><strong>Application</strong>:
+<ul>
+<li>Monitoring tools typically provide dashboards and reports with historical data, helping visualize these patterns.</li>
+<li>Analysts can use time-based patterns to set baseline expectations, improving anomaly detection and alerting accuracy by differentiating expected cyclic behavior from true performance issues.</li>
+</ul>
+</li>
+</ul>
+<h3 id="monitoring-products" style="position:relative;"><a href="#monitoring-products" aria-label="monitoring products permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Monitoring Products</strong></h3>
+<ul>
+<li><strong>Definition</strong>: Monitoring products are specialized tools designed to gather, process, and present system performance metrics in real time and over historical periods.</li>
+<li><strong>Types of Monitoring Products</strong>:
+<ul>
+<li><strong>Infrastructure Monitoring</strong>: Focuses on system-level metrics (e.g., CPU, memory, disk I/O) using tools like <code class="language-text">Nagios</code>, <code class="language-text">Zabbix</code>, <code class="language-text">Prometheus</code>, and <code class="language-text">Grafana</code>.</li>
+<li><strong>Application Performance Monitoring (APM)</strong>: Tracks application-specific metrics (e.g., request rates, error rates, response times) using tools like <code class="language-text">New Relic</code>, <code class="language-text">AppDynamics</code>, and <code class="language-text">Datadog</code>.</li>
+<li><strong>Log Aggregation and Analysis</strong>: Collects and analyzes logs to uncover insights, using tools like <code class="language-text">Elasticsearch</code>, <code class="language-text">Splunk</code>, and <code class="language-text">Graylog</code>.</li>
+</ul>
+</li>
+<li><strong>Purpose</strong>: Monitoring products provide observability into different layers of the stack and enable continuous, real-time insights into system performance.</li>
+<li><strong>Application</strong>:
+<ul>
+<li>Analysts configure monitoring products to capture relevant metrics for each critical component.</li>
+<li>These tools are typically integrated into alerting systems that notify operators when performance deviates from normal thresholds, allowing for quick response.</li>
+</ul>
+</li>
+</ul>
+<h3 id="summary-since-boot" style="position:relative;"><a href="#summary-since-boot" aria-label="summary since boot permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Summary-Since-Boot</strong></h3>
+<ul>
+<li><strong>Definition</strong>: A summary-since-boot metric provides cumulative performance data from the time the system last restarted. It aggregates usage data over a long period, helping analysts understand the overall load and resource consumption.</li>
+<li><strong>Examples</strong>:
+<ul>
+<li><strong>CPU Utilization</strong>: The percentage of time the CPU has been busy since boot.</li>
+<li><strong>Disk I/O</strong>: Total read and write operations performed since the system started.</li>
+<li><strong>Network Throughput</strong>: Total bytes sent and received since the last restart.</li>
+</ul>
+</li>
+<li><strong>Importance</strong>: This cumulative data provides a broad view of system activity, making it easier to identify long-term resource usage trends and avoid short-term spikes that might distort typical usage patterns.</li>
+<li><strong>Application</strong>:
+<ul>
+<li>Analysts use summary-since-boot metrics as a baseline to understand typical workload patterns, which can be particularly valuable for planning, capacity assessment, and identifying slow-burning issues that develop over long periods.</li>
+<li>Tools like <code class="language-text">sar</code> and <code class="language-text">vmstat</code> can be configured to log data periodically, providing a cumulative view of system metrics.</li>
+</ul>
+</li>
+</ul>
+<h3 id="real-time-vs-historical-monitoring" style="position:relative;"><a href="#real-time-vs-historical-monitoring" aria-label="real time vs historical monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Real-Time vs. Historical Monitoring</strong></h3>
+<ul>
+<li><strong>Real-Time Monitoring</strong>:
+<ul>
+<li><strong>Definition</strong>: Capturing and displaying system performance data as it happens, often with second-to-minute granularity.</li>
+<li><strong>Importance</strong>: Essential for detecting and responding to immediate issues. Real-time monitoring allows quick identification of sudden spikes or drops in performance, helping mitigate outages and bottlenecks.</li>
+<li><strong>Tools</strong>: <code class="language-text">top</code>, <code class="language-text">htop</code>, <code class="language-text">nload</code>, and dashboards in APM tools (e.g., Datadog, New Relic).</li>
+<li><strong>Application</strong>: Real-time monitoring is particularly useful during incident response, providing an up-to-date view of the system’s health.</li>
+</ul>
+</li>
+<li><strong>Historical Monitoring</strong>:
+<ul>
+<li><strong>Definition</strong>: Storing and analyzing data over extended periods to identify trends, patterns, and changes in system performance.</li>
+<li><strong>Importance</strong>: Enables trend analysis, anomaly detection, and long-term capacity planning. Historical data helps correlate performance issues with external events, seasonal trends, or recurring issues.</li>
+<li><strong>Tools</strong>: <code class="language-text">Prometheus</code> with <code class="language-text">Grafana</code>, <code class="language-text">Elasticsearch</code>, and <code class="language-text">Splunk</code> for log-based analysis.</li>
+<li><strong>Application</strong>: Historical monitoring helps performance engineers understand how changes impact performance over time and can inform capacity planning and scaling decisions.</li>
+</ul>
+</li>
+</ul>
+<h3 id="anomaly-detection" style="position:relative;"><a href="#anomaly-detection" aria-label="anomaly detection permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Anomaly Detection</strong></h3>
+<ul>
+<li><strong>Definition</strong>: Anomaly detection involves identifying deviations from the established baseline or expected behavior.</li>
+<li><strong>Types of Anomalies</strong>:
+<ul>
+<li><strong>Sudden Spikes or Drops</strong>: Large, immediate changes in a metric, which could indicate incidents like a DDoS attack or hardware failure.</li>
+<li><strong>Gradual Trend Shifts</strong>: Slower changes over time, often indicative of resource leaks or slow memory saturation.</li>
+</ul>
+</li>
+<li><strong>Importance</strong>: Early detection of anomalies helps avoid more severe issues by allowing analysts to respond quickly before an anomaly turns into a service-impacting incident.</li>
+<li><strong>Application</strong>:
+<ul>
+<li>Modern monitoring systems often include built-in anomaly detection algorithms, such as threshold-based, moving averages, or machine learning-based models.</li>
+<li>Analysts can fine-tune anomaly detection thresholds based on historical patterns to reduce false positives.</li>
+</ul>
+</li>
+</ul>
+<h3 id="alerting" style="position:relative;"><a href="#alerting" aria-label="alerting permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Alerting</strong></h3>
+<ul>
+<li><strong>Definition</strong>: Alerting is the process of notifying the operations team of performance or health issues as they occur.</li>
+<li><strong>Types of Alerts</strong>:
+<ul>
+<li><strong>Threshold-Based Alerts</strong>: Triggered when metrics exceed or fall below a defined limit (e.g., CPU utilization above 80%).</li>
+<li><strong>Anomaly-Based Alerts</strong>: Triggered based on deviations from expected patterns or baseline behavior.</li>
+<li><strong>Composite Alerts</strong>: Combine multiple metrics (e.g., high CPU and memory usage) to reduce noise and focus on critical issues.</li>
+</ul>
+</li>
+<li><strong>Importance</strong>: Effective alerting enables proactive response to performance issues, minimizing downtime and improving system reliability.</li>
+<li><strong>Application</strong>:
+<ul>
+<li>Analysts configure alert thresholds carefully to strike a balance between avoiding unnecessary noise (alert fatigue) and catching important issues.</li>
+<li>Alert systems are often configured with different urgency levels, such as warning alerts for monitoring and critical alerts for immediate action.</li>
+</ul>
+</li>
+</ul>
+<h3 id="visualization-techniques" style="position:relative;"><a href="#visualization-techniques" aria-label="visualization techniques permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Visualization Techniques</strong></h3>
+<ul>
+<li><strong>Definition</strong>: Visualization techniques present monitoring data graphically to make it easier to understand and analyze patterns, trends, and anomalies.</li>
+<li><strong>Common Visualization Types</strong>:
+<ul>
+<li><strong>Line Graphs</strong>: Show metric changes over time, highlighting trends and periodic patterns.</li>
+<li><strong>Heat Maps</strong>: Visualize data density, useful for identifying hot spots or patterns in high-frequency events.</li>
+<li><strong>Stacked Area Charts</strong>: Show cumulative usage, useful for understanding how resource consumption is distributed across different applications or services.</li>
+<li><strong>Histograms</strong>: Display distributions (e.g., latency distributions) to reveal performance outliers and assess consistency.</li>
+</ul>
+</li>
+<li><strong>Importance</strong>: Visualizations transform raw data into interpretable insights, which support quicker and more accurate analysis.</li>
+<li><strong>Application</strong>: Analysts use visualization tools like Grafana, Kibana, and custom dashboards to explore and present data meaningfully, helping both technical and non-technical stakeholders understand system performance.</li>
+</ul>
+<h3 id="monitoring-granularity" style="position:relative;"><a href="#monitoring-granularity" aria-label="monitoring granularity permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Monitoring Granularity</strong></h3>
+<ul>
+<li><strong>Definition</strong>: Monitoring granularity refers to the detail and frequency at which performance data is collected.</li>
+<li><strong>Levels of Granularity</strong>:
+<ul>
+<li><strong>High Granularity</strong>: Frequent sampling intervals (e.g., per second) providing a detailed view of system behavior, often used for troubleshooting specific incidents.</li>
+<li><strong>Low Granularity</strong>: Longer sampling intervals (e.g., per minute or per hour) useful for high-level trend analysis and reducing data storage costs.</li>
+</ul>
+</li>
+<li><strong>Importance</strong>: Choosing the right granularity balances the need for detail with resource and storage constraints.</li>
+<li><strong>Application</strong>:
+<ul>
+<li>High granularity monitoring is configured for critical resources or systems requiring rapid detection of performance changes.</li>
+<li>Low granularity monitoring is typically applied for long-term historical analysis and capacity planning.</li>
+</ul>
+</li>
+</ul>
+<h3 id="metric-aggregation-and-data-retention" style="position:relative;"><a href="#metric-aggregation-and-data-retention" aria-label="metric aggregation and data retention permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Metric Aggregation and Data Retention</strong></h3>
+<ul>
+<li><strong>Definition</strong>: Metric aggregation combines data points to reduce the volume of data, while data retention policies determine how long monitoring data is stored.</li>
+<li><strong>Purpose of Aggregation</strong>: Reduces storage needs and improves visualization performance by summarizing data over time.
+<ul>
+<li><strong>Examples</strong>: Averaging CPU usage per minute instead of storing each second’s data; summarizing network traffic by hourly totals.</li>
+</ul>
+</li>
+<li><strong>Purpose of Data Retention</strong>: Determines the historical depth available for analysis and long-term trend recognition.
+<ul>
+<li><strong>Application</strong>: Short-term high granularity data (e.g., last 24 hours) for detailed analysis and aggregated long-term data (e.g., last year) for trend and capacity analysis.</li>
+</ul>
+</li>
+</ul>
+<h3 id="synthetic-monitoring" style="position:relative;"><a href="#synthetic-monitoring" aria-label="synthetic monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Synthetic Monitoring</strong></h3>
+<ul>
+<li><strong>Definition</strong>: Synthetic monitoring simulates user transactions or operations by periodically running tests from external or internal points to validate system performance and availability.</li>
+<li><strong>Examples of Synthetic Checks</strong>:
+<ul>
+<li><strong>HTTP Pings</strong>: Monitoring a website’s availability and response time by sending requests from different locations.</li>
+<li><strong>API Tests</strong>: Sending sample requests to APIs to measure response times and detect service degradation.</li>
+</ul>
+</li>
+<li><strong>Importance</strong>: Synthetic monitoring provides a consistent benchmark and proactive insight into user experience, even if real users are not active on the system.</li>
+<li><strong>Application</strong>:
+<ul>
+<li>Synthetic checks are often run periodically from multiple locations to validate uptime and performance from diverse network conditions.</li>
+</ul>
+</li>
+</ul>
+<h3 id="end-user-experience-monitoring-eum" style="position:relative;"><a href="#end-user-experience-monitoring-eum" aria-label="end user experience monitoring eum permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>End-User Experience Monitoring (EUM)</strong></h3>
+<ul>
+<li><strong>Definition</strong>: End-user experience monitoring focuses on the actual performance as experienced by users, tracking metrics such as page load time, application responsiveness, and error rates.</li>
+<li><strong>Types of EUM</strong>:
+<ul>
+<li><strong>Real User Monitoring (RUM)</strong>: Collects data from real user interactions, providing insights into geographic and demographic-based performance.</li>
+<li><strong>Session Replay</strong>: Captures and replays user interactions, allowing a detailed analysis of user experience issues.</li>
+</ul>
+</li>
+<li><strong>Importance</strong>: Ensures that performance meets user expectations, especially in applications where responsiveness and reliability are critical.</li>
+<li><strong>Application</strong>: EUM tools like Google Analytics, Splunk Real User Monitoring, or New Relic Browser help developers and performance analysts optimize user experience by providing insights into actual usage conditions.</li>
+</ul>
+<h2 id="visualizations" style="position:relative;"><a href="#visualizations" aria-label="visualizations permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Visualizations</h2>
+<h3 id="1-line-charts" style="position:relative;"><a href="#1-line-charts" aria-label="1 line charts permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. <strong>Line Charts</strong></h3>
+<ul>
+<li><strong>Purpose</strong>: Line charts are used to show trends over time. In systems performance, they are ideal for visualizing metrics like CPU usage, memory consumption, and network bandwidth over time.</li>
+<li><strong>Example</strong>: A line chart might show CPU utilization over the course of 24 hours, revealing high usage during business hours and lower usage at night.</li>
+<li><strong>Advantages</strong>:
+<ul>
+<li>Excellent for identifying trends, cyclic behaviors, and seasonality in data.</li>
+<li>Helps in observing gradual increases or spikes in resource usage.</li>
+</ul>
+</li>
+<li><strong>Limitations</strong>: Can become cluttered with too many metrics or data points.</li>
+</ul>
+<hr>
+<h3 id="2-scatter-plots" style="position:relative;"><a href="#2-scatter-plots" aria-label="2 scatter plots permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. <strong>Scatter Plots</strong></h3>
+<ul>
+<li><strong>Purpose</strong>: Scatter plots display the relationship between two variables, often helping in identifying correlations or outliers.</li>
+<li><strong>Example</strong>: A scatter plot might show the correlation between network latency and CPU usage to see if high CPU load impacts network performance.</li>
+<li><strong>Advantages</strong>:
+<ul>
+<li>Useful for spotting patterns, clusters, and potential correlations.</li>
+<li>Ideal for outlier detection where data deviates from expected trends.</li>
+</ul>
+</li>
+<li><strong>Limitations</strong>: Doesn’t provide time-sequence insights unless combined with time-based color coding.</li>
+<li><strong>Image</strong>:
+<ul>
+<li><img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Scatter_diagram_for_quality_characteristic_XXX.svg" alt="Scatter Plot"></li>
+<li><em>Illustration</em>: Displays network latency against CPU usage, where a cluster of high-latency points with high CPU usage might suggest a correlation.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="3-heat-maps" style="position:relative;"><a href="#3-heat-maps" aria-label="3 heat maps permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. <strong>Heat Maps</strong></h3>
+<ul>
+<li><strong>Purpose</strong>: Heat maps use color intensity to show the density or value of data across a matrix, making it easy to spot hot spots and bottlenecks.</li>
+<li><strong>Example</strong>: A time-based heat map can show CPU utilization per hour, with darker colors representing higher utilization.</li>
+<li><strong>Advantages</strong>:
+<ul>
+<li>Excellent for spotting high-density areas, such as peak usage times.</li>
+<li>Effective for visualizing large data volumes compactly.</li>
+</ul>
+</li>
+<li><strong>Limitations</strong>: Provides less precise data values, more suitable for pattern recognition than exact measurements.</li>
+<li><strong>Image</strong>:
+<ul>
+<li><img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Heatmap.png" alt="Heat Map"></li>
+<li><em>Illustration</em>: CPU usage intensity across a 24-hour period, where darker areas indicate peak usage hours.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="4-timeline-charts" style="position:relative;"><a href="#4-timeline-charts" aria-label="4 timeline charts permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. <strong>Timeline Charts</strong></h3>
+<ul>
+<li><strong>Purpose</strong>: Timeline charts focus on sequencing events over time, making it clear when specific actions or events occurred relative to each other.</li>
+<li><strong>Example</strong>: A timeline chart can show server restarts, application deployments, and peak usage times, helping correlate events with performance changes.</li>
+<li><strong>Advantages</strong>:
+<ul>
+<li>Effective for understanding the sequence and overlap of events.</li>
+<li>Useful for root cause analysis by correlating system changes with performance shifts.</li>
+</ul>
+</li>
+<li><strong>Limitations</strong>: Limited in displaying quantitative data; best for qualitative insights.</li>
+<li><strong>Image</strong>:
+<ul>
+<li><img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Timeline_example_3.png" alt="Timeline Chart"></li>
+<li><em>Illustration</em>: Event timeline showing application deployments, outages, and configuration changes.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="5-surface-plots" style="position:relative;"><a href="#5-surface-plots" aria-label="5 surface plots permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. <strong>Surface Plots</strong></h3>
+<ul>
+<li><strong>Purpose</strong>: Surface plots display three-dimensional data on a two-dimensional plane, with colors or elevations representing values.</li>
+<li><strong>Example</strong>: Used to show CPU usage and memory consumption over time, revealing how these metrics change together.</li>
+<li><strong>Advantages</strong>:
+<ul>
+<li>Provides insight into complex interactions between three variables.</li>
+<li>Allows identification of trends across a surface that may not be visible in 2D graphs.</li>
+</ul>
+</li>
+<li><strong>Limitations</strong>: Interpretation can be difficult, especially in static views without interactive features.</li>
+</ul>
+<hr>
+<h3 id="6-flame-graphs" style="position:relative;"><a href="#6-flame-graphs" aria-label="6 flame graphs permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6. <strong>Flame Graphs</strong></h3>
+<ul>
+<li><strong>Purpose</strong>: Flame graphs visualize stack traces, showing which functions or processes use the most CPU time.</li>
+<li><strong>Example</strong>: Used in profiling to identify hot spots in code by showing functions where most time is spent.</li>
+<li><strong>Advantages</strong>:
+<ul>
+<li>Very effective for identifying CPU-intensive functions in code.</li>
+<li>Helps pinpoint “hot paths” that are prime candidates for optimization.</li>
+</ul>
+</li>
+<li><strong>Limitations</strong>: Specific to code profiling; not suited for general system monitoring.</li>
+</ul>
+<hr>
+<h3 id="7-stacked-area-charts" style="position:relative;"><a href="#7-stacked-area-charts" aria-label="7 stacked area charts permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>7. <strong>Stacked Area Charts</strong></h3>
+<ul>
+<li><strong>Purpose</strong>: Stacked area charts are used to display cumulative data, showing how different components contribute to a total.</li>
+<li><strong>Example</strong>: A stacked area chart can show memory usage per application over time, revealing which applications use the most memory.</li>
+<li><strong>Advantages</strong>:
+<ul>
+<li>Clearly shows distribution of resources across different components.</li>
+<li>Useful for identifying dominant contributors to total resource usage.</li>
+</ul>
+</li>
+<li><strong>Limitations</strong>: Harder to interpret when there are many categories, as the chart can become cluttered.</li>
+</ul>
+<hr>
+<h3 id="8-histograms" style="position:relative;"><a href="#8-histograms" aria-label="8 histograms permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>8. <strong>Histograms</strong></h3>
+<ul>
+<li><strong>Purpose</strong>: Histograms show frequency distributions by dividing data into bins, with each bin representing the frequency of data within a range.</li>
+<li><strong>Example</strong>: Used to display latency distributions to understand the spread and consistency of response times.</li>
+<li><strong>Advantages</strong>:
+<ul>
+<li>Effective for understanding data distributions and spotting outliers.</li>
+<li>Ideal for summarizing data spread, such as latency or response times.</li>
+</ul>
+</li>
+<li><strong>Limitations</strong>: Sensitive to bin size; too many bins can create noise, while too few can oversimplify.</li>
+</ul>
+<hr>
+<h3 id="9-box-plots" style="position:relative;"><a href="#9-box-plots" aria-label="9 box plots permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>9. <strong>Box Plots</strong></h3>
+<ul>
+<li><strong>Purpose</strong>: Box plots summarize data by displaying median, quartiles, and outliers, providing a quick view of distribution and variability.</li>
+<li><strong>Example</strong>: Used to compare response times across servers, helping identify servers with higher latency.</li>
+<li><strong>Advantages</strong>:
+<ul>
+<li>Provides a compact summary of data variability, ideal for quick comparison.</li>
+<li>Useful for detecting outliers and understanding consistency.</li>
+</ul>
+</li>
+<li><strong>Limitations</strong>: Not intuitive for all users, as interpreting quartiles and whiskers can be complex.</li>
+<li><strong>Image</strong>:
+<ul>
+<li><img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Boxplot_vs_PDF.svg" alt="Box Plot"></li>
+<li><em>Illustration</em>: Compares latency distributions across servers, with outliers clearly visible.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="10-sunburst-diagrams" style="position:relative;"><a href="#10-sunburst-diagrams" aria-label="10 sunburst diagrams permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>10. <strong>Sunburst Diagrams</strong></h3>
+<ul>
+<li><strong>Purpose</strong>: Sunburst diagrams visualize hierarchical data in concentric circles, where each ring represents a deeper level.</li>
+<li><strong>Example</strong>: Used in performance profiling to show hierarchical function calls and their contributions to total time.</li>
+<li><strong>Advantages</strong>:
+<ul>
+<li>Excellent for displaying hierarchical relationships visually, making it easy to understand nested structures.</li>
+<li>Useful for identifying major contributors within a hierarchy.</li>
+</ul>
+</li>
+<li><strong>Limitations</strong>: Best suited for hierarchical data; less effective for non-hierarchical datasets.</li>
+</ul>
+<hr>
+<h3 id="11-treemaps" style="position:relative;"><a href="#11-treemaps" aria-label="11 treemaps permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>11. <strong>Treemaps</strong></h3>
+<ul>
+<li><strong>Purpose</strong>: Treemaps use nested rectangles to display hierarchical data, with each rectangle representing a component’s size relative to others.</li>
+<li><strong>Example</strong>: Used to visualize disk usage across directories, where each rectangle’s size represents the space used.</li>
+<li><strong>Advantages</strong>:
+<ul>
+<li>Effective for visualizing proportions in hierarchical data, such as storage or memory usage.</li>
+<li>Helps identify large components quickly within nested structures.</li>
+</ul>
+</li>
+<li><strong>Limitations</strong>: Can become cluttered with too many small components, making details hard to interpret.</li>
+</ul>
+<hr>
+<h3 id="12-sparkline-charts" style="position:relative;"><a href="#12-sparkline-charts" aria-label="12 sparkline charts permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>12. <strong>Sparkline Charts</strong></h3>
+<ul>
+<li><strong>Purpose</strong>: Sparklines are compact, minimalist charts without axes, used to show trends in a small amount of space.</li>
+<li><strong>Example</strong>: In</li>
+</ul>
+<p>a performance monitoring dashboard, sparklines can show recent CPU or memory usage trends next to a list of processes.</p>
+<ul>
+<li><strong>Advantages</strong>:
+<ul>
+<li>Very space-efficient, useful for inline trend analysis within tables.</li>
+<li>Excellent for showing recent data trends without occupying much visual space.</li>
+</ul>
+</li>
+<li><strong>Limitations</strong>: Limited detail; designed for quick reference rather than in-depth analysis.</li>
 </ul>
 <h1 id="questions" style="position:relative;"><a href="#questions" aria-label="questions permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Questions</h1>
 <ul>
