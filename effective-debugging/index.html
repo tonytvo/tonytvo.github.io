@@ -594,12 +594,11 @@
 <li>
 <p><a href="#key-takeaways-15"><strong>Key Takeaways</strong></a></p>
 </li>
-<li>
-<p><a href="#chapter-8-debugging-multi-threaded-code-1"><strong>Chapter 8: Debugging Multi-Threaded Code</strong></a></p>
-<ul>
-<li><a href="#isolate-and-remove-nondeterminism"><strong>Isolate and Remove Nondeterminism</strong></a></li>
 </ul>
 </li>
+<li>
+<p><a href="#isolate-and-remove-nondeterminism"><strong>Isolate and Remove Nondeterminism</strong></a></p>
+<ul>
 <li>
 <p><a href="#what-is-nondeterminism-in-multi-threaded-code"><strong>What Is Nondeterminism in Multi-Threaded Code?</strong></a></p>
 </li>
@@ -4386,8 +4385,7 @@ Thread 2: Access at line 12</code></pre></div>
 <li><strong>“Race Conditions Need Precise Memory Tracking”</strong>: Tools like TSan and Intel Inspector track memory accesses to identify conflicts.</li>
 <li><strong>“Integration and Iteration Are Key”</strong>: Use these tools regularly during development and testing to ensure robust multi-threaded applications.</li>
 </ul>
-<h3 id="chapter-8-debugging-multi-threaded-code-1" style="position:relative;"><a href="#chapter-8-debugging-multi-threaded-code-1" aria-label="chapter 8 debugging multi threaded code 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Chapter 8: Debugging Multi-Threaded Code</strong></h3>
-<h4 id="isolate-and-remove-nondeterminism" style="position:relative;"><a href="#isolate-and-remove-nondeterminism" aria-label="isolate and remove nondeterminism permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Isolate and Remove Nondeterminism</strong></h4>
+<h2 id="isolate-and-remove-nondeterminism" style="position:relative;"><a href="#isolate-and-remove-nondeterminism" aria-label="isolate and remove nondeterminism permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Isolate and Remove Nondeterminism</strong></h2>
 <p>One of the most daunting aspects of debugging multi-threaded code is dealing with <strong>nondeterminism</strong>—the unpredictable and inconsistent behavior caused by threads executing in different orders or timing under varying runtime conditions. <strong>Nondeterminism leads to elusive bugs, such as race conditions, deadlocks, or data corruption</strong>, that may only manifest intermittently. Debugging these issues requires a methodical approach to isolate and, where possible, eliminate nondeterministic behavior.</p>
 <p>This section provides a detailed exploration of how to isolate and remove nondeterminism, making multi-threaded programs more reliable and easier to debug.</p>
 <hr>
