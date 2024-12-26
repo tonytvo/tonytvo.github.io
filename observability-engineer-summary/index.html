@@ -4506,6 +4506,285 @@ tracer <span class="token operator">=</span> trace<span class="token punctuation
 <li><strong>“Slack’s routing strategy ensures that data reaches the right place at the right time.”</strong></li>
 </ul>
 <hr>
+<h1 id="part-i-monitoring-principles" style="position:relative;"><a href="#part-i-monitoring-principles" aria-label="part i monitoring principles permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Part I: Monitoring Principles</strong></h1>
+<h2 id="1-monitoring-anti-patterns" style="position:relative;"><a href="#1-monitoring-anti-patterns" aria-label="1 monitoring anti patterns permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. Monitoring Anti-Patterns</strong></h2>
+<p>Monitoring anti-patterns refer to common mistakes or flawed approaches that reduce the effectiveness of monitoring systems. These anti-patterns result in inefficiencies, increased noise, operational bottlenecks, and even preventable outages. Understanding and avoiding these anti-patterns is critical to building reliable, scalable, and actionable monitoring systems.</p>
+<hr>
+<h3 id="understanding-monitoring-anti-patterns" style="position:relative;"><a href="#understanding-monitoring-anti-patterns" aria-label="understanding monitoring anti patterns permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Understanding Monitoring Anti-Patterns</strong></h3>
+<p>Monitoring anti-patterns arise when monitoring is implemented reactively, without clear objectives or alignment with organizational needs. They can create a false sense of security, overwhelm teams with irrelevant data, and fail to provide actionable insights during critical incidents.</p>
+<p><strong>Impact of Monitoring Anti-Patterns:</strong></p>
+<ol>
+<li><strong>Operational Inefficiency:</strong>
+<ul>
+<li>Teams waste time managing noise instead of resolving incidents.</li>
+</ul>
+</li>
+<li><strong>Reduced System Reliability:</strong>
+<ul>
+<li>Critical failures are missed due to irrelevant or excessive alerts.</li>
+</ul>
+</li>
+<li><strong>Burnout and Alert Fatigue:</strong>
+<ul>
+<li>Engineers overwhelmed by frequent, non-actionable alerts may ignore or disable them, leading to missed critical issues.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="common-monitoring-anti-patterns" style="position:relative;"><a href="#common-monitoring-anti-patterns" aria-label="common monitoring anti patterns permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Common Monitoring Anti-Patterns</strong></h3>
+<h4 id="1-tool-obsession" style="position:relative;"><a href="#1-tool-obsession" aria-label="1 tool obsession permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. Tool Obsession</strong></h4>
+<p><strong>Definition:</strong></p>
+<ul>
+<li>Relying too heavily on tools without understanding their relevance or aligning them with system needs.</li>
+</ul>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>Teams evaluate tools based on features, not outcomes.</li>
+<li>Overlapping or redundant tools are deployed, increasing complexity.</li>
+<li>Lack of integration between tools, leading to siloed data.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>Deploying an expensive Application Performance Monitoring (APM) tool but failing to configure it to monitor key business transactions.</li>
+<li>Using different tools for logs, metrics, and traces without a unified observability strategy.</li>
+</ul>
+<p><strong>Impact:</strong></p>
+<ul>
+<li>Tools become a distraction instead of a solution.</li>
+<li>Engineers spend more time managing tools than solving problems.</li>
+</ul>
+<p><strong>Best Practices to Avoid Tool Obsession:</strong></p>
+<ol>
+<li><strong>Define Objectives Before Selecting Tools:</strong>
+<ul>
+<li>Align monitoring goals with business outcomes.</li>
+<li><strong>Example:</strong> If system uptime is critical, focus on tools that provide reliable uptime monitoring and root cause analysis.</li>
+</ul>
+</li>
+<li><strong>Standardize Tools Across Teams:</strong>
+<ul>
+<li>Avoid redundant tooling by consolidating platforms where possible.</li>
+<li><strong>Example:</strong> Use a single tool like Datadog or Prometheus for metrics rather than multiple fragmented systems.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“A tool is only as good as its configuration—understand your system first, then choose the tool.”</strong></li>
+</ul>
+<hr>
+<h4 id="2-monitoring-as-a-job" style="position:relative;"><a href="#2-monitoring-as-a-job" aria-label="2 monitoring as a job permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2. Monitoring-as-a-Job</strong></h4>
+<p><strong>Definition:</strong></p>
+<ul>
+<li>Assigning monitoring responsibility to a single person or team, treating it as a separate job rather than a shared responsibility across the organization.</li>
+</ul>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>Engineers outside the monitoring team lack visibility or ownership of system health.</li>
+<li>Monitoring configurations are outdated because the monitoring team doesn’t have in-depth knowledge of every service.</li>
+<li>Operational knowledge is siloed, creating bottlenecks.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>A dedicated “monitoring engineer” sets up alerts for services they don’t fully understand, leading to irrelevant or insufficient coverage.</li>
+<li>On-call engineers are unaware of monitoring configurations and rely on a separate team to troubleshoot issues.</li>
+</ul>
+<p><strong>Impact:</strong></p>
+<ul>
+<li>Monitoring becomes reactive instead of proactive.</li>
+<li>Knowledge bottlenecks delay incident resolution.</li>
+</ul>
+<p><strong>Best Practices to Avoid Monitoring-as-a-Job:</strong></p>
+<ol>
+<li><strong>Embed Monitoring into Development Cycles:</strong>
+<ul>
+<li>Developers should configure monitoring as part of their code deployment process.</li>
+<li><strong>Example:</strong> Include telemetry setup in CI/CD pipelines.</li>
+</ul>
+</li>
+<li><strong>Foster Collaboration Between Teams:</strong>
+<ul>
+<li>Use shared dashboards and alert configurations to ensure visibility across teams.</li>
+<li><strong>Example:</strong> Create a shared dashboard for an e-commerce checkout flow showing service health, latency, and error rates.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“Monitoring succeeds when everyone owns it—not just the ‘monitoring team’.”</strong></li>
+</ul>
+<hr>
+<h4 id="3-checkbox-monitoring" style="position:relative;"><a href="#3-checkbox-monitoring" aria-label="3 checkbox monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3. Checkbox Monitoring</strong></h4>
+<p><strong>Definition:</strong></p>
+<ul>
+<li>Setting up monitoring to meet compliance or organizational requirements without ensuring its depth or effectiveness.</li>
+</ul>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>Monitoring is superficial, with no meaningful alignment to system performance or user experience.</li>
+<li>Alerts are created for “everything,” leading to excessive noise.</li>
+<li>Metrics and logs are collected without clear use cases, inflating costs.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>Adding CPU utilization monitoring for all servers without understanding its relevance to actual system performance.</li>
+<li>Setting up alerts for all HTTP status codes, including harmless 3xx redirections.</li>
+</ul>
+<p><strong>Impact:</strong></p>
+<ul>
+<li>Critical signals are drowned out by irrelevant data.</li>
+<li>Engineers waste time investigating false positives.</li>
+</ul>
+<p><strong>Best Practices to Avoid Checkbox Monitoring:</strong></p>
+<ol>
+<li><strong>Prioritize Business-Critical Metrics:</strong>
+<ul>
+<li>Focus on metrics that directly impact user experience or system reliability.</li>
+<li><strong>Example:</strong> Monitor checkout transaction success rates in an e-commerce system rather than internal queue sizes.</li>
+</ul>
+</li>
+<li><strong>Create Actionable Alerts:</strong>
+<ul>
+<li>Ensure alerts are tied to specific actions.</li>
+<li><strong>Example:</strong> Alert if payment gateway errors exceed 5% over 5 minutes, prompting a rollback or failover.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“Monitoring should provide insight, not noise. Checkbox monitoring leads to chaos, not clarity.”</strong></li>
+</ul>
+<hr>
+<h4 id="4-using-monitoring-as-a-crutch" style="position:relative;"><a href="#4-using-monitoring-as-a-crutch" aria-label="4 using monitoring as a crutch permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>4. Using Monitoring as a Crutch</strong></h4>
+<p><strong>Definition:</strong></p>
+<ul>
+<li>Relying on monitoring to detect and address issues caused by poor system design or inadequate testing, instead of solving root causes.</li>
+</ul>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>Monitoring compensates for poor performance or architectural flaws.</li>
+<li>Frequent alerts for known issues are ignored instead of being resolved.</li>
+<li>Engineers rely on monitoring to find bugs that should have been caught in pre-production.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>Deploying untested code to production with the assumption that monitoring will “catch” any errors.</li>
+<li>Ignoring database performance optimization because slow queries are flagged by monitoring.</li>
+</ul>
+<p><strong>Impact:</strong></p>
+<ul>
+<li>Creates operational debt and increases incident response time.</li>
+<li>Undermines user trust due to recurring failures.</li>
+</ul>
+<p><strong>Best Practices to Avoid Using Monitoring as a Crutch:</strong></p>
+<ol>
+<li><strong>Address Root Causes, Not Symptoms:</strong>
+<ul>
+<li>Use monitoring to identify issues but prioritize fixing the underlying problem.</li>
+<li><strong>Example:</strong> Optimize a slow query instead of adding retries and monitoring latency spikes.</li>
+</ul>
+</li>
+<li><strong>Test Thoroughly Before Deployment:</strong>
+<ul>
+<li>Implement robust pre-production testing and load testing.</li>
+<li><strong>Example:</strong> Use synthetic transactions to simulate user behavior and catch errors early.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“Monitoring doesn’t replace good engineering—it’s a safety net, not a substitute for proper design.”</strong></li>
+</ul>
+<hr>
+<h4 id="5-manual-configuration" style="position:relative;"><a href="#5-manual-configuration" aria-label="5 manual configuration permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>5. Manual Configuration</strong></h4>
+<p><strong>Definition:</strong></p>
+<ul>
+<li>Manually configuring monitoring tools and alerts for each system or service, leading to inconsistencies and inefficiencies.</li>
+</ul>
+<p><strong>Symptoms:</strong></p>
+<ul>
+<li>Dashboards and alerts vary across teams and environments.</li>
+<li>Configuration errors go unnoticed, leading to gaps in coverage.</li>
+<li>Scaling monitoring becomes time-consuming and error-prone.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>Engineers manually set up separate dashboards for staging and production environments.</li>
+<li>Manually adding new services to monitoring tools without templates or automation.</li>
+</ul>
+<p><strong>Impact:</strong></p>
+<ul>
+<li>Slows down onboarding for new services or features.</li>
+<li>Creates inconsistent monitoring, leading to blind spots.</li>
+</ul>
+<p><strong>Best Practices to Avoid Manual Configuration:</strong></p>
+<ol>
+<li><strong>Automate Monitoring Setup:</strong>
+<ul>
+<li>Use Infrastructure-as-Code (IaC) tools to standardize monitoring configurations.</li>
+<li><strong>Example:</strong> Use Terraform or Helm charts to deploy monitoring agents with consistent configurations across environments.</li>
+</ul>
+</li>
+<li><strong>Leverage Templates and Defaults:</strong>
+<ul>
+<li>Create reusable templates for dashboards and alerts.</li>
+<li><strong>Example:</strong> A microservice monitoring template includes default metrics for CPU, memory, and request latency.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“Manual configuration is a scalability killer—automate early and often.”</strong></li>
+</ul>
+<hr>
+<h3 id="key-insights-for-avoiding-monitoring-anti-patterns" style="position:relative;"><a href="#key-insights-for-avoiding-monitoring-anti-patterns" aria-label="key insights for avoiding monitoring anti patterns permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Insights for Avoiding Monitoring Anti-Patterns</strong></h3>
+<ol>
+<li>
+<p><strong>Start with Clear Objectives:</strong></p>
+<ul>
+<li>Define what success looks like for monitoring before choosing tools or metrics.</li>
+<li><strong>Key Quote:</strong>
+<ul>
+<li><strong>“Monitoring should serve your system, not the other way around.”</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Focus on Actionable Insights:</strong></p>
+<ul>
+<li>Every alert should prompt a specific action, reducing noise and improving response times.</li>
+<li><strong>Key Quote:</strong>
+<ul>
+<li><strong>“If an alert isn’t actionable, it’s just noise.”</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Make Monitoring Collaborative:</strong></p>
+<ul>
+<li>Treat monitoring as a shared responsibility across all teams.</li>
+<li><strong>Key Quote:</strong>
+<ul>
+<li><strong>“Effective monitoring involves everyone, from developers to operations.”</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Invest in Automation:</strong></p>
+<ul>
+<li>Automate monitoring configuration to improve consistency and scalability.</li>
+<li><strong>Key Quote:</strong>
+<ul>
+<li><strong>“Scaling systems need scalable practices—automation is your ally.”</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
 <h1 id="references" style="position:relative;"><a href="#references" aria-label="references permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>References</h1>
 <ul>
 <li><a href="https://github.com/keyvanakbary/learning-notes/blob/master/books/distributed-systems-observability.md">https://github.com/keyvanakbary/learning-notes/blob/master/books/distributed-systems-observability.md</a></li>
