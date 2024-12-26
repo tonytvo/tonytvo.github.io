@@ -6018,6 +6018,647 @@ Pingdom simulates traffic to test uptime, performance, and user flows.</p>
 </li>
 </ol>
 <hr>
+<h2 id="chapter-7-application-monitoring" style="position:relative;"><a href="#chapter-7-application-monitoring" aria-label="chapter 7 application monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Chapter 7: Application Monitoring</strong></h2>
+<p>Application monitoring focuses on capturing the performance, health, and behavior of the software applications running within a system. With applications evolving faster than underlying infrastructure, monitoring their performance is critical to maintain reliability, detect issues proactively, and optimize user experience.</p>
+<hr>
+<h3 id="1-why-application-monitoring-is-critical" style="position:relative;"><a href="#1-why-application-monitoring-is-critical" aria-label="1 why application monitoring is critical permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. Why Application Monitoring Is Critical</strong></h3>
+<p><strong>Key Idea:</strong><br>
+While traditional monitoring focuses on infrastructure (e.g., servers, databases), applications are where the majority of user-facing issues occur. Without proper monitoring, organizations risk downtime, degraded performance, and poor user satisfaction.</p>
+<hr>
+<h4 id="importance-of-application-monitoring" style="position:relative;"><a href="#importance-of-application-monitoring" aria-label="importance of application monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Importance of Application Monitoring</strong></h4>
+<ol>
+<li>
+<p><strong>Applications are Dynamic:</strong></p>
+<ul>
+<li>Frequent changes, such as new features, bug fixes, and updates, increase the likelihood of introducing performance bottlenecks or bugs.</li>
+<li><strong>Example:</strong> A minor code change that introduces an unoptimized database query can slow down critical application workflows.</li>
+</ul>
+</li>
+<li>
+<p><strong>Direct Impact on Users:</strong></p>
+<ul>
+<li>Issues in the application layer often have the most noticeable impact on user experience.</li>
+<li><strong>Example:</strong> A slow login process might lead to user frustration and higher abandonment rates, even if the backend systems are healthy.</li>
+</ul>
+</li>
+<li>
+<p><strong>Business Impact:</strong></p>
+<ul>
+<li>Applications are often tied directly to revenue generation or customer satisfaction.</li>
+<li><strong>Example:</strong> In an e-commerce platform, slow checkout performance can lead to abandoned carts and lost sales.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“Your users don’t care if your servers are healthy—they care if the application works.”</strong></li>
+</ul>
+<hr>
+<h3 id="2-instrumenting-applications-with-metrics" style="position:relative;"><a href="#2-instrumenting-applications-with-metrics" aria-label="2 instrumenting applications with metrics permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2. Instrumenting Applications with Metrics</strong></h3>
+<p><strong>Key Idea:</strong><br>
+Instrumentation involves embedding code within applications to collect and expose performance metrics. This provides visibility into key workflows, enabling teams to track performance, identify bottlenecks, and optimize behavior.</p>
+<hr>
+<h4 id="steps-for-application-instrumentation" style="position:relative;"><a href="#steps-for-application-instrumentation" aria-label="steps for application instrumentation permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Steps for Application Instrumentation</strong></h4>
+<ol>
+<li>
+<p><strong>Identify Critical Metrics:</strong></p>
+<ul>
+<li>Focus on metrics that reflect application performance and user experience.</li>
+<li><strong>Examples:</strong>
+<ul>
+<li>Database query times.</li>
+<li>API request/response times.</li>
+<li>User action latencies (e.g., time to checkout).</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“Start with the metrics that matter most to your users and business.”</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Embed Timing Logic in Code:</strong></p>
+<ul>
+<li>Use libraries like StatsD or OpenTelemetry to measure performance at key points.</li>
+<li><strong>Example:</strong>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">process_payment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    start_time <span class="token operator">=</span> time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment"># Logic for payment processing</span>
+    duration <span class="token operator">=</span> time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> start_time
+    statsd<span class="token punctuation">.</span>timing<span class="token punctuation">(</span><span class="token string">'payment.duration'</span><span class="token punctuation">,</span> duration<span class="token punctuation">)</span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Iterate and Expand:</strong></p>
+<ul>
+<li>Start with basic metrics and expand over time.</li>
+<li><strong>Example:</strong> Begin by monitoring login times, then add metrics for search performance or checkout processes.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="common-types-of-metrics" style="position:relative;"><a href="#common-types-of-metrics" aria-label="common types of metrics permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Common Types of Metrics</strong></h4>
+<ol>
+<li>
+<p><strong>Latency Metrics:</strong></p>
+<ul>
+<li>Measure the time taken for specific actions or workflows.</li>
+<li><strong>Example:</strong> “The average response time for login requests is 350ms.”</li>
+</ul>
+</li>
+<li>
+<p><strong>Throughput Metrics:</strong></p>
+<ul>
+<li>Measure the number of requests or transactions processed over time.</li>
+<li><strong>Example:</strong> “The application handles 1,200 API calls per minute.”</li>
+</ul>
+</li>
+<li>
+<p><strong>Error Rates:</strong></p>
+<ul>
+<li>Measure the percentage of failed operations.</li>
+<li><strong>Example:</strong> “5% of API calls return HTTP 500 errors.”</li>
+</ul>
+</li>
+<li>
+<p><strong>Business Metrics:</strong></p>
+<ul>
+<li>Monitor application-specific KPIs tied to business goals.</li>
+<li><strong>Example:</strong> “Conversion rate for signups is 25%.”</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“Good instrumentation turns applications into transparent systems where problems become easy to spot and resolve.”</strong></li>
+</ul>
+<hr>
+<h3 id="3-leveraging-application-performance-monitoring-apm-tools" style="position:relative;"><a href="#3-leveraging-application-performance-monitoring-apm-tools" aria-label="3 leveraging application performance monitoring apm tools permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3. Leveraging Application Performance Monitoring (APM) Tools</strong></h3>
+<p><strong>Key Idea:</strong><br>
+APM tools simplify application monitoring by automatically collecting and visualizing performance metrics. They provide actionable insights into application behavior, making it easier to detect and resolve issues.</p>
+<hr>
+<h4 id="capabilities-of-apm-tools" style="position:relative;"><a href="#capabilities-of-apm-tools" aria-label="capabilities of apm tools permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Capabilities of APM Tools</strong></h4>
+<ol>
+<li>
+<p><strong>Transaction Tracing:</strong></p>
+<ul>
+<li>Tracks the lifecycle of requests through an application.</li>
+<li><strong>Example:</strong> Trace a checkout request through frontend, backend, and database layers to identify where delays occur.</li>
+</ul>
+</li>
+<li>
+<p><strong>Error Detection:</strong></p>
+<ul>
+<li>Captures stack traces for application errors and exceptions.</li>
+<li><strong>Example:</strong> Identify that a <code class="language-text">NullPointerException</code> in the payment service is causing transaction failures.</li>
+</ul>
+</li>
+<li>
+<p><strong>Performance Dashboards:</strong></p>
+<ul>
+<li>Visualize metrics like latency, throughput, and error rates in real time.</li>
+<li><strong>Example:</strong> A dashboard showing average API response times alongside error rates for a 24-hour period.</li>
+</ul>
+</li>
+<li>
+<p><strong>Automated Alerts:</strong></p>
+<ul>
+<li>Set thresholds for key metrics and receive alerts when they are breached.</li>
+<li><strong>Example:</strong> Trigger an alert if API latency exceeds 500ms for more than 10 minutes.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="popular-apm-tools" style="position:relative;"><a href="#popular-apm-tools" aria-label="popular apm tools permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Popular APM Tools</strong></h4>
+<ol>
+<li>
+<p><strong>Datadog APM:</strong></p>
+<ul>
+<li>Provides distributed tracing, real-time metrics, and anomaly detection.</li>
+<li><strong>Use Case:</strong> Monitor performance across microservices and cloud environments.</li>
+</ul>
+</li>
+<li>
+<p><strong>New Relic:</strong></p>
+<ul>
+<li>Tracks application health, transaction traces, and database performance.</li>
+<li><strong>Use Case:</strong> Identify slow database queries causing API delays.</li>
+</ul>
+</li>
+<li>
+<p><strong>AppDynamics:</strong></p>
+<ul>
+<li>Offers end-to-end visibility into application workflows.</li>
+<li><strong>Use Case:</strong> Monitor the impact of a new deployment on application performance.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“APM tools give you the power to detect issues before your users do.”</strong></li>
+</ul>
+<hr>
+<h3 id="4-monitoring-in-microservice-architectures" style="position:relative;"><a href="#4-monitoring-in-microservice-architectures" aria-label="4 monitoring in microservice architectures permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>4. Monitoring in Microservice Architectures</strong></h3>
+<p><strong>Key Idea:</strong><br>
+Microservices increase complexity, making application monitoring both more challenging and more critical. Monitoring must provide visibility into individual services and the interactions between them.</p>
+<hr>
+<h4 id="challenges-in-microservices-monitoring" style="position:relative;"><a href="#challenges-in-microservices-monitoring" aria-label="challenges in microservices monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Challenges in Microservices Monitoring</strong></h4>
+<ol>
+<li>
+<p><strong>Distributed Nature:</strong></p>
+<ul>
+<li>Requests often span multiple services, making it hard to pinpoint bottlenecks or failures.</li>
+<li><strong>Example:</strong> A user’s request to retrieve account details might involve 5-10 microservices.</li>
+</ul>
+</li>
+<li>
+<p><strong>Correlation Across Services:</strong></p>
+<ul>
+<li>Without correlation, diagnosing issues across services is like finding a needle in a haystack.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="solution-distributed-tracing" style="position:relative;"><a href="#solution-distributed-tracing" aria-label="solution distributed tracing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Solution: Distributed Tracing</strong></h4>
+<p><strong>Definition:</strong><br>
+Distributed tracing tracks a request as it moves through multiple services, providing a complete picture of its journey.</p>
+<p><strong>How It Works:</strong></p>
+<ol>
+<li>Assign a unique trace ID to each request at the entry point.</li>
+<li>Pass this trace ID through all downstream services.</li>
+<li>Use a tracing tool (e.g., Jaeger, Zipkin) to visualize the trace.</li>
+</ol>
+<p><strong>Example Trace:</strong></p>
+<ul>
+<li>A user’s request to retrieve order details involves:
+<ol>
+<li>API Gateway → Orders Service.</li>
+<li>Orders Service → Inventory Service.</li>
+<li>Orders Service → Payments Service.</li>
+</ol>
+</li>
+</ul>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“Distributed tracing turns a tangled web of microservices into a clear and actionable map.”</strong></li>
+</ul>
+<hr>
+<h3 id="5-logs-and-metrics-a-unified-approach" style="position:relative;"><a href="#5-logs-and-metrics-a-unified-approach" aria-label="5 logs and metrics a unified approach permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>5. Logs and Metrics: A Unified Approach</strong></h3>
+<p><strong>Key Idea:</strong><br>
+Logs and metrics serve complementary purposes in application monitoring. Together, they provide both high-level trends and detailed insights.</p>
+<hr>
+<h4 id="when-to-use-metrics" style="position:relative;"><a href="#when-to-use-metrics" aria-label="when to use metrics permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>When to Use Metrics</strong></h4>
+<ol>
+<li>
+<p><strong>Track Trends Over Time:</strong></p>
+<ul>
+<li>Metrics help monitor performance trends and detect anomalies.</li>
+<li><strong>Example:</strong> Monitor average API response times to identify performance degradation.</li>
+</ul>
+</li>
+<li>
+<p><strong>Alert on Threshold Breaches:</strong></p>
+<ul>
+<li>Metrics are ideal for triggering alerts.</li>
+<li><strong>Example:</strong> Trigger an alert if the error rate exceeds 2% for 5 consecutive minutes.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="when-to-use-logs" style="position:relative;"><a href="#when-to-use-logs" aria-label="when to use logs permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>When to Use Logs</strong></h4>
+<ol>
+<li>
+<p><strong>Debugging Specific Issues:</strong></p>
+<ul>
+<li>Logs capture detailed, contextual information about events.</li>
+<li><strong>Example:</strong> Use logs to identify why a database query failed during a specific transaction.</li>
+</ul>
+</li>
+<li>
+<p><strong>Understanding User Behavior:</strong></p>
+<ul>
+<li>Logs can provide a detailed view of user actions.</li>
+<li><strong>Example:</strong> Track every step a user takes during the checkout process.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“Metrics tell you what’s happening, but logs explain why.”</strong></li>
+</ul>
+<hr>
+<h3 id="6-monitoring-serverless-architectures" style="position:relative;"><a href="#6-monitoring-serverless-architectures" aria-label="6 monitoring serverless architectures permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>6. Monitoring Serverless Architectures</strong></h3>
+<p>Serverless platforms like AWS Lambda and Azure Functions introduce unique challenges:</p>
+<ul>
+<li><strong>Short-Lived Functions:</strong> Monitoring ephemeral processes requires real-time metrics collection.</li>
+<li><strong>Event-Driven Behavior:</strong> Monitoring must focus on invocation latency, error rates, and resource utilization.</li>
+</ul>
+<p><strong>Best Practices:</strong></p>
+<ol>
+<li>Use <strong>cloud-native monitoring tools</strong> like AWS CloudWatch.</li>
+<li>Log every invocation to capture errors and latencies.</li>
+<li>Visualize serverless workflows with tools like AWS X-Ray.</li>
+</ol>
+<hr>
+<h3 id="key-takeaways-3" style="position:relative;"><a href="#key-takeaways-3" aria-label="key takeaways 3 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<ol>
+<li>
+<p><strong>Instrument for Visibility:</strong></p>
+<ul>
+<li>Start with basic metrics, like response times and error rates, and expand as needed.</li>
+<li><strong>Key Quote:</strong> <strong>“Every metric you monitor should tell a story about your application’s health.”</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Leverage APM Tools:</strong></p>
+<ul>
+<li>Use tools like Datadog and New Relic for comprehensive application performance insights.</li>
+<li><strong>Key Quote:</strong> <strong>“The right tools make application monitoring effortless.”</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Adopt Distributed Tracing for Microservices:</strong></p>
+<ul>
+<li>Track requests across services to identify bottlenecks.</li>
+<li><strong>Key Quote:</strong> <strong>“Tracing turns microservice complexity into clarity.”</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Combine Metrics and Logs:</strong></p>
+<ul>
+<li>Use metrics for trends and alerts, and logs for deep-dive analysis.</li>
+<li><strong>Key Quote:</strong> <strong>“Logs and metrics together create a complete monitoring picture.”</strong></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="chapter-8-server-monitoring" style="position:relative;"><a href="#chapter-8-server-monitoring" aria-label="chapter 8 server monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Chapter 8: Server Monitoring</strong></h2>
+<p>Server monitoring is the cornerstone of any monitoring strategy, providing the foundation for understanding the health, performance, and availability of underlying infrastructure. Despite the rise of cloud-native and serverless architectures, servers remain a critical part of most systems, and their proper monitoring ensures that applications and services remain reliable and performant. This chapter delves into server monitoring techniques, metrics, tools, and real-world applications.</p>
+<hr>
+<h3 id="1-the-importance-of-server-monitoring" style="position:relative;"><a href="#1-the-importance-of-server-monitoring" aria-label="1 the importance of server monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. The Importance of Server Monitoring</strong></h3>
+<h4 id="why-server-monitoring-matters" style="position:relative;"><a href="#why-server-monitoring-matters" aria-label="why server monitoring matters permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Why Server Monitoring Matters</strong></h4>
+<p>Servers act as the backbone of applications and services, hosting the software that drives business operations. When server health or performance degrades, it can cascade into widespread outages or degraded user experiences.</p>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“The health of your servers directly impacts the reliability of your applications. If your servers fail, your users feel the pain.”</strong></li>
+</ul>
+<p><strong>Business Implications of Server Monitoring:</strong></p>
+<ol>
+<li><strong>Proactive Problem Detection:</strong>
+<ul>
+<li>Monitoring servers ensures that potential issues like high CPU utilization or low disk space are caught before they cause downtime.</li>
+</ul>
+</li>
+<li><strong>Operational Efficiency:</strong>
+<ul>
+<li>Understanding resource usage helps optimize server provisioning, reducing costs.</li>
+<li><strong>Example:</strong> Scaling down underutilized servers in a cloud environment.</li>
+</ul>
+</li>
+<li><strong>Improved User Experience:</strong>
+<ul>
+<li>Ensuring servers operate at peak performance translates to faster response times and higher application availability.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="2-core-server-metrics" style="position:relative;"><a href="#2-core-server-metrics" aria-label="2 core server metrics permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2. Core Server Metrics</strong></h3>
+<p>Server monitoring revolves around collecting and analyzing key metrics that provide insight into system health and performance. These metrics fall into several categories:</p>
+<hr>
+<h4 id="cpu-utilization" style="position:relative;"><a href="#cpu-utilization" aria-label="cpu utilization permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>CPU Utilization</strong></h4>
+<ol>
+<li>
+<p><strong>What It Measures:</strong></p>
+<ul>
+<li>The percentage of CPU capacity being used.</li>
+<li>Breakdowns often include user time, system time, and idle time.</li>
+</ul>
+</li>
+<li>
+<p><strong>Key Indicators:</strong></p>
+<ul>
+<li><strong>High CPU Usage:</strong> Sustained usage above 85% may indicate insufficient resources.</li>
+<li><strong>Low CPU Usage:</strong> Persistent underutilization might signal over-provisioning.</li>
+</ul>
+</li>
+<li>
+<p><strong>Example Alert:</strong></p>
+<ul>
+<li>Trigger an alert if CPU utilization exceeds 90% for 10 consecutive minutes.</li>
+</ul>
+</li>
+<li>
+<p><strong>Troubleshooting High CPU Usage:</strong></p>
+<ul>
+<li>Check for runaway processes (<code class="language-text">top</code>, <code class="language-text">htop</code>).</li>
+<li>Investigate recent deployments or high-traffic patterns.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“The CPU is the heart of your server—monitor it to prevent overload and ensure smooth operation.”</strong></li>
+</ul>
+<hr>
+<h4 id="memory-utilization" style="position:relative;"><a href="#memory-utilization" aria-label="memory utilization permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Memory Utilization</strong></h4>
+<ol>
+<li>
+<p><strong>What It Measures:</strong></p>
+<ul>
+<li>The amount of RAM in use, cached, and free.</li>
+</ul>
+</li>
+<li>
+<p><strong>Key Indicators:</strong></p>
+<ul>
+<li><strong>High Memory Usage:</strong> Indicates potential memory leaks or insufficient RAM.</li>
+<li><strong>Low Free Memory:</strong> Not always an issue if memory is being effectively cached.</li>
+</ul>
+</li>
+<li>
+<p><strong>Example Alert:</strong></p>
+<ul>
+<li>Notify when free memory drops below 10% for more than 5 minutes.</li>
+</ul>
+</li>
+<li>
+<p><strong>Troubleshooting Memory Issues:</strong></p>
+<ul>
+<li>Analyze processes consuming the most memory (<code class="language-text">free</code>, <code class="language-text">vmstat</code>, <code class="language-text">ps aux --sort=-%mem</code>).</li>
+<li>Optimize applications to use memory efficiently.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example Use Case:</strong></p>
+<ul>
+<li>A Java application experiencing frequent garbage collection cycles due to insufficient heap space can lead to high memory usage and degraded performance.</li>
+</ul>
+<hr>
+<h4 id="disk-io" style="position:relative;"><a href="#disk-io" aria-label="disk io permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Disk I/O</strong></h4>
+<ol>
+<li>
+<p><strong>What It Measures:</strong></p>
+<ul>
+<li>Read and write operations, latency, and disk throughput.</li>
+</ul>
+</li>
+<li>
+<p><strong>Key Indicators:</strong></p>
+<ul>
+<li><strong>High I/O Wait:</strong> Prolonged wait times indicate storage bottlenecks.</li>
+<li><strong>Low Free Disk Space:</strong> Can lead to application crashes or system failures.</li>
+</ul>
+</li>
+<li>
+<p><strong>Example Alert:</strong></p>
+<ul>
+<li>Alert if disk usage exceeds 90% or I/O wait exceeds 30% for 10 minutes.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optimizing Disk Usage:</strong></p>
+<ul>
+<li>Archive old logs or move to external storage.</li>
+<li>Upgrade to faster storage solutions like SSDs.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“Disk I/O is the silent killer of performance—monitor it closely to avoid surprises.”</strong></li>
+</ul>
+<hr>
+<h4 id="network-metrics" style="position:relative;"><a href="#network-metrics" aria-label="network metrics permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Network Metrics</strong></h4>
+<ol>
+<li>
+<p><strong>What It Measures:</strong></p>
+<ul>
+<li>Bandwidth usage, packet errors, and dropped packets.</li>
+</ul>
+</li>
+<li>
+<p><strong>Key Indicators:</strong></p>
+<ul>
+<li><strong>High Bandwidth Usage:</strong> Could signal heavy traffic or DDoS attacks.</li>
+<li><strong>Packet Loss:</strong> May indicate network congestion or hardware failure.</li>
+</ul>
+</li>
+<li>
+<p><strong>Example Alert:</strong></p>
+<ul>
+<li>Trigger an alert if packet loss exceeds 1% over a 5-minute interval.</li>
+</ul>
+</li>
+<li>
+<p><strong>Troubleshooting Network Issues:</strong></p>
+<ul>
+<li>Use tools like <code class="language-text">ping</code>, <code class="language-text">traceroute</code>, or <code class="language-text">netstat</code> to isolate issues.</li>
+<li>Investigate misconfigured firewalls or network saturation points.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example Use Case:</strong></p>
+<ul>
+<li>Detecting abnormal outbound traffic could indicate a compromised server being used for malicious activities.</li>
+</ul>
+<hr>
+<h3 id="3-server-logs" style="position:relative;"><a href="#3-server-logs" aria-label="3 server logs permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3. Server Logs</strong></h3>
+<p>Logs provide detailed, timestamped records of server events and actions, offering deep insight into issues not visible through metrics alone.</p>
+<h4 id="key-types-of-server-logs" style="position:relative;"><a href="#key-types-of-server-logs" aria-label="key types of server logs permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Types of Server Logs</strong></h4>
+<ol>
+<li>
+<p><strong>System Logs (Syslog):</strong></p>
+<ul>
+<li>Capture operating system-level events such as kernel errors or service crashes.</li>
+<li><strong>Example:</strong> Use <code class="language-text">dmesg</code> to view kernel logs for hardware errors.</li>
+</ul>
+</li>
+<li>
+<p><strong>Application Logs:</strong></p>
+<ul>
+<li>Provide application-specific details such as error messages or debug information.</li>
+<li><strong>Example:</strong> Apache logs HTTP request details, response codes, and client IPs.</li>
+</ul>
+</li>
+<li>
+<p><strong>Security Logs:</strong></p>
+<ul>
+<li>Track login attempts, authentication failures, and privilege escalations.</li>
+<li><strong>Example:</strong> Use <code class="language-text">auth.log</code> to investigate unauthorized SSH access attempts.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Best Practices:</strong></p>
+<ul>
+<li>Centralize logs using tools like <strong>Elasticsearch</strong>, <strong>Logstash</strong>, or <strong>Fluentd</strong> for easier analysis.</li>
+<li>Set up log rotation to prevent disk usage from growing uncontrollably.</li>
+</ul>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“Logs are the breadcrumbs that lead you to the root cause of any issue.”</strong></li>
+</ul>
+<hr>
+<h3 id="4-advanced-server-monitoring-techniques" style="position:relative;"><a href="#4-advanced-server-monitoring-techniques" aria-label="4 advanced server monitoring techniques permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>4. Advanced Server Monitoring Techniques</strong></h3>
+<h4 id="push-based-monitoring" style="position:relative;"><a href="#push-based-monitoring" aria-label="push based monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Push-Based Monitoring</strong></h4>
+<p>Traditional monitoring often uses poll-based methods like SNMP, which are limited in scale and complexity. Modern push-based systems, such as <strong>Prometheus</strong> or <strong>Telegraf</strong>, offer real-time, scalable monitoring.</p>
+<hr>
+<h4 id="monitoring-distributed-architectures" style="position:relative;"><a href="#monitoring-distributed-architectures" aria-label="monitoring distributed architectures permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Monitoring Distributed Architectures</strong></h4>
+<p>In distributed systems, traditional single-server metrics are insufficient. Use correlation tools to monitor multiple servers as part of a cohesive system.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Combine Prometheus for metrics and Jaeger for distributed tracing to monitor microservices running across a server cluster.</li>
+</ul>
+<hr>
+<h4 id="monitoring-specialized-server-types" style="position:relative;"><a href="#monitoring-specialized-server-types" aria-label="monitoring specialized server types permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Monitoring Specialized Server Types</strong></h4>
+<ol>
+<li>
+<p><strong>Database Servers:</strong></p>
+<ul>
+<li>Monitor metrics like query latency, transactions per second, and connection pool usage.</li>
+<li><strong>Example Tool:</strong> PostgreSQL’s <code class="language-text">pg_stat_activity</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Web Servers:</strong></p>
+<ul>
+<li>Focus on request rates, response times, and error rates (HTTP 4xx/5xx).</li>
+<li><strong>Example Tool:</strong> Use NGINX’s built-in status module.</li>
+</ul>
+</li>
+<li>
+<p><strong>File Servers:</strong></p>
+<ul>
+<li>Track file access times and storage usage trends.</li>
+<li><strong>Example Tool:</strong> Monitor storage with <strong>NetApp</strong> or similar NAS tools.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="5-tools-for-server-monitoring" style="position:relative;"><a href="#5-tools-for-server-monitoring" aria-label="5 tools for server monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>5. Tools for Server Monitoring</strong></h3>
+<ol>
+<li>
+<p><strong>Prometheus + Grafana:</strong></p>
+<ul>
+<li><strong>Prometheus:</strong> Collects time-series data for metrics like CPU, memory, and network.</li>
+<li><strong>Grafana:</strong> Creates interactive dashboards to visualize metrics.</li>
+</ul>
+</li>
+<li>
+<p><strong>Datadog:</strong></p>
+<ul>
+<li>Offers SaaS-based server monitoring with pre-built integrations for cloud and on-premises environments.</li>
+</ul>
+</li>
+<li>
+<p><strong>Nagios:</strong></p>
+<ul>
+<li>A classic tool for infrastructure monitoring, providing customizable checks and alerting.</li>
+</ul>
+</li>
+<li>
+<p><strong>Log Analysis Tools:</strong></p>
+<ul>
+<li><strong>Elasticsearch + Kibana:</strong> Centralize and visualize logs for deeper insights.</li>
+<li><strong>Splunk:</strong> Ideal for enterprises requiring powerful log analysis and correlation.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="6-real-world-examples" style="position:relative;"><a href="#6-real-world-examples" aria-label="6 real world examples permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>6. Real-World Examples</strong></h3>
+<h4 id="scenario-1-high-cpu-utilization" style="position:relative;"><a href="#scenario-1-high-cpu-utilization" aria-label="scenario 1 high cpu utilization permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Scenario 1: High CPU Utilization</strong></h4>
+<ul>
+<li><strong>Issue:</strong> A web server’s CPU usage spiked to 100%.</li>
+<li><strong>Investigation:</strong> Logs revealed a newly deployed cron job consuming excessive resources.</li>
+<li><strong>Solution:</strong> Optimized the cron job’s query and reduced its frequency.</li>
+</ul>
+<h4 id="scenario-2-disk-io-bottleneck" style="position:relative;"><a href="#scenario-2-disk-io-bottleneck" aria-label="scenario 2 disk io bottleneck permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Scenario 2: Disk I/O Bottleneck</strong></h4>
+<ul>
+<li><strong>Issue:</strong> Slow database performance during peak traffic.</li>
+<li><strong>Investigation:</strong> Disk metrics showed high I/O wait times.</li>
+<li><strong>Solution:</strong> Migrated to SSDs and implemented query indexing.</li>
+</ul>
+<h4 id="scenario-3-network-packet-loss" style="position:relative;"><a href="#scenario-3-network-packet-loss" aria-label="scenario 3 network packet loss permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Scenario 3: Network Packet Loss</strong></h4>
+<ul>
+<li><strong>Issue:</strong> Users reported intermittent application connectivity.</li>
+<li><strong>Investigation:</strong> Network metrics showed 5% packet loss during high traffic hours.</li>
+<li><strong>Solution:</strong> Upgraded the server’s NIC and adjusted traffic routing.</li>
+</ul>
+<hr>
+<h3 id="7-best-practices-for-server-monitoring" style="position:relative;"><a href="#7-best-practices-for-server-monitoring" aria-label="7 best practices for server monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>7. Best Practices for Server Monitoring</strong></h3>
+<ol>
+<li>
+<p><strong>Set Meaningful Alerts:</strong></p>
+<ul>
+<li>Avoid alert fatigue by focusing on actionable thresholds.</li>
+<li><strong>Example:</strong> Trigger alerts only for sustained high CPU usage.</li>
+</ul>
+</li>
+<li>
+<p><strong>Combine Metrics and Logs:</strong></p>
+<ul>
+<li>Metrics provide trends, while logs offer event-specific context.</li>
+</ul>
+</li>
+<li>
+<p><strong>Automate and Scale:</strong></p>
+<ul>
+<li>Use automated tools like Prometheus and Grafana to handle large-scale monitoring.</li>
+</ul>
+</li>
+<li>
+<p><strong>Regularly Review and Update:</strong></p>
+<ul>
+<li>As systems evolve, monitoring setups must adapt to cover new workflows and metrics.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“The best monitoring systems are those that adapt with your infrastructure, not those set in stone.”</strong></li>
+</ul>
+<hr>
 <h1 id="references" style="position:relative;"><a href="#references" aria-label="references permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>References</h1>
 <ul>
 <li><a href="https://github.com/keyvanakbary/learning-notes/blob/master/books/distributed-systems-observability.md">https://github.com/keyvanakbary/learning-notes/blob/master/books/distributed-systems-observability.md</a></li>
