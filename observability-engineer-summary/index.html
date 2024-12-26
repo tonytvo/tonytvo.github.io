@@ -4219,6 +4219,293 @@ tracer <span class="token operator">=</span> trace<span class="token punctuation
 <li><strong>“Integrated tools simplify sampling implementation and ensure consistent execution across services.”</strong></li>
 </ul>
 <hr>
+<h2 id="18-telemetry-management-pipelines" style="position:relative;"><a href="#18-telemetry-management-pipelines" aria-label="18 telemetry management pipelines permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>18. Telemetry Management Pipelines</strong></h2>
+<p>Effective telemetry management pipelines are the backbone of observability systems at scale, transforming raw telemetry data into actionable insights. These pipelines handle the ingestion, processing, enrichment, routing, and storage of billions of telemetry events daily while ensuring scalability, cost efficiency, and performance. This section provides <strong>in-depth best practices</strong>, explores <strong>advanced implementation details</strong>, and highlights <strong>real-world examples from Slack</strong> to showcase how telemetry pipelines can be optimized for large-scale systems.</p>
+<hr>
+<h3 id="the-role-of-telemetry-pipelines-in-observability" style="position:relative;"><a href="#the-role-of-telemetry-pipelines-in-observability" aria-label="the role of telemetry pipelines in observability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>The Role of Telemetry Pipelines in Observability</strong></h3>
+<p>Telemetry pipelines collect data from various sources—such as metrics, logs, and traces—process it for analysis, and distribute it to storage or visualization systems. At their core, telemetry pipelines aim to ensure that <strong>the right data reaches the right place at the right time</strong> while controlling costs and maintaining performance.</p>
+<hr>
+<h4 id="1-why-telemetry-pipelines-matter" style="position:relative;"><a href="#1-why-telemetry-pipelines-matter" aria-label="1 why telemetry pipelines matter permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. Why Telemetry Pipelines Matter</strong></h4>
+<p>As systems grow in complexity, the volume of telemetry data increases exponentially. Without proper management, this data overwhelms storage systems, slows query performance, and increases operational costs.</p>
+<p><strong>Example Scale of Modern Telemetry:</strong></p>
+<ul>
+<li><strong>Logs:</strong> A single Kubernetes cluster can generate millions of log entries daily.</li>
+<li><strong>Metrics:</strong> High-resolution time-series data for thousands of instances can reach millions of data points per second.</li>
+<li><strong>Traces:</strong> A distributed system with microservices can produce billions of spans daily.</li>
+</ul>
+<p><strong>Challenges Without Pipelines:</strong></p>
+<ul>
+<li><strong>Data Overload:</strong> Raw telemetry floods storage and query systems, causing performance bottlenecks.</li>
+<li><strong>High Costs:</strong> Storing and processing all telemetry data at full fidelity is financially unsustainable.</li>
+<li><strong>Debugging Complexity:</strong> Without structured pipelines, engineers waste time navigating unorganized data during incidents.</li>
+</ul>
+<p><strong>Key Insight:</strong></p>
+<ul>
+<li><strong>“Telemetry pipelines are essential for turning chaos into clarity—transforming raw data into actionable insights at scale.”</strong></li>
+</ul>
+<hr>
+<h4 id="2-objectives-of-a-telemetry-pipeline" style="position:relative;"><a href="#2-objectives-of-a-telemetry-pipeline" aria-label="2 objectives of a telemetry pipeline permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2. Objectives of a Telemetry Pipeline</strong></h4>
+<ul>
+<li><strong>Scalability:</strong> Handle high-volume, high-cardinality telemetry data without degrading performance.</li>
+<li><strong>Cost Efficiency:</strong> Reduce storage and processing costs through intelligent filtering and aggregation.</li>
+<li><strong>Data Enrichment:</strong> Add context to raw telemetry to improve debugging and analysis.</li>
+<li><strong>Real-Time Insights:</strong> Deliver actionable data quickly to support incident response and operational decisions.</li>
+<li><strong>Flexibility:</strong> Adapt to changing infrastructure and business requirements.</li>
+</ul>
+<p><strong>Key Insight:</strong></p>
+<ul>
+<li><strong>“The ultimate goal of a telemetry pipeline is to provide fast, reliable, and cost-effective observability at any scale.”</strong></li>
+</ul>
+<hr>
+<h3 id="best-practices-for-telemetry-pipelines" style="position:relative;"><a href="#best-practices-for-telemetry-pipelines" aria-label="best practices for telemetry pipelines permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Best Practices for Telemetry Pipelines</strong></h3>
+<hr>
+<h4 id="1-decouple-ingestion-processing-and-storage" style="position:relative;"><a href="#1-decouple-ingestion-processing-and-storage" aria-label="1 decouple ingestion processing and storage permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. Decouple Ingestion, Processing, and Storage</strong></h4>
+<p><strong>What It Means:</strong></p>
+<ul>
+<li>Separate the pipeline into modular stages:
+<ul>
+<li><strong>Ingestion:</strong> Collect telemetry data from diverse sources.</li>
+<li><strong>Processing:</strong> Filter, aggregate, and enrich data.</li>
+<li><strong>Storage:</strong> Route processed data to appropriate storage systems.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li><strong>Scalability:</strong> Each stage can scale independently to meet workload demands.</li>
+<li><strong>Resilience:</strong> Decoupling prevents cascading failures across the pipeline.</li>
+<li><strong>Flexibility:</strong> Components can be replaced or upgraded without disrupting the pipeline.</li>
+</ul>
+<p><strong>Implementation Details:</strong></p>
+<ul>
+<li><strong>Ingestion Layer:</strong>
+<ul>
+<li>Use agents like <strong>OpenTelemetry</strong>, <strong>Fluentd</strong>, or <strong>Logstash</strong> to collect data from applications and infrastructure.</li>
+<li><strong>Example:</strong> A Kubernetes cluster uses Fluentd to collect container logs and forward them to a central processing system.</li>
+</ul>
+</li>
+<li><strong>Processing Layer:</strong>
+<ul>
+<li>Tools like <strong>Apache Kafka</strong> or <strong>Apache Flink</strong> filter, aggregate, and enrich telemetry in real time.</li>
+<li><strong>Example:</strong> Kafka streams normalize log formats from different sources for consistency.</li>
+</ul>
+</li>
+<li><strong>Storage Layer:</strong>
+<ul>
+<li>Route telemetry to specialized storage systems:
+<ul>
+<li>Metrics to <strong>Prometheus</strong> or <strong>InfluxDB</strong>.</li>
+<li>Logs to <strong>Elasticsearch</strong> or <strong>Splunk</strong>.</li>
+<li>Traces to <strong>Honeycomb</strong> or <strong>Jaeger</strong>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Insight:</strong></p>
+<ul>
+<li><strong>“Decoupling the pipeline ensures modularity, making it easier to scale, adapt, and troubleshoot.”</strong></li>
+</ul>
+<hr>
+<h4 id="2-filter-and-aggregate-data-early" style="position:relative;"><a href="#2-filter-and-aggregate-data-early" aria-label="2 filter and aggregate data early permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2. Filter and Aggregate Data Early</strong></h4>
+<p><strong>What It Means:</strong></p>
+<ul>
+<li>Reduce the volume of telemetry data as early as possible in the pipeline to optimize storage and processing costs.</li>
+</ul>
+<p><strong>Techniques:</strong></p>
+<ol>
+<li><strong>Filtering:</strong>
+<ul>
+<li>Discard unnecessary telemetry data (e.g., debug logs in production, redundant spans).</li>
+<li><strong>Example:</strong> Drop verbose logs for successful API requests but retain logs for failed requests.</li>
+</ul>
+</li>
+<li><strong>Aggregation:</strong>
+<ul>
+<li>Summarize raw telemetry into meaningful aggregates.</li>
+<li><strong>Example:</strong> Aggregate per-request latency data into <strong>P50</strong>, <strong>P95</strong>, and <strong>P99 latency</strong> values over 1-minute intervals.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li>Lowers storage and bandwidth costs.</li>
+<li>Speeds up downstream processing and queries.</li>
+</ul>
+<p><strong>Key Insight:</strong></p>
+<ul>
+<li><strong>“Early filtering and aggregation ensure that only valuable data flows through the pipeline.”</strong></li>
+</ul>
+<hr>
+<h4 id="3-enrich-data-in-transit" style="position:relative;"><a href="#3-enrich-data-in-transit" aria-label="3 enrich data in transit permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3. Enrich Data in Transit</strong></h4>
+<p><strong>What It Means:</strong></p>
+<ul>
+<li>Add metadata and context to telemetry data as it moves through the pipeline.</li>
+</ul>
+<p><strong>Examples of Data Enrichment:</strong></p>
+<ol>
+<li><strong>Add Metadata:</strong>
+<ul>
+<li>Include details like <code class="language-text">region</code>, <code class="language-text">datacenter</code>, <code class="language-text">service_name</code>, or <code class="language-text">deployment_version</code>.</li>
+<li><strong>Example:</strong> Attach <code class="language-text">deployment_version</code> to traces to correlate errors with recent code changes.</li>
+</ul>
+</li>
+<li><strong>Correlate Data Across Systems:</strong>
+<ul>
+<li>Link metrics, logs, and traces using a common identifier (e.g., trace ID).</li>
+<li><strong>Example:</strong> Add trace IDs to logs and metrics to provide a unified view of an incident.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li>Simplifies debugging by providing richer context.</li>
+<li>Reduces manual effort during root cause analysis.</li>
+</ul>
+<p><strong>Key Insight:</strong></p>
+<ul>
+<li><strong>“Enriched telemetry data empowers engineers with the full context they need to resolve issues quickly.”</strong></li>
+</ul>
+<hr>
+<h4 id="4-optimize-data-routing" style="position:relative;"><a href="#4-optimize-data-routing" aria-label="4 optimize data routing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>4. Optimize Data Routing</strong></h4>
+<p><strong>What It Means:</strong></p>
+<ul>
+<li>Direct telemetry data to appropriate destinations based on its type, use case, and retention requirements.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<ol>
+<li><strong>Metrics:</strong>
+<ul>
+<li>Route to time-series databases like <strong>Prometheus</strong> for performance monitoring.</li>
+</ul>
+</li>
+<li><strong>Logs:</strong>
+<ul>
+<li>Route to centralized log systems like <strong>Elasticsearch</strong> for search and analysis.</li>
+</ul>
+</li>
+<li><strong>Traces:</strong>
+<ul>
+<li>Route to distributed tracing systems like <strong>Honeycomb</strong> for end-to-end request analysis.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Dynamic Routing Rules:</strong></p>
+<ul>
+<li>Configure routing rules to handle specific scenarios.</li>
+<li><strong>Example:</strong>
+<ul>
+<li>Route error logs to real-time monitoring dashboards.</li>
+<li>Archive debug logs in cold storage for compliance purposes.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Insight:</strong></p>
+<ul>
+<li><strong>“Optimized routing ensures telemetry data ends up in the right place, at the right time, for the right purpose.”</strong></li>
+</ul>
+<hr>
+<h4 id="5-implement-sampling-and-retention-policies" style="position:relative;"><a href="#5-implement-sampling-and-retention-policies" aria-label="5 implement sampling and retention policies permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>5. Implement Sampling and Retention Policies</strong></h4>
+<p><strong>What It Means:</strong></p>
+<ul>
+<li>Use sampling to reduce data volume and retention policies to manage long-term storage costs.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<ol>
+<li><strong>Sampling:</strong>
+<ul>
+<li>Retain 10% of routine traces but 100% of error traces.</li>
+<li><strong>Example:</strong> Use tail-based sampling to capture only traces with <code class="language-text">latency > 500ms</code> or <code class="language-text">status_code != 200</code>.</li>
+</ul>
+</li>
+<li><strong>Retention Policies:</strong>
+<ul>
+<li>Store recent data at high resolution and downsample older data.</li>
+<li><strong>Example:</strong> Retain 1-second granularity metrics for 7 days, then aggregate to 1-minute granularity for 30 days.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Insight:</strong></p>
+<ul>
+<li><strong>“Retention policies balance operational needs with long-term cost efficiency.”</strong></li>
+</ul>
+<hr>
+<h3 id="real-world-examples-from-slack" style="position:relative;"><a href="#real-world-examples-from-slack" aria-label="real world examples from slack permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Real-World Examples from Slack</strong></h3>
+<p>Slack’s telemetry pipeline is a benchmark for large-scale observability. Processing billions of telemetry events daily, Slack demonstrates best practices for managing telemetry at scale.</p>
+<hr>
+<h4 id="1-modular-pipeline-architecture" style="position:relative;"><a href="#1-modular-pipeline-architecture" aria-label="1 modular pipeline architecture permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. Modular Pipeline Architecture</strong></h4>
+<p><strong>Implementation:</strong></p>
+<ul>
+<li>Slack’s pipeline is composed of:
+<ul>
+<li><strong>Ingestion:</strong> Fluentd agents collect telemetry from microservices.</li>
+<li><strong>Processing:</strong> Apache Kafka streams normalize, filter, and enrich telemetry.</li>
+<li><strong>Storage:</strong> Metrics are stored in Prometheus, logs in Elasticsearch, and traces in Honeycomb.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Outcome:</strong></p>
+<ul>
+<li>Independent scalability for ingestion, processing, and storage layers.</li>
+<li>Resilience during traffic spikes, ensuring data flow continuity.</li>
+</ul>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“Slack’s modular pipeline architecture ensures scalability and reliability even at peak loads.”</strong></li>
+</ul>
+<hr>
+<h4 id="2-early-filtering-and-aggregation" style="position:relative;"><a href="#2-early-filtering-and-aggregation" aria-label="2 early filtering and aggregation permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2. Early Filtering and Aggregation</strong></h4>
+<p><strong>Implementation:</strong></p>
+<ul>
+<li>Filters unnecessary debug logs at the ingestion stage.</li>
+<li>Aggregates high-resolution metrics into percentiles (P50, P95, P99).</li>
+</ul>
+<p><strong>Outcome:</strong></p>
+<ul>
+<li>Reduced storage costs by 45%.</li>
+<li>Improved query performance for real-time dashboards.</li>
+</ul>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“Slack filters the noise early, so engineers can focus on what matters during incidents.”</strong></li>
+</ul>
+<hr>
+<h4 id="3-contextual-data-enrichment" style="position:relative;"><a href="#3-contextual-data-enrichment" aria-label="3 contextual data enrichment permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3. Contextual Data Enrichment</strong></h4>
+<p><strong>Implementation:</strong></p>
+<ul>
+<li>Enriches telemetry data with metadata like <code class="language-text">deployment_version</code> and <code class="language-text">region</code>.</li>
+<li>Adds trace IDs to logs and metrics for cross-correlation.</li>
+</ul>
+<p><strong>Outcome:</strong></p>
+<ul>
+<li>Simplified debugging workflows.</li>
+<li>Faster identification of deployment-related issues.</li>
+</ul>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“Context-rich telemetry data accelerates incident resolution and root cause analysis.”</strong></li>
+</ul>
+<hr>
+<h4 id="4-intelligent-routing-and-retention" style="position:relative;"><a href="#4-intelligent-routing-and-retention" aria-label="4 intelligent routing and retention permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>4. Intelligent Routing and Retention</strong></h4>
+<p><strong>Implementation:</strong></p>
+<ul>
+<li>Routes telemetry to appropriate destinations:
+<ul>
+<li>Error traces to Honeycomb for real-time analysis.</li>
+<li>Debug logs to AWS S3 for long-term storage.</li>
+<li>Metrics to Prometheus for real-time dashboards.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Outcome:</strong></p>
+<ul>
+<li>Optimized storage costs while maintaining observability fidelity.</li>
+</ul>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“Slack’s routing strategy ensures that data reaches the right place at the right time.”</strong></li>
+</ul>
+<hr>
 <h1 id="references" style="position:relative;"><a href="#references" aria-label="references permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>References</h1>
 <ul>
 <li><a href="https://github.com/keyvanakbary/learning-notes/blob/master/books/distributed-systems-observability.md">https://github.com/keyvanakbary/learning-notes/blob/master/books/distributed-systems-observability.md</a></li>
