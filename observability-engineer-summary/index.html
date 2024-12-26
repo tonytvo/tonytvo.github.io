@@ -6659,6 +6659,331 @@ Logs and metrics serve complementary purposes in application monitoring. Togethe
 <li><strong>“The best monitoring systems are those that adapt with your infrastructure, not those set in stone.”</strong></li>
 </ul>
 <hr>
+<h2 id="chapter-9-network-monitoring" style="position:relative;"><a href="#chapter-9-network-monitoring" aria-label="chapter 9 network monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Chapter 9: Network Monitoring</strong></h2>
+<p>Network monitoring is essential for ensuring the performance, reliability, and security of the interconnected systems that support modern applications and services. This chapter explores in-depth strategies, metrics, tools, and real-world examples for effectively monitoring networks. With increasing network complexity and demand, monitoring helps preemptively address issues, optimize performance, and align with business goals.</p>
+<hr>
+<h3 id="1-the-role-of-network-monitoring" style="position:relative;"><a href="#1-the-role-of-network-monitoring" aria-label="1 the role of network monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. The Role of Network Monitoring</strong></h3>
+<p><strong>Key Idea:</strong><br>
+Networks form the backbone of modern IT systems, connecting applications, servers, users, and the internet. Any disruption in network health can cascade into broader system failures.</p>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“A robust network monitoring strategy is the first line of defense against outages, performance degradation, and security vulnerabilities.”</strong></li>
+</ul>
+<hr>
+<h4 id="why-network-monitoring-is-critical" style="position:relative;"><a href="#why-network-monitoring-is-critical" aria-label="why network monitoring is critical permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Why Network Monitoring is Critical</strong></h4>
+<ol>
+<li>
+<p><strong>Foundational to System Reliability:</strong></p>
+<ul>
+<li>Applications, databases, and user interfaces depend on network connectivity.</li>
+<li><strong>Example:</strong> A high packet loss rate on a database server’s network link can cause query timeouts and application errors.</li>
+</ul>
+</li>
+<li>
+<p><strong>Detecting and Preventing Failures:</strong></p>
+<ul>
+<li>Network monitoring enables early detection of failures such as link saturation, misconfigurations, or device malfunctions.</li>
+<li><strong>Example:</strong> Monitoring switches for CRC errors can identify failing cables before they cause downtime.</li>
+</ul>
+</li>
+<li>
+<p><strong>Ensuring SLA Compliance:</strong></p>
+<ul>
+<li>Proactively maintaining uptime and performance aligns with Service Level Agreements (SLAs) and business commitments.</li>
+<li><strong>Example:</strong> An SLA promises 99.99% uptime for a VPN connection, requiring immediate action for latency or packet loss.</li>
+</ul>
+</li>
+<li>
+<p><strong>Enhancing Business Outcomes:</strong></p>
+<ul>
+<li>Network performance directly affects revenue for latency-sensitive applications.</li>
+<li><strong>Example:</strong> An e-commerce platform losing users due to delayed page loads caused by slow content delivery.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="2-key-metrics-in-network-monitoring" style="position:relative;"><a href="#2-key-metrics-in-network-monitoring" aria-label="2 key metrics in network monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2. Key Metrics in Network Monitoring</strong></h3>
+<p>A well-structured network monitoring strategy focuses on collecting and analyzing critical metrics that provide insight into health, performance, and anomalies.</p>
+<hr>
+<h4 id="bandwidth-and-throughput" style="position:relative;"><a href="#bandwidth-and-throughput" aria-label="bandwidth and throughput permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Bandwidth and Throughput</strong></h4>
+<ol>
+<li>
+<p><strong>Definition:</strong></p>
+<ul>
+<li><strong>Bandwidth:</strong> The maximum data volume a link can handle.</li>
+<li><strong>Throughput:</strong> The actual data rate achieved during transmission.</li>
+</ul>
+</li>
+<li>
+<p><strong>Key Use Cases:</strong></p>
+<ul>
+<li>Identify underused links for cost optimization.</li>
+<li>Detect congestion that limits application performance.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example:</strong><br>
+A WAN link with a theoretical bandwidth of 1 Gbps but an observed throughput of 600 Mbps during peak times may indicate congestion or packet retransmissions.</p>
+<hr>
+<h4 id="latency" style="position:relative;"><a href="#latency" aria-label="latency permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Latency</strong></h4>
+<ol>
+<li>
+<p><strong>Definition:</strong></p>
+<ul>
+<li>The time taken for data to travel from a source to a destination.</li>
+</ul>
+</li>
+<li>
+<p><strong>Key Insight:</strong></p>
+<ul>
+<li>High latency affects real-time applications like video conferencing, VoIP, and online gaming.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Troubleshooting Example:</strong></p>
+<ul>
+<li><strong>Tool:</strong> Use <code class="language-text">ping</code> or <code class="language-text">traceroute</code> to identify high-latency hops in a connection path.</li>
+<li><strong>Scenario:</strong> Latency spikes on a multi-hop VPN tunnel affecting remote employee productivity.</li>
+</ul>
+<hr>
+<h4 id="packet-loss" style="position:relative;"><a href="#packet-loss" aria-label="packet loss permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Packet Loss</strong></h4>
+<ol>
+<li>
+<p><strong>Definition:</strong></p>
+<ul>
+<li>The percentage of packets lost during transmission.</li>
+</ul>
+</li>
+<li>
+<p><strong>Key Impact:</strong></p>
+<ul>
+<li>Packet loss degrades performance, especially for applications reliant on consistent data streams, such as video streaming or VoIP.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example:</strong><br>
+A video conferencing platform experiences intermittent audio dropouts due to a 3% packet loss rate on a core router.</p>
+<hr>
+<h4 id="jitter" style="position:relative;"><a href="#jitter" aria-label="jitter permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Jitter</strong></h4>
+<ol>
+<li>
+<p><strong>Definition:</strong></p>
+<ul>
+<li>Variability in packet arrival times, often caused by congestion or queuing.</li>
+</ul>
+</li>
+<li>
+<p><strong>Key Impact:</strong></p>
+<ul>
+<li>Jitter disrupts real-time services, particularly VoIP and video conferencing.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Mitigation Example:</strong></p>
+<ul>
+<li>Implement Quality of Service (QoS) to prioritize latency-sensitive traffic.</li>
+</ul>
+<hr>
+<h4 id="errors-and-collisions" style="position:relative;"><a href="#errors-and-collisions" aria-label="errors and collisions permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Errors and Collisions</strong></h4>
+<ol>
+<li><strong>Definition:</strong>
+<ul>
+<li>Errors include corrupted packets, often due to hardware or cable faults.</li>
+<li>Collisions occur in older Ethernet setups when multiple devices transmit simultaneously.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example:</strong><br>
+High CRC errors on a switch port may indicate a failing cable or faulty NIC.</p>
+<hr>
+<h3 id="3-network-monitoring-techniques" style="position:relative;"><a href="#3-network-monitoring-techniques" aria-label="3 network monitoring techniques permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3. Network Monitoring Techniques</strong></h3>
+<hr>
+<h4 id="active-monitoring" style="position:relative;"><a href="#active-monitoring" aria-label="active monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Active Monitoring</strong></h4>
+<ol>
+<li>
+<p><strong>Definition:</strong></p>
+<ul>
+<li>Simulates traffic to test performance and availability.</li>
+</ul>
+</li>
+<li>
+<p><strong>Tools and Use Cases:</strong></p>
+<ul>
+<li><strong>Ping:</strong> Monitor availability and latency of critical endpoints.</li>
+<li><strong>iperf:</strong> Test throughput between two endpoints in a controlled setup.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example:</strong><br>
+Use <strong>iperf</strong> to test the performance of a new MPLS link, ensuring it meets SLA requirements for throughput and latency.</p>
+<hr>
+<h4 id="passive-monitoring" style="position:relative;"><a href="#passive-monitoring" aria-label="passive monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Passive Monitoring</strong></h4>
+<ol>
+<li>
+<p><strong>Definition:</strong></p>
+<ul>
+<li>Observes actual traffic flows without injecting test data.</li>
+</ul>
+</li>
+<li>
+<p><strong>Tools and Use Cases:</strong></p>
+<ul>
+<li><strong>NetFlow/sFlow:</strong> Analyze traffic patterns and identify bandwidth hogs.</li>
+<li><strong>Wireshark:</strong> Inspect packets for detailed troubleshooting.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example:</strong><br>
+Using <strong>NetFlow</strong>, identify that 30% of bandwidth on an office network is consumed by non-business applications like video streaming.</p>
+<hr>
+<h3 id="4-network-monitoring-tools" style="position:relative;"><a href="#4-network-monitoring-tools" aria-label="4 network monitoring tools permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>4. Network Monitoring Tools</strong></h3>
+<h4 id="snmp-simple-network-management-protocol" style="position:relative;"><a href="#snmp-simple-network-management-protocol" aria-label="snmp simple network management protocol permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>SNMP (Simple Network Management Protocol)</strong></h4>
+<ol>
+<li>
+<p><strong>Definition:</strong></p>
+<ul>
+<li>A protocol for collecting metrics from network devices.</li>
+</ul>
+</li>
+<li>
+<p><strong>Metrics Collected:</strong></p>
+<ul>
+<li>Interface utilization, errors, packet counts.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example:</strong><br>
+Use SNMP to monitor router CPU and memory usage, identifying spikes during peak hours.</p>
+<hr>
+<h4 id="flow-monitoring" style="position:relative;"><a href="#flow-monitoring" aria-label="flow monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Flow Monitoring</strong></h4>
+<ol>
+<li>
+<p><strong>NetFlow:</strong></p>
+<ul>
+<li>Collects metadata about network traffic to identify patterns.</li>
+<li><strong>Use Case:</strong> Detect top talkers and protocols consuming bandwidth.</li>
+</ul>
+</li>
+<li>
+<p><strong>sFlow:</strong></p>
+<ul>
+<li>Samples packets for real-time insights with minimal resource overhead.</li>
+<li><strong>Use Case:</strong> Monitor high-speed links without overwhelming resources.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="visualization-tools" style="position:relative;"><a href="#visualization-tools" aria-label="visualization tools permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Visualization Tools</strong></h4>
+<ol>
+<li><strong>Grafana:</strong>
+<ul>
+<li>Combine network metrics from multiple sources into a unified dashboard.</li>
+</ul>
+</li>
+<li><strong>SolarWinds:</strong>
+<ul>
+<li>Comprehensive monitoring with features like automated alerting and capacity planning.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example Dashboard:</strong><br>
+Visualize key metrics like bandwidth utilization, link health, and error rates in Grafana for real-time insights.</p>
+<hr>
+<h3 id="5-advanced-network-monitoring-practices" style="position:relative;"><a href="#5-advanced-network-monitoring-practices" aria-label="5 advanced network monitoring practices permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>5. Advanced Network Monitoring Practices</strong></h3>
+<hr>
+<h4 id="capacity-planning" style="position:relative;"><a href="#capacity-planning" aria-label="capacity planning permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Capacity Planning</strong></h4>
+<ol>
+<li>
+<p><strong>Definition:</strong></p>
+<ul>
+<li>Predict future network usage and scale resources accordingly.</li>
+</ul>
+</li>
+<li>
+<p><strong>Best Practices:</strong></p>
+<ul>
+<li>Use historical trends to forecast traffic growth.</li>
+<li>Plan upgrades before links hit 80% utilization.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example:</strong><br>
+A SaaS provider projects a 20% annual increase in API traffic and upgrades their core routers to 10 Gbps to prevent congestion.</p>
+<hr>
+<h4 id="configuration-monitoring" style="position:relative;"><a href="#configuration-monitoring" aria-label="configuration monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Configuration Monitoring</strong></h4>
+<ol>
+<li>
+<p><strong>Definition:</strong></p>
+<ul>
+<li>Tracks changes to network device configurations.</li>
+</ul>
+</li>
+<li>
+<p><strong>Tools:</strong></p>
+<ul>
+<li><strong>RANCID:</strong> Archives and tracks router/switch configuration changes.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example:</strong><br>
+Alert on unauthorized changes to a firewall’s rule set, which could introduce vulnerabilities.</p>
+<hr>
+<h3 id="6-real-world-scenarios" style="position:relative;"><a href="#6-real-world-scenarios" aria-label="6 real world scenarios permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>6. Real-World Scenarios</strong></h3>
+<hr>
+<h4 id="scenario-1-identifying-congestion" style="position:relative;"><a href="#scenario-1-identifying-congestion" aria-label="scenario 1 identifying congestion permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Scenario 1: Identifying Congestion</strong></h4>
+<ul>
+<li><strong>Issue:</strong> A cloud-hosted database frequently times out during peak hours.</li>
+<li><strong>Investigation:</strong> NetFlow shows excessive traffic on the primary WAN link.</li>
+<li><strong>Resolution:</strong> Implemented QoS policies to prioritize database traffic.</li>
+</ul>
+<hr>
+<h4 id="scenario-2-resolving-high-jitter-in-voip-calls" style="position:relative;"><a href="#scenario-2-resolving-high-jitter-in-voip-calls" aria-label="scenario 2 resolving high jitter in voip calls permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Scenario 2: Resolving High Jitter in VoIP Calls</strong></h4>
+<ul>
+<li><strong>Issue:</strong> Users report choppy audio during calls.</li>
+<li><strong>Investigation:</strong> Monitored jitter on the WAN link and identified excessive traffic from bulk file transfers.</li>
+<li><strong>Resolution:</strong> Applied traffic shaping to prioritize VoIP packets.</li>
+</ul>
+<hr>
+<h4 id="scenario-3-detecting-security-threats" style="position:relative;"><a href="#scenario-3-detecting-security-threats" aria-label="scenario 3 detecting security threats permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Scenario 3: Detecting Security Threats</strong></h4>
+<ul>
+<li><strong>Issue:</strong> Sudden outbound traffic spike from a server.</li>
+<li><strong>Investigation:</strong> Flow analysis revealed connections to suspicious IPs.</li>
+<li><strong>Resolution:</strong> Isolated the server, removed malware, and updated firewall rules.</li>
+</ul>
+<hr>
+<h3 id="7-best-practices" style="position:relative;"><a href="#7-best-practices" aria-label="7 best practices permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>7. Best Practices</strong></h3>
+<ol>
+<li>
+<p><strong>Start with Business-Critical Links:</strong></p>
+<ul>
+<li>Prioritize monitoring links supporting critical applications.</li>
+<li><strong>Example:</strong> Monitor latency and packet loss for VPN connections used by remote teams.</li>
+</ul>
+</li>
+<li>
+<p><strong>Combine Tools for Full Visibility:</strong></p>
+<ul>
+<li>Use SNMP for device metrics, NetFlow for traffic analysis, and Grafana for visualization.</li>
+</ul>
+</li>
+<li>
+<p><strong>Automate Alerts and Reports:</strong></p>
+<ul>
+<li>Avoid alert fatigue by tuning thresholds based on historical data.</li>
+</ul>
+</li>
+<li>
+<p><strong>Integrate Security and Monitoring:</strong></p>
+<ul>
+<li>Combine monitoring with intrusion detection tools like Suricata to identify threats.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“An effective monitoring strategy is as much about what you monitor as how you act on what you learn.”</strong></li>
+</ul>
+<hr>
 <h1 id="references" style="position:relative;"><a href="#references" aria-label="references permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>References</h1>
 <ul>
 <li><a href="https://github.com/keyvanakbary/learning-notes/blob/master/books/distributed-systems-observability.md">https://github.com/keyvanakbary/learning-notes/blob/master/books/distributed-systems-observability.md</a></li>
