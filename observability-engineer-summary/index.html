@@ -3045,6 +3045,1180 @@ tracer <span class="token operator">=</span> trace<span class="token punctuation
 <li>Increased customer trust during high-demand periods.</li>
 </ul>
 <hr>
+<h2 id="14-software-supply-chain-observability" style="position:relative;"><a href="#14-software-supply-chain-observability" aria-label="14 software supply chain observability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>14. Software Supply Chain Observability</strong></h2>
+<p>Modern software systems are built on complex supply chains that include third-party libraries, APIs, CI/CD pipelines, and cloud services. <strong>Software Supply Chain Observability</strong> ensures visibility into every link in this chain, enabling teams to identify bottlenecks, mitigate risks, and maintain reliability. By studying real-world implementations, such as those at <strong>Slack</strong>, and incorporating instrumentation strategies, organizations can transform their supply chain into a resilient, traceable ecosystem.</p>
+<hr>
+<h3 id="understanding-software-supply-chain-observability" style="position:relative;"><a href="#understanding-software-supply-chain-observability" aria-label="understanding software supply chain observability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Understanding Software Supply Chain Observability</strong></h3>
+<hr>
+<h4 id="what-is-software-supply-chain-observability" style="position:relative;"><a href="#what-is-software-supply-chain-observability" aria-label="what is software supply chain observability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>What Is Software Supply Chain Observability?</strong></h4>
+<p>Software Supply Chain Observability extends traditional observability practices—metrics, traces, and logs—beyond internal systems to include the external dependencies and processes that deliver software.</p>
+<hr>
+<p><strong>Key Components:</strong></p>
+<ol>
+<li>
+<p><strong>Third-Party Dependencies:</strong></p>
+<ul>
+<li>Libraries, SDKs, APIs, and services integrated into your system.</li>
+<li><strong>Examples:</strong>
+<ul>
+<li>Payment gateways like Stripe or PayPal.</li>
+<li>Messaging APIs like Twilio or SendGrid.</li>
+<li>Open-source libraries for cryptography or authentication.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>CI/CD Pipelines:</strong></p>
+<ul>
+<li>Automation pipelines for building, testing, and deploying software.</li>
+<li><strong>Examples:</strong>
+<ul>
+<li>Source control (GitHub, GitLab).</li>
+<li>Build tools (Jenkins, CircleCI).</li>
+<li>Artifact repositories (Docker Hub, Nexus).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Cloud and Infrastructure Providers:</strong></p>
+<ul>
+<li>Managed services and cloud platforms hosting critical workloads.</li>
+<li><strong>Examples:</strong>
+<ul>
+<li>Databases (AWS RDS, Google Cloud Spanner).</li>
+<li>Storage (S3, Azure Blob Storage).</li>
+<li>Compute (EC2, Kubernetes clusters).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Internal Processes:</strong></p>
+<ul>
+<li>Tools and workflows for dependency management, vulnerability scanning, and artifact delivery.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="why-is-it-important" style="position:relative;"><a href="#why-is-it-important" aria-label="why is it important permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Why Is It Important?</strong></h4>
+<ol>
+<li>
+<p><strong>Increased Complexity:</strong></p>
+<ul>
+<li>The reliance on external dependencies and services makes modern systems more complex and harder to debug.</li>
+<li><strong>“A single failure in your software supply chain can cascade into widespread system outages.”</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Hidden Risks:</strong></p>
+<ul>
+<li>Unobserved components introduce vulnerabilities, bottlenecks, and blind spots.</li>
+<li><strong>Example:</strong>
+<ul>
+<li>A poorly maintained open-source library introduces a security vulnerability, compromising the entire system.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Security and Compliance:</strong></p>
+<ul>
+<li>Regulatory requirements (e.g., GDPR, HIPAA) necessitate visibility into dependencies and data flows.</li>
+<li><strong>“Without full visibility into your supply chain, you risk violating compliance requirements or exposing sensitive data.”</strong></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="case-studies-from-slack-observability-in-the-software-supply-chain" style="position:relative;"><a href="#case-studies-from-slack-observability-in-the-software-supply-chain" aria-label="case studies from slack observability in the software supply chain permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Case Studies from Slack: Observability in the Software Supply Chain</strong></h3>
+<p>Slack’s approach to <strong>Software Supply Chain Observability</strong> showcases the importance of visibility, proactive monitoring, and rigorous instrumentation.</p>
+<hr>
+<h4 id="1-dependency-management-mitigating-risks-and-ensuring-stability" style="position:relative;"><a href="#1-dependency-management-mitigating-risks-and-ensuring-stability" aria-label="1 dependency management mitigating risks and ensuring stability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. Dependency Management: Mitigating Risks and Ensuring Stability</strong></h4>
+<p><strong>Problem:</strong></p>
+<ul>
+<li>Slack relies on numerous open-source libraries and third-party APIs to deliver features like messaging, notifications, and integrations.</li>
+<li>Over time, the lack of visibility into dependencies led to:
+<ul>
+<li>Outdated libraries introducing security vulnerabilities.</li>
+<li>Performance degradations from slow or unresponsive APIs.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>Slack’s Solution:</strong></p>
+<ol>
+<li>
+<p><strong>Dependency Instrumentation:</strong></p>
+<ul>
+<li>Added observability to every third-party dependency.</li>
+<li>Monitored:
+<ul>
+<li>API latency and error rates.</li>
+<li>Success and failure patterns for retries.</li>
+<li>Version usage across environments (development, staging, production).</li>
+</ul>
+</li>
+<li><strong>“By instrumenting dependencies, Slack gained real-time visibility into every external service.”</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Automated Dependency Updates:</strong></p>
+<ul>
+<li>Integrated tools like <strong>Dependabot</strong> and <strong>Snyk</strong> to automatically:
+<ul>
+<li>Detect outdated or vulnerable libraries.</li>
+<li>Generate pull requests for updates.</li>
+</ul>
+</li>
+<li>Used observability tools to monitor the impact of updates on:
+<ul>
+<li>Build stability.</li>
+<li>Performance metrics.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Example Insights:</strong></p>
+<ul>
+<li>Observability flagged a 2x increase in latency for a messaging API during peak traffic. Slack escalated the issue with the vendor and implemented rate-limiting until the vendor resolved the issue.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p><strong>Outcome:</strong></p>
+<ul>
+<li>Reduced dependency-related incidents by 50%.</li>
+<li>Ensured 90% of libraries were updated within a week of a new release or patch.</li>
+</ul>
+<hr>
+<h4 id="2-cicd-pipeline-observability-speeding-up-deployments" style="position:relative;"><a href="#2-cicd-pipeline-observability-speeding-up-deployments" aria-label="2 cicd pipeline observability speeding up deployments permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2. CI/CD Pipeline Observability: Speeding Up Deployments</strong></h4>
+<p><strong>Problem:</strong></p>
+<ul>
+<li>Slack’s CI/CD pipelines occasionally failed due to:
+<ul>
+<li>Misconfigured build scripts.</li>
+<li>Flaky integration tests.</li>
+<li>Bottlenecks in dependency fetching.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>Slack’s Solution:</strong></p>
+<ol>
+<li>
+<p><strong>Pipeline Instrumentation:</strong></p>
+<ul>
+<li>Added tracing and metrics for every stage of the CI/CD pipeline:
+<ul>
+<li>Source code retrieval.</li>
+<li>Dependency installation.</li>
+<li>Build, test, and deployment steps.</li>
+</ul>
+</li>
+<li><strong>“Instrumenting the CI/CD pipeline transformed it from a black box into a traceable, measurable workflow.”</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Metrics Tracked:</strong></p>
+<ul>
+<li><strong>Build Durations:</strong> Average time to complete builds.</li>
+<li><strong>Test Pass Rates:</strong> Percentage of tests that succeeded.</li>
+<li><strong>Artifact Delivery:</strong> Time taken to push images to production.</li>
+</ul>
+</li>
+<li>
+<p><strong>Example Insights:</strong></p>
+<ul>
+<li>Observability revealed that 30% of pipeline failures were caused by slow dependency fetching. Engineers implemented caching for commonly used dependencies, reducing fetch times by 70%.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p><strong>Outcome:</strong></p>
+<ul>
+<li>Increased deployment success rate from 85% to 98%.</li>
+<li>Reduced pipeline execution times by 40%, enabling more frequent releases.</li>
+</ul>
+<hr>
+<h4 id="3-distributed-tracing-for-end-to-end-dependency-visibility" style="position:relative;"><a href="#3-distributed-tracing-for-end-to-end-dependency-visibility" aria-label="3 distributed tracing for end to end dependency visibility permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3. Distributed Tracing for End-to-End Dependency Visibility</strong></h4>
+<p><strong>Problem:</strong></p>
+<ul>
+<li>Slack’s services relied on multiple external APIs and internal dependencies, making it difficult to debug failures that spanned multiple components.</li>
+</ul>
+<hr>
+<p><strong>Slack’s Solution:</strong></p>
+<ol>
+<li>
+<p><strong>End-to-End Tracing:</strong></p>
+<ul>
+<li>Used distributed tracing to follow user requests across:
+<ul>
+<li>Internal services (e.g., database queries, cache lookups).</li>
+<li>External APIs (e.g., third-party integrations).</li>
+</ul>
+</li>
+<li><strong>Example Trace:</strong>
+<ul>
+<li>A <code class="language-text">/send-message</code> request included spans for:
+<ul>
+<li>User authentication.</li>
+<li>Internal message formatting.</li>
+<li>External webhook delivery to a third-party service.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Dependency-Specific Alerts:</strong></p>
+<ul>
+<li>Set up real-time alerts for:
+<ul>
+<li>SLA breaches (e.g., API latency > 300ms).</li>
+<li>Increased failure rates (e.g., >1% for external APIs).</li>
+</ul>
+</li>
+<li><strong>“Real-time dependency alerts enabled Slack to resolve incidents before users noticed them.”</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Proactive Load Testing:</strong></p>
+<ul>
+<li>Simulated high traffic scenarios to identify dependencies that could not scale under load.</li>
+<li>Negotiated new SLAs with vendors based on observed performance.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p><strong>Outcome:</strong></p>
+<ul>
+<li>Reduced mean time to resolution (MTTR) for dependency-related incidents by 60%.</li>
+<li>Improved SLA compliance for third-party services.</li>
+</ul>
+<hr>
+<h3 id="enhancing-reliability-through-instrumentation" style="position:relative;"><a href="#enhancing-reliability-through-instrumentation" aria-label="enhancing reliability through instrumentation permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Enhancing Reliability Through Instrumentation</strong></h3>
+<p>Instrumentation transforms the supply chain from an opaque series of steps into a transparent, monitorable process.</p>
+<hr>
+<h4 id="1-instrumenting-dependencies" style="position:relative;"><a href="#1-instrumenting-dependencies" aria-label="1 instrumenting dependencies permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. Instrumenting Dependencies</strong></h4>
+<p><strong>Steps to Instrument Dependencies:</strong></p>
+<ol>
+<li>
+<p><strong>Monitor Critical Metrics:</strong></p>
+<ul>
+<li>Latency, throughput, error rates, and retry attempts.</li>
+<li><strong>Example:</strong>
+<ul>
+<li>Instrument a payment API to track:
+<ul>
+<li>Average latency per request.</li>
+<li>Retry counts due to failed transactions.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Log Contextual Metadata:</strong></p>
+<ul>
+<li>Include details like request payloads, response times, and error codes.</li>
+<li><strong>Example Log Entry:</strong>
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"dependency"</span><span class="token operator">:</span> <span class="token string">"payment-api"</span><span class="token punctuation">,</span>
+  <span class="token property">"latency_ms"</span><span class="token operator">:</span> <span class="token number">250</span><span class="token punctuation">,</span>
+  <span class="token property">"status"</span><span class="token operator">:</span> <span class="token string">"200 OK"</span><span class="token punctuation">,</span>
+  <span class="token property">"retries"</span><span class="token operator">:</span> <span class="token number">2</span>
+<span class="token punctuation">}</span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Set Dynamic Alerts:</strong></p>
+<ul>
+<li>Trigger alerts for SLA breaches or unusual patterns.</li>
+<li><strong>Example:</strong>
+<ul>
+<li>Alert if <code class="language-text">latency_ms > 500ms</code> for more than 10% of requests in the last 15 minutes.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="2-instrumenting-cicd-pipelines" style="position:relative;"><a href="#2-instrumenting-cicd-pipelines" aria-label="2 instrumenting cicd pipelines permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2. Instrumenting CI/CD Pipelines</strong></h4>
+<p><strong>Steps to Instrument Pipelines:</strong></p>
+<ol>
+<li><strong>Trace Every Step:</strong>
+<ul>
+<li>Add spans for each stage of the pipeline:
+<ul>
+<li>Source control, build, test, artifact delivery, deployment.</li>
+<li><strong>Example:</strong>
+<ul>
+<li>A <code class="language-text">build_pipeline</code> trace includes child spans for:
+<ul>
+<li>Dependency installation.</li>
+<li>Unit test execution.</li>
+<li>Docker image push.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Monitor Key Metrics:</strong>
+<ul>
+<li>Build duration, test pass rates, and deployment success rates.</li>
+<li><strong>Example Metric:</strong>
+<ul>
+<li>Track flaky test failures over time and prioritize fixes for the most common failures.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Integrate Feedback Loops:</strong>
+<ul>
+<li>Use pipeline telemetry to continuously refine and optimize processes.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="real-world-example-observability-in-software-supply-chains-at-fastdeploy" style="position:relative;"><a href="#real-world-example-observability-in-software-supply-chains-at-fastdeploy" aria-label="real world example observability in software supply chains at fastdeploy permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Real-World Example: Observability in Software Supply Chains at FastDeploy</strong></h3>
+<p><strong>Problem:</strong></p>
+<ul>
+<li>FastDeploy faced frequent outages caused by dependency failures and CI/CD bottlenecks.</li>
+</ul>
+<p><strong>Solution:</strong></p>
+<ol>
+<li><strong>Dependency Observability:</strong>
+<ul>
+<li>Instrumented third-party APIs to monitor latency and success rates.</li>
+<li>Automated alerts for SLA breaches.</li>
+</ul>
+</li>
+<li><strong>CI/CD Pipeline Monitoring:</strong>
+<ul>
+<li>Traced all pipeline steps, identifying that 20% of failures stemmed from long dependency installation times.</li>
+<li>Implemented caching and parallelized build steps.</li>
+</ul>
+</li>
+<li><strong>Distributed Tracing:</strong>
+<ul>
+<li>Enabled end-to-end visibility for user requests spanning multiple services and dependencies.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Outcome:</strong></p>
+<ul>
+<li>Reduced dependency-related downtime by 70%.</li>
+<li>Increased deployment frequency by 50%.</li>
+<li>Improved MTTR for supply chain issues from 4 hours to 20 minutes.</li>
+</ul>
+<hr>
+<h1 id="part-iv-observability-at-scale" style="position:relative;"><a href="#part-iv-observability-at-scale" aria-label="part iv observability at scale permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Part IV: Observability at Scale</strong></h1>
+<h2 id="16-efficient-data-storage" style="position:relative;"><a href="#16-efficient-data-storage" aria-label="16 efficient data storage permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>16. Efficient Data Storage</strong></h2>
+<p>Efficient data storage is the backbone of <strong>observability at scale</strong>, enabling organizations to manage massive volumes of telemetry data, support real-time queries, and control costs. As systems generate billions of high-cardinality events daily, traditional storage approaches often fall short. This section delves into the <strong>challenges of large-scale observability data</strong>, provides detailed solutions for optimization, and analyzes <strong>Honeycomb’s architecture</strong> as a benchmark for scalable and intelligent data storage.</p>
+<hr>
+<h3 id="challenges-of-large-scale-observability-data" style="position:relative;"><a href="#challenges-of-large-scale-observability-data" aria-label="challenges of large scale observability data permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Challenges of Large-Scale Observability Data</strong></h3>
+<p>Large-scale systems generate enormous amounts of telemetry data, and managing this efficiently while maintaining performance and cost-effectiveness presents unique challenges.</p>
+<hr>
+<h4 id="1-high-data-volume" style="position:relative;"><a href="#1-high-data-volume" aria-label="1 high data volume permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. High Data Volume</strong></h4>
+<p><strong>Problem:</strong></p>
+<ul>
+<li>Modern systems generate an overwhelming amount of telemetry data:
+<ul>
+<li>Metrics for resource utilization (CPU, memory, network throughput).</li>
+<li>Logs for every action or error in the system.</li>
+<li>Traces for every request through a distributed system.</li>
+</ul>
+</li>
+<li><strong>Example:</strong>
+<ul>
+<li>A medium-sized SaaS application might produce:
+<ul>
+<li>5 million traces per day.</li>
+<li>1 terabyte of log data daily.</li>
+<li>200,000 unique metrics at 1-second granularity.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Impact:</strong></p>
+<ul>
+<li><strong>Storage Costs:</strong>
+<ul>
+<li>High-performance storage systems become expensive.</li>
+<li>Retaining raw data indefinitely is financially unsustainable.</li>
+</ul>
+</li>
+<li><strong>Performance Degradation:</strong>
+<ul>
+<li>Querying massive datasets leads to increased latency, making real-time debugging impossible.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Insight:</strong></p>
+<ul>
+<li><strong>“Without proper optimization, observability data becomes a liability instead of an asset.”</strong></li>
+</ul>
+<hr>
+<h4 id="2-high-cardinality" style="position:relative;"><a href="#2-high-cardinality" aria-label="2 high cardinality permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2. High Cardinality</strong></h4>
+<p><strong>Problem:</strong></p>
+<ul>
+<li><strong>Definition:</strong> Cardinality refers to the number of unique values for a given dimension or field.</li>
+<li>High cardinality arises from:
+<ul>
+<li>User-specific data (e.g., <code class="language-text">user_id</code>, <code class="language-text">session_id</code>).</li>
+<li>Deployment versions (<code class="language-text">build_id</code>, <code class="language-text">release_tag</code>).</li>
+<li>Service regions or zones (<code class="language-text">region</code>, <code class="language-text">availability_zone</code>).</li>
+</ul>
+</li>
+<li><strong>Example:</strong>
+<ul>
+<li>Monitoring API latency with dimensions for <code class="language-text">region</code>, <code class="language-text">datacenter</code>, <code class="language-text">instance</code>, and <code class="language-text">version</code>:
+<ul>
+<li><code class="language-text">100 regions × 1,000 instances × 10 versions = 1 million unique combinations</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Impact:</strong></p>
+<ul>
+<li>Query performance degrades as the system struggles to process millions of unique data points.</li>
+<li>Indexing and storing high-cardinality data increases storage requirements exponentially.</li>
+</ul>
+<p><strong>Key Insight:</strong></p>
+<ul>
+<li><strong>“High cardinality is the silent killer of scalability in observability systems.”</strong></li>
+</ul>
+<hr>
+<h4 id="3-query-performance" style="position:relative;"><a href="#3-query-performance" aria-label="3 query performance permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3. Query Performance</strong></h4>
+<p><strong>Problem:</strong></p>
+<ul>
+<li>Observability requires engineers to query large datasets in real time for debugging and incident resolution.</li>
+<li><strong>Challenges:</strong>
+<ul>
+<li>Aggregating data across multiple dimensions.</li>
+<li>Handling ad hoc queries that were not pre-optimized or cached.</li>
+</ul>
+</li>
+<li><strong>Example:</strong>
+<ul>
+<li>Query: “Show error rates by region and service version over the last 1 hour.”
+<ul>
+<li>Requires scanning millions of events and aggregating data across multiple fields.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Impact:</strong></p>
+<ul>
+<li><strong>Slow Incident Response:</strong>
+<ul>
+<li>Delayed query responses during incidents increase MTTR.</li>
+</ul>
+</li>
+<li><strong>Resource Bottlenecks:</strong>
+<ul>
+<li>Complex queries can overwhelm storage systems, leading to cascading failures.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Insight:</strong></p>
+<ul>
+<li><strong>“In observability, query latency isn’t just a performance issue—it’s a trust issue.”</strong></li>
+</ul>
+<hr>
+<h4 id="4-cost-management" style="position:relative;"><a href="#4-cost-management" aria-label="4 cost management permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>4. Cost Management</strong></h4>
+<p><strong>Problem:</strong></p>
+<ul>
+<li>Storing, querying, and analyzing observability data involves significant costs:
+<ul>
+<li>High-performance storage solutions.</li>
+<li>Compute resources for processing queries.</li>
+<li>Bandwidth for transferring data across systems.</li>
+</ul>
+</li>
+<li><strong>Example:</strong>
+<ul>
+<li>A company collecting 10 terabytes of logs daily on a cloud provider incurs:
+<ul>
+<li>Storage costs: $25,000/month.</li>
+<li>Query costs: $10,000/month for ad hoc debugging.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Insight:</strong></p>
+<ul>
+<li><strong>“Efficient storage isn’t about cutting corners—it’s about sustaining growth without sacrificing insights.”</strong></li>
+</ul>
+<hr>
+<h3 id="solutions-for-large-scale-observability-data-storage" style="position:relative;"><a href="#solutions-for-large-scale-observability-data-storage" aria-label="solutions for large scale observability data storage permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Solutions for Large-Scale Observability Data Storage</strong></h3>
+<p>To address these challenges, organizations can adopt a combination of architectural optimizations, data reduction techniques, and intelligent storage strategies.</p>
+<hr>
+<h4 id="1-aggregation-and-sampling" style="position:relative;"><a href="#1-aggregation-and-sampling" aria-label="1 aggregation and sampling permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. Aggregation and Sampling</strong></h4>
+<hr>
+<p><strong>A. Aggregation</strong></p>
+<p><strong>What It Is:</strong></p>
+<ul>
+<li>Summarizing raw data into meaningful aggregates to reduce storage size and improve query performance.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<ul>
+<li>For latency data:
+<ul>
+<li>Instead of storing every request’s latency, calculate:
+<ul>
+<li><strong>P50 (median latency):</strong> Typical user experience.</li>
+<li><strong>P95:</strong> Experience of the slowest 5% of users.</li>
+<li><strong>P99:</strong> Outliers that indicate potential bottlenecks.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Implementation:</strong></p>
+<ul>
+<li>Aggregate data at regular intervals (e.g., 1-minute windows).</li>
+<li>Store both raw and aggregated data:
+<ul>
+<li>Raw data for recent periods (e.g., last 24 hours) for detailed debugging.</li>
+<li>Aggregated data for historical analysis.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Insight:</strong></p>
+<ul>
+<li><strong>“Aggregation transforms overwhelming telemetry data into actionable insights.”</strong></li>
+</ul>
+<hr>
+<p><strong>B. Sampling</strong></p>
+<p><strong>What It Is:</strong></p>
+<ul>
+<li>Storing only a subset of data to reduce volume while retaining statistical relevance.</li>
+</ul>
+<p><strong>Types of Sampling:</strong></p>
+<ol>
+<li><strong>Head-Based Sampling:</strong>
+<ul>
+<li>Capture the first <code class="language-text">N</code> requests per second.</li>
+</ul>
+</li>
+<li><strong>Tail-Based Sampling:</strong>
+<ul>
+<li>Capture only anomalies (e.g., traces with errors or high latency).</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Focus on storing traces where:
+<ul>
+<li><code class="language-text">latency > 500ms</code>.</li>
+<li><code class="language-text">status_code != 200</code>.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Insight:</strong></p>
+<ul>
+<li><strong>“With intelligent sampling, you store less data but keep all the important signals.”</strong></li>
+</ul>
+<hr>
+<h4 id="2-tiered-storage" style="position:relative;"><a href="#2-tiered-storage" aria-label="2 tiered storage permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2. Tiered Storage</strong></h4>
+<hr>
+<p><strong>What It Is:</strong></p>
+<ul>
+<li>Dividing data into <strong>hot</strong>, <strong>warm</strong>, and <strong>cold tiers</strong> based on access patterns and retention needs.</li>
+</ul>
+<p><strong>Example Architecture:</strong></p>
+<ol>
+<li><strong>Hot Storage:</strong>
+<ul>
+<li>Fast, high-cost storage (e.g., SSDs) for recent data.</li>
+<li>Retention: Last 24 hours.</li>
+<li>Use Case: Real-time debugging.</li>
+</ul>
+</li>
+<li><strong>Warm Storage:</strong>
+<ul>
+<li>Medium-cost storage for data needed occasionally.</li>
+<li>Retention: Last 7–30 days.</li>
+<li>Use Case: Incident investigations.</li>
+</ul>
+</li>
+<li><strong>Cold Storage:</strong>
+<ul>
+<li>Low-cost, archival storage (e.g., AWS S3, Glacier).</li>
+<li>Retention: 1 year+.</li>
+<li>Use Case: Compliance, long-term analysis.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Insight:</strong></p>
+<ul>
+<li><strong>“Not all data is created equal—tiered storage ensures resources are allocated where they matter most.”</strong></li>
+</ul>
+<hr>
+<h4 id="3-columnar-databases" style="position:relative;"><a href="#3-columnar-databases" aria-label="3 columnar databases permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3. Columnar Databases</strong></h4>
+<hr>
+<p><strong>Why Columnar Storage?</strong></p>
+<ul>
+<li><strong>Optimized for Analytics:</strong>
+<ul>
+<li>Stores data by columns, enabling efficient compression and fast aggregation.</li>
+</ul>
+</li>
+<li><strong>Supports High Cardinality:</strong>
+<ul>
+<li>Handles millions of unique values efficiently.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><strong>ClickHouse:</strong>
+<ul>
+<li>Open-source, high-performance columnar database.</li>
+</ul>
+</li>
+<li><strong>Apache Druid:</strong>
+<ul>
+<li>Designed for real-time analytics on event streams.</li>
+</ul>
+</li>
+<li><strong>BigQuery:</strong>
+<ul>
+<li>Google Cloud’s scalable, columnar data warehouse.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Insight:</strong></p>
+<ul>
+<li><strong>“Columnar databases transform the chaos of high-cardinality data into actionable intelligence.”</strong></li>
+</ul>
+<hr>
+<h4 id="4-query-optimization" style="position:relative;"><a href="#4-query-optimization" aria-label="4 query optimization permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>4. Query Optimization</strong></h4>
+<hr>
+<p><strong>A. Indexing</strong></p>
+<ul>
+<li>Index frequently queried fields (e.g., <code class="language-text">region</code>, <code class="language-text">service</code>).</li>
+<li><strong>Example:</strong>
+<ul>
+<li>Indexing <code class="language-text">status_code</code> speeds up queries for error rate analysis.</li>
+</ul>
+</li>
+</ul>
+<p><strong>B. Query Pre-Aggregation</strong></p>
+<ul>
+<li>Use pre-aggregated views to reduce query complexity.</li>
+<li><strong>Example:</strong>
+<ul>
+<li>Precompute hourly error rates by region and version.</li>
+</ul>
+</li>
+</ul>
+<p><strong>C. Caching</strong></p>
+<ul>
+<li>Cache results for recurring queries to reduce load on storage systems.</li>
+<li><strong>Example:</strong>
+<ul>
+<li>Cache P95 latency values for the <code class="language-text">/checkout</code> endpoint.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Insight:</strong></p>
+<ul>
+<li><strong>“Optimized queries ensure that engineers get answers in milliseconds, not minutes.”</strong></li>
+</ul>
+<hr>
+<h3 id="case-study-honeycombs-architecture" style="position:relative;"><a href="#case-study-honeycombs-architecture" aria-label="case study honeycombs architecture permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Case Study: Honeycomb’s Architecture</strong></h3>
+<p>Honeycomb, a leader in observability platforms, has designed an architecture specifically to handle large-scale, high-cardinality data.</p>
+<hr>
+<h4 id="1-columnar-storage-for-high-cardinality-data" style="position:relative;"><a href="#1-columnar-storage-for-high-cardinality-data" aria-label="1 columnar storage for high cardinality data permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. Columnar Storage for High-Cardinality Data</strong></h4>
+<ul>
+<li>Stores telemetry data in a <strong>columnar database</strong>, enabling efficient storage and fast querying.</li>
+<li><strong>Result:</strong>
+<ul>
+<li>Supports high-cardinality fields like <code class="language-text">user_id</code> or <code class="language-text">trace_id</code> without performance degradation.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Querying traces with:
+<ul>
+<li><code class="language-text">latency > 500ms</code>.</li>
+<li><code class="language-text">region = EU</code>.</li>
+<li>Results returned in seconds, even with billions of events.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="2-tail-based-sampling" style="position:relative;"><a href="#2-tail-based-sampling" aria-label="2 tail based sampling permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2. Tail-Based Sampling</strong></h4>
+<ul>
+<li>Focuses on storing traces with significant insights (e.g., anomalies or outliers).</li>
+<li><strong>Result:</strong>
+<ul>
+<li>Reduces storage costs while preserving the most critical data for debugging.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Stores only traces where:
+<ul>
+<li><code class="language-text">error = true</code>.</li>
+<li><code class="language-text">latency > P99</code>.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="3-distributed-query-engine" style="position:relative;"><a href="#3-distributed-query-engine" aria-label="3 distributed query engine permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3. Distributed Query Engine</strong></h4>
+<ul>
+<li>Processes queries across multiple nodes for parallelism.</li>
+<li><strong>Result:</strong>
+<ul>
+<li>Real-time query performance for ad hoc analysis.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Query:
+<ul>
+<li>“Show all traces with <code class="language-text">error=true</code> over the last 24 hours.”</li>
+<li>Result:
+<ul>
+<li>Returns actionable data in milliseconds.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="17-sampling-strategies" style="position:relative;"><a href="#17-sampling-strategies" aria-label="17 sampling strategies permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>17. Sampling Strategies</strong></h2>
+<p>As distributed systems grow in scale and complexity, <strong>sampling strategies</strong> are essential to manage the deluge of observability data generated. By selectively capturing the most meaningful subsets of telemetry, teams can optimize data storage, control costs, and improve query performance while ensuring critical insights remain accessible. This chapter dives deeper into the <strong>trade-offs of sampling</strong>, outlines various <strong>advanced techniques</strong>, and provides <strong>practical implementation examples</strong> to enable effective sampling at scale.</p>
+<hr>
+<h3 id="the-need-for-sampling-in-observability" style="position:relative;"><a href="#the-need-for-sampling-in-observability" aria-label="the need for sampling in observability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>The Need for Sampling in Observability</strong></h3>
+<hr>
+<h4 id="1-the-explosion-of-observability-data" style="position:relative;"><a href="#1-the-explosion-of-observability-data" aria-label="1 the explosion of observability data permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. The Explosion of Observability Data</strong></h4>
+<p>Modern applications generate vast amounts of telemetry data from <strong>metrics</strong>, <strong>traces</strong>, and <strong>logs</strong>:</p>
+<ul>
+<li><strong>Metrics:</strong> Captured at high resolution (e.g., 1-second intervals) for thousands of instances.</li>
+<li><strong>Traces:</strong> Spanning microservices, with each request generating multiple spans.</li>
+<li><strong>Logs:</strong> Capturing every operation, error, and debug statement.</li>
+</ul>
+<hr>
+<p><strong>Example Data Scale:</strong></p>
+<ul>
+<li>A <strong>SaaS application</strong> serving 1 billion API requests daily generates:
+<ul>
+<li>10 billion trace spans.</li>
+<li>500,000 log entries per second.</li>
+<li>200,000 metrics per second.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Challenges Without Sampling:</strong></p>
+<ul>
+<li><strong>Storage Costs:</strong>
+<ul>
+<li>Storing this data at full fidelity requires petabytes of storage annually, incurring exorbitant costs.</li>
+</ul>
+</li>
+<li><strong>Query Latency:</strong>
+<ul>
+<li>Unfiltered data overwhelms query engines, delaying incident response.</li>
+</ul>
+</li>
+<li><strong>Noise Over Signal:</strong>
+<ul>
+<li>Critical outliers (e.g., error traces, high-latency spans) get buried in a flood of routine data.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>Key Insight:</strong></p>
+<ul>
+<li><strong>“Collecting everything leads to diminishing returns—sampling ensures teams focus on actionable signals, not overwhelming noise.”</strong></li>
+</ul>
+<hr>
+<h4 id="2-the-role-of-sampling" style="position:relative;"><a href="#2-the-role-of-sampling" aria-label="2 the role of sampling permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2. The Role of Sampling</strong></h4>
+<p>Sampling addresses the challenge of scale by intelligently reducing the volume of telemetry data while preserving its diagnostic value. The goal is to <strong>retain enough data to identify and resolve issues</strong> without overloading storage systems or query engines.</p>
+<p><strong>Core Objectives:</strong></p>
+<ul>
+<li><strong>Cost Efficiency:</strong> Reduce storage and processing expenses.</li>
+<li><strong>Performance:</strong> Enable real-time queries and dashboards.</li>
+<li><strong>Focus:</strong> Prioritize critical events, such as errors or latency spikes.</li>
+<li><strong>Statistical Accuracy:</strong> Ensure aggregated data reflects overall system health.</li>
+</ul>
+<hr>
+<h3 id="trade-offs-in-sampling" style="position:relative;"><a href="#trade-offs-in-sampling" aria-label="trade offs in sampling permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Trade-Offs in Sampling</strong></h3>
+<p>Sampling inherently involves trade-offs that must be carefully managed to align with system requirements and business goals.</p>
+<hr>
+<h4 id="1-benefits-of-sampling" style="position:relative;"><a href="#1-benefits-of-sampling" aria-label="1 benefits of sampling permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. Benefits of Sampling</strong></h4>
+<ul>
+<li>
+<p><strong>Cost Reduction:</strong></p>
+<ul>
+<li>Decrease data storage requirements by capturing only a fraction of telemetry.</li>
+<li><strong>Example:</strong>
+<ul>
+<li>Storing 10% of traces reduces storage costs by 90% while maintaining diagnostic utility.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Improved Query Performance:</strong></p>
+<ul>
+<li>Smaller datasets enable faster queries, essential for real-time debugging.</li>
+<li><strong>Key Insight:</strong>
+<ul>
+<li><strong>“Faster queries lead to faster resolutions, reducing downtime and its impact on users.”</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Focused Insights:</strong></p>
+<ul>
+<li>Sampling techniques like tail-based sampling ensure critical outliers are retained.</li>
+<li><strong>Example:</strong>
+<ul>
+<li>Errors and high-latency traces are always stored, ensuring they remain visible during incident analysis.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="2-drawbacks-of-sampling" style="position:relative;"><a href="#2-drawbacks-of-sampling" aria-label="2 drawbacks of sampling permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2. Drawbacks of Sampling</strong></h4>
+<ul>
+<li>
+<p><strong>Loss of Completeness:</strong></p>
+<ul>
+<li>Some rare but important events may be excluded from sampled data.</li>
+<li><strong>Example:</strong>
+<ul>
+<li>A bug affecting only 0.01% of requests might go undetected if not explicitly captured.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Aggregated Metric Inaccuracy:</strong></p>
+<ul>
+<li>Aggregations (e.g., average latency) derived from sampled data may not fully represent system performance.</li>
+<li><strong>Key Insight:</strong>
+<ul>
+<li><strong>“Sampling must be carefully tuned to balance reduction in data volume with retention of critical insights.”</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Implementation Complexity:</strong></p>
+<ul>
+<li>Advanced sampling strategies (e.g., dynamic or tail-based sampling) require sophisticated instrumentation and infrastructure.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="techniques-for-sampling-observability-data" style="position:relative;"><a href="#techniques-for-sampling-observability-data" aria-label="techniques for sampling observability data permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Techniques for Sampling Observability Data</strong></h3>
+<hr>
+<h4 id="1-head-based-sampling" style="position:relative;"><a href="#1-head-based-sampling" aria-label="1 head based sampling permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. Head-Based Sampling</strong></h4>
+<hr>
+<p><strong>What It Is:</strong></p>
+<ul>
+<li>Captures the <strong>first N events or traces</strong> per second or per time window.</li>
+</ul>
+<p><strong>Use Cases:</strong></p>
+<ul>
+<li>Systems with low traffic or predictable patterns.</li>
+<li>Establishing baselines for average system performance.</li>
+</ul>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Simple to implement.</li>
+<li>Provides representative samples of routine system behavior.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>Misses anomalies that occur outside the sampled window.</li>
+<li>Less effective for high-volume systems with significant traffic variability.</li>
+</ul>
+<hr>
+<p><strong>Example:</strong></p>
+<ul>
+<li>A payment service processes 10,000 transactions per second.
+<ul>
+<li><strong>Head-Based Sampling Strategy:</strong>
+<ul>
+<li>Capture the first 100 transactions per second.</li>
+</ul>
+</li>
+<li><strong>Use Case:</strong>
+<ul>
+<li>Analyze latency trends for typical transactions.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Insight:</strong></p>
+<ul>
+<li><strong>“Head-based sampling is best suited for low-traffic scenarios or capturing normal system behavior, but it struggles with rare events.”</strong></li>
+</ul>
+<hr>
+<h4 id="2-tail-based-sampling-1" style="position:relative;"><a href="#2-tail-based-sampling-1" aria-label="2 tail based sampling 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2. Tail-Based Sampling</strong></h4>
+<hr>
+<p><strong>What It Is:</strong></p>
+<ul>
+<li>Captures <strong>events or traces that meet specific criteria</strong>, such as errors, high latency, or unusual patterns.</li>
+</ul>
+<p><strong>Use Cases:</strong></p>
+<ul>
+<li>Debugging high-impact incidents.</li>
+<li>Prioritizing storage of anomalous data over routine events.</li>
+</ul>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Focuses on the most critical data, ensuring no major issues are missed.</li>
+<li>Reduces storage costs while retaining diagnostic utility.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>Requires additional processing to identify anomalies in real time.</li>
+<li>May create a skewed dataset, over-representing outliers.</li>
+</ul>
+<hr>
+<p><strong>Example:</strong></p>
+<ul>
+<li>A microservice architecture generates 1 billion traces daily.
+<ul>
+<li><strong>Tail-Based Sampling Strategy:</strong>
+<ul>
+<li>Retain traces where:
+<ul>
+<li><code class="language-text">latency > 500ms</code>.</li>
+<li><code class="language-text">status_code != 200</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Use Case:</strong>
+<ul>
+<li>Investigate high-latency or error-prone requests.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Insight:</strong></p>
+<ul>
+<li><strong>“Tail-based sampling ensures that the critical anomalies causing user impact are never lost.”</strong></li>
+</ul>
+<hr>
+<h4 id="3-probabilistic-sampling" style="position:relative;"><a href="#3-probabilistic-sampling" aria-label="3 probabilistic sampling permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3. Probabilistic Sampling</strong></h4>
+<hr>
+<p><strong>What It Is:</strong></p>
+<ul>
+<li>Randomly selects a <strong>fixed percentage of events or traces</strong> for storage.</li>
+</ul>
+<p><strong>Use Cases:</strong></p>
+<ul>
+<li>Systems requiring consistent statistical representation.</li>
+<li>Large-scale applications with uniform traffic distribution.</li>
+</ul>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Simple and predictable.</li>
+<li>Scales effectively for high-traffic systems.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>May miss rare but significant anomalies.</li>
+</ul>
+<hr>
+<p><strong>Example:</strong></p>
+<ul>
+<li>A retail application generates 10 million API requests per hour.
+<ul>
+<li><strong>Probabilistic Sampling Strategy:</strong>
+<ul>
+<li>Retain 1% of all requests.</li>
+</ul>
+</li>
+<li><strong>Use Case:</strong>
+<ul>
+<li>Analyze trends in average latency, throughput, and error rates.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Insight:</strong></p>
+<ul>
+<li><strong>“Probabilistic sampling balances simplicity and scale but may require supplemental strategies to capture rare events.”</strong></li>
+</ul>
+<hr>
+<h4 id="4-dynamic-sampling" style="position:relative;"><a href="#4-dynamic-sampling" aria-label="4 dynamic sampling permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>4. Dynamic Sampling</strong></h4>
+<hr>
+<p><strong>What It Is:</strong></p>
+<ul>
+<li>Adjusts sampling rates in real-time based on <strong>traffic patterns, resource availability, or operational conditions</strong>.</li>
+</ul>
+<p><strong>Use Cases:</strong></p>
+<ul>
+<li>High-scale systems with traffic spikes or bursty workloads.</li>
+<li>Dynamic environments with varying error or latency patterns.</li>
+</ul>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Adapts to changing conditions, optimizing data retention during incidents.</li>
+<li>Preserves critical data when resources are constrained.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>Requires sophisticated observability tools to monitor and adjust sampling dynamically.</li>
+<li>Implementation complexity increases.</li>
+</ul>
+<hr>
+<p><strong>Example:</strong></p>
+<ul>
+<li>A news website experiences traffic spikes during breaking news events.
+<ul>
+<li><strong>Dynamic Sampling Strategy:</strong>
+<ul>
+<li>During normal traffic:
+<ul>
+<li>Retain 10% of requests.</li>
+</ul>
+</li>
+<li>During spikes:
+<ul>
+<li>Retain 100% of error traces.</li>
+<li>Reduce sampling of successful requests to 2%.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Use Case:</strong>
+<ul>
+<li>Ensure critical errors are retained while reducing routine data during peak loads.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Insight:</strong></p>
+<ul>
+<li><strong>“Dynamic sampling adapts to your system’s needs, focusing on the most important data when it matters most.”</strong></li>
+</ul>
+<hr>
+<h4 id="5-weighted-sampling" style="position:relative;"><a href="#5-weighted-sampling" aria-label="5 weighted sampling permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>5. Weighted Sampling</strong></h4>
+<hr>
+<p><strong>What It Is:</strong></p>
+<ul>
+<li>Assigns higher sampling probabilities to specific <strong>types of requests, user groups, or workflows</strong>.</li>
+</ul>
+<p><strong>Use Cases:</strong></p>
+<ul>
+<li>Prioritizing high-value users or business-critical transactions.</li>
+<li>Capturing specific workflows (e.g., payments, authentication).</li>
+</ul>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Ensures critical data is over-represented in sampled datasets.</li>
+<li>Aligns observability with business priorities.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>May bias datasets if weights are not well-calibrated.</li>
+</ul>
+<hr>
+<p><strong>Example:</strong></p>
+<ul>
+<li>A SaaS application differentiates between free-tier and premium users.
+<ul>
+<li><strong>Weighted Sampling Strategy:</strong>
+<ul>
+<li>Retain:
+<ul>
+<li>50% of premium user traces.</li>
+<li>5% of free-tier user traces.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Use Case:</strong>
+<ul>
+<li>Focus on ensuring reliability for high-value customers.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Insight:</strong></p>
+<ul>
+<li><strong>“Weighted sampling aligns observability with business goals, ensuring that the most valuable data gets the most attention.”</strong></li>
+</ul>
+<hr>
+<h3 id="best-practices-for-implementing-sampling-strategies" style="position:relative;"><a href="#best-practices-for-implementing-sampling-strategies" aria-label="best practices for implementing sampling strategies permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Best Practices for Implementing Sampling Strategies</strong></h3>
+<hr>
+<h4 id="1-combine-multiple-techniques" style="position:relative;"><a href="#1-combine-multiple-techniques" aria-label="1 combine multiple techniques permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. Combine Multiple Techniques</strong></h4>
+<p>Use a hybrid approach to balance coverage and efficiency.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Retain:
+<ul>
+<li>10% of all traces (probabilistic sampling).</li>
+<li>100% of error traces (tail-based sampling).</li>
+<li>50% of premium user requests (weighted sampling).</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Insight:</strong></p>
+<ul>
+<li><strong>“A multi-pronged sampling strategy ensures you capture diverse insights while staying efficient.”</strong></li>
+</ul>
+<hr>
+<h4 id="2-regularly-validate-and-adjust" style="position:relative;"><a href="#2-regularly-validate-and-adjust" aria-label="2 regularly validate and adjust permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2. Regularly Validate and Adjust</strong></h4>
+<ul>
+<li>Test sampling strategies to ensure critical data is captured.</li>
+<li>Simulate failure scenarios to evaluate effectiveness.</li>
+<li><strong>Example:</strong>
+<ul>
+<li>Run synthetic tests for rare edge cases to confirm they are sampled correctly.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Insight:</strong></p>
+<ul>
+<li><strong>“Sampling strategies must evolve with your system—test, refine, and adapt.”</strong></li>
+</ul>
+<hr>
+<h4 id="3-leverage-observability-tools" style="position:relative;"><a href="#3-leverage-observability-tools" aria-label="3 leverage observability tools permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3. Leverage Observability Tools</strong></h4>
+<ul>
+<li>Use platforms like <strong>Honeycomb</strong>, <strong>Datadog</strong>, or <strong>OpenTelemetry</strong> to manage sampling.</li>
+<li>Automate dynamic adjustments and monitor sampling effectiveness.</li>
+</ul>
+<p><strong>Key Insight:</strong></p>
+<ul>
+<li><strong>“Integrated tools simplify sampling implementation and ensure consistent execution across services.”</strong></li>
+</ul>
+<hr>
 <h1 id="references" style="position:relative;"><a href="#references" aria-label="references permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>References</h1>
 <ul>
 <li><a href="https://github.com/keyvanakbary/learning-notes/blob/master/books/distributed-systems-observability.md">https://github.com/keyvanakbary/learning-notes/blob/master/books/distributed-systems-observability.md</a></li>
