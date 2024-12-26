@@ -6984,6 +6984,331 @@ Alert on unauthorized changes to a firewall’s rule set, which could introduce 
 <li><strong>“An effective monitoring strategy is as much about what you monitor as how you act on what you learn.”</strong></li>
 </ul>
 <hr>
+<h2 id="chapter-10-security-monitoring" style="position:relative;"><a href="#chapter-10-security-monitoring" aria-label="chapter 10 security monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Chapter 10: Security Monitoring</strong></h2>
+<p>Security monitoring is essential for protecting systems, applications, and networks from threats, ensuring compliance with regulations, and maintaining operational integrity. This chapter delves deeper into the techniques, tools, and practices of security monitoring, focusing on <strong>proactive threat detection, compliance adherence, and response preparedness.</strong></p>
+<hr>
+<h3 id="1-the-unique-nature-of-security-monitoring" style="position:relative;"><a href="#1-the-unique-nature-of-security-monitoring" aria-label="1 the unique nature of security monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. The Unique Nature of Security Monitoring</strong></h3>
+<p>Unlike performance or availability monitoring, security monitoring aims to identify malicious activities, policy violations, and vulnerabilities across infrastructure, applications, and networks. The lack of inherent security features in many legacy systems makes retrofitting a priority.</p>
+<hr>
+<h4 id="key-challenges-in-security-monitoring" style="position:relative;"><a href="#key-challenges-in-security-monitoring" aria-label="key challenges in security monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Challenges in Security Monitoring</strong></h4>
+<ol>
+<li>
+<p><strong>Reactive Nature of Traditional Security:</strong></p>
+<ul>
+<li>Often implemented as a response to breaches rather than a proactive measure.</li>
+<li><strong>Key Quote:</strong>
+<ul>
+<li><strong>“Security monitoring is not an afterthought; it must be a core component of operational strategy.”</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Evolving Threat Landscape:</strong></p>
+<ul>
+<li>Attackers constantly evolve techniques, from zero-day vulnerabilities to advanced persistent threats (APTs).</li>
+<li><strong>Example:</strong> A phishing email might install ransomware on an endpoint, spreading laterally to critical systems.</li>
+</ul>
+</li>
+<li>
+<p><strong>Balancing Security and Usability:</strong></p>
+<ul>
+<li>Overly strict measures may hinder legitimate workflows.</li>
+<li><strong>Key Quote:</strong>
+<ul>
+<li><strong>“The best security monitoring doesn’t just block threats—it enables safe productivity.”</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Limited Native Instrumentation:</strong></p>
+<ul>
+<li>Many systems lack built-in logging or security hooks, requiring extensive retrofitting or external tools.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="2-compliance-and-regulatory-monitoring" style="position:relative;"><a href="#2-compliance-and-regulatory-monitoring" aria-label="2 compliance and regulatory monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2. Compliance and Regulatory Monitoring</strong></h3>
+<p>Regulations like <strong>HIPAA</strong>, <strong>PCI-DSS</strong>, and <strong>SOC 2</strong> mandate specific monitoring and reporting practices to safeguard sensitive data.</p>
+<hr>
+<h4 id="key-compliance-frameworks" style="position:relative;"><a href="#key-compliance-frameworks" aria-label="key compliance frameworks permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Compliance Frameworks</strong></h4>
+<ol>
+<li>
+<p><strong>HIPAA (Health Insurance Portability and Accountability Act):</strong></p>
+<ul>
+<li>Requires monitoring access to electronic Protected Health Information (ePHI).</li>
+<li><strong>Example:</strong>
+<ul>
+<li>Log all access attempts to a healthcare database.</li>
+<li>Alert when unauthorized users access patient records.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>PCI-DSS (Payment Card Industry Data Security Standard):</strong></p>
+<ul>
+<li>Focuses on protecting cardholder data.</li>
+<li><strong>Requirement:</strong>
+<ul>
+<li>Log and monitor all network connections to systems handling card data.</li>
+</ul>
+</li>
+<li><strong>Example Alert:</strong>
+<ul>
+<li>Notify on failed login attempts to a payment server.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>SOC 2:</strong></p>
+<ul>
+<li>Mandates security controls for organizations managing customer data.</li>
+<li><strong>Example:</strong>
+<ul>
+<li>Monitor privileged user activities to detect unauthorized changes to systems.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="proving-compliance-through-monitoring" style="position:relative;"><a href="#proving-compliance-through-monitoring" aria-label="proving compliance through monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Proving Compliance Through Monitoring</strong></h4>
+<ul>
+<li><strong>Audit Logs:</strong> Capture all user actions on systems in scope.</li>
+<li><strong>Tools:</strong> Use SIEM solutions to aggregate logs and generate compliance reports.</li>
+</ul>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“Compliance is not just about passing audits; it’s about building trust through transparent and secure operations.”</strong></li>
+</ul>
+<hr>
+<h3 id="3-key-security-monitoring-techniques" style="position:relative;"><a href="#3-key-security-monitoring-techniques" aria-label="3 key security monitoring techniques permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3. Key Security Monitoring Techniques</strong></h3>
+<hr>
+<h4 id="host-level-monitoring" style="position:relative;"><a href="#host-level-monitoring" aria-label="host level monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Host-Level Monitoring</strong></h4>
+<ol>
+<li>
+<p><strong>auditd (Linux Audit Framework):</strong></p>
+<ul>
+<li>Captures system-level events such as file access, user activity, and process execution.</li>
+<li><strong>Example Rules:</strong>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token parameter variable">-w</span> /etc/passwd <span class="token parameter variable">-p</span> wa <span class="token parameter variable">-k</span> passwd_changes</code></pre></div>
+<ul>
+<li>Logs all write operations to the password file, helping detect unauthorized changes.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Use Case:</strong></p>
+<ul>
+<li>Monitor and log all <code class="language-text">sudo</code> commands to identify administrative actions.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“Host-level monitoring offers deep visibility into the activities of users and processes on individual machines.”</strong></li>
+</ul>
+<hr>
+<h4 id="network-monitoring" style="position:relative;"><a href="#network-monitoring" aria-label="network monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Network Monitoring</strong></h4>
+<ol>
+<li>
+<p><strong>Network Intrusion Detection Systems (NIDS):</strong></p>
+<ul>
+<li>Monitors network traffic for suspicious patterns, such as scanning or data exfiltration.</li>
+<li><strong>Tools:</strong>
+<ul>
+<li><strong>Snort:</strong> Detects known attack signatures.</li>
+<li><strong>Zeek (Bro):</strong> Provides high-level analysis, such as detecting DNS tunneling.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Placement of Sensors:</strong></p>
+<ul>
+<li>Deploy NIDS at strategic points, such as between the internal network and the internet.</li>
+<li><strong>Example:</strong> Place a tap on a WAN link to monitor inbound and outbound traffic.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="behavioral-monitoring" style="position:relative;"><a href="#behavioral-monitoring" aria-label="behavioral monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Behavioral Monitoring</strong></h4>
+<ol>
+<li>
+<p><strong>Definition:</strong></p>
+<ul>
+<li>Tracks deviations from normal activity patterns to detect anomalies.</li>
+<li><strong>Example:</strong> A user accessing sensitive files outside normal working hours could indicate insider threats.</li>
+</ul>
+</li>
+<li>
+<p><strong>Tools:</strong></p>
+<ul>
+<li><strong>UEBA (User and Entity Behavior Analytics):</strong>
+<ul>
+<li>Tools like Exabeam detect unusual login locations or data transfers.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="4-advanced-tools-for-security-monitoring" style="position:relative;"><a href="#4-advanced-tools-for-security-monitoring" aria-label="4 advanced tools for security monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>4. Advanced Tools for Security Monitoring</strong></h3>
+<hr>
+<h4 id="siem-security-information-and-event-management-tools" style="position:relative;"><a href="#siem-security-information-and-event-management-tools" aria-label="siem security information and event management tools permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>SIEM (Security Information and Event Management) Tools</strong></h4>
+<ol>
+<li>
+<p><strong>Capabilities:</strong></p>
+<ul>
+<li>Aggregate logs and security events from diverse sources.</li>
+<li>Provide correlation and automated alerts for suspicious activities.</li>
+</ul>
+</li>
+<li>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><strong>Splunk:</strong> Comprehensive event aggregation and search capabilities.</li>
+<li><strong>Elastic Stack (ELK):</strong> Open-source alternative for log aggregation and visualization.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“SIEM tools turn disparate data into actionable intelligence for security teams.”</strong></li>
+</ul>
+<hr>
+<h4 id="endpoint-detection-and-response-edr-tools" style="position:relative;"><a href="#endpoint-detection-and-response-edr-tools" aria-label="endpoint detection and response edr tools permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Endpoint Detection and Response (EDR) Tools</strong></h4>
+<ol>
+<li>
+<p><strong>Purpose:</strong></p>
+<ul>
+<li>Monitors endpoints (e.g., laptops, servers) for malware, exploits, or unauthorized access.</li>
+<li><strong>Examples:</strong>
+<ul>
+<li>CrowdStrike Falcon, Microsoft Defender for Endpoint.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Use Case:</strong></p>
+<ul>
+<li>Detect and quarantine malware attempting to encrypt files.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="5-common-threat-scenarios-and-responses" style="position:relative;"><a href="#5-common-threat-scenarios-and-responses" aria-label="5 common threat scenarios and responses permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>5. Common Threat Scenarios and Responses</strong></h3>
+<hr>
+<h4 id="scenario-1-brute-force-attacks" style="position:relative;"><a href="#scenario-1-brute-force-attacks" aria-label="scenario 1 brute force attacks permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Scenario 1: Brute Force Attacks</strong></h4>
+<ul>
+<li><strong>Threat:</strong> Repeated login attempts to compromise credentials.</li>
+<li><strong>Detection:</strong>
+<ul>
+<li>Monitor SSH logs for failed login attempts.</li>
+<li><strong>Example Command:</strong>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">grep</span> <span class="token string">"Failed password"</span> /var/log/auth.log <span class="token operator">|</span> <span class="token function">wc</span> <span class="token parameter variable">-l</span></code></pre></div>
+</li>
+</ul>
+</li>
+<li><strong>Response:</strong>
+<ul>
+<li>Use tools like Fail2Ban to block IPs with excessive failed attempts.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="scenario-2-malware-infection" style="position:relative;"><a href="#scenario-2-malware-infection" aria-label="scenario 2 malware infection permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Scenario 2: Malware Infection</strong></h4>
+<ul>
+<li><strong>Threat:</strong> Malicious software introduced via email or drive-by downloads.</li>
+<li><strong>Detection:</strong>
+<ul>
+<li>Monitor processes for unusual execution patterns.</li>
+<li><strong>Example:</strong> Alert when scripts execute in sensitive directories, such as <code class="language-text">/tmp</code>.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="scenario-3-data-exfiltration" style="position:relative;"><a href="#scenario-3-data-exfiltration" aria-label="scenario 3 data exfiltration permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Scenario 3: Data Exfiltration</strong></h4>
+<ul>
+<li><strong>Threat:</strong> Unauthorized data transfer to external entities.</li>
+<li><strong>Detection:</strong>
+<ul>
+<li>Use NIDS to flag outbound traffic to known malicious IPs.</li>
+<li><strong>Example Tool:</strong> Configure Snort to alert on connections exceeding 1 GB/hour.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“Security is not just about stopping attackers—it’s about spotting them early enough to minimize impact.”</strong></li>
+</ul>
+<hr>
+<h3 id="6-best-practices-for-security-monitoring" style="position:relative;"><a href="#6-best-practices-for-security-monitoring" aria-label="6 best practices for security monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>6. Best Practices for Security Monitoring</strong></h3>
+<ol>
+<li>
+<p><strong>Adopt Layered Security Monitoring:</strong></p>
+<ul>
+<li>Combine host-level, network-level, and behavioral monitoring.</li>
+<li><strong>Example:</strong> Use auditd for host events, Snort for network traffic, and Splunk for log aggregation.</li>
+</ul>
+</li>
+<li>
+<p><strong>Regularly Update Detection Rules:</strong></p>
+<ul>
+<li>Attackers evolve; your monitoring must too.</li>
+<li><strong>Example:</strong> Add rules for new vulnerabilities like Log4Shell or SolarWinds exploits.</li>
+</ul>
+</li>
+<li>
+<p><strong>Automate Incident Response:</strong></p>
+<ul>
+<li>Integrate monitoring with incident response tools to accelerate containment.</li>
+<li><strong>Example:</strong> Automatically isolate compromised endpoints detected by EDR tools.</li>
+</ul>
+</li>
+<li>
+<p><strong>Conduct Security Drills:</strong></p>
+<ul>
+<li>Simulate attacks to test the efficacy of monitoring and response workflows.</li>
+<li><strong>Example:</strong> Run a phishing simulation to evaluate detection of unauthorized login attempts.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“Security monitoring without response is like an alarm without a fire brigade—effective only to a point.”</strong></li>
+</ul>
+<hr>
+<h3 id="7-challenges-and-limitations" style="position:relative;"><a href="#7-challenges-and-limitations" aria-label="7 challenges and limitations permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>7. Challenges and Limitations</strong></h3>
+<ol>
+<li>
+<p><strong>High Volume of Alerts:</strong></p>
+<ul>
+<li>Excessive false positives overwhelm teams.</li>
+<li><strong>Solution:</strong> Fine-tune detection thresholds and prioritize actionable alerts.</li>
+</ul>
+</li>
+<li>
+<p><strong>Sophisticated Threats:</strong></p>
+<ul>
+<li>Advanced attackers can evade traditional monitoring.</li>
+<li><strong>Solution:</strong> Use machine learning-based tools for anomaly detection.</li>
+</ul>
+</li>
+<li>
+<p><strong>Skill Gaps:</strong></p>
+<ul>
+<li>Effective security monitoring requires trained personnel.</li>
+<li><strong>Solution:</strong> Invest in training and certification programs for security staff.</li>
+</ul>
+</li>
+</ol>
+<hr>
 <h1 id="references" style="position:relative;"><a href="#references" aria-label="references permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>References</h1>
 <ul>
 <li><a href="https://github.com/keyvanakbary/learning-notes/blob/master/books/distributed-systems-observability.md">https://github.com/keyvanakbary/learning-notes/blob/master/books/distributed-systems-observability.md</a></li>
