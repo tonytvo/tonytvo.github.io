@@ -5748,6 +5748,276 @@ The right tools and practices make business monitoring scalable, actionable, and
 </li>
 </ol>
 <hr>
+<h2 id="chapter-6-frontend-monitoring" style="position:relative;"><a href="#chapter-6-frontend-monitoring" aria-label="chapter 6 frontend monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Chapter 6: Frontend Monitoring</strong></h2>
+<p>Frontend monitoring ensures the performance and reliability of client-side components of web applications. It focuses on capturing user-facing performance issues, providing visibility into how users experience a website or application. With the rise of <strong>Single-Page Applications (SPAs)</strong> and complex JavaScript frameworks, frontend monitoring is crucial for maintaining user satisfaction and achieving business goals.</p>
+<hr>
+<h3 id="1-the-importance-of-frontend-monitoring" style="position:relative;"><a href="#1-the-importance-of-frontend-monitoring" aria-label="1 the importance of frontend monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. The Importance of Frontend Monitoring</strong></h3>
+<p><strong>Key Idea:</strong><br>
+Traditional monitoring primarily focuses on backend systems, leaving the <strong>frontend—a critical touchpoint for users—largely unmonitored.</strong> Frontend performance has a direct impact on user experience, business metrics, and brand perception.</p>
+<hr>
+<h4 id="why-frontend-monitoring-matters" style="position:relative;"><a href="#why-frontend-monitoring-matters" aria-label="why frontend monitoring matters permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Why Frontend Monitoring Matters</strong></h4>
+<ol>
+<li>
+<p><strong>User Experience Drives Business Success</strong></p>
+<ul>
+<li>Slow or unresponsive applications lead to user frustration, reduced engagement, and lost revenue.</li>
+<li><strong>Key Stat:</strong> A <strong>1-second delay in page load time</strong> can reduce customer satisfaction by <strong>16%</strong> and conversions by <strong>7%.</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>SPAs and Client-Side Complexity</strong></p>
+<ul>
+<li>SPAs shift much of the processing to the client, increasing the likelihood of <strong>JavaScript errors, DOM manipulation delays, and rendering issues.</strong></li>
+<li><strong>Example Issue:</strong> A large SPA with unoptimized JavaScript might cause noticeable lag on older devices.</li>
+</ul>
+</li>
+<li>
+<p><strong>SEO and Accessibility Impact</strong></p>
+<ul>
+<li>Poor frontend performance affects search rankings, particularly with <strong>Google’s Core Web Vitals</strong>, which prioritize metrics like <strong>Largest Contentful Paint (LCP)</strong> and <strong>Cumulative Layout Shift (CLS).</strong></li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“The frontend is where users interact with your product—if it fails, the backend’s perfect performance doesn’t matter.”</strong></li>
+</ul>
+<hr>
+<h3 id="2-frontend-performance-metrics" style="position:relative;"><a href="#2-frontend-performance-metrics" aria-label="2 frontend performance metrics permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2. Frontend Performance Metrics</strong></h3>
+<p><strong>Key Idea:</strong><br>
+Modern browsers provide detailed performance metrics that help identify bottlenecks in the frontend experience.</p>
+<hr>
+<h4 id="core-frontend-metrics" style="position:relative;"><a href="#core-frontend-metrics" aria-label="core frontend metrics permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Core Frontend Metrics</strong></h4>
+<ol>
+<li>
+<p><strong>Time to First Byte (TTFB):</strong></p>
+<ul>
+<li>Measures how quickly the browser receives the first byte of data from the server.</li>
+<li><strong>Example Insight:</strong> High TTFB indicates server-side issues but directly impacts the frontend experience.</li>
+</ul>
+</li>
+<li>
+<p><strong>First Contentful Paint (FCP):</strong></p>
+<ul>
+<li>Measures the time it takes for the first piece of content (e.g., text or image) to appear on the screen.</li>
+<li><strong>User Impact:</strong> Delays in FCP can make a site feel unresponsive.</li>
+</ul>
+</li>
+<li>
+<p><strong>Largest Contentful Paint (LCP):</strong></p>
+<ul>
+<li>Measures the time it takes to render the largest visible content (e.g., hero image, headline).</li>
+<li><strong>Key Google Benchmark:</strong> Keep LCP under <strong>2.5 seconds</strong> for good SEO rankings.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cumulative Layout Shift (CLS):</strong></p>
+<ul>
+<li>Tracks unexpected visual shifts during page loading.</li>
+<li><strong>Example Issue:</strong> An image loading late pushes text down, disrupting the user’s interaction.</li>
+</ul>
+</li>
+<li>
+<p><strong>Time to Interactive (TTI):</strong></p>
+<ul>
+<li>Measures when the page becomes fully interactive (e.g., all JavaScript loaded, no input delay).</li>
+<li><strong>Example Issue:</strong> A page that loads visually but takes another 3 seconds to process user clicks.</li>
+</ul>
+</li>
+<li>
+<p><strong>JavaScript Error Rates:</strong></p>
+<ul>
+<li>Tracks the number of errors caused by JavaScript execution.</li>
+<li><strong>Example Issue:</strong> A <code class="language-text">TypeError</code> in a payment flow could prevent users from completing purchases.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“Every millisecond of delay adds friction to the user journey—monitoring helps eliminate these pain points.”</strong></li>
+</ul>
+<hr>
+<h3 id="3-methods-of-frontend-monitoring" style="position:relative;"><a href="#3-methods-of-frontend-monitoring" aria-label="3 methods of frontend monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3. Methods of Frontend Monitoring</strong></h3>
+<p>Frontend monitoring employs <strong>Real User Monitoring (RUM)</strong> and <strong>Synthetic Monitoring</strong> to provide a comprehensive view of performance and reliability.</p>
+<hr>
+<h4 id="real-user-monitoring-rum" style="position:relative;"><a href="#real-user-monitoring-rum" aria-label="real user monitoring rum permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Real User Monitoring (RUM)</strong></h4>
+<p><strong>Definition:</strong><br>
+RUM collects data from real users interacting with your application. It captures actual performance metrics under diverse conditions like device types, browsers, and network speeds.</p>
+<p><strong>Strengths:</strong></p>
+<ul>
+<li>Reflects real-world user experiences.</li>
+<li>Helps identify performance differences across geographies and devices.</li>
+</ul>
+<p><strong>Use Case:</strong></p>
+<ul>
+<li>Identify that <strong>mobile users in rural areas</strong> experience significantly higher page load times due to poor network conditions.</li>
+</ul>
+<p><strong>Example Tool:</strong><br>
+Datadog’s RUM collects data on user sessions, tracking metrics like FCP and CLS.</p>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“RUM lets you see your application through the eyes of your users.”</strong></li>
+</ul>
+<hr>
+<h4 id="synthetic-monitoring" style="position:relative;"><a href="#synthetic-monitoring" aria-label="synthetic monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Synthetic Monitoring</strong></h4>
+<p><strong>Definition:</strong><br>
+Synthetic monitoring uses simulated user interactions to measure performance in controlled environments. This is ideal for detecting performance regressions during development.</p>
+<p><strong>Strengths:</strong></p>
+<ul>
+<li>Provides consistent baseline metrics.</li>
+<li>Detects performance issues before users experience them.</li>
+</ul>
+<p><strong>Use Case:</strong></p>
+<ul>
+<li>Use WebPageTest to simulate a checkout process, ensuring the latest deployment doesn’t degrade load times.</li>
+</ul>
+<p><strong>Example Tool:</strong><br>
+Pingdom simulates traffic to test uptime, performance, and user flows.</p>
+<p><strong>Key Quote:</strong></p>
+<ul>
+<li><strong>“Synthetic monitoring catches issues before they reach production.”</strong></li>
+</ul>
+<hr>
+<h3 id="4-common-frontend-challenges" style="position:relative;"><a href="#4-common-frontend-challenges" aria-label="4 common frontend challenges permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>4. Common Frontend Challenges</strong></h3>
+<ol>
+<li>
+<p><strong>JavaScript Bloat</strong></p>
+<ul>
+<li>Large or inefficient JavaScript files slow down page rendering.</li>
+<li><strong>Solution:</strong> Use tree-shaking to remove unused code and compress assets with Gzip or Brotli.</li>
+</ul>
+</li>
+<li>
+<p><strong>Third-Party Scripts</strong></p>
+<ul>
+<li>Ads, analytics, and widgets often add significant overhead.</li>
+<li><strong>Solution:</strong> Load third-party scripts asynchronously to avoid blocking page rendering.</li>
+</ul>
+</li>
+<li>
+<p><strong>Inefficient DOM Manipulations</strong></p>
+<ul>
+<li>Overuse of DOM updates (e.g., inserting elements one at a time in a loop) can cause performance bottlenecks.</li>
+<li><strong>Solution:</strong> Batch updates using document fragments.</li>
+</ul>
+</li>
+<li>
+<p><strong>Unoptimized Images</strong></p>
+<ul>
+<li>Large images increase load times, especially on mobile.</li>
+<li><strong>Solution:</strong> Use responsive image techniques and modern formats like WebP.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="5-tools-for-frontend-monitoring" style="position:relative;"><a href="#5-tools-for-frontend-monitoring" aria-label="5 tools for frontend monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>5. Tools for Frontend Monitoring</strong></h3>
+<h4 id="real-user-monitoring-tools" style="position:relative;"><a href="#real-user-monitoring-tools" aria-label="real user monitoring tools permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Real User Monitoring Tools</strong></h4>
+<ol>
+<li>
+<p><strong>New Relic Browser:</strong></p>
+<ul>
+<li>Tracks JavaScript errors, page load times, and user interactions.</li>
+<li><strong>Example Use Case:</strong> Measure performance differences across Chrome, Firefox, and Safari.</li>
+</ul>
+</li>
+<li>
+<p><strong>Datadog RUM:</strong></p>
+<ul>
+<li>Provides session-based monitoring to track user journeys.</li>
+</ul>
+</li>
+</ol>
+<h4 id="synthetic-monitoring-tools" style="position:relative;"><a href="#synthetic-monitoring-tools" aria-label="synthetic monitoring tools permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Synthetic Monitoring Tools</strong></h4>
+<ol>
+<li><strong>WebPageTest:</strong>
+<ul>
+<li>Offers detailed insights into rendering times, resource loading, and rendering paths.</li>
+</ul>
+</li>
+<li><strong>Lighthouse:</strong>
+<ul>
+<li>Google’s open-source tool for auditing page performance, accessibility, and SEO.</li>
+</ul>
+</li>
+</ol>
+<h4 id="error-tracking-tools" style="position:relative;"><a href="#error-tracking-tools" aria-label="error tracking tools permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Error Tracking Tools</strong></h4>
+<ol>
+<li><strong>Sentry:</strong>
+<ul>
+<li>Tracks JavaScript errors with detailed stack traces.</li>
+<li><strong>Example:</strong> Identify that an error affecting <code class="language-text">IE 11</code> users prevents login.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="6-integrating-frontend-monitoring-into-workflows" style="position:relative;"><a href="#6-integrating-frontend-monitoring-into-workflows" aria-label="6 integrating frontend monitoring into workflows permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>6. Integrating Frontend Monitoring into Workflows</strong></h3>
+<ol>
+<li>
+<p><strong>Define Performance Budgets:</strong></p>
+<ul>
+<li>Set limits for key metrics (e.g., FCP under 1.8 seconds, CLS below 0.1).</li>
+<li><strong>Example:</strong> Fail builds that exceed the performance budget in CI/CD pipelines.</li>
+</ul>
+</li>
+<li>
+<p><strong>Correlate Backend and Frontend Metrics:</strong></p>
+<ul>
+<li>Use dashboards to correlate API response times with frontend performance.</li>
+<li><strong>Example:</strong> Slow API responses lead to increased TTI in frontend monitoring.</li>
+</ul>
+</li>
+<li>
+<p><strong>Monitor Device-Specific Issues:</strong></p>
+<ul>
+<li>Identify performance variations across mobile, tablet, and desktop.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="real-world-case-study-an-e-commerce-platform" style="position:relative;"><a href="#real-world-case-study-an-e-commerce-platform" aria-label="real world case study an e commerce platform permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Real-World Case Study: An E-Commerce Platform</strong></h3>
+<p><strong>Scenario:</strong></p>
+<ul>
+<li>Users reported slow load times and abandoned carts during a holiday sale.</li>
+</ul>
+<p><strong>Investigation:</strong></p>
+<ul>
+<li>RUM revealed that 20% of users on mobile networks experienced a <strong>10-second load time</strong>.</li>
+<li>Synthetic monitoring pinpointed unoptimized third-party scripts as the bottleneck.</li>
+</ul>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Deferred third-party script loading and implemented CDN caching.</li>
+</ul>
+<p><strong>Outcome:</strong></p>
+<ul>
+<li>Reduced mobile page load time to 3 seconds, increasing conversion rates by 15%.</li>
+</ul>
+<hr>
+<h3 id="7-key-takeaways" style="position:relative;"><a href="#7-key-takeaways" aria-label="7 key takeaways permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>7. Key Takeaways</strong></h3>
+<ol>
+<li>
+<p><strong>Monitor What Matters to Users:</strong></p>
+<ul>
+<li>Track metrics like FCP, LCP, and CLS that directly affect user satisfaction.</li>
+<li><strong>Key Quote:</strong> <strong>“Users don’t care about your infrastructure; they care about how fast and smooth your site feels.”</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Use a Combination of RUM and Synthetic Monitoring:</strong></p>
+<ul>
+<li>RUM for real-world insights, synthetic monitoring for proactive testing.</li>
+<li><strong>Key Quote:</strong> <strong>“Together, these methods create a comprehensive performance strategy.”</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Integrate Monitoring Early:</strong></p>
+<ul>
+<li>Add performance tests to CI/CD pipelines to catch issues before they reach production.</li>
+<li><strong>Key Quote:</strong> <strong>“Good performance starts in development, not after deployment.”</strong></li>
+</ul>
+</li>
+</ol>
+<hr>
 <h1 id="references" style="position:relative;"><a href="#references" aria-label="references permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>References</h1>
 <ul>
 <li><a href="https://github.com/keyvanakbary/learning-notes/blob/master/books/distributed-systems-observability.md">https://github.com/keyvanakbary/learning-notes/blob/master/books/distributed-systems-observability.md</a></li>
