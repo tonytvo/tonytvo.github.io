@@ -55,9 +55,6 @@
 <div class="table-of-contents">
 <ul>
 <li>
-<p><a href="#key-takeaways">key takeaways</a></p>
-</li>
-<li>
 <p><a href="#part-i-the-path-to-observability"><strong>Part I: The Path to Observability</strong></a></p>
 <ul>
 <li>
@@ -71,53 +68,28 @@
 <li>
 <p><a href="#lessons-from-scaling-without-observability"><strong>Lessons from Scaling Without Observability</strong></a></p>
 <ul>
-<li>
-<p><a href="#case-study-of-parses-evolution"><strong>Case Study of Parse’s Evolution</strong></a></p>
+<li><a href="#case-study-of-parses-evolution"><strong>Case Study of Parse’s Evolution</strong></a></li>
+<li><a href="#transition-to-modern-systems-and-practices"><strong>Transition to Modern Systems and Practices</strong></a></li>
+<li><a href="#challenges-encountered-and-resolved"><strong>Challenges Encountered and Resolved</strong></a></li>
+<li><a href="#outcomes-of-observability-implementation"><strong>Outcomes of Observability Implementation</strong></a></li>
+<li><a href="#key-lessons-learned"><strong>Key Lessons Learned</strong></a></li>
+</ul>
 </li>
-<li>
-<p><a href="#transition-to-modern-systems-and-practices"><strong>Transition to Modern Systems and Practices</strong></a></p>
-</li>
-<li>
-<p><a href="#challenges-encountered-and-resolved"><strong>Challenges Encountered and Resolved</strong></a></p>
-</li>
-<li>
-<p><a href="#outcomes-of-observability-implementation"><strong>Outcomes of Observability Implementation</strong></a></p>
-</li>
-<li>
-<p><a href="#key-lessons-learned"><strong>Key Lessons Learned</strong></a></p>
+</ul>
 </li>
 <li>
 <p><a href="#part-ii-fundamentals-of-observability"><strong>Part II: Fundamentals of Observability</strong></a></p>
 <ul>
-<li><a href="#5-structured-events-building-blocks-of-observability"><strong>5. Structured Events: Building Blocks of Observability</strong></a></li>
-</ul>
-</li>
-<li>
-<p><a href="#why-structured-events-are-essential"><strong>Why Structured Events Are Essential</strong></a></p>
-</li>
-<li>
-<p><a href="#limitations-of-traditional-metrics-and-logs"><strong>Limitations of Traditional Metrics and Logs</strong></a></p>
-</li>
-<li>
-<p><a href="#how-structured-events-solve-these-issues"><strong>How Structured Events Solve These Issues</strong></a></p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><a href="#part-ii-fundamentals-of-observability-1"><strong>Part II: Fundamentals of Observability</strong></a></p>
-<ul>
 <li>
 <p><a href="#structured-events-building-blocks-of-observability"><strong>Structured Events: Building Blocks of Observability</strong></a></p>
 <ul>
-<li><a href="#why-structured-events-are-essential-1"><strong>Why Structured Events Are Essential</strong></a></li>
-<li><a href="#limitations-of-traditional-metrics-and-logs-1"><strong>Limitations of Traditional Metrics and Logs</strong></a></li>
-<li><a href="#how-structured-events-solve-these-issues-1"><strong>How Structured Events Solve These Issues</strong></a></li>
+<li><a href="#why-structured-events-are-essential"><strong>Why Structured Events Are Essential</strong></a></li>
+<li><a href="#limitations-of-traditional-metrics-and-logs"><strong>Limitations of Traditional Metrics and Logs</strong></a></li>
+<li><a href="#how-structured-events-solve-these-issues"><strong>How Structured Events Solve These Issues</strong></a></li>
 </ul>
 </li>
 <li>
-<p><a href="#6-stitching-events-into-traces"><strong>6. Stitching Events into Traces</strong></a></p>
+<p><a href="#stitching-events-into-traces"><strong>Stitching Events into Traces</strong></a></p>
 <ul>
 <li><a href="#importance-of-distributed-tracing"><strong>Importance of Distributed Tracing</strong></a></li>
 <li><a href="#components-of-distributed-tracing"><strong>Components of Distributed Tracing</strong></a></li>
@@ -133,14 +105,14 @@
 </ul>
 </li>
 <li>
-<p><a href="#8-analyzing-events"><strong>8. Analyzing Events</strong></a></p>
+<p><a href="#analyzing-events"><strong>Analyzing Events</strong></a></p>
 <ul>
 <li><a href="#core-analysis-loop-and-hypothesis-driven-debugging"><strong>Core Analysis Loop and Hypothesis-Driven Debugging</strong></a></li>
 <li><a href="#misleading-promises-of-aiops"><strong>Misleading Promises of AIOps</strong></a></li>
 </ul>
 </li>
 <li>
-<p><a href="#9-synergy-of-observability-and-monitoring"><strong>9. Synergy of Observability and Monitoring</strong></a></p>
+<p><a href="#synergy-of-observability-and-monitoring"><strong>Synergy of Observability and Monitoring</strong></a></p>
 <ul>
 <li><a href="#roles-of-monitoring-and-observability-in-debugging"><strong>Roles of Monitoring and Observability in Debugging</strong></a></li>
 <li><a href="#complementary-roles-of-monitoring-and-observability"><strong>Complementary Roles of Monitoring and Observability</strong></a></li>
@@ -154,7 +126,7 @@
 <p><a href="#part-iii-observability-for-teams"><strong>Part III: Observability for Teams</strong></a></p>
 <ul>
 <li>
-<p><a href="#10-team-adoption-of-observability"><strong>10. Team Adoption of Observability</strong></a></p>
+<p><a href="#team-adoption-of-observability"><strong>Team Adoption of Observability</strong></a></p>
 <ul>
 <li>
 <p><a href="#practical-steps-for-implementation"><strong>Practical Steps for Implementation</strong></a></p>
@@ -181,7 +153,7 @@
 </ul>
 </li>
 <li>
-<p><a href="#11-observability-driven-development"><strong>11. Observability-Driven Development</strong></a></p>
+<p><a href="#observability-driven-development"><strong>Observability-Driven Development</strong></a></p>
 <ul>
 <li>
 <p><a href="#integration-of-observability-into-the-development-lifecycle"><strong>Integration of Observability into the Development Lifecycle</strong></a></p>
@@ -206,7 +178,7 @@
 </ul>
 </li>
 <li>
-<p><a href="#13-slo-based-alerting-and-debugging"><strong>13. SLO-Based Alerting and Debugging</strong></a></p>
+<p><a href="#slo-based-alerting-and-debugging"><strong>SLO-Based Alerting and Debugging</strong></a></p>
 <ul>
 <li>
 <p><a href="#framing-issues-through-sliding-windows"><strong>Framing Issues Through Sliding Windows</strong></a></p>
@@ -229,7 +201,7 @@
 </ul>
 </li>
 <li>
-<p><a href="#14-software-supply-chain-observability"><strong>14. Software Supply Chain Observability</strong></a></p>
+<p><a href="#software-supply-chain-observability"><strong>Software Supply Chain Observability</strong></a></p>
 <ul>
 <li>
 <p><a href="#understanding-software-supply-chain-observability"><strong>Understanding Software Supply Chain Observability</strong></a></p>
@@ -264,7 +236,7 @@
 <p><a href="#part-iv-observability-at-scale"><strong>Part IV: Observability at Scale</strong></a></p>
 <ul>
 <li>
-<p><a href="#16-efficient-data-storage"><strong>16. Efficient Data Storage</strong></a></p>
+<p><a href="#efficient-data-storage"><strong>Efficient Data Storage</strong></a></p>
 <ul>
 <li>
 <p><a href="#challenges-of-large-scale-observability-data"><strong>Challenges of Large-Scale Observability Data</strong></a></p>
@@ -295,7 +267,7 @@
 </ul>
 </li>
 <li>
-<p><a href="#17-sampling-strategies"><strong>17. Sampling Strategies</strong></a></p>
+<p><a href="#sampling-strategies"><strong>Sampling Strategies</strong></a></p>
 <ul>
 <li>
 <p><a href="#the-need-for-sampling-in-observability"><strong>The Need for Sampling in Observability</strong></a></p>
@@ -332,7 +304,7 @@
 </ul>
 </li>
 <li>
-<p><a href="#18-telemetry-management-pipelines"><strong>18. Telemetry Management Pipelines</strong></a></p>
+<p><a href="#telemetry-management-pipelines"><strong>Telemetry Management Pipelines</strong></a></p>
 <ul>
 <li>
 <p><a href="#the-role-of-telemetry-pipelines-in-observability"><strong>The Role of Telemetry Pipelines in Observability</strong></a></p>
@@ -365,10 +337,10 @@
 </ul>
 </li>
 <li>
-<p><a href="#part-i-monitoring-principles"><strong>Part I: Monitoring Principles</strong></a></p>
+<p><a href="#monitoring-principles"><strong>Monitoring Principles</strong></a></p>
 <ul>
 <li>
-<p><a href="#1-monitoring-anti-patterns"><strong>1. Monitoring Anti-Patterns</strong></a></p>
+<p><a href="#monitoring-anti-patterns"><strong>Monitoring Anti-Patterns</strong></a></p>
 <ul>
 <li>
 <p><a href="#understanding-monitoring-anti-patterns"><strong>Understanding Monitoring Anti-Patterns</strong></a></p>
@@ -389,18 +361,18 @@
 </ul>
 </li>
 <li>
-<p><a href="#2-monitoring-design-patterns"><strong>2. Monitoring Design Patterns</strong></a></p>
+<p><a href="#monitoring-design-patterns"><strong>Monitoring Design Patterns</strong></a></p>
 <ul>
 <li><a href="#detailed-exploration-of-monitoring-design-patterns"><strong>Detailed Exploration of Monitoring Design Patterns</strong></a></li>
 <li><a href="#1-composable-monitoring"><strong>1. Composable Monitoring</strong></a></li>
 <li><a href="#2-user-perspective-monitoring"><strong>2. User Perspective Monitoring</strong></a></li>
 <li><a href="#3-buy-vs-build"><strong>3. Buy vs. Build</strong></a></li>
 <li><a href="#4-continual-improvement"><strong>4. Continual Improvement</strong></a></li>
-<li><a href="#key-takeaways-1"><strong>Key Takeaways</strong></a></li>
+<li><a href="#key-takeaways"><strong>Key Takeaways</strong></a></li>
 </ul>
 </li>
 <li>
-<p><a href="#3-alerts-on-call-and-incident-management"><strong>3. Alerts, On-Call, and Incident Management</strong></a></p>
+<p><a href="#alerts-on-call-and-incident-management"><strong>Alerts, On-Call, and Incident Management</strong></a></p>
 <ul>
 <li>
 <p><a href="#good-alert-design"><strong>Good Alert Design</strong></a></p>
@@ -426,10 +398,10 @@
 </ul>
 </li>
 <li>
-<p><a href="#part-ii-monitoring-tactics"><strong>Part II: Monitoring Tactics</strong></a></p>
+<p><a href="#monitoring-tactics"><strong>Monitoring Tactics</strong></a></p>
 <ul>
 <li>
-<p><a href="#chapter-5-monitoring-the-business"><strong>Chapter 5: Monitoring the Business</strong></a></p>
+<p><a href="#monitoring-the-business"><strong>Monitoring the Business</strong></a></p>
 <ul>
 <li>
 <p><a href="#1-the-need-for-business-monitoring"><strong>1. The Need for Business Monitoring</strong></a></p>
@@ -466,12 +438,12 @@
 <p><a href="#6-real-world-case-study"><strong>6. Real-World Case Study</strong></a></p>
 </li>
 <li>
-<p><a href="#key-takeaways-2"><strong>Key Takeaways</strong></a></p>
+<p><a href="#key-takeaways-1"><strong>Key Takeaways</strong></a></p>
 </li>
 </ul>
 </li>
 <li>
-<p><a href="#chapter-6-frontend-monitoring"><strong>Chapter 6: Frontend Monitoring</strong></a></p>
+<p><a href="#frontend-monitoring"><strong>Frontend Monitoring</strong></a></p>
 <ul>
 <li>
 <p><a href="#1-the-importance-of-frontend-monitoring"><strong>1. The Importance of Frontend Monitoring</strong></a></p>
@@ -515,7 +487,7 @@
 </ul>
 </li>
 <li>
-<p><a href="#chapter-7-application-monitoring"><strong>Chapter 7: Application Monitoring</strong></a></p>
+<p><a href="#application-monitoring"><strong>Application Monitoring</strong></a></p>
 <ul>
 <li>
 <p><a href="#1-why-application-monitoring-is-critical"><strong>1. Why Application Monitoring Is Critical</strong></a></p>
@@ -555,12 +527,12 @@
 <p><a href="#6-monitoring-serverless-architectures"><strong>6. Monitoring Serverless Architectures</strong></a></p>
 </li>
 <li>
-<p><a href="#key-takeaways-3"><strong>Key Takeaways</strong></a></p>
+<p><a href="#key-takeaways-2"><strong>Key Takeaways</strong></a></p>
 </li>
 </ul>
 </li>
 <li>
-<p><a href="#chapter-8-server-monitoring"><strong>Chapter 8: Server Monitoring</strong></a></p>
+<p><a href="#server-monitoring"><strong>Server Monitoring</strong></a></p>
 <ul>
 <li>
 <p><a href="#1-the-importance-of-server-monitoring"><strong>1. The Importance of Server Monitoring</strong></a></p>
@@ -608,7 +580,7 @@
 </ul>
 </li>
 <li>
-<p><a href="#chapter-9-network-monitoring"><strong>Chapter 9: Network Monitoring</strong></a></p>
+<p><a href="#network-monitoring"><strong>Network Monitoring</strong></a></p>
 <ul>
 <li>
 <p><a href="#1-the-role-of-network-monitoring"><strong>1. The Role of Network Monitoring</strong></a></p>
@@ -662,7 +634,7 @@
 </ul>
 </li>
 <li>
-<p><a href="#chapter-10-security-monitoring"><strong>Chapter 10: Security Monitoring</strong></a></p>
+<p><a href="#security-monitoring"><strong>Security Monitoring</strong></a></p>
 <ul>
 <li>
 <p><a href="#1-the-unique-nature-of-security-monitoring"><strong>1. The Unique Nature of Security Monitoring</strong></a></p>
@@ -681,7 +653,7 @@
 <p><a href="#3-key-security-monitoring-techniques"><strong>3. Key Security Monitoring Techniques</strong></a></p>
 <ul>
 <li><a href="#host-level-monitoring"><strong>Host-Level Monitoring</strong></a></li>
-<li><a href="#network-monitoring"><strong>Network Monitoring</strong></a></li>
+<li><a href="#network-monitoring-1"><strong>Network Monitoring</strong></a></li>
 <li><a href="#behavioral-monitoring"><strong>Behavioral Monitoring</strong></a></li>
 </ul>
 </li>
@@ -709,7 +681,7 @@
 </ul>
 </li>
 <li>
-<p><a href="#chapter-11-conducting-a-monitoring-assessment"><strong>Chapter 11: Conducting a Monitoring Assessment</strong></a></p>
+<p><a href="#conducting-a-monitoring-assessment"><strong>Conducting a Monitoring Assessment</strong></a></p>
 <ul>
 <li>
 <p><a href="#1-goals-of-a-monitoring-assessment"><strong>1. Goals of a Monitoring Assessment</strong></a></p>
@@ -800,7 +772,6 @@
 </li>
 </ul>
 </div>
-<h1 id="key-takeaways" style="position:relative;"><a href="#key-takeaways" aria-label="key takeaways permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>key takeaways</h1>
 <h1 id="part-i-the-path-to-observability" style="position:relative;"><a href="#part-i-the-path-to-observability" aria-label="part i the path to observability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Part I: The Path to Observability</strong></h1>
 <h2 id="debugging-practices-observability-vs-monitoring" style="position:relative;"><a href="#debugging-practices-observability-vs-monitoring" aria-label="debugging practices observability vs monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Debugging Practices: Observability vs. Monitoring</strong></h2>
 <hr>
@@ -1145,202 +1116,11 @@
 </ul>
 </li>
 </ol>
-<h3 id="part-ii-fundamentals-of-observability" style="position:relative;"><a href="#part-ii-fundamentals-of-observability" aria-label="part ii fundamentals of observability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Part II: Fundamentals of Observability</strong></h3>
-<h4 id="5-structured-events-building-blocks-of-observability" style="position:relative;"><a href="#5-structured-events-building-blocks-of-observability" aria-label="5 structured events building blocks of observability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>5. Structured Events: Building Blocks of Observability</strong></h4>
-<p>Structured events form the foundation of modern observability systems, enabling teams to debug and understand their systems effectively. This section delves into the importance of structured events, their unique advantages, and how they address the limitations of traditional metrics and logs.</p>
-<hr>
-<h3 id="why-structured-events-are-essential" style="position:relative;"><a href="#why-structured-events-are-essential" aria-label="why structured events are essential permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Why Structured Events Are Essential</strong></h3>
-<p>Structured events provide <strong>rich, contextual telemetry data</strong> that enables engineers to understand the behavior of their systems with unprecedented depth and clarity.</p>
-<hr>
-<p><strong>1. Capturing Detailed Context:</strong></p>
-<ul>
-<li>Structured events include <strong>key-value pairs</strong> that encapsulate all relevant information about a specific event in your system.</li>
-<li><strong>Example:</strong> A structured event for an API request might include:
-<ul>
-<li><code class="language-text">timestamp</code>: <code class="language-text">2024-12-26T15:30:00Z</code></li>
-<li><code class="language-text">user_id</code>: <code class="language-text">12345</code></li>
-<li><code class="language-text">endpoint</code>: <code class="language-text">/checkout</code></li>
-<li><code class="language-text">status_code</code>: <code class="language-text">200</code></li>
-<li><code class="language-text">latency_ms</code>: <code class="language-text">125</code></li>
-<li><code class="language-text">transaction_id</code>: <code class="language-text">txn-98765</code></li>
-</ul>
-</li>
-<li><strong>“Unlike traditional metrics or logs, structured events tell the full story of what happened, when, and why, all in a single data object.”</strong></li>
-</ul>
-<hr>
-<p><strong>2. High Cardinality and Dimensionality:</strong></p>
-<ul>
-<li>Structured events can handle <strong>high-cardinality data</strong> (e.g., unique user IDs or transaction IDs) and include hundreds of dimensions (key-value pairs).</li>
-<li><strong>Example:</strong> In a distributed e-commerce system, structured events can track:
-<ul>
-<li>Specific user actions (e.g., <code class="language-text">add_to_cart</code>, <code class="language-text">checkout</code>).</li>
-<li>Unique product IDs involved in transactions.</li>
-<li>Payment gateway responses.</li>
-</ul>
-</li>
-<li><strong>“Structured events unlock granular insights that are impossible to capture with metrics or logs alone.”</strong></li>
-</ul>
-<hr>
-<p><strong>3. Flexible Querying and Debugging:</strong></p>
-<ul>
-<li>Structured events allow engineers to query their systems in <strong>real time</strong>, asking open-ended questions without needing predefined dashboards.</li>
-<li><strong>Example:</strong> If a subset of users is experiencing slow response times, engineers can:
-<ul>
-<li>Query for events with <code class="language-text">latency_ms > 500</code>.</li>
-<li>Filter by <code class="language-text">user_region = EU</code>.</li>
-<li>Correlate with <code class="language-text">deployment_version = v1.2.3</code>.</li>
-</ul>
-</li>
-<li><strong>“This flexibility enables hypothesis-driven debugging, where every answer leads to a new question until the root cause is found.”</strong></li>
-</ul>
-<hr>
-<p><strong>4. Enabling Distributed Tracing:</strong></p>
-<ul>
-<li>Structured events are critical for stitching together <strong>distributed traces</strong>, where a single user request spans multiple services.</li>
-<li><strong>Example:</strong> A trace for a user checkout process might combine structured events from:
-<ul>
-<li>The frontend service (capturing the user’s request).</li>
-<li>The backend API (processing payment details).</li>
-<li>The database (logging transaction details).</li>
-</ul>
-</li>
-<li><strong>“With structured events, you can reconstruct the journey of any request across your entire system.”</strong></li>
-</ul>
-<hr>
-<h3 id="limitations-of-traditional-metrics-and-logs" style="position:relative;"><a href="#limitations-of-traditional-metrics-and-logs" aria-label="limitations of traditional metrics and logs permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Limitations of Traditional Metrics and Logs</strong></h3>
-<p>Before structured events became widespread, teams relied heavily on <strong>metrics</strong> and <strong>logs</strong> for system monitoring and debugging. While these tools served their purpose in simpler systems, they fail to meet the demands of modern distributed architectures.</p>
-<hr>
-<p><strong>1. Metrics: Aggregate Data Without Context</strong></p>
-<ul>
-<li><strong>Definition of Metrics:</strong>
-<ul>
-<li>Metrics are <strong>predefined numerical measurements</strong>, such as CPU utilization, request counts, or average latency.</li>
-<li>Metrics are often aggregated over time (e.g., 1-minute averages).</li>
-</ul>
-</li>
-</ul>
-<hr>
-<p><strong>Key Limitations of Metrics:</strong></p>
-<ol>
-<li>
-<p><strong>Loss of Granularity:</strong></p>
-<ul>
-<li>Metrics provide high-level summaries but lack details about individual events.</li>
-<li><strong>Example:</strong> A metric might show an average latency of 200ms, but it doesn’t reveal:
-<ul>
-<li>Which users experienced slow responses.</li>
-<li>Which endpoints were slow.</li>
-<li>Whether the issue was caused by a specific database query.</li>
-</ul>
-</li>
-<li><strong>“Metrics reduce system behavior to broad averages, hiding the individual outliers that often signal critical problems.”</strong></li>
-</ul>
-</li>
-<li>
-<p><strong>Low Cardinality:</strong></p>
-<ul>
-<li>Metrics cannot handle high-cardinality data effectively.</li>
-<li><strong>Example:</strong> Tracking latency by <code class="language-text">user_id</code> or <code class="language-text">transaction_id</code> is impractical with metrics because it generates too many unique combinations.</li>
-<li><strong>“When metrics hit their cardinality limits, they force you to sacrifice insight for performance.”</strong></li>
-</ul>
-</li>
-<li>
-<p><strong>Predefined Use Cases:</strong></p>
-<ul>
-<li>Metrics are <strong>static and reactive</strong>, requiring predefined thresholds and aggregation rules.</li>
-<li><strong>Example:</strong> If you didn’t predict that database query timeouts would cause latency spikes, your metrics won’t capture this information.</li>
-<li><strong>“Metrics can only answer questions you thought to ask in advance.”</strong></li>
-</ul>
-</li>
-</ol>
-<hr>
-<p><strong>2. Logs: Unstructured Data Without Insights</strong></p>
-<ul>
-<li><strong>Definition of Logs:</strong>
-<ul>
-<li>Logs are <strong>unstructured text entries</strong> that record specific events or system outputs.</li>
-<li><strong>Example:</strong> A log entry might read:
-<ul>
-<li><code class="language-text">2024-12-26T15:30:00Z INFO: User 12345 completed checkout with status 200.</code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<hr>
-<p><strong>Key Limitations of Logs:</strong></p>
-<ol>
-<li>
-<p><strong>Unstructured and Hard to Query:</strong></p>
-<ul>
-<li>Logs are freeform text, making them difficult to query and analyze programmatically.</li>
-<li><strong>Example:</strong> Searching logs for failed checkouts might require writing <strong>complex regex patterns</strong> to parse relevant details.</li>
-<li><strong>“Logs are like a haystack where every needle looks different—finding the right one can take hours.”</strong></li>
-</ul>
-</li>
-<li>
-<p><strong>High Storage Costs:</strong></p>
-<ul>
-<li>Logs generate enormous volumes of data, much of which is redundant or irrelevant.</li>
-<li><strong>Example:</strong> Logging every API call and database query for a high-traffic application can quickly overwhelm storage systems.</li>
-<li><strong>“Teams often face a trade-off: either log everything and pay the cost or log selectively and risk missing critical details.”</strong></li>
-</ul>
-</li>
-<li>
-<p><strong>Limited Correlation Across Systems:</strong></p>
-<ul>
-<li>Logs from different services are disconnected, making it hard to trace events across a distributed architecture.</li>
-<li><strong>Example:</strong> If a request fails in the API gateway, you must manually correlate logs from downstream services to understand the failure.</li>
-<li><strong>“Logs provide fragments of the story but rarely reveal the full picture.”</strong></li>
-</ul>
-</li>
-</ol>
-<hr>
-<h3 id="how-structured-events-solve-these-issues" style="position:relative;"><a href="#how-structured-events-solve-these-issues" aria-label="how structured events solve these issues permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>How Structured Events Solve These Issues</strong></h3>
-<ol>
-<li>
-<p><strong>Unified Data Representation:</strong></p>
-<ul>
-<li>Unlike metrics (numerical) and logs (textual), structured events combine the <strong>contextual richness of logs</strong> with the <strong>quantifiable precision of metrics</strong>.</li>
-<li><strong>“Structured events give you the best of both worlds: detailed, actionable data in a machine-readable format.”</strong></li>
-</ul>
-</li>
-<li>
-<p><strong>Dynamic and Real-Time Insights:</strong></p>
-<ul>
-<li>Structured events are captured for every action, enabling <strong>real-time exploration</strong> of system behavior.</li>
-<li><strong>Example:</strong> If user <code class="language-text">12345</code> reports a slow checkout, you can query for all structured events related to that user in seconds.</li>
-<li><strong>“With structured events, you don’t need to predict every failure—you can debug any issue as it arises.”</strong></li>
-</ul>
-</li>
-<li>
-<p><strong>Built for Distributed Systems:</strong></p>
-<ul>
-<li>Structured events include trace IDs and span IDs, making it easy to follow requests across multiple services.</li>
-<li><strong>Example:</strong> A distributed trace might include:
-<ul>
-<li>An API request event from the frontend.</li>
-<li>A database query event from the backend.</li>
-<li>A cache miss event from the caching layer.</li>
-</ul>
-</li>
-<li><strong>“Structured events stitch together the entire journey of a request, no matter how many services it touches.”</strong></li>
-</ul>
-</li>
-<li>
-<p><strong>Scalability and Performance:</strong></p>
-<ul>
-<li>Modern observability platforms are optimized to store and query structured events at scale, addressing the limitations of logs and metrics.</li>
-<li><strong>“Structured events let you retain high-cardinality, high-dimensionality data without breaking your systems or budget.”</strong></li>
-</ul>
-</li>
-</ol>
-<hr>
-<h1 id="part-ii-fundamentals-of-observability-1" style="position:relative;"><a href="#part-ii-fundamentals-of-observability-1" aria-label="part ii fundamentals of observability 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Part II: Fundamentals of Observability</strong></h1>
+<h1 id="part-ii-fundamentals-of-observability" style="position:relative;"><a href="#part-ii-fundamentals-of-observability" aria-label="part ii fundamentals of observability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Part II: Fundamentals of Observability</strong></h1>
 <h2 id="structured-events-building-blocks-of-observability" style="position:relative;"><a href="#structured-events-building-blocks-of-observability" aria-label="structured events building blocks of observability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Structured Events: Building Blocks of Observability</strong></h2>
 <p>Structured events are critical for modern observability, offering unparalleled visibility into system behavior. Unlike traditional telemetry approaches, structured events provide rich, contextual, machine-readable data that can adapt to the dynamic complexity of distributed systems.</p>
 <hr>
-<h3 id="why-structured-events-are-essential-1" style="position:relative;"><a href="#why-structured-events-are-essential-1" aria-label="why structured events are essential 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Why Structured Events Are Essential</strong></h3>
+<h3 id="why-structured-events-are-essential" style="position:relative;"><a href="#why-structured-events-are-essential" aria-label="why structured events are essential permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Why Structured Events Are Essential</strong></h3>
 <p>Structured events are central to observability because they provide a <strong>single source of truth</strong> for understanding what’s happening in a system. Here’s an expanded exploration of their importance:</p>
 <hr>
 <p><strong>1. Comprehensive Context: Capturing the Complete Picture</strong></p>
@@ -1486,7 +1266,7 @@
 </li>
 </ul>
 <hr>
-<h3 id="limitations-of-traditional-metrics-and-logs-1" style="position:relative;"><a href="#limitations-of-traditional-metrics-and-logs-1" aria-label="limitations of traditional metrics and logs 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Limitations of Traditional Metrics and Logs</strong></h3>
+<h3 id="limitations-of-traditional-metrics-and-logs" style="position:relative;"><a href="#limitations-of-traditional-metrics-and-logs" aria-label="limitations of traditional metrics and logs permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Limitations of Traditional Metrics and Logs</strong></h3>
 <p>Structured events arose in response to the inherent shortcomings of metrics and logs, which struggle to meet the demands of modern distributed systems.</p>
 <hr>
 <p><strong>1. Metrics: Aggregates Without Details</strong></p>
@@ -1555,7 +1335,7 @@
 </li>
 </ul>
 <hr>
-<h3 id="how-structured-events-solve-these-issues-1" style="position:relative;"><a href="#how-structured-events-solve-these-issues-1" aria-label="how structured events solve these issues 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>How Structured Events Solve These Issues</strong></h3>
+<h3 id="how-structured-events-solve-these-issues" style="position:relative;"><a href="#how-structured-events-solve-these-issues" aria-label="how structured events solve these issues permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>How Structured Events Solve These Issues</strong></h3>
 <p><strong>1. Unified Data Model:</strong></p>
 <ul>
 <li>Structured events combine the <strong>contextual richness of logs</strong> with the <strong>efficiency and structure of metrics</strong>.</li>
@@ -1572,7 +1352,7 @@
 <li><strong>Example:</strong> Use dynamic sampling to capture full details for critical events while summarizing less relevant ones.</li>
 </ul>
 <hr>
-<h2 id="6-stitching-events-into-traces" style="position:relative;"><a href="#6-stitching-events-into-traces" aria-label="6 stitching events into traces permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>6. Stitching Events into Traces</strong></h2>
+<h2 id="stitching-events-into-traces" style="position:relative;"><a href="#stitching-events-into-traces" aria-label="stitching events into traces permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Stitching Events into Traces</strong></h2>
 <p>Stitching events into traces is the backbone of distributed tracing, enabling engineers to observe the journey of a request as it traverses through a complex, distributed architecture. This section elaborates on the <strong>importance of distributed tracing</strong>, its <strong>key components</strong>, and <strong>instrumentation techniques</strong> in much greater detail, with additional real-world examples and in-depth explanations.</p>
 <hr>
 <h3 id="importance-of-distributed-tracing" style="position:relative;"><a href="#importance-of-distributed-tracing" aria-label="importance of distributed tracing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Importance of Distributed Tracing</strong></h3>
@@ -2147,7 +1927,7 @@ span<span class="token punctuation">.</span>set_attribute<span class="token punc
 </li>
 </ol>
 <hr>
-<h2 id="8-analyzing-events" style="position:relative;"><a href="#8-analyzing-events" aria-label="8 analyzing events permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>8. Analyzing Events</strong></h2>
+<h2 id="analyzing-events" style="position:relative;"><a href="#analyzing-events" aria-label="analyzing events permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Analyzing Events</strong></h2>
 <p>Analyzing events is a core process of observability, enabling engineers to navigate the complexity of distributed systems effectively. This involves a structured, <strong>core analysis loop</strong> to iteratively explore data, test hypotheses, and identify root causes, coupled with the dynamic flexibility of <strong>hypothesis-driven debugging</strong>. At the same time, the rise of <strong>AIOps (Artificial Intelligence for IT Operations)</strong> introduces new opportunities but also brings misleading promises that need to be critically assessed.</p>
 <p>Let’s explore these concepts in deeper detail with more examples, actionable insights, and expanded explanations.</p>
 <hr>
@@ -2488,7 +2268,7 @@ span<span class="token punctuation">.</span>set_attribute<span class="token punc
 </li>
 </ul>
 <hr>
-<h2 id="9-synergy-of-observability-and-monitoring" style="position:relative;"><a href="#9-synergy-of-observability-and-monitoring" aria-label="9 synergy of observability and monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>9. Synergy of Observability and Monitoring</strong></h2>
+<h2 id="synergy-of-observability-and-monitoring" style="position:relative;"><a href="#synergy-of-observability-and-monitoring" aria-label="synergy of observability and monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Synergy of Observability and Monitoring</strong></h2>
 <p>Monitoring and observability are essential and complementary practices in modern system management. Monitoring excels at proactively identifying issues through static metrics and alerts, while observability empowers engineers to dynamically explore and resolve these issues by providing contextual insights. Together, they form a <strong>complete framework</strong> for maintaining system reliability, ensuring faster debugging, and enabling robust incident management.</p>
 <hr>
 <h3 id="roles-of-monitoring-and-observability-in-debugging" style="position:relative;"><a href="#roles-of-monitoring-and-observability-in-debugging" aria-label="roles of monitoring and observability in debugging permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Roles of Monitoring and Observability in Debugging</strong></h3>
@@ -2808,7 +2588,7 @@ span<span class="token punctuation">.</span>set_attribute<span class="token punc
 </ol>
 <hr>
 <h1 id="part-iii-observability-for-teams" style="position:relative;"><a href="#part-iii-observability-for-teams" aria-label="part iii observability for teams permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Part III: Observability for Teams</strong></h1>
-<h2 id="10-team-adoption-of-observability" style="position:relative;"><a href="#10-team-adoption-of-observability" aria-label="10 team adoption of observability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>10. Team Adoption of Observability</strong></h2>
+<h2 id="team-adoption-of-observability" style="position:relative;"><a href="#team-adoption-of-observability" aria-label="team adoption of observability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Team Adoption of Observability</strong></h2>
 <p>Adopting observability within teams is both a technical and cultural shift. While the technical aspects involve implementing tools, frameworks, and workflows, the cultural shift focuses on <strong>fostering collaboration</strong>, <strong>breaking down silos</strong>, and ensuring observability becomes an integral part of daily operations. This section delves deeply into the <strong>practical steps for implementation</strong>, offers strategies for <strong>overcoming organizational resistance</strong>, and includes expanded examples to illustrate these concepts.</p>
 <hr>
 <h3 id="practical-steps-for-implementation" style="position:relative;"><a href="#practical-steps-for-implementation" aria-label="practical steps for implementation permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Practical Steps for Implementation</strong></h3>
@@ -3165,7 +2945,7 @@ tracer <span class="token operator">=</span> trace<span class="token punctuation
 <li>Prevented $2M in lost revenue during subsequent sales events.</li>
 </ul>
 <hr>
-<h2 id="11-observability-driven-development" style="position:relative;"><a href="#11-observability-driven-development" aria-label="11 observability driven development permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>11. Observability-Driven Development</strong></h2>
+<h2 id="observability-driven-development" style="position:relative;"><a href="#observability-driven-development" aria-label="observability driven development permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Observability-Driven Development</strong></h2>
 <p>Observability-Driven Development (ODD) is a transformative approach that integrates observability into every stage of the software development lifecycle. By focusing on real-time visibility, actionable insights, and proactive debugging, teams can significantly improve software delivery speed, system reliability, and developer confidence. This section explores how observability enhances each phase of development in detail, with expanded examples and practical steps for implementation.</p>
 <hr>
 <h3 id="integration-of-observability-into-the-development-lifecycle" style="position:relative;"><a href="#integration-of-observability-into-the-development-lifecycle" aria-label="integration of observability into the development lifecycle permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Integration of Observability into the Development Lifecycle</strong></h3>
@@ -3532,7 +3312,7 @@ tracer <span class="token operator">=</span> trace<span class="token punctuation
 <li>Customer complaints related to system downtime dropped by 70%.</li>
 </ul>
 <hr>
-<h2 id="13-slo-based-alerting-and-debugging" style="position:relative;"><a href="#13-slo-based-alerting-and-debugging" aria-label="13 slo based alerting and debugging permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>13. SLO-Based Alerting and Debugging</strong></h2>
+<h2 id="slo-based-alerting-and-debugging" style="position:relative;"><a href="#slo-based-alerting-and-debugging" aria-label="slo based alerting and debugging permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>SLO-Based Alerting and Debugging</strong></h2>
 <p>SLO-based alerting and debugging is a modern, user-centric approach to reliability management. By leveraging <strong>sliding windows</strong> to dynamically frame issues and <strong>predictive burn alerts</strong> to foresee potential SLO violations, teams can make informed decisions, reduce noise, and focus on issues that matter most to users. This chapter explores these concepts in depth, with detailed implementation strategies, real-world examples, and actionable insights.</p>
 <hr>
 <h3 id="framing-issues-through-sliding-windows" style="position:relative;"><a href="#framing-issues-through-sliding-windows" aria-label="framing issues through sliding windows permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Framing Issues Through Sliding Windows</strong></h3>
@@ -3789,7 +3569,7 @@ tracer <span class="token operator">=</span> trace<span class="token punctuation
 <li>Increased customer trust during high-demand periods.</li>
 </ul>
 <hr>
-<h2 id="14-software-supply-chain-observability" style="position:relative;"><a href="#14-software-supply-chain-observability" aria-label="14 software supply chain observability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>14. Software Supply Chain Observability</strong></h2>
+<h2 id="software-supply-chain-observability" style="position:relative;"><a href="#software-supply-chain-observability" aria-label="software supply chain observability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Software Supply Chain Observability</strong></h2>
 <p>Modern software systems are built on complex supply chains that include third-party libraries, APIs, CI/CD pipelines, and cloud services. <strong>Software Supply Chain Observability</strong> ensures visibility into every link in this chain, enabling teams to identify bottlenecks, mitigate risks, and maintain reliability. By studying real-world implementations, such as those at <strong>Slack</strong>, and incorporating instrumentation strategies, organizations can transform their supply chain into a resilient, traceable ecosystem.</p>
 <hr>
 <h3 id="understanding-software-supply-chain-observability" style="position:relative;"><a href="#understanding-software-supply-chain-observability" aria-label="understanding software supply chain observability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Understanding Software Supply Chain Observability</strong></h3>
@@ -4165,7 +3945,7 @@ tracer <span class="token operator">=</span> trace<span class="token punctuation
 </ul>
 <hr>
 <h1 id="part-iv-observability-at-scale" style="position:relative;"><a href="#part-iv-observability-at-scale" aria-label="part iv observability at scale permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Part IV: Observability at Scale</strong></h1>
-<h2 id="16-efficient-data-storage" style="position:relative;"><a href="#16-efficient-data-storage" aria-label="16 efficient data storage permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>16. Efficient Data Storage</strong></h2>
+<h2 id="efficient-data-storage" style="position:relative;"><a href="#efficient-data-storage" aria-label="efficient data storage permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Efficient Data Storage</strong></h2>
 <p>Efficient data storage is the backbone of <strong>observability at scale</strong>, enabling organizations to manage massive volumes of telemetry data, support real-time queries, and control costs. As systems generate billions of high-cardinality events daily, traditional storage approaches often fall short. This section delves into the <strong>challenges of large-scale observability data</strong>, provides detailed solutions for optimization, and analyzes <strong>Honeycomb’s architecture</strong> as a benchmark for scalable and intelligent data storage.</p>
 <hr>
 <h3 id="challenges-of-large-scale-observability-data" style="position:relative;"><a href="#challenges-of-large-scale-observability-data" aria-label="challenges of large scale observability data permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Challenges of Large-Scale Observability Data</strong></h3>
@@ -4550,7 +4330,7 @@ tracer <span class="token operator">=</span> trace<span class="token punctuation
 </li>
 </ul>
 <hr>
-<h2 id="17-sampling-strategies" style="position:relative;"><a href="#17-sampling-strategies" aria-label="17 sampling strategies permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>17. Sampling Strategies</strong></h2>
+<h2 id="sampling-strategies" style="position:relative;"><a href="#sampling-strategies" aria-label="sampling strategies permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Sampling Strategies</strong></h2>
 <p>As distributed systems grow in scale and complexity, <strong>sampling strategies</strong> are essential to manage the deluge of observability data generated. By selectively capturing the most meaningful subsets of telemetry, teams can optimize data storage, control costs, and improve query performance while ensuring critical insights remain accessible. This chapter dives deeper into the <strong>trade-offs of sampling</strong>, outlines various <strong>advanced techniques</strong>, and provides <strong>practical implementation examples</strong> to enable effective sampling at scale.</p>
 <hr>
 <h3 id="the-need-for-sampling-in-observability" style="position:relative;"><a href="#the-need-for-sampling-in-observability" aria-label="the need for sampling in observability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>The Need for Sampling in Observability</strong></h3>
@@ -4963,7 +4743,7 @@ tracer <span class="token operator">=</span> trace<span class="token punctuation
 <li><strong>“Integrated tools simplify sampling implementation and ensure consistent execution across services.”</strong></li>
 </ul>
 <hr>
-<h2 id="18-telemetry-management-pipelines" style="position:relative;"><a href="#18-telemetry-management-pipelines" aria-label="18 telemetry management pipelines permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>18. Telemetry Management Pipelines</strong></h2>
+<h2 id="telemetry-management-pipelines" style="position:relative;"><a href="#telemetry-management-pipelines" aria-label="telemetry management pipelines permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Telemetry Management Pipelines</strong></h2>
 <p>Effective telemetry management pipelines are the backbone of observability systems at scale, transforming raw telemetry data into actionable insights. These pipelines handle the ingestion, processing, enrichment, routing, and storage of billions of telemetry events daily while ensuring scalability, cost efficiency, and performance. This section provides <strong>in-depth best practices</strong>, explores <strong>advanced implementation details</strong>, and highlights <strong>real-world examples from Slack</strong> to showcase how telemetry pipelines can be optimized for large-scale systems.</p>
 <hr>
 <h3 id="the-role-of-telemetry-pipelines-in-observability" style="position:relative;"><a href="#the-role-of-telemetry-pipelines-in-observability" aria-label="the role of telemetry pipelines in observability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>The Role of Telemetry Pipelines in Observability</strong></h3>
@@ -5250,8 +5030,8 @@ tracer <span class="token operator">=</span> trace<span class="token punctuation
 <li><strong>“Slack’s routing strategy ensures that data reaches the right place at the right time.”</strong></li>
 </ul>
 <hr>
-<h1 id="part-i-monitoring-principles" style="position:relative;"><a href="#part-i-monitoring-principles" aria-label="part i monitoring principles permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Part I: Monitoring Principles</strong></h1>
-<h2 id="1-monitoring-anti-patterns" style="position:relative;"><a href="#1-monitoring-anti-patterns" aria-label="1 monitoring anti patterns permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. Monitoring Anti-Patterns</strong></h2>
+<h1 id="monitoring-principles" style="position:relative;"><a href="#monitoring-principles" aria-label="monitoring principles permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Monitoring Principles</strong></h1>
+<h2 id="monitoring-anti-patterns" style="position:relative;"><a href="#monitoring-anti-patterns" aria-label="monitoring anti patterns permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Monitoring Anti-Patterns</strong></h2>
 <p>Monitoring anti-patterns refer to common mistakes or flawed approaches that reduce the effectiveness of monitoring systems. These anti-patterns result in inefficiencies, increased noise, operational bottlenecks, and even preventable outages. Understanding and avoiding these anti-patterns is critical to building reliable, scalable, and actionable monitoring systems.</p>
 <hr>
 <h3 id="understanding-monitoring-anti-patterns" style="position:relative;"><a href="#understanding-monitoring-anti-patterns" aria-label="understanding monitoring anti patterns permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Understanding Monitoring Anti-Patterns</strong></h3>
@@ -5529,7 +5309,7 @@ tracer <span class="token operator">=</span> trace<span class="token punctuation
 </li>
 </ol>
 <hr>
-<h2 id="2-monitoring-design-patterns" style="position:relative;"><a href="#2-monitoring-design-patterns" aria-label="2 monitoring design patterns permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2. Monitoring Design Patterns</strong></h2>
+<h2 id="monitoring-design-patterns" style="position:relative;"><a href="#monitoring-design-patterns" aria-label="monitoring design patterns permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Monitoring Design Patterns</strong></h2>
 <p>Monitoring design patterns are proven practices that help organizations design monitoring systems that are scalable, actionable, and aligned with business objectives. Unlike anti-patterns, which highlight mistakes to avoid, design patterns provide a structured approach to implementing effective monitoring solutions. They emphasize <strong>flexibility, user-centricity, and continuous adaptation</strong> to evolving requirements.</p>
 <hr>
 <h3 id="detailed-exploration-of-monitoring-design-patterns" style="position:relative;"><a href="#detailed-exploration-of-monitoring-design-patterns" aria-label="detailed exploration of monitoring design patterns permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Detailed Exploration of Monitoring Design Patterns</strong></h3>
@@ -5774,7 +5554,7 @@ tracer <span class="token operator">=</span> trace<span class="token punctuation
 <li><strong>“Monitoring isn’t set-and-forget—it’s a continuous process of learning, adapting, and evolving.”</strong></li>
 </ul>
 <hr>
-<h3 id="key-takeaways-1" style="position:relative;"><a href="#key-takeaways-1" aria-label="key takeaways 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<h3 id="key-takeaways" style="position:relative;"><a href="#key-takeaways" aria-label="key takeaways permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
 <ol>
 <li>
 <p><strong>Composable Monitoring:</strong></p>
@@ -5806,7 +5586,7 @@ tracer <span class="token operator">=</span> trace<span class="token punctuation
 </li>
 </ol>
 <hr>
-<h2 id="3-alerts-on-call-and-incident-management" style="position:relative;"><a href="#3-alerts-on-call-and-incident-management" aria-label="3 alerts on call and incident management permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3. Alerts, On-Call, and Incident Management</strong></h2>
+<h2 id="alerts-on-call-and-incident-management" style="position:relative;"><a href="#alerts-on-call-and-incident-management" aria-label="alerts on call and incident management permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Alerts, On-Call, and Incident Management</strong></h2>
 <p>Alerts, on-call practices, and incident management form the foundation of operational monitoring. Each component plays a critical role in ensuring system reliability, reducing downtime, and maintaining team efficiency. Below is an in-depth exploration of best practices, actionable insights, and real-world examples to master these areas.</p>
 <hr>
 <h3 id="good-alert-design" style="position:relative;"><a href="#good-alert-design" aria-label="good alert design permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Good Alert Design</strong></h3>
@@ -6174,8 +5954,8 @@ Incident management is the structured process of detecting, responding to, and r
 </li>
 </ol>
 <hr>
-<h1 id="part-ii-monitoring-tactics" style="position:relative;"><a href="#part-ii-monitoring-tactics" aria-label="part ii monitoring tactics permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Part II: Monitoring Tactics</strong></h1>
-<h2 id="chapter-5-monitoring-the-business" style="position:relative;"><a href="#chapter-5-monitoring-the-business" aria-label="chapter 5 monitoring the business permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Chapter 5: Monitoring the Business</strong></h2>
+<h1 id="monitoring-tactics" style="position:relative;"><a href="#monitoring-tactics" aria-label="monitoring tactics permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Monitoring Tactics</strong></h1>
+<h2 id="monitoring-the-business" style="position:relative;"><a href="#monitoring-the-business" aria-label="monitoring the business permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Monitoring the Business</strong></h2>
 <p>This chapter emphasizes the critical role of monitoring business metrics in modern observability practices. While traditional monitoring focuses on technical metrics such as CPU usage or error rates, <strong>business monitoring connects the dots between system performance and business outcomes.</strong> It ensures that monitoring aligns with the goals of the organization, enabling teams to proactively detect and address issues that impact revenue, user satisfaction, and growth.</p>
 <hr>
 <h3 id="1-the-need-for-business-monitoring" style="position:relative;"><a href="#1-the-need-for-business-monitoring" aria-label="1 the need for business monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. The Need for Business Monitoring</strong></h3>
@@ -6458,7 +6238,7 @@ The right tools and practices make business monitoring scalable, actionable, and
 <li>Subscription cancellations decreased by 20%, restoring MRR growth.</li>
 </ul>
 <hr>
-<h3 id="key-takeaways-2" style="position:relative;"><a href="#key-takeaways-2" aria-label="key takeaways 2 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<h3 id="key-takeaways-1" style="position:relative;"><a href="#key-takeaways-1" aria-label="key takeaways 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
 <ol>
 <li>
 <p><strong>Start with the User:</strong></p>
@@ -6492,7 +6272,7 @@ The right tools and practices make business monitoring scalable, actionable, and
 </li>
 </ol>
 <hr>
-<h2 id="chapter-6-frontend-monitoring" style="position:relative;"><a href="#chapter-6-frontend-monitoring" aria-label="chapter 6 frontend monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Chapter 6: Frontend Monitoring</strong></h2>
+<h2 id="frontend-monitoring" style="position:relative;"><a href="#frontend-monitoring" aria-label="frontend monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Frontend Monitoring</strong></h2>
 <p>Frontend monitoring ensures the performance and reliability of client-side components of web applications. It focuses on capturing user-facing performance issues, providing visibility into how users experience a website or application. With the rise of <strong>Single-Page Applications (SPAs)</strong> and complex JavaScript frameworks, frontend monitoring is crucial for maintaining user satisfaction and achieving business goals.</p>
 <hr>
 <h3 id="1-the-importance-of-frontend-monitoring" style="position:relative;"><a href="#1-the-importance-of-frontend-monitoring" aria-label="1 the importance of frontend monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. The Importance of Frontend Monitoring</strong></h3>
@@ -6762,7 +6542,7 @@ Pingdom simulates traffic to test uptime, performance, and user flows.</p>
 </li>
 </ol>
 <hr>
-<h2 id="chapter-7-application-monitoring" style="position:relative;"><a href="#chapter-7-application-monitoring" aria-label="chapter 7 application monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Chapter 7: Application Monitoring</strong></h2>
+<h2 id="application-monitoring" style="position:relative;"><a href="#application-monitoring" aria-label="application monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Application Monitoring</strong></h2>
 <p>Application monitoring focuses on capturing the performance, health, and behavior of the software applications running within a system. With applications evolving faster than underlying infrastructure, monitoring their performance is critical to maintain reliability, detect issues proactively, and optimize user experience.</p>
 <hr>
 <h3 id="1-why-application-monitoring-is-critical" style="position:relative;"><a href="#1-why-application-monitoring-is-critical" aria-label="1 why application monitoring is critical permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. Why Application Monitoring Is Critical</strong></h3>
@@ -7046,7 +6826,7 @@ Logs and metrics serve complementary purposes in application monitoring. Togethe
 <li>Visualize serverless workflows with tools like AWS X-Ray.</li>
 </ol>
 <hr>
-<h3 id="key-takeaways-3" style="position:relative;"><a href="#key-takeaways-3" aria-label="key takeaways 3 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<h3 id="key-takeaways-2" style="position:relative;"><a href="#key-takeaways-2" aria-label="key takeaways 2 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
 <ol>
 <li>
 <p><strong>Instrument for Visibility:</strong></p>
@@ -7078,7 +6858,7 @@ Logs and metrics serve complementary purposes in application monitoring. Togethe
 </li>
 </ol>
 <hr>
-<h2 id="chapter-8-server-monitoring" style="position:relative;"><a href="#chapter-8-server-monitoring" aria-label="chapter 8 server monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Chapter 8: Server Monitoring</strong></h2>
+<h2 id="server-monitoring" style="position:relative;"><a href="#server-monitoring" aria-label="server monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Server Monitoring</strong></h2>
 <p>Server monitoring is the cornerstone of any monitoring strategy, providing the foundation for understanding the health, performance, and availability of underlying infrastructure. Despite the rise of cloud-native and serverless architectures, servers remain a critical part of most systems, and their proper monitoring ensures that applications and services remain reliable and performant. This chapter delves into server monitoring techniques, metrics, tools, and real-world applications.</p>
 <hr>
 <h3 id="1-the-importance-of-server-monitoring" style="position:relative;"><a href="#1-the-importance-of-server-monitoring" aria-label="1 the importance of server monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. The Importance of Server Monitoring</strong></h3>
@@ -7403,7 +7183,7 @@ Logs and metrics serve complementary purposes in application monitoring. Togethe
 <li><strong>“The best monitoring systems are those that adapt with your infrastructure, not those set in stone.”</strong></li>
 </ul>
 <hr>
-<h2 id="chapter-9-network-monitoring" style="position:relative;"><a href="#chapter-9-network-monitoring" aria-label="chapter 9 network monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Chapter 9: Network Monitoring</strong></h2>
+<h2 id="network-monitoring" style="position:relative;"><a href="#network-monitoring" aria-label="network monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Network Monitoring</strong></h2>
 <p>Network monitoring is essential for ensuring the performance, reliability, and security of the interconnected systems that support modern applications and services. This chapter explores in-depth strategies, metrics, tools, and real-world examples for effectively monitoring networks. With increasing network complexity and demand, monitoring helps preemptively address issues, optimize performance, and align with business goals.</p>
 <hr>
 <h3 id="1-the-role-of-network-monitoring" style="position:relative;"><a href="#1-the-role-of-network-monitoring" aria-label="1 the role of network monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. The Role of Network Monitoring</strong></h3>
@@ -7728,7 +7508,7 @@ Alert on unauthorized changes to a firewall’s rule set, which could introduce 
 <li><strong>“An effective monitoring strategy is as much about what you monitor as how you act on what you learn.”</strong></li>
 </ul>
 <hr>
-<h2 id="chapter-10-security-monitoring" style="position:relative;"><a href="#chapter-10-security-monitoring" aria-label="chapter 10 security monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Chapter 10: Security Monitoring</strong></h2>
+<h2 id="security-monitoring" style="position:relative;"><a href="#security-monitoring" aria-label="security monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Security Monitoring</strong></h2>
 <p>Security monitoring is essential for protecting systems, applications, and networks from threats, ensuring compliance with regulations, and maintaining operational integrity. This chapter delves deeper into the techniques, tools, and practices of security monitoring, focusing on <strong>proactive threat detection, compliance adherence, and response preparedness.</strong></p>
 <hr>
 <h3 id="1-the-unique-nature-of-security-monitoring" style="position:relative;"><a href="#1-the-unique-nature-of-security-monitoring" aria-label="1 the unique nature of security monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. The Unique Nature of Security Monitoring</strong></h3>
@@ -7857,7 +7637,7 @@ Alert on unauthorized changes to a firewall’s rule set, which could introduce 
 <li><strong>“Host-level monitoring offers deep visibility into the activities of users and processes on individual machines.”</strong></li>
 </ul>
 <hr>
-<h4 id="network-monitoring" style="position:relative;"><a href="#network-monitoring" aria-label="network monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Network Monitoring</strong></h4>
+<h4 id="network-monitoring-1" style="position:relative;"><a href="#network-monitoring-1" aria-label="network monitoring 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Network Monitoring</strong></h4>
 <ol>
 <li>
 <p><strong>Network Intrusion Detection Systems (NIDS):</strong></p>
@@ -8053,7 +7833,7 @@ Alert on unauthorized changes to a firewall’s rule set, which could introduce 
 </li>
 </ol>
 <hr>
-<h2 id="chapter-11-conducting-a-monitoring-assessment" style="position:relative;"><a href="#chapter-11-conducting-a-monitoring-assessment" aria-label="chapter 11 conducting a monitoring assessment permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Chapter 11: Conducting a Monitoring Assessment</strong></h2>
+<h2 id="conducting-a-monitoring-assessment" style="position:relative;"><a href="#conducting-a-monitoring-assessment" aria-label="conducting a monitoring assessment permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Conducting a Monitoring Assessment</strong></h2>
 <p>A monitoring assessment is the process of evaluating an organization’s existing monitoring strategy to ensure it aligns with operational, technical, and business objectives. This involves identifying gaps, prioritizing improvements, and creating a roadmap for building or refining a comprehensive monitoring system. This chapter explores the <strong>step-by-step methodology, critical components, tools, and real-world applications</strong> of a monitoring assessment.</p>
 <hr>
 <h3 id="1-goals-of-a-monitoring-assessment" style="position:relative;"><a href="#1-goals-of-a-monitoring-assessment" aria-label="1 goals of a monitoring assessment permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. Goals of a Monitoring Assessment</strong></h3>
