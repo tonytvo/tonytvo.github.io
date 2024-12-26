@@ -51,11 +51,670 @@
         }
       }
     })
-  </script><link rel="alternate" type="application/rss+xml" title="Tony Vo Blog RSS Feed" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=b811602c8c8ce14b66aae6613c8968f4" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=b811602c8c8ce14b66aae6613c8968f4"/><title data-react-helmet="true">observability engineer by Charity, Liz Fong and George summary - wip | Conversations on agile technical practices and investments</title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="global-wrapper" data-is-root-path="false"><header class="global-header"><a class="header-link-home" href="/">Conversations on agile technical practices and investments</a></header><main><article class="blog-post" itemscope="" itemType="http://schema.org/Article"><header><h1 itemProp="headline">observability engineer by Charity, Liz Fong and George summary - wip</h1><p>July 23, 2024</p></header><section itemProp="articleBody"><h1 id="todo" style="position:relative;"><a href="#todo" aria-label="todo permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>todo</h1>
+  </script><link rel="alternate" type="application/rss+xml" title="Tony Vo Blog RSS Feed" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=b811602c8c8ce14b66aae6613c8968f4" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=b811602c8c8ce14b66aae6613c8968f4"/><title data-react-helmet="true">observability engineer by Charity, Liz Fong and George summary - wip | Conversations on agile technical practices and investments</title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="global-wrapper" data-is-root-path="false"><header class="global-header"><a class="header-link-home" href="/">Conversations on agile technical practices and investments</a></header><main><article class="blog-post" itemscope="" itemType="http://schema.org/Article"><header><h1 itemProp="headline">observability engineer by Charity, Liz Fong and George summary - wip</h1><p>July 23, 2024</p></header><section itemProp="articleBody"><h1 id="table-of-contents" style="position:relative;"><a href="#table-of-contents" aria-label="table of contents permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Table of Contents</h1>
+<div class="table-of-contents">
 <ul>
-<li>summarize observability engineer by Charity Majors, Liz Fong, and George Miranda</li>
-<li>summarize practical monitoring from Mike Julian</li>
+<li>
+<p><a href="#key-takeaways">key takeaways</a></p>
+</li>
+<li>
+<p><a href="#part-i-the-path-to-observability"><strong>Part I: The Path to Observability</strong></a></p>
+<ul>
+<li>
+<p><a href="#debugging-practices-observability-vs-monitoring"><strong>Debugging Practices: Observability vs. Monitoring</strong></a></p>
+<ul>
+<li><a href="#traditional-debugging-methods"><strong>Traditional Debugging Methods</strong></a></li>
+<li><a href="#limitations-of-monitoring-based-approaches"><strong>Limitations of Monitoring-Based Approaches</strong></a></li>
+<li><a href="#advantages-of-observability-in-modern-systems"><strong>Advantages of Observability in Modern Systems</strong></a></li>
 </ul>
+</li>
+<li>
+<p><a href="#lessons-from-scaling-without-observability"><strong>Lessons from Scaling Without Observability</strong></a></p>
+<ul>
+<li>
+<p><a href="#case-study-of-parses-evolution"><strong>Case Study of Parse’s Evolution</strong></a></p>
+</li>
+<li>
+<p><a href="#transition-to-modern-systems-and-practices"><strong>Transition to Modern Systems and Practices</strong></a></p>
+</li>
+<li>
+<p><a href="#challenges-encountered-and-resolved"><strong>Challenges Encountered and Resolved</strong></a></p>
+</li>
+<li>
+<p><a href="#outcomes-of-observability-implementation"><strong>Outcomes of Observability Implementation</strong></a></p>
+</li>
+<li>
+<p><a href="#key-lessons-learned"><strong>Key Lessons Learned</strong></a></p>
+</li>
+<li>
+<p><a href="#part-ii-fundamentals-of-observability"><strong>Part II: Fundamentals of Observability</strong></a></p>
+<ul>
+<li><a href="#5-structured-events-building-blocks-of-observability"><strong>5. Structured Events: Building Blocks of Observability</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#why-structured-events-are-essential"><strong>Why Structured Events Are Essential</strong></a></p>
+</li>
+<li>
+<p><a href="#limitations-of-traditional-metrics-and-logs"><strong>Limitations of Traditional Metrics and Logs</strong></a></p>
+</li>
+<li>
+<p><a href="#how-structured-events-solve-these-issues"><strong>How Structured Events Solve These Issues</strong></a></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#part-ii-fundamentals-of-observability-1"><strong>Part II: Fundamentals of Observability</strong></a></p>
+<ul>
+<li>
+<p><a href="#structured-events-building-blocks-of-observability"><strong>Structured Events: Building Blocks of Observability</strong></a></p>
+<ul>
+<li><a href="#why-structured-events-are-essential-1"><strong>Why Structured Events Are Essential</strong></a></li>
+<li><a href="#limitations-of-traditional-metrics-and-logs-1"><strong>Limitations of Traditional Metrics and Logs</strong></a></li>
+<li><a href="#how-structured-events-solve-these-issues-1"><strong>How Structured Events Solve These Issues</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#6-stitching-events-into-traces"><strong>6. Stitching Events into Traces</strong></a></p>
+<ul>
+<li><a href="#importance-of-distributed-tracing"><strong>Importance of Distributed Tracing</strong></a></li>
+<li><a href="#components-of-distributed-tracing"><strong>Components of Distributed Tracing</strong></a></li>
+<li><a href="#instrumentation-techniques"><strong>Instrumentation Techniques</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#7-opentelemetry-instrumentation"><strong>7. OpenTelemetry Instrumentation</strong></a></p>
+<ul>
+<li><a href="#open-source-standards-for-observability"><strong>Open-Source Standards for Observability</strong></a></li>
+<li><a href="#components-of-opentelemetry"><strong>Components of OpenTelemetry</strong></a></li>
+<li><a href="#techniques-for-instrumentation"><strong>Techniques for Instrumentation</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#8-analyzing-events"><strong>8. Analyzing Events</strong></a></p>
+<ul>
+<li><a href="#core-analysis-loop-and-hypothesis-driven-debugging"><strong>Core Analysis Loop and Hypothesis-Driven Debugging</strong></a></li>
+<li><a href="#misleading-promises-of-aiops"><strong>Misleading Promises of AIOps</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#9-synergy-of-observability-and-monitoring"><strong>9. Synergy of Observability and Monitoring</strong></a></p>
+<ul>
+<li><a href="#roles-of-monitoring-and-observability-in-debugging"><strong>Roles of Monitoring and Observability in Debugging</strong></a></li>
+<li><a href="#complementary-roles-of-monitoring-and-observability"><strong>Complementary Roles of Monitoring and Observability</strong></a></li>
+<li><a href="#practical-integration-examples"><strong>Practical Integration Examples</strong></a></li>
+<li><a href="#best-practices-for-integration"><strong>Best Practices for Integration</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#part-iii-observability-for-teams"><strong>Part III: Observability for Teams</strong></a></p>
+<ul>
+<li>
+<p><a href="#10-team-adoption-of-observability"><strong>10. Team Adoption of Observability</strong></a></p>
+<ul>
+<li>
+<p><a href="#practical-steps-for-implementation"><strong>Practical Steps for Implementation</strong></a></p>
+<ul>
+<li><a href="#1-define-clear-objectives-and-success-metrics"><strong>1. Define Clear Objectives and Success Metrics</strong></a></li>
+<li><a href="#2-start-small-with-high-impact-workflows"><strong>2. Start Small with High-Impact Workflows</strong></a></li>
+<li><a href="#3-instrument-critical-events-and-services"><strong>3. Instrument Critical Events and Services</strong></a></li>
+<li><a href="#4-integrate-observability-into-daily-workflows"><strong>4. Integrate Observability into Daily Workflows</strong></a></li>
+<li><a href="#5-train-and-empower-teams"><strong>5. Train and Empower Teams</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#overcoming-organizational-resistance"><strong>Overcoming Organizational Resistance</strong></a></p>
+<ul>
+<li><a href="#1-addressing-we-already-have-monitoring-resistance"><strong>1. Addressing “We Already Have Monitoring” Resistance</strong></a></li>
+<li><a href="#2-securing-leadership-buy-in"><strong>2. Securing Leadership Buy-In</strong></a></li>
+<li><a href="#3-overcoming-siloed-teams"><strong>3. Overcoming Siloed Teams</strong></a></li>
+<li><a href="#4-overcoming-complexity-concerns"><strong>4. Overcoming Complexity Concerns</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#real-world-example-observability-adoption-at-fastretail"><strong>Real-World Example: Observability Adoption at FastRetail</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#11-observability-driven-development"><strong>11. Observability-Driven Development</strong></a></p>
+<ul>
+<li>
+<p><a href="#integration-of-observability-into-the-development-lifecycle"><strong>Integration of Observability into the Development Lifecycle</strong></a></p>
+<ul>
+<li><a href="#1-observability-in-the-design-phase"><strong>1. Observability in the Design Phase</strong></a></li>
+<li><a href="#2-observability-in-development-and-testing"><strong>2. Observability in Development and Testing</strong></a></li>
+<li><a href="#3-observability-in-cicd-pipelines"><strong>3. Observability in CI/CD Pipelines</strong></a></li>
+<li><a href="#4-observability-in-production"><strong>4. Observability in Production</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#faster-software-delivery-through-proactive-debugging"><strong>Faster Software Delivery Through Proactive Debugging</strong></a></p>
+<ul>
+<li><a href="#1-accelerated-debugging"><strong>1. Accelerated Debugging</strong></a></li>
+<li><a href="#2-enhanced-developer-confidence"><strong>2. Enhanced Developer Confidence</strong></a></li>
+<li><a href="#3-minimizing-failure-impact"><strong>3. Minimizing Failure Impact</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#real-world-example-observability-driven-development-at-shipfast"><strong>Real-World Example: Observability-Driven Development at ShipFast</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#13-slo-based-alerting-and-debugging"><strong>13. SLO-Based Alerting and Debugging</strong></a></p>
+<ul>
+<li>
+<p><a href="#framing-issues-through-sliding-windows"><strong>Framing Issues Through Sliding Windows</strong></a></p>
+<ul>
+<li><a href="#1-understanding-sliding-windows"><strong>1. Understanding Sliding Windows</strong></a></li>
+<li><a href="#2-implementing-sliding-windows-in-slo-monitoring"><strong>2. Implementing Sliding Windows in SLO Monitoring</strong></a></li>
+<li><a href="#3-example-sliding-windows-for-a-checkout-workflow"><strong>3. Example: Sliding Windows for a Checkout Workflow</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#predictive-burn-alerts-and-actionable-strategies"><strong>Predictive Burn Alerts and Actionable Strategies</strong></a></p>
+<ul>
+<li><a href="#1-understanding-predictive-burn-alerts"><strong>1. Understanding Predictive Burn Alerts</strong></a></li>
+<li><a href="#2-implementing-predictive-burn-alerts"><strong>2. Implementing Predictive Burn Alerts</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#real-world-example-predictive-burn-alerts-at-megaservice"><strong>Real-World Example: Predictive Burn Alerts at MegaService</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#14-software-supply-chain-observability"><strong>14. Software Supply Chain Observability</strong></a></p>
+<ul>
+<li>
+<p><a href="#understanding-software-supply-chain-observability"><strong>Understanding Software Supply Chain Observability</strong></a></p>
+<ul>
+<li><a href="#what-is-software-supply-chain-observability"><strong>What Is Software Supply Chain Observability?</strong></a></li>
+<li><a href="#why-is-it-important"><strong>Why Is It Important?</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#case-studies-from-slack-observability-in-the-software-supply-chain"><strong>Case Studies from Slack: Observability in the Software Supply Chain</strong></a></p>
+<ul>
+<li><a href="#1-dependency-management-mitigating-risks-and-ensuring-stability"><strong>1. Dependency Management: Mitigating Risks and Ensuring Stability</strong></a></li>
+<li><a href="#2-cicd-pipeline-observability-speeding-up-deployments"><strong>2. CI/CD Pipeline Observability: Speeding Up Deployments</strong></a></li>
+<li><a href="#3-distributed-tracing-for-end-to-end-dependency-visibility"><strong>3. Distributed Tracing for End-to-End Dependency Visibility</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#enhancing-reliability-through-instrumentation"><strong>Enhancing Reliability Through Instrumentation</strong></a></p>
+<ul>
+<li><a href="#1-instrumenting-dependencies"><strong>1. Instrumenting Dependencies</strong></a></li>
+<li><a href="#2-instrumenting-cicd-pipelines"><strong>2. Instrumenting CI/CD Pipelines</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#real-world-example-observability-in-software-supply-chains-at-fastdeploy"><strong>Real-World Example: Observability in Software Supply Chains at FastDeploy</strong></a></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#part-iv-observability-at-scale"><strong>Part IV: Observability at Scale</strong></a></p>
+<ul>
+<li>
+<p><a href="#16-efficient-data-storage"><strong>16. Efficient Data Storage</strong></a></p>
+<ul>
+<li>
+<p><a href="#challenges-of-large-scale-observability-data"><strong>Challenges of Large-Scale Observability Data</strong></a></p>
+<ul>
+<li><a href="#1-high-data-volume"><strong>1. High Data Volume</strong></a></li>
+<li><a href="#2-high-cardinality"><strong>2. High Cardinality</strong></a></li>
+<li><a href="#3-query-performance"><strong>3. Query Performance</strong></a></li>
+<li><a href="#4-cost-management"><strong>4. Cost Management</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#solutions-for-large-scale-observability-data-storage"><strong>Solutions for Large-Scale Observability Data Storage</strong></a></p>
+<ul>
+<li><a href="#1-aggregation-and-sampling"><strong>1. Aggregation and Sampling</strong></a></li>
+<li><a href="#2-tiered-storage"><strong>2. Tiered Storage</strong></a></li>
+<li><a href="#3-columnar-databases"><strong>3. Columnar Databases</strong></a></li>
+<li><a href="#4-query-optimization"><strong>4. Query Optimization</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#case-study-honeycombs-architecture"><strong>Case Study: Honeycomb’s Architecture</strong></a></p>
+<ul>
+<li><a href="#1-columnar-storage-for-high-cardinality-data"><strong>1. Columnar Storage for High-Cardinality Data</strong></a></li>
+<li><a href="#2-tail-based-sampling"><strong>2. Tail-Based Sampling</strong></a></li>
+<li><a href="#3-distributed-query-engine"><strong>3. Distributed Query Engine</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#17-sampling-strategies"><strong>17. Sampling Strategies</strong></a></p>
+<ul>
+<li>
+<p><a href="#the-need-for-sampling-in-observability"><strong>The Need for Sampling in Observability</strong></a></p>
+<ul>
+<li><a href="#1-the-explosion-of-observability-data"><strong>1. The Explosion of Observability Data</strong></a></li>
+<li><a href="#2-the-role-of-sampling"><strong>2. The Role of Sampling</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#trade-offs-in-sampling"><strong>Trade-Offs in Sampling</strong></a></p>
+<ul>
+<li><a href="#1-benefits-of-sampling"><strong>1. Benefits of Sampling</strong></a></li>
+<li><a href="#2-drawbacks-of-sampling"><strong>2. Drawbacks of Sampling</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#techniques-for-sampling-observability-data"><strong>Techniques for Sampling Observability Data</strong></a></p>
+<ul>
+<li><a href="#1-head-based-sampling"><strong>1. Head-Based Sampling</strong></a></li>
+<li><a href="#2-tail-based-sampling-1"><strong>2. Tail-Based Sampling</strong></a></li>
+<li><a href="#3-probabilistic-sampling"><strong>3. Probabilistic Sampling</strong></a></li>
+<li><a href="#4-dynamic-sampling"><strong>4. Dynamic Sampling</strong></a></li>
+<li><a href="#5-weighted-sampling"><strong>5. Weighted Sampling</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#best-practices-for-implementing-sampling-strategies"><strong>Best Practices for Implementing Sampling Strategies</strong></a></p>
+<ul>
+<li><a href="#1-combine-multiple-techniques"><strong>1. Combine Multiple Techniques</strong></a></li>
+<li><a href="#2-regularly-validate-and-adjust"><strong>2. Regularly Validate and Adjust</strong></a></li>
+<li><a href="#3-leverage-observability-tools"><strong>3. Leverage Observability Tools</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#18-telemetry-management-pipelines"><strong>18. Telemetry Management Pipelines</strong></a></p>
+<ul>
+<li>
+<p><a href="#the-role-of-telemetry-pipelines-in-observability"><strong>The Role of Telemetry Pipelines in Observability</strong></a></p>
+<ul>
+<li><a href="#1-why-telemetry-pipelines-matter"><strong>1. Why Telemetry Pipelines Matter</strong></a></li>
+<li><a href="#2-objectives-of-a-telemetry-pipeline"><strong>2. Objectives of a Telemetry Pipeline</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#best-practices-for-telemetry-pipelines"><strong>Best Practices for Telemetry Pipelines</strong></a></p>
+<ul>
+<li><a href="#1-decouple-ingestion-processing-and-storage"><strong>1. Decouple Ingestion, Processing, and Storage</strong></a></li>
+<li><a href="#2-filter-and-aggregate-data-early"><strong>2. Filter and Aggregate Data Early</strong></a></li>
+<li><a href="#3-enrich-data-in-transit"><strong>3. Enrich Data in Transit</strong></a></li>
+<li><a href="#4-optimize-data-routing"><strong>4. Optimize Data Routing</strong></a></li>
+<li><a href="#5-implement-sampling-and-retention-policies"><strong>5. Implement Sampling and Retention Policies</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#real-world-examples-from-slack"><strong>Real-World Examples from Slack</strong></a></p>
+<ul>
+<li><a href="#1-modular-pipeline-architecture"><strong>1. Modular Pipeline Architecture</strong></a></li>
+<li><a href="#2-early-filtering-and-aggregation"><strong>2. Early Filtering and Aggregation</strong></a></li>
+<li><a href="#3-contextual-data-enrichment"><strong>3. Contextual Data Enrichment</strong></a></li>
+<li><a href="#4-intelligent-routing-and-retention"><strong>4. Intelligent Routing and Retention</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#part-i-monitoring-principles"><strong>Part I: Monitoring Principles</strong></a></p>
+<ul>
+<li>
+<p><a href="#1-monitoring-anti-patterns"><strong>1. Monitoring Anti-Patterns</strong></a></p>
+<ul>
+<li>
+<p><a href="#understanding-monitoring-anti-patterns"><strong>Understanding Monitoring Anti-Patterns</strong></a></p>
+</li>
+<li>
+<p><a href="#common-monitoring-anti-patterns"><strong>Common Monitoring Anti-Patterns</strong></a></p>
+<ul>
+<li><a href="#1-tool-obsession"><strong>1. Tool Obsession</strong></a></li>
+<li><a href="#2-monitoring-as-a-job"><strong>2. Monitoring-as-a-Job</strong></a></li>
+<li><a href="#3-checkbox-monitoring"><strong>3. Checkbox Monitoring</strong></a></li>
+<li><a href="#4-using-monitoring-as-a-crutch"><strong>4. Using Monitoring as a Crutch</strong></a></li>
+<li><a href="#5-manual-configuration"><strong>5. Manual Configuration</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#key-insights-for-avoiding-monitoring-anti-patterns"><strong>Key Insights for Avoiding Monitoring Anti-Patterns</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#2-monitoring-design-patterns"><strong>2. Monitoring Design Patterns</strong></a></p>
+<ul>
+<li><a href="#detailed-exploration-of-monitoring-design-patterns"><strong>Detailed Exploration of Monitoring Design Patterns</strong></a></li>
+<li><a href="#1-composable-monitoring"><strong>1. Composable Monitoring</strong></a></li>
+<li><a href="#2-user-perspective-monitoring"><strong>2. User Perspective Monitoring</strong></a></li>
+<li><a href="#3-buy-vs-build"><strong>3. Buy vs. Build</strong></a></li>
+<li><a href="#4-continual-improvement"><strong>4. Continual Improvement</strong></a></li>
+<li><a href="#key-takeaways-1"><strong>Key Takeaways</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#3-alerts-on-call-and-incident-management"><strong>3. Alerts, On-Call, and Incident Management</strong></a></p>
+<ul>
+<li>
+<p><a href="#good-alert-design"><strong>Good Alert Design</strong></a></p>
+<ul>
+<li><a href="#principles-of-good-alert-design"><strong>Principles of Good Alert Design</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#on-call-practices"><strong>On-Call Practices</strong></a></p>
+<ul>
+<li><a href="#challenges-in-on-call-practices"><strong>Challenges in On-Call Practices</strong></a></li>
+<li><a href="#principles-of-effective-on-call-practices"><strong>Principles of Effective On-Call Practices</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#incident-management"><strong>Incident Management</strong></a></p>
+<ul>
+<li><a href="#key-steps-in-incident-management"><strong>Key Steps in Incident Management</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#part-ii-monitoring-tactics"><strong>Part II: Monitoring Tactics</strong></a></p>
+<ul>
+<li>
+<p><a href="#chapter-5-monitoring-the-business"><strong>Chapter 5: Monitoring the Business</strong></a></p>
+<ul>
+<li>
+<p><a href="#1-the-need-for-business-monitoring"><strong>1. The Need for Business Monitoring</strong></a></p>
+<ul>
+<li><a href="#why-business-monitoring-is-critical"><strong>Why Business Monitoring is Critical</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#2-defining-business-metrics"><strong>2. Defining Business Metrics</strong></a></p>
+<ul>
+<li><a href="#how-to-define-business-metrics"><strong>How to Define Business Metrics</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#3-monitoring-business-transactions"><strong>3. Monitoring Business Transactions</strong></a></p>
+<ul>
+<li><a href="#steps-for-transactional-monitoring"><strong>Steps for Transactional Monitoring</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#4-connecting-system-metrics-to-business-impact"><strong>4. Connecting System Metrics to Business Impact</strong></a></p>
+<ul>
+<li><a href="#how-to-bridge-system-and-business-metrics"><strong>How to Bridge System and Business Metrics</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#5-tools-and-practices-for-business-monitoring"><strong>5. Tools and Practices for Business Monitoring</strong></a></p>
+<ul>
+<li><a href="#recommended-tools"><strong>Recommended Tools</strong></a></li>
+<li><a href="#best-practices"><strong>Best Practices</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#6-real-world-case-study"><strong>6. Real-World Case Study</strong></a></p>
+</li>
+<li>
+<p><a href="#key-takeaways-2"><strong>Key Takeaways</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#chapter-6-frontend-monitoring"><strong>Chapter 6: Frontend Monitoring</strong></a></p>
+<ul>
+<li>
+<p><a href="#1-the-importance-of-frontend-monitoring"><strong>1. The Importance of Frontend Monitoring</strong></a></p>
+<ul>
+<li><a href="#why-frontend-monitoring-matters"><strong>Why Frontend Monitoring Matters</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#2-frontend-performance-metrics"><strong>2. Frontend Performance Metrics</strong></a></p>
+<ul>
+<li><a href="#core-frontend-metrics"><strong>Core Frontend Metrics</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#3-methods-of-frontend-monitoring"><strong>3. Methods of Frontend Monitoring</strong></a></p>
+<ul>
+<li><a href="#real-user-monitoring-rum"><strong>Real User Monitoring (RUM)</strong></a></li>
+<li><a href="#synthetic-monitoring"><strong>Synthetic Monitoring</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#4-common-frontend-challenges"><strong>4. Common Frontend Challenges</strong></a></p>
+</li>
+<li>
+<p><a href="#5-tools-for-frontend-monitoring"><strong>5. Tools for Frontend Monitoring</strong></a></p>
+<ul>
+<li><a href="#real-user-monitoring-tools"><strong>Real User Monitoring Tools</strong></a></li>
+<li><a href="#synthetic-monitoring-tools"><strong>Synthetic Monitoring Tools</strong></a></li>
+<li><a href="#error-tracking-tools"><strong>Error Tracking Tools</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#6-integrating-frontend-monitoring-into-workflows"><strong>6. Integrating Frontend Monitoring into Workflows</strong></a></p>
+</li>
+<li>
+<p><a href="#real-world-case-study-an-e-commerce-platform"><strong>Real-World Case Study: An E-Commerce Platform</strong></a></p>
+</li>
+<li>
+<p><a href="#7-key-takeaways"><strong>7. Key Takeaways</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#chapter-7-application-monitoring"><strong>Chapter 7: Application Monitoring</strong></a></p>
+<ul>
+<li>
+<p><a href="#1-why-application-monitoring-is-critical"><strong>1. Why Application Monitoring Is Critical</strong></a></p>
+<ul>
+<li><a href="#importance-of-application-monitoring"><strong>Importance of Application Monitoring</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#2-instrumenting-applications-with-metrics"><strong>2. Instrumenting Applications with Metrics</strong></a></p>
+<ul>
+<li><a href="#steps-for-application-instrumentation"><strong>Steps for Application Instrumentation</strong></a></li>
+<li><a href="#common-types-of-metrics"><strong>Common Types of Metrics</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#3-leveraging-application-performance-monitoring-apm-tools"><strong>3. Leveraging Application Performance Monitoring (APM) Tools</strong></a></p>
+<ul>
+<li><a href="#capabilities-of-apm-tools"><strong>Capabilities of APM Tools</strong></a></li>
+<li><a href="#popular-apm-tools"><strong>Popular APM Tools</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#4-monitoring-in-microservice-architectures"><strong>4. Monitoring in Microservice Architectures</strong></a></p>
+<ul>
+<li><a href="#challenges-in-microservices-monitoring"><strong>Challenges in Microservices Monitoring</strong></a></li>
+<li><a href="#solution-distributed-tracing"><strong>Solution: Distributed Tracing</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#5-logs-and-metrics-a-unified-approach"><strong>5. Logs and Metrics: A Unified Approach</strong></a></p>
+<ul>
+<li><a href="#when-to-use-metrics"><strong>When to Use Metrics</strong></a></li>
+<li><a href="#when-to-use-logs"><strong>When to Use Logs</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#6-monitoring-serverless-architectures"><strong>6. Monitoring Serverless Architectures</strong></a></p>
+</li>
+<li>
+<p><a href="#key-takeaways-3"><strong>Key Takeaways</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#chapter-8-server-monitoring"><strong>Chapter 8: Server Monitoring</strong></a></p>
+<ul>
+<li>
+<p><a href="#1-the-importance-of-server-monitoring"><strong>1. The Importance of Server Monitoring</strong></a></p>
+<ul>
+<li><a href="#why-server-monitoring-matters"><strong>Why Server Monitoring Matters</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#2-core-server-metrics"><strong>2. Core Server Metrics</strong></a></p>
+<ul>
+<li><a href="#cpu-utilization"><strong>CPU Utilization</strong></a></li>
+<li><a href="#memory-utilization"><strong>Memory Utilization</strong></a></li>
+<li><a href="#disk-io"><strong>Disk I/O</strong></a></li>
+<li><a href="#network-metrics"><strong>Network Metrics</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#3-server-logs"><strong>3. Server Logs</strong></a></p>
+<ul>
+<li><a href="#key-types-of-server-logs"><strong>Key Types of Server Logs</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#4-advanced-server-monitoring-techniques"><strong>4. Advanced Server Monitoring Techniques</strong></a></p>
+<ul>
+<li><a href="#push-based-monitoring"><strong>Push-Based Monitoring</strong></a></li>
+<li><a href="#monitoring-distributed-architectures"><strong>Monitoring Distributed Architectures</strong></a></li>
+<li><a href="#monitoring-specialized-server-types"><strong>Monitoring Specialized Server Types</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#5-tools-for-server-monitoring"><strong>5. Tools for Server Monitoring</strong></a></p>
+</li>
+<li>
+<p><a href="#6-real-world-examples"><strong>6. Real-World Examples</strong></a></p>
+<ul>
+<li><a href="#scenario-1-high-cpu-utilization"><strong>Scenario 1: High CPU Utilization</strong></a></li>
+<li><a href="#scenario-2-disk-io-bottleneck"><strong>Scenario 2: Disk I/O Bottleneck</strong></a></li>
+<li><a href="#scenario-3-network-packet-loss"><strong>Scenario 3: Network Packet Loss</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#7-best-practices-for-server-monitoring"><strong>7. Best Practices for Server Monitoring</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#chapter-9-network-monitoring"><strong>Chapter 9: Network Monitoring</strong></a></p>
+<ul>
+<li>
+<p><a href="#1-the-role-of-network-monitoring"><strong>1. The Role of Network Monitoring</strong></a></p>
+<ul>
+<li><a href="#why-network-monitoring-is-critical"><strong>Why Network Monitoring is Critical</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#2-key-metrics-in-network-monitoring"><strong>2. Key Metrics in Network Monitoring</strong></a></p>
+<ul>
+<li><a href="#bandwidth-and-throughput"><strong>Bandwidth and Throughput</strong></a></li>
+<li><a href="#latency"><strong>Latency</strong></a></li>
+<li><a href="#packet-loss"><strong>Packet Loss</strong></a></li>
+<li><a href="#jitter"><strong>Jitter</strong></a></li>
+<li><a href="#errors-and-collisions"><strong>Errors and Collisions</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#3-network-monitoring-techniques"><strong>3. Network Monitoring Techniques</strong></a></p>
+<ul>
+<li><a href="#active-monitoring"><strong>Active Monitoring</strong></a></li>
+<li><a href="#passive-monitoring"><strong>Passive Monitoring</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#4-network-monitoring-tools"><strong>4. Network Monitoring Tools</strong></a></p>
+<ul>
+<li><a href="#snmp-simple-network-management-protocol"><strong>SNMP (Simple Network Management Protocol)</strong></a></li>
+<li><a href="#flow-monitoring"><strong>Flow Monitoring</strong></a></li>
+<li><a href="#visualization-tools"><strong>Visualization Tools</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#5-advanced-network-monitoring-practices"><strong>5. Advanced Network Monitoring Practices</strong></a></p>
+<ul>
+<li><a href="#capacity-planning"><strong>Capacity Planning</strong></a></li>
+<li><a href="#configuration-monitoring"><strong>Configuration Monitoring</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#6-real-world-scenarios"><strong>6. Real-World Scenarios</strong></a></p>
+<ul>
+<li><a href="#scenario-1-identifying-congestion"><strong>Scenario 1: Identifying Congestion</strong></a></li>
+<li><a href="#scenario-2-resolving-high-jitter-in-voip-calls"><strong>Scenario 2: Resolving High Jitter in VoIP Calls</strong></a></li>
+<li><a href="#scenario-3-detecting-security-threats"><strong>Scenario 3: Detecting Security Threats</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#7-best-practices"><strong>7. Best Practices</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#chapter-10-security-monitoring"><strong>Chapter 10: Security Monitoring</strong></a></p>
+<ul>
+<li>
+<p><a href="#1-the-unique-nature-of-security-monitoring"><strong>1. The Unique Nature of Security Monitoring</strong></a></p>
+<ul>
+<li><a href="#key-challenges-in-security-monitoring"><strong>Key Challenges in Security Monitoring</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#2-compliance-and-regulatory-monitoring"><strong>2. Compliance and Regulatory Monitoring</strong></a></p>
+<ul>
+<li><a href="#key-compliance-frameworks"><strong>Key Compliance Frameworks</strong></a></li>
+<li><a href="#proving-compliance-through-monitoring"><strong>Proving Compliance Through Monitoring</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#3-key-security-monitoring-techniques"><strong>3. Key Security Monitoring Techniques</strong></a></p>
+<ul>
+<li><a href="#host-level-monitoring"><strong>Host-Level Monitoring</strong></a></li>
+<li><a href="#network-monitoring"><strong>Network Monitoring</strong></a></li>
+<li><a href="#behavioral-monitoring"><strong>Behavioral Monitoring</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#4-advanced-tools-for-security-monitoring"><strong>4. Advanced Tools for Security Monitoring</strong></a></p>
+<ul>
+<li><a href="#siem-security-information-and-event-management-tools"><strong>SIEM (Security Information and Event Management) Tools</strong></a></li>
+<li><a href="#endpoint-detection-and-response-edr-tools"><strong>Endpoint Detection and Response (EDR) Tools</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#5-common-threat-scenarios-and-responses"><strong>5. Common Threat Scenarios and Responses</strong></a></p>
+<ul>
+<li><a href="#scenario-1-brute-force-attacks"><strong>Scenario 1: Brute Force Attacks</strong></a></li>
+<li><a href="#scenario-2-malware-infection"><strong>Scenario 2: Malware Infection</strong></a></li>
+<li><a href="#scenario-3-data-exfiltration"><strong>Scenario 3: Data Exfiltration</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#6-best-practices-for-security-monitoring"><strong>6. Best Practices for Security Monitoring</strong></a></p>
+</li>
+<li>
+<p><a href="#7-challenges-and-limitations"><strong>7. Challenges and Limitations</strong></a></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#references">References</a></p>
+</li>
+</ul>
+</div>
 <h1 id="key-takeaways" style="position:relative;"><a href="#key-takeaways" aria-label="key takeaways permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>key takeaways</h1>
 <h1 id="part-i-the-path-to-observability" style="position:relative;"><a href="#part-i-the-path-to-observability" aria-label="part i the path to observability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Part I: The Path to Observability</strong></h1>
 <h2 id="debugging-practices-observability-vs-monitoring" style="position:relative;"><a href="#debugging-practices-observability-vs-monitoring" aria-label="debugging practices observability vs monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Debugging Practices: Observability vs. Monitoring</strong></h2>
