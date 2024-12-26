@@ -57,11 +57,782 @@
 <li>summarize practical monitoring from Mike Julian</li>
 </ul>
 <h1 id="key-takeaways" style="position:relative;"><a href="#key-takeaways" aria-label="key takeaways permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>key takeaways</h1>
+<h1 id="part-i-the-path-to-observability" style="position:relative;"><a href="#part-i-the-path-to-observability" aria-label="part i the path to observability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Part I: The Path to Observability</strong></h1>
+<h2 id="debugging-practices-observability-vs-monitoring" style="position:relative;"><a href="#debugging-practices-observability-vs-monitoring" aria-label="debugging practices observability vs monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Debugging Practices: Observability vs. Monitoring</strong></h2>
+<hr>
+<h3 id="traditional-debugging-methods" style="position:relative;"><a href="#traditional-debugging-methods" aria-label="traditional debugging methods permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Traditional Debugging Methods</strong></h3>
+<p>Traditional debugging methods are grounded in the use of monitoring tools that work well for simpler, predictable systems. However, as systems have grown more complex, these methods often fall short.</p>
+<hr>
+<p><strong>1. Dashboard-Driven Troubleshooting:</strong></p>
+<ul>
+<li>In monitoring-driven debugging, engineers use pre-configured dashboards to track metrics like CPU usage, memory utilization, request latency, and error rates.</li>
+<li><strong>Example:</strong> A dashboard might show a graph indicating a spike in CPU usage. Engineers may infer from past incidents that this likely relates to an unoptimized database query or a sudden traffic surge.</li>
+<li><strong>Limitation:</strong> Dashboards rely on <strong>static, predefined metrics</strong>, meaning you can only see what was anticipated during setup. If the spike is due to an entirely new failure mode, the dashboard won’t tell you the cause.</li>
+</ul>
+<hr>
+<p><strong>2. Pattern Matching by Intuition:</strong></p>
+<ul>
+<li>Debugging often depends on engineers’ past experiences or “gut feelings.” Engineers use known patterns from previous issues to hypothesize what might be wrong.</li>
+<li><strong>Example:</strong> “Last time this error occurred, it was due to a misconfigured API gateway.”</li>
+<li><strong>Limitation:</strong> This approach works only when the issue resembles past failures. In modern distributed systems with countless unknown-unknowns, relying on intuition becomes increasingly ineffective.</li>
+</ul>
+<hr>
+<p><strong>3. Static, Reactive Monitoring:</strong></p>
+<ul>
+<li>Monitoring setups are reactive and threshold-based: they alert engineers only when predefined conditions are violated.</li>
+<li><strong>Example:</strong> If response times exceed 300ms, an alert triggers for the on-call team.</li>
+<li><strong>Limitation:</strong> Reactive monitoring fails to address <strong>emerging issues</strong>. For example, if an issue is causing intermittent timeouts without breaching thresholds, it might go unnoticed until it escalates into a full-blown incident.</li>
+</ul>
+<hr>
+<h3 id="limitations-of-monitoring-based-approaches" style="position:relative;"><a href="#limitations-of-monitoring-based-approaches" aria-label="limitations of monitoring based approaches permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Limitations of Monitoring-Based Approaches</strong></h3>
+<p>The growing complexity of modern distributed systems has exposed critical flaws in monitoring-centric debugging.</p>
+<hr>
+<p><strong>1. Low Cardinality Restricts Granularity:</strong></p>
+<ul>
+<li>Monitoring systems handle data with <strong>low cardinality</strong>, meaning they aggregate events, losing unique details about specific users or requests.</li>
+<li><strong>Example:</strong> A monitoring system might show that 0.01% of requests failed but cannot identify the specific user or request responsible. If user ID <code class="language-text">12345</code> reports an issue, engineers must guess or recreate their conditions.</li>
+<li><strong>Impact:</strong> Without high cardinality, tracking unique events or diagnosing single-user issues becomes impossible.</li>
+</ul>
+<hr>
+<p><strong>2. Threshold Dependency Masks Subtle Issues:</strong></p>
+<ul>
+<li>Monitoring relies on arbitrary thresholds (e.g., “alert when latency exceeds 500ms”), but thresholds are often poorly calibrated and may hide problems that occur between defined limits.</li>
+<li><strong>Example:</strong> If 95% of requests respond in 200ms but the remaining 5% take over 1 second, monitoring tools focused on the 95th percentile would show <strong>“all is fine”</strong>, even though some users are experiencing significant delays.</li>
+<li><strong>Impact:</strong> Teams miss important edge cases that might affect critical users.</li>
+</ul>
+<hr>
+<p><strong>3. Fragmented Data Across Silos:</strong></p>
+<ul>
+<li>Monitoring tools often silo data into <strong>logs, metrics, and traces</strong>, which are difficult to correlate manually.</li>
+<li><strong>Example:</strong> To debug a user complaint, an engineer might need to analyze logs for errors, check metrics for latency spikes, and review traces for distributed system bottlenecks—each requiring a separate tool.</li>
+<li><strong>Impact:</strong> Siloed data increases the time-to-resolution as engineers struggle to connect the dots between related issues.</li>
+</ul>
+<hr>
+<p><strong>4. Reactive Nature Leaves Teams Unprepared:</strong></p>
+<ul>
+<li>Monitoring only triggers alerts when something breaks, forcing engineers into a constant <strong>firefighting</strong> mode.</li>
+<li><strong>Example:</strong> A monitoring system might alert that CPU usage is high, but by the time the team investigates, the incident has escalated, causing cascading failures.</li>
+<li><strong>Impact:</strong> Teams spend time reacting to incidents instead of proactively preventing them, leading to <strong>alert fatigue</strong> and burnout.</li>
+</ul>
+<hr>
+<p><strong>5. Assumption of Simplicity in System Design:</strong></p>
+<ul>
+<li>Monitoring assumes <strong>predictable, static systems</strong> where failure modes can be anticipated.</li>
+<li><strong>Example:</strong> Legacy systems often had one database and a few application servers, making it feasible to monitor key metrics like database load and request latency. Modern systems, with <strong>microservices, distributed databases, and ephemeral containers</strong>, break this model.</li>
+<li><strong>Impact:</strong> Monitoring tools struggle to handle <strong>dynamic scaling</strong>, <strong>service mesh interactions</strong>, and the emergent behaviors of distributed systems.</li>
+</ul>
+<hr>
+<h3 id="advantages-of-observability-in-modern-systems" style="position:relative;"><a href="#advantages-of-observability-in-modern-systems" aria-label="advantages of observability in modern systems permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Advantages of Observability in Modern Systems</strong></h3>
+<p>Observability offers a fundamentally different approach, focusing on capturing <strong>rich, contextual data</strong> to empower engineers to answer new questions in real time.</p>
+<hr>
+<p><strong>1. High Cardinality and Dimensionality Enable Granular Insights:</strong></p>
+<ul>
+<li>Observability systems capture <strong>high-cardinality data</strong>, like unique request IDs, user IDs, or specific database query details, making it possible to diagnose individual events.</li>
+<li><strong>Example:</strong> If user ID <code class="language-text">12345</code> reports slow performance, engineers can trace their exact request across all services and see what caused the issue, even if it’s buried within millions of events.</li>
+<li><strong>Key Benefit:</strong> <strong>“Observability lets you find the needle in the haystack by tracking every thread of data, no matter how small.”</strong></li>
+</ul>
+<hr>
+<p><strong>2. Hypothesis-Driven Debugging Encourages Exploration:</strong></p>
+<ul>
+<li>Observability allows engineers to ask ad-hoc questions and iteratively refine their hypotheses based on real-time data.</li>
+<li><strong>Example:</strong> An engineer investigating a spike in error rates might start by querying all 500-level responses, then filter by service, then correlate with recent deploys, narrowing down the cause step by step.</li>
+<li><strong>Key Benefit:</strong> <strong>“With observability, you don’t need to know what questions to ask in advance—you can explore as you debug.”</strong></li>
+</ul>
+<hr>
+<p><strong>3. Real-Time Querying Enables Rapid Iteration:</strong></p>
+<ul>
+<li>Observability tools allow dynamic querying without requiring pre-configured dashboards or metrics.</li>
+<li><strong>Example:</strong> Instead of relying on static dashboards, engineers can search for all requests with <code class="language-text">status=timeout</code> in a specific service and immediately see affected user IDs, endpoints, and trace spans.</li>
+<li><strong>Key Benefit:</strong> <strong>“Debugging becomes an iterative, real-time process where each answer leads to the next question.”</strong></li>
+</ul>
+<hr>
+<p><strong>4. Understanding Unknown-Unknowns:</strong></p>
+<ul>
+<li>Observability excels at uncovering <strong>unknown-unknowns</strong>—those unexpected, novel failure modes that monitoring tools fail to predict.</li>
+<li><strong>Example:</strong> A microservice in a distributed system suddenly exhibits timeouts due to an unforeseen dependency bottleneck. Monitoring misses this because it wasn’t programmed to track that dependency, but observability surfaces the issue through high-dimensional tracing.</li>
+<li><strong>Key Benefit:</strong> <strong>“Observability equips you to debug problems no one anticipated, no matter how bizarre or complex.”</strong></li>
+</ul>
+<hr>
+<p><strong>5. Seamless Correlation Across Distributed Systems:</strong></p>
+<ul>
+<li>Observability tools trace requests across multiple services, correlating logs, metrics, and traces into a unified view.</li>
+<li><strong>Example:</strong> A request traversing 10 services is slow due to a downstream API call. Observability tools let engineers see the entire journey and identify the bottleneck in seconds.</li>
+<li><strong>Key Benefit:</strong> <strong>“You can trace every hop of a request and pinpoint failures in complex architectures.”</strong></li>
+</ul>
+<hr>
+<p><strong>6. Proactive Debugging Empowers Teams:</strong></p>
+<ul>
+<li>Observability encourages engineers to proactively validate system behavior, catching anomalies before they escalate.</li>
+<li><strong>Example:</strong> During a deploy, engineers use observability tools to track error rates in real-time, rolling back the change at the first sign of increased latency.</li>
+<li><strong>Key Benefit:</strong> <strong>“Teams can ship confidently, knowing they’ll catch and fix issues before users are impacted.”</strong></li>
+</ul>
+<hr>
+<h2 id="lessons-from-scaling-without-observability" style="position:relative;"><a href="#lessons-from-scaling-without-observability" aria-label="lessons from scaling without observability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Lessons from Scaling Without Observability</strong></h2>
+<p>The story of Parse’s evolution is a compelling case study in how traditional monitoring techniques fail to support the growing complexity of modern systems, and how observability practices are essential to overcoming these challenges. Let’s dive deeper into this transformative journey, highlighting specific examples, challenges, and strategies.</p>
+<hr>
+<h3 id="case-study-of-parses-evolution" style="position:relative;"><a href="#case-study-of-parses-evolution" aria-label="case study of parses evolution permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Case Study of Parse’s Evolution</strong></h3>
+<ol>
+<li>
+<p><strong>Early Days of Parse: A Simpler Monolithic System</strong></p>
+<ul>
+<li>Parse initially operated as a <strong>monolithic application</strong> serving a backend-as-a-service (BaaS) platform for mobile developers. Its primary functionality included managing API calls, database storage, and push notifications.</li>
+<li><strong>Debugging in the Early Stage:</strong>
+<ul>
+<li>Monitoring was straightforward because the architecture was simple. Metrics like CPU usage, memory consumption, and database query latency provided enough insight to address most performance issues.</li>
+<li><strong>Example:</strong> If the database became slow, a dashboard would show a spike in query latency, and engineers could optimize SQL queries or add database indexes.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Scaling Challenges Begin: Adoption of Distributed Systems</strong></p>
+<ul>
+<li>As Parse grew, its customer base expanded rapidly, and the demands on its infrastructure increased.
+<ul>
+<li>New customers brought diverse usage patterns, such as high volumes of concurrent requests or large-scale batch processing, leading to increased system complexity.</li>
+</ul>
+</li>
+<li>To handle this load, Parse transitioned to a <strong>distributed microservices architecture</strong>.
+<ul>
+<li><strong>Example:</strong> The monolith was split into separate services for API handling, database interactions, and notification delivery. Each service operated on different servers, connected through REST APIs.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>The Growing Pains of Distributed Systems</strong></p>
+<ul>
+<li>The move to distributed systems introduced significant <strong>operational complexity</strong>:
+<ul>
+<li>Requests were no longer confined to a single application but spanned multiple services, databases, and caching layers.</li>
+<li>Failures in one service could cascade unpredictably across the system.</li>
+</ul>
+</li>
+<li><strong>Example of a Distributed Failure:</strong>
+<ul>
+<li>An API request to create a user involved:
+<ol>
+<li>A call to the authentication service.</li>
+<li>A database write for user details.</li>
+<li>A notification sent to the monitoring system.</li>
+</ol>
+</li>
+<li>A slowdown in the database service caused timeouts in the authentication service, which led to cascading errors in the API gateway, affecting all clients.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="transition-to-modern-systems-and-practices" style="position:relative;"><a href="#transition-to-modern-systems-and-practices" aria-label="transition to modern systems and practices permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Transition to Modern Systems and Practices</strong></h3>
+<ol>
+<li>
+<p><strong>Challenges with Traditional Monitoring:</strong></p>
+<ul>
+<li><strong>Fragmented Visibility:</strong> Each service had its own metrics (e.g., API request counts, database latency), but no unified way to trace requests across services.</li>
+<li><strong>Reactive Debugging:</strong> Incidents required engineers to manually piece together logs and metrics from multiple systems to hypothesize the root cause.</li>
+<li><strong>False Positives and Missed Issues:</strong>
+<ul>
+<li>Alerts triggered on static thresholds often generated false positives.</li>
+<li>Critical issues, such as rare user timeouts, went undetected because they fell outside predefined monitoring patterns.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Adopting Observability Practices:</strong></p>
+<ul>
+<li>Parse’s team realized they needed a <strong>unified view</strong> of their system to:
+<ul>
+<li>Trace individual requests across services.</li>
+<li>Understand the <strong>context</strong> of failures (e.g., which user, service, or feature caused the issue).</li>
+</ul>
+</li>
+<li><strong>Distributed Tracing Implementation:</strong>
+<ul>
+<li>Parse implemented tracing tools that generated <strong>unique trace IDs</strong> for every API request.</li>
+<li><strong>Example:</strong> A trace ID allowed engineers to follow a request from the API gateway, through the authentication service, to the database, pinpointing exactly where delays occurred.</li>
+</ul>
+</li>
+<li><strong>Structured Logging:</strong>
+<ul>
+<li>Logs were enhanced with structured data (e.g., user IDs, request parameters) to enable <strong>ad hoc querying</strong> during incidents.</li>
+<li><strong>Example:</strong> Engineers could search for all failed requests for a specific user (<code class="language-text">user_id: 12345</code>) and identify patterns or anomalies.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Iterative Debugging with Observability:</strong></p>
+<ul>
+<li>Observability tools enabled <strong>hypothesis-driven debugging</strong>:
+<ul>
+<li>Instead of relying on dashboards, engineers could ask specific questions like:
+<ul>
+<li><strong>“Which requests to the authentication service are failing?”</strong></li>
+<li><strong>“What percentage of database writes are timing out?”</strong></li>
+</ul>
+</li>
+<li>Each query provided actionable insights, leading to faster root cause identification.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="challenges-encountered-and-resolved" style="position:relative;"><a href="#challenges-encountered-and-resolved" aria-label="challenges encountered and resolved permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Challenges Encountered and Resolved</strong></h3>
+<ol>
+<li>
+<p><strong>Challenge: Retrofitting Observability into Existing Systems</strong></p>
+<ul>
+<li><strong>Problem:</strong> Many services lacked instrumentation, making it difficult to capture trace data or high-cardinality metrics.</li>
+<li><strong>Solution:</strong>
+<ul>
+<li>Parse prioritized <strong>incremental instrumentation</strong>, starting with critical services like the API gateway and database layer.</li>
+<li>Engineers gradually expanded instrumentation to other services, ensuring minimal disruption.</li>
+<li><strong>Example:</strong> Initially, only errors were traced. Over time, they added instrumentation for performance metrics and user activity.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Challenge: Cost of High-Cardinality Data</strong></p>
+<ul>
+<li><strong>Problem:</strong> Capturing and storing high-cardinality data (e.g., user IDs, request parameters) required significant storage and computational resources.</li>
+<li><strong>Solution:</strong>
+<ul>
+<li>Parse adopted <strong>dynamic sampling</strong> techniques:
+<ul>
+<li>Low-value events (e.g., successful requests) were sampled less frequently.</li>
+<li>High-value events (e.g., errors, slow requests) were captured in detail.</li>
+</ul>
+</li>
+<li><strong>Example:</strong> Only 10% of successful user logins were logged, but all failed logins were traced fully.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Challenge: Resistance to Change</strong></p>
+<ul>
+<li><strong>Problem:</strong> Some engineers were accustomed to traditional monitoring and hesitant to adopt new tools or workflows.</li>
+<li><strong>Solution:</strong>
+<ul>
+<li>Leadership emphasized the <strong>benefits of observability</strong> through success stories and hands-on workshops.</li>
+<li><strong>Example:</strong> A post-incident review highlighted how observability reduced debugging time from 4 hours to 30 minutes, demonstrating its value.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Challenge: Siloed Teams and Data</strong></p>
+<ul>
+<li><strong>Problem:</strong> Distributed systems created silos, where each team focused only on their services, leading to blind spots in debugging.</li>
+<li><strong>Solution:</strong>
+<ul>
+<li>Observability tools provided a <strong>shared source of truth</strong>, enabling cross-team collaboration.</li>
+<li><strong>Example:</strong> During a major outage, engineers from the API, database, and notification teams used a unified trace view to identify a deadlock in the database layer.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="outcomes-of-observability-implementation" style="position:relative;"><a href="#outcomes-of-observability-implementation" aria-label="outcomes of observability implementation permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Outcomes of Observability Implementation</strong></h3>
+<ol>
+<li>
+<p><strong>Faster Incident Resolution:</strong></p>
+<ul>
+<li>Debugging times dropped significantly as engineers could trace issues directly to their root causes.</li>
+<li><strong>Example:</strong> A high-latency incident in the API gateway was resolved in 15 minutes by tracing slow database queries, compared to hours with traditional monitoring.</li>
+</ul>
+</li>
+<li>
+<p><strong>Proactive Problem Identification:</strong></p>
+<ul>
+<li>Observability tools allowed Parse to identify and fix potential issues before they affected users.</li>
+<li><strong>Example:</strong> Engineers noticed increased latencies in a subset of API requests after a deploy. They rolled back the change before it escalated into a full incident.</li>
+</ul>
+</li>
+<li>
+<p><strong>Improved Team Collaboration:</strong></p>
+<ul>
+<li>Observability fostered a culture of shared ownership, where teams worked together to debug and improve system reliability.</li>
+<li><strong>Example:</strong> During a peak traffic event, engineers across teams used real-time traces to dynamically allocate resources and prevent bottlenecks.</li>
+</ul>
+</li>
+<li>
+<p><strong>Enhanced System Reliability:</strong></p>
+<ul>
+<li>By identifying and addressing systemic weaknesses, Parse reduced the frequency of outages and improved user satisfaction.</li>
+<li><strong>Example:</strong> A recurring issue with notification delivery delays was resolved permanently after observability revealed an underperforming dependency.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="key-lessons-learned" style="position:relative;"><a href="#key-lessons-learned" aria-label="key lessons learned permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Lessons Learned</strong></h3>
+<ol>
+<li>
+<p><strong>Monitoring Alone Is Not Enough:</strong></p>
+<ul>
+<li>Monitoring tools highlight symptoms but lack the depth to uncover root causes in complex systems.</li>
+<li><strong>“Monitoring told us something was wrong. Observability told us what and why.”</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Incremental Change Yields Big Results:</strong></p>
+<ul>
+<li>Retrofitting observability into legacy systems can seem daunting, but incremental improvements deliver significant value.</li>
+<li><strong>“Every new trace or log added clarity to the chaos.”</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Culture Is as Important as Tools:</strong></p>
+<ul>
+<li>Observability requires a cultural shift toward <strong>proactive debugging</strong> and <strong>continuous improvement.</strong></li>
+<li><strong>“Debugging isn’t just about fixing problems—it’s about learning and building better systems.”</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Observability is a Competitive Advantage:</strong></p>
+<ul>
+<li>Faster incident resolution, improved reliability, and better user experiences give organizations a clear edge.</li>
+<li><strong>“In the modern era, observability isn’t optional—it’s a necessity.”</strong></li>
+</ul>
+</li>
+</ol>
+<h3 id="part-ii-fundamentals-of-observability" style="position:relative;"><a href="#part-ii-fundamentals-of-observability" aria-label="part ii fundamentals of observability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Part II: Fundamentals of Observability</strong></h3>
+<h4 id="5-structured-events-building-blocks-of-observability" style="position:relative;"><a href="#5-structured-events-building-blocks-of-observability" aria-label="5 structured events building blocks of observability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>5. Structured Events: Building Blocks of Observability</strong></h4>
+<p>Structured events form the foundation of modern observability systems, enabling teams to debug and understand their systems effectively. This section delves into the importance of structured events, their unique advantages, and how they address the limitations of traditional metrics and logs.</p>
+<hr>
+<h3 id="why-structured-events-are-essential" style="position:relative;"><a href="#why-structured-events-are-essential" aria-label="why structured events are essential permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Why Structured Events Are Essential</strong></h3>
+<p>Structured events provide <strong>rich, contextual telemetry data</strong> that enables engineers to understand the behavior of their systems with unprecedented depth and clarity.</p>
+<hr>
+<p><strong>1. Capturing Detailed Context:</strong></p>
+<ul>
+<li>Structured events include <strong>key-value pairs</strong> that encapsulate all relevant information about a specific event in your system.</li>
+<li><strong>Example:</strong> A structured event for an API request might include:
+<ul>
+<li><code class="language-text">timestamp</code>: <code class="language-text">2024-12-26T15:30:00Z</code></li>
+<li><code class="language-text">user_id</code>: <code class="language-text">12345</code></li>
+<li><code class="language-text">endpoint</code>: <code class="language-text">/checkout</code></li>
+<li><code class="language-text">status_code</code>: <code class="language-text">200</code></li>
+<li><code class="language-text">latency_ms</code>: <code class="language-text">125</code></li>
+<li><code class="language-text">transaction_id</code>: <code class="language-text">txn-98765</code></li>
+</ul>
+</li>
+<li><strong>“Unlike traditional metrics or logs, structured events tell the full story of what happened, when, and why, all in a single data object.”</strong></li>
+</ul>
+<hr>
+<p><strong>2. High Cardinality and Dimensionality:</strong></p>
+<ul>
+<li>Structured events can handle <strong>high-cardinality data</strong> (e.g., unique user IDs or transaction IDs) and include hundreds of dimensions (key-value pairs).</li>
+<li><strong>Example:</strong> In a distributed e-commerce system, structured events can track:
+<ul>
+<li>Specific user actions (e.g., <code class="language-text">add_to_cart</code>, <code class="language-text">checkout</code>).</li>
+<li>Unique product IDs involved in transactions.</li>
+<li>Payment gateway responses.</li>
+</ul>
+</li>
+<li><strong>“Structured events unlock granular insights that are impossible to capture with metrics or logs alone.”</strong></li>
+</ul>
+<hr>
+<p><strong>3. Flexible Querying and Debugging:</strong></p>
+<ul>
+<li>Structured events allow engineers to query their systems in <strong>real time</strong>, asking open-ended questions without needing predefined dashboards.</li>
+<li><strong>Example:</strong> If a subset of users is experiencing slow response times, engineers can:
+<ul>
+<li>Query for events with <code class="language-text">latency_ms > 500</code>.</li>
+<li>Filter by <code class="language-text">user_region = EU</code>.</li>
+<li>Correlate with <code class="language-text">deployment_version = v1.2.3</code>.</li>
+</ul>
+</li>
+<li><strong>“This flexibility enables hypothesis-driven debugging, where every answer leads to a new question until the root cause is found.”</strong></li>
+</ul>
+<hr>
+<p><strong>4. Enabling Distributed Tracing:</strong></p>
+<ul>
+<li>Structured events are critical for stitching together <strong>distributed traces</strong>, where a single user request spans multiple services.</li>
+<li><strong>Example:</strong> A trace for a user checkout process might combine structured events from:
+<ul>
+<li>The frontend service (capturing the user’s request).</li>
+<li>The backend API (processing payment details).</li>
+<li>The database (logging transaction details).</li>
+</ul>
+</li>
+<li><strong>“With structured events, you can reconstruct the journey of any request across your entire system.”</strong></li>
+</ul>
+<hr>
+<h3 id="limitations-of-traditional-metrics-and-logs" style="position:relative;"><a href="#limitations-of-traditional-metrics-and-logs" aria-label="limitations of traditional metrics and logs permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Limitations of Traditional Metrics and Logs</strong></h3>
+<p>Before structured events became widespread, teams relied heavily on <strong>metrics</strong> and <strong>logs</strong> for system monitoring and debugging. While these tools served their purpose in simpler systems, they fail to meet the demands of modern distributed architectures.</p>
+<hr>
+<p><strong>1. Metrics: Aggregate Data Without Context</strong></p>
+<ul>
+<li><strong>Definition of Metrics:</strong>
+<ul>
+<li>Metrics are <strong>predefined numerical measurements</strong>, such as CPU utilization, request counts, or average latency.</li>
+<li>Metrics are often aggregated over time (e.g., 1-minute averages).</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>Key Limitations of Metrics:</strong></p>
+<ol>
+<li>
+<p><strong>Loss of Granularity:</strong></p>
+<ul>
+<li>Metrics provide high-level summaries but lack details about individual events.</li>
+<li><strong>Example:</strong> A metric might show an average latency of 200ms, but it doesn’t reveal:
+<ul>
+<li>Which users experienced slow responses.</li>
+<li>Which endpoints were slow.</li>
+<li>Whether the issue was caused by a specific database query.</li>
+</ul>
+</li>
+<li><strong>“Metrics reduce system behavior to broad averages, hiding the individual outliers that often signal critical problems.”</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Low Cardinality:</strong></p>
+<ul>
+<li>Metrics cannot handle high-cardinality data effectively.</li>
+<li><strong>Example:</strong> Tracking latency by <code class="language-text">user_id</code> or <code class="language-text">transaction_id</code> is impractical with metrics because it generates too many unique combinations.</li>
+<li><strong>“When metrics hit their cardinality limits, they force you to sacrifice insight for performance.”</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Predefined Use Cases:</strong></p>
+<ul>
+<li>Metrics are <strong>static and reactive</strong>, requiring predefined thresholds and aggregation rules.</li>
+<li><strong>Example:</strong> If you didn’t predict that database query timeouts would cause latency spikes, your metrics won’t capture this information.</li>
+<li><strong>“Metrics can only answer questions you thought to ask in advance.”</strong></li>
+</ul>
+</li>
+</ol>
+<hr>
+<p><strong>2. Logs: Unstructured Data Without Insights</strong></p>
+<ul>
+<li><strong>Definition of Logs:</strong>
+<ul>
+<li>Logs are <strong>unstructured text entries</strong> that record specific events or system outputs.</li>
+<li><strong>Example:</strong> A log entry might read:
+<ul>
+<li><code class="language-text">2024-12-26T15:30:00Z INFO: User 12345 completed checkout with status 200.</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>Key Limitations of Logs:</strong></p>
+<ol>
+<li>
+<p><strong>Unstructured and Hard to Query:</strong></p>
+<ul>
+<li>Logs are freeform text, making them difficult to query and analyze programmatically.</li>
+<li><strong>Example:</strong> Searching logs for failed checkouts might require writing <strong>complex regex patterns</strong> to parse relevant details.</li>
+<li><strong>“Logs are like a haystack where every needle looks different—finding the right one can take hours.”</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>High Storage Costs:</strong></p>
+<ul>
+<li>Logs generate enormous volumes of data, much of which is redundant or irrelevant.</li>
+<li><strong>Example:</strong> Logging every API call and database query for a high-traffic application can quickly overwhelm storage systems.</li>
+<li><strong>“Teams often face a trade-off: either log everything and pay the cost or log selectively and risk missing critical details.”</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Limited Correlation Across Systems:</strong></p>
+<ul>
+<li>Logs from different services are disconnected, making it hard to trace events across a distributed architecture.</li>
+<li><strong>Example:</strong> If a request fails in the API gateway, you must manually correlate logs from downstream services to understand the failure.</li>
+<li><strong>“Logs provide fragments of the story but rarely reveal the full picture.”</strong></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="how-structured-events-solve-these-issues" style="position:relative;"><a href="#how-structured-events-solve-these-issues" aria-label="how structured events solve these issues permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>How Structured Events Solve These Issues</strong></h3>
+<ol>
+<li>
+<p><strong>Unified Data Representation:</strong></p>
+<ul>
+<li>Unlike metrics (numerical) and logs (textual), structured events combine the <strong>contextual richness of logs</strong> with the <strong>quantifiable precision of metrics</strong>.</li>
+<li><strong>“Structured events give you the best of both worlds: detailed, actionable data in a machine-readable format.”</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Dynamic and Real-Time Insights:</strong></p>
+<ul>
+<li>Structured events are captured for every action, enabling <strong>real-time exploration</strong> of system behavior.</li>
+<li><strong>Example:</strong> If user <code class="language-text">12345</code> reports a slow checkout, you can query for all structured events related to that user in seconds.</li>
+<li><strong>“With structured events, you don’t need to predict every failure—you can debug any issue as it arises.”</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Built for Distributed Systems:</strong></p>
+<ul>
+<li>Structured events include trace IDs and span IDs, making it easy to follow requests across multiple services.</li>
+<li><strong>Example:</strong> A distributed trace might include:
+<ul>
+<li>An API request event from the frontend.</li>
+<li>A database query event from the backend.</li>
+<li>A cache miss event from the caching layer.</li>
+</ul>
+</li>
+<li><strong>“Structured events stitch together the entire journey of a request, no matter how many services it touches.”</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Scalability and Performance:</strong></p>
+<ul>
+<li>Modern observability platforms are optimized to store and query structured events at scale, addressing the limitations of logs and metrics.</li>
+<li><strong>“Structured events let you retain high-cardinality, high-dimensionality data without breaking your systems or budget.”</strong></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="part-ii-fundamentals-of-observability-1" style="position:relative;"><a href="#part-ii-fundamentals-of-observability-1" aria-label="part ii fundamentals of observability 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Part II: Fundamentals of Observability</strong></h1>
+<h2 id="structured-events-building-blocks-of-observability" style="position:relative;"><a href="#structured-events-building-blocks-of-observability" aria-label="structured events building blocks of observability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Structured Events: Building Blocks of Observability</strong></h2>
+<p>Structured events are critical for modern observability, offering unparalleled visibility into system behavior. Unlike traditional telemetry approaches, structured events provide rich, contextual, machine-readable data that can adapt to the dynamic complexity of distributed systems.</p>
+<hr>
+<h3 id="why-structured-events-are-essential-1" style="position:relative;"><a href="#why-structured-events-are-essential-1" aria-label="why structured events are essential 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Why Structured Events Are Essential</strong></h3>
+<p>Structured events are central to observability because they provide a <strong>single source of truth</strong> for understanding what’s happening in a system. Here’s an expanded exploration of their importance:</p>
+<hr>
+<p><strong>1. Comprehensive Context: Capturing the Complete Picture</strong></p>
+<ul>
+<li>
+<p><strong>What They Are:</strong></p>
+<ul>
+<li>Structured events are records of significant actions in a system, described using <strong>key-value pairs</strong>. These pairs can include timestamps, user identifiers, system states, and more.</li>
+</ul>
+</li>
+<li>
+<p><strong>Example:</strong></p>
+<ul>
+<li>A structured event for an API request might include:
+<div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"timestamp"</span><span class="token operator">:</span> <span class="token string">"2024-12-26T15:30:00Z"</span><span class="token punctuation">,</span>
+  <span class="token property">"user_id"</span><span class="token operator">:</span> <span class="token string">"12345"</span><span class="token punctuation">,</span>
+  <span class="token property">"endpoint"</span><span class="token operator">:</span> <span class="token string">"/checkout"</span><span class="token punctuation">,</span>
+  <span class="token property">"method"</span><span class="token operator">:</span> <span class="token string">"POST"</span><span class="token punctuation">,</span>
+  <span class="token property">"status_code"</span><span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+  <span class="token property">"latency_ms"</span><span class="token operator">:</span> <span class="token number">125</span><span class="token punctuation">,</span>
+  <span class="token property">"transaction_id"</span><span class="token operator">:</span> <span class="token string">"txn-98765"</span><span class="token punctuation">,</span>
+  <span class="token property">"service_name"</span><span class="token operator">:</span> <span class="token string">"payment-service"</span><span class="token punctuation">,</span>
+  <span class="token property">"deployment_version"</span><span class="token operator">:</span> <span class="token string">"v1.2.3"</span>
+<span class="token punctuation">}</span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Why This Matters:</strong></p>
+<ul>
+<li><strong>“Unlike metrics, which summarize data, or logs, which are freeform text, structured events provide all the details of an event in a format that’s both human-readable and machine-queryable.”</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>2. High Cardinality Unlocks Granular Insights</strong></p>
+<ul>
+<li>
+<p><strong>What is Cardinality?</strong></p>
+<ul>
+<li>Cardinality refers to the <strong>uniqueness of data</strong> in a dataset. High-cardinality data includes values like user IDs, session tokens, or unique transaction identifiers.</li>
+</ul>
+</li>
+<li>
+<p><strong>Challenges in Traditional Tools:</strong></p>
+<ul>
+<li><strong>Metrics:</strong> Tracking individual user requests (e.g., <code class="language-text">user_id: 12345</code>) or requests tied to specific transactions (<code class="language-text">txn_id</code>) is impractical because of the vast number of unique combinations.</li>
+<li><strong>Logs:</strong> While logs may capture unique identifiers, searching and correlating them across services becomes a manual, time-intensive process.</li>
+</ul>
+</li>
+<li>
+<p><strong>How Structured Events Help:</strong></p>
+<ul>
+<li><strong>Example:</strong>
+<ul>
+<li>When debugging a latency spike for a user, you can:
+<ul>
+<li>Filter structured events by <code class="language-text">user_id</code> to find all requests made by that user.</li>
+<li>Correlate these events with deployment versions or server instances to pinpoint the source of the issue.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>“Structured events make high-cardinality data easy to query and analyze, turning individual events into actionable insights.”</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>3. Dimensionality Enables Rich Queries</strong></p>
+<ul>
+<li>
+<p><strong>What is Dimensionality?</strong></p>
+<ul>
+<li>Dimensionality refers to the number of attributes (or key-value pairs) recorded for each event.</li>
+</ul>
+</li>
+<li>
+<p><strong>Why Dimensionality Matters:</strong></p>
+<ul>
+<li>The more dimensions an event captures, the more ways you can slice and dice your data to investigate issues.</li>
+</ul>
+</li>
+<li>
+<p><strong>Example of Dimensional Queries:</strong></p>
+<ul>
+<li>Query: <strong>“Show all events where <code class="language-text">endpoint=/checkout</code>, <code class="language-text">status_code=500</code>, and <code class="language-text">deployment_version=v1.2.3</code>.”</strong></li>
+<li>Query: <strong>“Filter all requests with <code class="language-text">latency_ms > 500</code> in the <code class="language-text">EU</code> region made by users with premium accounts.”</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Impact:</strong></p>
+<ul>
+<li><strong>“Structured events transform raw data into a flexible, queryable system, enabling engineers to investigate problems from any angle.”</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>4. Real-Time and Iterative Debugging</strong></p>
+<ul>
+<li>
+<p><strong>Traditional Monitoring vs. Observability:</strong></p>
+<ul>
+<li>Monitoring relies on <strong>predefined dashboards</strong> with fixed thresholds. If a problem arises outside these parameters, engineers must wait until it recurs to set up new metrics or alerts.</li>
+<li>Observability, with structured events, allows for <strong>real-time queries</strong>, supporting iterative debugging without prior setup.</li>
+</ul>
+</li>
+<li>
+<p><strong>Example:</strong></p>
+<ul>
+<li>During an incident, structured events enable engineers to:
+<ol>
+<li>Query all requests with <code class="language-text">status_code=500</code> in the last hour.</li>
+<li>Filter by <code class="language-text">service_name=payment-service</code> to isolate problematic requests.</li>
+<li>Drill down by <code class="language-text">user_id</code> or <code class="language-text">transaction_id</code> to investigate specific failures.</li>
+</ol>
+</li>
+<li><strong>“Structured events make debugging a dynamic, exploratory process, rather than a static, predefined exercise.”</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>5. Enabling Distributed Tracing</strong></p>
+<ul>
+<li>
+<p><strong>What is Distributed Tracing?</strong></p>
+<ul>
+<li>Distributed tracing ties together structured events from multiple services to show the journey of a single request through a system.</li>
+</ul>
+</li>
+<li>
+<p><strong>Example Trace:</strong></p>
+<ul>
+<li>A user checkout request might generate structured events across:
+<ol>
+<li><strong>Frontend Service:</strong> Logs the user request and generates a unique trace ID.</li>
+<li><strong>Payment Service:</strong> Processes the payment and adds transaction metadata.</li>
+<li><strong>Notification Service:</strong> Sends a confirmation email to the user.</li>
+</ol>
+</li>
+<li><strong>“With structured events, you can stitch these events into a trace, revealing the exact path, latency, and failures in a multi-service workflow.”</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="limitations-of-traditional-metrics-and-logs-1" style="position:relative;"><a href="#limitations-of-traditional-metrics-and-logs-1" aria-label="limitations of traditional metrics and logs 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Limitations of Traditional Metrics and Logs</strong></h3>
+<p>Structured events arose in response to the inherent shortcomings of metrics and logs, which struggle to meet the demands of modern distributed systems.</p>
+<hr>
+<p><strong>1. Metrics: Aggregates Without Details</strong></p>
+<ul>
+<li>
+<p><strong>What Metrics Offer:</strong></p>
+<ul>
+<li>Metrics summarize system behavior using numerical values (e.g., CPU usage, request counts, error rates) aggregated over time.</li>
+</ul>
+</li>
+<li>
+<p><strong>Limitations of Metrics:</strong></p>
+<ol>
+<li><strong>Loss of Granularity:</strong>
+<ul>
+<li><strong>“Metrics only tell you what happened, not why or to whom.”</strong></li>
+<li><strong>Example:</strong> A dashboard might show a spike in error rates but won’t identify which requests or users were affected.</li>
+</ul>
+</li>
+<li><strong>Low Cardinality:</strong>
+<ul>
+<li>Metrics struggle with unique identifiers like <code class="language-text">user_id</code> or <code class="language-text">transaction_id</code>.</li>
+<li><strong>Example:</strong> You can monitor average latency but can’t track latency for a specific user.</li>
+</ul>
+</li>
+<li><strong>Predefined Use Cases:</strong>
+<ul>
+<li>Metrics require predefined thresholds (e.g., alert if latency > 500ms), making them reactive rather than exploratory.</li>
+<li><strong>“Metrics are excellent for known-unknowns but fall short for unknown-unknowns.”</strong></li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<hr>
+<p><strong>2. Logs: Unstructured and Difficult to Correlate</strong></p>
+<ul>
+<li>
+<p><strong>What Logs Offer:</strong></p>
+<ul>
+<li>Logs record raw text messages about events, such as error messages or status updates.</li>
+</ul>
+</li>
+<li>
+<p><strong>Limitations of Logs:</strong></p>
+<ol>
+<li><strong>Unstructured and Hard to Query:</strong>
+<ul>
+<li>Searching logs often requires complex regex patterns or manual correlation.</li>
+<li><strong>Example:</strong> Debugging a specific user’s error requires scanning logs across services for matching <code class="language-text">user_id</code>.</li>
+</ul>
+</li>
+<li><strong>Siloed Data:</strong>
+<ul>
+<li>Logs are fragmented across services, making cross-service correlation difficult.</li>
+<li><strong>Example:</strong> Tracking a user request across services requires stitching together unrelated log entries manually.</li>
+</ul>
+</li>
+<li><strong>High Storage Costs:</strong>
+<ul>
+<li>Logs generate significant storage overhead, making comprehensive logging prohibitively expensive.</li>
+<li><strong>“Teams must choose between logging everything (at high cost) or risking gaps in visibility.”</strong></li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h3 id="how-structured-events-solve-these-issues-1" style="position:relative;"><a href="#how-structured-events-solve-these-issues-1" aria-label="how structured events solve these issues 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>How Structured Events Solve These Issues</strong></h3>
+<p><strong>1. Unified Data Model:</strong></p>
+<ul>
+<li>Structured events combine the <strong>contextual richness of logs</strong> with the <strong>efficiency and structure of metrics</strong>.</li>
+<li><strong>“A single structured event captures everything you need to debug an issue, without the noise or limitations of logs and metrics.”</strong></li>
+</ul>
+<p><strong>2. Real-Time Correlation:</strong></p>
+<ul>
+<li>Structured events link with trace IDs and span IDs, enabling seamless correlation across services.</li>
+<li><strong>“You no longer need to manually stitch together data—structured events do it for you.”</strong></li>
+</ul>
+<p><strong>3. Cost-Effective Storage:</strong></p>
+<ul>
+<li>Observability platforms optimize storage for structured events, supporting high-cardinality, high-dimensionality data without breaking budgets.</li>
+<li><strong>Example:</strong> Use dynamic sampling to capture full details for critical events while summarizing less relevant ones.</li>
+</ul>
+<hr>
 <h1 id="references" style="position:relative;"><a href="#references" aria-label="references permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>References</h1>
 <ul>
 <li><a href="https://github.com/keyvanakbary/learning-notes/blob/master/books/distributed-systems-observability.md">https://github.com/keyvanakbary/learning-notes/blob/master/books/distributed-systems-observability.md</a></li>
 <li><a href="https://github.com/LauraBeatris/observability-notebook/">https://github.com/LauraBeatris/observability-notebook/</a></li>
-</ul></section><hr/><footer><div class="bio"><div data-gatsby-image-wrapper="" style="width:50px;height:50px" class="gatsby-image-wrapper bio-avatar"><div aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear;background-color:#685848;width:50px;height:50px;position:relative"></div><picture><source type="image/avif" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/d4bf4/tony-avatar.avif 50w,/static/b811602c8c8ce14b66aae6613c8968f4/ee81f/tony-avatar.avif 100w" sizes="50px"/><source type="image/webp" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/3faea/tony-avatar.webp 50w,/static/b811602c8c8ce14b66aae6613c8968f4/6a679/tony-avatar.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="opacity:0" sizes="50px" decoding="async" loading="lazy" data-src="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg 50w,/static/b811602c8c8ce14b66aae6613c8968f4/64618/tony-avatar.jpg 100w" alt="Profile picture"/></picture><noscript><picture><source type="image/avif" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/d4bf4/tony-avatar.avif 50w,/static/b811602c8c8ce14b66aae6613c8968f4/ee81f/tony-avatar.avif 100w" sizes="50px"/><source type="image/webp" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/3faea/tony-avatar.webp 50w,/static/b811602c8c8ce14b66aae6613c8968f4/6a679/tony-avatar.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="opacity:0" sizes="50px" decoding="async" loading="lazy" src="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg 50w,/static/b811602c8c8ce14b66aae6613c8968f4/64618/tony-avatar.jpg 100w" alt="Profile picture"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><p>Written by <strong>Tony Vo</strong> <!-- -->father, husband, son and software developer<!-- --> <a href="https://twitter.com/ttrungvo">Twitter</a></p></div></footer></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/system-performance-summary/">← <!-- -->system performance summary - wip</a></li><li><a rel="next" href="/site-reliability-engineer-summary/">site reliability engineering by Chris Jones summary - wip<!-- --> →</a></li></ul></nav><div><div id="disqus_thread"></div></div></main><footer>© <!-- -->2024<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.com">Gatsby</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/observability-engineer-summary/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+</ul></section><hr/><footer><div class="bio"><div data-gatsby-image-wrapper="" style="width:50px;height:50px" class="gatsby-image-wrapper bio-avatar"><div aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear;background-color:#685848;width:50px;height:50px;position:relative"></div><picture><source type="image/avif" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/d4bf4/tony-avatar.avif 50w,/static/b811602c8c8ce14b66aae6613c8968f4/ee81f/tony-avatar.avif 100w" sizes="50px"/><source type="image/webp" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/3faea/tony-avatar.webp 50w,/static/b811602c8c8ce14b66aae6613c8968f4/6a679/tony-avatar.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="opacity:0" sizes="50px" decoding="async" loading="lazy" data-src="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg 50w,/static/b811602c8c8ce14b66aae6613c8968f4/64618/tony-avatar.jpg 100w" alt="Profile picture"/></picture><noscript><picture><source type="image/avif" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/d4bf4/tony-avatar.avif 50w,/static/b811602c8c8ce14b66aae6613c8968f4/ee81f/tony-avatar.avif 100w" sizes="50px"/><source type="image/webp" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/3faea/tony-avatar.webp 50w,/static/b811602c8c8ce14b66aae6613c8968f4/6a679/tony-avatar.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="opacity:0" sizes="50px" decoding="async" loading="lazy" src="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg 50w,/static/b811602c8c8ce14b66aae6613c8968f4/64618/tony-avatar.jpg 100w" alt="Profile picture"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><p>Written by <strong>Tony Vo</strong> <!-- -->father, husband, son and software developer<!-- --> <a href="https://twitter.com/ttrungvo">Twitter</a></p></div></footer></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/data-intensive-system-perf/">← <!-- -->design data intensive applications by Martin Kleppmann summary - wip</a></li><li><a rel="next" href="/building-second-brain/">building the second brain by Tiago Forte summary<!-- --> →</a></li></ul></nav><div><div id="disqus_thread"></div></div></main><footer>© <!-- -->2024<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.com">Gatsby</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/observability-engineer-summary/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
             id="gatsby-chunk-mapping"
           >
