@@ -1344,6 +1344,26 @@
 </ul>
 </li>
 <li>
+<p><a href="#disks"><strong>Disks</strong></a></p>
+<ul>
+<li><a href="#storage-architecture-and-performance-concepts"><strong>Storage Architecture and Performance Concepts</strong></a></li>
+<li><a href="#tools-for-disk-performance-monitoring"><strong>Tools for Disk Performance Monitoring</strong></a></li>
+<li><a href="#tuning-techniques-for-disk-io-workloads"><strong>Tuning Techniques for Disk I/O Workloads</strong></a></li>
+<li><a href="#examples-and-use-cases"><strong>Examples and Use Cases</strong></a></li>
+<li><a href="#key-takeaways-9"><strong>Key Takeaways</strong>:</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#networking"><strong>Networking</strong></a></p>
+<ul>
+<li><a href="#networking-concepts-protocols-latency-and-congestion"><strong>Networking Concepts: Protocols, Latency, and Congestion</strong></a></li>
+<li><a href="#observability-tools-for-networking"><strong>Observability Tools for Networking</strong></a></li>
+<li><a href="#network-performance-tuning-and-optimization"><strong>Network Performance Tuning and Optimization</strong></a></li>
+<li><a href="#examples-and-case-studies"><strong>Examples and Case Studies</strong></a></li>
+<li><a href="#key-highlights-1"><strong>Key Highlights</strong>:</a></li>
+</ul>
+</li>
+<li>
 <p><a href="#chapter-16-case-study"><strong>Chapter 16: Case Study</strong></a></p>
 <ul>
 <li>
@@ -1443,7 +1463,7 @@
 </ul>
 </li>
 <li>
-<p><a href="#key-takeaways-9"><strong>Key Takeaways</strong></a></p>
+<p><a href="#key-takeaways-10"><strong>Key Takeaways</strong></a></p>
 </li>
 </ul>
 </li>
@@ -1490,7 +1510,7 @@
 </ul>
 </li>
 <li>
-<p><a href="#key-takeaways-10"><strong>Key Takeaways</strong></a></p>
+<p><a href="#key-takeaways-11"><strong>Key Takeaways</strong></a></p>
 </li>
 </ul>
 </li>
@@ -1632,7 +1652,7 @@
 <p><a href="#1225-comparison-of-benchmark-types"><strong>12.2.5 Comparison of Benchmark Types</strong></a></p>
 </li>
 <li>
-<p><a href="#key-takeaways-11"><strong>Key Takeaways</strong></a></p>
+<p><a href="#key-takeaways-12"><strong>Key Takeaways</strong></a></p>
 </li>
 </ul>
 </li>
@@ -1694,7 +1714,7 @@
 </ul>
 </li>
 <li>
-<p><a href="#key-takeaways-12"><strong>Key Takeaways</strong></a></p>
+<p><a href="#key-takeaways-13"><strong>Key Takeaways</strong></a></p>
 </li>
 </ul>
 </li>
@@ -1745,7 +1765,7 @@
 </ul>
 </li>
 <li>
-<p><a href="#key-takeaways-13"><strong>Key Takeaways</strong></a></p>
+<p><a href="#key-takeaways-14"><strong>Key Takeaways</strong></a></p>
 </li>
 </ul>
 </li>
@@ -1817,7 +1837,7 @@
 </ul>
 </li>
 <li>
-<p><a href="#key-takeaways-14"><strong>Key Takeaways</strong></a></p>
+<p><a href="#key-takeaways-15"><strong>Key Takeaways</strong></a></p>
 </li>
 </ul>
 </li>
@@ -1888,7 +1908,7 @@
 </ul>
 </li>
 <li>
-<p><a href="#key-takeaways-15"><strong>Key Takeaways</strong></a></p>
+<p><a href="#key-takeaways-16"><strong>Key Takeaways</strong></a></p>
 </li>
 </ul>
 </li>
@@ -9210,6 +9230,851 @@ Displays the files accessed by applications.</li>
 <li><strong>“Observability tools like <code class="language-text">iostat</code> and <code class="language-text">sar</code> empower real-time insights and historical trend analysis.”</strong></li>
 <li><strong>“Optimizing mount options, scheduler settings, and caching parameters can drastically improve scalability.”</strong></li>
 </ul>
+<h1 id="disks" style="position:relative;"><a href="#disks" aria-label="disks permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Disks</strong></h1>
+<hr>
+<h2 id="storage-architecture-and-performance-concepts" style="position:relative;"><a href="#storage-architecture-and-performance-concepts" aria-label="storage architecture and performance concepts permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Storage Architecture and Performance Concepts</strong></h2>
+<ol>
+<li>
+<p><strong>Fundamentals of Storage Architecture</strong>:</p>
+<ul>
+<li><strong>Hard Disk Drives (HDDs)</strong>:
+<ul>
+<li>Built with spinning magnetic platters and a mechanical arm (actuator) for reading/writing data.</li>
+<li><strong>Performance Traits</strong>:
+<ul>
+<li>Latency driven by <strong>seek time</strong> and <strong>rotational delay</strong>.</li>
+<li>Best suited for <strong>sequential access workloads</strong> (e.g., log storage, media files).</li>
+<li>Throughput limited to <strong>~100-200 MB/s</strong> on average.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Solid-State Drives (SSDs)</strong>:
+<ul>
+<li>No moving parts, relying on NAND flash memory for data storage.</li>
+<li><strong>Performance Traits</strong>:
+<ul>
+<li>Offers <strong>microsecond-level latency</strong> and high IOPS.</li>
+<li>Ideal for random read/write workloads such as <strong>databases</strong>.</li>
+<li>Sequential throughput exceeds <strong>500 MB/s</strong> (SATA) and <strong>3500 MB/s</strong> (NVMe).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>NVMe Drives</strong>:
+<ul>
+<li>SSDs optimized for PCIe interfaces, bypassing traditional storage controllers.</li>
+<li><strong>Performance Advantages</strong>:
+<ul>
+<li>Up to <strong>7 GB/s throughput</strong> and <strong>millions of IOPS</strong>.</li>
+<li>Designed for latency-sensitive applications like <strong>AI/ML workloads</strong> and <strong>high-performance databases</strong>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Disk Interfaces</strong>:</p>
+<ul>
+<li><strong>SATA (Serial ATA)</strong>:
+<ul>
+<li>Standard for consumer SSDs/HDDs.</li>
+<li>Maximum speed: <strong>6 Gbps (~600 MB/s)</strong>.</li>
+</ul>
+</li>
+<li><strong>SAS (Serial Attached SCSI)</strong>:
+<ul>
+<li>Enterprise-grade interface offering better reliability and throughput than SATA.</li>
+<li>Speed: <strong>12 Gbps (~1.2 GB/s)</strong>.</li>
+</ul>
+</li>
+<li><strong>PCIe/NVMe</strong>:
+<ul>
+<li>Next-generation interface for SSDs, allowing direct communication with the CPU.</li>
+<li>Speeds range from <strong>8 GB/s to 16 GB/s</strong>, depending on PCIe version.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Caching in Disk Systems</strong>:</p>
+<ul>
+<li><strong>Write-Back Cache</strong>:
+<ul>
+<li>Data temporarily stored in RAM before being written to the disk.</li>
+<li><strong>Example</strong>:
+<ul>
+<li>A database server writes transactions to cache, batching them for disk writes to reduce I/O overhead.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Read Cache</strong>:
+<ul>
+<li>Frequently accessed data is preloaded into memory.</li>
+<li><strong>Example</strong>:
+<ul>
+<li>In a web server, popular static assets like images benefit from read caching, reducing repetitive disk accesses.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>RAID Configurations</strong>:</p>
+<ul>
+<li>Balances redundancy and performance by combining multiple disks:
+<ul>
+<li><strong>RAID 0 (Striping)</strong>:
+<ul>
+<li>Splits data across multiple disks for higher throughput but offers no fault tolerance.</li>
+<li>Use Case: Video editing or large-scale read operations.</li>
+</ul>
+</li>
+<li><strong>RAID 1 (Mirroring)</strong>:
+<ul>
+<li>Duplicates data across disks for redundancy.</li>
+<li>Use Case: Critical systems requiring high availability.</li>
+</ul>
+</li>
+<li><strong>RAID 10</strong>:
+<ul>
+<li>Combines RAID 0 and RAID 1 for fault tolerance and performance.</li>
+<li>Use Case: High-performance transactional databases.</li>
+</ul>
+</li>
+<li><strong>RAID 5/6</strong>:
+<ul>
+<li>Offers redundancy with parity but slower write performance.</li>
+<li>Use Case: Large archival systems or backup solutions.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="tools-for-disk-performance-monitoring" style="position:relative;"><a href="#tools-for-disk-performance-monitoring" aria-label="tools for disk performance monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Tools for Disk Performance Monitoring</strong></h2>
+<ol>
+<li>
+<p><strong><code class="language-text">iostat</code></strong>:</p>
+<ul>
+<li><strong>Purpose</strong>:
+<ul>
+<li>Provides I/O statistics for devices and partitions.</li>
+</ul>
+</li>
+<li><strong>Key Metrics</strong>:
+<ul>
+<li><strong>%util</strong>: Percentage of time the disk is busy.</li>
+<li><strong>await</strong>: Average wait time for I/O requests in milliseconds.</li>
+<li><strong>r/s, w/s</strong>: Read/write operations per second.</li>
+</ul>
+</li>
+<li><strong>Example Usage</strong>:
+<ul>
+<li>Real-time monitoring:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">iostat -dx 1</code></pre></div>
+</li>
+<li>Output Breakdown:
+<ul>
+<li><strong>Device</strong>: <code class="language-text">/dev/sda</code>.</li>
+<li><strong>r/s</strong>: 150 (150 read ops per second).</li>
+<li><strong>await</strong>: 20 ms (average latency).</li>
+</ul>
+</li>
+<li><strong>Interpretation</strong>:
+<ul>
+<li>High <strong>%util</strong> (>80%) and <strong>await</strong> (>10 ms) indicate potential I/O bottlenecks.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="language-text">blktrace</code></strong>:</p>
+<ul>
+<li><strong>Purpose</strong>:
+<ul>
+<li>Captures and analyzes low-level block I/O events for detailed performance insights.</li>
+</ul>
+</li>
+<li><strong>Key Capabilities</strong>:
+<ul>
+<li>Tracks queue depth, I/O latency, and device utilization.</li>
+</ul>
+</li>
+<li><strong>Example Usage</strong>:
+<ul>
+<li>Start tracing:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">blktrace -d /dev/sda -o trace</code></pre></div>
+</li>
+<li>Analyze results:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">blkparse trace</code></pre></div>
+</li>
+</ul>
+</li>
+<li><strong>Use Case</strong>:
+<ul>
+<li>Detect misaligned partitioning causing high read/write latencies.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="language-text">fio</code> (Flexible I/O Tester)</strong>:</p>
+<ul>
+<li><strong>Purpose</strong>:
+<ul>
+<li>Simulates I/O workloads to benchmark and stress test storage devices.</li>
+</ul>
+</li>
+<li><strong>Example Usage</strong>:
+<ul>
+<li>Sequential read test with 4 KB block size:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">fio --name=test --rw=read --bs=4k --size=1G --numjobs=4 --ioengine=libaio</code></pre></div>
+</li>
+<li>Results include:
+<ul>
+<li>IOPS: 100,000</li>
+<li>Latency: 1.5 ms</li>
+</ul>
+</li>
+<li><strong>Interpretation</strong>:
+<ul>
+<li>Confirms the suitability of an NVMe SSD for a high-read application workload.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="language-text">smartctl</code></strong>:</p>
+<ul>
+<li><strong>Purpose</strong>:
+<ul>
+<li>Monitors disk health using S.M.A.R.T. attributes.</li>
+</ul>
+</li>
+<li><strong>Example Usage</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">smartctl -a /dev/sda</code></pre></div>
+<ul>
+<li>Key outputs:
+<ul>
+<li><strong>Reallocated Sector Count</strong>: Indicator of bad sectors.</li>
+<li><strong>Power-On Hours</strong>: Total operating time.</li>
+</ul>
+</li>
+<li><strong>Interpretation</strong>:
+<ul>
+<li>A high reallocated sector count suggests impending drive failure.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Visualization</strong>:</p>
+<ul>
+<li>Integrate metrics into tools like <strong>Grafana</strong> or <strong>Prometheus</strong> for real-time dashboards:
+<ul>
+<li><strong>Latency Heatmaps</strong>:
+<ul>
+<li>Show latency distribution to detect outliers.</li>
+</ul>
+</li>
+<li><strong>Throughput Graphs</strong>:
+<ul>
+<li>Monitor sustained read/write performance trends.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="tuning-techniques-for-disk-io-workloads" style="position:relative;"><a href="#tuning-techniques-for-disk-io-workloads" aria-label="tuning techniques for disk io workloads permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Tuning Techniques for Disk I/O Workloads</strong></h2>
+<ol>
+<li>
+<p><strong>Optimizing I/O Scheduler</strong>:</p>
+<ul>
+<li>Modern Linux systems provide multiple I/O schedulers:
+<ul>
+<li><strong>noop</strong>:
+<ul>
+<li>Minimal overhead; best for SSDs or NVMe drives.</li>
+</ul>
+</li>
+<li><strong>deadline</strong>:
+<ul>
+<li>Reduces latency by prioritizing I/O requests with deadlines.</li>
+</ul>
+</li>
+<li><strong>cfq</strong>:
+<ul>
+<li>Balances fairness and throughput; suitable for mixed workloads.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Example</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">echo "deadline" > /sys/block/sda/queue/scheduler</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Adjusting Read-Ahead</strong>:</p>
+<ul>
+<li><strong>Purpose</strong>:
+<ul>
+<li>Configures how much data is preloaded during sequential reads.</li>
+</ul>
+</li>
+<li><strong>Command</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">blockdev --setra 2048 /dev/sda</code></pre></div>
+</li>
+<li><strong>Use Case</strong>:
+<ul>
+<li>Improves video streaming or large file access by prefetching more data.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Aligning Partitions</strong>:</p>
+<ul>
+<li>Ensures partitions align with physical sector boundaries for optimal performance:
+<ul>
+<li>Use <code class="language-text">parted</code> or <code class="language-text">gdisk</code>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">parted /dev/sda align-check optimal 1</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Caching Optimization</strong>:</p>
+<ul>
+<li>Increase write-back cache size for bursty workloads:
+<ul>
+<li>Adjust <code class="language-text">dirty_ratio</code>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">echo 30 > /proc/sys/vm/dirty_ratio</code></pre></div>
+</li>
+</ul>
+</li>
+<li>Reduce cache flush frequency for write-heavy applications:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">echo 3000 > /proc/sys/vm/dirty_expire_centisecs</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>RAID Tuning</strong>:</p>
+<ul>
+<li>Fine-tune RAID configurations:
+<ul>
+<li>Adjust <strong>stripe size</strong> for optimal performance:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">mdadm --create /dev/md0 --level=0 --chunk=64 --raid-devices=4 /dev/sd[abcd]</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Workload Isolation</strong>:</p>
+<ul>
+<li>Separate high-I/O workloads across different disks to avoid contention:
+<ul>
+<li><strong>Example</strong>:
+<ul>
+<li>Place logs on a separate SSD while keeping databases on an NVMe drive.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="examples-and-use-cases" style="position:relative;"><a href="#examples-and-use-cases" aria-label="examples and use cases permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Examples and Use Cases</strong></h2>
+<ol>
+<li>
+<p><strong>High-Performance Database</strong>:</p>
+<ul>
+<li><strong>Challenge</strong>:
+<ul>
+<li>Latency spikes during high-transaction periods.</li>
+</ul>
+</li>
+<li><strong>Solution</strong>:
+<ul>
+<li>Switched to NVMe storage.</li>
+<li>Tuned I/O scheduler to <code class="language-text">deadline</code>.</li>
+<li>Increased <code class="language-text">dirty_ratio</code> for efficient write batching.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Video Streaming Service</strong>:</p>
+<ul>
+<li><strong>Challenge</strong>:
+<ul>
+<li>Slow sequential read performance during peak hours.</li>
+</ul>
+</li>
+<li><strong>Solution</strong>:
+<ul>
+<li>Increased read-ahead to 4 MB.</li>
+<li>Used RAID 0 for maximum throughput.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Enterprise Backup System</strong>:</p>
+<ul>
+<li><strong>Challenge</strong>:
+<ul>
+<li>Frequent parity calculation bottlenecks in RAID 5.</li>
+</ul>
+</li>
+<li><strong>Solution</strong>:
+<ul>
+<li>Upgraded to RAID 6 with optimized stripe size.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="key-takeaways-9" style="position:relative;"><a href="#key-takeaways-9" aria-label="key takeaways 9 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong>:</h2>
+<ul>
+<li><strong>“Storage performance relies on understanding IOPS, latency, and throughput trade-offs.”</strong></li>
+<li><strong>“Tools like <code class="language-text">blktrace</code> and <code class="language-text">fio</code> provide granular insights into I/O patterns and bottlenecks.”</strong></li>
+<li><strong>“Tuning parameters like I/O scheduler, read-ahead, and cache ratios can dramatically boost performance.”</strong></li>
+</ul>
+<h1 id="networking" style="position:relative;"><a href="#networking" aria-label="networking permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Networking</strong></h1>
+<hr>
+<h2 id="networking-concepts-protocols-latency-and-congestion" style="position:relative;"><a href="#networking-concepts-protocols-latency-and-congestion" aria-label="networking concepts protocols latency and congestion permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Networking Concepts: Protocols, Latency, and Congestion</strong></h2>
+<ol>
+<li>
+<p><strong>Detailed Overview of Network Protocols</strong>:</p>
+<ul>
+<li>Protocols are layered according to the <strong>OSI Model</strong> or <strong>TCP/IP Model</strong>, enabling modular functionality:
+<ul>
+<li><strong>Layer 2 (Data Link)</strong>:
+<ul>
+<li><strong>Ethernet</strong> and <strong>Wi-Fi</strong> manage local communication.</li>
+<li><strong>Example</strong>:
+<ul>
+<li>Gigabit Ethernet provides <strong>1 Gbps</strong> throughput and is common in LAN setups.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Layer 3 (Network)</strong>:
+<ul>
+<li><strong>IP (Internet Protocol)</strong>:
+<ul>
+<li>Core protocol for routing.</li>
+<li>IPv4 supports <strong>4.3 billion unique addresses</strong>, whereas IPv6 supports <strong>3.4×10³⁸ addresses</strong>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Layer 4 (Transport)</strong>:
+<ul>
+<li><strong>TCP (Transmission Control Protocol)</strong>:
+<ul>
+<li>Establishes reliable connections with <strong>handshakes, acknowledgments (ACKs)</strong>, and retransmissions.</li>
+<li><strong>Example</strong>:
+<ul>
+<li>Used in web browsing (HTTP), email (SMTP), and file transfer (FTP).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>UDP (User Datagram Protocol)</strong>:
+<ul>
+<li>Lightweight, connectionless protocol for real-time services.</li>
+<li><strong>Example</strong>:
+<ul>
+<li>Online gaming and streaming services like <strong>Netflix</strong>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Key Point</strong>:
+<ul>
+<li>“TCP is for reliability; UDP is for speed.”</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Network Latency</strong>:</p>
+<ul>
+<li>Latency includes the <strong>sum of delays</strong> from the following components:
+<ul>
+<li><strong>Propagation Delay</strong>:
+<ul>
+<li>Physical signal travel time.</li>
+<li><strong>Example</strong>:
+<ul>
+<li>A 1,000 km fiber-optic link adds <strong>5 ms propagation delay</strong>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Serialization Delay</strong>:
+<ul>
+<li>Time to transmit data onto the wire.</li>
+<li>Depends on link speed:
+<ul>
+<li>A <strong>10 Mbps</strong> link has higher serialization delay than a <strong>10 Gbps</strong> link for the same data.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Processing Delay</strong>:
+<ul>
+<li>Time spent on routing and packet forwarding by devices.</li>
+</ul>
+</li>
+<li><strong>Queuing Delay</strong>:
+<ul>
+<li>Time packets wait in a buffer before being transmitted.</li>
+<li>High during <strong>network congestion</strong>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Key Point</strong>:
+<ul>
+<li>“Latency is the Achilles’ heel of real-time applications; reducing it requires tuning across all layers.”</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Network Congestion</strong>:</p>
+<ul>
+<li>Congestion occurs when <strong>demand exceeds bandwidth capacity</strong>, leading to:
+<ul>
+<li><strong>Packet Loss</strong>:
+<ul>
+<li>Routers discard packets when buffers overflow.</li>
+<li><strong>Example</strong>:
+<ul>
+<li>Packet loss above 1% impacts VoIP and video quality.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Jitter</strong>:
+<ul>
+<li>Variability in packet arrival times.</li>
+<li>Problematic for real-time protocols like <strong>RTP (Real-time Transport Protocol)</strong>.</li>
+</ul>
+</li>
+<li><strong>Bufferbloat</strong>:
+<ul>
+<li>Excessive buffering causes <strong>high latency</strong>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Congestion Management Techniques</strong>:
+<ul>
+<li><strong>TCP Congestion Control</strong>:
+<ul>
+<li>Algorithms like <strong>Reno</strong>, <strong>Cubic</strong>, and <strong>BBR</strong> dynamically adjust throughput based on network conditions.</li>
+<li><strong>BBR Example</strong>:
+<ul>
+<li>Reduces latency by estimating available bandwidth and minimizing queue buildup.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Quality of Service (QoS)</strong>:
+<ul>
+<li>Allocates bandwidth for critical traffic (e.g., prioritizing VoIP over bulk downloads).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="observability-tools-for-networking" style="position:relative;"><a href="#observability-tools-for-networking" aria-label="observability tools for networking permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Observability Tools for Networking</strong></h2>
+<ol>
+<li>
+<p><strong>Advanced Packet Analysis with <code class="language-text">tcpdump</code></strong>:</p>
+<ul>
+<li><strong>Overview</strong>:
+<ul>
+<li>Command-line tool to capture and analyze network traffic.</li>
+</ul>
+</li>
+<li><strong>Advanced Use Cases</strong>:
+<ul>
+<li>Filter by protocol and IP:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">tcpdump -i eth0 tcp and host 192.168.1.10</code></pre></div>
+</li>
+<li>Analyze DNS traffic:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">tcpdump -i eth0 port 53</code></pre></div>
+</li>
+<li>Save captures for offline debugging:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">tcpdump -w mycapture.pcap</code></pre></div>
+</li>
+</ul>
+</li>
+<li><strong>Example</strong>:
+<ul>
+<li>Identify TCP retransmissions:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">tcpdump -i eth0 "tcp[tcpflags] &amp; (tcp-syn|tcp-ack) != 0"</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>In-Depth Protocol Debugging with Wireshark</strong>:</p>
+<ul>
+<li><strong>Overview</strong>:
+<ul>
+<li>GUI-based packet analyzer for human-readable protocol decoding.</li>
+</ul>
+</li>
+<li><strong>Use Cases</strong>:
+<ul>
+<li>Highlight retransmissions:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">tcp.analysis.retransmission</code></pre></div>
+</li>
+<li>Filter traffic by IP or application:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">ip.addr == 192.168.1.10</code></pre></div>
+</li>
+</ul>
+</li>
+<li><strong>Example</strong>:
+<ul>
+<li>Troubleshoot HTTPS issues by decrypting SSL/TLS traffic using preloaded keys.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Latency and Connectivity Diagnostics with <code class="language-text">ping</code></strong>:</p>
+<ul>
+<li><strong>Overview</strong>:
+<ul>
+<li>Sends ICMP echo requests to measure RTT and packet loss.</li>
+</ul>
+</li>
+<li><strong>Use Cases</strong>:
+<ul>
+<li>Measure connectivity to a server:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">ping google.com</code></pre></div>
+</li>
+<li>Analyze packet loss over 100 pings:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">ping -c 100 example.com</code></pre></div>
+</li>
+</ul>
+</li>
+<li><strong>Key Insight</strong>:
+<ul>
+<li>“Low RTT and no packet loss indicate a healthy connection.”</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Route Analysis with <code class="language-text">traceroute</code></strong>:</p>
+<ul>
+<li><strong>Overview</strong>:
+<ul>
+<li>Maps the path packets take through intermediate routers.</li>
+</ul>
+</li>
+<li><strong>Use Cases</strong>:
+<ul>
+<li>Identify bottlenecks along the route:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">traceroute example.com</code></pre></div>
+</li>
+<li>Trace network issues to specific hops.</li>
+</ul>
+</li>
+<li><strong>Example</strong>:
+<ul>
+<li>Detect high latency at hop 3 during international traffic.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Flow Monitoring with NetFlow or sFlow</strong>:</p>
+<ul>
+<li><strong>Overview</strong>:
+<ul>
+<li>Monitors network flows to identify bandwidth hogs or anomalies.</li>
+</ul>
+</li>
+<li><strong>Example</strong>:
+<ul>
+<li>Use <strong>NetFlow</strong> data to find a single IP consuming 50% of bandwidth.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Prometheus + Grafana Dashboards</strong>:</p>
+<ul>
+<li><strong>Overview</strong>:
+<ul>
+<li>Monitor metrics like packet drops, latency, and bandwidth utilization over time.</li>
+</ul>
+</li>
+<li><strong>Use Case</strong>:
+<ul>
+<li>Set alerts for latency spikes above <strong>100 ms</strong>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="network-performance-tuning-and-optimization" style="position:relative;"><a href="#network-performance-tuning-and-optimization" aria-label="network performance tuning and optimization permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Network Performance Tuning and Optimization</strong></h2>
+<ol>
+<li>
+<p><strong>TCP Optimization</strong>:</p>
+<ul>
+<li>Adjust TCP settings for improved performance:
+<ul>
+<li><strong>Increase Receive Buffers</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">sysctl -w net.core.rmem_max=8388608</code></pre></div>
+</li>
+<li><strong>Reduce Retransmission Timeouts</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">sysctl -w net.ipv4.tcp_retries2=5</code></pre></div>
+</li>
+</ul>
+</li>
+<li><strong>Example</strong>:
+<ul>
+<li>For high-speed file transfers over long distances, increase <strong>window sizes</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">sysctl -w net.ipv4.tcp_window_scaling=1</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Congestion Control Algorithms</strong>:</p>
+<ul>
+<li>Switch to advanced algorithms like <strong>BBR</strong> for latency-sensitive workloads:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">sysctl -w net.ipv4.tcp_congestion_control=bbr</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>QoS (Quality of Service)</strong>:</p>
+<ul>
+<li><strong>Traffic Prioritization</strong>:
+<ul>
+<li>Use <strong>tc</strong> (Traffic Control) to allocate bandwidth:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">tc qdisc add dev eth0 root handle 1: htb
+tc class add dev eth0 parent 1: classid 1:1 htb rate 1mbit</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>NIC Offloading Features</strong>:</p>
+<ul>
+<li>Enable <strong>TSO (TCP Segmentation Offload)</strong> and <strong>LRO (Large Receive Offload)</strong> to reduce CPU load:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">ethtool -K eth0 tso on lro on</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>DNS Optimization</strong>:</p>
+<ul>
+<li>Use local caching with tools like <code class="language-text">dnsmasq</code> to reduce DNS lookup delays.</li>
+<li><strong>Example</strong>:
+<ul>
+<li>Speed up domain resolution for web servers.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Workload Balancing</strong>:</p>
+<ul>
+<li>Use load balancers like <strong>HAProxy</strong> or <strong>NGINX</strong> to distribute traffic across multiple servers.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="examples-and-case-studies" style="position:relative;"><a href="#examples-and-case-studies" aria-label="examples and case studies permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Examples and Case Studies</strong></h2>
+<ol>
+<li>
+<p><strong>Online Gaming Platform</strong>:</p>
+<ul>
+<li><strong>Problem</strong>: High jitter disrupting gameplay.</li>
+<li><strong>Solution</strong>:
+<ul>
+<li>Switched to <strong>BBR</strong> congestion control.</li>
+<li>Prioritized UDP traffic with <strong>QoS</strong>.</li>
+<li>Diagnosed jitter with <strong>Wireshark</strong> and reduced queuing delays.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Global E-Commerce Website</strong>:</p>
+<ul>
+<li><strong>Problem</strong>: Latency spikes during Black Friday.</li>
+<li><strong>Solution</strong>:
+<ul>
+<li>Used <strong><code class="language-text">tcpdump</code></strong> to detect retransmissions.</li>
+<li>Tuned <strong>TCP receive buffers</strong> for faster throughput.</li>
+<li>Deployed <strong>Anycast</strong> to optimize routing paths.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Enterprise VoIP System</strong>:</p>
+<ul>
+<li><strong>Problem</strong>: Packet loss degrading call quality.</li>
+<li><strong>Solution</strong>:
+<ul>
+<li>Prioritized VoIP traffic with <strong>tc</strong>.</li>
+<li>Enabled NIC offloading to reduce CPU bottlenecks.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="key-highlights-1" style="position:relative;"><a href="#key-highlights-1" aria-label="key highlights 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Highlights</strong>:</h2>
+<ul>
+<li><strong>“Optimizing protocols like TCP and UDP is essential for high-speed, low-latency communication.”</strong></li>
+<li><strong>“Tools like <code class="language-text">tcpdump</code> and Wireshark provide granular insights into packet behavior for troubleshooting.”</strong></li>
+<li><strong>“Performance tuning involves buffer adjustments, congestion control, QoS, and DNS caching for maximum efficiency.”</strong></li>
+</ul>
 <h1 id="chapter-16-case-study" style="position:relative;"><a href="#chapter-16-case-study" aria-label="chapter 16 case study permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Chapter 16: Case Study</strong></h1>
 <p>The chapter provides a step-by-step walkthrough of analyzing, diagnosing, and solving a complex performance issue in a real-world environment. It emphasizes <strong>structured methodologies</strong>, <strong>practical tools</strong>, and <strong>clear results</strong> to showcase the value of systematic performance tuning.</p>
 <hr>
@@ -9693,7 +10558,7 @@ Swap:          8G          0G         8G</code></pre></div>
 </li>
 </ul>
 <hr>
-<h3 id="key-takeaways-9" style="position:relative;"><a href="#key-takeaways-9" aria-label="key takeaways 9 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<h3 id="key-takeaways-10" style="position:relative;"><a href="#key-takeaways-10" aria-label="key takeaways 10 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
 <ol>
 <li>
 <p><strong>Code Optimization</strong>:</p>
@@ -9981,7 +10846,7 @@ Execution Time: 0.3 seconds</code></pre></div>
 </li>
 </ul>
 <hr>
-<h3 id="key-takeaways-10" style="position:relative;"><a href="#key-takeaways-10" aria-label="key takeaways 10 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<h3 id="key-takeaways-11" style="position:relative;"><a href="#key-takeaways-11" aria-label="key takeaways 11 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
 <ol>
 <li>
 <p><strong>Thorough Testing</strong>:</p>
@@ -10622,7 +11487,7 @@ Latency: avg 150ms, max 500ms</code></pre></div>
 </tbody>
 </table>
 <hr>
-<h3 id="key-takeaways-11" style="position:relative;"><a href="#key-takeaways-11" aria-label="key takeaways 11 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<h3 id="key-takeaways-12" style="position:relative;"><a href="#key-takeaways-12" aria-label="key takeaways 12 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
 <ol>
 <li>
 <p><strong>Synthetic Benchmarks</strong>:</p>
@@ -11002,7 +11867,7 @@ data <span class="token operator">=</span> <span class="token punctuation">[</sp
 </li>
 </ol>
 <hr>
-<h3 id="key-takeaways-12" style="position:relative;"><a href="#key-takeaways-12" aria-label="key takeaways 12 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<h3 id="key-takeaways-13" style="position:relative;"><a href="#key-takeaways-13" aria-label="key takeaways 13 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
 <ol>
 <li>
 <p><strong>Start with Clear Goals</strong>:</p>
@@ -11387,7 +12252,7 @@ Latency: avg 200ms</code></pre></div>
 <li>Combine graphs for CPU, memory, and I/O to correlate bottlenecks.</li>
 </ul>
 <hr>
-<h3 id="key-takeaways-13" style="position:relative;"><a href="#key-takeaways-13" aria-label="key takeaways 13 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<h3 id="key-takeaways-14" style="position:relative;"><a href="#key-takeaways-14" aria-label="key takeaways 14 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
 <ol>
 <li>
 <p><strong>Use the Right Tool for the Job</strong>:</p>
@@ -11715,7 +12580,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
 <li>A web application benchmark had an average latency of 100ms but a P99 latency of 500ms. Addressing P99 improved the experience for edge-case users.</li>
 </ul>
 <hr>
-<h3 id="key-takeaways-14" style="position:relative;"><a href="#key-takeaways-14" aria-label="key takeaways 14 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<h3 id="key-takeaways-15" style="position:relative;"><a href="#key-takeaways-15" aria-label="key takeaways 15 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
 <ol>
 <li>
 <p><strong>Eliminate Noise</strong>:</p>
@@ -12101,7 +12966,7 @@ data <span class="token operator">=</span> <span class="token punctuation">[</sp
 </li>
 </ol>
 <hr>
-<h3 id="key-takeaways-15" style="position:relative;"><a href="#key-takeaways-15" aria-label="key takeaways 15 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<h3 id="key-takeaways-16" style="position:relative;"><a href="#key-takeaways-16" aria-label="key takeaways 16 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
 <ol>
 <li>
 <p><strong>Warm Up Systems</strong>:</p>
