@@ -1755,6 +1755,33 @@
 </ul>
 </li>
 <li>
+<p><a href="#perf-the-linux-profiler"><strong><code class="language-text">perf</code>: The Linux Profiler</strong></a></p>
+<ul>
+<li><a href="#detailed-guide-to-the-linux-profiler-perf"><strong>Detailed Guide to the Linux Profiler <code class="language-text">perf</code></strong></a></li>
+<li><a href="#commands-and-tools-for-event-tracing-and-cpu-profiling"><strong>Commands and Tools for Event Tracing and CPU Profiling</strong></a></li>
+<li><a href="#advanced-use-cases-and-examples"><strong>Advanced Use Cases and Examples</strong></a></li>
+<li><a href="#key-takeaways-15"><strong>Key Takeaways</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#ftrace-linux-kernel-tracing-framework"><strong><code class="language-text">Ftrace</code>: Linux Kernel Tracing Framework</strong></a></p>
+<ul>
+<li><a href="#what-is-ftrace"><strong>What is <code class="language-text">Ftrace</code>?</strong></a></li>
+<li><a href="#core-components-of-ftrace"><strong>Core Components of <code class="language-text">Ftrace</code></strong></a></li>
+<li><a href="#examples-of-using-ftrace-for-performance-analysis"><strong>Examples of Using <code class="language-text">Ftrace</code> for Performance Analysis</strong></a></li>
+<li><a href="#real-world-applications-of-ftrace"><strong>Real-World Applications of <code class="language-text">Ftrace</code></strong></a></li>
+<li><a href="#key-takeaways-16"><strong>Key Takeaways</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#bpf-berkeley-packet-filter"><strong>BPF (Berkeley Packet Filter)</strong></a></p>
+<ul>
+<li><a href="#overview-of-bpf-and-its-tools"><strong>Overview of BPF and Its Tools</strong></a></li>
+<li><a href="#advanced-performance-analysis-using-bpf"><strong>Advanced Performance Analysis Using BPF</strong></a></li>
+<li><a href="#key-highlights-3"><strong>Key Highlights</strong></a></li>
+</ul>
+</li>
+<li>
 <p><a href="#chapter-16-case-study"><strong>Chapter 16: Case Study</strong></a></p>
 <ul>
 <li>
@@ -1854,7 +1881,7 @@
 </ul>
 </li>
 <li>
-<p><a href="#key-takeaways-15"><strong>Key Takeaways</strong></a></p>
+<p><a href="#key-takeaways-17"><strong>Key Takeaways</strong></a></p>
 </li>
 </ul>
 </li>
@@ -1901,7 +1928,7 @@
 </ul>
 </li>
 <li>
-<p><a href="#key-takeaways-16"><strong>Key Takeaways</strong></a></p>
+<p><a href="#key-takeaways-18"><strong>Key Takeaways</strong></a></p>
 </li>
 </ul>
 </li>
@@ -12657,6 +12684,1167 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
 </ul>
 </li>
 </ol>
+<h1 id="perf-the-linux-profiler" style="position:relative;"><a href="#perf-the-linux-profiler" aria-label="perf the linux profiler permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong><code class="language-text">perf</code>: The Linux Profiler</strong></h1>
+<hr>
+<h2 id="detailed-guide-to-the-linux-profiler-perf" style="position:relative;"><a href="#detailed-guide-to-the-linux-profiler-perf" aria-label="detailed guide to the linux profiler perf permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Detailed Guide to the Linux Profiler <code class="language-text">perf</code></strong></h2>
+<ol>
+<li>
+<p><strong>Introduction to <code class="language-text">perf</code></strong>:</p>
+<ul>
+<li><strong>Definition</strong>:
+<ul>
+<li><code class="language-text">perf</code> is a Linux performance analysis tool capable of profiling CPU usage, analyzing I/O bottlenecks, tracing kernel events, and debugging application-level performance issues.</li>
+</ul>
+</li>
+<li><strong>Key Capabilities</strong>:
+<ul>
+<li>Measures hardware performance counters (e.g., CPU cycles, cache misses).</li>
+<li>Tracks kernel and user-space events such as system calls and context switches.</li>
+<li>Provides insights into memory access patterns, I/O performance, and network activity.</li>
+</ul>
+</li>
+<li><strong>Common Use Cases</strong>:
+<ul>
+<li>Optimizing high-CPU processes.</li>
+<li>Identifying memory bottlenecks caused by cache inefficiencies.</li>
+<li>Debugging kernel-level performance issues.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Point</strong>:</p>
+<ul>
+<li>”<code class="language-text">perf</code> is the Swiss Army knife of performance analysis, addressing challenges from application inefficiencies to kernel debugging.”</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="commands-and-tools-for-event-tracing-and-cpu-profiling" style="position:relative;"><a href="#commands-and-tools-for-event-tracing-and-cpu-profiling" aria-label="commands and tools for event tracing and cpu profiling permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Commands and Tools for Event Tracing and CPU Profiling</strong></h2>
+<ol>
+<li>
+<p><strong>Basic Commands</strong>:</p>
+<ul>
+<li>
+<p><strong><code class="language-text">perf list</code></strong>:</p>
+<ul>
+<li>Lists all available hardware, software, and tracepoint events.</li>
+<li><strong>Example</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">perf list</code></pre></div>
+<ul>
+<li>Hardware events: <code class="language-text">cpu-cycles</code>, <code class="language-text">instructions</code>, <code class="language-text">cache-references</code>.</li>
+<li>Software events: <code class="language-text">page-faults</code>, <code class="language-text">context-switches</code>.</li>
+<li>Tracepoints: <code class="language-text">sched:sched_switch</code>, <code class="language-text">syscalls:sys_enter_write</code>.</li>
+</ul>
+</li>
+<li><strong>Key Insight</strong>:
+<ul>
+<li>Use this command to identify relevant events for your workload.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="language-text">perf stat</code></strong>:</p>
+<ul>
+<li>Provides an overview of performance metrics for a specific workload.</li>
+<li><strong>Example</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">perf stat -e cpu-cycles,cache-misses ./my_program</code></pre></div>
+<ul>
+<li>Output:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">1,000,000 cache-misses     # High cache miss rate</code></pre></div>
+</li>
+</ul>
+</li>
+<li><strong>Use Case</strong>:
+<ul>
+<li>Quickly diagnose whether a process is CPU-bound or suffers from memory inefficiencies.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="language-text">perf record</code> and <code class="language-text">perf report</code></strong>:</p>
+<ul>
+<li><strong><code class="language-text">perf record</code></strong>: Captures performance data during workload execution.</li>
+<li><strong><code class="language-text">perf report</code></strong>: Visualizes the recorded data.</li>
+<li><strong>Example</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">perf record ./my_program
+perf report</code></pre></div>
+<ul>
+<li>Output:
+<ul>
+<li>Displays CPU time spent in each function, sorted by percentage.</li>
+</ul>
+</li>
+<li><strong>Insight</strong>:
+<ul>
+<li>Identifies hotspots such as inefficient loops or expensive function calls.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Advanced CPU Profiling</strong>:</p>
+<ul>
+<li>
+<p><strong>Hardware Counter Profiling</strong>:</p>
+<ul>
+<li>Measures low-level CPU events such as cycles, branch mispredictions, and cache behavior.</li>
+<li><strong>Example</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">perf stat -e branch-misses,instructions ./my_program</code></pre></div>
+<ul>
+<li>High <code class="language-text">branch-misses</code> indicates inefficiencies in branch prediction.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Call Graph Profiling</strong>:</p>
+<ul>
+<li>Captures stack traces for a deeper understanding of code paths.</li>
+<li><strong>Example</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">perf record -g ./my_program
+perf report</code></pre></div>
+<ul>
+<li>Displays a flame graph of function calls to identify deep recursion or hotspots.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Real-Time CPU Analysis with <code class="language-text">perf top</code></strong>:</p>
+<ul>
+<li>Monitors active processes and functions consuming the most CPU in real-time.</li>
+<li><strong>Example</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">perf top</code></pre></div>
+<ul>
+<li>Use Case:
+<ul>
+<li>Identify high-CPU functions in a busy server application.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Event Tracing with <code class="language-text">perf</code></strong>:</p>
+<ul>
+<li>
+<p><strong>System Call Tracing</strong>:</p>
+<ul>
+<li>Trace specific system calls such as file I/O or memory allocation.</li>
+<li><strong>Example</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">perf trace -e syscalls:sys_enter_open ./my_program</code></pre></div>
+<ul>
+<li>Output:
+<ul>
+<li>Shows <code class="language-text">open()</code> system calls and associated files.</li>
+</ul>
+</li>
+<li><strong>Use Case</strong>:
+<ul>
+<li>Detect excessive or redundant file operations.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Kernel Tracepoints</strong>:</p>
+<ul>
+<li>Monitor kernel-level events like scheduling or block I/O.</li>
+<li><strong>Example</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">perf record -e sched:sched_switch ./my_program
+perf report</code></pre></div>
+<ul>
+<li><strong>Key Insight</strong>:
+<ul>
+<li>Use tracepoints to analyze context switches and thread scheduling inefficiencies.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Custom Probes</strong>:</p>
+<ul>
+<li><strong>Dynamic Probes (<code class="language-text">kprobes</code> and <code class="language-text">uprobes</code>)</strong>:
+<ul>
+<li>Insert custom tracepoints into user-space or kernel functions.</li>
+<li><strong>Example</strong>:
+<ul>
+<li>Add a probe to the <code class="language-text">main()</code> function in a program:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">perf probe -x ./my_program main
+perf record -e probe:main ./my_program
+perf report</code></pre></div>
+</li>
+<li><strong>Insight</strong>:
+<ul>
+<li>Useful for debugging performance-critical functions.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="advanced-use-cases-and-examples" style="position:relative;"><a href="#advanced-use-cases-and-examples" aria-label="advanced use cases and examples permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Advanced Use Cases and Examples</strong></h2>
+<ol>
+<li>
+<p><strong>Analyzing Cache Behavior</strong>:</p>
+<ul>
+<li><strong>Scenario</strong>:
+<ul>
+<li>A data-intensive application is running slower than expected.</li>
+</ul>
+</li>
+<li><strong>Command</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">perf stat -e cache-references,cache-misses ./data_processor</code></pre></div>
+</li>
+<li><strong>Output</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">1,500,000 cache-references
+1,000,000 cache-misses     # 66.6% miss rate</code></pre></div>
+</li>
+<li><strong>Interpretation</strong>:
+<ul>
+<li>High cache-miss rates indicate poor memory locality.</li>
+<li>Solution:
+<ul>
+<li>Optimize data structures to reduce cache misses (e.g., array-of-structures to structure-of-arrays).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Tracing Context Switches</strong>:</p>
+<ul>
+<li><strong>Scenario</strong>:
+<ul>
+<li>High CPU usage in a VM due to frequent context switches.</li>
+</ul>
+</li>
+<li><strong>Command</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">perf record -e context-switches ./vm_task
+perf report</code></pre></div>
+</li>
+<li><strong>Output</strong>:
+<ul>
+<li>Shows the processes triggering the most context switches.</li>
+</ul>
+</li>
+<li><strong>Solution</strong>:
+<ul>
+<li>Adjust thread priorities or reduce thread count to minimize context switching overhead.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Debugging I/O Performance</strong>:</p>
+<ul>
+<li><strong>Scenario</strong>:
+<ul>
+<li>A database server exhibits high disk latency during peak loads.</li>
+</ul>
+</li>
+<li><strong>Command</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">perf record -e block:block_rq_issue ./database_task
+perf report</code></pre></div>
+</li>
+<li><strong>Output</strong>:
+<ul>
+<li>Identifies I/O requests causing the highest delays.</li>
+</ul>
+</li>
+<li><strong>Solution</strong>:
+<ul>
+<li>Optimize query patterns or use faster storage.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Analyzing Branch Predictions</strong>:</p>
+<ul>
+<li><strong>Scenario</strong>:
+<ul>
+<li>A compiler optimization task shows poor performance.</li>
+</ul>
+</li>
+<li><strong>Command</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">perf stat -e branch-instructions,branch-misses ./compiler</code></pre></div>
+</li>
+<li><strong>Output</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">10,000,000 branch-instructions
+3,000,000 branch-misses     # 30% misprediction rate</code></pre></div>
+</li>
+<li><strong>Interpretation</strong>:
+<ul>
+<li>High misprediction rates indicate inefficient branching logic.</li>
+<li>Solution:
+<ul>
+<li>Reorganize code to improve predictability (e.g., avoid nested <code class="language-text">if</code> conditions).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Using Flame Graphs for Visualization</strong>:</p>
+<ul>
+<li><strong>Scenario</strong>:
+<ul>
+<li>A web application shows high response times under load.</li>
+</ul>
+</li>
+<li><strong>Steps</strong>:
+<ul>
+<li>Record data:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">perf record -g ./web_server</code></pre></div>
+</li>
+<li>Generate flame graph:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">perf script | flamegraph.pl > flamegraph.svg</code></pre></div>
+</li>
+<li>Analyze:
+<ul>
+<li>The graph reveals which function consumes the most CPU time, enabling targeted optimizations.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="key-takeaways-15" style="position:relative;"><a href="#key-takeaways-15" aria-label="key takeaways 15 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h2>
+<ol>
+<li>
+<p><strong>Versatility of <code class="language-text">perf</code></strong>:</p>
+<ul>
+<li>”<code class="language-text">perf</code> is not just a profiler; it’s a comprehensive tool for event tracing, I/O analysis, and system-level debugging.”</li>
+</ul>
+</li>
+<li>
+<p><strong>Actionable Insights</strong>:</p>
+<ul>
+<li>”<code class="language-text">perf stat</code> provides quick metrics, while <code class="language-text">perf record</code> and <code class="language-text">perf report</code> enable deep dives into performance bottlenecks.”</li>
+</ul>
+</li>
+<li>
+<p><strong>Advanced Techniques</strong>:</p>
+<ul>
+<li>“Features like dynamic probes, kernel tracepoints, and flame graph generation make <code class="language-text">perf</code> a must-have for performance tuning.”</li>
+</ul>
+</li>
+<li>
+<p><strong>Practical Examples</strong>:</p>
+<ul>
+<li>Real-world scenarios demonstrate how <code class="language-text">perf</code> resolves issues ranging from CPU inefficiency to memory bottlenecks.</li>
+</ul>
+</li>
+</ol>
+<h1 id="ftrace-linux-kernel-tracing-framework" style="position:relative;"><a href="#ftrace-linux-kernel-tracing-framework" aria-label="ftrace linux kernel tracing framework permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong><code class="language-text">Ftrace</code>: Linux Kernel Tracing Framework</strong></h1>
+<hr>
+<h2 id="what-is-ftrace" style="position:relative;"><a href="#what-is-ftrace" aria-label="what is ftrace permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>What is <code class="language-text">Ftrace</code>?</strong></h2>
+<ol>
+<li>
+<p><strong>Overview</strong>:</p>
+<ul>
+<li><strong><code class="language-text">Ftrace</code></strong> is the native Linux kernel tracing framework designed for developers and system administrators to trace kernel operations, debug performance issues, and monitor system events.</li>
+<li>It is highly flexible, offering tools to trace:
+<ul>
+<li><strong>Kernel function calls</strong>.</li>
+<li><strong>System events</strong> (e.g., scheduling, I/O operations, context switches).</li>
+<li><strong>Interrupts and wake-ups</strong>.</li>
+</ul>
+</li>
+<li>Operates via a <strong>virtual file system</strong>, typically mounted at <code class="language-text">/sys/kernel/debug/tracing</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Primary Use Cases</strong>:</p>
+<ul>
+<li>Debugging kernel modules.</li>
+<li>Identifying long latency paths in function calls.</li>
+<li>Monitoring scheduling delays and context switch overhead.</li>
+<li>Analyzing disk I/O or network performance issues.</li>
+</ul>
+<p><strong>Key Insight</strong>:</p>
+<ul>
+<li>”<code class="language-text">Ftrace</code> empowers engineers to peer into the heart of the Linux kernel, identifying inefficiencies and uncovering root causes of performance bottlenecks.”</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="core-components-of-ftrace" style="position:relative;"><a href="#core-components-of-ftrace" aria-label="core components of ftrace permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Core Components of <code class="language-text">Ftrace</code></strong></h2>
+<ol>
+<li>
+<p><strong>Tracefs File System</strong>:</p>
+<ul>
+<li>
+<p><code class="language-text">Ftrace</code> relies on the <strong>tracefs</strong> file system, accessible through <code class="language-text">/sys/kernel/debug/tracing</code>.</p>
+</li>
+<li>
+<p>Key directories and files:</p>
+<ul>
+<li><strong><code class="language-text">current_tracer</code></strong>:
+<ul>
+<li>Specifies the active tracer (e.g., <code class="language-text">function</code>, <code class="language-text">sched</code>, <code class="language-text">irqsoff</code>).</li>
+</ul>
+</li>
+<li><strong><code class="language-text">set_ftrace_filter</code></strong>:
+<ul>
+<li>Filters kernel functions to be traced.</li>
+</ul>
+</li>
+<li><strong><code class="language-text">events/</code></strong>:
+<ul>
+<li>Contains subdirectories for traceable kernel events (e.g., <code class="language-text">block</code>, <code class="language-text">sched</code>).</li>
+</ul>
+</li>
+<li><strong><code class="language-text">trace</code></strong>:
+<ul>
+<li>Displays the collected trace logs.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Command</strong>:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">mount -t tracefs nodev /sys/kernel/debug/tracing</code></pre></div>
+<ul>
+<li>Ensures <code class="language-text">tracefs</code> is mounted and accessible.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Tracing Modes</strong>:</p>
+<ul>
+<li><strong>Function Tracer</strong>:
+<ul>
+<li>Captures kernel function calls.</li>
+</ul>
+</li>
+<li><strong>Function Graph Tracer</strong>:
+<ul>
+<li>Tracks call chains and execution times for kernel functions.</li>
+</ul>
+</li>
+<li><strong>Scheduler Tracer</strong>:
+<ul>
+<li>Monitors context switches and task scheduling.</li>
+</ul>
+</li>
+<li><strong>IRQSOFF Tracer</strong>:
+<ul>
+<li>Identifies sections of code where interrupts are disabled.</li>
+</ul>
+</li>
+<li><strong>Custom Event Tracing</strong>:
+<ul>
+<li>Monitors specific kernel events, such as block I/O and page faults.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="examples-of-using-ftrace-for-performance-analysis" style="position:relative;"><a href="#examples-of-using-ftrace-for-performance-analysis" aria-label="examples of using ftrace for performance analysis permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Examples of Using <code class="language-text">Ftrace</code> for Performance Analysis</strong></h2>
+<ol>
+<li>
+<p><strong>Basic Function Tracing</strong></p>
+<ul>
+<li><strong>Objective</strong>:
+<ul>
+<li>Trace kernel functions being executed during a specific workload.</li>
+</ul>
+</li>
+<li><strong>Steps</strong>:
+<ul>
+<li>Enable function tracing:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">echo function > /sys/kernel/debug/tracing/current_tracer</code></pre></div>
+</li>
+<li>Filter for a specific function (e.g., <code class="language-text">do_sys_open</code>):
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">echo do_sys_open > /sys/kernel/debug/tracing/set_ftrace_filter</code></pre></div>
+</li>
+<li>Start tracing:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">echo 1 > /sys/kernel/debug/tracing/tracing_on</code></pre></div>
+</li>
+<li>View the trace log:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">cat /sys/kernel/debug/tracing/trace</code></pre></div>
+</li>
+<li>Stop tracing:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">echo 0 > /sys/kernel/debug/tracing/tracing_on</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Example Output</strong>:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">0)   do_sys_open &lt;- path_openat
+0)   vfs_open &lt;- do_sys_open
+0)   security_inode_permission &lt;- vfs_open</code></pre></div>
+<p><strong>Use Case</strong>:</p>
+<ul>
+<li>Trace which kernel functions are called when opening a file.</li>
+</ul>
+<p><strong>Key Insight</strong>:</p>
+<ul>
+<li>“Function tracing provides granular visibility into the kernel’s execution flow, helping isolate inefficiencies.”</li>
+</ul>
+</li>
+</ol>
+<hr>
+<ol start="2">
+<li>
+<p><strong>Function Graph Tracing</strong></p>
+<ul>
+<li><strong>Objective</strong>:
+<ul>
+<li>Analyze function execution paths and measure time spent in kernel functions.</li>
+</ul>
+</li>
+<li><strong>Steps</strong>:
+<ul>
+<li>Enable function graph tracing:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">echo function_graph > /sys/kernel/debug/tracing/current_tracer</code></pre></div>
+</li>
+<li>Start tracing:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">echo 1 > /sys/kernel/debug/tracing/tracing_on</code></pre></div>
+</li>
+<li>View detailed function call graphs:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">cat /sys/kernel/debug/tracing/trace</code></pre></div>
+</li>
+</ul>
+</li>
+<li><strong>Example Output</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">0)   |  do_sys_open() {
+0)   |    vfs_open() {
+0)   |      path_lookupat() {
+0)   |        inode_permission() {
+0)   |        } 1.342 us
+0)   |      } 2.678 us
+0)   |    } 3.210 us
+0)   |  } 6.004 us</code></pre></div>
+</li>
+</ul>
+<p><strong>Use Case</strong>:</p>
+<ul>
+<li>Measure the time spent in each kernel function to identify performance bottlenecks.</li>
+</ul>
+<p><strong>Key Insight</strong>:</p>
+<ul>
+<li>“Function graph tracing is ideal for pinpointing high-latency operations in nested kernel calls.”</li>
+</ul>
+</li>
+</ol>
+<hr>
+<ol start="3">
+<li>
+<p><strong>Tracing Scheduler Events</strong></p>
+<ul>
+<li><strong>Objective</strong>:
+<ul>
+<li>Monitor task scheduling, context switches, and CPU utilization.</li>
+</ul>
+</li>
+<li><strong>Steps</strong>:
+<ul>
+<li>Enable the scheduler tracer:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">echo sched > /sys/kernel/debug/tracing/current_tracer</code></pre></div>
+</li>
+<li>Start tracing:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">echo 1 > /sys/kernel/debug/tracing/tracing_on</code></pre></div>
+</li>
+<li>View scheduling events:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">cat /sys/kernel/debug/tracing/trace</code></pre></div>
+</li>
+</ul>
+</li>
+<li><strong>Example Output</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">task-1234 [001] 120.12345: sched_switch: prev_comm=task1 prev_pid=1234 next_comm=task2 next_pid=5678</code></pre></div>
+</li>
+</ul>
+<p><strong>Use Case</strong>:</p>
+<ul>
+<li>Detect tasks with frequent context switches or excessive wait times.</li>
+</ul>
+<p><strong>Key Insight</strong>:</p>
+<ul>
+<li>“Scheduler tracing highlights inefficiencies in CPU scheduling, helping optimize thread performance.”</li>
+</ul>
+</li>
+</ol>
+<hr>
+<ol start="4">
+<li>
+<p><strong>Custom Tracepoints</strong></p>
+<ul>
+<li><strong>Objective</strong>:
+<ul>
+<li>Monitor specific kernel events, such as block I/O operations or memory page faults.</li>
+</ul>
+</li>
+<li><strong>Steps</strong>:
+<ul>
+<li>List available tracepoints:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">ls /sys/kernel/debug/tracing/events</code></pre></div>
+</li>
+<li>Enable a specific tracepoint (e.g., <code class="language-text">block:block_rq_issue</code>):
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">echo 1 > /sys/kernel/debug/tracing/events/block/block_rq_issue/enable</code></pre></div>
+</li>
+<li>Start tracing:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">echo 1 > /sys/kernel/debug/tracing/tracing_on</code></pre></div>
+</li>
+<li>View trace log:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">cat /sys/kernel/debug/tracing/trace</code></pre></div>
+</li>
+</ul>
+</li>
+<li><strong>Example Output</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">4567.89123: block_rq_issue: dev 8:0 sector=123456 len=8 rwbs=W</code></pre></div>
+</li>
+</ul>
+<p><strong>Use Case</strong>:</p>
+<ul>
+<li>Trace block layer events to identify high-latency disk operations.</li>
+</ul>
+<p><strong>Key Insight</strong>:</p>
+<ul>
+<li>“Custom tracepoints make <code class="language-text">Ftrace</code> adaptable for monitoring application-specific kernel events.”</li>
+</ul>
+</li>
+</ol>
+<hr>
+<ol start="5">
+<li>
+<p><strong>IRQ Analysis</strong></p>
+<ul>
+<li><strong>Objective</strong>:
+<ul>
+<li>Identify sections of code where interrupts are disabled for extended durations.</li>
+</ul>
+</li>
+<li><strong>Steps</strong>:
+<ul>
+<li>Enable the <code class="language-text">irqsoff</code> tracer:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">echo irqsoff > /sys/kernel/debug/tracing/current_tracer</code></pre></div>
+</li>
+<li>Start tracing:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">echo 1 > /sys/kernel/debug/tracing/tracing_on</code></pre></div>
+</li>
+<li>View the log:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">cat /sys/kernel/debug/tracing/trace</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Use Case</strong>:</p>
+<ul>
+<li>Detect long interrupt-disabled regions that may cause latency spikes in real-time systems.</li>
+</ul>
+<p><strong>Key Insight</strong>:</p>
+<ul>
+<li>“IRQ tracing ensures system responsiveness by identifying problematic interrupt handling.”</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="real-world-applications-of-ftrace" style="position:relative;"><a href="#real-world-applications-of-ftrace" aria-label="real world applications of ftrace permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Real-World Applications of <code class="language-text">Ftrace</code></strong></h2>
+<ol>
+<li>
+<p><strong>Kernel Module Debugging</strong>:</p>
+<ul>
+<li><strong>Problem</strong>:
+<ul>
+<li>A custom kernel module causes sporadic system freezes.</li>
+</ul>
+</li>
+<li><strong>Solution</strong>:
+<ul>
+<li>Trace function calls within the module:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">echo my_module_function > /sys/kernel/debug/tracing/set_ftrace_filter
+echo function > /sys/kernel/debug/tracing/current_tracer
+echo 1 > /sys/kernel/debug/tracing/tracing_on</code></pre></div>
+</li>
+<li>Result:
+<ul>
+<li>Identified a deadlock due to improper locking mechanisms.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Outcome</strong>:
+<ul>
+<li>Fixed synchronization issues, eliminating freezes.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Database Performance Optimization</strong>:</p>
+<ul>
+<li><strong>Problem</strong>:
+<ul>
+<li>High I/O latency in a database server during peak loads.</li>
+</ul>
+</li>
+<li><strong>Solution</strong>:
+<ul>
+<li>Trace block I/O events:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">echo 1 > /sys/kernel/debug/tracing/events/block/block_rq_issue/enable
+echo 1 > /sys/kernel/debug/tracing/tracing_on</code></pre></div>
+</li>
+<li>Result:
+<ul>
+<li>Identified high queue depths causing delays.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Outcome</strong>:
+<ul>
+<li>Optimized I/O scheduling to balance read/write workloads.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Real-Time Application Tuning</strong>:</p>
+<ul>
+<li><strong>Problem</strong>:
+<ul>
+<li>A real-time video processing application misses frame deadlines.</li>
+</ul>
+</li>
+<li><strong>Solution</strong>:
+<ul>
+<li>Trace scheduling delays:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">echo sched > /sys/kernel/debug/tracing/current_tracer
+echo 1 > /sys/kernel/debug/tracing/tracing_on</code></pre></div>
+</li>
+<li>Result:
+<ul>
+<li>Detected excessive preemptions and thread contention.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Outcome</strong>:
+<ul>
+<li>Adjusted thread priorities and improved real-time performance.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="key-takeaways-16" style="position:relative;"><a href="#key-takeaways-16" aria-label="key takeaways 16 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h2>
+<ol>
+<li><strong>Powerful Kernel Visibility</strong>:
+<ul>
+<li>”<code class="language-text">Ftrace</code> provides unparalleled access to kernel functions, events, and execution paths.”</li>
+</ul>
+</li>
+<li><strong>Comprehensive Toolset</strong>:
+<ul>
+<li>“From function tracing to custom tracepoints, <code class="language-text">Ftrace</code> is highly adaptable for diverse debugging needs.”</li>
+</ul>
+</li>
+<li><strong>Practical Benefits</strong>:
+<ul>
+<li>“Real-world applications demonstrate how <code class="language-text">Ftrace</code> resolves performance issues at the kernel level.”</li>
+</ul>
+</li>
+</ol>
+<h1 id="bpf-berkeley-packet-filter" style="position:relative;"><a href="#bpf-berkeley-packet-filter" aria-label="bpf berkeley packet filter permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>BPF (Berkeley Packet Filter)</strong></h1>
+<hr>
+<h2 id="overview-of-bpf-and-its-tools" style="position:relative;"><a href="#overview-of-bpf-and-its-tools" aria-label="overview of bpf and its tools permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Overview of BPF and Its Tools</strong></h2>
+<ol>
+<li>
+<p><strong>What is BPF?</strong></p>
+<ul>
+<li><strong>Definition</strong>:
+<ul>
+<li>Berkeley Packet Filter (BPF), extended into <strong>eBPF (Extended BPF)</strong>, is a programmable, in-kernel virtual machine for safely and efficiently executing code within the Linux kernel. It can observe, filter, and modify data at the kernel level without recompiling or restarting the kernel.</li>
+</ul>
+</li>
+<li><strong>Key Characteristics</strong>:
+<ul>
+<li><strong>High Performance</strong>:
+<ul>
+<li>BPF programs run in the kernel with <strong>JIT compilation</strong>, offering near-native execution speed.</li>
+</ul>
+</li>
+<li><strong>Safety</strong>:
+<ul>
+<li>Programs are verified before execution to prevent crashes or security risks.</li>
+</ul>
+</li>
+<li><strong>Flexibility</strong>:
+<ul>
+<li>BPF supports diverse use cases, from <strong>network observability</strong> and <strong>performance monitoring</strong> to <strong>security enforcement</strong>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Common Use Cases</strong>:
+<ul>
+<li>Network traffic monitoring.</li>
+<li>System performance debugging.</li>
+<li>Event tracing across kernel and user space.</li>
+<li>Real-time security analytics.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Insight</strong>:</p>
+<ul>
+<li>”<strong>eBPF is the Swiss Army knife for modern Linux observability, offering deep kernel-level visibility and control with minimal overhead.</strong>”</li>
+</ul>
+</li>
+</ol>
+<hr>
+<ol start="2">
+<li>
+<p><strong>Key Tools in the BPF Ecosystem</strong></p>
+<ul>
+<li>
+<p><strong>BCC (BPF Compiler Collection)</strong>:</p>
+<ul>
+<li>A framework for writing and running BPF programs, primarily using <strong>Python</strong> or <strong>C</strong>.</li>
+<li>Comes with prebuilt tools for common observability tasks.</li>
+<li><strong>Common Tools</strong>:
+<ul>
+<li><code class="language-text">execsnoop</code>: Tracks command execution.</li>
+<li><code class="language-text">opensnoop</code>: Monitors file open system calls.</li>
+<li><code class="language-text">tcplife</code>: Measures TCP connection lifetimes.</li>
+<li><code class="language-text">funccount</code>: Counts function calls.</li>
+</ul>
+</li>
+<li><strong>Example</strong>:
+<ul>
+<li>Use <code class="language-text">opensnoop</code> to trace file opens:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">sudo opensnoop</code></pre></div>
+</li>
+<li><strong>Output</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">PID    COMM           FD   PATH
+3456   bash            3   /etc/ld.so.cache
+3456   bash            3   /lib/x86_64-linux-gnu/libc.so.6</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="language-text">bpftrace</code></strong>:</p>
+<ul>
+<li>A high-level tracing language inspired by DTrace, making it easy to write custom BPF programs.</li>
+<li><strong>Features</strong>:
+<ul>
+<li>Built-in support for <strong>histograms</strong>, <strong>maps</strong>, and <strong>aggregation</strong>.</li>
+<li>Trace <strong>kernel functions</strong>, <strong>user-space applications</strong>, and <strong>syscalls</strong>.</li>
+</ul>
+</li>
+<li><strong>Example</strong>:
+<ul>
+<li>Count system calls by process:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">tracepoint:raw_syscalls:sys_enter
+{
+    @syscalls[comm] = count();
+}</code></pre></div>
+</li>
+<li><strong>Output</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">bash    34
+nginx   5621
+postgres 2381</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code class="language-text">bpftool</code></strong>:</p>
+<ul>
+<li>A command-line utility for managing and debugging BPF programs.</li>
+<li><strong>Features</strong>:
+<ul>
+<li>Load, unload, and inspect active BPF programs.</li>
+<li>Query statistics and attached hooks.</li>
+<li>Inspect BPF maps and their contents.</li>
+</ul>
+</li>
+<li><strong>Example</strong>:
+<ul>
+<li>List loaded BPF programs:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">sudo bpftool prog</code></pre></div>
+</li>
+<li><strong>Output</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">ID   TYPE         ATTACHED  NAME
+5    kprobe       yes       probe_function
+8    tracepoint   yes       syscalls:sys_enter_read</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>cilium</strong>:</p>
+<ul>
+<li>A BPF-based tool for <strong>network observability</strong>, <strong>security</strong>, and <strong>load balancing</strong> in containerized environments like Kubernetes.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Insight</strong>:</p>
+<ul>
+<li>”<strong>Tools like <code class="language-text">bcc</code>, <code class="language-text">bpftrace</code>, and <code class="language-text">bpftool</code> abstract the complexity of BPF programming, making advanced tracing and monitoring accessible to engineers.</strong>”</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="advanced-performance-analysis-using-bpf" style="position:relative;"><a href="#advanced-performance-analysis-using-bpf" aria-label="advanced performance analysis using bpf permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Advanced Performance Analysis Using BPF</strong></h2>
+<ol>
+<li>
+<p><strong>CPU Profiling</strong></p>
+<ul>
+<li><strong>Scenario</strong>:
+<ul>
+<li>A Java application consumes excessive CPU during data processing tasks.</li>
+</ul>
+</li>
+<li><strong>Command</strong>:
+<ul>
+<li>Use the <code class="language-text">profile</code> tool from <code class="language-text">BCC</code> to identify the most CPU-intensive functions:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">sudo /usr/share/bcc/tools/profile -F 99 -p $(pidof java)</code></pre></div>
+<ul>
+<li><code class="language-text">-F 99</code>: Samples 99 times per second.</li>
+<li><code class="language-text">-p</code>: Targets a specific process ID.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Output</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">70%  java       [kernel]  __do_page_fault
+20%  java       libjvm.so  execute_bytecode
+ 5%  java       libc.so.6  memcpy
+ 5%  java       java       processData</code></pre></div>
+</li>
+<li><strong>Interpretation</strong>:
+<ul>
+<li><code class="language-text">__do_page_fault</code> indicates excessive memory paging.</li>
+</ul>
+</li>
+<li><strong>Optimization</strong>:
+<ul>
+<li>Increase memory allocation to reduce page faults.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Insight</strong>:</p>
+<ul>
+<li>”<strong>Profiling tools powered by BPF pinpoint hotspots at both kernel and application levels, enabling targeted optimizations.</strong>”</li>
+</ul>
+</li>
+</ol>
+<hr>
+<ol start="2">
+<li>
+<p><strong>File I/O Analysis</strong></p>
+<ul>
+<li><strong>Scenario</strong>:
+<ul>
+<li>A database system exhibits high disk I/O latency during peak hours.</li>
+</ul>
+</li>
+<li><strong>Command</strong>:
+<ul>
+<li>Use <code class="language-text">opensnoop</code> to trace file open system calls:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">sudo opensnoop</code></pre></div>
+</li>
+</ul>
+</li>
+<li><strong>Output</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">PID    COMM       FD   PATH
+1234   postgres    5   /var/lib/postgresql/data/table1
+1234   postgres    6   /var/lib/postgresql/data/table2</code></pre></div>
+</li>
+<li><strong>Interpretation</strong>:
+<ul>
+<li>Frequent file opens indicate inefficient query execution or logging behavior.</li>
+</ul>
+</li>
+<li><strong>Optimization</strong>:
+<ul>
+<li>Optimize query patterns or batch log writes.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Insight</strong>:</p>
+<ul>
+<li>”<strong>Tracing file I/O with BPF tools like <code class="language-text">opensnoop</code> reveals inefficiencies that might be hidden at the application layer.</strong>”</li>
+</ul>
+</li>
+</ol>
+<hr>
+<ol start="3">
+<li>
+<p><strong>Network Observability</strong></p>
+<ul>
+<li><strong>Scenario</strong>:
+<ul>
+<li>A web server reports slow response times during high traffic.</li>
+</ul>
+</li>
+<li><strong>Command</strong>:
+<ul>
+<li>Use <code class="language-text">tcplife</code> to measure the lifespan of TCP connections:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">sudo /usr/share/bcc/tools/tcplife</code></pre></div>
+</li>
+</ul>
+</li>
+<li><strong>Output</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">PID   COMM      LADDR          LPORT   RADDR          RPORT   DURATION
+5678  nginx     192.168.1.10   443     192.168.1.20   5623    234ms</code></pre></div>
+</li>
+<li><strong>Interpretation</strong>:
+<ul>
+<li>Long connection durations indicate a backend issue or slow client acknowledgment.</li>
+</ul>
+</li>
+<li><strong>Optimization</strong>:
+<ul>
+<li>Implement keep-alive connections or optimize backend query times.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Insight</strong>:</p>
+<ul>
+<li>”<strong><code class="language-text">tcplife</code> and similar tools simplify real-time monitoring of network behavior, providing actionable insights for debugging latency.</strong>”</li>
+</ul>
+</li>
+</ol>
+<hr>
+<ol start="4">
+<li>
+<p><strong>Custom BPF Program with <code class="language-text">bpftrace</code></strong></p>
+<ul>
+<li><strong>Scenario</strong>:
+<ul>
+<li>Analyze the execution time of a custom function in a Python application.</li>
+</ul>
+</li>
+<li><strong>Script</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">uprobe:/usr/bin/python3:custom_function
+{
+    @start[tid] = nsecs;
+}
+
+uretprobe:/usr/bin/python3:custom_function
+{
+    @latency = hist(nsecs - @start[tid]);
+    delete(@start[tid]);
+}</code></pre></div>
+</li>
+<li><strong>Output</strong>:
+<ul>
+<li>A histogram of function execution times in nanoseconds.</li>
+</ul>
+</li>
+<li><strong>Use Case</strong>:
+<ul>
+<li>Debug slow functions or identify variations in execution time.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Insight</strong>:</p>
+<ul>
+<li>”<strong>Custom BPF programs with <code class="language-text">bpftrace</code> enable fine-grained performance analysis tailored to specific workloads.</strong>”</li>
+</ul>
+</li>
+</ol>
+<hr>
+<ol start="5">
+<li>
+<p><strong>Memory Allocation Profiling</strong></p>
+<ul>
+<li><strong>Scenario</strong>:
+<ul>
+<li>A C application suffers from memory leaks.</li>
+</ul>
+</li>
+<li><strong>Command</strong>:
+<ul>
+<li>Trace <code class="language-text">kmalloc</code> and <code class="language-text">kfree</code> events:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">tracepoint:kmem:kmalloc
+{
+    @allocs[comm] += args->bytes_alloc;
+}
+
+tracepoint:kmem:kfree
+{
+    @frees[comm] += args->bytes_alloc;
+}</code></pre></div>
+</li>
+</ul>
+</li>
+<li><strong>Output</strong>:
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">App        Allocated       Freed
+app1       1024 KB         512 KB</code></pre></div>
+</li>
+<li><strong>Interpretation</strong>:
+<ul>
+<li>Unfreed memory indicates potential leaks.</li>
+</ul>
+</li>
+<li><strong>Optimization</strong>:
+<ul>
+<li>Review and fix unfreed memory allocations.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="key-highlights-3" style="position:relative;"><a href="#key-highlights-3" aria-label="key highlights 3 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Highlights</strong></h2>
+<ol>
+<li>
+<p><strong>Powerful Observability</strong>:</p>
+<ul>
+<li>“BPF enables real-time, low-overhead tracing of system and application behavior across kernel and user space.”</li>
+</ul>
+</li>
+<li>
+<p><strong>Flexible Tooling</strong>:</p>
+<ul>
+<li>“From prebuilt tools in <code class="language-text">BCC</code> to custom scripts in <code class="language-text">bpftrace</code>, the ecosystem supports a wide range of use cases.”</li>
+</ul>
+</li>
+<li>
+<p><strong>Actionable Insights</strong>:</p>
+<ul>
+<li>“Advanced performance analysis with BPF transforms raw data into optimization strategies, whether debugging I/O, CPU, or memory bottlenecks.”</li>
+</ul>
+</li>
+<li>
+<p><strong>Real-World Applications</strong>:</p>
+<ul>
+<li>“eBPF has been used to optimize databases, web servers, and real-time analytics systems, demonstrating its versatility and impact.”</li>
+</ul>
+</li>
+</ol>
 <h1 id="chapter-16-case-study" style="position:relative;"><a href="#chapter-16-case-study" aria-label="chapter 16 case study permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Chapter 16: Case Study</strong></h1>
 <p>The chapter provides a step-by-step walkthrough of analyzing, diagnosing, and solving a complex performance issue in a real-world environment. It emphasizes <strong>structured methodologies</strong>, <strong>practical tools</strong>, and <strong>clear results</strong> to showcase the value of systematic performance tuning.</p>
 <hr>
@@ -13140,7 +14328,7 @@ Swap:          8G          0G         8G</code></pre></div>
 </li>
 </ul>
 <hr>
-<h3 id="key-takeaways-15" style="position:relative;"><a href="#key-takeaways-15" aria-label="key takeaways 15 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<h3 id="key-takeaways-17" style="position:relative;"><a href="#key-takeaways-17" aria-label="key takeaways 17 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
 <ol>
 <li>
 <p><strong>Code Optimization</strong>:</p>
@@ -13428,7 +14616,7 @@ Execution Time: 0.3 seconds</code></pre></div>
 </li>
 </ul>
 <hr>
-<h3 id="key-takeaways-16" style="position:relative;"><a href="#key-takeaways-16" aria-label="key takeaways 16 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<h3 id="key-takeaways-18" style="position:relative;"><a href="#key-takeaways-18" aria-label="key takeaways 18 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
 <ol>
 <li>
 <p><strong>Thorough Testing</strong>:</p>
