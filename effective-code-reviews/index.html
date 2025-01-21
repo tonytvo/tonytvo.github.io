@@ -51,7 +51,580 @@
         }
       }
     })
-  </script><link rel="alternate" type="application/rss+xml" title="Tony Vo Blog RSS Feed" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=b811602c8c8ce14b66aae6613c8968f4" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=b811602c8c8ce14b66aae6613c8968f4"/><title data-react-helmet="true">Looks Good to Me by Adrienne Braganza | Conversations on agile technical practices and investments</title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="global-wrapper" data-is-root-path="false"><header class="global-header"><a class="header-link-home" href="/">Conversations on agile technical practices and investments</a></header><main><article class="blog-post" itemscope="" itemType="http://schema.org/Article"><header><h1 itemProp="headline">Looks Good to Me by Adrienne Braganza</h1><p>January 06, 2025</p></header><section itemProp="articleBody"><h1 id="code-review-foundations" style="position:relative;"><a href="#code-review-foundations" aria-label="code review foundations permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Code Review Foundations</strong></h1>
+  </script><link rel="alternate" type="application/rss+xml" title="Tony Vo Blog RSS Feed" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=b811602c8c8ce14b66aae6613c8968f4" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=b811602c8c8ce14b66aae6613c8968f4"/><title data-react-helmet="true">Looks Good to Me by Adrienne Braganza | Conversations on agile technical practices and investments</title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="global-wrapper" data-is-root-path="false"><header class="global-header"><a class="header-link-home" href="/">Conversations on agile technical practices and investments</a></header><main><article class="blog-post" itemscope="" itemType="http://schema.org/Article"><header><h1 itemProp="headline">Looks Good to Me by Adrienne Braganza</h1><p>January 06, 2025</p></header><section itemProp="articleBody"><h1 id="table-of-contents" style="position:relative;"><a href="#table-of-contents" aria-label="table of contents permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Table of Contents</h1>
+<div class="table-of-contents">
+<ul>
+<li>
+<p><a href="#code-review-foundations"><strong>Code Review Foundations</strong></a></p>
+<ul>
+<li>
+<p><a href="#building-your-teams-first-code-review-process"><strong>Building Your Team’s First Code Review Process</strong></a></p>
+<ul>
+<li>
+<p><a href="#steps-to-collaboratively-establish-a-code-review-process"><strong>Steps to Collaboratively Establish a Code Review Process</strong></a></p>
+<ul>
+<li><a href="#1-setting-goals"><strong>1. Setting Goals</strong></a></li>
+<li><a href="#2-choosing-tools"><strong>2. Choosing Tools</strong></a></li>
+<li><a href="#3-defining-workflows"><strong>3. Defining Workflows</strong></a></li>
+<li><a href="#4-setting-approval-policies"><strong>4. Setting Approval Policies</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#strategies-for-refining-the-process-over-time"><strong>Strategies for Refining the Process Over Time</strong></a></p>
+<ul>
+<li><a href="#1-regular-retrospectives"><strong>1. Regular Retrospectives</strong></a></li>
+<li><a href="#2-scenario-based-walkthroughs"><strong>2. Scenario-Based Walkthroughs</strong></a></li>
+<li><a href="#3-iterative-adjustments"><strong>3. Iterative Adjustments</strong></a></li>
+<li><a href="#4-team-feedback-and-ownership"><strong>4. Team Feedback and Ownership</strong></a></li>
+<li><a href="#5-metrics-for-continuous-improvement"><strong>5. Metrics for Continuous Improvement</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#elevated-code-review-essentials"><strong>Elevated Code Review Essentials</strong></a></p>
+<ul>
+<li>
+<p><a href="#the-team-working-agreement"><strong>The Team Working Agreement</strong></a></p>
+<ul>
+<li>
+<p><a href="#introduction-to-creating-a-shared-agreement"><strong>Introduction to Creating a Shared Agreement</strong></a></p>
+</li>
+<li>
+<p><a href="#components-of-the-agreement"><strong>Components of the Agreement</strong></a></p>
+<ul>
+<li><a href="#1-response-times"><strong>1. Response Times</strong></a></li>
+<li><a href="#2-pr-sizes"><strong>2. PR Sizes</strong></a></li>
+<li><a href="#3-feedback-mechanisms"><strong>3. Feedback Mechanisms</strong></a></li>
+<li><a href="#4-self-approving-prs"><strong>4. Self-Approving PRs</strong></a></li>
+<li><a href="#5-nitpicks-and-minor-suggestions"><strong>5. Nitpicks and Minor Suggestions</strong></a></li>
+<li><a href="#6-positive-review-environment"><strong>6. Positive Review Environment</strong></a></li>
+<li><a href="#7-consequences-of-policy-violations"><strong>7. Consequences of Policy Violations</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#maintaining-and-iterating-on-the-working-agreement"><strong>Maintaining and Iterating on the Working Agreement</strong></a></p>
+<ul>
+<li><a href="#1-regular-updates"><strong>1. Regular Updates</strong></a></li>
+<li><a href="#2-incorporate-feedback"><strong>2. Incorporate Feedback</strong></a></li>
+<li><a href="#3-encourage-team-ownership"><strong>3. Encourage Team Ownership</strong></a></li>
+<li><a href="#4-adapt-to-change"><strong>4. Adapt to Change</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#examples-of-real-world-twa-guidelines"><strong>Examples of Real-World TWA Guidelines</strong></a></p>
+</li>
+<li>
+<p><a href="#summary"><strong>Summary</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#the-advantages-of-automation"><strong>The Advantages of Automation</strong></a></p>
+<ul>
+<li>
+<p><a href="#prerequisites-for-effective-automation"><strong>Prerequisites for Effective Automation</strong></a></p>
+<ul>
+<li><a href="#1-establishing-a-team-style-guide"><strong>1. Establishing a Team Style Guide</strong></a></li>
+<li><a href="#2-selecting-the-right-tools"><strong>2. Selecting the Right Tools</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#automation-before-reviews"><strong>Automation Before Reviews</strong></a></p>
+<ul>
+<li><a href="#1-code-formatting"><strong>1. Code Formatting</strong></a></li>
+<li><a href="#2-linting"><strong>2. Linting</strong></a></li>
+<li><a href="#3-static-code-analysis"><strong>3. Static Code Analysis</strong></a></li>
+<li><a href="#4-automated-testing"><strong>4. Automated Testing</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#automation-during-reviews"><strong>Automation During Reviews</strong></a></p>
+<ul>
+<li><a href="#1-pull-request-templates"><strong>1. Pull Request Templates</strong></a></li>
+<li><a href="#2-pr-validators"><strong>2. PR Validators</strong></a></li>
+<li><a href="#3-reviewer-assignment-automation"><strong>3. Reviewer Assignment Automation</strong></a></li>
+<li><a href="#4-gate-checks"><strong>4. Gate Checks</strong></a></li>
+<li><a href="#5-reminders-and-notifications"><strong>5. Reminders and Notifications</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#summary-1"><strong>Summary</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#composing-effective-code-review-comments"><strong>Composing Effective Code Review Comments</strong></a></p>
+<ul>
+<li>
+<p><a href="#guidelines-for-effective-comments"><strong>Guidelines for Effective Comments</strong></a></p>
+<ul>
+<li><a href="#1-be-objective"><strong>1. Be Objective</strong></a></li>
+<li><a href="#2-be-specific"><strong>2. Be Specific</strong></a></li>
+<li><a href="#3-be-actionable"><strong>3. Be Actionable</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#crafting-feedback-with-a-positive-and-constructive-tone"><strong>Crafting Feedback with a Positive and Constructive Tone</strong></a></p>
+<ul>
+<li><a href="#1-start-with-positive-reinforcement"><strong>1. Start with Positive Reinforcement</strong></a></li>
+<li><a href="#2-use-encouraging-language"><strong>2. Use Encouraging Language</strong></a></li>
+<li><a href="#3-explain-the-why"><strong>3. Explain the “Why”</strong></a></li>
+<li><a href="#4-maintain-professionalism"><strong>4. Maintain Professionalism</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#examples-of-well-constructed-comments"><strong>Examples of Well-Constructed Comments</strong></a></p>
+<ul>
+<li><a href="#1-identifying-a-bug"><strong>1. Identifying a Bug</strong></a></li>
+<li><a href="#2-suggesting-a-refactor"><strong>2. Suggesting a Refactor</strong></a></li>
+<li><a href="#3-proposing-an-alternative-approach"><strong>3. Proposing an Alternative Approach</strong></a></li>
+<li><a href="#4-highlighting-good-work"><strong>4. Highlighting Good Work</strong></a></li>
+<li><a href="#5-addressing-missing-test-coverage"><strong>5. Addressing Missing Test Coverage</strong></a></li>
+<li><a href="#6-correcting-style-issues"><strong>6. Correcting Style Issues</strong></a></li>
+<li><a href="#7-handling-security-concerns"><strong>7. Handling Security Concerns</strong></a></li>
+<li><a href="#8-encouraging-optimization"><strong>8. Encouraging Optimization</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#advanced-techniques-for-writing-comments"><strong>Advanced Techniques for Writing Comments</strong></a></p>
+<ul>
+<li><a href="#1-use-checklists"><strong>1. Use Checklists</strong></a></li>
+<li><a href="#2-group-similar-comments"><strong>2. Group Similar Comments</strong></a></li>
+<li><a href="#3-offer-multiple-solutions"><strong>3. Offer Multiple Solutions</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#key-takeaways"><strong>Key Takeaways</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#how-code-reviews-can-suck"><strong>How Code Reviews Can Suck</strong></a></p>
+<ul>
+<li>
+<p><a href="#common-issues-that-make-code-reviews-suck"><strong>Common Issues That Make Code Reviews Suck</strong></a></p>
+<ul>
+<li><a href="#1-lazy-reviews"><strong>1. Lazy Reviews</strong></a></li>
+<li><a href="#2-toxic-environments"><strong>2. Toxic Environments</strong></a></li>
+<li><a href="#3-over-stringent-feedback"><strong>3. Over-Stringent Feedback</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#strategies-for-fostering-empathy-and-engagement"><strong>Strategies for Fostering Empathy and Engagement</strong></a></p>
+<ul>
+<li><a href="#1-define-and-reinforce-code-review-expectations"><strong>1. Define and Reinforce Code Review Expectations</strong></a></li>
+<li><a href="#2-address-review-fatigue-and-overload"><strong>2. Address Review Fatigue and Overload</strong></a></li>
+<li><a href="#3-cultivate-a-positive-and-respectful-review-culture"><strong>3. Cultivate a Positive and Respectful Review Culture</strong></a></li>
+<li><a href="#4-prioritize-high-impact-feedback"><strong>4. Prioritize High-Impact Feedback</strong></a></li>
+<li><a href="#5-turn-reviews-into-mentorship-opportunities"><strong>5. Turn Reviews Into Mentorship Opportunities</strong></a></li>
+<li><a href="#6-use-retrospectives-to-continuously-improve"><strong>6. Use Retrospectives to Continuously Improve</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#expanded-examples"><strong>Expanded Examples</strong></a></p>
+<ul>
+<li><a href="#lazy-reviews"><strong>Lazy Reviews</strong></a></li>
+<li><a href="#toxic-feedback"><strong>Toxic Feedback</strong></a></li>
+<li><a href="#over-stringent-reviews"><strong>Over-Stringent Reviews</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#key-takeaways-1"><strong>Key Takeaways</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#key-aspects-to-review"><strong>Key Aspects to Review</strong></a></p>
+<ul>
+<li>
+<p><a href="#tests"><strong>Tests</strong></a></p>
+<ul>
+<li><a href="#are-new-tests-present-for-addedmodified-code"><strong>Are new tests present for added/modified code?</strong></a></li>
+<li><a href="#do-tests-cover-edge-cases-and-critical-functionality"><strong>Do tests cover edge cases and critical functionality?</strong></a></li>
+<li><a href="#quality-over-quantity-in-test-coverage"><strong>Quality over quantity in test coverage</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#performance"><strong>Performance</strong></a></p>
+<ul>
+<li><a href="#identify-potential-bottlenecks"><strong>Identify potential bottlenecks</strong></a></li>
+<li><a href="#ensure-resource-efficiency"><strong>Ensure resource efficiency</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#design"><strong>Design</strong></a></p>
+<ul>
+<li>
+<p><a href="#1-single-responsibility-principle-srp"><strong>1. Single Responsibility Principle (SRP)</strong></a></p>
+<ul>
+<li><a href="#examples"><strong>Examples</strong>:</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#2-open-closed-principle-ocp"><strong>2. Open-Closed Principle (OCP)</strong></a></p>
+<ul>
+<li><a href="#examples-1"><strong>Examples</strong>:</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#3-liskov-substitution-principle-lsp"><strong>3. Liskov Substitution Principle (LSP)</strong></a></p>
+<ul>
+<li><a href="#examples-2"><strong>Examples</strong>:</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#4-interface-segregation-principle-isp"><strong>4. Interface Segregation Principle (ISP)</strong></a></p>
+<ul>
+<li><a href="#examples-3"><strong>Examples</strong>:</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#5-dependency-inversion-principle-dip"><strong>5. Dependency Inversion Principle (DIP)</strong></a></p>
+<ul>
+<li><a href="#examples-4"><strong>Examples</strong>:</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#use-of-appropriate-design-patterns"><strong>Use of appropriate design patterns</strong></a></p>
+</li>
+<li>
+<p><a href="#conclusion"><strong>Conclusion</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#readability--maintainability"><strong>Readability &#x26; Maintainability</strong></a></p>
+<ul>
+<li><a href="#clear-and-meaningful-naming-conventions"><strong>Clear and meaningful naming conventions</strong></a></li>
+<li><a href="#sufficient-documentation-and-comments"><strong>Sufficient documentation and comments</strong></a></li>
+<li><a href="#logical-code-structure-for-easy-comprehension"><strong>Logical code structure for easy comprehension</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#summary-2"><strong>Summary</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#data-structures-in-code-review"><strong>Data Structures in Code Review</strong></a></p>
+<ul>
+<li>
+<p><a href="#choosing-appropriate-structures"><strong>Choosing Appropriate Structures</strong></a></p>
+<ul>
+<li><a href="#lists"><strong>Lists</strong></a></li>
+<li><a href="#sets"><strong>Sets</strong></a></li>
+<li><a href="#maps"><strong>Maps</strong></a></li>
+<li><a href="#queues"><strong>Queues</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#recognizing-common-anti-patterns"><strong>Recognizing Common Anti-Patterns</strong></a></p>
+<ul>
+<li><a href="#frequent-re-sorting-of-lists"><strong>Frequent Re-Sorting of Lists</strong></a></li>
+<li><a href="#excessive-iteration"><strong>Excessive Iteration</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#leveraging-java-specific-implementations"><strong>Leveraging Java-Specific Implementations</strong></a></p>
+<ul>
+<li><a href="#arraylist-vs-linkedlist"><strong>ArrayList vs. LinkedList</strong></a></li>
+<li><a href="#hashmap-vs-treemap"><strong>HashMap vs. TreeMap</strong></a></li>
+<li><a href="#hashset-vs-linkedhashset"><strong>HashSet vs. LinkedHashSet</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#final-thoughts"><strong>Final Thoughts</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#detailed-expansion-on-security-considerations-in-code-review"><strong>Detailed Expansion on Security Considerations in Code Review</strong></a></p>
+<ul>
+<li>
+<p><a href="#1-ensuring-secure-dependencies"><strong>1. Ensuring Secure Dependencies</strong></a></p>
+<ul>
+<li><a href="#key-practices-for-secure-dependencies"><strong>Key Practices for Secure Dependencies</strong>:</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#2-detecting-potential-vulnerabilities-during-the-review"><strong>2. Detecting Potential Vulnerabilities During the Review</strong></a></p>
+<ul>
+<li><a href="#common-vulnerabilities-to-look-for"><strong>Common Vulnerabilities to Look For</strong>:</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#3-using-automated-security-checks-as-a-supplementary-layer"><strong>3. Using Automated Security Checks as a Supplementary Layer</strong></a></p>
+<ul>
+<li><a href="#popular-tools"><strong>Popular Tools</strong>:</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#key-practices-for-effective-automation"><strong>Key Practices for Effective Automation</strong>:</a></p>
+</li>
+<li>
+<p><a href="#summary-of-security-considerations"><strong>Summary of Security Considerations</strong></a></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#part-3-dealing-with-dilemmas"><strong>Part 3: Dealing with Dilemmas</strong></a></p>
+<ul>
+<li>
+<p><a href="#decreasing-code-review-delays"><strong>Decreasing Code Review Delays</strong></a></p>
+<ul>
+<li>
+<p><a href="#common-causes-of-code-review-delays"><strong>Common Causes of Code Review Delays</strong></a></p>
+<ul>
+<li><a href="#1-single-reviewer-bottleneck"><strong>1. Single Reviewer Bottleneck</strong></a></li>
+<li><a href="#2-large-pull-requests-prs"><strong>2. Large Pull Requests (PRs)</strong></a></li>
+<li><a href="#3-excessive-back-and-forth-discussions"><strong>3. Excessive Back-and-Forth Discussions</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#strategies-for-decreasing-code-review-delays"><strong>Strategies for Decreasing Code Review Delays</strong></a></p>
+<ul>
+<li><a href="#1-mitigating-single-reviewer-bottlenecks"><strong>1. Mitigating Single Reviewer Bottlenecks</strong></a></li>
+<li><a href="#2-managing-large-prs"><strong>2. Managing Large PRs</strong></a></li>
+<li><a href="#3-reducing-excessive-back-and-forth-discussions"><strong>3. Reducing Excessive Back-and-Forth Discussions</strong></a></li>
+<li><a href="#4-leveraging-automation-to-speed-up-reviews"><strong>4. Leveraging Automation to Speed Up Reviews</strong></a></li>
+<li><a href="#5-improve-review-metrics-and-transparency"><strong>5. Improve Review Metrics and Transparency</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#expanded-examples-1"><strong>Expanded Examples</strong></a></p>
+<ul>
+<li><a href="#single-reviewer-bottleneck"><strong>Single Reviewer Bottleneck</strong></a></li>
+<li><a href="#large-prs"><strong>Large PRs</strong></a></li>
+<li><a href="#excessive-back-and-forth"><strong>Excessive Back-and-Forth</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#key-takeaways-2"><strong>Key Takeaways</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#eliminating-process-loopholes"><strong>Eliminating Process Loopholes</strong></a></p>
+<ul>
+<li>
+<p><a href="#identifying-and-addressing-process-loopholes"><strong>Identifying and Addressing Process Loopholes</strong></a></p>
+<ul>
+<li><a href="#1-undefined-processes"><strong>1. Undefined Processes</strong></a></li>
+<li><a href="#2-poor-tool-configurations"><strong>2. Poor Tool Configurations</strong></a></li>
+<li><a href="#3-lack-of-feedback-culture"><strong>3. Lack of Feedback Culture</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#approaching-emergencies-with-structured-solutions"><strong>Approaching Emergencies with Structured Solutions</strong></a></p>
+<ul>
+<li><a href="#1-define-what-constitutes-an-emergency"><strong>1. Define What Constitutes an Emergency</strong></a></li>
+<li><a href="#2-create-an-emergency-playbook"><strong>2. Create an Emergency Playbook</strong></a></li>
+<li><a href="#3-maintain-accountability"><strong>3. Maintain Accountability</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#expanded-examples-2"><strong>Expanded Examples</strong></a></p>
+<ul>
+<li><a href="#undefined-processes"><strong>Undefined Processes</strong></a></li>
+<li><a href="#poor-tool-configurations"><strong>Poor Tool Configurations</strong></a></li>
+<li><a href="#lack-of-feedback-culture"><strong>Lack of Feedback Culture</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#key-takeaways-3"><strong>Key Takeaways</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#the-emergency-playbook"><strong>The Emergency Playbook</strong></a></p>
+<ul>
+<li>
+<p><a href="#what-is-an-emergency-playbook"><strong>What Is an Emergency Playbook?</strong></a></p>
+<ul>
+<li><a href="#why-its-essential"><strong>Why It’s Essential:</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#creating-an-action-plan-for-exceptional-situations"><strong>Creating an Action Plan for Exceptional Situations</strong></a></p>
+<ul>
+<li><a href="#1-what-constitutes-an-emergency"><strong>1. What Constitutes an Emergency?</strong></a></li>
+<li><a href="#2-declaring-the-emergency"><strong>2. Declaring the Emergency</strong></a></li>
+<li><a href="#3-emergency-workflow"><strong>3. Emergency Workflow</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#incorporating-decision-trees"><strong>Incorporating Decision Trees</strong></a></p>
+<ul>
+<li><a href="#1-key-decision-points"><strong>1. Key Decision Points</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#bypassing-mechanisms-for-expediency"><strong>Bypassing Mechanisms for Expediency</strong></a></p>
+<ul>
+<li><a href="#1-define-what-can-be-bypassed"><strong>1. Define What Can Be Bypassed</strong></a></li>
+<li><a href="#2-assign-responsibility-for-bypass-decisions"><strong>2. Assign Responsibility for Bypass Decisions</strong></a></li>
+<li><a href="#3-temporary-measures-for-high-risk-fixes"><strong>3. Temporary Measures for High-Risk Fixes</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#follow-up-steps-after-emergencies"><strong>Follow-Up Steps After Emergencies</strong></a></p>
+<ul>
+<li><a href="#1-conduct-a-post-mortem"><strong>1. Conduct a Post-Mortem</strong></a></li>
+<li><a href="#2-validate-the-emergency-fix"><strong>2. Validate the Emergency Fix</strong></a></li>
+<li><a href="#3-update-the-emergency-playbook"><strong>3. Update the Emergency Playbook</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#expanded-examples-3"><strong>Expanded Examples</strong></a></p>
+<ul>
+<li><a href="#scenario-1-security-vulnerability"><strong>Scenario 1: Security Vulnerability</strong></a></li>
+<li><a href="#scenario-2-production-outage"><strong>Scenario 2: Production Outage</strong></a></li>
+<li><a href="#scenario-3-critical-feature-blocker"><strong>Scenario 3: Critical Feature Blocker</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#key-takeaways-4"><strong>Key Takeaways</strong></a></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#part-4-pairing-code-reviews-with-other-practices"><strong>Part 4: Pairing Code Reviews with Other Practices</strong></a></p>
+<ul>
+<li>
+<p><a href="#code-reviews-and-pair-programming"><strong>Code Reviews and Pair Programming</strong></a></p>
+<ul>
+<li>
+<p><a href="#1-exploring-the-complementary-nature-of-code-reviews-and-pair-programming"><strong>1. Exploring the Complementary Nature of Code Reviews and Pair Programming</strong></a></p>
+<ul>
+<li><a href="#strengths-of-pair-programming-in-relation-to-code-reviews"><strong>Strengths of Pair Programming in Relation to Code Reviews</strong></a></li>
+<li><a href="#limitations-addressed-by-code-reviews"><strong>Limitations Addressed by Code Reviews</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#2-best-practices-for-integrating-code-reviews-and-pair-programming"><strong>2. Best Practices for Integrating Code Reviews and Pair Programming</strong></a></p>
+<ul>
+<li><a href="#1-use-pair-programming-for-high-impact-or-complex-tasks"><strong>1. Use Pair Programming for High-Impact or Complex Tasks</strong></a></li>
+<li><a href="#2-combine-pair-programming-with-code-reviews"><strong>2. Combine Pair Programming with Code Reviews</strong></a></li>
+<li><a href="#3-rotate-pair-programming-partners"><strong>3. Rotate Pair Programming Partners</strong></a></li>
+<li><a href="#4-document-decisions-made-during-pair-programming"><strong>4. Document Decisions Made During Pair Programming</strong></a></li>
+<li><a href="#5-use-pair-programming-to-mentor-junior-developers"><strong>5. Use Pair Programming to Mentor Junior Developers</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#code-reviews-and-mob-programming"><strong>Code Reviews and Mob Programming</strong></a></p>
+<ul>
+<li>
+<p><a href="#1-benefits-and-challenges-of-mob-programming-in-relation-to-code-reviews"><strong>1. Benefits and Challenges of Mob Programming in Relation to Code Reviews</strong></a></p>
+<ul>
+<li><a href="#benefits-of-mob-programming"><strong>Benefits of Mob Programming</strong></a></li>
+<li><a href="#challenges-of-mob-programming"><strong>Challenges of Mob Programming</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#2-finding-the-right-balance-for-team-workflows"><strong>2. Finding the Right Balance for Team Workflows</strong></a></p>
+<ul>
+<li><a href="#1-reserve-mob-programming-for-high-value-tasks"><strong>1. Reserve Mob Programming for High-Value Tasks</strong></a></li>
+<li><a href="#2-follow-up-mob-programming-with-code-reviews"><strong>2. Follow Up Mob Programming with Code Reviews</strong></a></li>
+<li><a href="#3-rotate-roles-during-mob-programming"><strong>3. Rotate Roles During Mob Programming</strong></a></li>
+<li><a href="#4-use-facilitators-to-keep-sessions-productive"><strong>4. Use Facilitators to Keep Sessions Productive</strong></a></li>
+<li><a href="#5-incorporate-retrospectives-post-mob-programming"><strong>5. Incorporate Retrospectives Post-Mob Programming</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#examples-of-integration"><strong>Examples of Integration</strong></a></p>
+<ul>
+<li><a href="#pair-programming-and-code-reviews"><strong>Pair Programming and Code Reviews</strong></a></li>
+<li><a href="#mob-programming-and-code-reviews"><strong>Mob Programming and Code Reviews</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#key-takeaways-5"><strong>Key Takeaways</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#code-reviews-and-ai"><strong>Code Reviews and AI</strong></a></p>
+<ul>
+<li>
+<p><a href="#leveraging-ai-for-code-quality-checks-expedited-reviews-and-large-scale-analysis"><strong>Leveraging AI for Code Quality Checks, Expedited Reviews, and Large-Scale Analysis</strong></a></p>
+<ul>
+<li><a href="#1-ai-for-code-quality-checks"><strong>1. AI for Code Quality Checks</strong></a></li>
+<li><a href="#2-ai-for-expedited-reviews"><strong>2. AI for Expedited Reviews</strong></a></li>
+<li><a href="#3-ai-for-large-scale-analysis"><strong>3. AI for Large-Scale Analysis</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#limitations-of-ai-in-code-reviews"><strong>Limitations of AI in Code Reviews</strong></a></p>
+<ul>
+<li><a href="#1-limited-contextual-understanding"><strong>1. Limited Contextual Understanding</strong></a></li>
+<li><a href="#2-dependence-on-training-data"><strong>2. Dependence on Training Data</strong></a></li>
+<li><a href="#3-over-reliance-can-hinder-team-expertise"><strong>3. Over-Reliance Can Hinder Team Expertise</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#human-ai-collaboration-as-the-future-of-code-reviews"><strong>Human-AI Collaboration as the Future of Code Reviews</strong></a></p>
+<ul>
+<li><a href="#1-use-ai-for-preliminary-checks"><strong>1. Use AI for Preliminary Checks</strong></a></li>
+<li><a href="#2-focus-human-effort-on-high-value-tasks"><strong>2. Focus Human Effort on High-Value Tasks</strong></a></li>
+<li><a href="#3-enhance-collaboration-between-ai-and-humans"><strong>3. Enhance Collaboration Between AI and Humans</strong></a></li>
+<li><a href="#4-train-ai-with-team-specific-data"><strong>4. Train AI with Team-Specific Data</strong></a></li>
+<li><a href="#5-regularly-evaluate-ai-performance"><strong>5. Regularly Evaluate AI Performance</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#key-takeaways-6"><strong>Key Takeaways</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#upsource-quick-wins"><strong>Upsource Quick Wins</strong></a></p>
+<ul>
+<li>
+<p><a href="#1-leveraging-jetbrains-upsource-for-navigation-and-code-inspections"><strong>1. Leveraging JetBrains Upsource for Navigation and Code Inspections</strong></a></p>
+<ul>
+<li><a href="#streamlined-navigation"><strong>Streamlined Navigation</strong></a></li>
+<li><a href="#code-inspections"><strong>Code Inspections</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#2-identifying-exception-handling-and-probable-bugs"><strong>2. Identifying Exception Handling and Probable Bugs</strong></a></p>
+<ul>
+<li><a href="#exception-handling"><strong>Exception Handling</strong></a></li>
+<li><a href="#detecting-probable-bugs"><strong>Detecting Probable Bugs</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#3-simplifying-redundant-code-and-removing-unused-portions"><strong>3. Simplifying Redundant Code and Removing Unused Portions</strong></a></p>
+<ul>
+<li><a href="#simplifying-redundant-code"><strong>Simplifying Redundant Code</strong></a></li>
+<li><a href="#removing-unused-portions"><strong>Removing Unused Portions</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#summary-of-upsource-quick-wins"><strong>Summary of Upsource Quick Wins</strong></a></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#quotes">Quotes</a></p>
+</li>
+<li>
+<p><a href="#references">References</a></p>
+</li>
+</ul>
+</div>
+<h1 id="code-review-foundations" style="position:relative;"><a href="#code-review-foundations" aria-label="code review foundations permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Code Review Foundations</strong></h1>
 <h2 id="building-your-teams-first-code-review-process" style="position:relative;"><a href="#building-your-teams-first-code-review-process" aria-label="building your teams first code review process permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Building Your Team’s First Code Review Process</strong></h2>
 <p>This section dives deeper into the <strong>practical steps for creating a code review process</strong> that aligns with your team’s objectives and evolves with their needs. The process emphasizes collaboration, continuous improvement, and leveraging both human and automated inputs.</p>
 <hr>
