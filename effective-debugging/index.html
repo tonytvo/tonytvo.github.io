@@ -1647,6 +1647,50 @@
 </li>
 </ul>
 </li>
+<li>
+<p><a href="#investigate-scalability-issues-by-looking-at-contention"><strong>Investigate Scalability Issues by Looking at Contention</strong></a></p>
+<ul>
+<li>
+<p><a href="#overview-20"><strong>Overview</strong></a></p>
+</li>
+<li>
+<p><a href="#1-example-key-pair-generation-bottleneck"><strong>1. Example: Key Pair Generation Bottleneck</strong></a></p>
+<ul>
+<li><a href="#performance-analysis"><strong>Performance Analysis</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#2-identifying-contention-with-profiling-tools"><strong>2. Identifying Contention with Profiling Tools</strong></a></p>
+<ul>
+<li><a href="#example-profiling-execution-with-java-flight-recorder"><strong>Example: Profiling Execution with Java Flight Recorder</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#3-resolving-contention-replacing-hashmap-with-concurrenthashmap"><strong>3. Resolving Contention: Replacing <code class="language-text">HashMap</code> with <code class="language-text">ConcurrentHashMap</code></strong></a></p>
+</li>
+<li>
+<p><a href="#4-performance-after-fix"><strong>4. Performance After Fix</strong></a></p>
+</li>
+<li>
+<p><a href="#5-general-strategies-for-debugging-contention"><strong>5. General Strategies for Debugging Contention</strong></a></p>
+</li>
+<li>
+<p><a href="#key-takeaways-38"><strong>Key Takeaways</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#locate-false-sharing-by-using-performance-counters"><strong>Locate False Sharing by Using Performance Counters</strong></a></p>
+<ul>
+<li><a href="#understanding-false-sharing"><strong>Understanding False Sharing</strong></a></li>
+<li><a href="#example-code-demonstrating-false-sharing"><strong>Example Code Demonstrating False Sharing</strong></a></li>
+<li><a href="#why-is-this-happening"><strong>Why is This Happening?</strong></a></li>
+<li><a href="#diagnosing-false-sharing-with-performance-counters"><strong>Diagnosing False Sharing with Performance Counters</strong></a></li>
+<li><a href="#locating-the-problem-in-code"><strong>Locating the Problem in Code</strong></a></li>
+<li><a href="#fixing-false-sharing"><strong>Fixing False Sharing</strong></a></li>
+<li><a href="#key-takeaways-39"><strong>Key Takeaways</strong></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
@@ -12064,6 +12108,243 @@ thread apply all bt</code></pre></div>
 <li><strong>“Leverage Specialized Tools and Techniques”</strong>: Tools like TSan, Helgrind, and rr make isolating and analyzing nondeterministic behavior manageable.</li>
 <li><strong>“Minimize Shared State for Simplified Debugging”</strong>: Reducing dependencies between threads makes programs more deterministic and easier to debug.</li>
 </ul>
+<h2 id="investigate-scalability-issues-by-looking-at-contention" style="position:relative;"><a href="#investigate-scalability-issues-by-looking-at-contention" aria-label="investigate scalability issues by looking at contention permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Investigate Scalability Issues by Looking at Contention</strong></h2>
+<hr>
+<h3 id="overview-20" style="position:relative;"><a href="#overview-20" aria-label="overview 20 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Overview</strong></h3>
+<p>Scalability problems occur when a system <strong>fails to improve performance proportionally</strong> as resources such as CPU cores are added. <strong>“When you have a system whose performance (typically latency or throughput) doesn’t scale in accordance with the resources it has at its disposal, start by looking at sources of contention.”</strong>.</p>
+<p>Contention occurs when multiple threads compete for the same resource, such as:</p>
+<ul>
+<li><strong>Locks on shared resources</strong></li>
+<li><strong>Serial bottlenecks in code execution</strong></li>
+<li><strong>Memory cache contention</strong> (further discussed in Item 65: <em>Locate False Sharing by Using Performance Counters</em>).</li>
+</ul>
+<p>By analyzing contention points, developers can identify why a multi-threaded program is <strong>not benefiting from additional CPU cores</strong> and make optimizations to improve scalability.</p>
+<hr>
+<h3 id="1-example-key-pair-generation-bottleneck" style="position:relative;"><a href="#1-example-key-pair-generation-bottleneck" aria-label="1 example key pair generation bottleneck permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. Example: Key Pair Generation Bottleneck</strong></h3>
+<p>Consider the <strong>multi-threaded Java program</strong> below, which generates <strong>public-private key pairs</strong> and stores them in a <code class="language-text">HashMap</code>. The issue is that even with <strong>multiple threads, execution time does not improve significantly</strong>.</p>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>security<span class="token punctuation">.</span></span><span class="token operator">*</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span></span><span class="token operator">*</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">HashMap</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LockContention</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> nKeys <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span>args<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> nThreads <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span>args<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">PublicKey</span><span class="token punctuation">,</span> <span class="token class-name">PrivateKey</span><span class="token punctuation">></span></span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">Runnable</span> task <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token punctuation">{</span>
+            <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                <span class="token keyword">synchronized</span><span class="token punctuation">(</span>map<span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment">// LOCK CONTENTION HERE</span>
+                    <span class="token class-name">KeyPairGenerator</span> keyGen <span class="token operator">=</span> <span class="token class-name">KeyPairGenerator</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token string">"DSA"</span><span class="token punctuation">,</span> <span class="token string">"SUN"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token class-name">SecureRandom</span> random <span class="token operator">=</span> <span class="token class-name">SecureRandom</span><span class="token punctuation">.</span><span class="token function">getInstanceStrong</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    keyGen<span class="token punctuation">.</span><span class="token function">initialize</span><span class="token punctuation">(</span><span class="token number">2048</span><span class="token punctuation">,</span> random<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token class-name">KeyPair</span> pair <span class="token operator">=</span> keyGen<span class="token punctuation">.</span><span class="token function">generateKeyPair</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>pair<span class="token punctuation">.</span><span class="token function">getPublic</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> pair<span class="token punctuation">.</span><span class="token function">getPrivate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Generation failed: "</span> <span class="token operator">+</span> e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">ExecutorService</span> executor <span class="token operator">=</span> <span class="token class-name">Executors</span><span class="token punctuation">.</span><span class="token function">newFixedThreadPool</span><span class="token punctuation">(</span>nThreads<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nKeys<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+            executor<span class="token punctuation">.</span><span class="token function">submit</span><span class="token punctuation">(</span>task<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            executor<span class="token punctuation">.</span><span class="token function">shutdown</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            executor<span class="token punctuation">.</span><span class="token function">awaitTermination</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token class-name">TimeUnit</span><span class="token punctuation">.</span><span class="token constant">SECONDS</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">InterruptedException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>err<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Interrupted await: "</span> <span class="token operator">+</span> e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h4 id="performance-analysis" style="position:relative;"><a href="#performance-analysis" aria-label="performance analysis permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Performance Analysis</strong></h4>
+<p>Running the program with <strong>four threads</strong> takes almost <strong>the same time as running it with a single thread</strong>:</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">$ <span class="token function">time</span> <span class="token function">java</span> LockContention <span class="token number">1000</span> <span class="token number">4</span>
+real 0m11.106s
+
+$ <span class="token function">time</span> <span class="token function">java</span> LockContention <span class="token number">1000</span> <span class="token number">1</span>
+real 0m11.075s</code></pre></div>
+<p>This indicates <strong>severe contention</strong>, meaning that <strong>threads are waiting rather than working efficiently</strong>. Instead of benefiting from additional threads, the application is <strong>bottlenecked by locks on shared resources</strong>.</p>
+<hr>
+<h3 id="2-identifying-contention-with-profiling-tools" style="position:relative;"><a href="#2-identifying-contention-with-profiling-tools" aria-label="2 identifying contention with profiling tools permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2. Identifying Contention with Profiling Tools</strong></h3>
+<p>To diagnose contention problems, <strong>profiling tools</strong> can reveal where threads spend their time waiting:</p>
+<ul>
+<li><strong>Oracle Java Flight Recorder</strong></li>
+<li><strong>Intel VTune Amplifier</strong></li>
+</ul>
+<h4 id="example-profiling-execution-with-java-flight-recorder" style="position:relative;"><a href="#example-profiling-execution-with-java-flight-recorder" aria-label="example profiling execution with java flight recorder permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Example: Profiling Execution with Java Flight Recorder</strong></h4>
+<p>To analyze the program, <strong>run it under the profiler</strong>:</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">$ <span class="token function">java</span> <span class="token parameter variable">-XX:+UnlockCommercialFeatures</span> <span class="token parameter variable">-XX:+FlightRecorder</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">-XX:StartFlightRecording</span><span class="token operator">=</span>name<span class="token operator">=</span>test,dumponexit<span class="token operator">=</span>true, <span class="token punctuation">\</span>
+  <span class="token assign-left variable">filename</span><span class="token operator">=</span>perf.jfr LockContention <span class="token number">1000</span> <span class="token number">4</span></code></pre></div>
+<p>Alternatively, you can <strong>attach the profiler to an already running program</strong> using <strong>Oracle Java Mission Control GUI</strong>.</p>
+<p>After collecting profiling data, examining the <strong>time distribution among threads</strong> can highlight:</p>
+<ul>
+<li><strong>Imbalanced workload distribution</strong></li>
+<li><strong>Threads spending significant time blocked</strong></li>
+<li><strong>Lock contention statistics</strong></li>
+</ul>
+<p>Figure <strong>8.2 in the book</strong> provides an example visualization from <strong>Java Flight Recorder</strong>, where:</p>
+<ul>
+<li>The <strong>top blocked threads</strong> show extensive lock contention.</li>
+<li><strong>A significant amount of time (12.9s) is spent on a single HashMap lock</strong>.</li>
+</ul>
+<hr>
+<h3 id="3-resolving-contention-replacing-hashmap-with-concurrenthashmap" style="position:relative;"><a href="#3-resolving-contention-replacing-hashmap-with-concurrenthashmap" aria-label="3 resolving contention replacing hashmap with concurrenthashmap permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3. Resolving Contention: Replacing <code class="language-text">HashMap</code> with <code class="language-text">ConcurrentHashMap</code></strong></h3>
+<p>The primary issue is <strong>synchronization on the shared <code class="language-text">HashMap</code></strong>, preventing <strong>multiple threads from making progress simultaneously</strong>.</p>
+<p>A simple <strong>fix</strong> is replacing <code class="language-text">HashMap</code> with <code class="language-text">ConcurrentHashMap</code>, which allows <strong>concurrent modifications</strong> without locking the entire map:</p>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>concurrent<span class="token punctuation">.</span></span><span class="token class-name">ConcurrentHashMap</span></span><span class="token punctuation">;</span>
+
+<span class="token class-name">ConcurrentHashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">PublicKey</span><span class="token punctuation">,</span> <span class="token class-name">PrivateKey</span><span class="token punctuation">></span></span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ConcurrentHashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token class-name">Runnable</span> task <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token class-name">KeyPairGenerator</span> keyGen <span class="token operator">=</span> <span class="token class-name">KeyPairGenerator</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token string">"DSA"</span><span class="token punctuation">,</span> <span class="token string">"SUN"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">SecureRandom</span> random <span class="token operator">=</span> <span class="token class-name">SecureRandom</span><span class="token punctuation">.</span><span class="token function">getInstanceStrong</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        keyGen<span class="token punctuation">.</span><span class="token function">initialize</span><span class="token punctuation">(</span><span class="token number">2048</span><span class="token punctuation">,</span> random<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">KeyPair</span> pair <span class="token operator">=</span> keyGen<span class="token punctuation">.</span><span class="token function">generateKeyPair</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>pair<span class="token punctuation">.</span><span class="token function">getPublic</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> pair<span class="token punctuation">.</span><span class="token function">getPrivate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// No explicit locking needed</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Generation failed: "</span> <span class="token operator">+</span> e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
+<hr>
+<h3 id="4-performance-after-fix" style="position:relative;"><a href="#4-performance-after-fix" aria-label="4 performance after fix permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>4. Performance After Fix</strong></h3>
+<p>With <code class="language-text">ConcurrentHashMap</code>, running the <strong>same workload with four threads now achieves a 3.2x speedup</strong> over a single-threaded execution:</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">$ <span class="token function">time</span> <span class="token function">java</span> NoContention <span class="token number">1000</span> <span class="token number">4</span>
+real 0m3.503s</code></pre></div>
+<p>This demonstrates <strong>how reducing contention allows better scaling across multiple cores</strong>.</p>
+<hr>
+<h3 id="5-general-strategies-for-debugging-contention" style="position:relative;"><a href="#5-general-strategies-for-debugging-contention" aria-label="5 general strategies for debugging contention permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>5. General Strategies for Debugging Contention</strong></h3>
+<ol>
+<li>
+<p><strong>Use Profiling to Identify Contention Hotspots</strong></p>
+<ul>
+<li><strong>Tools:</strong> <code class="language-text">perf</code>, <code class="language-text">strace</code>, <code class="language-text">Java Flight Recorder</code>, <code class="language-text">VTune</code>.</li>
+<li>Identify <strong>which locks are blocking execution</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Avoid Excessive Synchronization</strong></p>
+<ul>
+<li><strong>Use concurrent data structures</strong> like <code class="language-text">ConcurrentHashMap</code>, <code class="language-text">BlockingQueue</code>.</li>
+<li>Reduce <strong>granularity of locks</strong> (e.g., lock-free or read-write locks).</li>
+</ul>
+</li>
+<li>
+<p><strong>Minimize Critical Sections</strong></p>
+<ul>
+<li>Ensure <strong>shared locks protect only necessary data</strong>.</li>
+<li><strong>Move expensive computations outside locks</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Partition Data to Avoid Shared Locks</strong></p>
+<ul>
+<li>Instead of multiple threads writing to a <strong>single resource</strong>, distribute workload across multiple resources.</li>
+<li>Example: <strong>Sharding a database instead of locking a single large table</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Increase Concurrency Granularity</strong></p>
+<ul>
+<li><strong>Using fine-grained locks</strong> instead of a <strong>single global lock</strong> improves throughput.</li>
+</ul>
+</li>
+<li>
+<p><strong>Test Scalability Early</strong></p>
+<ul>
+<li>Avoid surprises by <strong>running scalability tests</strong> during development.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="key-takeaways-38" style="position:relative;"><a href="#key-takeaways-38" aria-label="key takeaways 38 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<p>✔ <strong>“When multi-threaded performance doesn’t scale, investigate sources of contention.”</strong><br>
+✔ <strong>Profiling tools such as Java Flight Recorder and Intel VTune help pinpoint blocking locks.</strong><br>
+✔ <strong>Replacing <code class="language-text">HashMap</code> with <code class="language-text">ConcurrentHashMap</code> eliminated a bottleneck, improving performance by 3.2x.</strong><br>
+✔ <strong>Adopt concurrency-friendly patterns—fine-grained locking, partitioning workloads, and using lock-free data structures.</strong></p>
+<p>By systematically <strong>analyzing contention bottlenecks</strong>, developers can <strong>unlock the full potential of multi-core systems and avoid wasted CPU cycles</strong>.</p>
+<h2 id="locate-false-sharing-by-using-performance-counters" style="position:relative;"><a href="#locate-false-sharing-by-using-performance-counters" aria-label="locate false sharing by using performance counters permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Locate False Sharing by Using Performance Counters</strong></h2>
+<h3 id="understanding-false-sharing" style="position:relative;"><a href="#understanding-false-sharing" aria-label="understanding false sharing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Understanding False Sharing</strong></h3>
+<p>False sharing is a performance-degrading phenomenon in multi-threaded applications where multiple CPU cores modify different variables that reside on the same cache line. Despite these variables being logically independent, the CPU’s cache coherency protocol treats them as shared, forcing unnecessary synchronization and increasing memory latency.</p>
+<h3 id="example-code-demonstrating-false-sharing" style="position:relative;"><a href="#example-code-demonstrating-false-sharing" aria-label="example code demonstrating false sharing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Example Code Demonstrating False Sharing</strong></h3>
+<p>Consider the following OpenMP C code that calculates eight sums of an array, each scaled down by different powers of two:</p>
+<div class="gatsby-highlight" data-language="c"><pre class="language-c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;omp.h></span></span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">N</span> <span class="token expression"><span class="token number">100000000</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">NTHREADS</span> <span class="token expression"><span class="token number">8</span></span></span>
+<span class="token keyword">int</span> values<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">char</span> <span class="token operator">*</span>argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> tid<span class="token punctuation">;</span>
+    <span class="token keyword">static</span> <span class="token keyword">int</span> sum<span class="token punctuation">[</span>NTHREADS<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">_OPENMP</span></span>
+    <span class="token function">omp_set_num_threads</span><span class="token punctuation">(</span>NTHREADS<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">pragma</span> <span class="token expression">omp parallel <span class="token function">private</span><span class="token punctuation">(</span>tid<span class="token punctuation">)</span></span></span>
+    <span class="token punctuation">{</span>
+        tid <span class="token operator">=</span> <span class="token function">omp_get_thread_num</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">else</span></span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>tid <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> tid <span class="token operator">&lt;</span> NTHREADS<span class="token punctuation">;</span> tid<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> N<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+            sum<span class="token punctuation">[</span>tid<span class="token punctuation">]</span> <span class="token operator">+=</span> values<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">>></span> tid<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>When executed on an <strong>8-core system</strong> with OpenMP enabled:</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">$ <span class="token function">time</span> ./sum-mp
+real    0m2.603s
+user    0m19.076s
+sys     0m0.072s</code></pre></div>
+<p>Surprisingly, when executed sequentially <strong>without OpenMP</strong>:</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">$ <span class="token function">time</span> ./sum-seq
+real    0m2.249s
+user    0m2.208s
+sys     0m0.040s</code></pre></div>
+<p>The sequential version runs <strong>faster</strong>, which contradicts the expected speed-up from parallel execution.</p>
+<h3 id="why-is-this-happening" style="position:relative;"><a href="#why-is-this-happening" aria-label="why is this happening permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Why is This Happening?</strong></h3>
+<p>The issue arises from <strong>false sharing</strong>. Each thread modifies its own element in the <code class="language-text">sum</code> array, but these elements are stored closely in memory, likely <strong>falling into the same cache line</strong>. As a result, each CPU core’s private cache must synchronize with others, causing massive slowdowns due to unnecessary memory traffic.</p>
+<blockquote>
+<p><strong>“The slowdown you’re observing is overhead introduced by the cache synchronization protocol in order to provide all threads with the correct view of the sum array.”</strong></p>
+</blockquote>
+<h3 id="diagnosing-false-sharing-with-performance-counters" style="position:relative;"><a href="#diagnosing-false-sharing-with-performance-counters" aria-label="diagnosing false sharing with performance counters permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Diagnosing False Sharing with Performance Counters</strong></h3>
+<p>One way to <strong>identify false sharing</strong> is by using performance counters to track <strong>Last-Level Cache (LLC) misses</strong>. On Linux, this can be done using the <code class="language-text">perf</code> tool:</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">$ perf <span class="token function">stat</span> <span class="token parameter variable">--event</span><span class="token operator">=</span>LLC-loads ./sum-seq
+Performance counter stats <span class="token keyword">for</span> <span class="token string">'./sum-seq'</span><span class="token builtin class-name">:</span>
+
+<span class="token punctuation">..</span> <span class="token number">17,830</span> LLC-loads
+<span class="token number">2.223350547</span> seconds <span class="token function">time</span> elapsed</code></pre></div>
+<p>When running the <strong>multi-threaded</strong> version:</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">$ perf <span class="token function">stat</span> <span class="token parameter variable">-e</span> LLC-loads ./sum-mp
+Performance counter stats <span class="token keyword">for</span> <span class="token string">'./sum-mp'</span><span class="token builtin class-name">:</span>
+
+<span class="token punctuation">..</span> <span class="token number">49,264</span>,883 LLC-loads
+<span class="token number">2.547188760</span> seconds <span class="token function">time</span> elapsed</code></pre></div>
+<p>The <strong>dramatic increase in LLC-loads (from 17k to 49M)</strong> indicates excessive cache contention due to false sharing.</p>
+<h3 id="locating-the-problem-in-code" style="position:relative;"><a href="#locating-the-problem-in-code" aria-label="locating the problem in code permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Locating the Problem in Code</strong></h3>
+<p>To pinpoint the exact line of code responsible for the performance degradation, <code class="language-text">perf</code> can be used to <strong>record</strong> and <strong>annotate</strong> events:</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">$ perf record <span class="token parameter variable">--event</span><span class="token operator">=</span>LLC-loads ./sum-mp
+$ perf annotate</code></pre></div>
+<p>This generates an annotated output showing the specific <strong>lines in the source code</strong> that suffer the most from cache misses. In the given example, over <strong>54% of last-level cache loads occur at the line writing to <code class="language-text">sum[tid]</code></strong>.</p>
+<h3 id="fixing-false-sharing" style="position:relative;"><a href="#fixing-false-sharing" aria-label="fixing false sharing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Fixing False Sharing</strong></h3>
+<p>The best way to <strong>resolve false sharing</strong> is to ensure that each thread’s data resides in <strong>separate cache lines</strong>. This can be done by <strong>padding structures</strong> to align elements with the CPU’s cache line size (usually <strong>64 bytes</strong>):</p>
+<div class="gatsby-highlight" data-language="c"><pre class="language-c"><code class="language-c"><span class="token keyword">struct</span> <span class="token class-name">PaddedSum</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> value<span class="token punctuation">[</span><span class="token number">16</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// 64-byte alignment</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">static</span> <span class="token keyword">struct</span> <span class="token class-name">PaddedSum</span> sum<span class="token punctuation">[</span>NTHREADS<span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre></div>
+<p>Alternatively, <strong>use <code class="language-text">alignas</code> in C++</strong>:</p>
+<div class="gatsby-highlight" data-language="cpp"><pre class="language-cpp"><code class="language-cpp"><span class="token keyword">alignas</span><span class="token punctuation">(</span><span class="token number">64</span><span class="token punctuation">)</span> <span class="token keyword">static</span> <span class="token keyword">int</span> sum<span class="token punctuation">[</span>NTHREADS<span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre></div>
+<p>This forces each <code class="language-text">sum[tid]</code> to occupy an independent cache line, preventing excessive cache invalidations.</p>
+<h3 id="key-takeaways-39" style="position:relative;"><a href="#key-takeaways-39" aria-label="key takeaways 39 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<ul>
+<li><strong>False sharing</strong> occurs when logically independent variables share the same cache line.</li>
+<li>It can <strong>severely degrade performance</strong> in multi-threaded applications.</li>
+<li><strong>Performance counters</strong> (LLC-loads) help <strong>diagnose</strong> false sharing.</li>
+<li>Use <strong>padding or memory alignment techniques</strong> to prevent cache line contention.</li>
+</ul>
+<p>By implementing these strategies, you can significantly <strong>boost the efficiency of multi-threaded applications</strong> and <strong>avoid performance pitfalls</strong> caused by false sharing.</p>
 <h1 id="the-nine-indispensable-rules" style="position:relative;"><a href="#the-nine-indispensable-rules" aria-label="the nine indispensable rules permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>The Nine Indispensable Rules</strong></h1>
 <ul>
 <li>Concise presentation of the nine rules as a framework for debugging.</li>
