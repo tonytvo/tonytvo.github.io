@@ -1415,6 +1415,18 @@
 </ul>
 </li>
 <li>
+<p><a href="#profile-the-operation-of-systems-and-processes"><strong>Profile the Operation of Systems and Processes</strong></a></p>
+<ul>
+<li><a href="#understanding-system-profiling-for-debugging"><strong>Understanding System Profiling for Debugging</strong></a></li>
+<li><a href="#start-with-a-high-level-overview"><strong>Start with a High-Level Overview</strong></a></li>
+<li><a href="#memory-utilization-and-paging-issues"><strong>Memory Utilization and Paging Issues</strong></a></li>
+<li><a href="#beyond-utilization--measuring-resource-saturation"><strong>Beyond Utilization – Measuring Resource Saturation</strong></a></li>
+<li><a href="#identifying-the-culprit-process"><strong>Identifying the Culprit Process</strong></a></li>
+<li><a href="#advanced-profiling-techniques"><strong>Advanced Profiling Techniques</strong></a></li>
+<li><a href="#key-takeaways-31"><strong>Key Takeaways</strong></a></li>
+</ul>
+</li>
+<li>
 <p><a href="#trace-the-codes-execution"><strong>Trace the Code’s Execution</strong></a></p>
 <ul>
 <li>
@@ -1445,7 +1457,7 @@
 <p><a href="#example-scenarios-3"><strong>Example Scenarios</strong></a></p>
 </li>
 <li>
-<p><a href="#key-takeaways-31"><strong>Key Takeaways</strong></a></p>
+<p><a href="#key-takeaways-32"><strong>Key Takeaways</strong></a></p>
 </li>
 </ul>
 </li>
@@ -1488,7 +1500,7 @@
 <p><a href="#example-scenarios-4"><strong>Example Scenarios</strong></a></p>
 </li>
 <li>
-<p><a href="#key-takeaways-32"><strong>Key Takeaways</strong></a></p>
+<p><a href="#key-takeaways-33"><strong>Key Takeaways</strong></a></p>
 </li>
 </ul>
 </li>
@@ -1523,7 +1535,7 @@
 <p><a href="#example-scenarios-5"><strong>Example Scenarios</strong></a></p>
 </li>
 <li>
-<p><a href="#key-takeaways-33"><strong>Key Takeaways</strong></a></p>
+<p><a href="#key-takeaways-34"><strong>Key Takeaways</strong></a></p>
 </li>
 </ul>
 </li>
@@ -1554,7 +1566,7 @@
 <p><a href="#example-scenarios-6"><strong>Example Scenarios</strong></a></p>
 </li>
 <li>
-<p><a href="#key-takeaways-34"><strong>Key Takeaways</strong></a></p>
+<p><a href="#key-takeaways-35"><strong>Key Takeaways</strong></a></p>
 </li>
 </ul>
 </li>
@@ -1600,7 +1612,7 @@
 <p><a href="#example-scenarios-7"><strong>Example Scenarios</strong></a></p>
 </li>
 <li>
-<p><a href="#key-takeaways-35"><strong>Key Takeaways</strong></a></p>
+<p><a href="#key-takeaways-36"><strong>Key Takeaways</strong></a></p>
 </li>
 </ul>
 </li>
@@ -1631,7 +1643,7 @@
 <p><a href="#example-scenarios-8"><strong>Example Scenarios</strong></a></p>
 </li>
 <li>
-<p><a href="#key-takeaways-36"><strong>Key Takeaways</strong></a></p>
+<p><a href="#key-takeaways-37"><strong>Key Takeaways</strong></a></p>
 </li>
 </ul>
 </li>
@@ -10418,6 +10430,81 @@ OK <span class="token punctuation">(</span><span class="token number">110</span>
 ✔ <strong>“Increase an application’s logging verbosity to record the reason for its failure.”</strong><br>
 ✔ <strong>“Configure and filter log files to narrow down the problem.”</strong></p>
 <p>By implementing these techniques, <strong>developers can efficiently diagnose issues, reduce debugging time, and improve application reliability</strong>.</p>
+<h2 id="profile-the-operation-of-systems-and-processes" style="position:relative;"><a href="#profile-the-operation-of-systems-and-processes" aria-label="profile the operation of systems and processes permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Profile the Operation of Systems and Processes</strong></h2>
+<h3 id="understanding-system-profiling-for-debugging" style="position:relative;"><a href="#understanding-system-profiling-for-debugging" aria-label="understanding system profiling for debugging permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Understanding System Profiling for Debugging</strong></h3>
+<p>When dealing with performance issues in a system, <strong>profiling its operation is often the first and sometimes the only step required to diagnose the problem.</strong> Profiling helps identify which parts of the system consume the most resources and where inefficiencies exist.</p>
+<blockquote>
+<p><strong>“Your first (and often the only) port of call is a profile of the system’s operation.”</strong></p>
+</blockquote>
+<p>This process involves analyzing the <strong>system’s CPU, memory, and I/O utilization</strong> to pinpoint bottlenecks and unexpected behavior.</p>
+<hr>
+<h3 id="start-with-a-high-level-overview" style="position:relative;"><a href="#start-with-a-high-level-overview" aria-label="start with a high level overview permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Start with a High-Level Overview</strong></h3>
+<p>To begin profiling, <strong>use system monitoring tools</strong> to get a snapshot of the system’s behavior. On <strong>Unix-based systems</strong>, the <code class="language-text">top</code> command is a standard tool, while <strong>Windows users can rely on Task Manager</strong>.</p>
+<blockquote>
+<p><strong>“Two process viewing tools that will also give you a system’s CPU and memory utilization are the <code class="language-text">top</code> command on Unix systems and the Task Manager on Windows.”</strong></p>
+</blockquote>
+<p>By checking overall CPU usage, developers can determine if the system is <strong>overloaded or underutilized</strong>. For example:</p>
+<ul>
+<li><strong>If CPU utilization is high (e.g., 90% on a single-core CPU), it indicates excessive processing load.</strong></li>
+<li><strong>If CPU utilization is low (e.g., 10%), it suggests potential I/O-related delays.</strong></li>
+<li><strong>For multi-core systems</strong>, the load is distributed across all cores. If you have an 8-core CPU and one process is consuming an entire core, the total system load might only appear as <strong>12% (100%/8)</strong>.</li>
+</ul>
+<hr>
+<h3 id="memory-utilization-and-paging-issues" style="position:relative;"><a href="#memory-utilization-and-paging-issues" aria-label="memory utilization and paging issues permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Memory Utilization and Paging Issues</strong></h3>
+<p>Another important aspect of profiling is <strong>memory usage</strong>, which can significantly impact system performance.</p>
+<blockquote>
+<p><strong>“A high (near 100%) utilization may cause errors due to failed memory allocations or a drop in the system’s performance due to virtual memory paging.”</strong></p>
+</blockquote>
+<ul>
+<li><strong>Linux aggressively uses almost all available memory as a buffer cache</strong>, so you must add the “buffers” value to the free memory count when assessing available memory.</li>
+<li><strong>If memory is exhausted</strong>, performance degradation occurs due to <strong>paging</strong> (swapping data between RAM and disk).</li>
+</ul>
+<hr>
+<h3 id="beyond-utilization--measuring-resource-saturation" style="position:relative;"><a href="#beyond-utilization--measuring-resource-saturation" aria-label="beyond utilization  measuring resource saturation permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Beyond Utilization – Measuring Resource Saturation</strong></h3>
+<p>In high-performance systems, just <strong>measuring resource utilization is not enough</strong> because many systems are designed to run close to <strong>100% capacity</strong>. Instead, <strong>saturation</strong> must be examined.</p>
+<blockquote>
+<p><strong>“Saturation is a measure of the demands placed on a resource above the level it can service.”</strong></p>
+</blockquote>
+<p>To measure saturation:</p>
+<ol>
+<li><strong>For CPUs:</strong> Look for a system load higher than the number of cores (<code class="language-text">load average</code> in Unix) or check <strong>Processor Queue Length in Windows Performance Monitor</strong>.</li>
+<li><strong>For Memory:</strong> Check <strong>virtual memory page swap rates</strong> to identify excessive memory pressure.</li>
+<li><strong>For Network I/O:</strong> Look for <strong>dropped packets and retransmissions</strong>, indicating congestion.</li>
+<li><strong>For Storage I/O:</strong> Monitor <strong>queue length and I/O latency</strong>, as delays in disk operations can slow down the entire system.</li>
+</ol>
+<blockquote>
+<p><strong>“For all of the above measures, levels of saturation consistently appearing above 100% (continuously or in bursts) are typically a problem.”</strong></p>
+</blockquote>
+<hr>
+<h3 id="identifying-the-culprit-process" style="position:relative;"><a href="#identifying-the-culprit-process" aria-label="identifying the culprit process permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Identifying the Culprit Process</strong></h3>
+<p>Once an issue is detected, <strong>narrow down the source of excessive CPU, memory, or I/O usage</strong>:</p>
+<ul>
+<li><strong>If CPU load is high</strong>: Check running processes sorted by CPU usage (<code class="language-text">top</code> on Unix, Task Manager on Windows). Look for a process consuming excessive CPU time.</li>
+<li><strong>If memory usage is high</strong>: Sort processes by working set (physical memory usage) to see which application is the memory hog.</li>
+<li><strong>If I/O load is excessive</strong>: Use tools such as <code class="language-text">iostat</code>, <code class="language-text">netstat</code>, or <code class="language-text">vmstat</code> (Unix) or <strong>Windows Performance Monitor</strong> (<code class="language-text">perfmon</code>) to check disk/network activity.</li>
+</ul>
+<blockquote>
+<p><strong>“Once you’ve isolated the type of load that’s causing a problem, use <code class="language-text">pidstat</code> on Unix or Windows Task Manager to pinpoint the culprit process.”</strong><br>
+<strong>“Then trace the individual process’s system calls to further understand its behavior (see Item 58: Trace the Code’s Execution).”</strong></p>
+</blockquote>
+<hr>
+<h3 id="advanced-profiling-techniques" style="position:relative;"><a href="#advanced-profiling-techniques" aria-label="advanced profiling techniques permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Advanced Profiling Techniques</strong></h3>
+<p>If CPU or memory utilization issues persist, <strong>deeper profiling</strong> is necessary:</p>
+<ul>
+<li><strong>Use statistical profilers</strong>: These interrupt the program execution many times per second and record where time is spent.</li>
+<li><strong>Instrument code with execution counters</strong>: GCC provides <code class="language-text">-pg</code> for <code class="language-text">gprof</code>, while <code class="language-text">-fprofile-arcs</code> and <code class="language-text">-ftest-coverage</code> work with <code class="language-text">gcov</code>.</li>
+<li><strong>For Java/.NET applications</strong>: Use <strong>VisualVM, JProfiler, Java Mission Control, or CLR Profiler</strong>.</li>
+<li><strong>For memory tracking</strong>: Use <strong>Valgrind (Unix) or VisualVM (Java)</strong>.</li>
+<li><strong>For low-level CPU performance monitoring</strong>: Utilize <strong>perf, oprofile, or perfmon2</strong> to analyze <strong>cache misses, branch mispredictions, and instruction stalls</strong>.</li>
+</ul>
+<hr>
+<h3 id="key-takeaways-31" style="position:relative;"><a href="#key-takeaways-31" aria-label="key takeaways 31 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<p>✔ <strong>Profiling the system’s operation is crucial in debugging performance problems.</strong><br>
+✔ <strong>Utilize system monitoring tools (<code class="language-text">top</code>, Task Manager) for an overview.</strong><br>
+✔ <strong>Check CPU, memory, and I/O utilization to pinpoint inefficiencies.</strong><br>
+✔ <strong>Measure saturation, not just utilization, to identify resource constraints.</strong><br>
+✔ <strong>Use deep profiling tools (<code class="language-text">gprof</code>, <code class="language-text">gcov</code>, <code class="language-text">VisualVM</code>, <code class="language-text">perf</code>) for detailed analysis.</strong></p>
+<p>By following these techniques, developers can quickly diagnose and resolve performance bottlenecks in software systems.</p>
 <h2 id="trace-the-codes-execution" style="position:relative;"><a href="#trace-the-codes-execution" aria-label="trace the codes execution permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Trace the Code’s Execution</strong></h2>
 <p>Tracing a program’s execution is a powerful debugging technique that involves <strong>monitoring and analyzing the sequence of operations</strong> performed by the code during runtime. This approach is particularly useful for understanding complex behaviors, identifying bottlenecks, diagnosing logical errors, and isolating the root cause of runtime issues. Here’s a comprehensive guide to effectively tracing code execution.</p>
 <hr>
@@ -10661,7 +10748,7 @@ logging<span class="token punctuation">.</span>debug<span class="token punctuati
 </li>
 </ol>
 <hr>
-<h3 id="key-takeaways-31" style="position:relative;"><a href="#key-takeaways-31" aria-label="key takeaways 31 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<h3 id="key-takeaways-32" style="position:relative;"><a href="#key-takeaways-32" aria-label="key takeaways 32 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
 <ul>
 <li><strong>“Tracing Reveals Dynamic Behavior”</strong>: It provides a real-time view of how your program executes, exposing issues that static analysis might miss.</li>
 <li><strong>“Leverage Tools and Frameworks”</strong>: Use built-in tools like <code class="language-text">strace</code>, <code class="language-text">SystemTap</code>, or language-specific tracing libraries for detailed insights.</li>
@@ -10933,7 +11020,7 @@ gcov program.c</code></pre></div>
 </li>
 </ol>
 <hr>
-<h3 id="key-takeaways-32" style="position:relative;"><a href="#key-takeaways-32" aria-label="key takeaways 32 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<h3 id="key-takeaways-33" style="position:relative;"><a href="#key-takeaways-33" aria-label="key takeaways 33 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
 <ul>
 <li><strong>“Dynamic Tools Provide Real-Time Insights”</strong>: They uncover runtime issues that static analysis cannot detect.</li>
 <li><strong>“Select Tools Based on the Problem”</strong>: Use specific tools for memory, performance, concurrency, or coverage analysis.</li>
@@ -11135,7 +11222,7 @@ This shows the backtrace for thread 1, revealing whether it is holding or waitin
 </li>
 </ol>
 <hr>
-<h3 id="key-takeaways-33" style="position:relative;"><a href="#key-takeaways-33" aria-label="key takeaways 33 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<h3 id="key-takeaways-34" style="position:relative;"><a href="#key-takeaways-34" aria-label="key takeaways 34 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
 <ul>
 <li><strong>“Deadlocks Are Rooted in Circular Waits”</strong>: Focus on identifying resource dependencies and lock ownership.</li>
 <li><strong>“Postmortem Debugging Captures the State at Failure”</strong>: Use core dumps and debuggers to examine thread states and locks.</li>
@@ -11399,7 +11486,7 @@ rr replay</code></pre></div>
 </li>
 </ol>
 <hr>
-<h3 id="key-takeaways-34" style="position:relative;"><a href="#key-takeaways-34" aria-label="key takeaways 34 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<h3 id="key-takeaways-35" style="position:relative;"><a href="#key-takeaways-35" aria-label="key takeaways 35 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
 <ul>
 <li><strong>“Concurrency Issues Require Precise Observation”</strong>: Log thread states, interactions, and scheduling details to capture the problem accurately.</li>
 <li><strong>“Controlled Reproduction Enables Systematic Debugging”</strong>: Simulate the runtime environment and stress the system to replicate issues consistently.</li>
@@ -11678,7 +11765,7 @@ Thread 2: Access at line 12</code></pre></div>
 </li>
 </ol>
 <hr>
-<h3 id="key-takeaways-35" style="position:relative;"><a href="#key-takeaways-35" aria-label="key takeaways 35 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<h3 id="key-takeaways-36" style="position:relative;"><a href="#key-takeaways-36" aria-label="key takeaways 36 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
 <ul>
 <li><strong>“Specialized Tools Automate Concurrency Debugging”</strong>: They uncover non-deterministic issues like deadlocks and race conditions that are hard to reproduce manually.</li>
 <li><strong>“Deadlocks Require Lock Dependency Analysis”</strong>: Tools monitor lock acquisition patterns to detect circular waits.</li>
@@ -11969,7 +12056,7 @@ thread apply all bt</code></pre></div>
 </li>
 </ol>
 <hr>
-<h3 id="key-takeaways-36" style="position:relative;"><a href="#key-takeaways-36" aria-label="key takeaways 36 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<h3 id="key-takeaways-37" style="position:relative;"><a href="#key-takeaways-37" aria-label="key takeaways 37 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
 <ul>
 <li><strong>“Nondeterminism Is the Root of Multi-Threading Challenges”</strong>: Isolating and removing it is critical for debugging and stabilizing concurrent applications.</li>
 <li><strong>“Reproducibility Is Key to Debugging”</strong>: Use tools, logging, and controlled environments to replicate issues consistently.</li>
