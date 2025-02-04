@@ -1335,6 +1335,20 @@
 <p><a href="#chapter-7-runtime-techniques"><strong>Chapter 7: Runtime Techniques</strong></a></p>
 <ul>
 <li>
+<p><a href="#find-the-fault-by-constructing-a-test-case"><strong>Find the Fault by Constructing a Test Case</strong></a></p>
+<ul>
+<li>
+<p><a href="#three-steps-to-constructing-an-effective-test-case"><strong>Three Steps to Constructing an Effective Test Case</strong></a></p>
+<ul>
+<li><a href="#step-1-create-a-test-case-that-reliably-reproduces-the-problem"><strong>Step 1: Create a Test Case That Reliably Reproduces the Problem</strong></a></li>
+<li><a href="#step-2-simplify-the-test-case-to-the-bare-minimum"><strong>Step 2: Simplify the Test Case to the Bare Minimum</strong></a></li>
+<li><a href="#step-3-consolidate-the-victory-with-a-regression-test"><strong>Step 3: Consolidate the Victory with a Regression Test</strong></a></li>
+<li><a href="#final-thoughts"><strong>Final Thoughts</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
 <p><a href="#trace-the-codes-execution"><strong>Trace the Code’s Execution</strong></a></p>
 <ul>
 <li>
@@ -10001,6 +10015,122 @@ Workarounds add unnecessary code paths, making the system more difficult to unde
 <li>Incorporate deterministic builds and debugging libraries into continuous integration pipelines for automated issue detection.</li>
 </ul>
 <h1 id="chapter-7-runtime-techniques" style="position:relative;"><a href="#chapter-7-runtime-techniques" aria-label="chapter 7 runtime techniques permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Chapter 7: Runtime Techniques</strong></h1>
+<h2 id="find-the-fault-by-constructing-a-test-case" style="position:relative;"><a href="#find-the-fault-by-constructing-a-test-case" aria-label="find the fault by constructing a test case permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Find the Fault by Constructing a Test Case</strong></h2>
+<p>When debugging, constructing a <strong>test case</strong> is one of the most effective ways to <strong>pinpoint and correct a bug</strong>. This approach, called <strong>Defect-Driven Testing (DDT)</strong>, focuses on systematically creating a minimal and reproducible test case that exposes the fault in the system. The term <strong>DDT is intentionally similar to the well-known insecticide</strong>—the idea being that debugging is akin to eradicating software defects.</p>
+<hr>
+<h3 id="three-steps-to-constructing-an-effective-test-case" style="position:relative;"><a href="#three-steps-to-constructing-an-effective-test-case" aria-label="three steps to constructing an effective test case permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Three Steps to Constructing an Effective Test Case</strong></h3>
+<h4 id="step-1-create-a-test-case-that-reliably-reproduces-the-problem" style="position:relative;"><a href="#step-1-create-a-test-case-that-reliably-reproduces-the-problem" aria-label="step 1 create a test case that reliably reproduces the problem permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Step 1: Create a Test Case That Reliably Reproduces the Problem</strong></h4>
+<blockquote>
+<p><strong>“First, create a test case that reliably reproduces the problem you need to solve.”</strong></p>
+</blockquote>
+<p>A test case must be carefully designed to specify:</p>
+<ul>
+<li><strong>The process to follow</strong> (actions taken that trigger the bug)</li>
+<li><strong>The required materials</strong> (data, configuration, or environment setup)</li>
+</ul>
+<p>For example, consider an application where <strong>pressing a specific sequence of keys (e.g., X, Y, Z)</strong> causes a crash. Another example is a system where <strong>adding a specific type of load balancer in front of a service causes authentication to fail</strong>. These structured test cases <strong>help isolate the problem</strong>, making it easier to debug systematically.</p>
+<p><strong>Example Case: Debugging <code class="language-text">qmcalc</code></strong><br>
+The book describes a real-world debugging scenario with <code class="language-text">qmcalc</code>, a program that calculates <strong>quality metrics for C source files</strong> and outputs them as tab-separated values. The <strong>bug in question</strong> was that the program <strong>sometimes generated fewer than the expected 110 fields</strong>.</p>
+<p>To investigate, the following shell pipeline was used to apply <code class="language-text">qmcalc</code> to all C files and summarize the number of output fields:</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh"><span class="token comment"># Find all C files</span>
+<span class="token function">find</span> linux-4.4 <span class="token parameter variable">-name</span> <span class="token punctuation">\</span>*.c <span class="token operator">|</span>
+<span class="token comment"># Apply qmcalc on each file</span>
+<span class="token function">xargs</span> qmcalc <span class="token operator">|</span>
+<span class="token comment"># Display the number of fields</span>
+<span class="token function">awk</span> <span class="token string">'{print NF}'</span> <span class="token operator">|</span>
+<span class="token comment"># Order by number of fields</span>
+<span class="token function">sort</span> <span class="token operator">|</span>
+<span class="token comment"># Display number of occurrences</span>
+<span class="token function">uniq</span> <span class="token parameter variable">-c</span></code></pre></div>
+<p>The output revealed that <strong>most files produced 110 fields</strong> but a small subset had fewer:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">8     100  
+19    105  
+21772 110  
+12    80  
+472   90  </code></pre></div>
+<hr>
+<h4 id="step-2-simplify-the-test-case-to-the-bare-minimum" style="position:relative;"><a href="#step-2-simplify-the-test-case-to-the-bare-minimum" aria-label="step 2 simplify the test case to the bare minimum permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Step 2: Simplify the Test Case to the Bare Minimum</strong></h4>
+<blockquote>
+<p><strong>“The second step is the simplification of the test case to the bare minimum.”</strong></p>
+</blockquote>
+<p>Once a problematic case is identified, the test case should be <strong>minimized</strong> to isolate the <strong>exact trigger</strong> of the bug. This involves two key strategies:</p>
+<ol>
+<li><strong>Building up from scratch</strong>—starting with a minimal dataset and adding complexity until the bug appears.</li>
+<li><strong>Trimming down a failing case</strong>—removing elements to see when the bug disappears.</li>
+</ol>
+<p>This <strong>“aha! moment”</strong> occurs when you discover the smallest input that still triggers the failure.</p>
+<p><strong>Example: Finding the Smallest Failing File</strong><br>
+The following shell script helps identify <strong>the first C file that exhibits the problem</strong>:</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh"><span class="token comment"># Find C files</span>
+<span class="token function">find</span> linux-4.4/ <span class="token parameter variable">-name</span> <span class="token punctuation">\</span>*.c <span class="token operator">|</span>
+<span class="token comment"># For each file</span>
+<span class="token keyword">while</span> <span class="token builtin class-name">read</span> f<span class="token punctuation">;</span> <span class="token keyword">do</span>
+    <span class="token comment"># If the number of fields is not 110</span>
+    <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable"><span class="token variable">$(</span>qmcalc $f <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{print NF}'</span><span class="token variable">)</span></span> <span class="token operator">!=</span> <span class="token number">110</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+        <span class="token builtin class-name">echo</span> <span class="token variable">$f</span>  <span class="token comment"># Output the file name</span>
+        <span class="token builtin class-name">break</span>    <span class="token comment"># Stop processing</span>
+    <span class="token keyword">fi</span>
+<span class="token keyword">done</span></code></pre></div>
+<p>Running this script produced the result:</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">linux-4.4/drivers/mmc/host/sdhci-pci-o2micro.c</code></pre></div>
+<p>This <strong>single file</strong> was causing the issue.</p>
+<p>To <strong>further simplify</strong>, the number of lines was <strong>incrementally reduced</strong>, testing if the failure persisted:</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">$ <span class="token function">cp</span> linux-4.4/drivers/mmc/host/sdhci-pci-o2micro.c test.c
+$ ./qmcalc test.c <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{print NF}'</span>
+<span class="token number">87</span>
+$ <span class="token function">head</span> <span class="token parameter variable">-100</span> test.c <span class="token operator">|</span> ./qmcalc <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{print NF}'</span>
+<span class="token number">87</span>
+$ <span class="token function">head</span> <span class="token parameter variable">-10</span> test.c <span class="token operator">|</span> ./qmcalc <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{print NF}'</span>
+<span class="token number">63</span>
+$ <span class="token function">head</span> <span class="token parameter variable">-1</span> test.c <span class="token operator">|</span> ./qmcalc <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{print NF}'</span>
+<span class="token number">63</span></code></pre></div>
+<p>Further, applying <code class="language-text">qmcalc</code> to an <strong>empty file</strong> <code class="language-text">/dev/null</code> showed an even simpler failure case:</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">$ ./qmcalc /dev/null <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{print NF}'</span>
+<span class="token number">59</span></code></pre></div>
+<p>Looking at the <strong>structured output</strong>, the bug was <strong>linked to missing field separators (tabs) when processing an empty data set</strong>.</p>
+<hr>
+<h4 id="step-3-consolidate-the-victory-with-a-regression-test" style="position:relative;"><a href="#step-3-consolidate-the-victory-with-a-regression-test" aria-label="step 3 consolidate the victory with a regression test permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Step 3: Consolidate the Victory with a Regression Test</strong></h4>
+<blockquote>
+<p><strong>“Having isolated the problem, grab the opportunity to add a corresponding unit test or regression test in the code.”</strong></p>
+</blockquote>
+<p>With the test case isolated, the next step is to <strong>convert it into an automated test</strong>. There are two options:</p>
+<ul>
+<li><strong>Unit Test</strong>—if the failure is in an isolated function.</li>
+<li><strong>Regression Test</strong>—if the failure depends on multiple interacting components.</li>
+</ul>
+<p>In the <code class="language-text">qmcalc</code> case, the missing tab separator <strong>led to a failed assertion</strong> in a unit test:</p>
+<div class="gatsby-highlight" data-language="cpp"><pre class="language-cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">testOutputEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    std<span class="token double-colon punctuation">::</span>stringstream str<span class="token punctuation">;</span>
+    Descriptive<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> a<span class="token punctuation">;</span>
+    str <span class="token operator">&lt;&lt;</span> a<span class="token punctuation">;</span>
+    <span class="token function">CPPUNIT_ASSERT</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">"0\t\t\t\t"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><strong>Before the fix:</strong></p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">$ <span class="token function">make</span> <span class="token builtin class-name">test</span>
+./UnitTests
+<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>.
+<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>F<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>.
+<span class="token operator">!</span><span class="token operator">!</span><span class="token operator">!</span>FAILURES<span class="token operator">!</span><span class="token operator">!</span><span class="token operator">!</span>
+Test Results:
+Run: <span class="token number">110</span> Failures: <span class="token number">1</span> Errors: <span class="token number">0</span>
+
+<span class="token number">1</span><span class="token punctuation">)</span> test: DescriptiveTest::testOutputEmpty <span class="token punctuation">(</span>F<span class="token punctuation">)</span> line: <span class="token number">103</span>
+DescriptiveTest.h assertion failed
+- Expression: str.str<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">"0<span class="token entity" title="\t">\t</span><span class="token entity" title="\t">\t</span><span class="token entity" title="\t">\t</span><span class="token entity" title="\t">\t</span>"</span></code></pre></div>
+<p><strong>After the fix:</strong></p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">$ <span class="token function">make</span> <span class="token builtin class-name">test</span>
+<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>.
+<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>
+OK <span class="token punctuation">(</span><span class="token number">110</span> tests<span class="token punctuation">)</span></code></pre></div>
+<h4 id="final-thoughts" style="position:relative;"><a href="#final-thoughts" aria-label="final thoughts permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Final Thoughts</strong></h4>
+<blockquote>
+<p><strong>“Coding ain’t done ‘til all the tests run.”</strong> – Andrew Hunt &#x26; David Thomas</p>
+</blockquote>
+<ul>
+<li><strong>Always embed test cases as unit or regression tests</strong> to ensure that once a bug is fixed, it does not return.</li>
+<li><strong>Use test coverage tools</strong> (e.g., <code class="language-text">gcov</code>, <code class="language-text">JaCoCo</code>, <code class="language-text">NCover</code>) to ensure all critical code paths are tested.</li>
+<li><strong>Never skimp on tests</strong>, as they <strong>help prevent future regressions</strong> and <strong>document edge cases</strong> in your software.</li>
+</ul>
 <h2 id="trace-the-codes-execution" style="position:relative;"><a href="#trace-the-codes-execution" aria-label="trace the codes execution permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Trace the Code’s Execution</strong></h2>
 <p>Tracing a program’s execution is a powerful debugging technique that involves <strong>monitoring and analyzing the sequence of operations</strong> performed by the code during runtime. This approach is particularly useful for understanding complex behaviors, identifying bottlenecks, diagnosing logical errors, and isolating the root cause of runtime issues. Here’s a comprehensive guide to effectively tracing code execution.</p>
 <hr>
