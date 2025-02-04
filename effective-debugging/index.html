@@ -1381,6 +1381,40 @@
 </ul>
 </li>
 <li>
+<p><a href="#examine-application-log-files"><strong>Examine Application Log Files</strong></a></p>
+<ul>
+<li>
+<p><a href="#understanding-log-file-storage-across-platforms"><strong>Understanding Log File Storage Across Platforms</strong></a></p>
+<ul>
+<li><a href="#1-unixlinux-systems"><strong>1. Unix/Linux Systems</strong></a></li>
+<li><a href="#2-windows-systems"><strong>2. Windows Systems</strong></a></li>
+<li><a href="#3-macos-systems"><strong>3. macOS Systems</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#techniques-for-analyzing-logs"><strong>Techniques for Analyzing Logs</strong></a></p>
+<ul>
+<li><a href="#1-using-tail-for-live-monitoring"><strong>1. Using Tail for Live Monitoring</strong></a></li>
+<li><a href="#2-filtering-relevant-data-with-grep"><strong>2. Filtering Relevant Data with Grep</strong></a></li>
+<li><a href="#3-sorting-and-counting-events"><strong>3. Sorting and Counting Events</strong></a></li>
+<li><a href="#4-searching-logs-by-timestamp"><strong>4. Searching Logs by Timestamp</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#configuring-log-verbosity-for-effective-debugging"><strong>Configuring Log Verbosity for Effective Debugging</strong></a></p>
+<ul>
+<li><a href="#example-debugging-ssh-login-failures"><strong>Example: Debugging SSH Login Failures</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#advanced-log-analysis-with-tools"><strong>Advanced Log Analysis with Tools</strong></a></p>
+</li>
+<li>
+<p><a href="#key-takeaways-30"><strong>Key Takeaways</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
 <p><a href="#trace-the-codes-execution"><strong>Trace the Code’s Execution</strong></a></p>
 <ul>
 <li>
@@ -1411,7 +1445,7 @@
 <p><a href="#example-scenarios-3"><strong>Example Scenarios</strong></a></p>
 </li>
 <li>
-<p><a href="#key-takeaways-30"><strong>Key Takeaways</strong></a></p>
+<p><a href="#key-takeaways-31"><strong>Key Takeaways</strong></a></p>
 </li>
 </ul>
 </li>
@@ -1454,7 +1488,7 @@
 <p><a href="#example-scenarios-4"><strong>Example Scenarios</strong></a></p>
 </li>
 <li>
-<p><a href="#key-takeaways-31"><strong>Key Takeaways</strong></a></p>
+<p><a href="#key-takeaways-32"><strong>Key Takeaways</strong></a></p>
 </li>
 </ul>
 </li>
@@ -1489,7 +1523,7 @@
 <p><a href="#example-scenarios-5"><strong>Example Scenarios</strong></a></p>
 </li>
 <li>
-<p><a href="#key-takeaways-32"><strong>Key Takeaways</strong></a></p>
+<p><a href="#key-takeaways-33"><strong>Key Takeaways</strong></a></p>
 </li>
 </ul>
 </li>
@@ -1520,7 +1554,7 @@
 <p><a href="#example-scenarios-6"><strong>Example Scenarios</strong></a></p>
 </li>
 <li>
-<p><a href="#key-takeaways-33"><strong>Key Takeaways</strong></a></p>
+<p><a href="#key-takeaways-34"><strong>Key Takeaways</strong></a></p>
 </li>
 </ul>
 </li>
@@ -1566,7 +1600,7 @@
 <p><a href="#example-scenarios-7"><strong>Example Scenarios</strong></a></p>
 </li>
 <li>
-<p><a href="#key-takeaways-34"><strong>Key Takeaways</strong></a></p>
+<p><a href="#key-takeaways-35"><strong>Key Takeaways</strong></a></p>
 </li>
 </ul>
 </li>
@@ -1597,7 +1631,7 @@
 <p><a href="#example-scenarios-8"><strong>Example Scenarios</strong></a></p>
 </li>
 <li>
-<p><a href="#key-takeaways-35"><strong>Key Takeaways</strong></a></p>
+<p><a href="#key-takeaways-36"><strong>Key Takeaways</strong></a></p>
 </li>
 </ul>
 </li>
@@ -10279,6 +10313,111 @@ OK <span class="token punctuation">(</span><span class="token number">110</span>
 <li><strong>Differentiate between fail-fast development and production resilience</strong>—Failing fast is ideal during debugging, but in production, graceful degradation may be required.</li>
 </ol>
 <p>By implementing <strong>fail-fast strategies</strong>, developers can <strong>catch bugs early, reduce debugging time, and prevent minor failures from escalating into catastrophic issues</strong>.</p>
+<h2 id="examine-application-log-files" style="position:relative;"><a href="#examine-application-log-files" aria-label="examine application log files permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Examine Application Log Files</strong></h2>
+<p>In debugging, <strong>application log files</strong> play a crucial role in diagnosing software issues, particularly for <strong>background processes, complex applications, or software that lacks console access</strong>. Log files allow developers to <strong>trace the execution flow, identify failure points, and analyze historical data</strong>. The key takeaway from this section is:</p>
+<blockquote>
+<p><strong>“Make it a habit to start the investigation of a failure by examining the software’s log files.”</strong></p>
+</blockquote>
+<hr>
+<h3 id="understanding-log-file-storage-across-platforms" style="position:relative;"><a href="#understanding-log-file-storage-across-platforms" aria-label="understanding log file storage across platforms permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Understanding Log File Storage Across Platforms</strong></h3>
+<p>The location and structure of log files vary based on the <strong>operating system</strong> and <strong>software architecture</strong>:</p>
+<h4 id="1-unixlinux-systems" style="position:relative;"><a href="#1-unixlinux-systems" aria-label="1 unixlinux systems permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. Unix/Linux Systems</strong></h4>
+<p>On <strong>Unix-based systems</strong>, logs are typically stored in <strong>text files located in <code class="language-text">/var/log/</code></strong>. Depending on the type of log data, these files may be categorized as:</p>
+<ul>
+<li><strong>Authentication Logs</strong>: <code class="language-text">/var/log/auth.log</code></li>
+<li><strong>Daemon Process Logs</strong>: <code class="language-text">/var/log/daemon.log</code></li>
+<li><strong>Kernel Logs</strong>: <code class="language-text">/var/log/kern.log</code></li>
+<li><strong>Debug Information</strong>: <code class="language-text">/var/log/debug</code></li>
+<li><strong>General Messages</strong>: <code class="language-text">/var/log/messages</code></li>
+</ul>
+<p>To quickly identify the latest log files, use the following command:</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh"><span class="token function">ls</span> <span class="token parameter variable">-tl</span> /var/log <span class="token operator">|</span> <span class="token function">head</span></code></pre></div>
+<p>This lists log files in the <strong>order of last modification</strong>, showing the most recent ones at the top.</p>
+<p>Alternatively, if logs are stored in subdirectories, the following command finds them based on modification time:</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh"><span class="token function">find</span> /var/log <span class="token parameter variable">-type</span> f <span class="token operator">|</span> <span class="token function">xargs</span> <span class="token function">stat</span> <span class="token parameter variable">-c</span> <span class="token string">'%y %n'</span> <span class="token operator">|</span> <span class="token function">sort</span> <span class="token parameter variable">-r</span> <span class="token operator">|</span> <span class="token function">head</span></code></pre></div>
+<h4 id="2-windows-systems" style="position:relative;"><a href="#2-windows-systems" aria-label="2 windows systems permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2. Windows Systems</strong></h4>
+<p>Unlike Unix, <strong>Windows stores logs in an opaque format</strong>, accessible via:</p>
+<ul>
+<li><strong>Event Viewer</strong>: Launch by running <code class="language-text">Eventvwr.msc</code></li>
+<li><strong>PowerShell</strong>: Retrieve logs using <code class="language-text">Get-EventLog</code></li>
+<li><strong>.NET API</strong>: For programmatic log retrieval</li>
+</ul>
+<p>Logs are categorized into different event types, such as:</p>
+<ul>
+<li><strong>Application Logs</strong></li>
+<li><strong>Security Logs</strong></li>
+<li><strong>System Logs</strong></li>
+</ul>
+<h4 id="3-macos-systems" style="position:relative;"><a href="#3-macos-systems" aria-label="3 macos systems permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3. macOS Systems</strong></h4>
+<p>On macOS, logs can be accessed through the <strong>Console app</strong>, which provides features such as:</p>
+<ul>
+<li><strong>Filtering log entries</strong></li>
+<li><strong>Searching for specific errors</strong></li>
+<li><strong>Custom log views</strong></li>
+</ul>
+<p><strong>Alternatively</strong>, Unix-based command-line tools can also be used for log examination.</p>
+<hr>
+<h3 id="techniques-for-analyzing-logs" style="position:relative;"><a href="#techniques-for-analyzing-logs" aria-label="techniques for analyzing logs permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Techniques for Analyzing Logs</strong></h3>
+<p>Analyzing log files efficiently requires different tools and techniques:</p>
+<h4 id="1-using-tail-for-live-monitoring" style="position:relative;"><a href="#1-using-tail-for-live-monitoring" aria-label="1 using tail for live monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. Using Tail for Live Monitoring</strong></h4>
+<p>Instead of manually opening log files, use <code class="language-text">tail -f</code> to <strong>monitor logs in real-time</strong>:</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh"><span class="token function">tail</span> <span class="token parameter variable">-f</span> /var/log/syslog</code></pre></div>
+<p>If logs rotate frequently, use:</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh"><span class="token function">tail</span> <span class="token parameter variable">--follow</span><span class="token operator">=</span>name <span class="token parameter variable">-f</span> /var/log/syslog</code></pre></div>
+<h4 id="2-filtering-relevant-data-with-grep" style="position:relative;"><a href="#2-filtering-relevant-data-with-grep" aria-label="2 filtering relevant data with grep permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2. Filtering Relevant Data with Grep</strong></h4>
+<p>To extract specific errors or warnings from logs, use <code class="language-text">grep</code>:</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh"><span class="token function">grep</span> <span class="token string">"ERROR"</span> /var/log/syslog</code></pre></div>
+<p>For case-insensitive searches:</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh"><span class="token function">grep</span> <span class="token parameter variable">-i</span> <span class="token string">"critical failure"</span> /var/log/syslog</code></pre></div>
+<h4 id="3-sorting-and-counting-events" style="position:relative;"><a href="#3-sorting-and-counting-events" aria-label="3 sorting and counting events permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3. Sorting and Counting Events</strong></h4>
+<p>To identify the most frequent log messages:</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh"><span class="token function">cat</span> /var/log/syslog <span class="token operator">|</span> <span class="token function">sort</span> <span class="token operator">|</span> <span class="token function">uniq</span> <span class="token parameter variable">-c</span> <span class="token operator">|</span> <span class="token function">sort</span> <span class="token parameter variable">-nr</span> <span class="token operator">|</span> <span class="token function">head</span></code></pre></div>
+<p>This <strong>counts occurrences</strong> of each log entry, sorts them, and displays the most common ones.</p>
+<h4 id="4-searching-logs-by-timestamp" style="position:relative;"><a href="#4-searching-logs-by-timestamp" aria-label="4 searching logs by timestamp permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>4. Searching Logs by Timestamp</strong></h4>
+<p>To find log entries from a specific time range:</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh"><span class="token function">awk</span> <span class="token string">'$1 >= "2024-02-03 10:00:00" &amp;&amp; $1 &lt;= "2024-02-03 12:00:00"'</span> /var/log/syslog</code></pre></div>
+<hr>
+<h3 id="configuring-log-verbosity-for-effective-debugging" style="position:relative;"><a href="#configuring-log-verbosity-for-effective-debugging" aria-label="configuring log verbosity for effective debugging permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Configuring Log Verbosity for Effective Debugging</strong></h3>
+<p>Many applications allow adjusting <strong>log verbosity</strong> via:</p>
+<ul>
+<li><strong>Command-line options</strong></li>
+<li><strong>Configuration settings</strong></li>
+<li><strong>Runtime signals (e.g., <code class="language-text">kill -HUP &lt;process_id></code> to reload log settings)</strong></li>
+</ul>
+<p>For example, <strong>Apache Log4j</strong> provides fine-grained logging controls:</p>
+<div class="gatsby-highlight" data-language="properties"><pre class="language-properties"><code class="language-properties"><span class="token key attr-name">log4j.logger.com.myapp</span><span class="token punctuation">=</span><span class="token value attr-value">DEBUG, stdout, logfile</span>
+<span class="token key attr-name">log4j.appender.logfile.File</span><span class="token punctuation">=</span><span class="token value attr-value">/var/log/myapp.log</span></code></pre></div>
+<h4 id="example-debugging-ssh-login-failures" style="position:relative;"><a href="#example-debugging-ssh-login-failures" aria-label="example debugging ssh login failures permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Example: Debugging SSH Login Failures</strong></h4>
+<p>By default, SSH logs <strong>only critical errors</strong>. Increasing log verbosity helps pinpoint issues:</p>
+<ol>
+<li>Open <code class="language-text">/etc/ssh/sshd_config</code></li>
+<li>Modify <code class="language-text">LogLevel</code>:
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">LogLevel DEBUG</code></pre></div>
+</li>
+<li>Restart SSH service:
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">systemctl restart sshd</code></pre></div>
+</li>
+</ol>
+<p>After enabling debug logs, failures will show specific errors:</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">Jul <span class="token number">30</span> <span class="token number">12</span>:57:07 prod sshd<span class="token punctuation">[</span><span class="token number">5713</span><span class="token punctuation">]</span>: debug1: Could not <span class="token function">open</span> authorized keys <span class="token string">'/home/user/.ssh/authorized_keys'</span><span class="token builtin class-name">:</span> No such <span class="token function">file</span> or directory</code></pre></div>
+<hr>
+<h3 id="advanced-log-analysis-with-tools" style="position:relative;"><a href="#advanced-log-analysis-with-tools" aria-label="advanced log analysis with tools permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Advanced Log Analysis with Tools</strong></h3>
+<p>For large-scale applications, <strong>log management platforms</strong> help process logs efficiently:</p>
+<ul>
+<li><strong>ELK Stack (Elasticsearch, Logstash, Kibana)</strong></li>
+<li><strong>Splunk</strong></li>
+<li><strong>Loggly</strong></li>
+<li><strong>Papertrail</strong></li>
+</ul>
+<p><strong>Example: Searching logs in Splunk</strong></p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh"><span class="token assign-left variable">index</span><span class="token operator">=</span>webserver_logs error <span class="token operator">|</span> stats count by <span class="token builtin class-name">source</span></code></pre></div>
+<p>This command finds all <strong>error logs</strong> and groups them by <strong>log source</strong>.</p>
+<hr>
+<h3 id="key-takeaways-30" style="position:relative;"><a href="#key-takeaways-30" aria-label="key takeaways 30 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<p>✔ <strong>“Begin the investigation of a failing application by examining its log files.”</strong><br>
+✔ <strong>“Increase an application’s logging verbosity to record the reason for its failure.”</strong><br>
+✔ <strong>“Configure and filter log files to narrow down the problem.”</strong></p>
+<p>By implementing these techniques, <strong>developers can efficiently diagnose issues, reduce debugging time, and improve application reliability</strong>.</p>
 <h2 id="trace-the-codes-execution" style="position:relative;"><a href="#trace-the-codes-execution" aria-label="trace the codes execution permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Trace the Code’s Execution</strong></h2>
 <p>Tracing a program’s execution is a powerful debugging technique that involves <strong>monitoring and analyzing the sequence of operations</strong> performed by the code during runtime. This approach is particularly useful for understanding complex behaviors, identifying bottlenecks, diagnosing logical errors, and isolating the root cause of runtime issues. Here’s a comprehensive guide to effectively tracing code execution.</p>
 <hr>
@@ -10522,7 +10661,7 @@ logging<span class="token punctuation">.</span>debug<span class="token punctuati
 </li>
 </ol>
 <hr>
-<h3 id="key-takeaways-30" style="position:relative;"><a href="#key-takeaways-30" aria-label="key takeaways 30 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<h3 id="key-takeaways-31" style="position:relative;"><a href="#key-takeaways-31" aria-label="key takeaways 31 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
 <ul>
 <li><strong>“Tracing Reveals Dynamic Behavior”</strong>: It provides a real-time view of how your program executes, exposing issues that static analysis might miss.</li>
 <li><strong>“Leverage Tools and Frameworks”</strong>: Use built-in tools like <code class="language-text">strace</code>, <code class="language-text">SystemTap</code>, or language-specific tracing libraries for detailed insights.</li>
@@ -10794,7 +10933,7 @@ gcov program.c</code></pre></div>
 </li>
 </ol>
 <hr>
-<h3 id="key-takeaways-31" style="position:relative;"><a href="#key-takeaways-31" aria-label="key takeaways 31 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<h3 id="key-takeaways-32" style="position:relative;"><a href="#key-takeaways-32" aria-label="key takeaways 32 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
 <ul>
 <li><strong>“Dynamic Tools Provide Real-Time Insights”</strong>: They uncover runtime issues that static analysis cannot detect.</li>
 <li><strong>“Select Tools Based on the Problem”</strong>: Use specific tools for memory, performance, concurrency, or coverage analysis.</li>
@@ -10996,7 +11135,7 @@ This shows the backtrace for thread 1, revealing whether it is holding or waitin
 </li>
 </ol>
 <hr>
-<h3 id="key-takeaways-32" style="position:relative;"><a href="#key-takeaways-32" aria-label="key takeaways 32 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<h3 id="key-takeaways-33" style="position:relative;"><a href="#key-takeaways-33" aria-label="key takeaways 33 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
 <ul>
 <li><strong>“Deadlocks Are Rooted in Circular Waits”</strong>: Focus on identifying resource dependencies and lock ownership.</li>
 <li><strong>“Postmortem Debugging Captures the State at Failure”</strong>: Use core dumps and debuggers to examine thread states and locks.</li>
@@ -11260,7 +11399,7 @@ rr replay</code></pre></div>
 </li>
 </ol>
 <hr>
-<h3 id="key-takeaways-33" style="position:relative;"><a href="#key-takeaways-33" aria-label="key takeaways 33 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<h3 id="key-takeaways-34" style="position:relative;"><a href="#key-takeaways-34" aria-label="key takeaways 34 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
 <ul>
 <li><strong>“Concurrency Issues Require Precise Observation”</strong>: Log thread states, interactions, and scheduling details to capture the problem accurately.</li>
 <li><strong>“Controlled Reproduction Enables Systematic Debugging”</strong>: Simulate the runtime environment and stress the system to replicate issues consistently.</li>
@@ -11539,7 +11678,7 @@ Thread 2: Access at line 12</code></pre></div>
 </li>
 </ol>
 <hr>
-<h3 id="key-takeaways-34" style="position:relative;"><a href="#key-takeaways-34" aria-label="key takeaways 34 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<h3 id="key-takeaways-35" style="position:relative;"><a href="#key-takeaways-35" aria-label="key takeaways 35 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
 <ul>
 <li><strong>“Specialized Tools Automate Concurrency Debugging”</strong>: They uncover non-deterministic issues like deadlocks and race conditions that are hard to reproduce manually.</li>
 <li><strong>“Deadlocks Require Lock Dependency Analysis”</strong>: Tools monitor lock acquisition patterns to detect circular waits.</li>
@@ -11830,7 +11969,7 @@ thread apply all bt</code></pre></div>
 </li>
 </ol>
 <hr>
-<h3 id="key-takeaways-35" style="position:relative;"><a href="#key-takeaways-35" aria-label="key takeaways 35 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
+<h3 id="key-takeaways-36" style="position:relative;"><a href="#key-takeaways-36" aria-label="key takeaways 36 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key Takeaways</strong></h3>
 <ul>
 <li><strong>“Nondeterminism Is the Root of Multi-Threading Challenges”</strong>: Isolating and removing it is critical for debugging and stabilizing concurrent applications.</li>
 <li><strong>“Reproducibility Is Key to Debugging”</strong>: Use tools, logging, and controlled environments to replicate issues consistently.</li>
