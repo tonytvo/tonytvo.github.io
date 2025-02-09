@@ -67,6 +67,388 @@
 <ul>
 <li><a href="https://easyperf.net/blog/2019/08/02/Perf-measurement-environment-on-Linux">How to get consistent results when benchmarking on Linux?</a></li>
 </ul>
+<p>-** When should I use a cache?**</p>
+<ul>
+<li>
+<p>When your data fits all of these characteristics</p>
+<ul>
+<li>It’s used frequently enough to show up as a hotspot on a performance profile of a common workflow</li>
+<li>It’s expensive to gather relative to how frequently it’s being used
+<ul>
+<li>an expensive SQL query that might be called a few times in a row (eg: participant’s current holdings)</li>
+<li>a simple query that might be called hundreds of times, (eg: Feature toggle cache)</li>
+</ul>
+</li>
+<li>It doesn’t change that frequently (see stale data below)</li>
+<li>We don’t know beforehand what data is needed to be gathered (see When should I NOT use a cache for more details).</li>
+</ul>
+</li>
+<li>
+<p><strong>When should I NOT use a cache?</strong></p>
+<ul>
+<li>
+<p><strong>Lazy Maps</strong></p>
+<ul>
+<li>
+<p>The biggest anti-pattern for caches are “lazy maps”.</p>
+</li>
+<li>
+<p>Picture this, you have a report to run, you need to fetch a company’s external identifier for a few hundred companies, that identifier is going to be used in several places in the report. You implement the report, but a profile shows that you’re spending a ton of time fetching, and re-fetching the company identifiers. Oh easy fix, clearly we should cache these. That way we only need to take the hit the first time we load the identifier, every other access is just a cache hit.</p>
+</li>
+<li>
+<p>What’s wrong with this solution? Well your solution is only half-way fixing the problem, you’ll still be loading the identifiers one company at a time. You may have reduced duplicate calls for the same company, but you might have only reduced a few thousand calls to a few hundred. Also, and arguably the most important counter-argument to the whole caching exercise, it’s a report. You already know at the very beginning exactly which companies you want to run it for. You would be better off just bulk-fetching all of the identifiers in one query up-front, and then pass the resulting map to whoever needs it. Your cache is just an overly complicated map that performs worse.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Throw-away caches (aka: short-lived caches)</p>
+<ul>
+<li>
+<p>Imagine I’m a participant, I log into system, and am presented with a list of activities that have happened on my account. Imagine that list is expensive to produce, and is re-requested every time the participant navigates back to their home screen in system. I implement a cache for that, and my problems are solved. When the participant logs out, I discard the cache because I don’t need it anymore.</p>
+</li>
+<li>
+<p>What’s wrong with this solution? The benefit of the cache only exists within the session the participant was logged in for. If the participant logs out (or the session invalidates), and then comes back, I need to go through the expensive operation of re-building the cache. Also, much like the lazy map, I probably already know what I should be putting in there up-front. Either this cache is just a lazy map, or the cache should persist beyond its current scope (which might be a larger architectural change)</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>what are repeating patterns for Cache</strong>?</p>
+<ul>
+<li>
+<p>USUALLY the best key for a cache is a primary-key, as we often cache fetched data from the DB. This isn’t universally true, but for about 95% of the use-cases for a cache, a PK as the key makes the most sense.</p>
+<ul>
+<li>If you need to use multiple PKs then maybe your cached value model isn’t correct, and we should be breaking down the data into smaller pieces.</li>
+<li>If your key is a string or other unique identifier, is it just a PK in disguise? Eg: Using an employee number when we could just as easily use an EmployeePK</li>
+<li>What data would you need to know about in order to make a decision that you need to invalidate cache entries? Are those data pieces actually your keys?</li>
+</ul>
+</li>
+<li>
+<p>Caches are most effective when they’re long lived with few copies in existence (eg: singletons)</p>
+<ul>
+<li>If your cache is only valid within a certain scope then maybe it’s not a cache at all</li>
+</ul>
+</li>
+<li>
+<p>Caches are functionally adding state to an otherwise stateless class. Think about what you might be caching, and when it should be invalidated.</p>
+<ul>
+<li>Did you just cache data that was dependent on a feature toggle?</li>
+<li>Did you just add a cache into an java bean that might affect the results of some integration tests?</li>
+<li>Did you just cache something that might provide a poor user experience to a participant if the data became stale?</li>
+<li>Did you just cache something that might contribute to an incorrect calculation if the data became stale?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>what’s are the common problems we face when we do API performance hunting?</strong></p>
+<ul>
+<li>
+<p>when running k6, the http request failure over 1% could skew the results</p>
+<ul>
+<li>let’s assume that we have 100 requests with average 1 second per req, and then we have 1 request failed after 60 seconds which would results in 1.5 seconds average</li>
+<li>therefore, we would like to get the success rate as close to 100% as much as possible.</li>
+</ul>
+</li>
+<li>
+<p>there’re too many control variables between each k6 run. For example, weblogic, database, network and code change.</p>
+</li>
+<li>
+<p>the data from k6 is sometimes not reliable between each run, hence we typically run k6 multiple times such as 3 times to see where the rough ball parks of the data is pointing to.</p>
+</li>
+<li>
+<p>the data shape is different between companies and between environments, hence we often can’t reliably reproduce the problem on local machine.</p>
+</li>
+<li>
+<p>convenient/accidental complexity where we typically just put in the code that is convenient for us and cause performance problem later on</p>
+<ul>
+<li>such as getting duplicate data again in method couple times, calling java bean in a loop</li>
+<li>calling multiple existing java bean to combine the data (instead of creating new query to get the exact data that we want).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>what’re common strategies that we use for hunting API performance?</strong></p>
+<ul>
+<li>we need to be aware of the bottleneck?
+<ul>
+<li>we want to make the GLOBAL optimization and avoid the LOCAL optimization as much as we can</li>
+<li>if we’re confident that the bottleneck is actually the bottleneck, then any improve on that bottleneck will usually lead to at least the same or more on the Global optimization.</li>
+<li>if we improve things outside of the bottleneck, then the performance might not be improved globally.</li>
+<li>hence we need to profile and gather the data as much as we can so we can identify and confident that we have identified the bottleneck.</li>
+</ul>
+</li>
+<li>first, we need to gather as much data as we can such as running k6 and looking at appdynamics for slow transactions
+<ul>
+<li>drill down the call stack to see where the problem is</li>
+<li>app-dynamics → specific environment → transactions snapshots → click on specific transactions → drill down the call graph</li>
+<li>we could use splunk queries to get the slow end points → How to get a list of slow endpoints on production sites using splunk and find the related participants and companies</li>
+</ul>
+</li>
+<li>app-dynamics is a good tool when we can’t reproduce the problem on different environments</li>
+<li>once we have the call stack, we could essentially walk the callstack (up or down) to review the code site and any potenial fix/solution
+<ul>
+<li><strong>walking down the call stack usually give us better experience/more solutions because it kind of provide more oportunities/access to the bad performance coding habits.</strong></li>
+<li>start from the bottom would provide more benefit in terms of performance improvement however, it is closer to the hardware, third-party where we have less control and it has already been improved/looked at quite a bit by lots of people already.</li>
+</ul>
+</li>
+<li>try to make iteration times fast (from forming hypothesis to commit to see the effects/results on specific environments)</li>
+<li>reproduce the local performance problems with isolated/not shared database would probably the most effective way to iterate on the problem.</li>
+<li>we typically use feature toggle to gather the performance improvement for the change.
+<ul>
+<li>turn the feature toggle off → run k6 → get data. Turn the feature toggle on → run k6 → get data again. Then we can compare the data between k6 on same environments</li>
+</ul>
+</li>
+<li>we want to make sure the number shows that we have improved hte performance and we should abandon the idea/theory if the number prove otherwise.</li>
+</ul>
+</li>
+<li>
+<p>what are common strategies for improving Oracle SQL performance?</p>
+<ul>
+<li>
+<p>use AWR (automatic workload repository) from Oracle.</p>
+</li>
+<li>
+<p><strong>finding “bad” SQLs</strong></p>
+<ul>
+<li>
+<p>SQL Developer exposes a tool of the database that is great for identifying performance issues. Click on TOOLS → Real Time SQL Monitor and then specify the connection you want to utilize (likely you will be told this requires the Diagnostic and Tuning pack). There’s  STATUS column on the far left of the grid which will tell you which SQLs are currently executing (spinning circle) which are finished (green check mark) and which have errors (red X, could be because the statement failed or was killed or aborted).</p>
+</li>
+<li>
+<p>The best pieces of information from this would be the DURATION column and the I/O Requests or Buffer Gets columns.</p>
+</li>
+<li>
+<p>We can watch the SQL execute in real time but also pull historical SQLs from the list.</p>
+</li>
+<li>
+<p>To use the Real Time SQL Monitor, you need to create a connection to the “system” account first. Note the role is default. And the password is the same as a regular connection to the database.</p>
+</li>
+<li>
+<p>If you try the above and you don’t see any information it’s very likely we’ll need to add some permissions to your account.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>SQL performance autotuning</strong></p>
+<ul>
+<li>From the Real Time SQL Monitor, you can get the Sql Id of the slow SQL you are interested then. Note that Oracle does not retain these plans forever, so you may have to first rerun the process in the system. Then you can use these SQL commands below to have Oracle analyze and the tune the query. The task takes 1-5 minutes for Oracle to execute. When the task completes, you will see Oracle’s recommendation on how to reorganize the query to get the most efficiency. In this example, 8pdg3c4aqnuuz is the Sql Id to replace.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">-- 1. run this block
+DECLARE l_sql_tune_task_id VARCHAR2(100);
+BEGIN
+   l_sql_tune_task_id := DBMS_SQLTUNE.create_tuning_task ( sql_id => '8pdg3c4aqnuuz', scope => DBMS_SQLTUNE.scope_comprehensive, time_limit => 500, task_name => '8pdg3c4aqnuuz_tuning_task11', description => 'Tuning task1 for statement 8pdg3c4aqnuuz');
+   DBMS_OUTPUT.put_line('l_sql_tune_task_id: ' || l_sql_tune_task_id);
+END;
+/
+ 
+-- 2. run this query if no errors from step 1
+-- this can take a few minutes, but you can actually monitor this in the realtime view as well!
+EXEC DBMS_SQLTUNE.execute_tuning_task(task_name => '8pdg3c4aqnuuz_tuning_task11');
+ 
+-- 3. run this to grab the results and copy them to SQL Developer or a plain text editor
+select dbms_sqltune.report_tuning_task('8pdg3c4aqnuuz_tuning_task11') from dual;
+ 
+-- 4. optional, Oracle may recommend you accept and use the new query plan
+execute dbms_sqltune.accept_sql_profile(task_name => '8pdg3c4aqnuuz_tuning_task11', task_owner => 'SYS', replace => TRUE);</code></pre></div>
+<ul>
+<li>SQL performance evaluation
+<ul>
+<li>A really good method for analyzing SQL performance is to utilize run time statistics to capture the workload of a query. This can be achieved by adding the GATHER_PLAN_STATISTICS hint into the SQL or by utilizing an alter session (my preference).</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">set serveroutput off; --quirk of how this works, required to use or you won't get the output you want later
+alter session set statistics_level=all;
+ 
+&lt;run your query here>
+ 
+SELECT *
+FROM table(DBMS_XPLAN.DISPLAY_CURSOR(FORMAT=>'ALLSTATS LAST ALL +OUTLINE'));</code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">- Here is a full working example</code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">set serveroutput off;
+alter session set statistics_level=all;
+ 
+--we are using a bind variable in our query most of our queries should be using them
+variable col1 number;
+exec :col1 := 99236783519
+ 
+SELECT id
+FROM table1 
+WHERE  id =  :col1;
+ 
+SELECT *
+FROM table(DBMS_XPLAN.DISPLAY_CURSOR(FORMAT=>'ALLSTATS LAST ALL +OUTLINE'));
+
+-- highlight ALL of the above commands and choose "run as script" in SQL Developer. The output will contain lots of information but the most important will be the execution plan which looks like the below.
+ 
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Id  | Operation                   | Name                | Starts | E-Rows |E-Bytes| Cost (%CPU)| E-Time   | A-Rows |   A-Time   | Buffers |
+---------------------------------------------------------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT            |                     |      1 |        |       |     2 (100)|          |      1 |00:00:00.01 |       3 |
+|   1 |  TABLE ACCESS BY INDEX ROWID| table1     |      1 |      1 |    16 |     2   (0)| 00:00:01 |      1 |00:00:00.01 |       3 |
+|*  2 |   INDEX UNIQUE SCAN         | PK_table1_ |      1 |      1 |       |     1   (0)| 00:00:01 |      1 |00:00:00.01 |       2 |
+---------------------------------------------------------------------------------------------------------------------------------------------</code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">- So in the above the most important pieces of information are the estimated and actual rows (e-rows / a-rows respectively) and the buffers. We can see that step #2 ran first (index unique scan) and that required 1 buffer (also known as data block). The next step in the plan was #1 which is the table access by rowid which also required 1 block taking us to a total of 2 blocks. The more blocks we see being required the more IO we are doing and the worse the performance is likely to be. 
+
+- IF the above "doesn't work" it could be a permissions issue
+
+- A good start for reading execution plans can be found here https://blogs.oracle.com/oraclemagazine/how-to-read-an-execution-plan
+
+- NOTE : running the above in SQL Developer will stop execution of the query after 5000 records, for larger result sets it would be best to use SQLPLUS for this type of analysis.</code></pre></div>
+<ul>
+<li><strong>Creating Indexes</strong>
+<ul>
+<li>
+<p>Indexes are great ways to reduce the resource utilization of a query but they aren’t always necessary. Say you have a query that is going to run daily, is the cost of the index worth the benefit it will provide? Indexes must track all DML (insert/update/delete) on the indexed columns and this comes with a price so in the case of a daily run query it is likely that not adding an index to speed up the process is a valid option to consider (totally depends on the situation and requires thought and coordination with those consuming the information the process you are working on will output).</p>
+</li>
+<li>
+<p>There is nothing wrong with a single column index in and of itself, if we have a query with a single filter condition on the table and that lines up with the single column index that’s great.</p>
+</li>
+<li>
+<p>If for example we had</p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">select * from table where column1 = :x and column2 = :y and column3 between :1 and :2</code></pre></div>
+<ul>
+<li>
+<p>What would the best index be?</p>
+</li>
+<li>
+<p>If I told you we also had a query of</p>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">select * from table where column2 = :y</code></pre></div>
+<ul>
+<li>
+<p>Would that change your answer?</p>
+</li>
+<li>
+<p>The “best” index for the above 2 queries would likely be an index on (column2, column1) and maybe column3 at the end (would depend on the ranges of values we are looking to filter, etc. The reason for column2 at the leading edge of the index is that Oracle can use it to efficiently filter both of the above queries. If we had an index that led with column1 Oracle may be able to use a skip scan, but that’s not as efficient (and often not desirable, certainly not compared to the index where column2 is at the leading edge).</p>
+</li>
+<li>
+<p>Say we have the following data set up</p>
+<ul>
+<li>Table has 300 rows distributed as follows:</li>
+<li>column1 - 10 rows for every number 1-30</li>
+<li>column2 - 100 rows for each value A, B, C</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Query is :
+select * from table where column1 = :x and column2 = :y</code></pre></div>
+<ul>
+<li>
+<p>If we had an index on column1 we would visit the index and get 10 rows after filtering, then we would need to visit the table 10 times to eliminate the rest of the data filtering on column2. If we had an index on column1, column2 we would be able to filter out all the rows via the index and then only visit the table 3 times (3 distinct values for column2 = 1/3rd the data assuming column2 has an even distribution of data across column1 which we are assuming it does here). So with that index we have reduced 66% of the work required (in table visits).</p>
+</li>
+<li>
+<p><strong>Function Based Indexes</strong></p>
+<ul>
+<li>Function based indexes (applying some logic to a column on a table such as UPPER, TRUNC, etc…) can be very helpful but in general they are not necessary and should be avoided. A great example of this would be applying TRUNC to a date column on a table to perform an operation such as</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">select * from table where trunc(column_name) = trunc(sysdate)</code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">- However we can easily rewrite that query to be </code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">select * from table where column_name between trunc(sysdate) and trunc(sysdate+1) - interval '1' second</code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">- So we have modified the query slightly so that our variables represent the start of today, and the start of tomorrow less one second (the end of today to the second). 
+
+- And then having an index on &lt;column_name> instead of trunc(column_name). The benefits of this are many and the detriments are none (aside from a few more keystrokes). Another valid option would be to store the data without a time component to it, truncating it before insert / update. Whenever possible functions should be applied to variables and not to table columns. </code></pre></div>
+<ul>
+<li>
+<p>what are typical performance improvements?</p>
+<ul>
+<li>Don’t make database calls (use java beans) in a loop
+<ul>
+<li>Move outside the loop</li>
+<li>Call in bulk</li>
+<li>Cache calls</li>
+</ul>
+</li>
+<li>Don’t do the same thing multiple times
+<ul>
+<li>e.g. Don’t create the same object in each loop iteration. Move outside of the loop.</li>
+</ul>
+</li>
+<li>Fetch everything in a single SQL query instead of combining SQL queries and admin bean method calls</li>
+<li>Only fetch what you need</li>
+<li>Use INNER JOINs instead of nested queries</li>
+<li>Avoid using views</li>
+<li>Use “UNION ALL” in queries instead of “OR”</li>
+<li>Oracle only allows up to 1000 keys to be used with the IN clause
+<ul>
+<li>make use of global temporary tables to get around this</li>
+</ul>
+</li>
+<li>Filter in database vs. in code</li>
+<li>Advanced performance improvements
+<ul>
+<li>Multithreading using WorkManager</li>
+<li>Getting everything in bulk upfront might not be possible so batches might be better instead</li>
+</ul>
+</li>
+<li>Use SQLRunner.executeUpdateBatch() instead of EJB3’s crudBulkCreate()</li>
+<li>Avoid using entities that are connected to the database – have a copy of the data then update later if needed</li>
+</ul>
+</li>
+<li>
+<p><strong>When to Consider Performance?</strong></p>
+<ul>
+<li>Whether you’re writing new code or fixing an existing performance issue, you should ask: “What are the performance requirements of this feature?“. It is not valuable to spend multiple weeks optimizing a piece of code to run in 10 seconds for one million participants when that feature is only used by companies with one thousand employees and runs overnight.  The questions you want answered in your story or epic or even saga are:
+<ul>
+<li>What is the target number for the scaling variable (Number Participants, number of companies, etc…)</li>
+<li>What is the target time to complete the job for the target scaling variable (ex. ten thousand participants per minute)</li>
+<li>PMs are usually the best resource for the above questions. These questions should be answered as a team during story generation.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>what are common pitfalls/tools used for performance?</strong></p>
+<ul>
+<li>EJB3 works best updating single records. It’s dramatically slower updating a large collection of records, even using methods “crudBulkCreate”. When working on features that work with a large set of records, use SQL runner, and in this case, the executeUpdateBatch method.</li>
+<li>The database is far more optimized at filtering results than the application layer. Filtering in the database also reduces network and memory costs  as we are no longer loading the unused rows into the application. The solution is to update the method so that the database query is built with the filters included.</li>
+<li>thread dumps:
+<ul>
+<li>low cost way to find application hot spots</li>
+<li>reveal where threads are stuck in deadlock</li>
+</ul>
+</li>
+<li>Jvisualvm
+<ul>
+<li>Monitor memory usage</li>
+<li>Thread dump</li>
+<li>Visualize Application Threads</li>
+</ul>
+</li>
+<li>Performance integration/unit tests
+<ul>
+<li>Lock in hard earned optimizations from future changes</li>
+<li>Create reliable automated performance tests with realistic data</li>
+<li>Detect performance regressions for certain processes</li>
+</ul>
+</li>
+<li>Eclipse memory analyzer
+<ul>
+<li>find where the memory is leaking</li>
+</ul>
+</li>
+<li>async profiler
+<ul>
+<li>dynamic run-time profiler for java applications</li>
+<li>could be setup to provide continuous performance monitoring</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h1 id="quotes" style="position:relative;"><a href="#quotes" aria-label="quotes permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Quotes</h1>
 <h1 id="references" style="position:relative;"><a href="#references" aria-label="references permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>References</h1>
 <ul>
@@ -95,4 +477,4 @@
           >
             window.___chunkMapping="{\"app\":[\"/app-02f27bb33b7a634980a7.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-c5ce6f61d00d5bc2a364.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-85895703483e94bddc30.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-5f4699c03df20c034ba6.js\"],\"component---src-pages-using-typescript-tsx\":[\"/component---src-pages-using-typescript-tsx-a71142f2de4e781bfbb8.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-e6b9723f7baba56e9afc.js\"],\"component---src-templates-tags-js\":[\"/component---src-templates-tags-js-396a8b4d37b1d972a6c6.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="22a3c8113d226550f456";</script><script src="/webpack-runtime-5298344da22db0a7d8dc.js" async></script><script src="/framework-dd535bfdf9fc8b5d9656.js" async></script><script src="/app-02f27bb33b7a634980a7.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="d818b701d169d85ccf33";</script><script src="/webpack-runtime-d44aad5c46721065a092.js" async></script><script src="/framework-dd535bfdf9fc8b5d9656.js" async></script><script src="/app-02f27bb33b7a634980a7.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
