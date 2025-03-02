@@ -51,7 +51,487 @@
         }
       }
     })
-  </script><link rel="alternate" type="application/rss+xml" title="Tony Vo Blog RSS Feed" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=b811602c8c8ce14b66aae6613c8968f4" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=b811602c8c8ce14b66aae6613c8968f4"/><title data-react-helmet="true">introducing event storming by Alberto Brandolini summary | Conversations on agile technical practices and investments</title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="global-wrapper" data-is-root-path="false"><header class="global-header"><a class="header-link-home" href="/">Conversations on agile technical practices and investments</a></header><main><article class="blog-post" itemscope="" itemType="http://schema.org/Article"><header><h1 itemProp="headline">introducing event storming by Alberto Brandolini summary</h1><p>March 02, 2025</p></header><section itemProp="articleBody"><h1 id="take-aways" style="position:relative;"><a href="#take-aways" aria-label="take aways permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>take-aways</h1>
+  </script><link rel="alternate" type="application/rss+xml" title="Tony Vo Blog RSS Feed" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=b811602c8c8ce14b66aae6613c8968f4" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=b811602c8c8ce14b66aae6613c8968f4"/><title data-react-helmet="true">introducing event storming by Alberto Brandolini summary | Conversations on agile technical practices and investments</title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="global-wrapper" data-is-root-path="false"><header class="global-header"><a class="header-link-home" href="/">Conversations on agile technical practices and investments</a></header><main><article class="blog-post" itemscope="" itemType="http://schema.org/Article"><header><h1 itemProp="headline">introducing event storming by Alberto Brandolini summary</h1><p>March 02, 2025</p></header><section itemProp="articleBody"><h1 id="table-of-contents" style="position:relative;"><a href="#table-of-contents" aria-label="table of contents permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Table of Contents</h1>
+<div class="table-of-contents">
+<ul>
+<li>
+<p><a href="#understanding-eventstorming"><strong>Understanding EventStorming</strong></a></p>
+<ul>
+<li>
+<p><a href="#what-does-eventstorming-look-like"><strong>What Does EventStorming Look Like?</strong></a></p>
+<ul>
+<li>
+<p><a href="#-challenging-corporate-processes"><strong>🔍 Challenging Corporate Processes</strong></a></p>
+<ul>
+<li><a href="#-the-eventstorming-approach"><strong>🚀 The EventStorming Approach</strong></a></li>
+<li><a href="#-the-outcome"><strong>🎯 The Outcome</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#-kicking-off-a-startup"><strong>🚀 Kicking Off a Startup</strong></a></p>
+<ul>
+<li><a href="#-eventstorming-in-action"><strong>🔑 EventStorming in Action</strong></a></li>
+<li><a href="#-key-takeaway"><strong>🚀 Key Takeaway</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#-designing-a-new-feature-for-a-web-app"><strong>💡 Designing a New Feature for a Web App</strong></a></p>
+<ul>
+<li><a href="#-how-eventstorming-helped"><strong>🛠 How EventStorming Helped</strong></a></li>
+<li><a href="#-outcome"><strong>🔑 Outcome</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#-quick-eventstorming-in-avanscoperta"><strong>⚡ Quick EventStorming in Avanscoperta</strong></a></p>
+<ul>
+<li><a href="#-key-discoveries"><strong>🔍 Key Discoveries</strong></a></li>
+<li><a href="#-results"><strong>📈 Results</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#silos-how-organizations-naturally-evolve-into-silos-and-their-impact-on-efficiency"><strong>Silos: How Organizations Naturally Evolve into Silos and Their Impact on Efficiency</strong></a></p>
+<ul>
+<li>
+<p><a href="#how-silos-form"><strong>How Silos Form</strong></a></p>
+</li>
+<li>
+<p><a href="#targets-and-goals-the-issue-with-management-driven-goal-setting-processes"><strong>Targets and Goals: The Issue with Management-Driven Goal-Setting Processes</strong></a></p>
+<ul>
+<li><a href="#the-problem-with-traditional-goal-setting"><strong>The Problem with Traditional Goal-Setting</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#decisions-lifecycle-understanding-how-decisions-evolve-within-a-business"><strong>Decisions’ Lifecycle: Understanding How Decisions Evolve Within a Business</strong></a></p>
+<ul>
+<li><a href="#why-old-decisions-persist"><strong>Why Old Decisions Persist</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#the-cost-of-agreeing-challenges-of-achieving-alignment-in-complex-systems"><strong>The Cost of Agreeing: Challenges of Achieving Alignment in Complex Systems</strong></a></p>
+</li>
+<li>
+<p><a href="#putting-everything-together-synthesizing-the-key-issues-that-eventstorming-addresses"><strong>Putting Everything Together: Synthesizing the Key Issues That EventStorming Addresses</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#pretending-to-solve-the-problem-by-writing-software"><strong>Pretending to Solve the Problem by Writing Software</strong></a></p>
+<ul>
+<li>
+<p><a href="#its-not-about-delivering-software"><strong>It’s Not About Delivering Software</strong></a></p>
+</li>
+<li>
+<p><a href="#the-illusion-of-the-underlying-model"><strong>The Illusion of the Underlying Model</strong></a></p>
+</li>
+<li>
+<p><a href="#the-product-owner-fallacy"><strong>The Product Owner Fallacy</strong></a></p>
+</li>
+<li>
+<p><a href="#the-backlog-fallacy"><strong>The Backlog Fallacy</strong></a></p>
+</li>
+<li>
+<p><a href="#eventstorming-approach-a-better-way-to-model-complex-domains"><strong>EventStorming Approach: A Better Way to Model Complex Domains</strong></a></p>
+<ul>
+<li><a href="#key-benefits-of-eventstorming"><strong>Key Benefits of EventStorming</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#conclusion"><strong>Conclusion</strong></a></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#running-effective-eventstorming-workshops"><strong>Running Effective EventStorming Workshops</strong></a></p>
+<ul>
+<li>
+<p><a href="#your-first-eventstorming-session"><strong>Your First EventStorming Session</strong></a></p>
+<ul>
+<li><a href="#21-show-an-example"><strong>2.1. Show an Example</strong></a></li>
+<li><a href="#22-happily-ever-after"><strong>2.2. Happily Ever After</strong></a></li>
+<li><a href="#23-start-with-events"><strong>2.3. Start with Events</strong></a></li>
+<li><a href="#24-capturing-questions"><strong>2.4. Capturing Questions</strong></a></li>
+<li><a href="#25-how-to-start"><strong>2.5. How to Start?</strong></a></li>
+<li><a href="#26-setting-up-the-modeling-space"><strong>2.6. Setting Up the Modeling Space</strong></a></li>
+<li><a href="#27-the-invitation"><strong>2.7. The Invitation</strong></a></li>
+<li><a href="#28-getting-started"><strong>2.8. Getting Started</strong></a></li>
+<li><a href="#29-things-to-avoid"><strong>2.9. Things to Avoid</strong></a></li>
+<li><a href="#final-thoughts"><strong>Final Thoughts</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#facilitation-basics"><strong>Facilitation Basics</strong></a></p>
+<ul>
+<li><a href="#31-playing-the-game"><strong>3.1. Playing the Game</strong></a></li>
+<li><a href="#32-intentional-discovery"><strong>3.2. Intentional Discovery</strong></a></li>
+<li><a href="#33-open-at-the-close"><strong>3.3. Open at the Close</strong></a></li>
+<li><a href="#34-tips-and-tricks"><strong>3.4. Tips and Tricks</strong></a></li>
+<li><a href="#35-dealing-with-challenges"><strong>3.5. Dealing with Challenges</strong></a></li>
+<li><a href="#final-thoughts-1"><strong>Final Thoughts</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#emerging-structure"><strong>Emerging Structure</strong></a></p>
+<ul>
+<li><a href="#41-key-events"><strong>4.1. Key Events</strong></a></li>
+<li><a href="#42-milestones"><strong>4.2. Milestones</strong></a></li>
+<li><a href="#43-alternate-paths"><strong>4.3. Alternate Paths</strong></a></li>
+<li><a href="#44-themes"><strong>4.4. Themes</strong></a></li>
+<li><a href="#45-facilitation-tips"><strong>4.5. Facilitation Tips</strong></a></li>
+<li><a href="#46-how-to-handle-loops"><strong>4.6. How to Handle Loops</strong></a></li>
+<li><a href="#47-emergent-software-boundaries"><strong>4.7. Emergent Software Boundaries</strong></a></li>
+<li><a href="#48-domain-distillation"><strong>4.8. Domain Distillation</strong></a></li>
+<li><a href="#49-bounded-contexts"><strong>4.9. Bounded Contexts</strong></a></li>
+<li><a href="#final-thoughts-2"><strong>Final Thoughts</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#exploring-the-big-picture"><strong>Exploring the Big Picture</strong></a></p>
+<ul>
+<li>
+<p><a href="#why-explore-the-big-picture"><strong>Why Explore the Big Picture?</strong></a></p>
+</li>
+<li>
+<p><a href="#key-challenges-that-big-picture-eventstorming-solves"><strong>Key Challenges That Big Picture EventStorming Solves</strong></a></p>
+</li>
+<li>
+<p><a href="#big-picture-workshop-structure"><strong>Big Picture Workshop Structure</strong></a></p>
+<ul>
+<li><a href="#step-1-chaotic-exploration"><strong>Step 1: Chaotic Exploration</strong></a></li>
+<li><a href="#step-2-emergent-structure"><strong>Step 2: Emergent Structure</strong></a></li>
+<li><a href="#step-3-identifying-actors-and-systems"><strong>Step 3: Identifying Actors and Systems</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#facilitation-tips-for-a-big-picture-session"><strong>Facilitation Tips for a Big Picture Session</strong></a></p>
+</li>
+<li>
+<p><a href="#outcomes-and-next-steps"><strong>Outcomes and Next Steps</strong></a></p>
+</li>
+<li>
+<p><a href="#inviting-the-right-people"><strong>Inviting the Right People</strong></a></p>
+</li>
+<li>
+<p><a href="#room-setup"><strong>Room Setup</strong></a></p>
+<ul>
+<li><a href="#key-setup-considerations"><strong>Key Setup Considerations:</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#workshop-structure"><strong>Workshop Structure</strong></a></p>
+<ul>
+<li><a href="#phase-1-kick-off"><strong>Phase 1: Kick-off</strong></a></li>
+<li><a href="#phase-2-chaotic-exploration"><strong>Phase 2: Chaotic Exploration</strong></a></li>
+<li><a href="#phase-3-enforcing-the-timeline"><strong>Phase 3: Enforcing the Timeline</strong></a></li>
+<li><a href="#phase-4-identifying-people-and-systems"><strong>Phase 4: Identifying People and Systems</strong></a></li>
+<li><a href="#phase-5-discovering-problems-and-opportunities"><strong>Phase 5: Discovering Problems and Opportunities</strong></a></li>
+<li><a href="#phase-6-selecting-key-issues-to-solve"><strong>Phase 6: Selecting Key Issues to Solve</strong></a></li>
+<li><a href="#phase-7-summarizing-the-structure"><strong>Phase 7: Summarizing the Structure</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#final-thoughts-3"><strong>Final Thoughts</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#discovering-bounded-contexts-with-eventstorming"><strong>Discovering Bounded Contexts with EventStorming</strong></a></p>
+<ul>
+<li>
+<p><a href="#why-bounded-contexts-are-critical"><strong>Why Bounded Contexts Are Critical</strong></a></p>
+<ul>
+<li><a href="#symptoms-of-poorly-defined-bounded-contexts"><strong>Symptoms of Poorly Defined Bounded Contexts</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#finding-bounded-contexts"><strong>Finding Bounded Contexts</strong></a></p>
+<ul>
+<li><a href="#heuristics-for-identifying-bounded-contexts"><strong>Heuristics for Identifying Bounded Contexts</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#structure-of-a-big-picture-workshop"><strong>Structure of a Big Picture Workshop</strong></a></p>
+</li>
+<li>
+<p><a href="#homework-time"><strong>Homework Time</strong></a></p>
+</li>
+<li>
+<p><a href="#putting-everything-together"><strong>Putting Everything Together</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#modeling-aggregates"><strong>Modeling Aggregates</strong></a></p>
+<ul>
+<li>
+<p><a href="#key-characteristics-of-aggregates"><strong>Key Characteristics of Aggregates</strong></a></p>
+</li>
+<li>
+<p><a href="#discovering-aggregates"><strong>Discovering Aggregates</strong></a></p>
+<ul>
+<li><a href="#heuristics-for-finding-aggregates"><strong>Heuristics for Finding Aggregates</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#best-practices-for-aggregate-modeling"><strong>Best Practices for Aggregate Modeling</strong></a></p>
+<ul>
+<li><a href="#1-postpone-naming"><strong>1. Postpone Naming</strong></a></li>
+<li><a href="#2-keep-aggregates-small"><strong>2. Keep Aggregates Small</strong></a></li>
+<li><a href="#3-model-aggregates-as-state-machines"><strong>3. Model Aggregates as State Machines</strong></a></li>
+<li><a href="#4-separate-read-and-write-models"><strong>4. Separate Read and Write Models</strong></a></li>
+<li><a href="#5-design-with-event-sourcing-in-mind"><strong>5. Design with Event Sourcing in Mind</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#final-thoughts-4"><strong>Final Thoughts</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#event-design-patterns"><strong>Event Design Patterns</strong></a></p>
+<ul>
+<li>
+<p><a href="#discovery-strategies"><strong>Discovery Strategies</strong></a></p>
+<ul>
+<li><a href="#how-to-identify-important-events"><strong>How to Identify Important Events?</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#composite-domain-events"><strong>Composite Domain Events</strong></a></p>
+<ul>
+<li><a href="#what-are-composite-domain-events"><strong>What Are Composite Domain Events?</strong></a></li>
+<li><a href="#when-to-use-composite-events"><strong>When to Use Composite Events?</strong></a></li>
+<li><a href="#when-not-to-use-composite-events"><strong>When NOT to Use Composite Events?</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#final-thoughts-5"><strong>Final Thoughts</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#big-picture-event-storming-in-remote-mode"><strong>Big Picture Event Storming in Remote Mode</strong></a></p>
+<ul>
+<li>
+<p><a href="#main-changes-adapting-workshops-for-remote-teams"><strong>Main Changes: Adapting Workshops for Remote Teams</strong></a></p>
+<ul>
+<li><a href="#key-changes-in-remote-sessions"><strong>Key Changes in Remote Sessions</strong></a></li>
+<li><a href="#unexpected-consequences"><strong>Unexpected Consequences</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#what-role-for-a-big-picture-in-remote-mode"><strong>What Role for a Big Picture in Remote Mode?</strong></a></p>
+</li>
+<li>
+<p><a href="#patterns-for-remote-big-picture"><strong>Patterns for Remote Big Picture</strong></a></p>
+<ul>
+<li><a href="#key-adjustments-for-remote-facilitation"><strong>Key Adjustments for Remote Facilitation</strong></a></li>
+<li><a href="#challenges-in-remote-exploration"><strong>Challenges in Remote Exploration</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#do-we-have-a-recipe-strategies-for-running-virtual-eventstorming-sessions"><strong>Do We Have a Recipe? Strategies for Running Virtual EventStorming Sessions</strong></a></p>
+<ul>
+<li><a href="#best-practices-for-remote-workshops"><strong>Best Practices for Remote Workshops</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#final-thoughts-making-remote-eventstorming-work"><strong>Final Thoughts: Making Remote EventStorming Work</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#running-a-design-level-eventstorming"><strong>Running a Design-Level EventStorming</strong></a></p>
+<ul>
+<li>
+<p><a href="#scope-and-participants"><strong>Scope and Participants</strong></a></p>
+<ul>
+<li><a href="#who-should-be-involved"><strong>Who Should Be Involved?</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#using-the-big-picture-artifact"><strong>Using the Big Picture Artifact</strong></a></p>
+<ul>
+<li><a href="#two-approaches-to-starting-a-design-level-eventstorming-session"><strong>Two Approaches to Starting a Design-Level EventStorming Session</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#where-are-events-coming-from"><strong>Where Are Events Coming From?</strong></a></p>
+<ul>
+<li><a href="#why-not-use-uml"><strong>Why Not Use UML?</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#discovering-aggregates-1"><strong>Discovering Aggregates</strong></a></p>
+<ul>
+<li><a href="#key-principles-for-identifying-aggregates"><strong>Key Principles for Identifying Aggregates</strong></a></li>
+<li><a href="#common-mistakes-when-identifying-aggregates"><strong>Common Mistakes When Identifying Aggregates</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#determining-when-youre-done"><strong>Determining When You’re Done</strong></a></p>
+<ul>
+<li><a href="#how-do-you-know-the-design-level-eventstorming-is-over"><strong>How Do You Know the Design-Level EventStorming Is Over?</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#design-level-modeling-tips"><strong>Design-Level Modeling Tips</strong></a></p>
+<ul>
+<li>
+<p><a href="#making-alternatives-visible"><strong>Making Alternatives Visible</strong></a></p>
+<ul>
+<li><a href="#key-strategies-for-visualizing-alternatives"><strong>Key Strategies for Visualizing Alternatives:</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#choosing-later"><strong>Choosing Later</strong></a></p>
+<ul>
+<li><a href="#how-to-decide-when-to-choose"><strong>How to Decide When to Choose?</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#picking-the-right-problem"><strong>Picking the Right Problem</strong></a></p>
+<ul>
+<li><a href="#how-to-prioritize-the-right-problems"><strong>How to Prioritize the Right Problems?</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#refining-the-model"><strong>Refining the Model</strong></a></p>
+<ul>
+<li><a href="#refinement-techniques"><strong>Refinement Techniques:</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#building-blocks"><strong>Building Blocks</strong></a></p>
+<ul>
+<li>
+<p><a href="#why-domain-events-are-special"><strong>Why Domain Events Are Special</strong></a></p>
+<ul>
+<li>
+<p><a href="#key-characteristics-of-domain-events"><strong>Key Characteristics of Domain Events:</strong></a></p>
+</li>
+<li>
+<p><a href="#events-as-state-transitions"><strong>Events as State Transitions</strong></a></p>
+<ul>
+<li><a href="#example-modeling-state-transitions-in-temperature-monitoring"><strong>Example: Modeling State Transitions in Temperature Monitoring</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#commands-actions-and-decisions"><strong>Commands, Actions, and Decisions</strong></a></p>
+</li>
+<li>
+<p><a href="#distinguishing-between-commands-actions-and-decisions"><strong>Distinguishing Between Commands, Actions, and Decisions</strong></a></p>
+</li>
+<li>
+<p><a href="#example-ordering-a-pizza-online"><strong>Example: Ordering a Pizza Online</strong></a></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#from-paper-roll-to-working-code"><strong>From Paper Roll to Working Code</strong></a></p>
+</li>
+<li>
+<p><a href="#managing-eventstorming-artifacts"><strong>Managing EventStorming Artifacts</strong></a></p>
+<ul>
+<li><a href="#how-to-use-eventstorming-artifacts-in-development"><strong>How to Use EventStorming Artifacts in Development</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#coding-asap"><strong>Coding ASAP</strong></a></p>
+<ul>
+<li><a href="#why-prototyping-early-is-crucial"><strong>Why Prototyping Early is Crucial</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#from-eventstorming-to-user-stories"><strong>From EventStorming to User Stories</strong></a></p>
+<ul>
+<li><a href="#eventstorming--user-story-mapping"><strong>EventStorming &#x26; User Story Mapping</strong></a></li>
+<li><a href="#key-differences-between-eventstorming-and-user-story-mapping"><strong>Key Differences Between EventStorming and User Story Mapping</strong></a></li>
+<li><a href="#defining-acceptance-criteria"><strong>Defining Acceptance Criteria</strong></a></li>
+<li><a href="#key-considerations-for-acceptance-criteria"><strong>Key Considerations for Acceptance Criteria</strong></a></li>
+<li><a href="#how-to-merge-eventstorming-and-user-story-mapping"><strong>How to Merge EventStorming and User Story Mapping</strong></a></li>
+<li><a href="#key-takeaways"><strong>Key Takeaways</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#patterns-and-anti-patterns"><strong>Patterns and Anti-Patterns</strong></a></p>
+<ul>
+<li>
+<p><a href="#effective-strategies"><strong>Effective Strategies</strong></a></p>
+<ul>
+<li><a href="#1-add-more-space"><strong>1. Add More Space</strong></a></li>
+<li><a href="#2-be-the-worst"><strong>2. Be the Worst</strong></a></li>
+<li><a href="#3-conquer-first-divide-later"><strong>3. Conquer First, Divide Later</strong></a></li>
+<li><a href="#4-do-first-explain-later"><strong>4. Do First, Explain Later</strong></a></li>
+<li><a href="#5-use-fuzzy-definitions"><strong>5. Use Fuzzy Definitions</strong></a></li>
+<li><a href="#6-guess-first"><strong>6. Guess First</strong></a></li>
+<li><a href="#7-mark-hot-spots"><strong>7. Mark Hot Spots</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#common-pitfalls-to-avoid"><strong>Common Pitfalls to Avoid</strong></a></p>
+<ul>
+<li><a href="#1-the-big-table-at-the-center-of-the-room"><strong>1. The Big Table at the Center of the Room</strong></a></li>
+<li><a href="#2-the-committee-trap"><strong>2. The Committee Trap</strong></a></li>
+<li><a href="#3-divide-and-conquer-too-early"><strong>3. Divide and Conquer Too Early</strong></a></li>
+<li><a href="#4-the-dungeon-master"><strong>4. The Dungeon Master</strong></a></li>
+<li><a href="#5-follow-the-leader"><strong>5. Follow the Leader</strong></a></li>
+<li><a href="#6-the-human-bottleneck"><strong>6. The Human Bottleneck</strong></a></li>
+<li><a href="#7-precise-notation-too-early"><strong>7. Precise Notation Too Early</strong></a></li>
+<li><a href="#8-the-karaoke-singer"><strong>8. The Karaoke Singer</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#final-thoughts-6"><strong>Final Thoughts</strong></a></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#reference-materials"><strong>Reference Materials</strong></a></p>
+<ul>
+<li>
+<p><a href="#glossary"><strong>Glossary</strong></a></p>
+<ul>
+<li><a href="#key-terms-in-eventstorming"><strong>Key Terms in EventStorming</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#tools-for-eventstorming"><strong>Tools for EventStorming</strong></a></p>
+<ul>
+<li><a href="#essential-physical-tools"><strong>Essential Physical Tools</strong></a></li>
+<li><a href="#digital-tools-for-remote-eventstorming"><strong>Digital Tools for Remote EventStorming</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#bibliography"><strong>Bibliography</strong></a></p>
+<ul>
+<li><a href="#core-domain-driven-design-ddd-books"><strong>Core Domain-Driven Design (DDD) Books</strong></a></li>
+<li><a href="#facilitation--collaboration"><strong>Facilitation &#x26; Collaboration</strong></a></li>
+<li><a href="#agile--lean-thinking"><strong>Agile &#x26; Lean Thinking</strong></a></li>
+<li><a href="#final-thoughts-7"><strong>Final Thoughts</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#quotes">Quotes</a></p>
+</li>
+<li>
+<p><a href="#references">References</a></p>
+</li>
+</ul>
+</div>
 <h1 id="understanding-eventstorming" style="position:relative;"><a href="#understanding-eventstorming" aria-label="understanding eventstorming permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Understanding EventStorming</strong></h1>
 <p>EventStorming is more than just a workshop technique—it’s a <strong>highly collaborative</strong> and <strong>visually engaging approach</strong> to uncovering inefficiencies, improving business processes, and designing innovative solutions. This section explores <strong>four key scenarios</strong> where EventStorming proves to be a game-changer.</p>
 <h2 id="what-does-eventstorming-look-like" style="position:relative;"><a href="#what-does-eventstorming-look-like" aria-label="what does eventstorming look like permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>What Does EventStorming Look Like?</strong></h2>
