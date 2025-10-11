@@ -2978,6 +2978,377 @@ Structured logs are easy to search, but that also means <strong>sensitive data b
 </tbody>
 </table>
 <hr>
+<h2 id="-managing-cardinality-in-telemetry" style="position:relative;"><a href="#-managing-cardinality-in-telemetry" aria-label=" managing cardinality in telemetry permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🔢 <strong>Managing Cardinality in Telemetry</strong></h2>
+<h3 id="-purpose-and-context-2" style="position:relative;"><a href="#-purpose-and-context-2" aria-label=" purpose and context 2 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🎯 <strong>Purpose and Context</strong></h3>
+<p>Riedesel opens the chapter with a stark warning:</p>
+<blockquote>
+<p><strong>“Cardinality is the hidden tax of telemetry — you pay it in memory, compute, and money.”</strong></p>
+</blockquote>
+<p>In other words, even when your logs and metrics appear well-structured, a <strong>high number of unique label combinations</strong> can <strong>explode storage</strong>, <strong>slow queries</strong>, and <strong>cripple dashboards</strong>.</p>
+<p>This chapter teaches how to understand, diagnose, and control that explosion. It’s not just about saving cost — it’s about preserving <strong>the stability and responsiveness of your observability system itself</strong>.</p>
+<blockquote>
+<p><strong>“If you’ve ever opened a Grafana dashboard that froze for 20 seconds, you’ve probably met cardinality — you just didn’t know its name.”</strong></p>
+</blockquote>
+<hr>
+<h3 id="-1-understanding-cardinality" style="position:relative;"><a href="#-1-understanding-cardinality" aria-label=" 1 understanding cardinality permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🧩 <strong>1. Understanding Cardinality</strong></h3>
+<p>Riedesel defines <strong>cardinality</strong> as:</p>
+<blockquote>
+<p><strong>“The count of unique combinations of label keys and values in your telemetry.”</strong></p>
+</blockquote>
+<p>In time-series systems (Prometheus, InfluxDB, Datadog, etc.), each unique set of labels — even if it’s the same metric name — creates a <strong>new time series</strong>.</p>
+<p><strong>Example:</strong></p>
+<div class="gatsby-highlight" data-language="promql"><pre class="language-promql"><code class="language-promql">http_requests_total<span class="token context-labels"><span class="token punctuation">{</span><span class="token label-key attr-name">region</span><span class="token punctuation">=</span><span class="token label-value attr-value">"us-west"</span><span class="token punctuation">,</span> <span class="token label-key attr-name">service</span><span class="token punctuation">=</span><span class="token label-value attr-value">"auth"</span><span class="token punctuation">}</span></span>
+http_requests_total<span class="token context-labels"><span class="token punctuation">{</span><span class="token label-key attr-name">region</span><span class="token punctuation">=</span><span class="token label-value attr-value">"us-east"</span><span class="token punctuation">,</span> <span class="token label-key attr-name">service</span><span class="token punctuation">=</span><span class="token label-value attr-value">"auth"</span><span class="token punctuation">}</span></span>
+http_requests_total<span class="token context-labels"><span class="token punctuation">{</span><span class="token label-key attr-name">region</span><span class="token punctuation">=</span><span class="token label-value attr-value">"us-west"</span><span class="token punctuation">,</span> <span class="token label-key attr-name">service</span><span class="token punctuation">=</span><span class="token label-value attr-value">"checkout"</span><span class="token punctuation">}</span></span></code></pre></div>
+<p>Even though all share the same metric name (<code class="language-text">http_requests_total</code>), there are <strong>three unique series</strong> due to the combinations of <code class="language-text">region</code> and <code class="language-text">service</code>.</p>
+<p>Add a new label like <code class="language-text">user_id</code>, and your system could generate <strong>millions of unique series</strong>.</p>
+<p>Riedesel notes:</p>
+<blockquote>
+<p><strong>“Cardinality doesn’t scale linearly — it multiplies explosively.”</strong></p>
+</blockquote>
+<hr>
+<h4 id="a-why-cardinality-matters" style="position:relative;"><a href="#a-why-cardinality-matters" aria-label="a why cardinality matters permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>(a) Why Cardinality Matters</strong></h4>
+<p>High cardinality impacts telemetry systems in multiple ways:</p>
+<ul>
+<li><strong>Memory pressure</strong> — Each series consumes storage and in-memory index entries.</li>
+<li><strong>CPU load</strong> — Every query must scan and aggregate over more series.</li>
+<li><strong>Query latency</strong> — Dashboards slow down, alerts delay.</li>
+<li><strong>Retention cost</strong> — Data volume grows exponentially.</li>
+</ul>
+<p>And worst of all:</p>
+<blockquote>
+<p><strong>“Cardinality failures are invisible until they’re catastrophic.”</strong></p>
+</blockquote>
+<p>You rarely see them coming — the system works fine until a small change (like a new metric label) suddenly doubles your dataset.</p>
+<hr>
+<h4 id="b-the-root-causes-of-cardinality-explosion" style="position:relative;"><a href="#b-the-root-causes-of-cardinality-explosion" aria-label="b the root causes of cardinality explosion permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>(b) The Root Causes of Cardinality Explosion</strong></h4>
+<p>Riedesel identifies several <strong>common anti-patterns</strong>:</p>
+<ol>
+<li>
+<p><strong>User identifiers as labels</strong></p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">http_requests_total{user_id="A123"}</code></pre></div>
+<p>→ Creates one series per user.</p>
+</li>
+<li>
+<p><strong>Session or request IDs</strong></p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">latency_seconds{request_id="8f92a3..."}</code></pre></div>
+<p>→ Infinite cardinality as every request is unique.</p>
+</li>
+<li>
+<p><strong>Dynamic resource names</strong></p>
+<ul>
+<li>Containers (<code class="language-text">pod_name</code>), VMs (<code class="language-text">instance_id</code>), network flows (<code class="language-text">src_ip</code>)</li>
+<li>Each new instance creates new label combinations.</li>
+</ul>
+</li>
+<li>
+<p><strong>Unbounded tags in logs</strong></p>
+<ul>
+<li>Logging arbitrary strings in structured fields like <code class="language-text">"error_message"</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Accidental label combinations</strong></p>
+<ul>
+<li>Joining two labels that weren’t meant to multiply.</li>
+<li>e.g., <code class="language-text">{region, instance, user_role}</code> across 10×1,000×50 = <strong>500,000 series</strong>.</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><strong>“Every label combination is a new time series. Every new series is a cost. Every cost compounds.”</strong></p>
+</blockquote>
+<hr>
+<h3 id="️-2-detecting-and-measuring-cardinality" style="position:relative;"><a href="#%EF%B8%8F-2-detecting-and-measuring-cardinality" aria-label="️ 2 detecting and measuring cardinality permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>⚙️ <strong>2. Detecting and Measuring Cardinality</strong></h3>
+<p>Before you can manage it, you must <strong>measure it</strong>.
+Riedesel provides practical strategies for detecting cardinality problems before they overwhelm the system.</p>
+<h4 id="a-system-metrics" style="position:relative;"><a href="#a-system-metrics" aria-label="a system metrics permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>(a) System Metrics</strong></h4>
+<p>Prometheus and other TSDBs expose their own telemetry about series count, e.g.:</p>
+<div class="gatsby-highlight" data-language="promql"><pre class="language-promql"><code class="language-promql">prometheus_tsdb_head_series
+prometheus_tsdb_series_created_total</code></pre></div>
+<blockquote>
+<p><strong>“The telemetry system should monitor itself — if it’s observant, it can prevent its own blindness.”</strong></p>
+</blockquote>
+<h4 id="b-cardinality-audits" style="position:relative;"><a href="#b-cardinality-audits" aria-label="b cardinality audits permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>(b) Cardinality Audits</strong></h4>
+<p>Run regular <strong>cardinality audits</strong>:</p>
+<ul>
+<li>Query unique label combinations per metric (<code class="language-text">count by (labelname)</code>).</li>
+<li>Identify metrics with the highest label explosion.</li>
+<li>Track growth trends weekly.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="gatsby-highlight" data-language="promql"><pre class="language-promql"><code class="language-promql"><span class="token keyword">count</span><span class="token punctuation">(</span><span class="token keyword">count</span><span class="token punctuation">(</span>http_requests_total<span class="token punctuation">)</span> <span class="token keyword">by</span> <span class="token vector-match"><span class="token punctuation">(</span><span class="token label-key attr-name">user_id</span><span class="token punctuation">)</span></span><span class="token punctuation">)</span></code></pre></div>
+<p>Riedesel suggests automating these audits with <strong>Grafana dashboards</strong> or <strong>nightly scripts</strong>, tagging metrics with a <code class="language-text">cardinality_risk</code> label.</p>
+<hr>
+<h3 id="-3-strategies-to-limit-high-cardinality" style="position:relative;"><a href="#-3-strategies-to-limit-high-cardinality" aria-label=" 3 strategies to limit high cardinality permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🧠 <strong>3. Strategies to Limit High Cardinality</strong></h3>
+<p>Riedesel structures mitigation into <strong>three layers</strong> — <em>Prevent</em>, <em>Reduce</em>, and <em>Control</em>.</p>
+<hr>
+<h4 id="a-prevent--design-for-low-cardinality-up-front" style="position:relative;"><a href="#a-prevent--design-for-low-cardinality-up-front" aria-label="a prevent  design for low cardinality up front permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>(a) Prevent — Design for Low Cardinality Up Front</strong></h4>
+<blockquote>
+<p><strong>“Cardinality prevention begins at instrumentation.”</strong></p>
+</blockquote>
+<ol>
+<li>
+<p><strong>Eliminate unique identifiers</strong> — Never use user IDs, session IDs, or request hashes as labels.</p>
+<ul>
+<li>Instead, record them as <strong>event fields</strong> in logs (non-aggregated telemetry).</li>
+</ul>
+</li>
+<li>
+<p><strong>Use categorical values</strong> — Limit labels to a small set of expected options.</p>
+<ul>
+<li>e.g., <code class="language-text">region ∈ {us-east, us-west, eu-central}</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Predefine label sets</strong> — Document allowed label keys and values in your schema.</p>
+</li>
+<li>
+<p><strong>Apply sampling</strong> — Record only a percentage of events (e.g., 1 in 1000 requests) for metrics.</p>
+</li>
+<li>
+<p><strong>Normalize resource identifiers</strong> — Use stable IDs (<code class="language-text">instance_type</code>, <code class="language-text">service_group</code>) instead of ephemeral (<code class="language-text">instance_id</code>).</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>“If you design metrics like you design APIs — intentionally and with limits — your telemetry will stay sane.”</strong></p>
+</blockquote>
+<hr>
+<h4 id="b-reduce--aggregate-early-and-often" style="position:relative;"><a href="#b-reduce--aggregate-early-and-often" aria-label="b reduce  aggregate early and often permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>(b) Reduce — Aggregate Early and Often</strong></h4>
+<p>If cardinality already exists, <strong>reduce it through aggregation and rollup.</strong></p>
+<ol>
+<li>
+<p><strong>Aggregation by dimension</strong></p>
+<ul>
+<li>Aggregate fine-grained metrics into coarser views.</li>
+<li>e.g., from <code class="language-text">per-instance</code> → <code class="language-text">per-service</code> or <code class="language-text">per-region</code>.</li>
+</ul>
+<div class="gatsby-highlight" data-language="promql"><pre class="language-promql"><code class="language-promql"><span class="token keyword">sum</span><span class="token punctuation">(</span><span class="token function">rate</span><span class="token punctuation">(</span>http_requests_total<span class="token context-range"><span class="token punctuation">[</span><span class="token range-duration number">5m</span><span class="token punctuation">]</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">by</span> <span class="token vector-match"><span class="token punctuation">(</span><span class="token label-key attr-name">service</span><span class="token punctuation">,</span> <span class="token label-key attr-name">region</span><span class="token punctuation">)</span></span></code></pre></div>
+</li>
+<li>
+<p><strong>Downsampling</strong></p>
+<ul>
+<li>Store high-resolution data (e.g., 10s) short-term (7 days).</li>
+<li>Retain low-resolution aggregates (e.g., 5m or hourly) for long-term analysis.</li>
+</ul>
+</li>
+<li>
+<p><strong>Rollup Jobs</strong></p>
+<ul>
+<li>Periodic ETL tasks that compute aggregates and delete raw data.</li>
+<li>Common in <strong>Thanos</strong>, <strong>Cortex</strong>, and <strong>VictoriaMetrics</strong> clusters.</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><strong>“Aggregation is the art of deciding which precision is worth paying for.”</strong></p>
+</blockquote>
+<ol start="4">
+<li>
+<p><strong>Retention Tiers</strong></p>
+<ul>
+<li>
+<p>Keep detailed metrics short-term, summarized metrics long-term.</p>
+</li>
+<li>
+<p>Example:</p>
+<ul>
+<li>7 days → per-instance metrics</li>
+<li>30 days → per-service aggregates</li>
+<li>90 days → per-region summaries</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="c-control--manage-what-you-cant-reduce" style="position:relative;"><a href="#c-control--manage-what-you-cant-reduce" aria-label="c control  manage what you cant reduce permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>(c) Control — Manage What You Can’t Reduce</strong></h4>
+<p>Even after reduction, some cardinality is unavoidable.
+Riedesel explains how to <strong>control</strong> it through configuration and policy.</p>
+<ol>
+<li>
+<p><strong>Enforce Limits in Telemetry Tools</strong></p>
+<ul>
+<li>Prometheus: <code class="language-text">--storage.tsdb.retention.size</code>, <code class="language-text">--storage.tsdb.max-block-chunk-segments</code></li>
+<li>Datadog: Cardinality quotas per host/service.</li>
+<li>New Relic: Series and label count caps.</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><strong>“If you don’t set limits, your vendors will — and you’ll discover them the hard way.”</strong></p>
+</blockquote>
+<ol start="2">
+<li>
+<p><strong>Sampling and Tracing Filters</strong></p>
+<ul>
+<li>Use <strong>tail-based sampling</strong> in OpenTelemetry for traces — keep only slow or error traces.</li>
+<li>Discard repetitive low-value events.</li>
+</ul>
+</li>
+<li>
+<p><strong>Dynamic Label Whitelists</strong></p>
+<ul>
+<li>Allow only approved labels at ingestion (e.g., drop unknown tags).</li>
+<li>Fluentd / Vector filters can enforce these policies.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cost Monitoring</strong></p>
+<ul>
+<li>Treat cardinality as a <strong>cost driver</strong> in your observability budget.</li>
+<li>Regularly review ingestion volume, retention size, and query duration.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="-4-organizational-practices-for-cardinality-control" style="position:relative;"><a href="#-4-organizational-practices-for-cardinality-control" aria-label=" 4 organizational practices for cardinality control permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🧩 <strong>4. Organizational Practices for Cardinality Control</strong></h3>
+<p>Riedesel argues that <strong>technical fixes won’t last</strong> without cultural change.</p>
+<blockquote>
+<p><strong>“Every engineer adds a label with good intentions — and ten others pay the bill.”</strong></p>
+</blockquote>
+<p>She proposes embedding cardinality management into daily engineering practice:</p>
+<h4 id="a-education-and-review" style="position:relative;"><a href="#a-education-and-review" aria-label="a education and review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>(a) Education and Review</strong></h4>
+<ul>
+<li>Train developers on <strong>metric design patterns</strong>.</li>
+<li>Include cardinality impact assessment in <strong>code reviews</strong>.</li>
+</ul>
+<blockquote>
+<p><strong>“Code review isn’t complete until you’ve reviewed what it emits.”</strong></p>
+</blockquote>
+<h4 id="b-budgeting-and-accountability" style="position:relative;"><a href="#b-budgeting-and-accountability" aria-label="b budgeting and accountability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>(b) Budgeting and Accountability</strong></h4>
+<ul>
+<li>Assign <strong>“cardinality budgets”</strong> to teams — define max allowed series count per service.</li>
+<li>Monitor cardinality growth with CI checks.</li>
+<li>Enforce quotas automatically.</li>
+</ul>
+<blockquote>
+<p><strong>“Budgets turn observability from chaos into discipline.”</strong></p>
+</blockquote>
+<h4 id="c-governance-and-schema-ownership" style="position:relative;"><a href="#c-governance-and-schema-ownership" aria-label="c governance and schema ownership permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>(c) Governance and Schema Ownership</strong></h4>
+<ul>
+<li>
+<p>A <strong>Telemetry Council</strong> should define acceptable label patterns.</p>
+</li>
+<li>
+<p>Maintain a <strong>metric registry</strong> documenting:</p>
+<ul>
+<li>Metric name</li>
+<li>Purpose</li>
+<li>Owner</li>
+<li>Expected labels</li>
+<li>Cardinality estimate</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>“If you can’t name the owner of a metric, it doesn’t belong in production.”</strong></p>
+</blockquote>
+<hr>
+<h3 id="-5-real-world-examples-and-failure-stories" style="position:relative;"><a href="#-5-real-world-examples-and-failure-stories" aria-label=" 5 real world examples and failure stories permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🧠 <strong>5. Real-World Examples and Failure Stories</strong></h3>
+<p>Riedesel illustrates the cost of ignoring cardinality with several anonymized incidents.</p>
+<h4 id="example-1--the-exploding-dashboard" style="position:relative;"><a href="#example-1--the-exploding-dashboard" aria-label="example 1  the exploding dashboard permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Example 1 — The Exploding Dashboard</strong></h4>
+<p>A SaaS company added <code class="language-text">customer_id</code> as a Prometheus label to track per-client latency.
+Within 24 hours, the system had <strong>500,000 active time series</strong>, memory usage spiked, and Prometheus crashed.</p>
+<p><strong>Fix:</strong> Move <code class="language-text">customer_id</code> into log events and aggregate latency at query time by region, not by individual ID.</p>
+<blockquote>
+<p><strong>“When your observability stack goes down before your production system, you’ve inverted your priorities.”</strong></p>
+</blockquote>
+<hr>
+<h4 id="example-2--tag-storm-in-cloud-monitoring" style="position:relative;"><a href="#example-2--tag-storm-in-cloud-monitoring" aria-label="example 2  tag storm in cloud monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Example 2 — Tag Storm in Cloud Monitoring</strong></h4>
+<p>A cloud team configured every container label (<code class="language-text">pod_name</code>, <code class="language-text">namespace</code>, <code class="language-text">image_hash</code>, <code class="language-text">deployment_uid</code>) to propagate to Datadog metrics.
+Each new deployment generated thousands of new tag combinations — billing tripled in one month.</p>
+<p><strong>Fix:</strong> Introduced a tag whitelist and enforced cardinality budgets per namespace.</p>
+<blockquote>
+<p><strong>“Unbounded tags are observability’s version of unbounded spending.”</strong></p>
+</blockquote>
+<hr>
+<h4 id="example-3--success-through-early-design" style="position:relative;"><a href="#example-3--success-through-early-design" aria-label="example 3  success through early design permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Example 3 — Success Through Early Design</strong></h4>
+<p>A fintech startup adopted <strong>metric design reviews</strong> — no new metric could be added to production without schema and cardinality approval.
+Result: consistent query performance, predictable costs, and dashboards that loaded in milliseconds.</p>
+<blockquote>
+<p><strong>“Telemetry discipline is cheaper than telemetry debt.”</strong></p>
+</blockquote>
+<hr>
+<h3 id="️-6-balancing-precision-and-practicality" style="position:relative;"><a href="#%EF%B8%8F-6-balancing-precision-and-practicality" aria-label="️ 6 balancing precision and practicality permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>⚖️ <strong>6. Balancing Precision and Practicality</strong></h3>
+<p>Riedesel concludes that managing cardinality is not about <strong>reducing visibility</strong>, but about <strong>prioritizing it</strong>.</p>
+<blockquote>
+<p><strong>“The goal isn’t less telemetry — it’s smarter telemetry.”</strong></p>
+</blockquote>
+<p>Guiding principle:</p>
+<ul>
+<li><strong>Keep logs detailed, metrics concise, and traces selective.</strong></li>
+<li>Design for <strong>clarity per byte</strong>, not “collect everything.”</li>
+</ul>
+<blockquote>
+<p><strong>“If every signal is high fidelity, your observability will drown in its own accuracy.”</strong></p>
+</blockquote>
+<hr>
+<h3 id="-7-chapter-summary--containing-the-infinite" style="position:relative;"><a href="#-7-chapter-summary--containing-the-infinite" aria-label=" 7 chapter summary  containing the infinite permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🧩 <strong>7. Chapter Summary — Containing the Infinite</strong></h3>
+<p>Riedesel closes with one of her most quoted insights:</p>
+<blockquote>
+<p><strong>“Cardinality is entropy. You can’t eliminate it, but you can slow its decay.”</strong></p>
+</blockquote>
+<p>By mastering cardinality control, organizations make telemetry <strong>sustainable, predictable, and actionable</strong> — transforming it from a resource sink into a strategic asset.</p>
+<hr>
+<p>✅ <strong>Summary Checklist: Managing Cardinality in Telemetry</strong></p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Strategy</th>
+<th>Technique</th>
+<th>Key Insight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Prevent</strong></td>
+<td>Design low-cardinality metrics</td>
+<td>Avoid user/session IDs; limit label sets</td>
+<td><em>“Prevention begins at instrumentation.”</em></td>
+</tr>
+<tr>
+<td><strong>Reduce</strong></td>
+<td>Aggregate early and downsample</td>
+<td>Summarize by service, region, or tier</td>
+<td><em>“Aggregation decides what precision you can afford.”</em></td>
+</tr>
+<tr>
+<td><strong>Control</strong></td>
+<td>Enforce quotas and sampling</td>
+<td>Whitelist labels, monitor budgets</td>
+<td><em>“If you don’t limit it, it will limit you.”</em></td>
+</tr>
+<tr>
+<td><strong>Govern</strong></td>
+<td>Embed discipline in reviews</td>
+<td>Metric registries, schema ownership</td>
+<td><em>“Telemetry debt is real debt.”</em></td>
+</tr>
+<tr>
+<td><strong>Observe</strong></td>
+<td>Audit and monitor telemetry health</td>
+<td>Count unique series regularly</td>
+<td><em>“Your telemetry system must observe itself.”</em></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="-final-takeaway" style="position:relative;"><a href="#-final-takeaway" aria-label=" final takeaway permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>💡 <strong>Final Takeaway</strong></h3>
+<blockquote>
+<p><strong>“Cardinality doesn’t just kill observability — it kills curiosity. When dashboards slow down, teams stop asking questions.”</strong></p>
+</blockquote>
+<p>Riedesel’s message is clear: managing cardinality is not optional — it’s what separates <strong>sustainable observability</strong> from <strong>expensive chaos</strong>.</p>
+<hr>
+<ul>
+<li>expand in much more details with bold high-light quotes/phrases the above sections “### <strong>Chapter 16 — Redacting and Reprocessing Telemetry</strong></li>
+</ul>
+<ul>
+<li>Handling <strong>toxic data</strong> (PII, GDPR).</li>
+<li>Real-time and batch redaction pipelines.</li>
+<li>Re-ingestion for platform migrations.”</li>
+</ul>
 <h1 id="quotes" style="position:relative;"><a href="#quotes" aria-label="quotes permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Quotes</h1>
 <h1 id="references" style="position:relative;"><a href="#references" aria-label="references permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>References</h1></section><hr/><footer><div class="bio"><div data-gatsby-image-wrapper="" style="width:50px;height:50px" class="gatsby-image-wrapper bio-avatar"><div aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear;background-color:#685848;width:50px;height:50px;position:relative"></div><picture><source type="image/avif" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/d4bf4/tony-avatar.avif 50w,/static/b811602c8c8ce14b66aae6613c8968f4/ee81f/tony-avatar.avif 100w" sizes="50px"/><source type="image/webp" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/3faea/tony-avatar.webp 50w,/static/b811602c8c8ce14b66aae6613c8968f4/6a679/tony-avatar.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="opacity:0" sizes="50px" decoding="async" loading="lazy" data-src="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg 50w,/static/b811602c8c8ce14b66aae6613c8968f4/64618/tony-avatar.jpg 100w" alt="Profile picture"/></picture><noscript><picture><source type="image/avif" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/d4bf4/tony-avatar.avif 50w,/static/b811602c8c8ce14b66aae6613c8968f4/ee81f/tony-avatar.avif 100w" sizes="50px"/><source type="image/webp" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/3faea/tony-avatar.webp 50w,/static/b811602c8c8ce14b66aae6613c8968f4/6a679/tony-avatar.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="opacity:0" sizes="50px" decoding="async" loading="lazy" src="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg 50w,/static/b811602c8c8ce14b66aae6613c8968f4/64618/tony-avatar.jpg 100w" alt="Profile picture"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><p>Written by <strong>Tony Vo</strong> <!-- -->father, husband, son and software developer<!-- --> <a href="https://twitter.com/ttrungvo">Twitter</a></p></div></footer></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/alberta-communities-research/">← <!-- -->alberta communities research</a></li><li></li></ul></nav><div><div id="disqus_thread"></div></div></main><footer>© <!-- -->2025<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.com">Gatsby</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/software-telemetry/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
