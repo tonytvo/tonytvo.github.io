@@ -802,6 +802,156 @@
 </ul>
 </li>
 <li>
+<p><a href="#1-overview-of-machine-learning-systems"><strong>1. Overview of Machine Learning Systems</strong></a></p>
+<ul>
+<li>
+<p><a href="#a-when-to-use-machine-learning"><strong>A) When to Use Machine Learning</strong></a></p>
+<ul>
+<li>
+<p><a href="#1-what-ml-is-really-for"><strong>1) What ML is <em>really</em> for</strong></a></p>
+</li>
+<li>
+<p><a href="#2-the-decision-framework-ml-vs-non-ml"><strong>2) The decision framework: ML vs non-ML</strong></a></p>
+<ul>
+<li><a href="#a-is-the-problem-fundamentally-predictionestimation"><strong>(a) Is the problem fundamentally prediction/estimation?</strong></a></li>
+<li><a href="#b-can-you-define-success-numerically"><strong>(b) Can you define success numerically?</strong></a></li>
+<li><a href="#c-do-you-have-or-can-you-get-enough-data"><strong>(c) Do you have (or can you get) enough data?</strong></a></li>
+<li><a href="#d-does-the-world-change-drift"><strong>(d) Does the world change? (drift)</strong></a></li>
+<li><a href="#e-is-the-cost-of-being-wrong-acceptable"><strong>(e) Is the cost of being wrong acceptable?</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#3-high-signal-criteria-that-ml-is-a-good-fit"><strong>3) High-signal criteria that ML is a good fit</strong></a></p>
+</li>
+<li>
+<p><a href="#4-strong-reasons-not-to-use-ml"><strong>4) Strong reasons NOT to use ML</strong></a></p>
+</li>
+<li>
+<p><a href="#5-practical-examples-ml-vs-rules"><strong>5) Practical examples: ML vs rules</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#b-machine-learning-use-cases-by-sector--pattern"><strong>B) Machine Learning Use Cases (by sector + pattern)</strong></a></p>
+<ul>
+<li><a href="#1-classification"><strong>1) Classification</strong></a></li>
+<li><a href="#2-regression--forecasting"><strong>2) Regression / forecasting</strong></a></li>
+<li><a href="#3-ranking--recommendation"><strong>3) Ranking / recommendation</strong></a></li>
+<li><a href="#4-clustering--segmentation"><strong>4) Clustering / segmentation</strong></a></li>
+<li><a href="#5-anomaly-detection"><strong>5) Anomaly detection</strong></a></li>
+<li><a href="#6-nlp--language"><strong>6) NLP / language</strong></a></li>
+<li><a href="#7-computer-vision"><strong>7) Computer vision</strong></a></li>
+<li><a href="#8-reinforcement-learning-less-common-in-business"><strong>8) Reinforcement learning (less common in business)</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#c-understanding-machine-learning-systems"><strong>C) Understanding Machine Learning Systems</strong></a></p>
+<ul>
+<li>
+<p><a href="#1-research-ml-vs-production-ml"><strong>1) Research ML vs Production ML</strong></a></p>
+<ul>
+<li><a href="#concrete-example-fraud-model">Concrete example: fraud model</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#2-ml-systems-vs-traditional-software"><strong>2) ML systems vs traditional software</strong></a></p>
+<ul>
+<li>
+<p><a href="#a-data-is-part-of-the-code"><strong>(a) Data is part of the code</strong></a></p>
+<ul>
+<li><a href="#b-testing-is-statistical-not-purely-logical"><strong>(b) Testing is statistical, not purely logical</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#c-feedback-loops-exist"><strong>(c) Feedback loops exist</strong></a></p>
+</li>
+<li>
+<p><a href="#d-non-stationarity--drift"><strong>(d) Non-stationarity / drift</strong></a></p>
+</li>
+<li>
+<p><a href="#e-explainability-and-governance"><strong>(e) Explainability and governance</strong></a></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#d-business-and-ml-objectives"><strong>D) Business and ML Objectives</strong></a></p>
+<ul>
+<li><a href="#1-why-alignment-is-the-1-ml-failure-mode"><strong>1) Why alignment is the #1 ML failure mode</strong></a></li>
+<li><a href="#2-translating-business-goals--ml-goals"><strong>2) Translating business goals → ML goals</strong></a></li>
+<li><a href="#3-anti-patterns-in-ml-objectives"><strong>3) Anti-patterns in ML objectives</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#e-requirements-for-ml-systems"><strong>E) Requirements for ML Systems</strong></a></p>
+<ul>
+<li>
+<p><a href="#1-reliability--ensuring-robustness"><strong>1) Reliability – Ensuring robustness</strong></a></p>
+<ul>
+<li><a href="#what-reliability-means-in-ml">What reliability means in ML:</a></li>
+<li><a href="#reliability-risks-unique-to-ml">Reliability risks unique to ML:</a></li>
+<li><a href="#design-techniques-for-reliability">Design techniques for reliability:</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#2-scalability--handling-growing-workloads"><strong>2) Scalability – Handling growing workloads</strong></a></p>
+<ul>
+<li><a href="#scalability-dimensions">Scalability dimensions:</a></li>
+<li><a href="#design-trade-offs">Design trade-offs:</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#3-maintainability--facilitating-updates-and-debugging"><strong>3) Maintainability – Facilitating updates and debugging</strong></a></p>
+<ul>
+<li><a href="#maintainability-requires">Maintainability requires:</a></li>
+<li><a href="#practical-toolspractices">Practical tools/practices:</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#4-adaptability--keeping-up-with-changing-data"><strong>4) Adaptability – Keeping up with changing data</strong></a></p>
+<ul>
+<li><a href="#types-of-drift">Types of drift:</a></li>
+<li><a href="#design-strategies">Design strategies:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#f-iterative-process-in-ml-systems"><strong>F) Iterative Process in ML Systems</strong></a></p>
+<ul>
+<li><a href="#1-why-iteration-is-essential"><strong>1) Why iteration is essential</strong></a></li>
+<li><a href="#2-typical-ml-iteration-loop"><strong>2) Typical ML iteration loop</strong></a></li>
+<li><a href="#3-mvp-thinking-for-ml"><strong>3) MVP thinking for ML</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#g-framing-ml-problems"><strong>G) Framing ML Problems</strong></a></p>
+<ul>
+<li>
+<p><a href="#1-different-ml-task-framings"><strong>1) Different ML task framings</strong></a></p>
+</li>
+<li>
+<p><a href="#2-choosing-objective-functions"><strong>2) Choosing objective functions</strong></a></p>
+<ul>
+<li><a href="#common-pitfalls">Common pitfalls:</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#3-human-intuition-vs-data-driven-decisions"><strong>3) Human intuition vs data-driven decisions</strong></a></p>
+<ul>
+<li><a href="#where-humans-outperform-ml">Where humans outperform ML:</a></li>
+<li><a href="#where-ml-outperforms-humans">Where ML outperforms humans:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#key-mental-models-to-carry-forward"><strong>Key mental models to carry forward</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
 <p><a href="#quotes">Quotes</a></p>
 </li>
 <li>
@@ -3437,6 +3587,646 @@ In a chatbot product, the PM defines tone and guardrails, AI engineers optimize 
 <blockquote>
 <p><strong>“AI is not just a technology shift—it’s a cultural transformation. Lead it, or be disrupted by it.”</strong></p>
 </blockquote>
+<hr>
+<h1 id="1-overview-of-machine-learning-systems" style="position:relative;"><a href="#1-overview-of-machine-learning-systems" aria-label="1 overview of machine learning systems permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. Overview of Machine Learning Systems</strong></h1>
+<h2 id="a-when-to-use-machine-learning" style="position:relative;"><a href="#a-when-to-use-machine-learning" aria-label="a when to use machine learning permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>A) When to Use Machine Learning</strong></h2>
+<h3 id="1-what-ml-is-really-for" style="position:relative;"><a href="#1-what-ml-is-really-for" aria-label="1 what ml is really for permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1) What ML is <em>really</em> for</strong></h3>
+<ul>
+<li><strong>“Use ML when rules are too complex to write down.”</strong>
+If you can solve it with a clean set of deterministic rules (“if X then Y”), you should strongly prefer traditional software.</li>
+<li><strong>“Use ML when patterns exist but are messy, probabilistic, and context-dependent.”</strong>
+ML shines when the signal is real but noisy: language, images, behavior, fraud, demand, risk, recommendations.</li>
+</ul>
+<p>Think of ML as:</p>
+<ul>
+<li><strong>A function learned from data</strong>, not a function authored by humans.</li>
+<li><strong>A probability engine</strong>, not a certainty engine.</li>
+</ul>
+<h3 id="2-the-decision-framework-ml-vs-non-ml" style="position:relative;"><a href="#2-the-decision-framework-ml-vs-non-ml" aria-label="2 the decision framework ml vs non ml permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2) The decision framework: ML vs non-ML</strong></h3>
+<p>A useful mental model is to ask:</p>
+<h4 id="a-is-the-problem-fundamentally-predictionestimation" style="position:relative;"><a href="#a-is-the-problem-fundamentally-predictionestimation" aria-label="a is the problem fundamentally predictionestimation permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>(a) Is the problem fundamentally prediction/estimation?</strong></h4>
+<ul>
+<li><strong>“ML is best at predicting unknowns from knowns.”</strong>
+Examples:</li>
+<li>Predict if a customer will churn next month.</li>
+<li>Estimate delivery time given route, weather, traffic.</li>
+<li>Predict probability of default from financial history.</li>
+<li>Classify an email as spam vs not spam.</li>
+</ul>
+<p>If your outcome is <em>not</em> prediction-like (e.g., “ensure legal compliance,” “process a payment”), ML often creates risk.</p>
+<h4 id="b-can-you-define-success-numerically" style="position:relative;"><a href="#b-can-you-define-success-numerically" aria-label="b can you define success numerically permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>(b) Can you define success numerically?</strong></h4>
+<ul>
+<li><strong>“If you can’t measure it, you can’t train it.”</strong>
+For supervised ML, you need labels (ground truth). For recommendation/ranking, you need proxy outcomes (clicks, retention, purchases) and strong experiment design.</li>
+</ul>
+<p>If success is purely subjective and cannot be operationalized, you either:</p>
+<ul>
+<li>need better measurement,</li>
+<li>or you should not do ML.</li>
+</ul>
+<h4 id="c-do-you-have-or-can-you-get-enough-data" style="position:relative;"><a href="#c-do-you-have-or-can-you-get-enough-data" aria-label="c do you have or can you get enough data permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>(c) Do you have (or can you get) enough data?</strong></h4>
+<ul>
+<li><strong>“No data, no learning.”</strong>
+And more specifically:</li>
+<li><strong>Quantity</strong> (enough examples)</li>
+<li><strong>Quality</strong> (labels aren’t garbage)</li>
+<li><strong>Representativeness</strong> (data matches your real-world environment)</li>
+</ul>
+<p>Common trap:</p>
+<ul>
+<li>Building a model on “nice clean historical data” that does not reflect what happens in production.</li>
+</ul>
+<h4 id="d-does-the-world-change-drift" style="position:relative;"><a href="#d-does-the-world-change-drift" aria-label="d does the world change drift permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>(d) Does the world change? (drift)</strong></h4>
+<ul>
+<li><strong>“ML breaks when reality changes.”</strong>
+If customer behavior, markets, fraud tactics, or language patterns shift, models degrade.
+If drift is high, you must budget for:</li>
+<li>monitoring,</li>
+<li>retraining,</li>
+<li>evaluation,</li>
+<li>rollback.</li>
+</ul>
+<h4 id="e-is-the-cost-of-being-wrong-acceptable" style="position:relative;"><a href="#e-is-the-cost-of-being-wrong-acceptable" aria-label="e is the cost of being wrong acceptable permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>(e) Is the cost of being wrong acceptable?</strong></h4>
+<ul>
+<li><strong>“ML makes mistakes by design.”</strong>
+If false positives/negatives can cause:</li>
+<li>regulatory issues,</li>
+<li>safety hazards,</li>
+<li>major money loss,</li>
+<li>reputational harm,
+then you need:</li>
+<li>conservative thresholds,</li>
+<li>human-in-the-loop,</li>
+<li>fallback logic,</li>
+<li>extensive governance.</li>
+</ul>
+<h3 id="3-high-signal-criteria-that-ml-is-a-good-fit" style="position:relative;"><a href="#3-high-signal-criteria-that-ml-is-a-good-fit" aria-label="3 high signal criteria that ml is a good fit permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3) High-signal criteria that ML is a good fit</strong></h3>
+<p>You’re likely in ML territory when:</p>
+<ul>
+<li><strong>“The decision depends on many interacting variables.”</strong>
+(Fraud, risk scoring, ad targeting)</li>
+<li><strong>“There’s a large volume of repetitive decisions.”</strong>
+(Moderation triage, routing, ranking)</li>
+<li><strong>“The cost of manual decisions is too high.”</strong>
+(Call center triage, document extraction)</li>
+<li><strong>“Personalization increases value materially.”</strong>
+(Recommendations, dynamic pricing)</li>
+<li><strong>“The business can tolerate probabilistic outputs.”</strong>
+(Search, ranking, suggestions)</li>
+</ul>
+<h3 id="4-strong-reasons-not-to-use-ml" style="position:relative;"><a href="#4-strong-reasons-not-to-use-ml" aria-label="4 strong reasons not to use ml permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>4) Strong reasons NOT to use ML</strong></h3>
+<p>Avoid ML when:</p>
+<ul>
+<li><strong>“A rules-based system achieves 95%+ of the value.”</strong></li>
+<li><strong>“You don’t control the feedback loop.”</strong>
+(Your model changes user behavior, which changes the data, which corrupts training)</li>
+<li><strong>“The system must be explainable for compliance.”</strong>
+(You can still use ML, but you’ll need interpretable models, strict governance)</li>
+<li><strong>“Your organization can’t operate ML.”</strong>
+If you can’t monitor, retrain, and manage data pipelines, ML becomes a production liability.</li>
+</ul>
+<h3 id="5-practical-examples-ml-vs-rules" style="position:relative;"><a href="#5-practical-examples-ml-vs-rules" aria-label="5 practical examples ml vs rules permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>5) Practical examples: ML vs rules</strong></h3>
+<p><strong>Example 1: Email filtering</strong></p>
+<ul>
+<li>Rules: block exact phrases, blacklist senders.</li>
+<li>ML: detects evolving spam patterns, obfuscated text, new senders.</li>
+<li>Best solution: <strong>hybrid</strong> → rules + ML.</li>
+</ul>
+<p><strong>Example 2: Loan approvals</strong></p>
+<ul>
+<li>Rules: minimum income, credit score thresholds.</li>
+<li>ML: probability of default based on multi-variable history.</li>
+<li>Best solution: <strong>ML for scoring + rules for policy constraints</strong> (compliance guardrails).</li>
+</ul>
+<p><strong>Example 3: Customer support routing</strong></p>
+<ul>
+<li>Rules: “If user selected billing, go to Billing team.”</li>
+<li>ML: route based on message content and predicted resolution time.</li>
+<li>Best: rules for explicit routing + ML for ambiguous cases.</li>
+</ul>
+<hr>
+<h2 id="b-machine-learning-use-cases-by-sector--pattern" style="position:relative;"><a href="#b-machine-learning-use-cases-by-sector--pattern" aria-label="b machine learning use cases by sector  pattern permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>B) Machine Learning Use Cases (by sector + pattern)</strong></h2>
+<p>Instead of listing random use cases, it helps to categorize them by “ML pattern”:</p>
+<h3 id="1-classification" style="position:relative;"><a href="#1-classification" aria-label="1 classification permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1) Classification</strong></h3>
+<ul>
+<li><strong>“Which bucket does this belong to?”</strong>
+Examples:</li>
+<li>Fraud/not fraud</li>
+<li>Spam/not spam</li>
+<li>Defective/not defective</li>
+<li>Toxic/not toxic</li>
+<li>Cancer/no cancer (medical imaging)</li>
+</ul>
+<h3 id="2-regression--forecasting" style="position:relative;"><a href="#2-regression--forecasting" aria-label="2 regression  forecasting permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2) Regression / forecasting</strong></h3>
+<ul>
+<li><strong>“What number should we estimate?”</strong>
+Examples:</li>
+<li>Demand forecasting</li>
+<li>Price prediction</li>
+<li>ETA prediction</li>
+<li>Risk score prediction</li>
+<li>LTV prediction</li>
+</ul>
+<h3 id="3-ranking--recommendation" style="position:relative;"><a href="#3-ranking--recommendation" aria-label="3 ranking  recommendation permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3) Ranking / recommendation</strong></h3>
+<ul>
+<li><strong>“In what order should we show items?”</strong>
+Examples:</li>
+<li>Feed ranking (social)</li>
+<li>Search results ordering</li>
+<li>Product recommendations</li>
+<li>Content recommendations</li>
+<li>Job matching</li>
+</ul>
+<h3 id="4-clustering--segmentation" style="position:relative;"><a href="#4-clustering--segmentation" aria-label="4 clustering  segmentation permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>4) Clustering / segmentation</strong></h3>
+<ul>
+<li><strong>“Which items are similar?”</strong>
+Examples:</li>
+<li>Customer segments</li>
+<li>Product similarity</li>
+<li>Anomaly grouping</li>
+<li>Fraud ring detection</li>
+</ul>
+<h3 id="5-anomaly-detection" style="position:relative;"><a href="#5-anomaly-detection" aria-label="5 anomaly detection permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>5) Anomaly detection</strong></h3>
+<ul>
+<li><strong>“Is this weird relative to normal?”</strong>
+Examples:</li>
+<li>Payment anomalies</li>
+<li>Network intrusion</li>
+<li>Sensor outliers</li>
+<li>Accounting anomalies</li>
+</ul>
+<h3 id="6-nlp--language" style="position:relative;"><a href="#6-nlp--language" aria-label="6 nlp  language permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>6) NLP / language</strong></h3>
+<ul>
+<li><strong>“Understand or generate text.”</strong>
+Examples:</li>
+<li>Sentiment analysis</li>
+<li>Ticket categorization</li>
+<li>Summarization</li>
+<li>Extraction from documents (invoices/contracts)</li>
+<li>Chatbots (with strict guardrails)</li>
+</ul>
+<h3 id="7-computer-vision" style="position:relative;"><a href="#7-computer-vision" aria-label="7 computer vision permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>7) Computer vision</strong></h3>
+<ul>
+<li><strong>“Understand images/video.”</strong>
+Examples:</li>
+<li>Manufacturing QA</li>
+<li>Medical imaging</li>
+<li>Retail shelf scanning</li>
+<li>License plate reading</li>
+</ul>
+<h3 id="8-reinforcement-learning-less-common-in-business" style="position:relative;"><a href="#8-reinforcement-learning-less-common-in-business" aria-label="8 reinforcement learning less common in business permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>8) Reinforcement learning (less common in business)</strong></h3>
+<ul>
+<li><strong>“Learn actions through trial and reward.”</strong>
+Examples:</li>
+<li>robotics</li>
+<li>dynamic bidding</li>
+<li>game-like environments
+Often expensive and tricky; most companies don’t need RL.</li>
+</ul>
+<hr>
+<h2 id="c-understanding-machine-learning-systems" style="position:relative;"><a href="#c-understanding-machine-learning-systems" aria-label="c understanding machine learning systems permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>C) Understanding Machine Learning Systems</strong></h2>
+<p>This is where “ML engineering” begins.</p>
+<h3 id="1-research-ml-vs-production-ml" style="position:relative;"><a href="#1-research-ml-vs-production-ml" aria-label="1 research ml vs production ml permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1) Research ML vs Production ML</strong></h3>
+<p><strong>Research</strong> focuses on:</p>
+<ul>
+<li><strong>“Can we make the model better on a benchmark?”</strong></li>
+<li>optimizing accuracy, loss, ROC-AUC, etc.</li>
+<li>controlled datasets, reproducible experiments</li>
+</ul>
+<p><strong>Production</strong> focuses on:</p>
+<ul>
+<li><strong>“Can we reliably deliver value under real-world constraints?”</strong>
+Constraints include:</li>
+<li>latency</li>
+<li>cost</li>
+<li>data freshness</li>
+<li>privacy/security</li>
+<li>monitoring</li>
+<li>drift</li>
+<li>rollback</li>
+<li>integration with product workflows</li>
+</ul>
+<p>A brutal truth:</p>
+<ul>
+<li><strong>“A model with slightly lower accuracy that is stable, cheap, and monitored often beats a ‘SOTA’ model that breaks in prod.”</strong></li>
+</ul>
+<h4 id="concrete-example-fraud-model" style="position:relative;"><a href="#concrete-example-fraud-model" aria-label="concrete example fraud model permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Concrete example: fraud model</h4>
+<ul>
+<li>Research: train on last year’s fraud labels.</li>
+<li>Production: labels arrive 30–60 days later (chargebacks), fraud tactics shift weekly.
+So production needs:</li>
+<li>delayed label handling,</li>
+<li>online features,</li>
+<li>drift monitoring,</li>
+<li>periodic retraining.</li>
+</ul>
+<h3 id="2-ml-systems-vs-traditional-software" style="position:relative;"><a href="#2-ml-systems-vs-traditional-software" aria-label="2 ml systems vs traditional software permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2) ML systems vs traditional software</strong></h3>
+<p>Traditional software:</p>
+<ul>
+<li>deterministic logic</li>
+<li>stable outputs</li>
+<li>unit tests verify behavior</li>
+<li>bugs are “wrong code”</li>
+</ul>
+<p>ML systems:</p>
+<ul>
+<li>probabilistic outputs</li>
+<li>performance depends on data</li>
+<li>behavior changes with retraining</li>
+<li>“bugs” can be data issues</li>
+</ul>
+<p>Key differences:</p>
+<h4 id="a-data-is-part-of-the-code" style="position:relative;"><a href="#a-data-is-part-of-the-code" aria-label="a data is part of the code permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>(a) Data is part of the code</strong></h4>
+<ul>
+<li><strong>“In ML, data is a first-class dependency.”</strong>
+If your input distribution shifts, your output shifts.</li>
+</ul>
+<h5 id="b-testing-is-statistical-not-purely-logical" style="position:relative;"><a href="#b-testing-is-statistical-not-purely-logical" aria-label="b testing is statistical not purely logical permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>(b) Testing is statistical, not purely logical</strong></h5>
+<p>Instead of “unit tests” only, you need:</p>
+<ul>
+<li>data validation tests (schema, null rates)</li>
+<li>model performance tests (accuracy, precision/recall)</li>
+<li>slice tests (performance by segment)</li>
+<li>fairness tests (if relevant)</li>
+<li>latency + cost tests</li>
+</ul>
+<h4 id="c-feedback-loops-exist" style="position:relative;"><a href="#c-feedback-loops-exist" aria-label="c feedback loops exist permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>(c) Feedback loops exist</strong></h4>
+<ul>
+<li><strong>“Your model changes user behavior, which changes future training data.”</strong>
+Example: recommender system</li>
+<li>You recommend products → users click those products → training data becomes biased toward what you showed.</li>
+</ul>
+<h4 id="d-non-stationarity--drift" style="position:relative;"><a href="#d-non-stationarity--drift" aria-label="d non stationarity  drift permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>(d) Non-stationarity / drift</strong></h4>
+<ul>
+<li>fraud evolves</li>
+<li>language evolves</li>
+<li>market regimes shift
+So you need monitoring and retraining pipelines.</li>
+</ul>
+<h4 id="e-explainability-and-governance" style="position:relative;"><a href="#e-explainability-and-governance" aria-label="e explainability and governance permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>(e) Explainability and governance</strong></h4>
+<p>In many domains, you must answer:</p>
+<ul>
+<li>“Why did the system do that?”
+ML can be made explainable, but it’s extra work:</li>
+<li>interpretable models</li>
+<li>SHAP-like explanations</li>
+<li>decision logs</li>
+<li>audit trails</li>
+</ul>
+<hr>
+<h2 id="d-business-and-ml-objectives" style="position:relative;"><a href="#d-business-and-ml-objectives" aria-label="d business and ml objectives permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>D) Business and ML Objectives</strong></h2>
+<h3 id="1-why-alignment-is-the-1-ml-failure-mode" style="position:relative;"><a href="#1-why-alignment-is-the-1-ml-failure-mode" aria-label="1 why alignment is the 1 ml failure mode permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1) Why alignment is the #1 ML failure mode</strong></h3>
+<ul>
+<li><strong>“Most ML projects fail because they optimize the wrong thing.”</strong></li>
+<li>Teams often jump straight to <em>accuracy</em>, <em>AUC</em>, or <em>loss</em> without tying those metrics to <strong>business outcomes</strong>.</li>
+</ul>
+<p><strong>Bad framing example</strong></p>
+<blockquote>
+<p>“Let’s build a churn prediction model.”</p>
+</blockquote>
+<p><strong>Good framing</strong></p>
+<blockquote>
+<p><strong>“Reduce customer churn by 2% in the next quarter by proactively intervening with high-risk customers.”</strong></p>
+</blockquote>
+<p>ML does not create value by itself:</p>
+<ul>
+<li><strong>Models create predictions</strong></li>
+<li><strong>Products create actions</strong></li>
+<li><strong>Businesses create value</strong></li>
+</ul>
+<hr>
+<h3 id="2-translating-business-goals--ml-goals" style="position:relative;"><a href="#2-translating-business-goals--ml-goals" aria-label="2 translating business goals  ml goals permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2) Translating business goals → ML goals</strong></h3>
+<p>A useful translation chain:</p>
+<p><strong>Business Objective</strong>
+→ <strong>Decision to improve</strong>
+→ <strong>Prediction needed</strong>
+→ <strong>ML task</strong>
+→ <strong>Evaluation metric</strong></p>
+<p><strong>Example: E-commerce</strong></p>
+<ul>
+<li>Business goal: <strong>Increase conversion rate</strong></li>
+<li>Decision: Which products to show first</li>
+<li>Prediction: Probability user clicks/buys</li>
+<li>ML task: Ranking / recommendation</li>
+<li>Metric: CTR, conversion lift, revenue per session</li>
+</ul>
+<p><strong>Example: Real estate (investor lens)</strong></p>
+<ul>
+<li>Business goal: <strong>Reduce vacancy duration</strong></li>
+<li>Decision: How to price and market units</li>
+<li>Prediction: Demand at different price points</li>
+<li>ML task: Regression / forecasting</li>
+<li>Metric: Days-on-market reduction</li>
+</ul>
+<hr>
+<h3 id="3-anti-patterns-in-ml-objectives" style="position:relative;"><a href="#3-anti-patterns-in-ml-objectives" aria-label="3 anti patterns in ml objectives permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3) Anti-patterns in ML objectives</strong></h3>
+<p>Avoid these:</p>
+<ul>
+<li><strong>“Maximize accuracy”</strong> (without knowing what errors cost)</li>
+<li><strong>“Build a state-of-the-art model”</strong> (no user integration)</li>
+<li><strong>“Predict everything”</strong> (unclear decision use)</li>
+<li><strong>“Let’s just collect data first”</strong> (no hypothesis)</li>
+</ul>
+<p>Golden rule:</p>
+<blockquote>
+<p><strong>“If you cannot explain how a prediction changes a decision, you should not build the model.”</strong></p>
+</blockquote>
+<hr>
+<h2 id="e-requirements-for-ml-systems" style="position:relative;"><a href="#e-requirements-for-ml-systems" aria-label="e requirements for ml systems permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>E) Requirements for ML Systems</strong></h2>
+<p>Unlike traditional software, ML systems are <strong>living systems</strong> that degrade without care.</p>
+<hr>
+<h3 id="1-reliability--ensuring-robustness" style="position:relative;"><a href="#1-reliability--ensuring-robustness" aria-label="1 reliability  ensuring robustness permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1) Reliability – Ensuring robustness</strong></h3>
+<blockquote>
+<p><strong>“An unreliable ML system is worse than no ML system.”</strong></p>
+</blockquote>
+<h4 id="what-reliability-means-in-ml" style="position:relative;"><a href="#what-reliability-means-in-ml" aria-label="what reliability means in ml permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What reliability means in ML:</h4>
+<ul>
+<li>Model behaves <strong>consistently under expected conditions</strong></li>
+<li>System fails <strong>gracefully</strong> under unexpected ones</li>
+<li>Predictions are <strong>available, bounded, and safe</strong></li>
+</ul>
+<h4 id="reliability-risks-unique-to-ml" style="position:relative;"><a href="#reliability-risks-unique-to-ml" aria-label="reliability risks unique to ml permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reliability risks unique to ML:</h4>
+<ul>
+<li><strong>Bad inputs</strong> (missing, malformed, out-of-range data)</li>
+<li><strong>Data distribution shift</strong></li>
+<li><strong>Silent performance degradation</strong></li>
+<li><strong>Upstream pipeline failures</strong></li>
+</ul>
+<h4 id="design-techniques-for-reliability" style="position:relative;"><a href="#design-techniques-for-reliability" aria-label="design techniques for reliability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Design techniques for reliability:</h4>
+<ul>
+<li><strong>Input validation &#x26; schema checks</strong></li>
+<li><strong>Prediction bounding</strong> (e.g., never output negative prices)</li>
+<li><strong>Confidence thresholds</strong> (route low-confidence cases to humans)</li>
+<li><strong>Fallback logic</strong> (rules-based or cached defaults)</li>
+</ul>
+<p><strong>Example</strong></p>
+<blockquote>
+<p>Fraud model fails → system reverts to conservative rules → transactions continue safely.</p>
+</blockquote>
+<hr>
+<h3 id="2-scalability--handling-growing-workloads" style="position:relative;"><a href="#2-scalability--handling-growing-workloads" aria-label="2 scalability  handling growing workloads permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2) Scalability – Handling growing workloads</strong></h3>
+<blockquote>
+<p><strong>“ML systems fail when success arrives.”</strong></p>
+</blockquote>
+<p>Scalability is not just about traffic—it’s about:</p>
+<ul>
+<li><strong>Data volume growth</strong></li>
+<li><strong>Feature complexity</strong></li>
+<li><strong>Model size</strong></li>
+<li><strong>Retraining frequency</strong></li>
+</ul>
+<h4 id="scalability-dimensions" style="position:relative;"><a href="#scalability-dimensions" aria-label="scalability dimensions permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scalability dimensions:</h4>
+<ul>
+<li><strong>Inference scalability</strong> (serving predictions)</li>
+<li><strong>Training scalability</strong> (retraining on larger datasets)</li>
+<li><strong>Data pipeline scalability</strong> (feature generation)</li>
+</ul>
+<h4 id="design-trade-offs" style="position:relative;"><a href="#design-trade-offs" aria-label="design trade offs permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Design trade-offs:</h4>
+<ul>
+<li>Batch vs real-time inference</li>
+<li>Precomputed features vs on-demand features</li>
+<li>Model complexity vs latency</li>
+</ul>
+<p><strong>Example</strong></p>
+<ul>
+<li>
+<p>A recommendation model that works at 10K users may break at 10M users if:</p>
+<ul>
+<li>feature joins become expensive</li>
+<li>inference latency exceeds SLA</li>
+<li>retraining time becomes days instead of hours</li>
+</ul>
+</li>
+</ul>
+<p>Rule of thumb:</p>
+<blockquote>
+<p><strong>“Design for 10× current scale if ML is core to the product.”</strong></p>
+</blockquote>
+<hr>
+<h3 id="3-maintainability--facilitating-updates-and-debugging" style="position:relative;"><a href="#3-maintainability--facilitating-updates-and-debugging" aria-label="3 maintainability  facilitating updates and debugging permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3) Maintainability – Facilitating updates and debugging</strong></h3>
+<blockquote>
+<p><strong>“If you can’t debug it, you can’t operate it.”</strong></p>
+</blockquote>
+<p>ML systems are harder to maintain because:</p>
+<ul>
+<li>behavior is statistical, not deterministic</li>
+<li>bugs may come from data, not code</li>
+<li>performance regressions can be subtle</li>
+</ul>
+<h4 id="maintainability-requires" style="position:relative;"><a href="#maintainability-requires" aria-label="maintainability requires permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Maintainability requires:</h4>
+<ul>
+<li>
+<p><strong>Clear separation</strong> between:</p>
+<ul>
+<li>data ingestion</li>
+<li>feature engineering</li>
+<li>model training</li>
+<li>evaluation</li>
+<li>serving</li>
+</ul>
+</li>
+<li>
+<p><strong>Versioning</strong> of:</p>
+<ul>
+<li>datasets</li>
+<li>features</li>
+<li>models</li>
+<li>code</li>
+</ul>
+</li>
+<li>
+<p><strong>Reproducibility</strong> of training runs</p>
+</li>
+</ul>
+<h4 id="practical-toolspractices" style="position:relative;"><a href="#practical-toolspractices" aria-label="practical toolspractices permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Practical tools/practices:</h4>
+<ul>
+<li>Feature stores</li>
+<li>Model registries</li>
+<li>Experiment tracking</li>
+<li>Automated evaluation reports</li>
+</ul>
+<p><strong>Example</strong></p>
+<blockquote>
+<p>“Why did conversions drop?”
+Could be:</p>
+</blockquote>
+<ul>
+<li>a new feature pipeline bug</li>
+<li>training data leakage</li>
+<li>seasonal shift</li>
+<li>model rollout issue
+Maintainability is what lets you answer this quickly.</li>
+</ul>
+<hr>
+<h3 id="4-adaptability--keeping-up-with-changing-data" style="position:relative;"><a href="#4-adaptability--keeping-up-with-changing-data" aria-label="4 adaptability  keeping up with changing data permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>4) Adaptability – Keeping up with changing data</strong></h3>
+<blockquote>
+<p><strong>“ML models don’t age well without retraining.”</strong></p>
+</blockquote>
+<p>Adaptability addresses <strong>non-stationarity</strong>:</p>
+<ul>
+<li>customer behavior changes</li>
+<li>markets shift</li>
+<li>adversaries adapt (fraud, spam)</li>
+<li>language evolves</li>
+</ul>
+<h4 id="types-of-drift" style="position:relative;"><a href="#types-of-drift" aria-label="types of drift permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Types of drift:</h4>
+<ul>
+<li><strong>Data drift</strong> – input distribution changes</li>
+<li><strong>Label drift</strong> – meaning of labels changes</li>
+<li><strong>Concept drift</strong> – relationship between inputs and outputs changes</li>
+</ul>
+<h4 id="design-strategies" style="position:relative;"><a href="#design-strategies" aria-label="design strategies permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Design strategies:</h4>
+<ul>
+<li>Drift detection &#x26; alerts</li>
+<li>Scheduled retraining</li>
+<li>Rolling training windows</li>
+<li>Shadow models</li>
+<li>Champion/challenger setups</li>
+</ul>
+<p><strong>Example</strong></p>
+<blockquote>
+<p>A pricing model trained during low inflation fails badly during high inflation unless retrained with recent data.</p>
+</blockquote>
+<p>Key insight:</p>
+<blockquote>
+<p><strong>“Adaptability is not about clever models—it’s about operational discipline.”</strong></p>
+</blockquote>
+<hr>
+<h2 id="f-iterative-process-in-ml-systems" style="position:relative;"><a href="#f-iterative-process-in-ml-systems" aria-label="f iterative process in ml systems permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>F) Iterative Process in ML Systems</strong></h2>
+<blockquote>
+<p><strong>“ML is discovery, not construction.”</strong></p>
+</blockquote>
+<p>You <strong>do not</strong> design ML systems top-down. You evolve them.</p>
+<hr>
+<h3 id="1-why-iteration-is-essential" style="position:relative;"><a href="#1-why-iteration-is-essential" aria-label="1 why iteration is essential permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1) Why iteration is essential</strong></h3>
+<ul>
+<li>
+<p>Early assumptions about:</p>
+<ul>
+<li>features</li>
+<li>labels</li>
+<li>metrics</li>
+<li>data availability
+are almost always wrong.</li>
+</ul>
+</li>
+</ul>
+<p>Iteration lets you:</p>
+<ul>
+<li>test hypotheses quickly</li>
+<li>learn where the signal actually is</li>
+<li>avoid over-engineering prematurely</li>
+</ul>
+<hr>
+<h3 id="2-typical-ml-iteration-loop" style="position:relative;"><a href="#2-typical-ml-iteration-loop" aria-label="2 typical ml iteration loop permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2) Typical ML iteration loop</strong></h3>
+<ol>
+<li>Define business objective</li>
+<li>Frame ML problem</li>
+<li>Build baseline (often simple!)</li>
+<li>Evaluate offline</li>
+<li>Integrate into product</li>
+<li>Measure real impact</li>
+<li>Refine / pivot / kill</li>
+</ol>
+<p><strong>Critical principle</strong></p>
+<blockquote>
+<p><strong>“Start simple, then earn complexity.”</strong></p>
+</blockquote>
+<p>A logistic regression that ships and creates value beats a neural net stuck in notebooks.</p>
+<hr>
+<h3 id="3-mvp-thinking-for-ml" style="position:relative;"><a href="#3-mvp-thinking-for-ml" aria-label="3 mvp thinking for ml permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3) MVP thinking for ML</strong></h3>
+<p>ML MVP ≠ perfect model.</p>
+<p>ML MVP means:</p>
+<ul>
+<li>minimal feature set</li>
+<li>simple model</li>
+<li>observable impact</li>
+<li>safe deployment</li>
+<li>clear rollback</li>
+</ul>
+<hr>
+<h2 id="g-framing-ml-problems" style="position:relative;"><a href="#g-framing-ml-problems" aria-label="g framing ml problems permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>G) Framing ML Problems</strong></h2>
+<blockquote>
+<p><strong>“How you frame the problem matters more than which algorithm you choose.”</strong></p>
+</blockquote>
+<hr>
+<h3 id="1-different-ml-task-framings" style="position:relative;"><a href="#1-different-ml-task-framings" aria-label="1 different ml task framings permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1) Different ML task framings</strong></h3>
+<p>The <em>same business problem</em> can be framed differently:</p>
+<p><strong>Example: customer engagement</strong></p>
+<ul>
+<li>Classification: Will user churn? (yes/no)</li>
+<li>Regression: Probability of churn</li>
+<li>Ranking: Which users need attention first?</li>
+<li>Causal: Which intervention reduces churn?</li>
+</ul>
+<p>Each framing leads to:</p>
+<ul>
+<li>different data needs</li>
+<li>different metrics</li>
+<li>different risks</li>
+</ul>
+<hr>
+<h3 id="2-choosing-objective-functions" style="position:relative;"><a href="#2-choosing-objective-functions" aria-label="2 choosing objective functions permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2) Choosing objective functions</strong></h3>
+<blockquote>
+<p><strong>“The model optimizes exactly what you tell it to—nothing more.”</strong></p>
+</blockquote>
+<h4 id="common-pitfalls" style="position:relative;"><a href="#common-pitfalls" aria-label="common pitfalls permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Common pitfalls:</h4>
+<ul>
+<li>Optimizing proxy metrics that diverge from business value</li>
+<li>Ignoring cost asymmetry (false positives vs false negatives)</li>
+<li>Overfitting to historical behavior</li>
+</ul>
+<p><strong>Example</strong></p>
+<ul>
+<li>Optimizing click-through rate can <strong>reduce long-term satisfaction</strong></li>
+<li>Optimizing approval rate can <strong>increase defaults</strong></li>
+</ul>
+<p>Design objectives must encode:</p>
+<ul>
+<li>cost of errors</li>
+<li>long-term impact</li>
+<li>fairness constraints (when relevant)</li>
+</ul>
+<hr>
+<h3 id="3-human-intuition-vs-data-driven-decisions" style="position:relative;"><a href="#3-human-intuition-vs-data-driven-decisions" aria-label="3 human intuition vs data driven decisions permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3) Human intuition vs data-driven decisions</strong></h3>
+<blockquote>
+<p><strong>“ML should augment humans, not replace judgment blindly.”</strong></p>
+</blockquote>
+<h4 id="where-humans-outperform-ml" style="position:relative;"><a href="#where-humans-outperform-ml" aria-label="where humans outperform ml permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Where humans outperform ML:</h4>
+<ul>
+<li>rare edge cases</li>
+<li>ethical judgments</li>
+<li>policy interpretation</li>
+<li>low-data situations</li>
+</ul>
+<h4 id="where-ml-outperforms-humans" style="position:relative;"><a href="#where-ml-outperforms-humans" aria-label="where ml outperforms humans permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Where ML outperforms humans:</h4>
+<ul>
+<li>high-volume decisions</li>
+<li>pattern recognition</li>
+<li>consistent scoring</li>
+<li>removing emotional bias</li>
+</ul>
+<p>Best designs:</p>
+<ul>
+<li><strong>human-in-the-loop</strong></li>
+<li><strong>human-on-the-loop</strong> (monitoring)</li>
+<li><strong>ML as decision support</strong>, not decision dictator</li>
+</ul>
+<p><strong>Example</strong></p>
+<ul>
+<li>ML flags high-risk loan → human reviews final approval.</li>
+<li>ML ranks support tickets → humans handle resolution.</li>
+</ul>
+<hr>
+<h2 id="key-mental-models-to-carry-forward" style="position:relative;"><a href="#key-mental-models-to-carry-forward" aria-label="key mental models to carry forward permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key mental models to carry forward</strong></h2>
+<ul>
+<li><strong>“ML systems are socio-technical systems.”</strong></li>
+<li><strong>“Design for failure, not perfection.”</strong></li>
+<li><strong>“Data is part of the codebase.”</strong></li>
+<li><strong>“If it can’t be monitored, it can’t be trusted.”</strong></li>
+<li><strong>“Iteration beats ambition.”</strong></li>
+<li><strong>“Machine Learning systems fail far more often because of bad design decisions than bad models.”</strong></li>
+</ul>
 <hr>
 <h1 id="quotes" style="position:relative;"><a href="#quotes" aria-label="quotes permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Quotes</h1>
 <h1 id="references" style="position:relative;"><a href="#references" aria-label="references permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>References</h1>
