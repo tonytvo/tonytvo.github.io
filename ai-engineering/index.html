@@ -952,6 +952,86 @@
 </ul>
 </li>
 <li>
+<p><a href="#3-data-engineering-fundamentals"><strong>3. Data Engineering Fundamentals</strong></a></p>
+<ul>
+<li>
+<p><a href="#a-data-sources"><strong>A) Data Sources</strong></a></p>
+<ul>
+<li><a href="#1-where-data-comes-from"><strong>1) Where data comes from</strong></a></li>
+<li><a href="#2-source-reliability--ownership"><strong>2) Source reliability &#x26; ownership</strong></a></li>
+<li><a href="#3-handling-raw-data-safely"><strong>3) Handling raw data safely</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#b-data-formats"><strong>B) Data Formats</strong></a></p>
+<ul>
+<li>
+<p><a href="#1-structured-vs-unstructured-data"><strong>1) Structured vs. unstructured data</strong></a></p>
+<ul>
+<li><a href="#structured-data"><strong>Structured data</strong></a></li>
+<li><a href="#unstructured-data"><strong>Unstructured data</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#2-semi-structured-data"><strong>2) Semi-structured data</strong></a></p>
+</li>
+<li>
+<p><a href="#3-row-major-vs-column-major-storage"><strong>3) Row-major vs. column-major storage</strong></a></p>
+<ul>
+<li><a href="#row-major-storage"><strong>Row-major storage</strong></a></li>
+<li><a href="#column-major-storage"><strong>Column-major storage</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#c-data-models"><strong>C) Data Models</strong></a></p>
+<ul>
+<li><a href="#1-relational-databases-sql"><strong>1) Relational databases (SQL)</strong></a></li>
+<li><a href="#2-nosql-databases"><strong>2) NoSQL databases</strong></a></li>
+<li><a href="#3-analytical-data-models"><strong>3) Analytical data models</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#d-data-storage-and-processing"><strong>D) Data Storage and Processing</strong></a></p>
+<ul>
+<li>
+<p><a href="#1-transactional-vs-analytical-processing"><strong>1) Transactional vs. analytical processing</strong></a></p>
+<ul>
+<li><a href="#transactional-oltp"><strong>Transactional (OLTP)</strong></a></li>
+<li><a href="#analytical-olap"><strong>Analytical (OLAP)</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#2-etl-pipelines-extract-transform-load"><strong>2) ETL pipelines (Extract, Transform, Load)</strong></a></p>
+<ul>
+<li><a href="#extract"><strong>Extract</strong></a></li>
+<li><a href="#transform"><strong>Transform</strong></a></li>
+<li><a href="#load"><strong>Load</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#3-etl-vs-elt"><strong>3) ETL vs. ELT</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#e-batch-vs-streaming-data-processing"><strong>E) Batch vs. Streaming Data Processing</strong></a></p>
+<ul>
+<li><a href="#1-batch-processing"><strong>1) Batch processing</strong></a></li>
+<li><a href="#2-streaming-processing"><strong>2) Streaming processing</strong></a></li>
+<li><a href="#3-hybrid-architectures"><strong>3) Hybrid architectures</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#f-data-engineering-anti-patterns-very-common"><strong>F) Data Engineering Anti-Patterns (Very Common)</strong></a></p>
+</li>
+<li>
+<p><a href="#key-mental-models-to-internalize"><strong>Key mental models to internalize</strong></a></p>
+</li>
+</ul>
+</li>
+<li>
 <p><a href="#quotes">Quotes</a></p>
 </li>
 <li>
@@ -4226,6 +4306,426 @@ are almost always wrong.</li>
 <li><strong>“If it can’t be monitored, it can’t be trusted.”</strong></li>
 <li><strong>“Iteration beats ambition.”</strong></li>
 <li><strong>“Machine Learning systems fail far more often because of bad design decisions than bad models.”</strong></li>
+</ul>
+<hr>
+<h1 id="3-data-engineering-fundamentals" style="position:relative;"><a href="#3-data-engineering-fundamentals" aria-label="3 data engineering fundamentals permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3. Data Engineering Fundamentals</strong></h1>
+<blockquote>
+<p><strong>“In production ML, data engineering matters more than modeling.”</strong>
+Most ML failures are <strong>data failures</strong>, not algorithm failures.</p>
+</blockquote>
+<hr>
+<h2 id="a-data-sources" style="position:relative;"><a href="#a-data-sources" aria-label="a data sources permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>A) Data Sources</strong></h2>
+<h3 id="1-where-data-comes-from" style="position:relative;"><a href="#1-where-data-comes-from" aria-label="1 where data comes from permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1) Where data comes from</strong></h3>
+<p>Modern ML systems pull from <strong>many heterogeneous sources</strong>, often owned by different teams.</p>
+<p>Common data sources:</p>
+<ul>
+<li><strong>Operational databases</strong> (user accounts, transactions, orders)</li>
+<li><strong>Event streams</strong> (clicks, views, searches, sensor data)</li>
+<li><strong>Logs</strong> (application logs, API logs, system telemetry)</li>
+<li><strong>Third-party data</strong> (credit bureaus, weather, demographics)</li>
+<li><strong>Human-generated data</strong> (labels, annotations, reviews)</li>
+<li><strong>Derived data</strong> (aggregates, features, embeddings)</li>
+</ul>
+<p>Key insight:</p>
+<blockquote>
+<p><strong>“Most ML data is a byproduct of running the business, not data collected for ML.”</strong></p>
+</blockquote>
+<hr>
+<h3 id="2-source-reliability--ownership" style="position:relative;"><a href="#2-source-reliability--ownership" aria-label="2 source reliability  ownership permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2) Source reliability &#x26; ownership</strong></h3>
+<p>Questions every ML system must answer:</p>
+<ul>
+<li>Who owns this data?</li>
+<li>How often does it change?</li>
+<li>What guarantees exist (schema, freshness, completeness)?</li>
+<li>What happens if it breaks?</li>
+</ul>
+<p>Anti-pattern:</p>
+<blockquote>
+<p><strong>“We assumed the data would always be there.”</strong></p>
+</blockquote>
+<p>Production reality:</p>
+<ul>
+<li>Schemas change</li>
+<li>Fields disappear</li>
+<li>Semantics drift</li>
+<li>Pipelines silently fail</li>
+</ul>
+<hr>
+<h3 id="3-handling-raw-data-safely" style="position:relative;"><a href="#3-handling-raw-data-safely" aria-label="3 handling raw data safely permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3) Handling raw data safely</strong></h3>
+<p>Best practices:</p>
+<ul>
+<li><strong>Never train directly on raw production tables</strong></li>
+<li><strong>Snapshot data</strong> used for training</li>
+<li><strong>Validate inputs</strong> (nulls, ranges, distributions)</li>
+<li><strong>Document semantics</strong>, not just schemas</li>
+</ul>
+<p>Golden rule:</p>
+<blockquote>
+<p><strong>“If you can’t explain what a column means, you shouldn’t train on it.”</strong></p>
+</blockquote>
+<hr>
+<h2 id="b-data-formats" style="position:relative;"><a href="#b-data-formats" aria-label="b data formats permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>B) Data Formats</strong></h2>
+<blockquote>
+<p><strong>“The shape of your data determines the cost, speed, and feasibility of ML.”</strong></p>
+</blockquote>
+<hr>
+<h3 id="1-structured-vs-unstructured-data" style="position:relative;"><a href="#1-structured-vs-unstructured-data" aria-label="1 structured vs unstructured data permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1) Structured vs. unstructured data</strong></h3>
+<h4 id="structured-data" style="position:relative;"><a href="#structured-data" aria-label="structured data permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Structured data</strong></h4>
+<ul>
+<li>Tables, rows, columns</li>
+<li>Fixed schema</li>
+<li>Easy to query and aggregate</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>Transactions</li>
+<li>User profiles</li>
+<li>Inventory</li>
+<li>Metrics</li>
+</ul>
+<p>Strengths:</p>
+<ul>
+<li>Easy joins</li>
+<li>Fast aggregations</li>
+<li>Mature tooling</li>
+</ul>
+<p>Limitations:</p>
+<ul>
+<li>Poor at representing text, images, graphs</li>
+</ul>
+<hr>
+<h4 id="unstructured-data" style="position:relative;"><a href="#unstructured-data" aria-label="unstructured data permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Unstructured data</strong></h4>
+<ul>
+<li>Text, images, audio, video</li>
+<li>No fixed schema</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>Emails</li>
+<li>Reviews</li>
+<li>Support tickets</li>
+<li>Images</li>
+<li>PDFs</li>
+</ul>
+<p>Key insight:</p>
+<blockquote>
+<p><strong>“Unstructured data only becomes useful for ML after heavy preprocessing.”</strong></p>
+</blockquote>
+<p>Usually requires:</p>
+<ul>
+<li>Parsing</li>
+<li>Tokenization</li>
+<li>Embeddings</li>
+<li>Feature extraction</li>
+</ul>
+<p>Most ML value today comes from <strong>turning unstructured data into structured representations</strong>.</p>
+<hr>
+<h3 id="2-semi-structured-data" style="position:relative;"><a href="#2-semi-structured-data" aria-label="2 semi structured data permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2) Semi-structured data</strong></h3>
+<ul>
+<li>JSON, Avro, Parquet</li>
+<li>Schema exists, but flexible</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>Event logs</li>
+<li>API payloads</li>
+</ul>
+<p>Trade-off:</p>
+<ul>
+<li>Flexibility vs. consistency</li>
+</ul>
+<hr>
+<h3 id="3-row-major-vs-column-major-storage" style="position:relative;"><a href="#3-row-major-vs-column-major-storage" aria-label="3 row major vs column major storage permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3) Row-major vs. column-major storage</strong></h3>
+<h4 id="row-major-storage" style="position:relative;"><a href="#row-major-storage" aria-label="row major storage permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Row-major storage</strong></h4>
+<ul>
+<li>Stores complete rows together</li>
+<li>Optimized for <strong>point reads &#x26; transactions</strong></li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>MySQL</li>
+<li>PostgreSQL</li>
+<li>OLTP systems</li>
+</ul>
+<p>Good for:</p>
+<ul>
+<li>“Get user X”</li>
+<li>“Insert order Y”</li>
+</ul>
+<p>Bad for:</p>
+<ul>
+<li>Large scans</li>
+<li>Aggregations across many rows</li>
+</ul>
+<hr>
+<h4 id="column-major-storage" style="position:relative;"><a href="#column-major-storage" aria-label="column major storage permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Column-major storage</strong></h4>
+<ul>
+<li>Stores columns together</li>
+<li>Optimized for <strong>analytics &#x26; ML</strong></li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>Parquet</li>
+<li>ORC</li>
+<li>BigQuery</li>
+<li>Snowflake</li>
+<li>Redshift</li>
+</ul>
+<p>Good for:</p>
+<ul>
+<li>Aggregations</li>
+<li>Feature extraction</li>
+<li>Model training</li>
+</ul>
+<p>Key rule:</p>
+<blockquote>
+<p><strong>“Train ML models from columnar data, not transactional databases.”</strong></p>
+</blockquote>
+<hr>
+<h2 id="c-data-models" style="position:relative;"><a href="#c-data-models" aria-label="c data models permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>C) Data Models</strong></h2>
+<blockquote>
+<p><strong>“Your data model encodes assumptions about how the world works.”</strong></p>
+</blockquote>
+<hr>
+<h3 id="1-relational-databases-sql" style="position:relative;"><a href="#1-relational-databases-sql" aria-label="1 relational databases sql permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1) Relational databases (SQL)</strong></h3>
+<p>Characteristics:</p>
+<ul>
+<li>Fixed schema</li>
+<li>Strong consistency</li>
+<li>ACID transactions</li>
+<li>Joins as first-class concept</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>PostgreSQL</li>
+<li>MySQL</li>
+<li>SQL Server</li>
+</ul>
+<p>Strengths:</p>
+<ul>
+<li>Excellent for <strong>business operations</strong></li>
+<li>Clear data integrity</li>
+<li>Mature tooling</li>
+</ul>
+<p>Limitations for ML:</p>
+<ul>
+<li>Expensive joins at scale</li>
+<li>Hard to evolve schemas</li>
+<li>Not ideal for massive historical scans</li>
+</ul>
+<hr>
+<h3 id="2-nosql-databases" style="position:relative;"><a href="#2-nosql-databases" aria-label="2 nosql databases permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2) NoSQL databases</strong></h3>
+<p>Types:</p>
+<ul>
+<li>Key-value (Redis)</li>
+<li>Document (MongoDB)</li>
+<li>Wide-column (Cassandra)</li>
+<li>Graph (Neo4j)</li>
+</ul>
+<p>Strengths:</p>
+<ul>
+<li>Horizontal scalability</li>
+<li>Flexible schemas</li>
+<li>High write throughput</li>
+</ul>
+<p>Limitations:</p>
+<ul>
+<li>Complex queries</li>
+<li>Weak consistency guarantees (sometimes)</li>
+<li>Harder analytics</li>
+</ul>
+<p>ML implication:</p>
+<blockquote>
+<p><strong>“NoSQL is great for serving features, not for training models.”</strong></p>
+</blockquote>
+<hr>
+<h3 id="3-analytical-data-models" style="position:relative;"><a href="#3-analytical-data-models" aria-label="3 analytical data models permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3) Analytical data models</strong></h3>
+<p>Used for ML training &#x26; reporting:</p>
+<ul>
+<li>Star schema</li>
+<li>Snowflake schema</li>
+<li>Event-based models</li>
+<li>Time-series models</li>
+</ul>
+<p>Key design principle:</p>
+<blockquote>
+<p><strong>“Design analytical models around questions, not transactions.”</strong></p>
+</blockquote>
+<hr>
+<h2 id="d-data-storage-and-processing" style="position:relative;"><a href="#d-data-storage-and-processing" aria-label="d data storage and processing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>D) Data Storage and Processing</strong></h2>
+<p>This is where ML systems diverge sharply from traditional apps.</p>
+<hr>
+<h3 id="1-transactional-vs-analytical-processing" style="position:relative;"><a href="#1-transactional-vs-analytical-processing" aria-label="1 transactional vs analytical processing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1) Transactional vs. analytical processing</strong></h3>
+<h4 id="transactional-oltp" style="position:relative;"><a href="#transactional-oltp" aria-label="transactional oltp permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Transactional (OLTP)</strong></h4>
+<ul>
+<li>Many small reads/writes</li>
+<li>Low latency</li>
+<li>High concurrency</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>Payments</li>
+<li>Orders</li>
+<li>User updates</li>
+</ul>
+<h4 id="analytical-olap" style="position:relative;"><a href="#analytical-olap" aria-label="analytical olap permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Analytical (OLAP)</strong></h4>
+<ul>
+<li>Large scans</li>
+<li>Aggregations</li>
+<li>Long-running queries</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>Training datasets</li>
+<li>Feature computation</li>
+<li>Dashboards</li>
+</ul>
+<p>Hard rule:</p>
+<blockquote>
+<p><strong>“Never run heavy ML queries on OLTP systems.”</strong></p>
+</blockquote>
+<hr>
+<h3 id="2-etl-pipelines-extract-transform-load" style="position:relative;"><a href="#2-etl-pipelines-extract-transform-load" aria-label="2 etl pipelines extract transform load permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2) ETL pipelines (Extract, Transform, Load)</strong></h3>
+<blockquote>
+<p><strong>“ETL is the backbone of ML systems.”</strong></p>
+</blockquote>
+<h4 id="extract" style="position:relative;"><a href="#extract" aria-label="extract permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Extract</strong></h4>
+<ul>
+<li>Pull data from sources</li>
+<li>Handle failures, retries, partial loads</li>
+</ul>
+<h4 id="transform" style="position:relative;"><a href="#transform" aria-label="transform permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Transform</strong></h4>
+<ul>
+<li>Clean</li>
+<li>Normalize</li>
+<li>Join</li>
+<li>Aggregate</li>
+<li>Encode</li>
+<li>Validate</li>
+</ul>
+<h4 id="load" style="position:relative;"><a href="#load" aria-label="load permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Load</strong></h4>
+<ul>
+<li>Store into analytics systems</li>
+<li>Feature stores</li>
+<li>Training datasets</li>
+</ul>
+<p>Common failure modes:</p>
+<ul>
+<li>Silent data loss</li>
+<li>Duplicate rows</li>
+<li>Time misalignment</li>
+<li>Leakage (future data sneaks into training)</li>
+</ul>
+<p>Golden warning:</p>
+<blockquote>
+<p><strong>“Data leakage is the silent killer of ML credibility.”</strong></p>
+</blockquote>
+<hr>
+<h3 id="3-etl-vs-elt" style="position:relative;"><a href="#3-etl-vs-elt" aria-label="3 etl vs elt permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3) ETL vs. ELT</strong></h3>
+<ul>
+<li><strong>ETL</strong>: transform before loading</li>
+<li><strong>ELT</strong>: load raw data, transform later</li>
+</ul>
+<p>Modern trend:</p>
+<blockquote>
+<p><strong>“ELT + strong governance beats heavy upfront ETL.”</strong></p>
+</blockquote>
+<p>Why:</p>
+<ul>
+<li>Preserves raw truth</li>
+<li>Enables reprocessing</li>
+<li>Easier debugging</li>
+</ul>
+<hr>
+<h2 id="e-batch-vs-streaming-data-processing" style="position:relative;"><a href="#e-batch-vs-streaming-data-processing" aria-label="e batch vs streaming data processing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>E) Batch vs. Streaming Data Processing</strong></h2>
+<blockquote>
+<p><strong>“Latency requirements determine architecture.”</strong></p>
+</blockquote>
+<hr>
+<h3 id="1-batch-processing" style="position:relative;"><a href="#1-batch-processing" aria-label="1 batch processing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1) Batch processing</strong></h3>
+<p>Characteristics:</p>
+<ul>
+<li>Process data in chunks</li>
+<li>Scheduled (hourly, daily)</li>
+<li>Simpler and cheaper</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>Nightly training jobs</li>
+<li>Daily feature computation</li>
+<li>Reports</li>
+</ul>
+<p>Advantages:</p>
+<ul>
+<li>Easier to reason about</li>
+<li>More reproducible</li>
+<li>Lower operational risk</li>
+</ul>
+<p>Limitations:</p>
+<ul>
+<li>Stale predictions</li>
+<li>Not suitable for real-time decisions</li>
+</ul>
+<p>Rule:</p>
+<blockquote>
+<p><strong>“Start with batch unless real-time is clearly required.”</strong></p>
+</blockquote>
+<hr>
+<h3 id="2-streaming-processing" style="position:relative;"><a href="#2-streaming-processing" aria-label="2 streaming processing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2) Streaming processing</strong></h3>
+<p>Characteristics:</p>
+<ul>
+<li>Process events as they arrive</li>
+<li>Low latency</li>
+<li>Complex state management</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>Fraud detection</li>
+<li>Real-time recommendations</li>
+<li>Monitoring anomalies</li>
+</ul>
+<p>Challenges:</p>
+<ul>
+<li>Ordering</li>
+<li>Exactly-once semantics</li>
+<li>State recovery</li>
+<li>Debugging</li>
+</ul>
+<p>Golden truth:</p>
+<blockquote>
+<p><strong>“Streaming ML systems are 10× harder to operate than batch systems.”</strong></p>
+</blockquote>
+<hr>
+<h3 id="3-hybrid-architectures" style="position:relative;"><a href="#3-hybrid-architectures" aria-label="3 hybrid architectures permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3) Hybrid architectures</strong></h3>
+<p>Most real systems use both:</p>
+<ul>
+<li>Streaming for <strong>features &#x26; signals</strong></li>
+<li>Batch for <strong>training &#x26; backfills</strong></li>
+</ul>
+<p>Example:</p>
+<ul>
+<li>Stream user events → update features</li>
+<li>Batch retrain model nightly</li>
+</ul>
+<hr>
+<h2 id="f-data-engineering-anti-patterns-very-common" style="position:relative;"><a href="#f-data-engineering-anti-patterns-very-common" aria-label="f data engineering anti patterns very common permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>F) Data Engineering Anti-Patterns (Very Common)</strong></h2>
+<p>Avoid these:</p>
+<ul>
+<li><strong>Training directly from production databases</strong></li>
+<li><strong>No data validation</strong></li>
+<li><strong>One-off scripts with no ownership</strong></li>
+<li><strong>Undocumented transformations</strong></li>
+<li><strong>No lineage or versioning</strong></li>
+<li><strong>Tight coupling between model and data pipelines</strong></li>
+</ul>
+<hr>
+<h2 id="key-mental-models-to-internalize" style="position:relative;"><a href="#key-mental-models-to-internalize" aria-label="key mental models to internalize permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Key mental models to internalize</strong></h2>
+<ul>
+<li><strong>“Data is a product.”</strong></li>
+<li><strong>“Pipelines are software.”</strong></li>
+<li><strong>“ML performance is bounded by data quality.”</strong></li>
+<li><strong>“Observability is not optional.”</strong></li>
+<li><strong>“Reproducibility is a requirement, not a luxury.”</strong></li>
 </ul>
 <hr>
 <h1 id="quotes" style="position:relative;"><a href="#quotes" aria-label="quotes permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Quotes</h1>
