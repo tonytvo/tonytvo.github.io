@@ -1208,6 +1208,43 @@
 </ul>
 </li>
 <li>
+<p><a href="#infrastructure-and-tooling-for-mlops"><strong>Infrastructure and Tooling for MLOps</strong></a></p>
+<ul>
+<li>
+<p><a href="#%EF%B8%8F-storage-and-compute-considerations">🗄️ <strong>Storage and Compute Considerations</strong></a></p>
+<ul>
+<li><a href="#%EF%B8%8F-cloud-vs-on-premise-infrastructure">☁️ <strong>Cloud vs. On-Premise Infrastructure</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#-development-environments">💻 <strong>Development Environments</strong></a></p>
+<ul>
+<li><a href="#-why-standardization-matters">👩‍💻 Why Standardization Matters:</a></li>
+<li><a href="#-tooling-options">🧰 Tooling Options:</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%EF%B8%8F-resource-management">⚙️ <strong>Resource Management</strong></a></p>
+<ul>
+<li><a href="#%EF%B8%8F-job-scheduling--orchestration-tools">🗓️ <strong>Job Scheduling &#x26; Orchestration Tools</strong>:</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#-building-an-ml-platform">🧱 <strong>Building an ML Platform</strong></a></p>
+<ul>
+<li><a href="#-key-components-1">🧰 <strong>Key Components</strong>:</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%EF%B8%8F-the-build-vs-buy-trade-off">⚖️ <strong>The Build vs. Buy Trade-Off</strong></a></p>
+<ul>
+<li><a href="#-buy-off-the-shelf-platforms">✅ <strong>Buy (Off-the-shelf Platforms)</strong>:</a></li>
+<li><a href="#%EF%B8%8F-build-in-house-platforms">🛠️ <strong>Build (In-house Platforms)</strong>:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
 <p><a href="#quotes">Quotes</a></p>
 </li>
 <li>
@@ -5890,6 +5927,147 @@ Most ML failures are <strong>data failures</strong>, not algorithm failures.</p>
 <p><strong>“Bandits optimize faster and with less regret—but are harder to implement and monitor.”</strong></p>
 </blockquote>
 <hr>
+<h1 id="infrastructure-and-tooling-for-mlops" style="position:relative;"><a href="#infrastructure-and-tooling-for-mlops" aria-label="infrastructure and tooling for mlops permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Infrastructure and Tooling for MLOps</strong></h1>
+<blockquote>
+<p><strong>“A successful ML project depends as much on infrastructure as it does on models.”</strong></p>
+</blockquote>
+<p>MLOps is the <strong>discipline of integrating ML into reliable software systems</strong>. This chapter explores the tooling and infrastructure required to <strong>support scalable, maintainable, and reproducible</strong> machine learning workflows—from storage and compute to orchestration and platforms.</p>
+<hr>
+<h2 id="️-storage-and-compute-considerations" style="position:relative;"><a href="#%EF%B8%8F-storage-and-compute-considerations" aria-label="️ storage and compute considerations permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🗄️ <strong>Storage and Compute Considerations</strong></h2>
+<blockquote>
+<p><strong>“ML infrastructure decisions should be driven by workflow needs and organizational constraints.”</strong></p>
+</blockquote>
+<h3 id="️-cloud-vs-on-premise-infrastructure" style="position:relative;"><a href="#%EF%B8%8F-cloud-vs-on-premise-infrastructure" aria-label="️ cloud vs on premise infrastructure permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>☁️ <strong>Cloud vs. On-Premise Infrastructure</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Cloud</th>
+<th>On-Prem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Elastic scalability</strong></td>
+<td>Fixed resource capacity</td>
+</tr>
+<tr>
+<td><strong>Managed services</strong> (e.g., GCP, AWS, Azure)</td>
+<td><strong>Full control</strong>, better for secure data</td>
+</tr>
+<tr>
+<td>Pay-as-you-go</td>
+<td>High up-front capex</td>
+</tr>
+<tr>
+<td>Easier to deploy ML pipelines globally</td>
+<td>Lower latency for localized processing</td>
+</tr>
+<tr>
+<td>Easier to integrate with modern MLOps tools</td>
+<td>Requires in-house DevOps expertise</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>“Cloud infrastructure lowers barrier to entry—but may lock you in.”</strong></p>
+</blockquote>
+<p>✅ <em>Example</em>: An organization training large transformer models might choose cloud GPUs on demand, while a hospital may keep sensitive patient data on-premise for regulatory compliance.</p>
+<hr>
+<h2 id="-development-environments" style="position:relative;"><a href="#-development-environments" aria-label=" development environments permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>💻 <strong>Development Environments</strong></h2>
+<blockquote>
+<p><strong>“Reproducibility starts with standardized environments.”</strong></p>
+</blockquote>
+<h3 id="-why-standardization-matters" style="position:relative;"><a href="#-why-standardization-matters" aria-label=" why standardization matters permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>👩‍💻 Why Standardization Matters:</h3>
+<ul>
+<li>Prevents <strong>“it worked on my machine”</strong> issues.</li>
+<li>Enables <strong>collaboration across teams</strong> and locations.</li>
+<li>Supports <strong>automated CI/CD pipelines</strong> for ML.</li>
+</ul>
+<h3 id="-tooling-options" style="position:relative;"><a href="#-tooling-options" aria-label=" tooling options permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🧰 Tooling Options:</h3>
+<ul>
+<li>
+<p><strong>Docker</strong>: Encapsulate code, libraries, and environments into containers.</p>
+</li>
+<li>
+<p><strong>Conda/Pyenv</strong>: Manage Python and dependency versions.</p>
+</li>
+<li>
+<p><strong>Jupyter Notebooks</strong>:</p>
+<ul>
+<li>Great for experimentation, but not production-ready.</li>
+<li>Best paired with <strong>version control and scripting discipline</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>VS Code with remote containers</strong> or <strong>GitHub Codespaces</strong> for consistent dev environments.</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>“Think of your dev environment as code—version it, standardize it, automate it.”</strong></p>
+</blockquote>
+<hr>
+<h2 id="️-resource-management" style="position:relative;"><a href="#%EF%B8%8F-resource-management" aria-label="️ resource management permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>⚙️ <strong>Resource Management</strong></h2>
+<blockquote>
+<p><strong>“ML pipelines involve jobs that need to be scheduled, orchestrated, and monitored.”</strong></p>
+</blockquote>
+<h3 id="️-job-scheduling--orchestration-tools" style="position:relative;"><a href="#%EF%B8%8F-job-scheduling--orchestration-tools" aria-label="️ job scheduling  orchestration tools permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🗓️ <strong>Job Scheduling &#x26; Orchestration Tools</strong>:</h3>
+<ul>
+<li><strong>Airflow</strong>: DAG-based scheduling and monitoring of ML workflows.</li>
+<li><strong>Kubeflow Pipelines</strong>: Kubernetes-native orchestration of ML tasks.</li>
+<li><strong>Prefect / Dagster</strong>: Modern alternatives with better developer experience.</li>
+<li><strong>Argo Workflows</strong>: Lightweight and Kubernetes-native.</li>
+</ul>
+<p>✅ <em>Use Case</em>:</p>
+<ul>
+<li>Daily retraining → Schedule data refresh → Trigger model training → Evaluate → Deploy if improved.</li>
+</ul>
+<blockquote>
+<p><strong>“Automating ML workflows reduces human error and operational overhead.”</strong></p>
+</blockquote>
+<hr>
+<h2 id="-building-an-ml-platform" style="position:relative;"><a href="#-building-an-ml-platform" aria-label=" building an ml platform permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🧱 <strong>Building an ML Platform</strong></h2>
+<blockquote>
+<p><strong>“An ML platform is the invisible foundation that empowers fast iteration and safe deployment.”</strong></p>
+</blockquote>
+<p>Instead of one-off pipelines, many mature teams build <strong>internal ML platforms</strong> to streamline development.</p>
+<h3 id="-key-components-1" style="position:relative;"><a href="#-key-components-1" aria-label=" key components 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🧰 <strong>Key Components</strong>:</h3>
+<ol>
+<li>
+<p><strong>Model Store</strong></p>
+<ul>
+<li>Centralized place to store, version, and track trained models.</li>
+<li>Supports reproducibility, rollback, and auditing.</li>
+</ul>
+</li>
+<li>
+<p><strong>Feature Store</strong></p>
+<ul>
+<li>System for managing, reusing, and serving features consistently across training and inference.</li>
+<li>Prevents <strong>training-serving skew</strong> and avoids duplication.</li>
+</ul>
+</li>
+</ol>
+<p>✅ <em>Example</em>: Uber’s Michelangelo, Spotify’s Cortex, Airbnb’s Bighead are full-featured internal ML platforms.</p>
+<hr>
+<h2 id="️-the-build-vs-buy-trade-off" style="position:relative;"><a href="#%EF%B8%8F-the-build-vs-buy-trade-off" aria-label="️ the build vs buy trade off permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>⚖️ <strong>The Build vs. Buy Trade-Off</strong></h2>
+<blockquote>
+<p><strong>“Buy when speed matters. Build when differentiation matters.”</strong></p>
+</blockquote>
+<h3 id="-buy-off-the-shelf-platforms" style="position:relative;"><a href="#-buy-off-the-shelf-platforms" aria-label=" buy off the shelf platforms permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>✅ <strong>Buy (Off-the-shelf Platforms)</strong>:</h3>
+<ul>
+<li>Tools like <strong>Databricks, AWS SageMaker, Google Vertex AI, Azure ML</strong>.</li>
+<li>Great for smaller teams or those without infra expertise.</li>
+<li>Faster time-to-market.</li>
+</ul>
+<h3 id="️-build-in-house-platforms" style="position:relative;"><a href="#%EF%B8%8F-build-in-house-platforms" aria-label="️ build in house platforms permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🛠️ <strong>Build (In-house Platforms)</strong>:</h3>
+<ul>
+<li>Full control, deep integration with internal tools.</li>
+<li>Justified when ML is <strong>core to the business</strong>.</li>
+</ul>
+<blockquote>
+<p><strong>“Building a platform is an investment—it pays off only if ML is central to your company’s value.”</strong></p>
+</blockquote>
+<hr>
 <h1 id="quotes" style="position:relative;"><a href="#quotes" aria-label="quotes permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Quotes</h1>
 <ul>
 <li><strong>“Deployment is continuous, not a one-time handoff.”</strong></li>
@@ -5918,6 +6096,11 @@ Most ML failures are <strong>data failures</strong>, not algorithm failures.</p>
 <li><strong>“Shadow deployments and canaries de-risk your updates.”</strong></li>
 <li><strong>“A/B tests validate ideas; bandits accelerate learning.”</strong></li>
 <li><strong>“Continual learning is not a luxury—it’s a requirement for production ML.”</strong></li>
+<li><strong>“Cloud is flexible; on-prem is secure—choose based on workload and compliance needs.”</strong></li>
+<li><strong>“Standardized dev environments are essential for team collaboration and reproducibility.”</strong></li>
+<li><strong>“Job schedulers and orchestration tools are the backbone of automated ML workflows.”</strong></li>
+<li><strong>“Model and feature stores bring structure and consistency to ML experimentation.”</strong></li>
+<li><strong>“Build when you need differentiation; buy when you need speed.”</strong></li>
 </ul>
 <h1 id="references" style="position:relative;"><a href="#references" aria-label="references permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>References</h1>
 <ul>
