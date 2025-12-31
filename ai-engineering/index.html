@@ -1142,6 +1142,33 @@
 </ul>
 </li>
 <li>
+<p><a href="#8-data-distribution-shifts-and-monitoring"><strong>8. Data Distribution Shifts and Monitoring</strong></a></p>
+<ul>
+<li>
+<p><a href="#-causes-of-ml-system-failures">❌ <strong>Causes of ML System Failures</strong></a></p>
+<ul>
+<li><a href="#%EF%B8%8F-traditional-software-failures">🛠️ <strong>Traditional Software Failures</strong></a></li>
+<li><a href="#-ml-specific-failures">🤖 <strong>ML-Specific Failures</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#-detecting--addressing-data-distribution-shifts">📉 <strong>Detecting &#x26; Addressing Data Distribution Shifts</strong></a></p>
+<ul>
+<li><a href="#%EF%B8%8F-two-main-types-of-drift">⚠️ <strong>Two Main Types of Drift</strong>:</a></li>
+<li><a href="#-strategies-to-detect-drift">🧪 <strong>Strategies to Detect Drift</strong>:</a></li>
+<li><a href="#%EF%B8%8F-mitigation-techniques">🛠️ <strong>Mitigation Techniques</strong>:</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%EF%B8%8F-monitoring--observability">🛰️ <strong>Monitoring &#x26; Observability</strong></a></p>
+<ul>
+<li><a href="#-what-to-monitor">🔍 <strong>What to Monitor</strong>:</a></li>
+<li><a href="#-tooling--practices">🧰 <strong>Tooling &#x26; Practices</strong>:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
 <p><a href="#quotes">Quotes</a></p>
 </li>
 <li>
@@ -5488,6 +5515,194 @@ Most ML failures are <strong>data failures</strong>, not algorithm failures.</p>
 <p><strong>“Edge ML brings intelligence to the user, not the server.”</strong></p>
 </blockquote>
 <hr>
+<h1 id="8-data-distribution-shifts-and-monitoring" style="position:relative;"><a href="#8-data-distribution-shifts-and-monitoring" aria-label="8 data distribution shifts and monitoring permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>8. Data Distribution Shifts and Monitoring</strong></h1>
+<blockquote>
+<p><strong>“Most ML models don’t fail because they’re wrong at launch—but because the world changes.”</strong></p>
+</blockquote>
+<p>In this chapter, Chip Huyen focuses on one of the most <strong>underestimated but critical challenges</strong> in production ML: <strong>monitoring real-world performance</strong> and <strong>handling distributional drift</strong>. The chapter warns:</p>
+<blockquote>
+<p><strong>“Shipping a model is just the start—the real challenge is keeping it useful over time.”</strong></p>
+</blockquote>
+<hr>
+<h2 id="-causes-of-ml-system-failures" style="position:relative;"><a href="#-causes-of-ml-system-failures" aria-label=" causes of ml system failures permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>❌ <strong>Causes of ML System Failures</strong></h2>
+<blockquote>
+<p><strong>“ML systems fail differently from traditional software.”</strong></p>
+</blockquote>
+<p>Chip draws a clear distinction between <strong>software bugs</strong> and <strong>ML-specific failures</strong>:</p>
+<h3 id="️-traditional-software-failures" style="position:relative;"><a href="#%EF%B8%8F-traditional-software-failures" aria-label="️ traditional software failures permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🛠️ <strong>Traditional Software Failures</strong></h3>
+<ul>
+<li>
+<p>Caused by:</p>
+<ul>
+<li>Code errors</li>
+<li>Logic bugs</li>
+<li>Faulty configurations</li>
+</ul>
+</li>
+<li>
+<p><strong>Deterministic</strong>: If code breaks, it breaks every time.</p>
+</li>
+</ul>
+<h3 id="-ml-specific-failures" style="position:relative;"><a href="#-ml-specific-failures" aria-label=" ml specific failures permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🤖 <strong>ML-Specific Failures</strong></h3>
+<ul>
+<li>
+<p>Often caused by:</p>
+<ul>
+<li><strong>Data drift</strong> (distribution changes in inputs)</li>
+<li><strong>Concept drift</strong> (changes in the relationship between input and output)</li>
+<li><strong>Label leakage or label noise</strong></li>
+<li><strong>Latency spikes in features</strong></li>
+<li><strong>Misalignment between training and serving pipelines</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Non-deterministic</strong>: May only show up <strong>gradually or under specific conditions</strong>.</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>“In ML, even perfect code can fail silently as the data changes.”</strong></p>
+</blockquote>
+<p>✅ <em>Example</em>: A model trained on pre-COVID spending patterns may become useless in a post-pandemic economy—even if the code is unchanged.</p>
+<hr>
+<h2 id="-detecting--addressing-data-distribution-shifts" style="position:relative;"><a href="#-detecting--addressing-data-distribution-shifts" aria-label=" detecting  addressing data distribution shifts permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>📉 <strong>Detecting &#x26; Addressing Data Distribution Shifts</strong></h2>
+<blockquote>
+<p><strong>“Drift is inevitable—robust systems are built to detect and adapt to it.”</strong></p>
+</blockquote>
+<h3 id="️-two-main-types-of-drift" style="position:relative;"><a href="#%EF%B8%8F-two-main-types-of-drift" aria-label="️ two main types of drift permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>⚠️ <strong>Two Main Types of Drift</strong>:</h3>
+<ol>
+<li>
+<p><strong>Covariate Shift (Input Drift)</strong>:</p>
+<ul>
+<li>Input data distribution changes.</li>
+<li>E.g., changes in user device types, browsing patterns, transaction sizes.</li>
+</ul>
+</li>
+<li>
+<p><strong>Concept Drift</strong>:</p>
+<ul>
+<li>The <strong>relationship between X and Y</strong> changes.</li>
+<li>E.g., a word that once indicated positive sentiment (“sick”) now often means “cool” in youth slang.</li>
+</ul>
+</li>
+</ol>
+<p>✅ <em>Example</em>: A fraud detection model may become obsolete when fraudsters change their tactics.</p>
+<hr>
+<h3 id="-strategies-to-detect-drift" style="position:relative;"><a href="#-strategies-to-detect-drift" aria-label=" strategies to detect drift permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🧪 <strong>Strategies to Detect Drift</strong>:</h3>
+<ul>
+<li>
+<p><strong>Statistical tests</strong>:</p>
+<ul>
+<li>KS-test, Chi-squared test for feature distributions.</li>
+<li>Population Stability Index (PSI).</li>
+</ul>
+</li>
+<li>
+<p><strong>Shadow models</strong>:</p>
+<ul>
+<li>Compare current model performance to a known baseline.</li>
+</ul>
+</li>
+<li>
+<p><strong>Monitoring feature and prediction distributions over time</strong>.</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>“Look for silent signs: changes in input patterns, label delay, drop in confidence scores.”</strong></p>
+</blockquote>
+<hr>
+<h3 id="️-mitigation-techniques" style="position:relative;"><a href="#%EF%B8%8F-mitigation-techniques" aria-label="️ mitigation techniques permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🛠️ <strong>Mitigation Techniques</strong>:</h3>
+<ul>
+<li>
+<p><strong>Recalibration</strong>:</p>
+<ul>
+<li>Adjust the model’s confidence or thresholds without full retraining.</li>
+</ul>
+</li>
+<li>
+<p><strong>Online learning</strong> or <strong>retraining on fresh data</strong>.</p>
+</li>
+<li>
+<p><strong>Active learning</strong>:</p>
+<ul>
+<li>Request new labels for uncertain or changed data zones.</li>
+</ul>
+</li>
+<li>
+<p><strong>Rollback to previous stable models</strong> (via versioning).</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>“Don’t just build for drift—design for drift handling.”</strong></p>
+</blockquote>
+<hr>
+<h2 id="️-monitoring--observability" style="position:relative;"><a href="#%EF%B8%8F-monitoring--observability" aria-label="️ monitoring  observability permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🛰️ <strong>Monitoring &#x26; Observability</strong></h2>
+<blockquote>
+<p><strong>“You can’t fix what you don’t monitor.”</strong></p>
+</blockquote>
+<p>ML systems require <strong>observability practices</strong> that go beyond traditional DevOps.</p>
+<h3 id="-what-to-monitor" style="position:relative;"><a href="#-what-to-monitor" aria-label=" what to monitor permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🔍 <strong>What to Monitor</strong>:</h3>
+<ol>
+<li>
+<p><strong>Data Ingestion Metrics</strong></p>
+<ul>
+<li>Volume, schema integrity, missing features.</li>
+</ul>
+</li>
+<li>
+<p><strong>Feature Drift</strong></p>
+<ul>
+<li>Are input feature distributions stable?</li>
+</ul>
+</li>
+<li>
+<p><strong>Prediction Drift</strong></p>
+<ul>
+<li>Are outputs shifting over time?</li>
+</ul>
+</li>
+<li>
+<p><strong>Model Confidence</strong></p>
+<ul>
+<li>Changes in confidence scores can indicate mismatch with input distribution.</li>
+</ul>
+</li>
+<li>
+<p><strong>Latency &#x26; Throughput</strong></p>
+<ul>
+<li>Especially critical in online systems.</li>
+</ul>
+</li>
+<li>
+<p><strong>Business Metrics</strong></p>
+<ul>
+<li>CTR, conversion, revenue per prediction.</li>
+</ul>
+</li>
+</ol>
+<p>✅ <em>Example</em>: In recommendation systems, monitor both <strong>click-through rate</strong> and <strong>model serving latency</strong> to catch both quality and performance regressions.</p>
+<hr>
+<h3 id="-tooling--practices" style="position:relative;"><a href="#-tooling--practices" aria-label=" tooling  practices permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🧰 <strong>Tooling &#x26; Practices</strong>:</h3>
+<ul>
+<li>
+<p>Use tools like:</p>
+<ul>
+<li><strong>Evidently AI</strong>, <strong>Arize</strong>, <strong>WhyLabs</strong>, <strong>Prometheus</strong>, <strong>Grafana</strong>.</li>
+</ul>
+</li>
+<li>
+<p>Automate <strong>alerting thresholds</strong> and <strong>dashboarding</strong>.</p>
+</li>
+<li>
+<p>Set up <strong>feedback loops</strong> for continuous labeling and model evaluation.</p>
+</li>
+<li>
+<p>Build <strong>time-aware test sets</strong> and regularly scheduled <strong>model evaluations</strong>.</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>“Monitoring ML is not optional—it’s core to reliability.”</strong></p>
+</blockquote>
+<hr>
 <h1 id="quotes" style="position:relative;"><a href="#quotes" aria-label="quotes permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Quotes</h1>
 <ul>
 <li><strong>“Deployment is continuous, not a one-time handoff.”</strong></li>
@@ -5506,6 +5721,11 @@ Most ML failures are <strong>data failures</strong>, not algorithm failures.</p>
 <li><strong>“Track every experiment—what gets tracked gets improved.”</strong></li>
 <li><strong>“Scale training with care—distributed systems need careful design.”</strong></li>
 <li><strong>“AutoML helps with baseline models but requires human oversight.”</strong></li>
+<li><strong>“ML systems fail gradually—and silently—unless monitored.”</strong></li>
+<li><strong>“Data drift is the rule, not the exception.”</strong></li>
+<li><strong>“Concept drift is harder to detect but more dangerous.”</strong></li>
+<li><strong>“Monitoring must cover inputs, predictions, latency, and business impact.”</strong></li>
+<li><strong>“Successful ML systems are built for change—not just for launch.”</strong></li>
 </ul>
 <h1 id="references" style="position:relative;"><a href="#references" aria-label="references permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>References</h1>
 <ul>
