@@ -1111,6 +1111,37 @@
 </ul>
 </li>
 <li>
+<p><a href="#model-deployment-and-prediction-services"><strong>Model Deployment and Prediction Services</strong></a></p>
+<ul>
+<li>
+<p><a href="#-machine-learning-deployment-myths">🧨 <strong>Machine Learning Deployment Myths</strong></a></p>
+<ul>
+<li><a href="#-common-misconceptions">🔍 Common Misconceptions:</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%EF%B8%8F-batch-vs-online-prediction">⚖️ <strong>Batch vs. Online Prediction</strong></a></p>
+<ul>
+<li><a href="#-batch-prediction">🌀 <strong>Batch Prediction</strong></a></li>
+<li><a href="#-online-real-time-prediction">⚡ <strong>Online (Real-time) Prediction</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#-model-compression-techniques">🧳 <strong>Model Compression Techniques</strong></a></p>
+<ul>
+<li><a href="#-key-techniques">🧱 Key Techniques:</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%EF%B8%8F-ml-in-cloud-and-edge-computing">☁️📱 <strong>ML in Cloud and Edge Computing</strong></a></p>
+<ul>
+<li><a href="#%EF%B8%8F-cloud-deployment-1">☁️ <strong>Cloud Deployment</strong></a></li>
+<li><a href="#-edge-deployment">📱 <strong>Edge Deployment</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
 <p><a href="#quotes">Quotes</a></p>
 </li>
 <li>
@@ -5239,8 +5270,231 @@ Most ML failures are <strong>data failures</strong>, not algorithm failures.</p>
 <p><strong>“AutoML is a great assistant—not a replacement for human judgment.”</strong></p>
 </blockquote>
 <hr>
+<h1 id="model-deployment-and-prediction-services" style="position:relative;"><a href="#model-deployment-and-prediction-services" aria-label="model deployment and prediction services permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Model Deployment and Prediction Services</strong></h1>
+<blockquote>
+<p><strong>“Deploying a model is not the end—it’s the beginning of the most complex stage of its lifecycle.”</strong></p>
+</blockquote>
+<p>Chip Huyen emphasizes that deployment is <strong>not just pushing a model into production</strong>, but about designing systems that work <strong>continuously, reliably, and efficiently</strong> in real-world environments.</p>
+<hr>
+<h2 id="-machine-learning-deployment-myths" style="position:relative;"><a href="#-machine-learning-deployment-myths" aria-label=" machine learning deployment myths permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🧨 <strong>Machine Learning Deployment Myths</strong></h2>
+<blockquote>
+<p><strong>“Most ML projects fail not because of bad models, but due to broken deployment processes.”</strong></p>
+</blockquote>
+<h3 id="-common-misconceptions" style="position:relative;"><a href="#-common-misconceptions" aria-label=" common misconceptions permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🔍 Common Misconceptions:</h3>
+<ol>
+<li>
+<p><strong>Myth: If the model works offline, it will work in production.</strong></p>
+<ul>
+<li>In reality, production environments introduce <strong>latency constraints</strong>, <strong>unexpected data distributions</strong>, and <strong>infrastructure dependencies</strong> that offline testing doesn’t reveal.</li>
+</ul>
+</li>
+<li>
+<p><strong>Myth: Deployment is a one-time task.</strong></p>
+<ul>
+<li>Unlike traditional software, ML models <strong>decay over time</strong> due to <strong>data drift</strong> and changing user behavior. Ongoing <strong>monitoring and retraining</strong> are essential.</li>
+</ul>
+</li>
+<li>
+<p><strong>Myth: Deployment is only about inference.</strong></p>
+<ul>
+<li>
+<p>Full ML deployment involves:</p>
+<ul>
+<li><strong>Feature pipelines</strong></li>
+<li><strong>Versioned data inputs</strong></li>
+<li><strong>Model serving infrastructure</strong></li>
+<li><strong>Logging, monitoring, A/B testing, and rollback mechanisms</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Myth: One deployment fits all.</strong></p>
+<ul>
+<li>The right deployment strategy depends on <strong>latency</strong>, <strong>scalability</strong>, <strong>privacy</strong>, and <strong>hardware constraints</strong>.</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><strong>“Treat your ML model like a software service—with CI/CD, monitoring, and rollback.”</strong></p>
+</blockquote>
+<hr>
+<h2 id="️-batch-vs-online-prediction" style="position:relative;"><a href="#%EF%B8%8F-batch-vs-online-prediction" aria-label="️ batch vs online prediction permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>⚖️ <strong>Batch vs. Online Prediction</strong></h2>
+<blockquote>
+<p><strong>“Choose the right inference mode for your product goals.”</strong></p>
+</blockquote>
+<h3 id="-batch-prediction" style="position:relative;"><a href="#-batch-prediction" aria-label=" batch prediction permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🌀 <strong>Batch Prediction</strong></h3>
+<ul>
+<li>
+<p>Predictions are <strong>precomputed</strong> on large datasets and stored for later use.</p>
+</li>
+<li>
+<p>Best when:</p>
+<ul>
+<li><strong>Low latency is not required</strong> (e.g., nightly recommendations).</li>
+<li>Input data is available in bulk.</li>
+</ul>
+</li>
+</ul>
+<p>✅ <em>Examples</em>:</p>
+<ul>
+<li>Email spam scoring every night.</li>
+<li>Daily customer churn risk ranking.</li>
+</ul>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li>Easier to scale.</li>
+<li>Easier to test and debug.</li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>Not reactive to real-time inputs.</li>
+<li>Higher storage costs (storing all predictions).</li>
+</ul>
+<hr>
+<h3 id="-online-real-time-prediction" style="position:relative;"><a href="#-online-real-time-prediction" aria-label=" online real time prediction permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>⚡ <strong>Online (Real-time) Prediction</strong></h3>
+<ul>
+<li>
+<p>Predictions happen <strong>on-demand</strong> via an API.</p>
+</li>
+<li>
+<p>Needed for:</p>
+<ul>
+<li>Real-time applications (e.g., fraud detection, personalization).</li>
+<li>Systems that depend on <strong>live user context</strong>.</li>
+</ul>
+</li>
+</ul>
+<p>✅ <em>Examples</em>:</p>
+<ul>
+<li>Re-ranking news feeds after every click.</li>
+<li>Real-time translation, speech recognition.</li>
+</ul>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li>Dynamic, personalized experience.</li>
+<li>Low data staleness.</li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>Requires <strong>low-latency, high-availability systems</strong>.</li>
+<li>Harder to monitor, cache, and troubleshoot.</li>
+</ul>
+<blockquote>
+<p><strong>“Many systems combine both modes—for example, precomputing embeddings offline and applying final ranking online.”</strong></p>
+</blockquote>
+<hr>
+<h2 id="-model-compression-techniques" style="position:relative;"><a href="#-model-compression-techniques" aria-label=" model compression techniques permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🧳 <strong>Model Compression Techniques</strong></h2>
+<blockquote>
+<p><strong>“Production-ready models must be small, fast, and cheap to serve.”</strong></p>
+</blockquote>
+<p>Compression is essential when deploying on:</p>
+<ul>
+<li><strong>Mobile devices</strong></li>
+<li><strong>Embedded systems</strong></li>
+<li><strong>Latency-critical services</strong></li>
+</ul>
+<h3 id="-key-techniques" style="position:relative;"><a href="#-key-techniques" aria-label=" key techniques permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🧱 Key Techniques:</h3>
+<ol>
+<li>
+<p><strong>Low-Rank Factorization</strong></p>
+<ul>
+<li>Decompose large weight matrices (e.g., in fully connected layers) into smaller matrices.</li>
+<li>Reduces parameters and speeds up inference.</li>
+</ul>
+</li>
+<li>
+<p><strong>Pruning</strong></p>
+<ul>
+<li>Remove unnecessary weights or neurons from the model.</li>
+<li>Can be <strong>structured</strong> (entire channels) or <strong>unstructured</strong> (individual weights).</li>
+</ul>
+</li>
+</ol>
+<p>✅ <em>Example</em>: Prune 50% of low-magnitude weights in a CNN.</p>
+<ol start="3">
+<li>
+<p><strong>Quantization</strong></p>
+<ul>
+<li>Convert weights and activations from 32-bit floats to 16-bit or 8-bit integers.</li>
+<li>Often used in <strong>TensorFlow Lite</strong> and <strong>ONNX runtime</strong>.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Impact</strong>:</p>
+<ul>
+<li>Reduces <strong>model size</strong>, <strong>memory usage</strong>, and <strong>power consumption</strong>.</li>
+<li>Slight performance drop, but <strong>acceptable tradeoff</strong> in many cases.</li>
+</ul>
+<blockquote>
+<p><strong>“Compression is not optional on edge devices—it’s a necessity.”</strong></p>
+</blockquote>
+<hr>
+<h2 id="️-ml-in-cloud-and-edge-computing" style="position:relative;"><a href="#%EF%B8%8F-ml-in-cloud-and-edge-computing" aria-label="️ ml in cloud and edge computing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>☁️📱 <strong>ML in Cloud and Edge Computing</strong></h2>
+<blockquote>
+<p><strong>“Where you deploy your model depends on where and how it’s used.”</strong></p>
+</blockquote>
+<h3 id="️-cloud-deployment-1" style="position:relative;"><a href="#%EF%B8%8F-cloud-deployment-1" aria-label="️ cloud deployment 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>☁️ <strong>Cloud Deployment</strong></h3>
+<ul>
+<li>
+<p>Models are hosted on servers (e.g., AWS, GCP, Azure).</p>
+</li>
+<li>
+<p>Used for:</p>
+<ul>
+<li>High-volume batch processing.</li>
+<li>Heavy online inference.</li>
+<li>Training at scale.</li>
+</ul>
+</li>
+</ul>
+<p>✅ <em>Services</em>:</p>
+<ul>
+<li>AWS SageMaker, Google Vertex AI, Azure ML, Lambda.</li>
+</ul>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li>Scalable, maintainable.</li>
+<li>Easy to update and monitor.</li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>Requires internet connection.</li>
+<li>Higher latency for user-facing apps.</li>
+</ul>
+<hr>
+<h3 id="-edge-deployment" style="position:relative;"><a href="#-edge-deployment" aria-label=" edge deployment permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>📱 <strong>Edge Deployment</strong></h3>
+<ul>
+<li>
+<p>Models are deployed on <strong>devices near the user</strong>:</p>
+<ul>
+<li>Phones, IoT devices, cars, drones, smartwatches.</li>
+</ul>
+</li>
+<li>
+<p>Often used for <strong>privacy</strong>, <strong>offline capability</strong>, and <strong>real-time inference</strong>.</p>
+</li>
+</ul>
+<p>✅ <em>Examples</em>:</p>
+<ul>
+<li>Keyboard autocorrect.</li>
+<li>On-device face recognition (e.g., Face ID).</li>
+</ul>
+<p><strong>Frameworks</strong>:</p>
+<ul>
+<li>TensorFlow Lite, CoreML (iOS), ONNX, NVIDIA TensorRT.</li>
+</ul>
+<blockquote>
+<p><strong>“Edge ML brings intelligence to the user, not the server.”</strong></p>
+</blockquote>
+<hr>
 <h1 id="quotes" style="position:relative;"><a href="#quotes" aria-label="quotes permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Quotes</h1>
 <ul>
+<li><strong>“Deployment is continuous, not a one-time handoff.”</strong></li>
+<li><strong>“Offline performance doesn’t guarantee production reliability.”</strong></li>
+<li><strong>“Batch vs. online prediction is a tradeoff between speed and scalability.”</strong></li>
+<li><strong>“Compression makes ML portable and efficient.”</strong></li>
+<li><strong>“Cloud offers power and scale; edge offers speed and privacy.”</strong></li>
 <li><strong>“Feature engineering is not just technical—it’s strategic.”</strong></li>
 <li><strong>“Hand-crafted features encode domain expertise; learned features scale with data.”</strong></li>
 <li><strong>“Handling missing values, scaling, and encoding should follow careful validation discipline.”</strong></li>
