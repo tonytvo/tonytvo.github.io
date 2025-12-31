@@ -1169,6 +1169,45 @@
 </ul>
 </li>
 <li>
+<p><a href="#continual-learning-and-testing-in-production"><strong>Continual Learning and Testing in Production</strong></a></p>
+<ul>
+<li>
+<p><a href="#-continual-learning">🔁 <strong>Continual Learning</strong></a></p>
+<ul>
+<li>
+<p><a href="#%EF%B8%8F-retraining-strategies">🛠️ <strong>Retraining Strategies</strong></a></p>
+</li>
+<li>
+<p><a href="#-when-and-how-to-update-models">🧠 <strong>When and How to Update Models</strong></a></p>
+<ul>
+<li><a href="#-key-factors-to-consider">🔍 Key Factors to Consider:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#-testing-in-production">🧪 <strong>Testing in Production</strong></a></p>
+<ul>
+<li>
+<p><a href="#-shadow-deployments">👥 <strong>Shadow Deployments</strong></a></p>
+</li>
+<li>
+<p><a href="#-ab-testing">🧪 <strong>A/B Testing</strong></a></p>
+</li>
+<li>
+<p><a href="#-canary-releases-1">🌊 <strong>Canary Releases</strong></a></p>
+</li>
+<li>
+<p><a href="#-multi-armed-bandit-approaches">🎰 <strong>Multi-Armed Bandit Approaches</strong></a></p>
+<ul>
+<li><a href="#%EF%B8%8F-how-it-works">⚙️ How it works:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
 <p><a href="#quotes">Quotes</a></p>
 </li>
 <li>
@@ -5703,6 +5742,154 @@ Most ML failures are <strong>data failures</strong>, not algorithm failures.</p>
 <p><strong>“Monitoring ML is not optional—it’s core to reliability.”</strong></p>
 </blockquote>
 <hr>
+<h1 id="continual-learning-and-testing-in-production" style="position:relative;"><a href="#continual-learning-and-testing-in-production" aria-label="continual learning and testing in production permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Continual Learning and Testing in Production</strong></h1>
+<blockquote>
+<p><strong>“A model deployed is not a model done.”</strong></p>
+</blockquote>
+<p>This section tackles the <strong>reality of post-deployment life</strong> for machine learning models—where <strong>data evolves</strong>, <strong>environments change</strong>, and models must <strong>keep learning</strong> or risk becoming obsolete.</p>
+<hr>
+<h2 id="-continual-learning" style="position:relative;"><a href="#-continual-learning" aria-label=" continual learning permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🔁 <strong>Continual Learning</strong></h2>
+<blockquote>
+<p><strong>“Continual learning is the process of updating models over time as new data becomes available.”</strong></p>
+</blockquote>
+<p>Unlike traditional software, ML models <strong>decay</strong> as the underlying data distribution shifts. Continual learning is essential to <strong>keep models relevant and accurate</strong>.</p>
+<h3 id="️-retraining-strategies" style="position:relative;"><a href="#%EF%B8%8F-retraining-strategies" aria-label="️ retraining strategies permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🛠️ <strong>Retraining Strategies</strong></h3>
+<ol>
+<li>
+<p><strong>Periodic Retraining (Scheduled Updates)</strong></p>
+<ul>
+<li>
+<p>Models are retrained on a fixed schedule (e.g., daily, weekly, monthly).</p>
+</li>
+<li>
+<p>✅ <em>Example</em>: A credit scoring model retrained every month with the latest loan data.</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>“This approach is simple, but risks retraining when unnecessary—or too late.”</strong></p>
+</blockquote>
+</li>
+<li>
+<p><strong>Trigger-Based Retraining (Event-driven)</strong></p>
+<ul>
+<li>Retraining is initiated when <strong>monitoring detects drift or performance degradation</strong>.</li>
+<li>Requires strong <strong>monitoring infrastructure</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Online Learning</strong></p>
+<ul>
+<li>
+<p>Models are updated <strong>continuously</strong> or in mini-batches using incoming data.</p>
+</li>
+<li>
+<p>Ideal for <strong>streaming data</strong> or time-sensitive systems.</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>“Online learning allows fast adaptation—but is prone to catastrophic forgetting.”</strong></p>
+</blockquote>
+</li>
+<li>
+<p><strong>Incremental Learning</strong></p>
+<ul>
+<li>New data is <strong>appended</strong> to the training set, and the model is updated without full retraining.</li>
+<li>Works well with models that support partial fitting (e.g., some scikit-learn models, online decision trees).</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="-when-and-how-to-update-models" style="position:relative;"><a href="#-when-and-how-to-update-models" aria-label=" when and how to update models permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🧠 <strong>When and How to Update Models</strong></h3>
+<blockquote>
+<p><strong>“The cost of retraining must be weighed against the cost of outdated predictions.”</strong></p>
+</blockquote>
+<h4 id="-key-factors-to-consider" style="position:relative;"><a href="#-key-factors-to-consider" aria-label=" key factors to consider permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🔍 Key Factors to Consider:</h4>
+<ul>
+<li>
+<p><strong>Magnitude of performance drop</strong>:</p>
+<ul>
+<li>Use confidence intervals, metric thresholds.</li>
+</ul>
+</li>
+<li>
+<p><strong>Volume and quality of new data</strong>:</p>
+<ul>
+<li>If incoming data is sparse or noisy, retraining may harm performance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Operational risk</strong>:</p>
+<ul>
+<li>Deployment downtime, rollback readiness, and regulatory concerns.</li>
+</ul>
+</li>
+</ul>
+<p>✅ <em>Best Practice</em>:</p>
+<ul>
+<li>Use <strong>model versioning</strong>, <strong>canary deployments</strong>, and <strong>offline validation</strong> to <strong>safely release updates</strong>.</li>
+</ul>
+<blockquote>
+<p><strong>“Updating a model should be treated as seriously as deploying one.”</strong></p>
+</blockquote>
+<hr>
+<h2 id="-testing-in-production" style="position:relative;"><a href="#-testing-in-production" aria-label=" testing in production permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🧪 <strong>Testing in Production</strong></h2>
+<blockquote>
+<p><strong>“Offline metrics can lie. Real-world testing reveals the truth.”</strong></p>
+</blockquote>
+<p>Production testing is essential to:</p>
+<ul>
+<li>Validate model behavior under real traffic.</li>
+<li>Measure impact on business KPIs.</li>
+<li>Prevent <strong>silent failures</strong> from reaching all users.</li>
+</ul>
+<hr>
+<h3 id="-shadow-deployments" style="position:relative;"><a href="#-shadow-deployments" aria-label=" shadow deployments permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>👥 <strong>Shadow Deployments</strong></h3>
+<ul>
+<li>Run new model <strong>alongside the production model</strong>, but don’t expose its predictions to users.</li>
+<li>Compare predictions and performance without risk.</li>
+<li>✅ <em>Example</em>: Evaluate a new recommender algorithm’s ranking quality without changing what users see.</li>
+</ul>
+<blockquote>
+<p><strong>“Shadow mode helps debug silently—before making real-world impact.”</strong></p>
+</blockquote>
+<hr>
+<h3 id="-ab-testing" style="position:relative;"><a href="#-ab-testing" aria-label=" ab testing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🧪 <strong>A/B Testing</strong></h3>
+<ul>
+<li>Randomly split users into groups receiving different models or settings.</li>
+<li>Compare key metrics: conversion, click-through, latency, errors.</li>
+<li>Needs enough traffic and a robust experimentation platform (e.g., Optimizely, LaunchDarkly, internal tools).</li>
+</ul>
+<blockquote>
+<p><strong>“The gold standard for assessing real-world impact—when done correctly.”</strong></p>
+</blockquote>
+<hr>
+<h3 id="-canary-releases-1" style="position:relative;"><a href="#-canary-releases-1" aria-label=" canary releases 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🌊 <strong>Canary Releases</strong></h3>
+<ul>
+<li>Roll out the new model to a <strong>small slice of traffic</strong> first (e.g., 1%, then 10%, etc.).</li>
+<li>Observe for issues before full rollout.</li>
+<li>Can be combined with real-time metrics and alerting.</li>
+</ul>
+<p>✅ <em>Example</em>: Deploy a new fraud detection model to just one region before nationwide use.</p>
+<blockquote>
+<p><strong>“Canarying catches problems early—when rollback is still easy.”</strong></p>
+</blockquote>
+<hr>
+<h3 id="-multi-armed-bandit-approaches" style="position:relative;"><a href="#-multi-armed-bandit-approaches" aria-label=" multi armed bandit approaches permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🎰 <strong>Multi-Armed Bandit Approaches</strong></h3>
+<blockquote>
+<p><strong>“Bandits enable adaptive exploration in production.”</strong></p>
+</blockquote>
+<p>Unlike A/B testing, where allocations are fixed, <strong>multi-armed bandits</strong> adjust traffic dynamically to the best-performing model.</p>
+<h4 id="️-how-it-works" style="position:relative;"><a href="#%EF%B8%8F-how-it-works" aria-label="️ how it works permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>⚙️ How it works:</h4>
+<ul>
+<li>Start by randomly assigning traffic.</li>
+<li>Shift more users to <strong>better-performing variants</strong> as evidence grows.</li>
+<li>Continually balance <strong>exploration</strong> (learning more) vs <strong>exploitation</strong> (using what’s best now).</li>
+</ul>
+<p>✅ <em>Example</em>: In an e-commerce system, test 3 pricing models and shift traffic to the one that maximizes revenue per user in real time.</p>
+<blockquote>
+<p><strong>“Bandits optimize faster and with less regret—but are harder to implement and monitor.”</strong></p>
+</blockquote>
+<hr>
 <h1 id="quotes" style="position:relative;"><a href="#quotes" aria-label="quotes permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Quotes</h1>
 <ul>
 <li><strong>“Deployment is continuous, not a one-time handoff.”</strong></li>
@@ -5726,6 +5913,11 @@ Most ML failures are <strong>data failures</strong>, not algorithm failures.</p>
 <li><strong>“Concept drift is harder to detect but more dangerous.”</strong></li>
 <li><strong>“Monitoring must cover inputs, predictions, latency, and business impact.”</strong></li>
 <li><strong>“Successful ML systems are built for change—not just for launch.”</strong></li>
+<li><strong>“Machine learning doesn’t end at deployment—it evolves with the world.”</strong></li>
+<li><strong>“Retraining should be proactive, not reactive—and guided by monitoring.”</strong></li>
+<li><strong>“Shadow deployments and canaries de-risk your updates.”</strong></li>
+<li><strong>“A/B tests validate ideas; bandits accelerate learning.”</strong></li>
+<li><strong>“Continual learning is not a luxury—it’s a requirement for production ML.”</strong></li>
 </ul>
 <h1 id="references" style="position:relative;"><a href="#references" aria-label="references permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>References</h1>
 <ul>
