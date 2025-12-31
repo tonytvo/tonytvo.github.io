@@ -1066,6 +1066,51 @@
 </ul>
 </li>
 <li>
+<p><a href="#model-development-and-offline-evaluation"><strong>Model Development and Offline Evaluation</strong></a></p>
+<ul>
+<li>
+<p><a href="#-model-training--development">🧪 <strong>Model Training &#x26; Development</strong></a></p>
+<ul>
+<li><a href="#-core-principles">✅ Core Principles:</a></li>
+<li><a href="#-iterative-loop">🔁 Iterative Loop:</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#-evaluating-ml-models-offline-evaluation">📏 <strong>Evaluating ML Models (Offline Evaluation)</strong></a></p>
+<ul>
+<li><a href="#-key-metrics">🎯 Key Metrics:</a></li>
+<li><a href="#%EF%B8%8F-caveats">⚠️ Caveats:</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#-ensemble-methods">🧠 <strong>Ensemble Methods</strong></a></p>
+<ul>
+<li><a href="#-types-of-ensembles">📦 Types of Ensembles:</a></li>
+<li><a href="#%EF%B8%8F-trade-offs">⚠️ Trade-Offs:</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#-experiment-tracking--versioning">🧾 <strong>Experiment Tracking &#x26; Versioning</strong></a></p>
+<ul>
+<li><a href="#-what-to-track">🔍 What to Track:</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#-distributed-training">🧩 <strong>Distributed Training</strong></a></p>
+<ul>
+<li><a href="#%EF%B8%8F-techniques">⚙️ Techniques:</a></li>
+<li><a href="#-risks">📉 Risks:</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#-automl">🤖 <strong>AutoML</strong></a></p>
+<ul>
+<li><a href="#%EF%B8%8F-limitations">⚠️ Limitations:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
 <p><a href="#quotes">Quotes</a></p>
 </li>
 <li>
@@ -4974,6 +5019,226 @@ Most ML failures are <strong>data failures</strong>, not algorithm failures.</p>
 </li>
 </ul>
 <hr>
+<h1 id="model-development-and-offline-evaluation" style="position:relative;"><a href="#model-development-and-offline-evaluation" aria-label="model development and offline evaluation permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Model Development and Offline Evaluation</strong></h1>
+<blockquote>
+<p><strong>“The model is often the least important part of a machine learning system—but it still matters.”</strong></p>
+</blockquote>
+<p>This chapter outlines how to develop ML models in a way that is <strong>structured</strong>, <strong>trackable</strong>, and <strong>ready for production</strong>. It shifts the focus from just squeezing accuracy to designing models that are <strong>robust, reproducible, and maintainable</strong>.</p>
+<hr>
+<h2 id="-model-training--development" style="position:relative;"><a href="#-model-training--development" aria-label=" model training  development permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🧪 <strong>Model Training &#x26; Development</strong></h2>
+<blockquote>
+<p><strong>“The goal of training is not to fit the training data—but to generalize to unseen data.”</strong></p>
+</blockquote>
+<h3 id="-core-principles" style="position:relative;"><a href="#-core-principles" aria-label=" core principles permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>✅ Core Principles:</h3>
+<ul>
+<li>
+<p><strong>Separate training, validation, and test sets</strong>:</p>
+<ul>
+<li>Avoid data leakage.</li>
+<li>Track overfitting and underfitting.</li>
+</ul>
+</li>
+<li>
+<p><strong>Choose the right objective function</strong>:</p>
+<ul>
+<li>For regression: MSE, MAE.</li>
+<li>For classification: Cross-entropy, Focal loss (for imbalance).</li>
+</ul>
+</li>
+<li>
+<p><strong>Hyperparameter tuning</strong>:</p>
+<ul>
+<li>
+<p>Use systematic search (grid, random, Bayesian) across:</p>
+<ul>
+<li>Learning rate</li>
+<li>Regularization strength</li>
+<li>Model depth, etc.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="-iterative-loop" style="position:relative;"><a href="#-iterative-loop" aria-label=" iterative loop permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🔁 Iterative Loop:</h3>
+<ul>
+<li>Train → Evaluate → Diagnose → Adjust → Repeat.</li>
+<li>Keep changes minimal per iteration to isolate impact.</li>
+</ul>
+<blockquote>
+<p><strong>“Model development is debugging by experimentation.”</strong></p>
+</blockquote>
+<p>✅ <em>Example</em>: In fraud detection, increasing recall may help catch more fraud but risks increasing false positives—track both during development.</p>
+<hr>
+<h2 id="-evaluating-ml-models-offline-evaluation" style="position:relative;"><a href="#-evaluating-ml-models-offline-evaluation" aria-label=" evaluating ml models offline evaluation permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>📏 <strong>Evaluating ML Models (Offline Evaluation)</strong></h2>
+<blockquote>
+<p><strong>“Offline metrics are necessary but not sufficient.”</strong></p>
+</blockquote>
+<h3 id="-key-metrics" style="position:relative;"><a href="#-key-metrics" aria-label=" key metrics permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🎯 Key Metrics:</h3>
+<ul>
+<li>
+<p><strong>Accuracy</strong>:</p>
+<ul>
+<li>Misleading when classes are imbalanced.</li>
+</ul>
+</li>
+<li>
+<p><strong>Precision / Recall / F1-Score</strong>:</p>
+<ul>
+<li>Trade-off between false positives and false negatives.</li>
+</ul>
+</li>
+<li>
+<p><strong>AUC-ROC</strong>:</p>
+<ul>
+<li>Measures ability to distinguish between classes.</li>
+</ul>
+</li>
+<li>
+<p><strong>Log-loss</strong>:</p>
+<ul>
+<li>Penalizes overconfident wrong predictions.</li>
+</ul>
+</li>
+<li>
+<p><strong>Confusion Matrix</strong>:</p>
+<ul>
+<li>Insight into types of errors.</li>
+</ul>
+</li>
+</ul>
+<h3 id="️-caveats" style="position:relative;"><a href="#%EF%B8%8F-caveats" aria-label="️ caveats permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>⚠️ Caveats:</h3>
+<ul>
+<li><strong>High metric scores offline don’t guarantee real-world success.</strong></li>
+<li>Metrics must be computed on <strong>representative distributions</strong> (e.g., same seasonality, geography, device type).</li>
+</ul>
+<p>✅ <em>Example</em>: A loan approval model tested on old data may fail under new credit behavior patterns post-COVID.</p>
+<blockquote>
+<p><strong>“Always evaluate on the right slices of your data.”</strong></p>
+</blockquote>
+<hr>
+<h2 id="-ensemble-methods" style="position:relative;"><a href="#-ensemble-methods" aria-label=" ensemble methods permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🧠 <strong>Ensemble Methods</strong></h2>
+<blockquote>
+<p><strong>“Combining models can yield better performance than any single model.”</strong></p>
+</blockquote>
+<h3 id="-types-of-ensembles" style="position:relative;"><a href="#-types-of-ensembles" aria-label=" types of ensembles permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>📦 Types of Ensembles:</h3>
+<ol>
+<li>
+<p><strong>Bagging (Bootstrap Aggregating)</strong>:</p>
+<ul>
+<li>Train multiple models on random subsets.</li>
+<li>Reduces variance (e.g., Random Forest).</li>
+</ul>
+</li>
+<li>
+<p><strong>Boosting</strong>:</p>
+<ul>
+<li>Train models sequentially to fix prior errors.</li>
+<li>Reduces bias (e.g., XGBoost, LightGBM).</li>
+</ul>
+</li>
+<li>
+<p><strong>Stacking</strong>:</p>
+<ul>
+<li>Combine predictions of base models using a meta-model.</li>
+<li>Powerful but complex.</li>
+</ul>
+</li>
+</ol>
+<p>✅ <em>Example</em>: For click prediction, use XGBoost + Logistic Regression + Neural Network ensemble.</p>
+<h3 id="️-trade-offs" style="position:relative;"><a href="#%EF%B8%8F-trade-offs" aria-label="️ trade offs permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>⚠️ Trade-Offs:</h3>
+<ul>
+<li>Ensembles increase <strong>model complexity</strong> and <strong>serving latency</strong>.</li>
+<li>Harder to explain → bad for regulated environments.</li>
+</ul>
+<blockquote>
+<p><strong>“Use ensembles when you need every last bit of accuracy—but be mindful of operational cost.”</strong></p>
+</blockquote>
+<hr>
+<h2 id="-experiment-tracking--versioning" style="position:relative;"><a href="#-experiment-tracking--versioning" aria-label=" experiment tracking  versioning permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🧾 <strong>Experiment Tracking &#x26; Versioning</strong></h2>
+<blockquote>
+<p><strong>“What did we try, and what worked?”</strong></p>
+</blockquote>
+<p>ML experiments are <strong>easy to run but hard to reproduce</strong>. Tracking and versioning solve this.</p>
+<h3 id="-what-to-track" style="position:relative;"><a href="#-what-to-track" aria-label=" what to track permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🔍 What to Track:</h3>
+<ul>
+<li>Dataset versions.</li>
+<li>Code / config / model architecture.</li>
+<li>Hyperparameters and training time.</li>
+<li>Metrics on each data split.</li>
+<li>Random seeds and environments.</li>
+</ul>
+<p>✅ <em>Tools</em>:</p>
+<ul>
+<li><strong>MLflow</strong>, <strong>Weights &#x26; Biases</strong>, <strong>Neptune</strong>, <strong>DVC</strong>, spreadsheets (in simple cases).</li>
+</ul>
+<blockquote>
+<p><strong>“Good experiment tracking makes debugging and collaboration possible.”</strong></p>
+</blockquote>
+<hr>
+<h2 id="-distributed-training" style="position:relative;"><a href="#-distributed-training" aria-label=" distributed training permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🧩 <strong>Distributed Training</strong></h2>
+<blockquote>
+<p><strong>“Training doesn’t scale linearly—systems design is essential.”</strong></p>
+</blockquote>
+<p>As models grow (e.g., deep learning), <strong>single-machine training becomes infeasible</strong>.</p>
+<h3 id="️-techniques" style="position:relative;"><a href="#%EF%B8%8F-techniques" aria-label="️ techniques permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>⚙️ Techniques:</h3>
+<ul>
+<li>
+<p><strong>Data Parallelism</strong>:</p>
+<ul>
+<li>Same model on different GPUs—each processes different data batch.</li>
+</ul>
+</li>
+<li>
+<p><strong>Model Parallelism</strong>:</p>
+<ul>
+<li>Split the model itself across devices.</li>
+</ul>
+</li>
+<li>
+<p><strong>Gradient Accumulation</strong>:</p>
+<ul>
+<li>Simulates large batch sizes with small memory footprints.</li>
+</ul>
+</li>
+</ul>
+<p>✅ <em>Frameworks</em>:</p>
+<ul>
+<li>TensorFlow’s <code class="language-text">tf.distribute</code>, PyTorch’s <code class="language-text">DistributedDataParallel</code>, Ray, Horovod.</li>
+</ul>
+<blockquote>
+<p><strong>“Communication overhead is the main bottleneck in distributed systems.”</strong></p>
+</blockquote>
+<h3 id="-risks" style="position:relative;"><a href="#-risks" aria-label=" risks permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>📉 Risks:</h3>
+<ul>
+<li>Gradient staleness.</li>
+<li>Poor convergence from inconsistent parameter updates.</li>
+<li>Cost inefficiency if not tuned.</li>
+</ul>
+<hr>
+<h2 id="-automl" style="position:relative;"><a href="#-automl" aria-label=" automl permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🤖 <strong>AutoML</strong></h2>
+<blockquote>
+<p><strong>“Automate the boring—but not the strategic—parts of ML.”</strong></p>
+</blockquote>
+<p>AutoML automates:</p>
+<ul>
+<li>Model selection (e.g., decision tree vs. gradient boosting).</li>
+<li>Hyperparameter tuning.</li>
+<li>Feature selection or generation.</li>
+</ul>
+<p>✅ <em>Platforms</em>:</p>
+<ul>
+<li>Google AutoML, AWS SageMaker Autopilot, H2O.ai, auto-sklearn.</li>
+</ul>
+<h3 id="️-limitations" style="position:relative;"><a href="#%EF%B8%8F-limitations" aria-label="️ limitations permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>⚠️ Limitations:</h3>
+<ul>
+<li>Can become a <strong>black box</strong>—hard to debug.</li>
+<li>Often optimized only for <strong>offline metrics</strong>, not deployment constraints (e.g., latency, memory).</li>
+<li>Less effective in <strong>domain-specific edge cases</strong>.</li>
+</ul>
+<blockquote>
+<p><strong>“AutoML is a great assistant—not a replacement for human judgment.”</strong></p>
+</blockquote>
+<hr>
 <h1 id="quotes" style="position:relative;"><a href="#quotes" aria-label="quotes permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Quotes</h1>
 <ul>
 <li><strong>“Feature engineering is not just technical—it’s strategic.”</strong></li>
@@ -4981,6 +5246,12 @@ Most ML failures are <strong>data failures</strong>, not algorithm failures.</p>
 <li><strong>“Handling missing values, scaling, and encoding should follow careful validation discipline.”</strong></li>
 <li><strong>“Data leakage is silent but deadly—watch your pipelines.”</strong></li>
 <li><strong>“Feature importance analysis ensures your model relies on robust signals.”</strong></li>
+<li><strong>“Model development is iterative—track what you try, and why.”</strong></li>
+<li><strong>“Offline metrics are proxies, not proof of success.”</strong></li>
+<li><strong>“Ensembles boost accuracy but add complexity.”</strong></li>
+<li><strong>“Track every experiment—what gets tracked gets improved.”</strong></li>
+<li><strong>“Scale training with care—distributed systems need careful design.”</strong></li>
+<li><strong>“AutoML helps with baseline models but requires human oversight.”</strong></li>
 </ul>
 <h1 id="references" style="position:relative;"><a href="#references" aria-label="references permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>References</h1>
 <ul>
