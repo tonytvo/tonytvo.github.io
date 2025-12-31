@@ -1032,6 +1032,40 @@
 </ul>
 </li>
 <li>
+<p><a href="#feature-engineering"><strong>Feature Engineering</strong></a></p>
+<ul>
+<li>
+<p><a href="#-learned-vs-engineered-features">🔍 <strong>Learned vs. Engineered Features</strong></a></p>
+<ul>
+<li><a href="#%EF%B8%8F-engineered-features">🛠️ <strong>Engineered Features</strong></a></li>
+<li><a href="#-learned-features">🧠 <strong>Learned Features</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%EF%B8%8F-common-feature-engineering-operations">⚙️ <strong>Common Feature Engineering Operations</strong></a></p>
+<ul>
+<li><a href="#%EF%B8%8F-handling-missing-values">🕳️ <strong>Handling Missing Values</strong></a></li>
+<li><a href="#-scaling-and-normalization">📏 <strong>Scaling and Normalization</strong></a></li>
+<li><a href="#-encoding-categorical-variables">🧬 <strong>Encoding Categorical Variables</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%EF%B8%8F-data-leakage-prevention">🕵️ <strong>Data Leakage Prevention</strong></a></p>
+<ul>
+<li><a href="#-common-causes-of-leakage">🚨 <strong>Common Causes of Leakage</strong>:</a></li>
+<li><a href="#%EF%B8%8F-detection-techniques">🛡️ <strong>Detection Techniques</strong>:</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#-feature-importance-and-generalization">🔬 <strong>Feature Importance and Generalization</strong></a></p>
+<ul>
+<li><a href="#-feature-importance-techniques">📊 <strong>Feature Importance Techniques</strong></a></li>
+<li><a href="#-generalization-concerns">🌎 <strong>Generalization Concerns</strong>:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
 <p><a href="#quotes">Quotes</a></p>
 </li>
 <li>
@@ -4728,7 +4762,226 @@ Most ML failures are <strong>data failures</strong>, not algorithm failures.</p>
 <li><strong>“Reproducibility is a requirement, not a luxury.”</strong></li>
 </ul>
 <hr>
+<h1 id="feature-engineering" style="position:relative;"><a href="#feature-engineering" aria-label="feature engineering permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Feature Engineering</strong></h1>
+<blockquote>
+<p><strong>“Feature engineering is where domain knowledge meets data science.”</strong></p>
+</blockquote>
+<p>Feature engineering is the process of <strong>transforming raw data into features</strong> that make ML algorithms work better. It’s one of the most <strong>critical and time-consuming</strong> tasks in the ML workflow—and one of the most impactful on model performance.</p>
+<hr>
+<h2 id="-learned-vs-engineered-features" style="position:relative;"><a href="#-learned-vs-engineered-features" aria-label=" learned vs engineered features permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🔍 <strong>Learned vs. Engineered Features</strong></h2>
+<blockquote>
+<p><strong>“Features can be manually designed or automatically learned.”</strong></p>
+</blockquote>
+<h3 id="️-engineered-features" style="position:relative;"><a href="#%EF%B8%8F-engineered-features" aria-label="️ engineered features permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🛠️ <strong>Engineered Features</strong></h3>
+<ul>
+<li>Manually constructed by data scientists using <strong>domain expertise</strong>.</li>
+<li>Emphasis on <strong>intuitive transformations</strong> that make patterns more visible to models.</li>
+<li>Common in traditional ML workflows (e.g., with decision trees, linear models).</li>
+</ul>
+<p>✅ <em>Examples</em>:</p>
+<ul>
+<li>From a timestamp: extract <strong>hour of day</strong>, <strong>day of week</strong>, or <strong>is_holiday</strong>.</li>
+<li>From a price history: create <strong>rolling average</strong>, <strong>percentage change</strong>, or <strong>price volatility</strong>.</li>
+</ul>
+<blockquote>
+<p><strong>“Engineered features can embed years of domain knowledge in just a few columns.”</strong></p>
+</blockquote>
+<h3 id="-learned-features" style="position:relative;"><a href="#-learned-features" aria-label=" learned features permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🧠 <strong>Learned Features</strong></h3>
+<ul>
+<li>Extracted <strong>automatically</strong> by ML models, particularly <strong>deep learning</strong> architectures (e.g., CNNs, RNNs, Transformers).</li>
+<li>Learned from raw inputs (e.g., pixels, text, audio).</li>
+<li>Allow the model to discover <strong>abstract representations</strong>.</li>
+</ul>
+<p>✅ <em>Examples</em>:</p>
+<ul>
+<li>Word embeddings (e.g., Word2Vec, BERT) learned from raw text.</li>
+<li>Convolutional layers extracting visual features from images.</li>
+</ul>
+<blockquote>
+<p><strong>“Deep learning reduces manual effort but increases the need for massive data and compute.”</strong></p>
+</blockquote>
+<p>🧠 <strong>Trade-off</strong>:</p>
+<ul>
+<li><strong>Engineered features</strong> work well with <strong>less data and simple models</strong>.</li>
+<li><strong>Learned features</strong> require <strong>more data</strong>, but can uncover complex patterns.</li>
+</ul>
+<hr>
+<h2 id="️-common-feature-engineering-operations" style="position:relative;"><a href="#%EF%B8%8F-common-feature-engineering-operations" aria-label="️ common feature engineering operations permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>⚙️ <strong>Common Feature Engineering Operations</strong></h2>
+<p>These operations ensure the data is <strong>clean, consistent, and model-ready</strong>.</p>
+<h3 id="️-handling-missing-values" style="position:relative;"><a href="#%EF%B8%8F-handling-missing-values" aria-label="️ handling missing values permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🕳️ <strong>Handling Missing Values</strong></h3>
+<blockquote>
+<p><strong>“Missing values can break models or lead to biased patterns.”</strong></p>
+</blockquote>
+<ul>
+<li>
+<p><strong>Strategies</strong>:</p>
+<ul>
+<li>
+<p>Drop rows (if few and random).</p>
+</li>
+<li>
+<p>Impute with:</p>
+<ul>
+<li>Mean/median (for numeric).</li>
+<li>Most frequent (for categorical).</li>
+<li>Domain-specific constant (e.g., -999).</li>
+<li><strong>Model-based imputation</strong> (e.g., KNN, regression imputation).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>✅ <em>Example</em>: If “income” is missing, impute with median income in the same age group.</p>
+<ul>
+<li>
+<p><strong>Flagging missingness</strong>:</p>
+<ul>
+<li>Create <strong>binary features</strong> like <code class="language-text">is_income_missing</code> to help the model detect informative gaps.</li>
+</ul>
+</li>
+</ul>
+<h3 id="-scaling-and-normalization" style="position:relative;"><a href="#-scaling-and-normalization" aria-label=" scaling and normalization permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>📏 <strong>Scaling and Normalization</strong></h3>
+<blockquote>
+<p><strong>“Many ML models are sensitive to feature scale.”</strong></p>
+</blockquote>
+<ul>
+<li>
+<p><strong>Why it matters</strong>:</p>
+<ul>
+<li>Algorithms like <strong>KNN, SVM, logistic regression</strong>, and <strong>gradient descent-based models</strong> (like neural nets) can be thrown off by features on different scales.</li>
+</ul>
+</li>
+<li>
+<p><strong>Techniques</strong>:</p>
+<ul>
+<li><strong>Min-Max Scaling</strong>: Maps values to [0, 1] range.</li>
+<li><strong>Standardization</strong>: Zero mean, unit variance.</li>
+<li><strong>Log Scaling</strong>: For skewed distributions.</li>
+</ul>
+</li>
+</ul>
+<p>✅ <em>Example</em>: Log-transform <code class="language-text">annual income</code> to reduce skew and handle outliers.</p>
+<h3 id="-encoding-categorical-variables" style="position:relative;"><a href="#-encoding-categorical-variables" aria-label=" encoding categorical variables permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🧬 <strong>Encoding Categorical Variables</strong></h3>
+<blockquote>
+<p><strong>“Most ML models can’t handle raw text or strings—categories must be encoded.”</strong></p>
+</blockquote>
+<ul>
+<li>
+<p><strong>One-Hot Encoding</strong>:</p>
+<ul>
+<li>Creates binary columns for each category.</li>
+<li>Explodes dimensionality if cardinality is high.</li>
+</ul>
+</li>
+<li>
+<p><strong>Label Encoding</strong>:</p>
+<ul>
+<li>Assigns integer IDs to each class.</li>
+<li>Risky for ordinal misinterpretation in non-tree-based models.</li>
+</ul>
+</li>
+<li>
+<p><strong>Target / Mean Encoding</strong>:</p>
+<ul>
+<li>Replaces category with <strong>mean of target value</strong> for that category.</li>
+<li>Powerful but prone to <strong>data leakage</strong> if not cross-validated.</li>
+</ul>
+</li>
+</ul>
+<p>✅ <em>Example</em>: Replace <code class="language-text">city</code> with average income per city.</p>
+<blockquote>
+<p><strong>“Encoding decisions affect both performance and generalization.”</strong></p>
+</blockquote>
+<hr>
+<h2 id="️-data-leakage-prevention" style="position:relative;"><a href="#%EF%B8%8F-data-leakage-prevention" aria-label="️ data leakage prevention permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🕵️ <strong>Data Leakage Prevention</strong></h2>
+<blockquote>
+<p><strong>“Data leakage is when your model gets access to information it wouldn’t have at prediction time.”</strong></p>
+</blockquote>
+<p>It’s one of the <strong>most dangerous and common mistakes</strong> in ML pipelines.</p>
+<h3 id="-common-causes-of-leakage" style="position:relative;"><a href="#-common-causes-of-leakage" aria-label=" common causes of leakage permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🚨 <strong>Common Causes of Leakage</strong>:</h3>
+<ul>
+<li>
+<p>Using <strong>future data</strong> to compute a current feature.</p>
+<blockquote>
+<p>e.g., Using “next month’s sales” to predict “this month’s sales”.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Imputing or scaling across the full dataset</strong> before the train-test split.</p>
+</li>
+<li>
+<p><strong>Target leakage</strong>:</p>
+<blockquote>
+<p>A feature is highly correlated with the label <em>because</em> it’s derived from the label.</p>
+</blockquote>
+</li>
+</ul>
+<p>✅ <em>Example</em>: Using <code class="language-text">discharge_time - admit_time</code> to predict if a patient will be admitted.</p>
+<h3 id="️-detection-techniques" style="position:relative;"><a href="#%EF%B8%8F-detection-techniques" aria-label="️ detection techniques permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🛡️ <strong>Detection Techniques</strong>:</h3>
+<ul>
+<li><strong>Validation performance is suspiciously high</strong> (e.g., AUC near 1.0).</li>
+<li>Use <strong>data lineage tools</strong> and <strong>column-level audits</strong>.</li>
+<li>Visual inspection of <strong>feature-target correlations</strong>.</li>
+<li>Carefully structure <strong>feature computation pipelines</strong> to be <strong>time-aware</strong> and <strong>isolation-preserving</strong>.</li>
+</ul>
+<blockquote>
+<p><strong>“Leakage silently destroys model reliability—prevent it early.”</strong></p>
+</blockquote>
+<hr>
+<h2 id="-feature-importance-and-generalization" style="position:relative;"><a href="#-feature-importance-and-generalization" aria-label=" feature importance and generalization permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🔬 <strong>Feature Importance and Generalization</strong></h2>
+<blockquote>
+<p><strong>“Not all features contribute equally—understanding this helps interpret and improve models.”</strong></p>
+</blockquote>
+<h3 id="-feature-importance-techniques" style="position:relative;"><a href="#-feature-importance-techniques" aria-label=" feature importance techniques permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>📊 <strong>Feature Importance Techniques</strong></h3>
+<ul>
+<li>
+<p><strong>Model-based</strong>:</p>
+<ul>
+<li>Tree-based models (e.g., XGBoost, Random Forest) expose built-in importance scores.</li>
+<li>Permutation importance: Measures drop in performance when a feature is shuffled.</li>
+<li>SHAP / LIME: Model-agnostic interpretability tools that explain individual predictions.</li>
+</ul>
+</li>
+<li>
+<p><strong>Correlation analysis</strong>:</p>
+<ul>
+<li>Identify <strong>highly redundant or collinear</strong> features.</li>
+<li>Helps simplify the model and reduce overfitting.</li>
+</ul>
+</li>
+</ul>
+<p>✅ <em>Example</em>: If <code class="language-text">weight_kg</code> and <code class="language-text">weight_lbs</code> are both in the dataset, one can be dropped.</p>
+<h3 id="-generalization-concerns" style="position:relative;"><a href="#-generalization-concerns" aria-label=" generalization concerns permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🌎 <strong>Generalization Concerns</strong>:</h3>
+<blockquote>
+<p><strong>“Features that perform well on training data may not generalize.”</strong></p>
+</blockquote>
+<ul>
+<li>
+<p>Common causes:</p>
+<ul>
+<li><strong>Overfitting</strong> to rare patterns.</li>
+<li><strong>High cardinality categorical features</strong>.</li>
+<li><strong>Synthetic features</strong> that don’t exist in production.</li>
+</ul>
+</li>
+<li>
+<p>Strategies to ensure generalization:</p>
+<ul>
+<li>Use <strong>cross-validation</strong>.</li>
+<li>Test on <strong>multiple time periods or geographies</strong>.</li>
+<li>Perform <strong>feature ablation</strong> studies (remove and re-evaluate).</li>
+</ul>
+</li>
+</ul>
+<hr>
 <h1 id="quotes" style="position:relative;"><a href="#quotes" aria-label="quotes permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Quotes</h1>
+<ul>
+<li><strong>“Feature engineering is not just technical—it’s strategic.”</strong></li>
+<li><strong>“Hand-crafted features encode domain expertise; learned features scale with data.”</strong></li>
+<li><strong>“Handling missing values, scaling, and encoding should follow careful validation discipline.”</strong></li>
+<li><strong>“Data leakage is silent but deadly—watch your pipelines.”</strong></li>
+<li><strong>“Feature importance analysis ensures your model relies on robust signals.”</strong></li>
+</ul>
 <h1 id="references" style="position:relative;"><a href="#references" aria-label="references permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>References</h1>
 <ul>
 <li><a href="https://www.amazon.ca/AI-Engineering-Building-Applications-Foundation-ebook/dp/B0DPLNK9GN">https://www.amazon.ca/AI-Engineering-Building-Applications-Foundation-ebook/dp/B0DPLNK9GN</a></li>
