@@ -1,0 +1,424 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="generator" content="Gatsby 5.16.1"/><meta data-react-helmet="true" name="description" content="Journaling with AI — Llewellyn Falco (Craft Conference) Alternate titles the speaker considered: “Personal AI Wizardry” and “If you’re only doing code with…"/><meta data-react-helmet="true" property="og:title" content=""/><meta data-react-helmet="true" property="og:description" content="Journaling with AI — Llewellyn Falco (Craft Conference) Alternate titles the speaker considered: “Personal AI Wizardry” and “If you’re only doing code with…"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="ttrungvo"/><meta data-react-helmet="true" name="twitter:title" content=""/><meta data-react-helmet="true" name="twitter:description" content="Journaling with AI — Llewellyn Falco (Craft Conference) Alternate titles the speaker considered: “Personal AI Wizardry” and “If you’re only doing code with…"/><link rel="alternate" type="application/rss+xml" title="Tony Vo Blog RSS Feed" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=b811602c8c8ce14b66aae6613c8968f4" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=b811602c8c8ce14b66aae6613c8968f4"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=b811602c8c8ce14b66aae6613c8968f4"/><style data-href="/styles.8dfba4a7c3d44b256d62.css" data-identity="gatsby-global-css">@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-8d7d79679b70dbe27172b6460e7a7910.woff2) format("woff2"),url(/static/montserrat-latin-100-ec38980a9e0119a379e2a9b3dbb1901a.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-e279051046ba1286706adc886cf1c96b.woff2) format("woff2"),url(/static/montserrat-latin-100italic-3b325a3173c8207435cd1b76e19bf501.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-9d266fbbfa6cab7009bd56003b1eeb67.woff2) format("woff2"),url(/static/montserrat-latin-200-2d8ba08717110d27122e54c34b8a5798.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-6e5b3756583bb2263eb062eae992735e.woff2) format("woff2"),url(/static/montserrat-latin-200italic-a0d6f343e4b536c582926255367a57da.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-00b3e893aab5a8fd632d6342eb72551a.woff2) format("woff2"),url(/static/montserrat-latin-300-ea303695ceab35f17e7d062f30e0173b.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-56f34ea368f6aedf89583d444bbcb227.woff2) format("woff2"),url(/static/montserrat-latin-300italic-54b0bf2c8c4c12ffafd803be2466a790.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-b71748ae4f80ec8c014def4c5fa8688b.woff2) format("woff2"),url(/static/montserrat-latin-400-0659a9f4e90db5cf51b50d005bff1e41.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-6eed6b4cbb809c6efc7aa7ddad6dbe3e.woff2) format("woff2"),url(/static/montserrat-latin-400italic-7583622cfde30ae49086d18447ab28e7.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-091b209546e16313fd4f4fc36090c757.woff2) format("woff2"),url(/static/montserrat-latin-500-edd311588712a96bbf435fad264fff62.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-c90ced68b46050061d1a41842d6dfb43.woff2) format("woff2"),url(/static/montserrat-latin-500italic-5146cbfe02b1deea5dffea27a5f2f998.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-0480d2f8a71f38db8633b84d8722e0c2.woff2) format("woff2"),url(/static/montserrat-latin-600-b77863a375260a05dd13f86a1cee598f.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-cf46ffb11f3a60d7df0567f8851a1d00.woff2) format("woff2"),url(/static/montserrat-latin-600italic-c4fcfeeb057724724097167e57bd7801.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-7dbcc8a5ea2289d83f657c25b4be6193.woff2) format("woff2"),url(/static/montserrat-latin-700-99271a835e1cae8c76ef8bba99a8cc4e.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-c41ad6bdb4bd504a843d546d0a47958d.woff2) format("woff2"),url(/static/montserrat-latin-700italic-6779372f04095051c62ed36bc1dcc142.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-db9a3e0ba7eaea32e5f55328ace6cf23.woff2) format("woff2"),url(/static/montserrat-latin-800-4e3c615967a2360f5db87d2f0fd2456f.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-bf45bfa14805969eda318973947bc42b.woff2) format("woff2"),url(/static/montserrat-latin-800italic-fe82abb0bcede51bf724254878e0c374.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-e66c7edc609e24bacbb705175669d814.woff2) format("woff2"),url(/static/montserrat-latin-900-8211f418baeb8ec880b80ba3c682f957.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-4454c775e48152c1a72510ceed3603e2.woff2) format("woff2"),url(/static/montserrat-latin-900italic-efcaa0f6a82ee0640b83a0916e6e8d68.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-fc117160c69a8ea0851b26dd14748ee4.woff2) format("woff2"),url(/static/merriweather-latin-300-58b18067ebbd21fda77b67e73c241d3b.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-fe29961474f8dbf77c0aa7b9a629e4bc.woff2) format("woff2"),url(/static/merriweather-latin-300italic-23c3f1f88683618a4fb8d265d33d383a.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-d9479e8023bef9cbd9bf8d6eabd6bf36.woff2) format("woff2"),url(/static/merriweather-latin-400-040426f99ff6e00b86506452e0d1f10b.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-2de7bfeaf08fb03d4315d49947f062f7.woff2) format("woff2"),url(/static/merriweather-latin-400italic-79db67aca65f5285964ab332bd65f451.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-4b08e01d805fa35d7bf777f1b24314ae.woff2) format("woff2"),url(/static/merriweather-latin-700-22fb8afba4ab1f093b6ef9e28a9b6e92.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-cd92541b177652fffb6e3b952f1c33f1.woff2) format("woff2"),url(/static/merriweather-latin-700italic-f87f3d87cea0dd0979bfc8ac9ea90243.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-f813fc6a4bee46eda5224ac7ebf1b7be.woff2) format("woff2"),url(/static/merriweather-latin-900-5d4e42cb44410674acd99153d57df032.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-b7901d85486871c1779c0e93ddd85656.woff2) format("woff2"),url(/static/merriweather-latin-900italic-9647f9fdab98756989a8a5550eb205c3.woff) format("woff")}
+
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{-webkit-text-size-adjust:100%;line-height:1.15}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}[hidden]{display:none}:root{--maxWidth-none:"none";--maxWidth-xs:20rem;--maxWidth-sm:24rem;--maxWidth-md:28rem;--maxWidth-lg:32rem;--maxWidth-xl:36rem;--maxWidth-2xl:42rem;--maxWidth-3xl:48rem;--maxWidth-4xl:56rem;--maxWidth-full:"100%";--maxWidth-wrapper:var(--maxWidth-2xl);--spacing-px:"1px";--spacing-0:0;--spacing-1:0.25rem;--spacing-2:0.5rem;--spacing-3:0.75rem;--spacing-4:1rem;--spacing-5:1.25rem;--spacing-6:1.5rem;--spacing-8:2rem;--spacing-10:2.5rem;--spacing-12:3rem;--spacing-16:4rem;--spacing-20:5rem;--spacing-24:6rem;--spacing-32:8rem;--fontFamily-sans:Montserrat,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--fontFamily-serif:"Merriweather","Georgia",Cambria,"Times New Roman",Times,serif;--font-body:var(--fontFamily-serif);--font-heading:var(--fontFamily-sans);--fontWeight-normal:400;--fontWeight-medium:500;--fontWeight-semibold:600;--fontWeight-bold:700;--fontWeight-extrabold:800;--fontWeight-black:900;--fontSize-root:16px;--lineHeight-none:1;--lineHeight-tight:1.1;--lineHeight-normal:1.5;--lineHeight-relaxed:1.625;--fontSize-0:0.833rem;--fontSize-1:1rem;--fontSize-2:1.2rem;--fontSize-3:1.44rem;--fontSize-4:1.728rem;--fontSize-5:2.074rem;--fontSize-6:2.488rem;--fontSize-7:2.986rem;--color-primary:#005b99;--color-text:#2e353f;--color-text-light:#4f5969;--color-heading:#1a202c;--color-heading-black:#000;--color-accent:#d1dce5}*,:after,:before{box-sizing:border-box}html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:var(--fontSize-root);line-height:var(--lineHeight-normal)}body{color:var(--color-text);font-family:var(--font-body);font-size:var(--fontSize-1)}footer{padding:var(--spacing-6) var(--spacing-0)}hr{background:var(--color-accent);border:0;height:1px}h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);letter-spacing:-.025em;line-height:var(--lineHeight-tight);margin-bottom:var(--spacing-6);margin-top:var(--spacing-12)}h2,h3,h4,h5,h6{color:var(--color-heading);font-weight:var(--fontWeight-bold)}h1{color:var(--color-heading-black);font-size:var(--fontSize-6);font-weight:var(--fontWeight-black)}h2{font-size:var(--fontSize-5)}h3{font-size:var(--fontSize-4)}h4{font-size:var(--fontSize-3)}h5{font-size:var(--fontSize-2)}h6{font-size:var(--fontSize-1)}h1>a,h2>a,h3>a,h4>a,h5>a,h6>a{color:inherit;text-decoration:none}p{--baseline-multiplier:0.179;--x-height-multiplier:0.35;line-height:var(--lineHeight-relaxed);margin:var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0)}ol,p,ul{padding:var(--spacing-0)}ol,ul{list-style-image:none;list-style-position:outside;margin-bottom:var(--spacing-8);margin-left:var(--spacing-0);margin-right:var(--spacing-0)}ol li,ul li{padding-left:var(--spacing-0)}li>p,ol li,ul li{margin-bottom:calc(var(--spacing-8)/2)}li :last-child{margin-bottom:var(--spacing-0)}li>ul{margin-left:var(--spacing-8);margin-top:calc(var(--spacing-8)/2)}blockquote{border-left:var(--spacing-1) solid var(--color-primary);color:var(--color-text-light);font-size:var(--fontSize-2);font-style:italic;margin-bottom:var(--spacing-8);margin-left:calc(var(--spacing-6)*-1);margin-right:var(--spacing-8);padding:var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6)}blockquote>:last-child{margin-bottom:var(--spacing-0)}blockquote>ol,blockquote>ul{list-style-position:inside}table{border-collapse:collapse;border-spacing:.25rem;margin-bottom:var(--spacing-8);width:100%}table thead tr th{border-bottom:1px solid var(--color-accent)}a{color:var(--color-primary)}a:focus,a:hover{text-decoration:none}.global-wrapper{margin:var(--spacing-0) auto;max-width:var(--maxWidth-wrapper);padding:var(--spacing-10) var(--spacing-5)}.global-wrapper[data-is-root-path=true] .bio{margin-bottom:var(--spacing-20)}.global-header{margin-bottom:var(--spacing-12)}.main-heading{font-size:var(--fontSize-7);margin:0}.post-list-item{margin-bottom:var(--spacing-8);margin-top:var(--spacing-8)}.post-list-item p{margin-bottom:var(--spacing-0)}.post-list-item h2{color:var(--color-primary);font-size:var(--fontSize-4);margin-bottom:var(--spacing-2);margin-top:var(--spacing-0)}.post-list-item header{margin-bottom:var(--spacing-4)}.header-link-home{font-family:var(--font-heading);font-size:var(--fontSize-2);font-weight:var(--fontWeight-bold);text-decoration:none}.bio{display:flex;margin-bottom:var(--spacing-16)}.bio p,.bio-avatar{margin-bottom:var(--spacing-0)}.bio-avatar{border-radius:100%;margin-right:var(--spacing-4);min-width:50px}.blog-post header h1{margin:var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0)}.blog-post header p{font-family:var(--font-heading);font-size:var(--fontSize-2)}.blog-post-nav ul{margin:var(--spacing-0)}.gatsby-highlight{margin-bottom:var(--spacing-8)}@media (max-width:42rem){blockquote{margin-left:var(--spacing-0);padding:var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4)}ol,ul{list-style-position:inside}}code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;text-shadow:0 1px #fff;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#b3d4fc;text-shadow:none}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{background:hsla(0,0%,100%,.5);color:#9a6e3a}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="global-wrapper" data-is-root-path="false"><header class="global-header"><a class="header-link-home" href="/">Conversations on agile technical practices and investments</a></header><main><article class="blog-post" itemScope="" itemType="http://schema.org/Article"><header><h1 itemProp="headline"></h1><p></p></header><section itemProp="articleBody"><h1 id="journaling-with-ai--llewellyn-falco-craft-conference" style="position:relative;"><a href="#journaling-with-ai--llewellyn-falco-craft-conference" aria-label="journaling with ai  llewellyn falco craft conference permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Journaling with AI — Llewellyn Falco (Craft Conference)</h1>
+<blockquote>
+<p>Alternate titles the speaker considered: <em>“Personal AI Wizardry”</em> and <em>“If you’re only doing code with agentic AI, you are doing it wrong”</em> — the latter being the real thesis of the talk.</p>
+</blockquote>
+<hr>
+<h2 id="1-introduction--framing" style="position:relative;"><a href="#1-introduction--framing" aria-label="1 introduction  framing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Introduction &#x26; Framing</h2>
+<h3 id="11-context" style="position:relative;"><a href="#11-context" aria-label="11 context permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1.1 Context</h3>
+<ul>
+<li>Speaker has attended Craft since ~2015, always giving talks about <strong>code</strong> — this year is deliberately different.</li>
+<li>Resources shared via QR code at the end (slides, materials).</li>
+</ul>
+<h3 id="12-the-fred--george-metaphor-harry-potter" style="position:relative;"><a href="#12-the-fred--george-metaphor-harry-potter" aria-label="12 the fred  george metaphor harry potter permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1.2 The Fred &#x26; George Metaphor (Harry Potter)</h3>
+<ul>
+<li>Everyone at Hogwarts has a wand and casts spells; Fred and George are different — <strong>they create things</strong>.</li>
+<li>Their creations are usually framed as “prank items,” but the speaker reframes: their core value is that <em>the world should be fun</em>, and they use magic to <strong>make artifacts that embody that value</strong>.</li>
+<li>Key property: once created, the artifact’s effect extends <strong>beyond the creator and the moment</strong> — it persists and works for others.</li>
+</ul>
+<h3 id="13-wizard-in-the-computer" style="position:relative;"><a href="#13-wizard-in-the-computer" aria-label="13 wizard in the computer permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1.3 “Wizard in the Computer”</h3>
+<ul>
+<li>On a computer, the speaker also feels like a wizard — but historically only <strong>inside code</strong>, mostly for large corporations.</li>
+<li>Over the last year, that “magic zone” has expanded: he can now be magical <strong>anywhere in the computer</strong>, not just in code.</li>
+<li>Robots aren’t here yet (“maybe next year’s talk”), so the magic is still bounded by the computer — but the boundary inside it has dissolved.</li>
+</ul>
+<h3 id="14-what-is-a-programmers-skill-when-not-coding" style="position:relative;"><a href="#14-what-is-a-programmers-skill-when-not-coding" aria-label="14 what is a programmers skill when not coding permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1.4 What is a programmer’s skill when not coding?</h3>
+<ul>
+<li>Core claim: <strong>programmers are fundamentally good at managing complexity.</strong></li>
+<li>The two primary mechanisms:
+<ol>
+<li><strong>Recognizing abstractions</strong></li>
+<li><strong>Creating reusable pieces</strong></li>
+</ol>
+</li>
+<li>These skills transfer to non-coding AI work — this is the connective tissue of the entire talk.</li>
+</ul>
+<hr>
+<h2 id="2-story-1--documentation-via-ai-closest-to-code" style="position:relative;"><a href="#2-story-1--documentation-via-ai-closest-to-code" aria-label="2 story 1  documentation via ai closest to code permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Story 1 — Documentation via AI (Closest to Code)</h2>
+<h3 id="21-setup" style="position:relative;"><a href="#21-setup" aria-label="21 setup permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2.1 Setup</h3>
+<ul>
+<li>Weekly Thursday pair programming with Scott on <strong>Java ApprovalTests</strong>.</li>
+<li>Speaker pairs remotely a lot (lives “in the middle of nowhere”).</li>
+<li>Stefan (from Germany, via Discord) had been asking “what is the perfect way of programming?” — invited to join and observe instead of theorize.</li>
+</ul>
+<h3 id="22-the-weird-issue-750" style="position:relative;"><a href="#22-the-weird-issue-750" aria-label="22 the weird issue 750 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2.2 The Weird Issue (#750)</h3>
+<ul>
+<li>User reports: <em>“I did this thing and it worked”</em> — the inverse of a normal issue (usually “I tried X and it broke”).</li>
+<li>User had used the <strong>Surefire plugin</strong> with an environment variable and asked “did I do it right?”</li>
+<li>Speaker knew it was right because of <strong>issue #608</strong> — the historical issue where Surefire actually <em>didn’t</em> work and was fixed.</li>
+</ul>
+<h3 id="23-reframing-bug-reports" style="position:relative;"><a href="#23-reframing-bug-reports" aria-label="23 reframing bug reports permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2.3 Reframing Bug Reports</h3>
+<ul>
+<li>Quote from OSCON: <strong>“Reporting a bug is the lowest form of contribution.”</strong>
+<ul>
+<li>Speaker loves both the snark <em>and</em> the positive reading: at least they are contributing.</li>
+</ul>
+</li>
+<li>Instead of just closing with “yes, you did it right,” ask: <strong>what are they actually trying to contribute? What should I learn?</strong></li>
+<li>The real signal: <strong>“I didn’t see this documented.”</strong></li>
+</ul>
+<h3 id="24-documentation-theory" style="position:relative;"><a href="#24-documentation-theory" aria-label="24 documentation theory permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2.4 Documentation Theory</h3>
+<ul>
+<li>Speaker follows <strong>Daniele Procida’s documentation framework</strong> (the four quadrants: tutorials, how-to guides, reference, explanation).</li>
+<li>The missing piece is clearly a <strong>how-to guide</strong> (“How to use Surefire”).</li>
+<li>Existing how-to guides share a consistent format: <em>problem → solution</em>, Stack-Overflow-like.</li>
+</ul>
+<h3 id="25-the-ai-move" style="position:relative;"><a href="#25-the-ai-move" aria-label="25 the ai move permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2.5 The AI Move</h3>
+<ul>
+<li>Prompt to Claude Code: <em>“Please read issue #750 and #608 using the GitHub CLI. This is the right solution but we need a how-to doc. Here’s an example.”</em></li>
+<li>Result: it produced the doc — and “Stefan’s brain exploded.”</li>
+</ul>
+<h3 id="26-takeaways" style="position:relative;"><a href="#26-takeaways" aria-label="26 takeaways permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2.6 Takeaways</h3>
+<ul>
+<li>Same process a year ago: <strong>~1 hour manually vs. ~15 seconds</strong> with AI. (“It takes me longer to explain what I did than to actually have done it.“)</li>
+<li>Output quality was good — it noticed patterns the speaker wouldn’t have thought to include.</li>
+<li>Enabled a better response: not just “you’re doing it right” but <strong>“thank you — you improved my project.”</strong></li>
+<li><strong>Recurring theme flagged:</strong> look at how many components come together (GitHub CLI, issues, example docs, doc theory, Claude) — <em>composition of pieces</em> will recur throughout the talk.</li>
+</ul>
+<hr>
+<h2 id="3-story-2--helping-his-father-exercise-farther-from-code" style="position:relative;"><a href="#3-story-2--helping-his-father-exercise-farther-from-code" aria-label="3 story 2  helping his father exercise farther from code permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Story 2 — Helping His Father Exercise (Farther from Code)</h2>
+<h3 id="31-background" style="position:relative;"><a href="#31-background" aria-label="31 background permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.1 Background</h3>
+<ul>
+<li>Father is 80/81; had polio as a child → weakened heart valve → heart valve replacement ~2 years ago.</li>
+<li>Post-surgery, speaker used his <strong>coaching skills</strong> to get his dad through physical therapy — dad hadn’t exercised in 80 years and didn’t want to start after heart surgery.</li>
+<li>Reached a point where he could hand off to his mom and go home.</li>
+</ul>
+<h3 id="32-the-problem-resurfaces" style="position:relative;"><a href="#32-the-problem-resurfaces" aria-label="32 the problem resurfaces permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.2 The Problem Resurfaces</h3>
+<ul>
+<li>At Christmas, dad’s talk was concerning — new valve should mean ~20 more years, but he <strong>wasn’t talking like a man with 20 years ahead</strong>.</li>
+<li>Diagnosis: he’d stopped physical therapy (doing it would show as health + optimism).</li>
+<li>Asking his mom to enforce it is unfair — 60+ years of entrenched relationship patterns.</li>
+<li>Goal: get dad working out effectively during a two-week visit, ideally with habits that survive after leaving. Needs to be <strong>effective and easy</strong>.</li>
+</ul>
+<h3 id="33-the-solution-end-state-first" style="position:relative;"><a href="#33-the-solution-end-state-first" aria-label="33 the solution end state first permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.3 The Solution (End State First)</h3>
+<ul>
+<li>Recumbent bikes at the gym + phones playing a <strong>real-time workout video</strong>:
+<ul>
+<li>Green progress bar for each 1-minute segment</li>
+<li>Displays current instruction/phase</li>
+<li>Transitions through workout phases automatically</li>
+</ul>
+</li>
+<li>Effect: made the <em>effective</em> workout <em>easy</em> to follow.</li>
+</ul>
+<h3 id="34-the-pipeline-that-built-it" style="position:relative;"><a href="#34-the-pipeline-that-built-it" aria-label="34 the pipeline that built it permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.4 The Pipeline That Built It</h3>
+<p><strong>Step 1 — Understand the workout (AI conversation)</strong></p>
+<ul>
+<li>Constraints fed to AI: dad’s feet are bad → minimize walking; goals = longevity, endurance, strength.</li>
+<li>Several iterations → a concrete workout plan (in Markdown).</li>
+<li>Note: speaker himself doesn’t exercise either, so this knowledge had to be acquired.</li>
+</ul>
+<p><strong>Step 2 — Turn plan into video (the key insight)</strong></p>
+<ul>
+<li>AI video generation is great at photorealism/characters but <strong>bad at exactly what’s needed here: text, timing, precise seconds</strong> — and can’t make a 20-minute video anyway.</li>
+<li>So: <strong>don’t ask AI to make the video; ask AI to write a Python script that generates the video.</strong></li>
+<li>Final step (running Python) isn’t AI at all — “that’s just Python.”</li>
+<li>Pipeline: <em>impromptu prompt → workout plan (Markdown) → AI writes Python → Python renders video.</em></li>
+</ul>
+<h3 id="35-iterating-on-the-result" style="position:relative;"><a href="#35-iterating-on-the-result" aria-label="35 iterating on the result permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.5 Iterating on the Result</h3>
+<ul>
+<li>First video was wrong — “you need to see what you don’t like to know what you do.”</li>
+<li>Problem 1: <strong>20–45 min render time</strong>, 3 GB output.
+<ul>
+<li>Asked Claude for optimizations: reduce resolution (740p is fine, not 4K), reduce frame rate.</li>
+<li>Key realization: the video only changes once per second → <strong>frame rate = 1 fps</strong> → render in <strong>45 seconds, 3 MB file.</strong></li>
+<li>Lesson invoked: <strong>fast feedback cycles are essential</strong> (a programmer’s instinct applied outside code).</li>
+</ul>
+</li>
+<li>Then iterated on features:
+<ul>
+<li>Progress indicator within the current minute</li>
+<li>Position within the overall workout</li>
+<li>Position within the steps</li>
+<li><strong>Red↔green color switching</strong> for intervals (30s hard / 60s easy) — because dad complains constantly (“a fetish of complaining”) and won’t notice a mere text change; the signal must be unmissable.</li>
+<li>Aside: the speaker’s ability to absorb complaining without effect (“you’re trying to kill me” → “yep, keep pedaling”) is why <em>he</em> can coach dad when the rest of the family can’t.</li>
+</ul>
+</li>
+</ul>
+<h3 id="36-maintaining-the-artifact-programmer-patterns" style="position:relative;"><a href="#36-maintaining-the-artifact-programmer-patterns" aria-label="36 maintaining the artifact programmer patterns permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.6 Maintaining the Artifact (Programmer Patterns)</h3>
+<ul>
+<li>The original Markdown produced the <em>first</em> (wrong) video — the description and the artifact had <strong>drifted</strong>.</li>
+<li>Applied a known code pattern: <strong>knowledge documents / extract knowledge</strong> — had AI write up a description of what the current video <em>is</em> (pieces, layout, behavior).</li>
+<li>Now the description is the <strong>maintainable source of truth</strong>: modify it → regenerate.</li>
+<li>Rationale: “I’m a programmer and I know maintainability matters — dad <em>will</em> have complaints and I <em>will</em> have to change it. No illusions.”</li>
+</ul>
+<h3 id="37-payoff" style="position:relative;"><a href="#37-payoff" aria-label="37 payoff permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.7 Payoff</h3>
+<ul>
+<li>“Now my skills as a programmer are allowing me to help my dad. That’s what I mean by being a wizard outside the computer.”</li>
+</ul>
+<hr>
+<h2 id="4-story-3--journaling-with-ai-the-main-event" style="position:relative;"><a href="#4-story-3--journaling-with-ai-the-main-event" aria-label="4 story 3  journaling with ai the main event permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Story 3 — Journaling with AI (The Main Event)</h2>
+<h3 id="41-origin-the-retreat" style="position:relative;"><a href="#41-origin-the-retreat" aria-label="41 origin the retreat permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.1 Origin: The Retreat</h3>
+<ul>
+<li>November: week-long, very personal, “very woo-woo” retreat.</li>
+<li>Speaker journals during intense experiences for two reasons:
+<ol>
+<li><strong>Capture</strong> — just to remember (even one day of a conference is hard to recall)</li>
+<li><strong>Process</strong> — journaling helps him work through what’s happening</li>
+</ol>
+</li>
+<li>Always journals on a computer (“because paper”).</li>
+<li>The difference this time: <strong>when he was done journaling, he wasn’t done.</strong></li>
+</ul>
+<h3 id="42-the-virginia-satir-interviewer" style="position:relative;"><a href="#42-the-virginia-satir-interviewer" aria-label="42 the virginia satir interviewer permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.2 The Virginia Satir Interviewer</h3>
+<ul>
+<li>Created a <strong>process file</strong> and had AI analyze and interview him <strong>as Virginia Satir</strong>.
+<ul>
+<li>Satir: foundational figure of modern psychotherapy (1970s); one of the three sources behind NLP.</li>
+</ul>
+</li>
+<li>The interviews were <strong>not gentle validation</strong> — they called him on his own patterns, e.g., noticing he was doing the very thing he’d said he wanted to stop.</li>
+<li>Harder, but far more effective.</li>
+<li>For the live demo, the prompt was <strong>softened</strong> — the original made half the preview audience say “I never want to experience that.”</li>
+<li>Deliberate framing choice: not outward-facing output (e.g., LinkedIn posts) but <strong>inward-facing</strong> — “how does this help me, just me, alone, personally.”</li>
+</ul>
+<h3 id="43-the-journaling-pipeline-live-demo" style="position:relative;"><a href="#43-the-journaling-pipeline-live-demo" aria-label="43 the journaling pipeline live demo permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.3 The Journaling Pipeline (Live Demo)</h3>
+<p><strong>Overview of stages:</strong> create journal → vomit → cleanup → enrich (interview) → analysis/extract.</p>
+<h4 id="stage-0--create-the-journal-zero-friction-capture" style="position:relative;"><a href="#stage-0--create-the-journal-zero-friction-capture" aria-label="stage 0  create the journal zero friction capture permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Stage 0 — Create the journal (zero-friction capture)</h4>
+<ul>
+<li>Speaker has <strong>ADHD</strong>: every decision or act of discipline is a likely failure point → <strong>remove every obstacle</strong>.</li>
+<li>Practice: open <strong>Obsidian</strong>, click today’s date. Everything goes there. <strong>No decisions.</strong></li>
+</ul>
+<h4 id="stage-1--the-vomit-pattern" style="position:relative;"><a href="#stage-1--the-vomit-pattern" aria-label="stage 1  the vomit pattern permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Stage 1 — The “Vomit” Pattern</h4>
+<ul>
+<li>Open the file and let everything flow, unedited, unstructured.</li>
+<li>Live example content (about the conference day): Kent Beck’s keynote (desert/forest variation → realization he should show it to a client living “in the desert”; insight that his AI effectiveness comes from <em>investing in the future as well as the features</em>, rooted in his craftsmanship upbringing), Ilias’s talk (pride, texting Claire McRae about her impact), meeting Mace from Tesco (instant friendship), Gojko’s talk (his favorite — see below).</li>
+<li>Result: “meandery, bladdery garbage” — but <strong>committed to git</strong> anyway to enable diffing between stages.</li>
+<li>Why vomit works — it solves <strong>getting started</strong> (writer’s block). Related sayings, all attacking the same problem:
+<ul>
+<li>“Done is better than perfect”</li>
+<li>“Perfect is the enemy of the good”</li>
+<li>“The simplest thing that could possibly work”</li>
+<li>“YAGNI”</li>
+<li>His book-writing rule with Trisha Broderick (pair-writing every word): <strong>“Write it wrong, then fix it.”</strong></li>
+</ul>
+</li>
+</ul>
+<h4 id="stage-2--cleanup" style="position:relative;"><a href="#stage-2--cleanup" aria-label="stage 2  cleanup permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Stage 2 — Cleanup</h4>
+<ul>
+<li>New Claude session: <em>“Please read journal cleanup process and follow the instructions.”</em>
+<ul>
+<li>(Acknowledges this should be a <strong>slash command or skill</strong> — kept explicit for the talk.)</li>
+</ul>
+</li>
+<li>Inputs: the process file, the journal, and a <strong>context file</strong> — here, a Markdown of the day’s Craft sessions (so names like “Gojko” get spelled correctly).</li>
+<li>The cleanup prompt is edit-only, e.g., “we ate four cookies, no wait five” → “we ate five cookies.”</li>
+<li>Output: paragraphs, formatting, corrected names. Still not <em>good</em>, but <strong>less bad</strong> — and a <strong>discrete step</strong>, so it’s committed again.</li>
+<li>Result labeled “generously, a first draft.”</li>
+</ul>
+<h4 id="stage-3--enrichment-via-the-interview-pattern" style="position:relative;"><a href="#stage-3--enrichment-via-the-interview-pattern" aria-label="stage 3  enrichment via the interview pattern permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Stage 3 — Enrichment via the Interview Pattern</h4>
+<ul>
+<li>Clear context; <em>“Please read journal refinement and follow the instructions.”</em></li>
+<li>Inversion of flow: vomit = <strong>letting it flow out</strong>; interview = <strong>having it pulled out of you.</strong> (“Two sides of the same coin” — his answers to interview questions are themselves vomit-pattern.)</li>
+<li>Uses voice: <strong><code class="language-text">say</code></strong> (built into macOS CLI) for text→speech, <strong>SuperWhisper</strong> for speech→text. (Windows: Win+H for dictation; a small PowerShell script for TTS.)</li>
+<li>Persona: at the retreat, Virginia Satir; day-to-day, a blend of <strong>Arlo Belshee and Trisha Broderick</strong> — “somewhere near Feisty Genius” in vector space.</li>
+<li>Live interview questions &#x26; answers:
+<ol>
+<li><em>What future-investment thing has Kent’s talk spotlighted as neglected?</em> → Wants AI to watch for <strong>module extraction opportunities</strong> (he builds and builds without splitting) and to flag <strong>security neglect</strong>.</li>
+<li><em>What was Gojko’s actual solution to the dangerously-skip-permissions problem?</em> → Two modes of working with Claude: full YOLO (<code class="language-text">--dangerously-skip-permissions</code>) vs. a <strong>custom validator</strong> — code that decides per-action whether something is acceptable and responds with granularity (e.g., read-only AWS commands allowed; mutating AWS commands blocked). Gojko uses AI to <em>write</em> the validator. This finally gives the speaker a way to tell clients <strong>“here’s how to use AI responsibly but still permissively”</strong> — resolving a long-standing dilemma (crippled AI vs. irresponsible advice).</li>
+<li><em>What did you and Mace actually talk about?</em> → Teams that genuinely support each other; shared the “Golden Balls” video; Mace’s tic-tac-toe story: win=3 pts, tie=1, loss=0 — Mace silently let his teammate win repeatedly, teammate swept the room, then split the prize with him. “That is exactly how a team should work: we are not against each other; we are on each other’s side.”</li>
+<li><em>How did your own 3:45 talk go?</em> → “I’m in the middle of it. I’ll tell you later.”</li>
+</ol>
+</li>
+<li>Output handling: <strong>do not modify the journal in place.</strong> Prefer <strong>lots of little steps that build new pieces</strong> → writes an <code class="language-text">enriched</code> file <em>alongside</em> the journal.</li>
+<li>Data framing: this is classic <strong>data enrichment</strong> — but the enrichment source is <em>him</em>, information that “isn’t on the internet yet” and can’t be obtained anywhere else.</li>
+</ul>
+<h4 id="stage-4--analysis--extraction" style="position:relative;"><a href="#stage-4--analysis--extraction" aria-label="stage 4  analysis  extraction permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Stage 4 — Analysis / Extraction</h4>
+<ul>
+<li>Clear context; <em>“Please read analysis and follow the instructions.”</em></li>
+<li>New goal: help him <strong>see patterns in himself</strong>, get feedback, become better.</li>
+<li>Live analysis exchange (notably incisive):
+<ul>
+<li>AI: “You ended with one line about your own talk — that’s a significant silence for someone who just spoke. What happened up there?”</li>
+<li>Him: not silence — the talk is literally still in progress; can’t evaluate yet.</li>
+<li>AI: “The feedback loop isn’t closed. What does sitting with that feel like?” → “Very uncomfortable.”</li>
+<li>AI: “Is the discomfort about the talk’s quality or about how <em>you</em> were received?” → Probably about being received; also raw exposure of the stage.</li>
+<li>AI: “You spent the day celebrating others — Claire, Gojko, Mace — then stepped on stage yourself. Why did this feel more exposed?” → Helping others feels internally safe and right; it’s harder when the lens turns on <em>him</em>.</li>
+<li>AI: “Is that why you naturally position yourself as the helper?” → (Time runs out — question left hanging, pointedly.)</li>
+</ul>
+</li>
+<li>Writes an <code class="language-text">analysis</code> file; he’d normally have <code class="language-text">say</code> read it aloud (again minimizing executive-function load) and read it <strong>later, alone</strong>.</li>
+</ul>
+<h3 id="44-pipeline-recap" style="position:relative;"><a href="#44-pipeline-recap" aria-label="44 pipeline recap permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.4 Pipeline Recap</h3>
+<ol>
+<li><strong>Create</strong> journal (Obsidian, today’s date, zero decisions)</li>
+<li><strong>Vomit</strong> (raw capture)</li>
+<li><strong>Cleanup</strong> (edit-only pass with context file)</li>
+<li><strong>Interview/Enrich</strong> (pull out what only you know)</li>
+<li><strong>Extract</strong> (analysis or any other product)</li>
+</ol>
+<ul>
+<li>Stages 1–4 are <em>creating data</em>; stage 5 is where the data becomes <strong>something useful for you</strong>.</li>
+</ul>
+<hr>
+<h2 id="5-the-bigger-picture--evolution-of-ai-practice" style="position:relative;"><a href="#5-the-bigger-picture--evolution-of-ai-practice" aria-label="5 the bigger picture  evolution of ai practice permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. The Bigger Picture — Evolution of AI Practice</h2>
+<h3 id="51-three-years-at-craft" style="position:relative;"><a href="#51-three-years-at-craft" aria-label="51 three years at craft permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5.1 Three Years at Craft</h3>
+<ul>
+<li><strong>2 years ago:</strong> Prompt engineering (“You are an expert Python programmer…“)</li>
+<li><strong>1 year ago:</strong> Agentic AI (AI <em>does</em> things, not just copy-paste)</li>
+<li><strong>This year:</strong> <strong>Building systems</strong> — many small, explicit, composable pieces that come together to produce the visible result.</li>
+<li>Knowledge that used to be <strong>ethereal</strong> (in heads, in “company knowledge”) is being materialized into concrete, reusable components. <em>(Echoes the Section 1 thesis: recognize abstractions, create reusable pieces.)</em></li>
+</ul>
+<h3 id="52-data-principles" style="position:relative;"><a href="#52-data-principles" aria-label="52 data principles permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5.2 Data Principles</h3>
+<ul>
+<li><strong>The journal entry is the core data.</strong> “Capture everything, because you can’t get it later.”</li>
+<li>Alternative capture channel: a <strong>private Slack channel</strong> he messages throughout the day, read later from the CLI.</li>
+<li>Mapping to <strong>Building a Second Brain</strong> (CODE: Capture → Organize → Distill → Express): AI now handles Organize and Distill — <strong>humans only need to Capture and Extract.</strong></li>
+</ul>
+<h3 id="53-the-extraction-step-is-pluggable" style="position:relative;"><a href="#53-the-extraction-step-is-pluggable" aria-label="53 the extraction step is pluggable permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5.3 The Extraction Step is Pluggable</h3>
+<p>Analysis (self-improvement) is just one terminal step. The same enriched data supports:</p>
+<ul>
+<li>Daily status for the team</li>
+<li>Achievements list → promotion case</li>
+<li>To-dos / productivity planning</li>
+<li>Weak points; <strong>blind spots</strong> (“things I’m not even weak at — I don’t even know”)</li>
+<li>Blog posts</li>
+<li>Risk analysis, time allocation, habits, OKRs</li>
+<li>Opportunity and trend spotting</li>
+<li>Year-end <strong>performance review</strong>, assembled from a year of entries</li>
+</ul>
+<h3 id="54-closing-thesis" style="position:relative;"><a href="#54-closing-thesis" aria-label="54 closing thesis permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5.4 Closing Thesis</h3>
+<blockquote>
+<p>“We are now at a place where you can ask one question — <strong>‘How would you like to be better?’</strong> — then give it your data, and be better in that way.”</p>
+</blockquote>
+<hr>
+<h2 id="6-key-patterns--techniques-index-cross-reference" style="position:relative;"><a href="#6-key-patterns--techniques-index-cross-reference" aria-label="6 key patterns  techniques index cross reference permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6. Key Patterns &#x26; Techniques Index (Cross-Reference)</h2>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>What it is</th>
+<th>Where used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pipelines over one-shot prompts</strong></td>
+<td>Decompose into discrete AI/non-AI steps, each committable</td>
+<td>All three stories</td>
+</tr>
+<tr>
+<td><strong>Vomit pattern</strong></td>
+<td>Zero-friction raw capture; defeats getting-started resistance</td>
+<td>Journaling; interview answers</td>
+</tr>
+<tr>
+<td><strong>Interview pattern</strong></td>
+<td>AI pulls information out of you that exists nowhere else</td>
+<td>Enrichment stage</td>
+</tr>
+<tr>
+<td><strong>Cleanup as edit-only pass</strong></td>
+<td>Separate mechanical correction from creation</td>
+<td>Journal stage 2</td>
+</tr>
+<tr>
+<td><strong>Context files</strong></td>
+<td>Ground the AI with day/session-specific facts</td>
+<td>Cleanup &#x26; interview</td>
+</tr>
+<tr>
+<td><strong>Knowledge documents / extract knowledge</strong></td>
+<td>AI writes a description of the artifact → description becomes the maintainable source</td>
+<td>Workout video regeneration</td>
+</tr>
+<tr>
+<td><strong>AI writes the generator, not the artifact</strong></td>
+<td>When AI is bad at the artifact (timing, text, length), have it write code that produces it</td>
+<td>Python → workout video</td>
+</tr>
+<tr>
+<td><strong>Fast feedback cycles</strong></td>
+<td>45-min/3GB render → 45-sec/3MB via 1 fps</td>
+<td>Video iteration</td>
+</tr>
+<tr>
+<td><strong>Small discrete steps, new files, commit each</strong></td>
+<td>Never mutate in place; build alongside</td>
+<td>Enriched/analysis files</td>
+</tr>
+<tr>
+<td><strong>Minimize executive function</strong></td>
+<td>No decisions; voice I/O; one-click capture</td>
+<td>ADHD-aware workflow design</td>
+</tr>
+<tr>
+<td><strong>Custom validators (Gojko)</strong></td>
+<td>AI-written per-action permission code — responsible <em>and</em> permissive alternative to <code class="language-text">--dangerously-skip-permissions</code></td>
+<td>Interview answer #2</td>
+</tr>
+<tr>
+<td><strong>Persona-driven analysis</strong></td>
+<td>Virginia Satir / Belshee–Broderick blend as interviewer voice</td>
+<td>Retreat &#x26; daily journaling</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-tools-mentioned" style="position:relative;"><a href="#7-tools-mentioned" aria-label="7 tools mentioned permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>7. Tools Mentioned</h2>
+<ul>
+<li><strong>Claude Code</strong> (with GitHub CLI integration)</li>
+<li><strong>Obsidian</strong> (daily notes), <strong>git</strong> (committing each pipeline stage)</li>
+<li><strong>Python</strong> (video generation script)</li>
+<li>macOS <strong><code class="language-text">say</code></strong> (TTS), <strong>SuperWhisper</strong> (STT); Windows equivalents: <strong>Win+H</strong>, PowerShell TTS script</li>
+<li><strong>Slack</strong> private channel as capture inbox, read via CLI</li>
+<li>Documentation framework: <strong>Daniele Procida’s four quadrants</strong> (Diátaxis)</li>
+<li>Referenced people: Kent Beck, Gojko Adzic, Ilias, Claire McRae, Scott (ApprovalTests Java), Stefan, Trisha Broderick, Arlo Belshee, Virginia Satir</li>
+</ul></section><hr/><footer><div class="bio"><div data-gatsby-image-wrapper="" style="width:50px;height:50px" class="gatsby-image-wrapper bio-avatar"><div aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear;background-color:#685848;width:50px;height:50px;position:relative"></div><picture><source type="image/avif" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/d4bf4/tony-avatar.avif 50w,/static/b811602c8c8ce14b66aae6613c8968f4/ee81f/tony-avatar.avif 100w" sizes="50px"/><source type="image/webp" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/3faea/tony-avatar.webp 50w,/static/b811602c8c8ce14b66aae6613c8968f4/6a679/tony-avatar.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="opacity:0" sizes="50px" decoding="async" loading="lazy" data-src="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg 50w,/static/b811602c8c8ce14b66aae6613c8968f4/64618/tony-avatar.jpg 100w" alt="Profile picture"/></picture><noscript><picture><source type="image/avif" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/d4bf4/tony-avatar.avif 50w,/static/b811602c8c8ce14b66aae6613c8968f4/ee81f/tony-avatar.avif 100w" sizes="50px"/><source type="image/webp" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/3faea/tony-avatar.webp 50w,/static/b811602c8c8ce14b66aae6613c8968f4/6a679/tony-avatar.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="opacity:0" sizes="50px" decoding="async" loading="lazy" src="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg 50w,/static/b811602c8c8ce14b66aae6613c8968f4/64618/tony-avatar.jpg 100w" alt="Profile picture"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><p>Written by <strong>Tony Vo</strong> <!-- -->father, husband, son and software developer<!-- --> <a href="https://twitter.com/ttrungvo">Twitter</a></p></div></footer></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/code-craft-2026/VIDEO-SUMMARY-WORKFLOW/">← </a></li><li><a rel="next" href="/code-craft-2026/learning-programming-ai-chelsea-troy/"> →</a></li></ul></nav><div><div id="disqus_thread"></div></div></main><footer>© <!-- -->2026<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.com">Gatsby</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/code-craft-2026/journaling-ai-llewellyn-falco/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-caaae074f08908c5ea03.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-0e3d2ee5b75aad22b3ab.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-4f88fd7969f7c120265b.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-faf61adc4f21a3453493.js\"],\"component---src-pages-using-typescript-tsx\":[\"/component---src-pages-using-typescript-tsx-a71142f2de4e781bfbb8.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-3de0178bad2d861c9da8.js\"],\"component---src-templates-tags-js\":[\"/component---src-templates-tags-js-396a8b4d37b1d972a6c6.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="966841a013e991e97c9c";</script><script src="/webpack-runtime-7acbfbc0d227772abee5.js" async></script><script src="/framework-e75fb5c5045cd0ea1168.js" async></script><script src="/app-caaae074f08908c5ea03.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
