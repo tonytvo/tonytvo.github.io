@@ -51,44 +51,825 @@
         }
       }
     })
-  </script></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="global-wrapper" data-is-root-path="false"><header class="global-header"><a class="header-link-home" href="/">Conversations on agile technical practices and investments</a></header><main><article class="blog-post" itemScope="" itemType="http://schema.org/Article"><header><h1 itemProp="headline">Patterns for Coding with AI – Lada Kesseler | Craft 2026</h1><p>June 04, 2026</p></header><section itemProp="articleBody"><h1 id="patterns-for-coding-with-ai--lada-kesseler-workshop-outline" style="position:relative;"><a href="#patterns-for-coding-with-ai--lada-kesseler-workshop-outline" aria-label="patterns for coding with ai  lada kesseler workshop outline permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Patterns for Coding with AI – Lada Kesseler (Workshop Outline)</h1>
-<blockquote>
-<p>Lada Kesseler (15+ years) shares a dense catalog of ~29 hands-on <strong>patterns</strong> for controlling coding agents, organized in three “trails”: <strong>context management</strong>, <strong>reliability/quality</strong>, and <strong>smart communication</strong>. Patterns exist to <em>communicate, teach, and combine</em> techniques.</p>
-</blockquote>
+  </script></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="global-wrapper" data-is-root-path="false"><header class="global-header"><a class="header-link-home" href="/">Conversations on agile technical practices and investments</a></header><main><article class="blog-post" itemScope="" itemType="http://schema.org/Article"><header><h1 itemProp="headline">Patterns for Coding with AI – Lada Kesseler | Craft 2026</h1><p>June 04, 2026</p></header><section itemProp="articleBody"><h1 id="coding-with-ai-patterns-for-controlling-the-genie" style="position:relative;"><a href="#coding-with-ai-patterns-for-controlling-the-genie" aria-label="coding with ai patterns for controlling the genie permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Coding with AI: Patterns for Controlling the Genie</h1>
+<h2 id="detailed-talk-outline--craft-conference-90-minute-session-29-patterns" style="position:relative;"><a href="#detailed-talk-outline--craft-conference-90-minute-session-29-patterns" aria-label="detailed talk outline  craft conference 90 minute session 29 patterns permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Detailed Talk Outline — Craft Conference (~90-minute session, 29 patterns)</h2>
+<p><strong>Speaker:</strong> L. Kesler (engineer, 15+ years of experience)
+<strong>Framing:</strong> Builds on Kent Beck’s “genie” keynote metaphor — AI as the genie that grants wishes, but not quite what you wanted. The talk is organized as three “trails” through new territory, guided by someone who “discovered it last week and knows some trails.”</p>
 <hr>
-<h2 id="1-trail-1--context-management" style="position:relative;"><a href="#1-trail-1--context-management" aria-label="1 trail 1  context management permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Trail 1 — Context Management</h2>
+<h2 id="0-introduction--framing" style="position:relative;"><a href="#0-introduction--framing" aria-label="0 introduction  framing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>0. Introduction &#x26; Framing</h2>
+<h3 id="01-the-experience-of-the-last-two-years" style="position:relative;"><a href="#01-the-experience-of-the-last-two-years" aria-label="01 the experience of the last two years permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>0.1 The experience of the last two years</h3>
 <ul>
-<li><strong>LLMs can’t learn from you</strong> (fixed weights, stateless). The “memory” is a lie: your prompt is really the <strong>whole concatenated conversation</strong> re-sent each turn — longer conversations cost more and <strong>degrade</strong> (“context rot”) long before the window limit.</li>
-<li><strong>Knowledge Document</strong> — when something valuable (TDD process, project facts) is in context, <strong>save it to a file</strong> so you can reset cleanly and reload it. Most-important bits go in <strong>always-on ground rules</strong> (<code class="language-text">AGENTS.md</code>/<code class="language-text">CLAUDE.md</code>/rules) — keep them minimal.</li>
-<li><strong>Focused Agent</strong> — attention is a scarce resource; a <strong>specialist</strong> (e.g., a dedicated “committer” agent with your commit rules + ground rules) becomes <strong>proactively helpful</strong> (“you’re about to commit <code class="language-text">node_modules</code>”) where a generalist never was. <strong>Anything in context that isn’t followed is actively harmful.</strong></li>
-<li><strong>References</strong> — split knowledge into pulled-in-as-needed files (maps, guides, playbooks, to-dos, scratchpads) by <strong>separating concerns</strong> so you load only front-end <em>or</em> back-end.</li>
-<li><strong>Skills</strong> = ground rules + references + <strong>progressive disclosure</strong> (only the front-matter loads until needed) — cheaper than old MCPs that flood context.</li>
-<li><strong>Semantic Zoom / Noise Cancellation</strong> — AI is too verbose; force succinctness (“be succinct / TL;DR”), zoom in with questions, delete mercilessly, separate temp vs. permanent files (ASCII diagrams are handy). <strong>External Context</strong> — offload side-quests to another agent/sub-agent to protect space and attention.</li>
+<li>To an engineer, agentic AI feels like madness: “Hey genie, write me some software” → working software comes out (usually, hopefully)</li>
+<li>To a product manager, this is just normal life — you ask an engineer for code, sometimes it works, you iterate</li>
+<li>Speaker’s origin story:
+<ul>
+<li>Started when agentic coding became a thing; was initially in denial (early tools were genuinely bad)</li>
+<li>Breakthrough moment: as a backend-only developer, built a working front end in one evening, step by step, with AI — then received compliments for “design skills that don’t exist”</li>
+<li>That kind of experience forces you to pay attention</li>
 </ul>
-<h2 id="2-trail-2--reliability-under-non-determinism" style="position:relative;"><a href="#2-trail-2--reliability-under-non-determinism" aria-label="2 trail 2  reliability under non determinism permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Trail 2 — Reliability Under Non-Determinism</h2>
-<ul>
-<li>Non-determinism is a problem <em>and</em> a tool (like the 1950s memory-reliability problem — solvable).</li>
-<li><strong>Knowledge Checkpoint</strong> — before implementing, save the plan to markdown and <strong>commit</strong>, so you can roll back cheaply (and Claude is “super eager” — make it document first).</li>
-<li><strong>Parallel Implementations</strong> — roll the die several times (worktrees), pick the best or <strong>combine</strong> pieces (great for front-ends).</li>
-<li><strong>Right Tool for the Job</strong> — don’t hammer everything with AI; have it <strong>write a reliable script/tool</strong> (screenshot script, “count the r’s in strawberry”) instead of doing the task non-deterministically each time.</li>
-<li><strong>Unvalidated Leaps</strong> → slow down, validate each step; <strong>predictive TDD</strong> (predict pass/fail) keeps the model close to reality and forces small steps.</li>
-<li><strong>Chain of Small Steps</strong> — “make many more smaller steps” (GeePaw Hill); e.g., hardcode a version number → script to increment → git hook (right tool, focused agent, checkpoints).</li>
-<li><strong>AI Slop</strong> — don’t expect a single pass to be good. <strong>Flip it:</strong> coder + reviewer (two agents, or one context: “now find all the problems”) — the model isn’t bad at <em>recognizing</em> problems, it’s an attention/intention issue. <strong>Refinement Loop</strong> — set a goal (simplest refactoring, “get to the gist”), <strong>commit after each step</strong> (forces real iteration), repeat until nothing to improve, <em>then</em> review (a “centrifuge” that spins out the slop before human review).</li>
-<li><strong>Selective Hearing</strong> — some instructions won’t stick (training noise: “don’t comment my code” is even in Claude’s system prompt; Whisper hallucinating “like and subscribe” on silence). Fix by <strong>letting it happen then removing</strong> (iterate), or <strong>refocusing</strong> via recency bias — <strong>hooks</strong> (deterministic life-cycle interception, e.g., a comment-detector that makes the agent behave), <strong>to-dos/lists</strong>, and the <strong>instruction sandwich</strong> (put “run tests” before and after steps).</li>
+</li>
 </ul>
-<h2 id="3-trail-3--smarter-communication" style="position:relative;"><a href="#3-trail-3--smarter-communication" aria-label="3 trail 3  smarter communication permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Trail 3 — Smarter Communication</h2>
+<h3 id="02-the-central-question-how-do-you-control-this-thing" style="position:relative;"><a href="#02-the-central-question-how-do-you-control-this-thing" aria-label="02 the central question how do you control this thing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>0.2 The central question: how do you control this thing?</h3>
+<p>Points of leverage available to the developer:</p>
+<ol>
+<li><strong>Yourself</strong> — the developer’s own behavior (navigate, avoid, automate)</li>
+<li><strong>The foundational model</strong> — local or cloud; fixed, mostly out of your control</li>
+<li><strong>The agentic coding tool</strong> — Claude Code, Cursor, Pi, Codex, etc.; you can choose it</li>
+<li><strong>Configuration</strong> — defaults often don’t make sense; you can tweak</li>
+<li><strong>Tools</strong> — you can enhance the coding tool with tools you give it</li>
+</ol>
+<h3 id="03-why-patterns" style="position:relative;"><a href="#03-why-patterns" aria-label="03 why patterns permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>0.3 Why patterns?</h3>
 <ul>
-<li>Two compounding problems: <strong>hidden internals</strong> (its “mental model” can silently differ from yours) and <strong>compliance bias</strong> (trained to please). → <strong>Silent Misalignment</strong> (e.g., “make the panels even” failed because the agent saw only <code class="language-text">div</code>s, not your “top/bottom panels”; coloring them revealed the mismatch).</li>
-<li><strong>Active Partner</strong> — put into ground rules: <em>tell me what I need to hear even if I don’t want to; push back when something’s wrong; ask questions when unclear; don’t randomly choose</em> (Elizabeth Hendrickson’s rule).</li>
-</ul>
-<h2 id="4-practical-qa-nuggets" style="position:relative;"><a href="#4-practical-qa-nuggets" aria-label="4 practical qa nuggets permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Practical Q&#x26;A Nuggets</h2>
-<ul>
-<li>Instructions are interpreted differently per model — introduce <strong>stability</strong> and re-tune; <strong>read the vendor’s guidance</strong> for each new model (Opus 4.8 gets “stressed” by shouting).</li>
-<li>Keep to-do/scratch files out of PRs via a <strong>separate “brain” repo</strong> or a git-ignored <strong>playground</strong> folder where the agent can experiment before you extract validated knowledge into skills.</li>
-<li><strong>Full autonomy</strong> doesn’t reliably work yet — build <strong>reliable primitives</strong> (a trustworthy refactoring/TDD skill) first, tested with parallel runs/evals; consider cheaper/local models and an <strong>advisor pattern</strong> (strong main model + sub-agents for discovery to save tokens).</li>
+<li>Patterns allow communication: you can <em>name</em> a thing</li>
+<li>AI-assisted work is notoriously hard to teach (“come stare at a screen with me and wait five minutes”); patterns give teachable units</li>
+<li>Patterns can be taught to strangers and combined in interesting ways</li>
+<li>Speaker’s disclaimer: these are <em>his</em> patterns, not an attempt at authority — but they’ve helped him and others</li>
+<li>29 patterns total, organized into three tracks:
+<ol>
+<li><strong>Context management</strong></li>
+<li><strong>Reliability and quality</strong> (nondeterminism)</li>
+<li><strong>Smart communication</strong></li>
+</ol>
+</li>
+<li>Companion resources: slides, pattern map, catalog website, patterns repository (PRs welcome)</li>
 </ul>
 <hr>
-<p><em>Video: <a href="https://www.youtube.com/watch?v=gTgEZsfyzoo">https://www.youtube.com/watch?v=gTgEZsfyzoo</a> — Transcript via yt-transcript.sh; outline generated from the transcript (partial for a long transcript).</em></p></section><hr/><footer><div class="bio"><div data-gatsby-image-wrapper="" style="width:50px;height:50px" class="gatsby-image-wrapper bio-avatar"><div aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear;background-color:#685848;width:50px;height:50px;position:relative"></div><picture><source type="image/avif" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/d4bf4/tony-avatar.avif 50w,/static/b811602c8c8ce14b66aae6613c8968f4/ee81f/tony-avatar.avif 100w" sizes="50px"/><source type="image/webp" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/3faea/tony-avatar.webp 50w,/static/b811602c8c8ce14b66aae6613c8968f4/6a679/tony-avatar.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="opacity:0" sizes="50px" decoding="async" loading="lazy" data-src="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg 50w,/static/b811602c8c8ce14b66aae6613c8968f4/64618/tony-avatar.jpg 100w" alt="Profile picture"/></picture><noscript><picture><source type="image/avif" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/d4bf4/tony-avatar.avif 50w,/static/b811602c8c8ce14b66aae6613c8968f4/ee81f/tony-avatar.avif 100w" sizes="50px"/><source type="image/webp" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/3faea/tony-avatar.webp 50w,/static/b811602c8c8ce14b66aae6613c8968f4/6a679/tony-avatar.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="opacity:0" sizes="50px" decoding="async" loading="lazy" src="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg 50w,/static/b811602c8c8ce14b66aae6613c8968f4/64618/tony-avatar.jpg 100w" alt="Profile picture"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><p>Written by <strong>Tony Vo</strong> <!-- -->father, husband, son and software developer<!-- --> <a href="https://twitter.com/ttrungvo">Twitter</a></p></div></footer></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/code-craft-2026/platform-as-a-product-a-dive-into-the-technical-foundations-abby-bangser-craft-2026/">← <!-- -->Platform as a Product: A dive into the Technical Foundations – Abby Bangser | Craft 2026</a></li><li><a rel="next" href="/code-craft-2026/predicting-the-future-of-distributed-systems-colin-breck-craft-2025/">Predicting the Future of Distributed Systems - Colin Breck | Craft 2025<!-- --> →</a></li></ul></nav><div><div id="disqus_thread"></div></div></main><footer>© <!-- -->2026<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.com">Gatsby</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/code-craft-2026/patterns-for-coding-with-ai-lada-kesseler-craft-2026/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+<h2 id="track-1-context-management" style="position:relative;"><a href="#track-1-context-management" aria-label="track 1 context management permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>TRACK 1: CONTEXT MANAGEMENT</h2>
+<h2 id="1-foundational-problem-llms-cant-learn-from-you" style="position:relative;"><a href="#1-foundational-problem-llms-cant-learn-from-you" aria-label="1 foundational problem llms cant learn from you permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Foundational Problem: LLMs Can’t Learn From You</h2>
+<h3 id="11-fixed-model-weights" style="position:relative;"><a href="#11-fixed-model-weights" aria-label="11 fixed model weights permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1.1 Fixed model weights</h3>
+<ul>
+<li>The model learned up to a training cutoff; no more learning after that</li>
+<li>You cannot change its mind or “teach it” through conversation — you can do other things, but the fundamental thing you’re talking to never changes</li>
+</ul>
+<h3 id="12-statelessness--the-memory-you-get-is-a-lie" style="position:relative;"><a href="#12-statelessness--the-memory-you-get-is-a-lie" aria-label="12 statelessness  the memory you get is a lie permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1.2 Statelessness — “the memory you get is a lie”</h3>
+<ul>
+<li>Talking to an LLM via raw API (highly recommended for understanding) reveals it:
+<ul>
+<li>“Pick a random number” → “Seven” → “Is it even?” → “Is <em>what</em> even?”</li>
+<li>The model only sees the last message; it forgot everything</li>
+</ul>
+</li>
+<li>All tooling on the planet <em>pretends</em> memory exists via the <strong>context window</strong>:
+<ul>
+<li>Conversation starts with an empty window</li>
+<li>Each prompt: the <em>entire history</em> (your questions, AI responses, tool calls, MCP tool definitions, system prompt) is concatenated and re-sent</li>
+<li>Your “new prompt” is not the last message — it is the whole conversation</li>
+</ul>
+</li>
+<li>Consequences:
+<ul>
+<li>Longer conversations cost more (tokens regenerate, with some caching)</li>
+<li>The tool sneaks the whole conversation in without you noticing</li>
+<li>Even as tools improve, the underlying mechanics remain — “it will do the right thing once and fail the other 50 times, so it’s better to know this stuff”</li>
+</ul>
+</li>
+<li>Only operations available on context: <strong>append</strong> and <strong>reset</strong> (sometimes rollback)</li>
+</ul>
+<h3 id="13-context-rot--the-window-is-not-uniform" style="position:relative;"><a href="#13-context-rot--the-window-is-not-uniform" aria-label="13 context rot  the window is not uniform permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1.3 Context rot — the window is not uniform</h3>
+<ul>
+<li>Context degrades as the conversation progresses: the LLM follows fewer and fewer of your instructions (“sorry boss, I forgot”)</li>
+<li>Degradation begins <strong>long before</strong> the advertised context-window limit (e.g., “1 million tokens”) is reached</li>
+<li>Mental model: performance is good early, degrades gradually, then “plummets to death”</li>
+<li>Conclusion: you cannot just put things in context and forget — <strong>context must be actively managed</strong></li>
+</ul>
+<hr>
+<h2 id="2-pattern-knowledge-document-2" style="position:relative;"><a href="#2-pattern-knowledge-document-2" aria-label="2 pattern knowledge document 2 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Pattern: Knowledge Document (#2)</h2>
+<ul>
+<li>The context window is ephemeral and gets dirty; within it are a few “golden pieces” — the valuable things you explained (your TDD process, how the project works, what you want)</li>
+<li>When the context degrades or fills up, you want to reset <em>without losing the gold</em></li>
+<li><strong>The pattern:</strong> whenever something of value emerges in an ephemeral conversation, save it to a file
+<ul>
+<li>New context + load the file = clean window containing only the valuable parts</li>
+<li>Makes hitting “reset” cheap and psychologically easy</li>
+</ul>
+</li>
+<li>Simple, surprisingly powerful, and still not universally practiced; teams that do it report much more success</li>
+</ul>
+<h2 id="3-pattern-ground-rules-always-on-documents" style="position:relative;"><a href="#3-pattern-ground-rules-always-on-documents" aria-label="3 pattern ground rules always on documents permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Pattern: Ground Rules (always-on documents)</h2>
+<ul>
+<li>So important that tools began implementing it natively (~April of the previous year, first seen in Windsurf)</li>
+<li>Implementations: <code class="language-text">CLAUDE.md</code>, <code class="language-text">AGENT.md</code>, Windsurf rules, Cursor rules — at user level and project level</li>
+<li>Analogy: “put out the fire before moving on” — ground rules are <em>always on</em>, loaded into every fresh context</li>
+<li><strong>Discipline:</strong> only put the <em>most important</em> bits there
+<ul>
+<li>People shove everything in; this backfires (see distracted agent / attention limits below)</li>
+<li>Key question to always hold: <em>what is in my context all the time?</em></li>
+</ul>
+</li>
+</ul>
+<h2 id="4-pattern-extract-knowledge-genie-hit-save" style="position:relative;"><a href="#4-pattern-extract-knowledge-genie-hit-save" aria-label="4 pattern extract knowledge genie hit save permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Pattern: Extract Knowledge (“Genie, hit save”)</h2>
+<ul>
+<li>How do you get knowledge documents? Write them yourself — or have the genie write them</li>
+<li>After a valuable conversation: “Hey genie, save that for me” → it writes the file</li>
+<li>Not perfect; noise management matters a lot (see Noise Cancellation), but it’s a very good habit</li>
+<li>You can both create and modify documents this way</li>
+</ul>
+<h2 id="5-why-not-one-big-file-separation-of-concerns-for-knowledge" style="position:relative;"><a href="#5-why-not-one-big-file-separation-of-concerns-for-knowledge" aria-label="5 why not one big file separation of concerns for knowledge permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. Why Not One Big File? (Separation of concerns for knowledge)</h2>
+<ul>
+<li>Context window is fixed size; everything competes for the space — a mega-file probably won’t fit anyway</li>
+<li>Thought experiment: a tiny 5-sentence window forces a choice when full. Tools handle overflow differently:
+<ol>
+<li><strong>Silently drop</strong> old content (early Windsurf — content rolls out of an “infinite” window without telling you)</li>
+<li><strong>Summarize</strong> (Claude Code compaction — lossy, problematic)</li>
+<li><strong>Error out</strong> (“too big” — typical of raw APIs)</li>
+</ol>
+</li>
+<li>If everything lives in one <code class="language-text">project.md</code> (project info + Python style + JS style + frontend test plan + backend plan…), you can only pull in <em>all of it</em>; irrelevant content pollutes the context</li>
+<li><strong>Split files by concern</strong> so you can pull in exactly one relevant piece (e.g., frontend work shouldn’t drag in backend rules)</li>
+</ul>
+<h2 id="6-anti-pattern-distracted-agent-5--pattern-focused-agent-6" style="position:relative;"><a href="#6-anti-pattern-distracted-agent-5--pattern-focused-agent-6" aria-label="6 anti pattern distracted agent 5  pattern focused agent 6 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6. Anti-pattern: Distracted Agent (#5) → Pattern: Focused Agent (#6)</h2>
+<h3 id="61-the-story" style="position:relative;"><a href="#61-the-story" aria-label="61 the story permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6.1 The story</h3>
+<ul>
+<li>Ground rules adopted from Elizabeth Hendrickson: <em>“Be very honest. Tell me something I need to know even if I don’t want to hear it.”</em></li>
+<li>Speaker added his own: <em>“Be proactive and flag issues before they become problems”</em> — then waited a long time and it never fired</li>
+<li>Cause: he was running one generalist Claude Code doing <em>everything</em>, including commits; commit rules were buried among unrelated content</li>
+</ul>
+<h3 id="62-the-fix-a-specialist-agent" style="position:relative;"><a href="#62-the-fix-a-specialist-agent" aria-label="62 the fix a specialist agent permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6.2 The fix: a specialist agent</h3>
+<ul>
+<li>Split the committer into its own small agent (“I say <code class="language-text">c</code> because I’m lazy”)</li>
+<li>Results — behavior went from <strong>never to always</strong>:
+<ul>
+<li>“You’re about to commit your <code class="language-text">.env</code> models — did you mean to?” (with a nod to James Shore having a counterpoint on committing env files in some cases)</li>
+<li>“You violated your own naming convention”</li>
+<li>Flagged a weird PDF file; nowadays even catches bugs</li>
+</ul>
+</li>
+<li>Why it works: the specialist has only commit rules + ground rules in context, so it has the <em>attention capacity</em> to actually be proactive</li>
+<li>Speaker’s working setup: terminal (Ghostty) with tabs — two Claude instances criticizing/improving each other, a small committer, other bots; heavy splitting</li>
+</ul>
+<h3 id="63-the-hard-lesson-about-instructions" style="position:relative;"><a href="#63-the-hard-lesson-about-instructions" aria-label="63 the hard lesson about instructions permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6.3 The hard lesson about instructions</h3>
+<ul>
+<li>LLM focus is limited; it does not prioritize everything equally</li>
+<li><strong>Anything in your context that is not being followed is actively harmful</strong> — it consumes space <em>and</em> degrades everything else</li>
+<li>Be extremely conscious of what you put where</li>
+</ul>
+<h2 id="7-pattern-references-7--the-knowledge-library" style="position:relative;"><a href="#7-pattern-references-7--the-knowledge-library" aria-label="7 pattern references 7  the knowledge library permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>7. Pattern: References (#7) — the knowledge library</h2>
+<ul>
+<li>Ground rules = always on (e.g., “speak succinctly” — terseness matters enough to be global)</li>
+<li>Everything else = pulled in <strong>as needed</strong>:
+<ul>
+<li><strong>Maps</strong> (<code class="language-text">map.md</code> — where things are, so the agent doesn’t re-grep every time)</li>
+<li><strong>Guides</strong> (code style preferences)</li>
+<li><strong>Playbooks</strong> (TDD process with an example)</li>
+<li><strong>To-do lists</strong> (“magical things”)</li>
+<li><strong>Scratch pads</strong> (throwaway documents — help maintain the signal-to-noise ratio)</li>
+</ul>
+</li>
+<li>Working rhythm: fresh context starts with ground rules; you deliberately pull in <code class="language-text">nullables.md</code> (à la James Shore — fast tests without full hexagonal refactoring), then the TDD playbook, etc.</li>
+<li>The knowledge library accumulates over time and makes you more powerful — it <em>is</em> your toolbox</li>
+</ul>
+<h2 id="8-skills--ground-rules--references--progressive-disclosure" style="position:relative;"><a href="#8-skills--ground-rules--references--progressive-disclosure" aria-label="8 skills  ground rules  references  progressive disclosure permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>8. Skills = Ground Rules + References + Progressive Disclosure</h2>
+<ul>
+<li>Speaker deliberately has no pattern named “skills” — skills are a (possibly fleeting) <em>manifestation</em> of more durable underlying patterns</li>
+<li>Anatomy of a skill:
+<ul>
+<li><code class="language-text">SKILL.md</code> with <strong>front matter</strong> — the trigger description telling the genie <em>when</em> to invoke it; should be tiny; many people write this badly</li>
+<li><strong>References</strong> — pointers to other files</li>
+</ul>
+</li>
+<li><strong>Progressive disclosure</strong> (“fancy way of saying the genie pulls it in when it needs it”):
+<ol>
+<li>Initially only front matter sits in context — cheap</li>
+<li>When triggered, only <code class="language-text">SKILL.md</code> loads</li>
+<li>The genie pulls referenced files (scripts, sub-documents) itself, only as needed</li>
+</ol>
+</li>
+<li>Contrast with old-style MCPs, which “garbage the whole context” with every tool description up front</li>
+</ul>
+<h2 id="9-problem-ai-is-noisy-by-default" style="position:relative;"><a href="#9-problem-ai-is-noisy-by-default" aria-label="9 problem ai is noisy by default permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>9. Problem: AI Is Noisy by Default</h2>
+<ul>
+<li>Double harm: overloads <em>you</em> and pollutes your <em>documents</em></li>
+<li>Example: learning Rust, asks “what is this <code class="language-text">cargo.toml</code> thingy?” → gets a wall of detail he doesn’t care about</li>
+<li>Global fix in ground rules: “much more succinct, please” (“caveman speak if you like”)
+<ul>
+<li>Result: “cargo.toml is the project manifest — like package.json” → level of detail now matches level of curiosity</li>
+</ul>
+</li>
+</ul>
+<h3 id="91-pattern-semantic-zoom-9" style="position:relative;"><a href="#91-pattern-semantic-zoom-9" aria-label="91 pattern semantic zoom 9 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>9.1 Pattern: Semantic Zoom (#9)</h3>
+<ul>
+<li>A genuinely new capability (~3 years old): you can zoom in and out of <em>text</em> the way you could with images
+<ul>
+<li><strong>Zoom in:</strong> ask questions, “tell me more” → deepens understanding, delivers exactly the information wanted</li>
+<li><strong>Zoom out:</strong> “shorter,” “more succinct,” “TL;DR” → distills meaning</li>
+</ul>
+</li>
+<li>Same information looks different at different zoom levels; using this <em>intentionally</em> is powerful</li>
+</ul>
+<h3 id="92-pattern-noise-cancellation-10" style="position:relative;"><a href="#92-pattern-noise-cancellation-10" aria-label="92 pattern noise cancellation 10 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>9.2 Pattern: Noise Cancellation (#10)</h3>
+<ul>
+<li>Force succinctness everywhere, especially in knowledge documents</li>
+<li>This is what separates <strong>sustainable</strong> documentation from unmaintainable documentation (“pretty much like your code”)</li>
+<li>Don’t sit and carefully read a page of default AI output — “this is a crazy token machine; tune it to what you want”</li>
+<li><strong>Delete mercilessly</strong> — git is your friend; distinguish temporary vs. permanent files
+<ul>
+<li>One noisy person with a noisy AI is bad; five of them on one project becomes crazy very quickly</li>
+</ul>
+</li>
+<li>ASCII diagrams aside (poking at Kafka architecture):
+<ul>
+<li>Prefers ASCII over Mermaid because it stays in the same tool — you can read it, tweak it, and hand it back</li>
+</ul>
+</li>
+<li>Noise is not just text volume:
+<ul>
+<li>Keep tests high-level and scannable (credits Emily Bache / Ivett Ördög-adjacent techniques)</li>
+<li>Debug at a high level: “let’s go high level — what does this do?” — poking this way located a bug in vibe-coded work quickly</li>
+</ul>
+</li>
+</ul>
+<h2 id="10-pattern-external-context-11" style="position:relative;"><a href="#10-pattern-external-context-11" aria-label="10 pattern external context 11 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>10. Pattern: External Context (#11)</h2>
+<ul>
+<li>When a side quest erupts mid-task (e.g., troubleshooting tooling), leaving it in the main context steals both <strong>space</strong> and <strong>attention</strong></li>
+<li>Move it elsewhere: a separate agent/window, or a <strong>sub-agent</strong> that does the side work and returns only a small summary</li>
+<li>Many different implementations; one idea</li>
+</ul>
+<h3 id="track-1-recap" style="position:relative;"><a href="#track-1-recap" aria-label="track 1 recap permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Track 1 recap</h3>
+<ul>
+<li>AI can’t learn → build its memory from documents (knowledge library)</li>
+<li>Context rot is real → manage context deliberately</li>
+<li>Attention is scarce → focused/specialist agents are magical</li>
+<li>AI is noisy → semantic zoom + noise cancellation + external context keep you sane</li>
+</ul>
+<hr>
+<h2 id="track-2-nondeterminism-reliability--quality" style="position:relative;"><a href="#track-2-nondeterminism-reliability--quality" aria-label="track 2 nondeterminism reliability  quality permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>TRACK 2: NONDETERMINISM, RELIABILITY &#x26; QUALITY</h2>
+<h2 id="11-reframing-nondeterminism" style="position:relative;"><a href="#11-reframing-nondeterminism" aria-label="11 reframing nondeterminism permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>11. Reframing Nondeterminism</h2>
+<ul>
+<li>Nondeterminism is both problem <em>and</em> solution — weird for engineers, but not new in kind</li>
+<li>Kent Beck (masterclass anecdote): in the 1950s, memory itself wasn’t reliable — bits flipped — and engineers made it reliable anyway. “I think we can too.”</li>
+</ul>
+<h2 id="12-pattern-knowledge-checkpoint-12" style="position:relative;"><a href="#12-pattern-knowledge-checkpoint-12" aria-label="12 pattern knowledge checkpoint 12 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>12. Pattern: Knowledge Checkpoint (#12)</h2>
+<ul>
+<li>You spend 30 minutes planning with the genie; if you go straight to implementation and it fails, rolling back means re-creating scattered, ephemeral knowledge</li>
+<li><strong>The pattern:</strong> before implementation, force a checkpoint — “save what we just discussed into a markdown” (Extract Knowledge) and <strong>commit it</strong></li>
+<li>Now rollback is a nothing game: wipe context, point at the file, retry</li>
+<li>Real example (Hack for Good, 3-day project): keyboard-support feature → discuss → save to markdown → commit → “look at the last commit and implement”</li>
+<li>Practical friction: Claude is <em>eager</em> — it wants to implement immediately; you must repeatedly say “no, stop, document this first”</li>
+<li>Checkpoints protect invested planning time and enable further patterns (branching, parallel runs)</li>
+</ul>
+<h2 id="13-pattern-parallel-implementations-13" style="position:relative;"><a href="#13-pattern-parallel-implementations-13" aria-label="13 pattern parallel implementations 13 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>13. Pattern: Parallel Implementations (#13)</h2>
+<ul>
+<li>Toy example: puppy names — asking for <em>several</em> options yields “Waffle,” plus the emergent idea of nicknames; seeing more surfaces more ideas (“an instrument of vision”)</li>
+<li>Real example (Big Agile pairing session, Ricochet Robots game): three parallel implementations — one had a better labyrinth, one better movement, one better arrows → “take this part from this one, that part from that one” → combined result</li>
+<li>Mechanics: with a knowledge checkpoint you can branch (git worktrees or otherwise) and roll the dice several times
+<ul>
+<li>More rolls → higher chance one succeeds</li>
+<li>Cross-pollination of ideas between attempts</li>
+</ul>
+</li>
+<li>Especially good for front ends (acknowledges Claude Design has made this partly obsolete, but still likes it)</li>
+</ul>
+<h2 id="14-pattern-right-tool-for-the-job-14" style="position:relative;"><a href="#14-pattern-right-tool-for-the-job-14" aria-label="14 pattern right tool for the job 14 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>14. Pattern: Right Tool for the Job (#14)</h2>
+<ul>
+<li>Anti-tendency: once you have the AI hammer, everything looks like a nail</li>
+<li>Screenshot example (Hack for Good demo): needed a repeatable screenshot
+<ul>
+<li>Bad: “take a screenshot using the Puppeteer MCP” — unreliable, unrepeatable, done differently every time</li>
+<li>Good: “write me a shell script that captures the screen” — now both you <em>and</em> the genie have a deterministic tool, reliable every time</li>
+</ul>
+</li>
+<li>Strawberry-counting aside: Chelsea Troy’s take on why LLMs miscount letters (multilingual training data spells “strawberry” differently); the reliable fix is the same — <em>write a script</em></li>
+<li>Principle: code is good at deterministic work; use AI to <em>produce</em> the deterministic tool, not to <em>be</em> it</li>
+</ul>
+<h2 id="15-anti-pattern-unvalidated-leaps-15" style="position:relative;"><a href="#15-anti-pattern-unvalidated-leaps-15" aria-label="15 anti pattern unvalidated leaps 15 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>15. Anti-pattern: Unvalidated Leaps (#15)</h2>
+<ul>
+<li>Multi-step process fails at the last step; the model checked some intermediate states but not all — the error was upstream</li>
+<li>Human parallel: junior-career story of a colleague writing three hours of PL/SQL without running it once — piles of unvalidated assumptions (“do you know this returns a string? do you know that time format?”); unsurprisingly it didn’t compile</li>
+<li>Remedies:
+<ul>
+<li><strong>Slow it down; validate each step</strong> when blocked</li>
+<li><strong>Predictive TDD:</strong> do TDD <em>and</em> predict whether/how each test will fail before running
+<ul>
+<li>For humans: maintains the mental model; a mismatch is a wake-up signal</li>
+<li>For the genie: same effect — keeps it tethered to reality, forces small steps, prevents giant leaps</li>
+</ul>
+</li>
+<li>Rebuttal to “TDD isn’t possible with AI” (from a previous day’s talk): it absolutely is — there’s a skill for it in the speaker’s Skill Factory</li>
+</ul>
+</li>
+</ul>
+<h2 id="16-pattern-chain-of-small-steps-16" style="position:relative;"><a href="#16-pattern-chain-of-small-steps-16" aria-label="16 pattern chain of small steps 16 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>16. Pattern: Chain of Small Steps (#16)</h2>
+<ul>
+<li>AI struggles under complexity; <em>someone</em> has to manage it — you, for/with it</li>
+<li>Guiding quote (GeePaw Hill): <strong>“Make many more, much smaller steps”</strong> — “an answer for many things in life”</li>
+<li>A giant leap is opaque; small steps give checkpoints where you can observe, steer, and learn as you go</li>
+<li>Worked example — version number in the UI (needed to tell whether a deployed build contained a feature):
+<ul>
+<li><strong>What not to do:</strong> put “always increment the version number on each feature” in <code class="language-text">CLAUDE.md</code> — violates low determinism; AI won’t reliably follow it. What follows instructions reliably? <strong>Git hooks.</strong></li>
+<li>Three steps, each trivially cheap:
+<ol>
+<li>“Add a hardcoded version constant shown in the interface” — done, does nothing else</li>
+<li>“Make me a script that bumps it by one each run” — now there’s a reliable tool</li>
+<li>“Implement a git hook that calls the script” — messes up a few times, then works; now it’s automated <em>and out of the agent’s context entirely</em></li>
+</ol>
+</li>
+<li>Patterns stacked in this tiny example: chain of small steps + right tool for the job + focused agent (+ knowledge checkpoints if the task were bigger)</li>
+</ul>
+</li>
+</ul>
+<h2 id="17-anti-pattern-ai-slop-17" style="position:relative;"><a href="#17-anti-pattern-ai-slop-17" aria-label="17 anti pattern ai slop 17 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>17. Anti-pattern: AI Slop (#17)</h2>
+<ul>
+<li>Recipe: prompt AI → lightly edit (optional) → present as your own work → shared spaces fill with crap, people tune out and leave</li>
+<li>In code: no guardrails, single prompt, ship it</li>
+<li>Nuance: not <em>necessarily</em> bad — depends on risk level and what you’re doing</li>
+<li>The real point: <strong>stop expecting a single pass to produce good code.</strong> Occasionally it does; usually it doesn’t.</li>
+</ul>
+<h2 id="18-pattern-flip-it-18--make-ai-review-ai" style="position:relative;"><a href="#18-pattern-flip-it-18--make-ai-review-ai" aria-label="18 pattern flip it 18  make ai review ai permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>18. Pattern: Flip It (#18) — make AI review AI</h2>
+<ul>
+<li>Variation 1 — two agents: a <strong>coder</strong> (“given this document, implement it”) and a <strong>reviewer</strong> (“here’s the task file and the diff — find all the problems”), then the coder fixes</li>
+<li>Variation 2 — one context: “implement” → “now, given the task and what you just did, find all the issues” → it finds problems in its own output with zero self-consciousness → “apply improvements”</li>
+<li>Key insight: the model <em>isn’t</em> bad at recognizing bad code — ask it what’s wrong and it tells you good stuff. The problem is <strong>intention/attention</strong>, not knowledge</li>
+<li>Speaker’s theory of why flipping works: the model has roughly <em>one span of attention</em> — “ask it to do this AND this AND this and everything suffers, like a four-year-old.” Refocusing onto “criticize” gives it a fresh single task it’s good at. (“Maybe AI is badly named — it feels like one thought to me.“)</li>
+</ul>
+<h2 id="19-pattern-refinement-loop-19" style="position:relative;"><a href="#19-pattern-refinement-loop-19" aria-label="19 pattern refinement loop 19 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>19. Pattern: Refinement Loop (#19)</h2>
+<ul>
+<li>Generalization: if one feedback pass helps, loop it</li>
+<li>Origin: Llewellyn Falco’s TDD/refactoring process (speaker used it heavily, now has his own):
+<ul>
+<li>Give a <strong>goal</strong></li>
+<li>“Choose and perform the <strong>simplest possible</strong> refactoring, <strong>one at a time</strong>”</li>
+<li><strong>Commit after each step</strong> — crucial: without forced commits the model <em>pretends</em> to iterate; commits make iteration real, and the output difference is dramatic</li>
+</ul>
+</li>
+<li>Why it works (speaker’s experience): early passes strip surface problems/noise, which lets the model <em>see deeper</em> on later passes</li>
+<li>Generalizes beyond refactoring — goals like:
+<ul>
+<li>“Get to the gist of the idea” (a favorite; he tells it to “go meditate” into a file)</li>
+<li>“Improve the text along this direction”</li>
+<li>“Simplify” (another favorite)</li>
+</ul>
+</li>
+<li>Loop until the AI sees nothing left to improve — caveat: it declares “done” far earlier than the speaker would, so he applies extra pressure to continue</li>
+<li><strong>Centrifuge analogy:</strong> spin the work in the loop until the stupid flies out; only <em>then</em> do human review — “don’t waste your eyes on the dirty first iteration”</li>
+</ul>
+<h2 id="20-pattern-selective-hearing-20--instructions-that-wont-stick" style="position:relative;"><a href="#20-pattern-selective-hearing-20--instructions-that-wont-stick" aria-label="20 pattern selective hearing 20  instructions that wont stick permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>20. Pattern: Selective Hearing (#20) — instructions that won’t stick</h2>
+<h3 id="201-diagnosis-two-distinct-kinds-of-stubbornness" style="position:relative;"><a href="#201-diagnosis-two-distinct-kinds-of-stubbornness" aria-label="201 diagnosis two distinct kinds of stubbornness permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>20.1 Diagnosis: two distinct kinds of stubbornness</h3>
+<ol>
+<li><strong>Fighting the training</strong> — effectively game over via prompting alone</li>
+<li><strong>Distraction</strong> — bigger/dirtier context; fixable with focus and reminders</li>
+</ol>
+<h3 id="202-fighting-training-examples" style="position:relative;"><a href="#202-fighting-training-examples" aria-label="202 fighting training examples permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>20.2 Fighting training: examples</h3>
+<ul>
+<li>“Don’t comment my code” — nearly impossible; even Claude’s own system prompt contains it (“turtles all the way down and it’s not helping”), because training data contains overwhelming amounts of commented code</li>
+<li>Whisper (voice model) hallucinating during silences: trained on YouTube, so silence → “please like and subscribe”; no amount of prompting (“this is not a YouTube video”) fixed it — awkward in client demos</li>
+<li><strong>Workable strategy: let it do the thing, then strip it out</strong> in a second pass — the only thing that works for comments</li>
+</ul>
+<h3 id="203-distraction-reminders--recency-bias" style="position:relative;"><a href="#203-distraction-reminders--recency-bias" aria-label="203 distraction reminders  recency bias permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>20.3 Distraction: reminders &#x26; recency bias</h3>
+<ul>
+<li>Recent instructions get more attention → <strong>remind</strong> the model of what matters at the moment it matters</li>
+</ul>
+<h3 id="204-hooks--deterministic-enforcement" style="position:relative;"><a href="#204-hooks--deterministic-enforcement" aria-label="204 hooks  deterministic enforcement permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>20.4 Hooks — deterministic enforcement</h3>
+<ul>
+<li>An agent = memory + tools + a REST call to the LLM; <em>only the REST call is nondeterministic — everything else is code</em>, and code has a lifecycle you can hook into (session start, before/after edit, tool use…)</li>
+<li>(Side recommendation: write yourself a basic agent once — enormous clarity about the tool you’re using)</li>
+<li>Demo: comment-detector script wired into an edit hook — model adds a “hello world” comment → hook screams “no comments in the code” → model apologizes and removes it → <em>and</em> the scolding acts as a reminder, so it behaves “for the next five minutes”</li>
+<li>“The things you can do with hooks are just madness” — expect them everywhere</li>
+</ul>
+<h3 id="205-to-dos-lists-and-the-instruction-sandwich" style="position:relative;"><a href="#205-to-dos-lists-and-the-instruction-sandwich" aria-label="205 to dos lists and the instruction sandwich permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>20.5 To-dos, lists, and the instruction sandwich</h3>
+<ul>
+<li>Callback to “TDD doesn’t work” claim: of course “hey, do TDD” fails — <strong>give it a process</strong></li>
+<li>Instruction-following differs hugely between “here are 10 things” prose and an explicit ordered list — which is why to-do lists are now built into every agentic tool</li>
+<li><strong>Instruction sandwich:</strong> when a plan exists, deliberately interleave the critical commands inside it — e.g., <em>run tests → do stuff → run tests</em> — takes reliability from “sometimes” to 90%+ (not 100% — it’s not a hook, but it’s very good)</li>
+</ul>
+<h2 id="21-using-nondeterminism-deliberately-track-recap" style="position:relative;"><a href="#21-using-nondeterminism-deliberately-track-recap" aria-label="21 using nondeterminism deliberately track recap permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>21. Using Nondeterminism Deliberately (track recap)</h2>
+<ul>
+<li>You’re rolling dice — complain, or exploit it:
+<ul>
+<li><strong>Roll more dice:</strong> parallel implementations; pick and combine the best pieces</li>
+<li><strong>Roll one die in a loop:</strong> refinement loops; “Ralph Wiggum” used for good — loop until it converges (or begs for mercy / runs out of tokens)</li>
+</ul>
+</li>
+<li>Protect against failure with knowledge checkpoints; pick the right tool for the job; keep feedback loops small</li>
+</ul>
+<h2 id="22-mid-talk-qa-highlights" style="position:relative;"><a href="#22-mid-talk-qa-highlights" aria-label="22 mid talk qa highlights permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>22. Mid-talk Q&#x26;A Highlights</h2>
+<ul>
+<li><strong>Same rules interpreted differently by each model version?</strong>
+<ul>
+<li>Introduce stability (he mainly uses Claude Code, dabbles in Pi and Codex); expect to re-tune per model</li>
+<li>Cautionary tale: Devon switched models and the whole harness stopped making sense</li>
+<li>Read the vendor’s model-specific guidance (e.g., for Opus 4.8: ALL-CAPS shouting used to help, now the model “gets stressed” and performs worse)</li>
+</ul>
+</li>
+<li><strong>Doesn’t committing <code class="language-text">todo.md</code> dirty the branch/PRs?</strong>
+<ul>
+<li>Options: don’t commit it; speaker keeps a separate “brain repo” for fleeting artifacts with the agent operating a level above both repos; commit-then-delete also works</li>
+<li>Related pattern: <strong>Playgrounds</strong> — a git-ignored <code class="language-text">playground/</code> folder the agent has standing permission to create; it experiments freely there (great for new/internal tools without docs), then validated learnings get extracted into persistent knowledge documents/skills</li>
+</ul>
+</li>
+<li><strong>Does this work fully unsupervised?</strong>
+<ul>
+<li>In his experience: no. He orchestrated communicating agents last June — “lovely and weird,” huge organizational effort</li>
+<li>His strategy: first make the <em>building blocks</em> reliable (e.g., trustworthy unattended refactoring), then stack autonomy on top</li>
+<li>Evaluating processes: run many parallel trials (never judge nondeterministic systems on one run), trace via small commits
+<ul>
+<li>Finding: Llewellyn’s refactoring process works (“I go drink coffee, come back to much less horrible code, tests still pass”) but <strong>stops too early</strong> by his standards and lacks imagination</li>
+<li>Response: introduced <strong>lenses</strong> — separate considerations he’d naturally apply (visual noise, method length, etc.) — and keeps testing variants</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Cheaper/local models for simple subtasks?</strong>
+<ul>
+<li>Same instinct; wants a high-memory laptop to try. Hopes narrow focus will make small local models viable for single tasks — will report back</li>
+</ul>
+</li>
+<li><strong>Audience contribution (sub-agent strategy):</strong>
+<ul>
+<li>Offload discovery (API contracts, log-reading) to sub-agents/cheaper models that return only summaries — big token savings; can be packaged as a skill</li>
+<li>Distrust vanilla SWE-bench (contaminated by trained-on GitHub issues); “deep SWE-bench” scores open-source models much lower</li>
+<li>For orchestration, use an <strong>advisor pattern</strong>: a top-tier main model (Opus 4.8 / GPT 5.5) with sub-agents asking it questions</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="track-3-smart-communication" style="position:relative;"><a href="#track-3-smart-communication" aria-label="track 3 smart communication permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>TRACK 3: SMART COMMUNICATION</h2>
+<h2 id="23-the-problem-pair" style="position:relative;"><a href="#23-the-problem-pair" aria-label="23 the problem pair permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>23. The Problem Pair</h2>
+<ol>
+<li><strong>AI internals are hidden</strong> — it has <em>something like</em> a mental model (“quacks like a duck, might as well call it that”); human–AI misalignment in that model is costly and hard to detect</li>
+<li><strong>Compliance bias</strong> — trained on purpose to please; it will do practically anything you ask and tell you how amazing you are</li>
+</ol>
+<p>Together: a mysterious black box that always says yes.</p>
+<h2 id="24-anti-pattern-silent-misalignment-22" style="position:relative;"><a href="#24-anti-pattern-silent-misalignment-22" aria-label="24 anti pattern silent misalignment 22 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>24. Anti-pattern: Silent Misalignment (#22)</h2>
+<ul>
+<li>Story: voice-driven form-filling app (speech → transcription → form fields, with RAG for tricky questions); V1 UI was ugly</li>
+<li>“The top panel and bottom panel are uneven — make them the same size” → “Sure!” → nothing changes → several rounds of the same</li>
+<li>Diagnostic move that cracked it: <strong>“Color what you think is the ‘top panel’ and ‘bottom panel’”</strong> → the coloring revealed a completely different understanding of the layout</li>
+<li>Why it happened: the model wasn’t seeing panels — it was seeing raw <code class="language-text">div</code>s with no headers or sections; the human’s words made no sense against its world, <em>and it never said so</em> — it just complied</li>
+<li>The painful question: “Why didn’t you tell me I wasn’t making sense to you?”</li>
+</ul>
+<h2 id="25-pattern-active-partner-23" style="position:relative;"><a href="#25-pattern-active-partner-23" aria-label="25 pattern active partner 23 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>25. Pattern: Active Partner (#23)</h2>
+<ul>
+<li>Ground rules that enforce partnership:
+<ul>
+<li>“Be very honest. Tell me something I need to know even if I don’t want to hear it.” (Elizabeth Hendrickson)</li>
+<li>“Push back when something seems wrong — don’t just agree with mistakes”</li>
+<li>“Ask questions if something is unclear; don’t silently pick when a choice is needed”</li>
+<li>“When you show me an error or a miss, start the response with a specific emoji” — instantly scannable</li>
+</ul>
+</li>
+<li>Reinforcement levels: global rules + explicit <strong>permission to disagree</strong> + impromptu reinforcement when stakes are high (“no, be <em>really</em> honest”)</li>
+<li>Recent wrinkle: since “Opus .6” the honesty rule triggers verbal tics (“to be very honest with you, blah blah”) that he hasn’t managed to suppress</li>
+<li><strong>Don’t ask for N questions:</strong> “give me five questions” guarantees exactly five — if it had seven, you lost two; if it had one, you’re answering four filler questions from a token machine. Ask “do you have any questions?” / “is everything clear?” — it often answers “no, it’s not clear”</li>
+</ul>
+<h2 id="26-pattern-check-alignment-24" style="position:relative;"><a href="#26-pattern-check-alignment-24" aria-label="26 pattern check alignment 24 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>26. Pattern: Check Alignment (#24)</h2>
+<ul>
+<li>Failure mode: request → (misunderstanding happens here) → 20 minutes of implementation → wrong thing → rollback (its time, but still waste)</li>
+<li><strong>The pattern:</strong> “Show me what you’re about to do / show me the current architecture / what’s the plan — succinctly — before you do it”</li>
+<li>Catches misunderstanding at the request stage, where correction costs nearly nothing; later failures at least won’t be <em>this</em> failure</li>
+</ul>
+<h2 id="27-pattern-context-markers-25" style="position:relative;"><a href="#27-pattern-context-markers-25" aria-label="27 pattern context markers 25 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>27. Pattern: Context Markers (#25)</h2>
+<ul>
+<li>Origin: people asking AI to address them by a specific name defined only in the rules — seeing the name proves the rules were read</li>
+<li>Emoji version — more flexible and more scannable:
+<ul>
+<li>Ground rule: “start all replies with <marker> + space” → every reply carries proof-of-life for the ground rules (his default: a clover)</li>
+<li>Swap markers per <strong>skill</strong> (see at a glance that the skill actually triggered — no more “did it start?“)</li>
+<li>Per <strong>role</strong> (committer has its own emoji)</li>
+<li>Per <strong>TDD phase</strong> (red / green / refactor visibly cycling)</li>
+<li>Attach a marker to any specific mid-document instruction to verify it was attended to</li>
+</ul>
+</li>
+<li>One glyph = two bits of information (“it read my ground rules” + “it’s in the red phase”)</li>
+<li>Makes the invisible visible, especially in contexts you don’t fully control</li>
+</ul>
+<h2 id="28-anti-pattern-answer-injection-26" style="position:relative;"><a href="#28-anti-pattern-answer-injection-26" aria-label="28 anti pattern answer injection 26 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>28. Anti-pattern: Answer Injection (#26)</h2>
+<h3 id="281-the-obvious-version" style="position:relative;"><a href="#281-the-obvious-version" aria-label="281 the obvious version permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>28.1 The obvious version</h3>
+<ul>
+<li>“Which <em>fancy restaurant</em> should I book for the team celebration?” → you’ll get fancy restaurants and nothing else. “Give me a few suggestions for a team celebration” → far wider option space</li>
+</ul>
+<h3 id="282-the-subtle-version-personal-story" style="position:relative;"><a href="#282-the-subtle-version-personal-story" aria-label="282 the subtle version personal story permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>28.2 The subtle version (personal story)</h3>
+<ul>
+<li>June last year, two Claude Code terminals; wanted them to talk to each other (not a feature then)</li>
+<li>Asked: “Can you send a message to another Claude Code? Search online, check the docs” → answer: <em>“No, Claude Codes can’t talk to each other.”</em> Bummer — accepted it</li>
+<li>Later realized <code class="language-text">claude</code> is just a shell command → had one instance launch another (“launch Claude Code” → it runs <code class="language-text">claude</code> → new instance appears)</li>
+<li>Then, with the right instance already running, a launch attempt produced text <em>appearing in the other window</em> — “I don’t know about you, but to me that’s a message”</li>
+<li>Lesson: the capability existed all along; <strong>the phrasing of the question injected the wrong frame</strong>, and the compliant answer never flagged the mismatch</li>
+<li>The fix — describe, don’t prescribe: “I have two iTerm2 windows and want to send a message from one to the other” (no assumptions about Claude features) → “Sure, AppleScript” → learned a technology he didn’t know, built the tool, had Claudes chattering by June</li>
+<li>Meta-point: it’s genuinely hard to state a problem without smuggling in your assumptions — but very worth practicing</li>
+</ul>
+<h3 id="283-the-list-version-a-friends-example" style="position:relative;"><a href="#283-the-list-version-a-friends-example" aria-label="283 the list version a friends example permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>28.3 The list version (a friend’s example)</h3>
+<ul>
+<li>Friend asked for ideas and <em>helpfully</em> enumerated the angles: “against the API, the server itself, third-party email clients” — intended to broaden, actually <strong>capped</strong> the option space (no “anything else?“)</li>
+<li>Answers came back structured exactly and only along those three bullets</li>
+<li>Follow-up “Is there a <em>simpler</em> way?” produced a different approach entirely — which, under a 3-day hackathon deadline, let them ship two features to the client and secure funding; without it they’d have gone down an unnecessary rabbit hole</li>
+</ul>
+<h2 id="29-pattern-cast-wide-27" style="position:relative;"><a href="#29-pattern-cast-wide-27" aria-label="29 pattern cast wide 27 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>29. Pattern: Cast Wide (#27)</h2>
+<ul>
+<li>Premises now established: AI is extremely well-read (knows more than you, even if recall is imperfect), <em>and</em> you can accidentally fence it in with phrasing</li>
+<li>Deliberate blind-spot probes:
+<ul>
+<li>“What solutions haven’t you even considered?”</li>
+<li>“Can we do it simpler?” / “even simpler than that?”</li>
+<li>“What entirely different approach might work?”</li>
+<li>Describe the problem <em>globally</em>, not locally</li>
+</ul>
+</li>
+<li>Use AI as an <strong>instrument of vision</strong> that enhances you — not as an order-taker</li>
+<li>It can teach you what you don’t know you don’t know</li>
+</ul>
+<h2 id="30-pattern-reverse-direction-28--speakers-favorite" style="position:relative;"><a href="#30-pattern-reverse-direction-28--speakers-favorite" aria-label="30 pattern reverse direction 28  speakers favorite permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>30. Pattern: Reverse Direction (#28) — speaker’s favorite</h2>
+<ul>
+<li>Conversational inertia trap: when AI asks a question, people reflexively <em>answer</em> it, forgetting they’re not obligated to — you’re steering, not chatting</li>
+<li>Instead: flip the question back — “give me some suggestions”</li>
+<li>Example: renaming a script (<code class="language-text">claude-send.sh</code>, part of the Claude-to-Claude tooling) — “What do you want to rename it to?” → <em>“Can you suggest a few options?”</em>
+<ul>
+<li>Like standing at a fork with invisible branches: this makes every branch visible <strong>at zero cost</strong>, generates ideas, lets you react quickly (“I’d considered whisper and disliked it… I’ll take this one”)</li>
+</ul>
+</li>
+</ul>
+<h3 id="301-arlo-belshees-compound-trick-reverse-direction--friends" style="position:relative;"><a href="#301-arlo-belshees-compound-trick-reverse-direction--friends" aria-label="301 arlo belshees compound trick reverse direction  friends permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>30.1 Arlo Belshee’s compound trick (Reverse Direction + friends)</h3>
+<ul>
+<li>Recurring tedious dialogue: “what stack?” → options → “which is better and why, briefly?” → suggestion → “go ahead”</li>
+<li>Replaced by a standing ground rule:
+<ul>
+<li><em>“When you need my input on a decision: first pick the option you think is best and propose it, starting with the ⭐ emoji; then list the alternatives and briefly why not”</em></li>
+</ul>
+</li>
+<li>One glance shows the proposal, the road not taken, and the reasoning; bad picks get corrected in seconds</li>
+<li>Pattern chord: <strong>Reverse Direction</strong> (propose, don’t ask) + <strong>Check Alignment</strong> (you’re reviewing its judgment) + <strong>Cast Wide</strong> (the alternatives axis = paths not taken) + <strong>Context Markers</strong> (⭐ makes it scannable)</li>
+</ul>
+<h2 id="31-pattern-text-native--move-between-modalities-29" style="position:relative;"><a href="#31-pattern-text-native--move-between-modalities-29" aria-label="31 pattern text native  move between modalities 29 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>31. Pattern: Text Native / Move Between Modalities (#29)</h2>
+<ul>
+<li>AI is superb at text, but text is <em>elastic</em> and connects to other modalities — don’t stay stuck in one</li>
+<li>Worked example — building a modal UI from a PM’s rough sketch:
+<ol>
+<li>PM provides a crude drawing (summary at top, questions on right, continue/copy buttons)</li>
+<li>“Convert this image to ASCII” → strikingly faithful ASCII mockup — and now it’s <strong>editable</strong>: copy, tweak, hand back; a shared text whiteboard</li>
+<li>“Describe this modal window as a list” → clean textual spec (modal popup, summary section, question section, continue button…) — image → text with near-zero human effort</li>
+<li>“Look at the code and describe the <em>current</em> state” → now both ends of the journey are explicit (where we are, where we’re going)</li>
+<li>“Make a to-do list to move from current state to new state” → step plan</li>
+<li>“Go implement” → worked first try</li>
+</ol>
+</li>
+<li>Modality chain: sketch → ASCII → description → code-derived current state → to-do → implementation, with minimal human energy at each hop</li>
+</ul>
+<hr>
+<h2 id="32-grand-recap-speakers-closing-walkthrough" style="position:relative;"><a href="#32-grand-recap-speakers-closing-walkthrough" aria-label="32 grand recap speakers closing walkthrough permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>32. Grand Recap (speaker’s closing walkthrough)</h2>
+<ol>
+<li><strong>LLMs can’t learn</strong> — your only moves are reset and refill; build its memory from documents; grow a good knowledge library — it’s your toolbox</li>
+<li><strong>Attention is scarce</strong> — it’s not an omnipotent god (friend’s joke: “keeps 2 ± 5,000 things in mind”; speaker suspects ~7); small focused agents are disproportionately powerful; clear context when the result really matters</li>
+<li><strong>Text is elastic</strong> — a genuinely new dimension; use semantic zoom to stay sane; be kind to teammates — don’t spam raw agent output into shared repos</li>
+<li><strong>Same input ≠ same output</strong> — design for nondeterminism: protect (knowledge checkpoints) or exploit (parallel implementations, refinement/feedback loops)</li>
+<li><strong>Right tool for the job</strong> — don’t use AI for everything; code is for deterministic work (git hooks > CLAUDE.md instructions)</li>
+<li><strong>Complexity isn’t self-managing</strong> — chain of small steps; something has to manage it, and by default nothing does</li>
+<li><strong>Expect bad first tries</strong> — single-pass quality is the exception; refine for quality (centrifuge before human review)</li>
+<li><strong>Tricky instructions</strong> — distinguish training-level stubbornness (let it happen, then remove) from distraction (hooks, reminders, sandwiches)</li>
+<li><strong>The mental model is hidden and it always says yes</strong> — actively fight it: active partner rules, check alignment, context markers</li>
+<li><strong>You can fence yourself in with your own phrasing</strong> — stay suspicious; deliberately cast wide for blind spots</li>
+<li><strong>Breadth is nearly free</strong> — trying many things costs ~zero now (cf. Claude Code’s to-do UI: ~20 iterations user-tested in 2–3 days); use AI as an instrument of vision</li>
+<li><strong>Move between modalities</strong> — text is powerful, but don’t get stuck in it</li>
+</ol>
+<hr>
+<h2 id="33-closing-qa" style="position:relative;"><a href="#33-closing-qa" aria-label="33 closing qa permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>33. Closing Q&#x26;A</h2>
+<ul>
+<li><strong>RAG for determinism?</strong> Skeptical for agent orchestration; sees a fit for semantic search (“do I have anything in my context/tools relevant to this?”) and other specific implementations — open to ideas</li>
+<li><strong>AI code review of teammates’ PRs locally?</strong> Absolutely — has done it. Bigger questions lurk: why and how you do PRs at all (minimizing them goes a long way, as with humans). Today he’d put an AI reviewer <em>in the repo</em> as an obligatory, visible stage rather than personally reviewing; besides, “everybody does it now,” so there’s no pretense</li>
+<li><strong>Where are these learnings shared?</strong> Slides link → companion website with the clickable pattern map (built from a CSV; crowd applause for the visual), a full pattern <strong>catalog</strong> (“vibe-coded, not perfect, will improve”), and a <strong>patterns repository</strong> accepting pull requests — other people’s patterns welcome</li>
+<li><strong>Show your working folder?</strong> Client-work limits, but shows the <strong>Skill Factory</strong>:
+<ul>
+<li>Skills live in one repo, <strong>symlinked</strong> into the Claude config directory; a simple shell script toggles them on/off (purple symlinks in the listing; e.g., a TDD skill, git lint)</li>
+<li>Resources page documents his layout: context vs. work directories, project-level reference library, global user rules, project rules</li>
+</ul>
+</li>
+<li><strong>BDD and TDD together?</strong>
+<ul>
+<li>Does both — BDD tests written in his own high-level “printer-scannable” language (heavy Approvals use): they enumerate features at a glance and answer “does my system work?”</li>
+<li><strong>TDD is for the agent, mostly</strong> — it produces good code as a side effect of red/green/refactor with minimal-code steps</li>
+<li>Recent comparison (mini-conference with Emily Bache et al.): Ivett Ördög’s approach (BDD + hooks that scream at the agent about long methods, dead code, etc.) vs. his BDD + TDD — his TDD-only discipline yielded “pretty decent code” with clean red/green/refactor commits and nothing else imposed</li>
+<li>Boundary rule: the agent may touch internal/TDD tests, but <strong>never</strong> the BDD tests</li>
+</ul>
+</li>
+<li><strong>Technical debt in the LLM tooling itself (prompts, MD files)?</strong>
+<ul>
+<li>Alternates modes: “feature, feature, feature — now refactor, refactor, refactor,” applied to knowledge files too</li>
+<li>Merciless deletion again — dead code is bad enough alone; dead code plus an agent is worse (“it totally ‘fixed’ a thing in the leftover form that isn’t used”)</li>
+<li>Investment is risk-proportional: production systems get heavy investment; a one-day throwaway tool gets happily vibe-coded</li>
+</ul>
+</li>
+<li><strong>Keeping the toolbox maintainable as the landscape shifts?</strong>
+<ul>
+<li>“We’re all figuring this out”; his answer: keep the toolbox <strong>small and simple</strong>, verify what you actually use works, resist grabbing every skill/MCP</li>
+<li>Cautionary example: Amazon’s early MCP enthusiasm → mysteriously degrading agents, because greedy MCPs shoved all instructions into context and diluted it</li>
+<li>The IDE-shaped tooling gap is real — current tools “feel pretty good but are definitely not the right tool” yet</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="appendix-pattern--anti-pattern-index-as-presented" style="position:relative;"><a href="#appendix-pattern--anti-pattern-index-as-presented" aria-label="appendix pattern  anti pattern index as presented permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Appendix: Pattern &#x26; Anti-pattern Index (as presented)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Name</th>
+<th>Type</th>
+<th>Track</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>(Context window mechanics / LLM can’t learn)</td>
+<td>Obstacle</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Knowledge Document</td>
+<td>Pattern</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ground Rules</td>
+<td>Pattern</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Extract Knowledge</td>
+<td>Pattern</td>
+<td>1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Distracted Agent</td>
+<td>Anti-pattern</td>
+<td>1</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Focused Agent</td>
+<td>Pattern</td>
+<td>1</td>
+</tr>
+<tr>
+<td>7</td>
+<td>References</td>
+<td>Pattern</td>
+<td>1</td>
+</tr>
+<tr>
+<td>8</td>
+<td>(Skills = Ground Rules + References + Progressive Disclosure)</td>
+<td>Composition</td>
+<td>1</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Semantic Zoom</td>
+<td>Pattern</td>
+<td>1</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Noise Cancellation</td>
+<td>Pattern</td>
+<td>1</td>
+</tr>
+<tr>
+<td>11</td>
+<td>External Context</td>
+<td>Pattern</td>
+<td>1</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Knowledge Checkpoint</td>
+<td>Pattern</td>
+<td>2</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Parallel Implementations</td>
+<td>Pattern</td>
+<td>2</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Right Tool for the Job</td>
+<td>Pattern</td>
+<td>2</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Unvalidated Leaps</td>
+<td>Anti-pattern</td>
+<td>2</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Chain of Small Steps</td>
+<td>Pattern</td>
+<td>2</td>
+</tr>
+<tr>
+<td>17</td>
+<td>AI Slop</td>
+<td>Anti-pattern</td>
+<td>2</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Flip It (Coder/Reviewer)</td>
+<td>Pattern</td>
+<td>2</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Refinement Loop</td>
+<td>Pattern</td>
+<td>2</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Selective Hearing (Hooks, Reminders, Instruction Sandwich)</td>
+<td>Pattern cluster</td>
+<td>2</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Silent Misalignment</td>
+<td>Anti-pattern</td>
+<td>3</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Active Partner</td>
+<td>Pattern</td>
+<td>3</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Check Alignment</td>
+<td>Pattern</td>
+<td>3</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Context Markers</td>
+<td>Pattern</td>
+<td>3</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Answer Injection</td>
+<td>Anti-pattern</td>
+<td>3</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Cast Wide</td>
+<td>Pattern</td>
+<td>3</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Reverse Direction</td>
+<td>Pattern</td>
+<td>3</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Text Native / Modalities</td>
+<td>Pattern</td>
+<td>3</td>
+</tr>
+<tr>
+<td>—</td>
+<td>Playgrounds</td>
+<td>Pattern (Q&#x26;A)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>—</td>
+<td>Ralph Wiggum loop (die in a loop)</td>
+<td>Technique</td>
+<td>2</td>
+</tr>
+<tr>
+<td>—</td>
+<td>Advisor pattern (audience contribution)</td>
+<td>Technique</td>
+<td>Q&#x26;A</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: numbering follows the speaker’s on-slide pattern numbers where stated; a few numbers were not explicitly announced in the transcript and are inferred from sequence.</em></p>
+<h2 id="people--references-cited" style="position:relative;"><a href="#people--references-cited" aria-label="people  references cited permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>People &#x26; References Cited</h2>
+<ul>
+<li><strong>Kent Beck</strong> — genie metaphor (keynote); 1950s unreliable-memory analogy; masterclass</li>
+<li><strong>Elizabeth Hendrickson</strong> — “tell me something I need to know even if I don’t want to hear it”</li>
+<li><strong>James Shore</strong> — Nullables (fast tests without hexagonal refactoring); nuance on committing env files</li>
+<li><strong>GeePaw Hill</strong> — “make many more, much smaller steps”</li>
+<li><strong>Llewellyn Falco</strong> — TDD refactoring loop process</li>
+<li><strong>Arlo Belshee</strong> — propose-then-list-alternatives decision ground rule</li>
+<li><strong>Chelsea Troy</strong> — multilingual explanation for strawberry-counting failures</li>
+<li><strong>Ivett Ördög</strong> — high-level scannable tests; hooks-that-scream code-quality methodology</li>
+<li><strong>Emily Bache</strong> — co-ran the mini-conference where refactoring processes were compared</li>
+<li>Tools mentioned: Claude Code, Cursor, Windsurf, Pi, Codex, iTerm2/Ghostty, AppleScript, tmux, git worktrees, Puppeteer MCP, Whisper, Approvals</li>
+</ul>
+<hr>
+<p><em>Video: <a href="https://www.youtube.com/watch?v=gTgEZsfyzoo">https://www.youtube.com/watch?v=gTgEZsfyzoo</a> — Transcript via yt-transcript.sh; outline generated from the transcript (partial for a long transcript).</em></p></section><hr/><footer><div class="bio"><div data-gatsby-image-wrapper="" style="width:50px;height:50px" class="gatsby-image-wrapper bio-avatar"><div aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear;background-color:#685848;width:50px;height:50px;position:relative"></div><picture><source type="image/avif" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/d4bf4/tony-avatar.avif 50w,/static/b811602c8c8ce14b66aae6613c8968f4/ee81f/tony-avatar.avif 100w" sizes="50px"/><source type="image/webp" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/3faea/tony-avatar.webp 50w,/static/b811602c8c8ce14b66aae6613c8968f4/6a679/tony-avatar.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="opacity:0" sizes="50px" decoding="async" loading="lazy" data-src="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg" data-srcset="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg 50w,/static/b811602c8c8ce14b66aae6613c8968f4/64618/tony-avatar.jpg 100w" alt="Profile picture"/></picture><noscript><picture><source type="image/avif" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/d4bf4/tony-avatar.avif 50w,/static/b811602c8c8ce14b66aae6613c8968f4/ee81f/tony-avatar.avif 100w" sizes="50px"/><source type="image/webp" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/3faea/tony-avatar.webp 50w,/static/b811602c8c8ce14b66aae6613c8968f4/6a679/tony-avatar.webp 100w" sizes="50px"/><img data-gatsby-image-ssr="" layout="fixed" data-main-image="" style="opacity:0" sizes="50px" decoding="async" loading="lazy" src="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg" srcSet="/static/b811602c8c8ce14b66aae6613c8968f4/d24ee/tony-avatar.jpg 50w,/static/b811602c8c8ce14b66aae6613c8968f4/64618/tony-avatar.jpg 100w" alt="Profile picture"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><p>Written by <strong>Tony Vo</strong> <!-- -->father, husband, son and software developer<!-- --> <a href="https://twitter.com/ttrungvo">Twitter</a></p></div></footer></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/code-craft-2026/michael-feathers-podcast-stage-craft-2026/">← <!-- -->Michael Feathers – Podcast Stage | Craft 2026</a></li><li><a rel="next" href="/code-craft-2026/slow-down-to-speed-up-gergely-craft-2026/">Slow down to speed up – Gergely Orosz | Craft 2026<!-- --> →</a></li></ul></nav><div><div id="disqus_thread"></div></div></main><footer>© <!-- -->2026<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.com">Gatsby</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/code-craft-2026/patterns-for-coding-with-ai-lada-kesseler-craft-2026/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
             id="gatsby-chunk-mapping"
           >
