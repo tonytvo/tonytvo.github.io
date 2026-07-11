@@ -107,18 +107,39 @@ outline</strong> of the following talk transcript.</em>
 <em>- Preserve <strong>every</strong> anecdote, name (people/companies/tools), number, statistic,
 direct quote, and concrete example. Do not compress, generalize, or summarize
 away specifics — err on the side of completeness.</em>
-<em>- Use nested <code class="language-text">##</code> / <code class="language-text">###</code> Markdown sections, one per topic or sub-topic.</em>
-<em>- If the talk <strong>enumerates</strong> things (patterns, steps, rules, trends, a list of
-companies), give each its own subsection, and add a <strong>summary table</strong> at the end
-plus a <strong>‘People &#x26; References Cited’</strong> index.</em>
+<em>- Use a <strong>deep, decimal-numbered hierarchy</strong>: number top sections (1, 2, 3…) and
+their subsections (1.1, 1.2, 2.1…), going to <code class="language-text">###</code> and <code class="language-text">####</code> where it helps.
+Aim for <strong>one <code class="language-text">###</code> subsection per distinct sub-topic, example, or step</strong> — a
+long talk should have 25+ subsections, not 3.</em>
+<em>- <strong>One idea per bullet line.</strong> Do not pack several facts into one paragraph or
+one table cell — explode them into bullets and sub-bullets.</em>
+<em>- If the talk <strong>enumerates</strong> things (patterns, steps, rules, trends, examples, a
+list of companies), give <strong>each item its own numbered <code class="language-text">###</code> subsection</strong> with its
+own bullets (rationale, metaphor, quote, example). A summary <strong>table</strong> is a nice
+<em>addition</em> at the end, but never let a table <em>replace</em> the per-item subsections —
+tables compress and make the outline read as thinner than it is.</em>
+<em>- <strong>Decompose worked examples step by step</strong> — each micro-step / micro-behaviour
+gets its own <code class="language-text">###</code> (e.g. “7.1 Extract + placeholder name”, “7.2 Rename”).</em>
+<em>- <strong>Break the Q&#x26;A finely</strong>: one numbered subsection per question (Q1, Q2…),
+splitting multi-part questions into follow-ups (Q5, Q5a). Name the asker if known.</em>
 <em>- Attribute quotes and claims to whoever said them.</em>
 <em>- Open with a one-paragraph blockquote framing the talk (speaker, venue, format,
 the talk’s own structure).</em>
+<em>- Add a <strong>‘People &#x26; References Cited’</strong> index at the end.</em>
 <em>- Keep the writing tight per line (no filler), but keep the outline long — depth
 over brevity.”</em></p>
 </blockquote>
 <p><strong>Notes to get the depth right:</strong></p>
 <ul>
+<li><strong>Depth comes from <em>granularity</em>, not just word count.</strong> A hand-curated claude.ai
+outline of the same talk had nearly the same word count as a workflow draft (~3.1k
+vs ~2.8k) but felt far more thorough because it had <strong>29 <code class="language-text">###</code> subsections vs 3</strong>
+and <strong>~2x the bullet lines</strong> — one idea per line, one subsection per sub-topic. If a
+draft feels thin, the fix is usually to <strong>split tables/paragraphs back into numbered
+subsections and per-line bullets</strong>, not to add new facts.</li>
+<li><strong>A good depth check before finishing:</strong> does the outline have a <code class="language-text">###</code> for every
+distinct example, step, and Q&#x26;A question? If a whole enumeration is hiding inside a
+single table or paragraph, expand it.</li>
 <li><strong>One talk per pass.</strong> Don’t batch many transcripts into a single request — each
 talk deserves its own full-attention pass.</li>
 <li><strong>Do a second “enrich” pass</strong> on the draft: <em>“Go back through the transcript and add
